@@ -38,5 +38,6 @@ enum CreateAccountingCreditmemoQueryParamFields: string
     case Attachments = 'attachments';
     case Send = 'send';
     case OrganizationId = 'organization_id';
+    case ApplyAmount = 'apply_amount';
     case Raw = 'raw';
 }

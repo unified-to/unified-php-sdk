@@ -20,7 +20,9 @@ enum GetAdsAdQueryParamFields: string
     case OrganizationId = 'organization_id';
     case Status = 'status';
     case AdType = 'ad_type';
+    case AdvertiserName = 'advertiser_name';
     case CreativeIds = 'creative_ids';
+    case LogoCreativeId = 'logo_creative_id';
     case CreativeAssetUrl = 'creative_asset_url';
     case AdCopy = 'ad_copy';
     case Headline = 'headline';

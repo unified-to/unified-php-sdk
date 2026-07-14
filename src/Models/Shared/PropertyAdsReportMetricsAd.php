@@ -30,6 +30,14 @@ class PropertyAdsReportMetricsAd
 
     /**
      *
+     * @var ?string $advertiserName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('advertiser_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $advertiserName = null;
+
+    /**
+     *
      * @var ?string $campaignId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('campaign_id')]
@@ -120,6 +128,14 @@ class PropertyAdsReportMetricsAd
 
     /**
      *
+     * @var ?string $logoCreativeId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('logo_creative_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $logoCreativeId = null;
+
+    /**
+     *
      * @var ?string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
@@ -190,6 +206,7 @@ class PropertyAdsReportMetricsAd
     /**
      * @param  ?string  $adCopy
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAdAdType  $adType
+     * @param  ?string  $advertiserName
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creativeAssetUrl
@@ -201,6 +218,7 @@ class PropertyAdsReportMetricsAd
      * @param  ?string  $groupId
      * @param  ?string  $headline
      * @param  ?string  $id
+     * @param  ?string  $logoCreativeId
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?string  $path1
@@ -211,10 +229,11 @@ class PropertyAdsReportMetricsAd
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $adCopy = null, ?PropertyAdsReportMetricsAdAdType $adType = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?array $creativeIds = null, ?string $cta = null, ?string $description = null, ?string $displayUrl = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?PropertyAdsReportMetricsAdStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $adCopy = null, ?PropertyAdsReportMetricsAdAdType $adType = null, ?string $advertiserName = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?array $creativeIds = null, ?string $cta = null, ?string $description = null, ?string $displayUrl = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?string $logoCreativeId = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?PropertyAdsReportMetricsAdStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->adCopy = $adCopy;
         $this->adType = $adType;
+        $this->advertiserName = $advertiserName;
         $this->campaignId = $campaignId;
         $this->createdAt = $createdAt;
         $this->creativeAssetUrl = $creativeAssetUrl;
@@ -226,6 +245,7 @@ class PropertyAdsReportMetricsAd
         $this->groupId = $groupId;
         $this->headline = $headline;
         $this->id = $id;
+        $this->logoCreativeId = $logoCreativeId;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->path1 = $path1;

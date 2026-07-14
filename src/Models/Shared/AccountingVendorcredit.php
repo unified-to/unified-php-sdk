@@ -21,6 +21,14 @@ class AccountingVendorcredit
 
     /**
      *
+     * @var ?float $applyAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('apply_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $applyAmount = null;
+
+    /**
+     *
      * @var ?float $balanceAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('balance_amount')]
@@ -146,6 +154,7 @@ class AccountingVendorcredit
 
     /**
      * @param  ?string  $accountId
+     * @param  ?float  $applyAmount
      * @param  ?float  $balanceAmount
      * @param  ?string  $billId
      * @param  ?string  $contactId
@@ -163,9 +172,10 @@ class AccountingVendorcredit
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?float $balanceAmount = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?AccountingVendorcreditStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?float $applyAmount = null, ?float $balanceAmount = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?AccountingVendorcreditStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
+        $this->applyAmount = $applyAmount;
         $this->balanceAmount = $balanceAmount;
         $this->billId = $billId;
         $this->contactId = $contactId;

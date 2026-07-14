@@ -26,5 +26,6 @@ enum CreateAccountingVendorcreditQueryParamFields: string
     case Lineitems = 'lineitems';
     case Status = 'status';
     case OrganizationId = 'organization_id';
+    case ApplyAmount = 'apply_amount';
     case Raw = 'raw';
 }

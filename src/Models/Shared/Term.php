@@ -12,8 +12,11 @@ namespace Unified\Unified_to\Models\Shared;
 enum Term: string
 {
     case OnReceipt = 'ON_RECEIPT';
+    case Net7 = 'NET_7';
     case Net10 = 'NET_10';
     case Net15 = 'NET_15';
+    case Net20 = 'NET_20';
+    case Net25 = 'NET_25';
     case Net30 = 'NET_30';
     case Net60 = 'NET_60';
 }

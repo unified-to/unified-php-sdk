@@ -76,6 +76,7 @@ enum ObjectType: string
     case HrisDeduction = 'hris_deduction';
     case HrisBenefit = 'hris_benefit';
     case HrisBankaccount = 'hris_bankaccount';
+    case HrisDocument = 'hris_document';
     case MartechList = 'martech_list';
     case MartechMember = 'martech_member';
     case MartechCampaign = 'martech_campaign';

@@ -13,6 +13,7 @@ enum Goal: string
 {
     case Unspecified = 'UNSPECIFIED';
     case BrandAwareness = 'BRAND_AWARENESS';
+    case Engagement = 'ENGAGEMENT';
     case Reach = 'REACH';
     case WebsiteTraffic = 'WEBSITE_TRAFFIC';
     case Leads = 'LEADS';

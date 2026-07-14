@@ -36,6 +36,16 @@ class AccountingExpense
     public ?string $approverUserId = null;
 
     /**
+     * $attachments
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment> $attachments
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('attachments')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingAttachment>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $attachments = null;
+
+    /**
      *
      * @var ?string $contactId
      */
@@ -171,6 +181,7 @@ class AccountingExpense
      * @param  ?string  $accountId
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment>  $attachments
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -189,11 +200,12 @@ class AccountingExpense
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $attachments = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->accountId = $accountId;
         $this->approvedAt = $approvedAt;
         $this->approverUserId = $approverUserId;
+        $this->attachments = $attachments;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;

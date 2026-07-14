@@ -37,6 +37,13 @@ class ListAdsCampaignsRequest
 
     /**
      *
+     * @var ?string $goal
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=goal')]
+    public ?string $goal = null;
+
+    /**
+     *
      * @var ?float $limit
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
@@ -115,6 +122,7 @@ class ListAdsCampaignsRequest
      * @param  string  $connectionId
      * @param  ?string  $endLt
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListAdsCampaignsQueryParamFields>  $fields
+     * @param  ?string  $goal
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -127,11 +135,12 @@ class ListAdsCampaignsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $endLt = null, ?array $fields = null, ?string $goal = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->endLt = $endLt;
         $this->fields = $fields;
+        $this->goal = $goal;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
