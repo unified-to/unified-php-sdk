@@ -206,6 +206,8 @@ class UnifiedTo
 
     public Payslip $payslip;
 
+    public Taxonomy $taxonomy;
+
     public Timeoff $timeoff;
 
     public Timeshift $timeshift;
@@ -435,6 +437,7 @@ class UnifiedTo
         $this->device = new Device($this->sdkConfiguration);
         $this->employee = new Employee($this->sdkConfiguration);
         $this->payslip = new Payslip($this->sdkConfiguration);
+        $this->taxonomy = new Taxonomy($this->sdkConfiguration);
         $this->timeoff = new Timeoff($this->sdkConfiguration);
         $this->timeshift = new Timeshift($this->sdkConfiguration);
         $this->kms = new Kms($this->sdkConfiguration);

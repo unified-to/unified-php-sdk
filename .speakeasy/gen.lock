@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: e58e7c5b7a4389898dcda6779b875038
+  docChecksum: 37f0bcef1ef1eca49684f622cd72a3f4
   docVersion: "1.0"
-  speakeasyVersion: 1.790.0
-  generationVersion: 2.917.0
-  releaseVersion: 1.6.83
-  configChecksum: 2a67cd68814753ce23f1688820ab3fcc
+  speakeasyVersion: 1.790.1
+  generationVersion: 2.918.1
+  releaseVersion: 1.6.84
+  configChecksum: c19b89d34e11a00c26248cb76e6b149c
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 667fc100-b7e9-4257-832a-2a7a8c587b21
-  pristine_commit_hash: 206caa0ea3b6524f33cd7a2fb3792041450845a7
-  pristine_tree_hash: 5547e4f8d7db5607b948420c808dbf2e815adb7c
+  generation_id: 170fbf11-00f1-4dce-9438-aab53b887639
+  pristine_commit_hash: 48f5c0b545841d1af3daa1830917cd9098fadf9f
+  pristine_tree_hash: 59d4a65643a396583e29d8431771d86d5c17c644
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -2341,8 +2341,8 @@ trackedFiles:
     pristine_git_object: 23721da1586bd3b46609a5308b354f9b1cfa7669
   docs/Models/Operations/GetHrisPayslipQueryParamFields.md:
     id: 9affa9e9f7a5
-    last_write_checksum: sha1:53258ff19804b40f1375677638b3c2a3f97efd3d
-    pristine_git_object: 8cb8ed993eec20e8eddd7fa6e032b40cfed23b0d
+    last_write_checksum: sha1:fe3376880cac5430acb249a0b7208b05548d5176
+    pristine_git_object: 257047106270e03be00b3fe38a0363b6966ca0fa
   docs/Models/Operations/GetHrisPayslipRequest.md:
     id: 708f7e7417c2
     last_write_checksum: sha1:7f983873e5fdf887b6abea4d710aa5d7469ed3c4
@@ -2351,6 +2351,18 @@ trackedFiles:
     id: 9944878dbbab
     last_write_checksum: sha1:d6cc606d9fa643791a063fc9c166eddaf2206d65
     pristine_git_object: 1b790c6a73525a02aed305c4bee05d0e3696ff53
+  docs/Models/Operations/GetHrisTaxonomyQueryParamFields.md:
+    id: 48768e66f420
+    last_write_checksum: sha1:5e362ef6d8892526123e61812ac9a88250b496ca
+    pristine_git_object: e01d0f7728e6eab883a9d8241901ca0d4a54a4f3
+  docs/Models/Operations/GetHrisTaxonomyRequest.md:
+    id: 3579e6ae2fcd
+    last_write_checksum: sha1:47f5ebb328c9352861b795092c30e4d0bfac1797
+    pristine_git_object: ce9bf74511cc43bd1bba94a2d9c7b04bac8f9855
+  docs/Models/Operations/GetHrisTaxonomyResponse.md:
+    id: "438229657751"
+    last_write_checksum: sha1:ec3b8154627ab235d10124d22b5caeee653ce86f
+    pristine_git_object: bedc0f5b6ee375754cd8665335405007b97a7444
   docs/Models/Operations/GetHrisTimeoffQueryParamFields.md:
     id: 852bda06ed7b
     last_write_checksum: sha1:38c2f9535e81029415c31e33573163b85a237dd1
@@ -4069,8 +4081,8 @@ trackedFiles:
     pristine_git_object: e8f143ca69a77304cd62afe9fb8a4af24cd8eff7
   docs/Models/Operations/ListHrisPayslipsQueryParamFields.md:
     id: 924e72250d07
-    last_write_checksum: sha1:436e235c53c39530864c9390c96aded66816ebeb
-    pristine_git_object: 9493284adb742a362f716101db0b39d6544db1ee
+    last_write_checksum: sha1:b33a0e863705011ee28517931bbd69c1a0335a0b
+    pristine_git_object: e57a0bb6e96adb1ef501fffe0fc5b8b5debed126
   docs/Models/Operations/ListHrisPayslipsRequest.md:
     id: 0504609a0185
     last_write_checksum: sha1:19f8db211213906793bf490ce0878e459886847b
@@ -4079,6 +4091,18 @@ trackedFiles:
     id: a34178cc387a
     last_write_checksum: sha1:f25d9561ba37aa3b155dfc3aee938586e39bdf30
     pristine_git_object: f4bd8a3188e587a31fa747f2f432a18f1ff68fe5
+  docs/Models/Operations/ListHrisTaxonomiesQueryParamFields.md:
+    id: 07642cae2aae
+    last_write_checksum: sha1:3cc233d883fa7a7708ecca7375c9c0aecd7d7c9a
+    pristine_git_object: a12de66c7f1493842ee7a5e668de4775f534adff
+  docs/Models/Operations/ListHrisTaxonomiesRequest.md:
+    id: 0d53acfaad0f
+    last_write_checksum: sha1:e014701ff3366d8defee0df2c5384feebfa169d4
+    pristine_git_object: 1f525705f689e9f5dfdc2a2288afb10f3d096a28
+  docs/Models/Operations/ListHrisTaxonomiesResponse.md:
+    id: e668e647b030
+    last_write_checksum: sha1:bae88fc8d2f08129c6f84d92e45ff576755546d5
+    pristine_git_object: 4e793028ead4f1cab65ba91c33ef465df499a5bd
   docs/Models/Operations/ListHrisTimeoffsQueryParamFields.md:
     id: 99a1de3fa0b8
     last_write_checksum: sha1:92c0cb2493988843dcc6b72a2ee142a609fa6533
@@ -9597,8 +9621,8 @@ trackedFiles:
     pristine_git_object: 4e4a4ec69fdd0bf9741caf745ff6432e1024eefa
   docs/Models/Shared/HrisPayslip.md:
     id: "272856509383"
-    last_write_checksum: sha1:29f9b113caaf4b63eee64d5ae2e165c75907c905
-    pristine_git_object: 7f65424e80ee9066ebea77f32ffb17ed28926328
+    last_write_checksum: sha1:72fb8b8e9d126374ae7a70eeea3548138b661ac9
+    pristine_git_object: 98af4898947e7f56436337febc5e8764dcd2a909
   docs/Models/Shared/HrisPayslipDetail.md:
     id: 8171b933fd91
     last_write_checksum: sha1:d1d926506f649ed8ae1f06855689549dbf1a6686
@@ -9607,6 +9631,14 @@ trackedFiles:
     id: 455385cc0620
     last_write_checksum: sha1:0b5cd49940ef12f4edf6c3aed8a8362a77bd84c8
     pristine_git_object: e841b34236e7b1fb5f536caaed6aa5abac9cab6f
+  docs/Models/Shared/HrisTaxonomy.md:
+    id: 48d12e763862
+    last_write_checksum: sha1:edd8ec51b91e38819f1550c2d89bf342370d0420
+    pristine_git_object: ac4417c4ec1e5eafba6572d9dbe95fa13cd457d2
+  docs/Models/Shared/HrisTaxonomyType.md:
+    id: 66a510d9a7d5
+    last_write_checksum: sha1:f42aaea899f361262038b7d2289a432ea36659d7
+    pristine_git_object: d8f2cbacc04e7a26ffed0b3d474b79044aeb7d26
   docs/Models/Shared/HrisTelephone.md:
     id: 68141d965bc3
     last_write_checksum: sha1:fd5552c217178f4c3ff133be28c1dfd1b619f2af
@@ -9669,8 +9701,8 @@ trackedFiles:
     pristine_git_object: 7145d16e2528dd6d849a05278c9dd8ca0507eaed
   docs/Models/Shared/IntegrationSupport.md:
     id: e3c44c5ce641
-    last_write_checksum: sha1:8d26211a4958a35fe827656ed00597f87c5ff42e
-    pristine_git_object: 737ca201b9d2f07830be75fbe347b95d8e444567
+    last_write_checksum: sha1:4df423ec614e66250ba5580bb95e1fccaf6fd81f
+    pristine_git_object: 815f973670f02a8a2cec11d78fccb51d585d1a8d
   docs/Models/Shared/IntervalUnit.md:
     id: ab9fdd3d2d23
     last_write_checksum: sha1:40e7593261d0aa8ece523bc6dc83139c2952624e
@@ -9987,6 +10019,10 @@ trackedFiles:
     id: ded8602eabc6
     last_write_checksum: sha1:37da8f3614c2b51a1576c21b7327f5aee8ed9cb9
     pristine_git_object: 31d54282c32ee8b71d798d6c30a303e3bd1d33bc
+  docs/Models/Shared/ListRoleId.md:
+    id: 32163dc0179c
+    last_write_checksum: sha1:fba16ea6e17d20d1742a244284eba75bafeff6f0
+    pristine_git_object: 4bba444a5bc0784a45961ab5e28c784e7bd1a5f4
   docs/Models/Shared/ListRootId.md:
     id: 36c92ac5f2d4
     last_write_checksum: sha1:e8b64c604789994d920f8b597acb2592d90e5a2e
@@ -10337,8 +10373,8 @@ trackedFiles:
     pristine_git_object: 51b242ed4ddc0af4e5d05fc34919c6ef4c128117
   docs/Models/Shared/ObjectType.md:
     id: 16ab1ad07185
-    last_write_checksum: sha1:69d60d184b252933c3c243ace05fe9216b19d28e
-    pristine_git_object: c5e7e9c8ea6a99868c90459800162629103cc2be
+    last_write_checksum: sha1:b155220125f5315db04f8a1ded627370e801146b
+    pristine_git_object: 5fa959e02c2b2e88e00abe35d2413ad7c564e2a8
   docs/Models/Shared/One.md:
     id: d1e5547cf25d
     last_write_checksum: sha1:cf4c9b7629bdfb5a4196cf3446928735be87767d
@@ -10985,8 +11021,8 @@ trackedFiles:
     pristine_git_object: 07a67be7b8507ea067181ab30a4e4da7848622fb
   docs/Models/Shared/PropertyConnectionPermissions.md:
     id: 7fe225fef1d3
-    last_write_checksum: sha1:a20aa1d47b3ddaad4850bdb74bca4afdb7332eb7
-    pristine_git_object: 0e2e29fe2be4ba3a90219b6847f747656769756c
+    last_write_checksum: sha1:3c01a8cbbe1cae884d77f6dc351d09f5a0b07080
+    pristine_git_object: 61ef1c3f3bc6868787deba23c6c0081f4e3c9cae
   docs/Models/Shared/PropertyCrmCompanyAddress.md:
     id: 10bf9a8eaf6a
     last_write_checksum: sha1:387c80decc0b36ea86060816bd8d2714b8dcc8a7
@@ -12361,8 +12397,8 @@ trackedFiles:
     pristine_git_object: 17e4afd99f160cb430593d6e5b4654750cbdb9c2
   docs/sdks/hris/README.md:
     id: 0baa868a038c
-    last_write_checksum: sha1:0a8d6dfd30532442463877c734f0b411c97e6339
-    pristine_git_object: 58b3e0d57d7bab9be5b11cc9fbc351b7ef6e45ef
+    last_write_checksum: sha1:4e91b707b2d40856e67d72b737b1210b092a3d9c
+    pristine_git_object: f4e7924f956136484f9e46d7d469b9126c2373df
   docs/sdks/insertionorder/README.md:
     id: 72e4049753b2
     last_write_checksum: sha1:5e9d559c24e8fcf505e2b7e3b99d1b7f62825931
@@ -12655,6 +12691,10 @@ trackedFiles:
     id: ae2d0d96ea1f
     last_write_checksum: sha1:d34540e317c2ee8bbb2366aa74a4b7da6ced16be
     pristine_git_object: 8793b10fb200c0c65a763df686c2b6c7778ef3f9
+  docs/sdks/taxonomy/README.md:
+    id: 1ec2a3120503
+    last_write_checksum: sha1:3e77c3a5a0fdf95cf1af4892d7b9497811c9cf2a
+    pristine_git_object: e11b05ac070d8b573a84d56904c3f88b265e1800
   docs/sdks/taxrate/README.md:
     id: 626e6511cf80
     last_write_checksum: sha1:08643fbf57f21fd0910384d2984c01d20b1f3225
@@ -13045,8 +13085,8 @@ trackedFiles:
     pristine_git_object: 57c3798528c0b261e99c2eb7590784afde547a5c
   src/Hris.php:
     id: f49753f45f8f
-    last_write_checksum: sha1:6ae7a531386bbe00d95d182f4a8f2ce9fbba3adb
-    pristine_git_object: e10ced78e8b5a4d39f807729915e68a400e3d8ae
+    last_write_checksum: sha1:56205e2afb085cf9a990b08b07eb117d7f0d5e0d
+    pristine_git_object: 25d10c718be2816682ba455ffe2da14d63649ceb
   src/Insertionorder.php:
     id: 2a740805440b
     last_write_checksum: sha1:750dab83d17fad9b5b0d6c9352eaee24c09cd56a
@@ -15453,8 +15493,8 @@ trackedFiles:
     pristine_git_object: 50a519193b000153483ec06c9e925c18e1f17271
   src/Models/Operations/GetHrisPayslipQueryParamFields.php:
     id: c6032e8eb1c6
-    last_write_checksum: sha1:4f9b44f60ef32eee87b4a8266d35f776ed82ede1
-    pristine_git_object: 4187244f6ae596e9f4b863a96a90363592e4436f
+    last_write_checksum: sha1:a5de3438f8b71d4b9344f1557006540992148c5c
+    pristine_git_object: 2971f408078d90a147d7a7110a03e16e10783c0a
   src/Models/Operations/GetHrisPayslipRequest.php:
     id: 83d986152f3b
     last_write_checksum: sha1:a76635a6bdea37311ee5f02f7e5a75044dc92a38
@@ -15463,6 +15503,18 @@ trackedFiles:
     id: 091e13f54fdf
     last_write_checksum: sha1:45f1b5d382b1c02c82011a609301e71d7b584e7c
     pristine_git_object: 29d7133684b3fc7be7291a086681c035ac83852e
+  src/Models/Operations/GetHrisTaxonomyQueryParamFields.php:
+    id: 22dc3c2b8b8a
+    last_write_checksum: sha1:32d50f07763ccb21cd55e5a431f59db901734b27
+    pristine_git_object: 0ba2e8fb9465ef3573de84ee65cbc66a4da3c7fb
+  src/Models/Operations/GetHrisTaxonomyRequest.php:
+    id: bde0f133733d
+    last_write_checksum: sha1:042f188003d2f32c0bc538436bc6a04c15ba2ecd
+    pristine_git_object: 6a1d7449c4e32935c25dfb4a1d0046125bddc69e
+  src/Models/Operations/GetHrisTaxonomyResponse.php:
+    id: 716336c9ab3f
+    last_write_checksum: sha1:681cd93d48a6ad577b02771451dc28ca8d57f2bf
+    pristine_git_object: 0d0f4aad3ed1ada61c983bf9247388f3f9517b5b
   src/Models/Operations/GetHrisTimeoffQueryParamFields.php:
     id: 9076cbadf040
     last_write_checksum: sha1:0a94086faa2d2e8106227027a726482c77f46a21
@@ -17181,8 +17233,8 @@ trackedFiles:
     pristine_git_object: 5896745102aa30f505ea6741e3e702e84afe0b8a
   src/Models/Operations/ListHrisPayslipsQueryParamFields.php:
     id: cc873ea73b56
-    last_write_checksum: sha1:764380261cec10b3457659134be39dbcfed0a736
-    pristine_git_object: 4d71feab5dfee476eb3d3bc2666de72feaa660a8
+    last_write_checksum: sha1:e422e8f8134689877c2948003a9659b085e826d7
+    pristine_git_object: 243591b4af97debd1bcb1936ef5d7704943e92ef
   src/Models/Operations/ListHrisPayslipsRequest.php:
     id: 02f7b596138c
     last_write_checksum: sha1:bc35f52a44e5855b399dba34eec49b573ae71c7c
@@ -17191,6 +17243,18 @@ trackedFiles:
     id: 95548dbddea6
     last_write_checksum: sha1:169f381cc55fba8b83cfea613660d1d49694fd74
     pristine_git_object: 28c6a5c50c2d9673471ae9c16a9d8a43db4c0480
+  src/Models/Operations/ListHrisTaxonomiesQueryParamFields.php:
+    id: 1a62880132eb
+    last_write_checksum: sha1:c98fdf50e89315f13fcbac833436988bd2eb1102
+    pristine_git_object: 37a93795be98992aac6fe1886262452b56ad4fb4
+  src/Models/Operations/ListHrisTaxonomiesRequest.php:
+    id: ff694a75d8b6
+    last_write_checksum: sha1:7e4f2de5d75c803c79b5fd6b498883568cb4ecee
+    pristine_git_object: b20ff506a0b3c7ea63d438c8f694a93e72eb98eb
+  src/Models/Operations/ListHrisTaxonomiesResponse.php:
+    id: e36f18e78586
+    last_write_checksum: sha1:10649a1eb33ac2d35d785fb53cf6bc743bc863dd
+    pristine_git_object: 57520ed26ecfb44a77889681574de082c17a9ffe
   src/Models/Operations/ListHrisTimeoffsQueryParamFields.php:
     id: 16e888f50eb2
     last_write_checksum: sha1:b143f57cb5724d3f01eae5235246080d605aed39
@@ -22645,8 +22709,8 @@ trackedFiles:
     pristine_git_object: ad1d119f0d7b6c79e24963096029822328289b4d
   src/Models/Shared/HrisPayslip.php:
     id: 85864c390bd1
-    last_write_checksum: sha1:b07ef9fb36306e85614be26a8e0eb7e459aa7053
-    pristine_git_object: 7e2366cfb293777ef5d90799d11329a9dbc0cb53
+    last_write_checksum: sha1:a309d48e657e85385a038bea1c578a410b22b697
+    pristine_git_object: 5d54163baa0444730723b5037a6a3892279c64b9
   src/Models/Shared/HrisPayslipDetail.php:
     id: 2adfc33ec568
     last_write_checksum: sha1:f134f936849912aac65a432ef396072172a46070
@@ -22655,6 +22719,14 @@ trackedFiles:
     id: 694ae439b81e
     last_write_checksum: sha1:5faf4a1271d19a6afabf215fa91484aa45d15b78
     pristine_git_object: c23ee121e9286bd990e1fd42ac5008e36879960e
+  src/Models/Shared/HrisTaxonomy.php:
+    id: bf99d15b4c28
+    last_write_checksum: sha1:8f8a0d7ad9427253659daebb8791540089577e07
+    pristine_git_object: bcef2cc26b17a526172abbf7506677217bbfbe32
+  src/Models/Shared/HrisTaxonomyType.php:
+    id: a56be89db37b
+    last_write_checksum: sha1:75186dd954780cd7b4000e737761c051694f52b6
+    pristine_git_object: c68bd13689bcda5c15f242030723b8eeeff7dbef
   src/Models/Shared/HrisTelephone.php:
     id: d052d9a16ee4
     last_write_checksum: sha1:815bf9e37d3500c70188fca747bf39f9f91f008b
@@ -22701,8 +22773,8 @@ trackedFiles:
     pristine_git_object: 210526f14d9ed3ee678d2ee5bbd4779512741ed1
   src/Models/Shared/IntegrationSupport.php:
     id: be7d273b34d4
-    last_write_checksum: sha1:2fda0654f2dfa6b66506e455d645d2d5b66feb4d
-    pristine_git_object: 265945da213a12cda1d2732522e32743cf179045
+    last_write_checksum: sha1:7312b34bad864ba5f5633fea39a6a61eac5a861e
+    pristine_git_object: 2a69bb6e221e57fe8731088237a6426ba89132ef
   src/Models/Shared/IntervalUnit.php:
     id: ff898ad06767
     last_write_checksum: sha1:d0700c5cb9e64fe8f2349dad09a6c52664e3587a
@@ -23003,6 +23075,10 @@ trackedFiles:
     id: 57884884ef39
     last_write_checksum: sha1:a23878cd14675e2cecef18d3ba5f55521f4bd3a5
     pristine_git_object: 8169b2b9d24e43d00b5ddf18514da225af291938
+  src/Models/Shared/ListRoleId.php:
+    id: c3b828b62448
+    last_write_checksum: sha1:e023cb9ae292c04f51957db0d78a18c0b79d615b
+    pristine_git_object: 46613af9a68995a24e54253d41a8888e1600fe80
   src/Models/Shared/ListRootId.php:
     id: fbd9b58e3cc6
     last_write_checksum: sha1:3c0ba13b868ce3eed95698274f1feeb53b0056ce
@@ -23353,8 +23429,8 @@ trackedFiles:
     pristine_git_object: 3560c526c71c3a7ce8d98c5d900da5ed21f4beff
   src/Models/Shared/ObjectType.php:
     id: 0ca1cfdde8bc
-    last_write_checksum: sha1:173d4a4d9fbd5ef4ba6578a59336a3c7a4695440
-    pristine_git_object: 29753060dd61d7b2c90297a37b7695adec6f9614
+    last_write_checksum: sha1:2e10321696af2c8562e3b10c003bcd0f120791c5
+    pristine_git_object: 48de7f5843bc30c5a650c6e7f0c36d4f7d6d5253
   src/Models/Shared/One.php:
     id: fc218ffc075d
     last_write_checksum: sha1:9ade3726acb9d7138924628bc5cedbc671f540e6
@@ -23997,8 +24073,8 @@ trackedFiles:
     pristine_git_object: f2c2802d96ce53a8287ec6f69d1cafb25d764b3d
   src/Models/Shared/PropertyConnectionPermissions.php:
     id: d178950653eb
-    last_write_checksum: sha1:c83301536d0c5ee7545776cebaa5967bdefd2773
-    pristine_git_object: e6245ccd2e1396ce9d5ee3448e7b9defee6e86f2
+    last_write_checksum: sha1:b1aa938221e142b189727e1c4b50bb8559ff74ba
+    pristine_git_object: 0ef4654b99d0b17c59c9dbb2bf4758449ad48bd2
   src/Models/Shared/PropertyCrmCompanyAddress.php:
     id: b9bfae74921e
     last_write_checksum: sha1:1ec7eaee7a2691e7394a69b52363315b697a351c
@@ -25225,8 +25301,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:10231901bbad13583ed9c7725570065546ee86da
-    pristine_git_object: 1c41bff542ffeaf6957e78f1dec55e343a35285f
+    last_write_checksum: sha1:6f4e525b650e88153f7ecfad5886c224840745ff
+    pristine_git_object: bc6c6af9f49412d3dbdd9c0990e3147113cac9da
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -25299,6 +25375,10 @@ trackedFiles:
     id: 72147cab99cb
     last_write_checksum: sha1:b7cbee164cdca974d3b164d04f6977da690433b6
     pristine_git_object: e6c22d322eb21cba24b0a73eb6c93c9535bd13c4
+  src/Taxonomy.php:
+    id: ac9a9d300646
+    last_write_checksum: sha1:16b29b66897a124eee849788046229223de927ba
+    pristine_git_object: 1d72fdcc00aae426ac45b902a07219fe00ea9ff5
   src/Taxrate.php:
     id: f7b10e927c27
     last_write_checksum: sha1:37d13ffc1c09149ab403a25b4c4a60bc2cbd8bae
@@ -25345,8 +25425,8 @@ trackedFiles:
     pristine_git_object: 7a2727fbeeabe6ad8b1ae642ffedcce7a30db15a
   src/UnifiedTo.php:
     id: 23b841da485f
-    last_write_checksum: sha1:f65cd958e936ac31a5649c0da20a2eab3ce2bbbe
-    pristine_git_object: b1d0738dbd5c8c6df1b776cbc321deb95ef09cc0
+    last_write_checksum: sha1:b2ca875815ace14cd54c38ec8af5d884f9ec759f
+    pristine_git_object: e38b2e8d9427b0d6f8781ed2f6805fdf31f633b3
   src/UnifiedToBuilder.php:
     id: a5efeefe75a9
     last_write_checksum: sha1:9c6ea940f1040079d63715e5ea34fbe7e8342702
@@ -38561,9 +38641,26 @@ examples:
       responses:
         "200":
           application/json: {}
+  getHrisTaxonomy:
+    speakeasy-default-get-hris-taxonomy:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {}
+  listHrisTaxonomies:
+    speakeasy-default-list-hris-taxonomies:
+      parameters:
+        path:
+          connection_id: "<id>"
+      responses:
+        "200":
+          application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->campaign->listAdsCampaigns()`: \n  *  `request->goal` **Added**\n  *  `response.[]->goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->accounting->getAccountingInvoice()`:  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisDocument)` **Added**\n  *  `response.objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisDocument)` **Added**\n  *  `response.objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisDocument)` **Added**\n  *  `response.objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->accounting->createAccountingBill()`: \n  *  `request->accountingBill->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisDocument)` **Added**\n  *  `response.objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->accounting->createAccountingInvoice()`: \n  *  `request->accountingInvoice->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisDocument)` **Added**\n  *  `response.objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->accounting->getAccountingBill()`:  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->invoice->listAccountingInvoices()`:  `response.[]->term` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->accounting->listAccountingBills()`:  `response.[]->term` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->accounting->listAccountingInvoices()`:  `response.[]->term` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisDocument)` **Added**\n  *  `response.objectType->enum(hrisDocument)` **Added** (Breaking ⚠️)\n* `unified-to->accounting->patchAccountingBill()`: \n  *  `request->accountingBill->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->updateAdsCampaign()`: \n  *  `request->adsCampaign->goal->enum(engagement)` **Added**\n  *  `response.goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->accounting->patchAccountingInvoice()`: \n  *  `request->accountingInvoice->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->invoice->getAccountingInvoice()`:  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->accounting->updateAccountingBill()`: \n  *  `request->accountingBill->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->patchAdsCampaign()`: \n  *  `request->adsCampaign->goal->enum(engagement)` **Added**\n  *  `response.goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->campaign->getAdsCampaign()`:  `response.goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->accounting->updateAccountingInvoice()`: \n  *  `request->accountingInvoice->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->createAdsCampaign()`: \n  *  `request->adsCampaign->goal->enum(engagement)` **Added**\n  *  `response.goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->bill->createAccountingBill()`: \n  *  `request->accountingBill->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->bill->getAccountingBill()`:  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->bill->listAccountingBills()`:  `response.[]->term` **Changed** (Breaking ⚠️)\n* `unified-to->bill->patchAccountingBill()`: \n  *  `request->accountingBill->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->bill->updateAccountingBill()`: \n  *  `request->accountingBill->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsCampaign()`: \n  *  `request->adsCampaign->goal->enum(engagement)` **Added**\n  *  `response.goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->ads->patchAdsCampaign()`: \n  *  `request->adsCampaign->goal->enum(engagement)` **Added**\n  *  `response.goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->invoice->createAccountingInvoice()`: \n  *  `request->accountingInvoice->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsCampaigns()`: \n  *  `request->goal` **Added**\n  *  `response.[]->goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->ads->getAdsCampaign()`:  `response.goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->ads->createAdsCampaign()`: \n  *  `request->adsCampaign->goal->enum(engagement)` **Added**\n  *  `response.goal->enum(engagement)` **Added** (Breaking ⚠️)\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->invoice->updateAccountingInvoice()`: \n  *  `request->accountingInvoice->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->invoice->patchAccountingInvoice()`: \n  *  `request->accountingInvoice->term` **Changed**\n  *  `response.term` **Changed** (Breaking ⚠️)\n* `unified-to->accounting->listAccountingVendorcredits()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->applyAmount` **Added**\n* `unified-to->accounting->updateAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->creditmemo->listAccountingCreditmemoes()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->applyAmount` **Added**\n* `unified-to->expense->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.attachments` **Added**\n* `unified-to->expense->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.attachments` **Added**\n* `unified-to->expense->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->attachments` **Added**\n* `unified-to->vendorcredit->createAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->vendorcredit->getAccountingVendorcredit()`: \n  *  `request->fields` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->vendorcredit->listAccountingVendorcredits()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->applyAmount` **Added**\n* `unified-to->vendorcredit->patchAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->vendorcredit->updateAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->ads->createAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response.attachments` **Added**\n* `unified-to->ads->getAdsAd()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.attachments` **Added**\n* `unified-to->ads->listAdsAds()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->creditmemo->updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->creditmemo->patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->ads->patchAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->creditmemo->getAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->ads->updateAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->creditmemo->createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->ad->createAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ad->getAdsAd()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->ad->listAdsAds()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->ad->patchAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ad->updateAdsAd()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->patchAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->accounting->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.attachments` **Added**\n* `unified-to->document->createHrisDocument()`: **Added**\n* `unified-to->accounting->updateAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->accounting->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.attachments` **Added**\n* `unified-to->accounting->patchAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->document->getHrisDocument()`: **Added**\n* `unified-to->accounting->listAccountingExpenses()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->attachments` **Added**\n* `unified-to->accounting->listAccountingCreditmemoes()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->applyAmount` **Added**\n* `unified-to->accounting->getAccountingVendorcredit()`: \n  *  `request->fields` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listGoal` **Added**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listGoal` **Added**\n* `unified-to->accounting->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response.attachments` **Added**\n* `unified-to->accounting->getAccountingCreditmemo()`: \n  *  `request->fields` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->accounting->createAccountingVendorcredit()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->accounting->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response.attachments` **Added**\n* `unified-to->accounting->createAccountingCreditmemo()`: \n  *  `request` **Changed**\n  *  `response.applyAmount` **Added**\n* `unified-to->hris->updateHrisDocument()`: **Added**\n* `unified-to->hris->removeHrisDocument()`: **Added**\n* `unified-to->hris->patchHrisDocument()`: **Added**\n* `unified-to->hris->listHrisDocuments()`: **Added**\n* `unified-to->hris->getHrisDocument()`: **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listGoal` **Added**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listGoal` **Added**\n* `unified-to->hris->createHrisDocument()`: **Added**\n* `unified-to->document->updateHrisDocument()`: **Added**\n* `unified-to->document->removeHrisDocument()`: **Added**\n* `unified-to->document->patchHrisDocument()`: **Added**\n* `unified-to->document->listHrisDocuments()`: **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisTaxonomy)` **Added**\n  *  `response.objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisTaxonomy)` **Added**\n  *  `response.objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisTaxonomy)` **Added**\n  *  `response.objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisTaxonomy)` **Added**\n  *  `response.objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisTaxonomy)` **Added**\n  *  `response.objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(hrisTaxonomy)` **Added**\n  *  `response.objectType->enum(hrisTaxonomy)` **Added** (Breaking ⚠️)\n* `unified-to->hris->listHrisTaxonomies()`: **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listRoleId` **Added**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listRoleId` **Added**\n* `unified-to->hris->getHrisTaxonomy()`: **Added**\n* `unified-to->payslip->listHrisPayslips()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->paymentReference` **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listRoleId` **Added**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listRoleId` **Added**\n* `unified-to->payslip->getHrisPayslip()`: \n  *  `request->fields` **Changed**\n  *  `response.paymentReference` **Added**\n* `unified-to->hris->listHrisPayslips()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->paymentReference` **Added**\n* `unified-to->hris->getHrisPayslip()`: \n  *  `request->fields` **Changed**\n  *  `response.paymentReference` **Added**\n* `unified-to->taxonomy->listHrisTaxonomies()`: **Added**\n* `unified-to->taxonomy->getHrisTaxonomy()`: **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

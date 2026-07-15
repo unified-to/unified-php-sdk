@@ -25,6 +25,7 @@
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
 * [getHrisLocation](#gethrislocation) - Retrieve a location
 * [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
+* [getHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](#gethristimeshift) - Retrieve a timeshift
 * [listHrisBankaccounts](#listhrisbankaccounts) - List all bankaccounts
@@ -37,6 +38,7 @@
 * [listHrisGroups](#listhrisgroups) - List all groups
 * [listHrisLocations](#listhrislocations) - List all locations
 * [listHrisPayslips](#listhrispayslips) - List all payslips
+* [listHrisTaxonomies](#listhristaxonomies) - List all taxonomies
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](#listhristimeshifts) - List all timeshifts
 * [patchHrisBankaccount](#patchhrisbankaccount) - Update a bankaccount
@@ -1159,6 +1161,57 @@ if ($response->hrisPayslip !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getHrisTaxonomy
+
+Retrieve a taxonomy
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHrisTaxonomy" method="get" path="/hris/{connection_id}/taxonomy/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHrisTaxonomyRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->getHrisTaxonomy(
+    request: $request
+);
+
+if ($response->hrisTaxonomy !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetHrisTaxonomyRequest](../../Models/Operations/GetHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetHrisTaxonomyResponse](../../Models/Operations/GetHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getHrisTimeoff
 
 Retrieve a timeoff
@@ -1754,6 +1807,56 @@ if ($response->hrisPayslips !== null) {
 ### Response
 
 **[?Operations\ListHrisPayslipsResponse](../../Models/Operations/ListHrisPayslipsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listHrisTaxonomies
+
+List all taxonomies
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHrisTaxonomies" method="get" path="/hris/{connection_id}/taxonomy" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHrisTaxonomiesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->hris->listHrisTaxonomies(
+    request: $request
+);
+
+if ($response->hrisTaxonomies !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListHrisTaxonomiesRequest](../../Models/Operations/ListHrisTaxonomiesRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListHrisTaxonomiesResponse](../../Models/Operations/ListHrisTaxonomiesResponse.md)**
 
 ### Errors
 

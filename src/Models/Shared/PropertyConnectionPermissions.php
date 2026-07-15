@@ -152,6 +152,8 @@ enum PropertyConnectionPermissions: string
     case HrisBankaccountWrite = 'hris_bankaccount_write';
     case HrisDocumentRead = 'hris_document_read';
     case HrisDocumentWrite = 'hris_document_write';
+    case HrisTaxonomyRead = 'hris_taxonomy_read';
+    case HrisTaxonomyWrite = 'hris_taxonomy_write';
     case UcCallRead = 'uc_call_read';
     case UcContactRead = 'uc_contact_read';
     case UcContactWrite = 'uc_contact_write';

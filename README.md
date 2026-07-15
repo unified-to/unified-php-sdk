@@ -998,6 +998,7 @@ if ($response->accountingAccount !== null) {
 * [getHrisGroup](docs/sdks/hris/README.md#gethrisgroup) - Retrieve a group
 * [getHrisLocation](docs/sdks/hris/README.md#gethrislocation) - Retrieve a location
 * [getHrisPayslip](docs/sdks/hris/README.md#gethrispayslip) - Retrieve a payslip
+* [getHrisTaxonomy](docs/sdks/hris/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [getHrisTimeoff](docs/sdks/hris/README.md#gethristimeoff) - Retrieve a timeoff
 * [getHrisTimeshift](docs/sdks/hris/README.md#gethristimeshift) - Retrieve a timeshift
 * [listHrisBankaccounts](docs/sdks/hris/README.md#listhrisbankaccounts) - List all bankaccounts
@@ -1010,6 +1011,7 @@ if ($response->accountingAccount !== null) {
 * [listHrisGroups](docs/sdks/hris/README.md#listhrisgroups) - List all groups
 * [listHrisLocations](docs/sdks/hris/README.md#listhrislocations) - List all locations
 * [listHrisPayslips](docs/sdks/hris/README.md#listhrispayslips) - List all payslips
+* [listHrisTaxonomies](docs/sdks/hris/README.md#listhristaxonomies) - List all taxonomies
 * [listHrisTimeoffs](docs/sdks/hris/README.md#listhristimeoffs) - List all timeoffs
 * [listHrisTimeshifts](docs/sdks/hris/README.md#listhristimeshifts) - List all timeshifts
 * [patchHrisBankaccount](docs/sdks/hris/README.md#patchhrisbankaccount) - Update a bankaccount
@@ -1802,6 +1804,11 @@ if ($response->accountingAccount !== null) {
 * [updateTaskComment](docs/sdks/task/README.md#updatetaskcomment) - Update a comment
 * [updateTaskProject](docs/sdks/task/README.md#updatetaskproject) - Update a project
 * [updateTaskTask](docs/sdks/task/README.md#updatetasktask) - Update a task
+
+### [Taxonomy](docs/sdks/taxonomy/README.md)
+
+* [getHrisTaxonomy](docs/sdks/taxonomy/README.md#gethristaxonomy) - Retrieve a taxonomy
+* [listHrisTaxonomies](docs/sdks/taxonomy/README.md#listhristaxonomies) - List all taxonomies
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 

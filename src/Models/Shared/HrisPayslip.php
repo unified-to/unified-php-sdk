@@ -97,6 +97,14 @@ class HrisPayslip
 
     /**
      *
+     * @var ?string $paymentReference
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_reference')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $paymentReference = null;
+
+    /**
+     *
      * @var ?\Unified\Unified_to\Models\Shared\PaymentType $paymentType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('payment_type')]
@@ -149,6 +157,7 @@ class HrisPayslip
      * @param  ?string  $id
      * @param  ?float  $netAmount
      * @param  ?\DateTime  $paidAt
+     * @param  ?string  $paymentReference
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentType  $paymentType
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
@@ -156,7 +165,7 @@ class HrisPayslip
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyHrisPayslipDeduction $deduction = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?PaymentType $paymentType = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyHrisPayslipDeduction $deduction = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?string $paymentReference = null, ?PaymentType $paymentType = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;
@@ -168,6 +177,7 @@ class HrisPayslip
         $this->id = $id;
         $this->netAmount = $netAmount;
         $this->paidAt = $paidAt;
+        $this->paymentReference = $paymentReference;
         $this->paymentType = $paymentType;
         $this->raw = $raw;
         $this->startAt = $startAt;

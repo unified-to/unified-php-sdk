@@ -16,6 +16,7 @@ enum GetHrisPayslipQueryParamFields: string
     case UpdatedAt = 'updated_at';
     case UserId = 'user_id';
     case CompanyId = 'company_id';
+    case PaymentReference = 'payment_reference';
     case PaymentType = 'payment_type';
     case PaidAt = 'paid_at';
     case StartAt = 'start_at';
