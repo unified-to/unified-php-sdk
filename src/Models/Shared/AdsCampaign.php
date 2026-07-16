@@ -71,6 +71,15 @@ class AdsCampaign
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\EffectiveStatus $effectiveStatus
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('effective_status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EffectiveStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?EffectiveStatus $effectiveStatus = null;
+
+    /**
+     *
      * @var ?\DateTime $endAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
@@ -195,6 +204,7 @@ class AdsCampaign
      * @param  ?string  $category
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
+     * @param  ?\Unified\Unified_to\Models\Shared\EffectiveStatus  $effectiveStatus
      * @param  ?\DateTime  $endAt
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignFrequencyCap  $frequencyCap
      * @param  ?\Unified\Unified_to\Models\Shared\Goal  $goal
@@ -211,7 +221,7 @@ class AdsCampaign
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?AdvertisingChannelType $advertisingChannelType = null, ?float $budgetAmount = null, ?BudgetPeriod $budgetPeriod = null, ?string $campaignBudgetIdentifier = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsCampaignFrequencyCap $frequencyCap = null, ?Goal $goal = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsCampaignStatus $status = null, ?PropertyAdsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?AdvertisingChannelType $advertisingChannelType = null, ?float $budgetAmount = null, ?BudgetPeriod $budgetPeriod = null, ?string $campaignBudgetIdentifier = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $currency = null, ?EffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsCampaignFrequencyCap $frequencyCap = null, ?Goal $goal = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsCampaignStatus $status = null, ?PropertyAdsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->advertisingChannelType = $advertisingChannelType;
         $this->budgetAmount = $budgetAmount;
@@ -220,6 +230,7 @@ class AdsCampaign
         $this->category = $category;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
+        $this->effectiveStatus = $effectiveStatus;
         $this->endAt = $endAt;
         $this->frequencyCap = $frequencyCap;
         $this->goal = $goal;

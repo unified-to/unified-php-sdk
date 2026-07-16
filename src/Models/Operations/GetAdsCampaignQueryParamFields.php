@@ -17,6 +17,7 @@ enum GetAdsCampaignQueryParamFields: string
     case Name = 'name';
     case OrganizationId = 'organization_id';
     case Status = 'status';
+    case EffectiveStatus = 'effective_status';
     case StartAt = 'start_at';
     case EndAt = 'end_at';
     case BudgetAmount = 'budget_amount';
