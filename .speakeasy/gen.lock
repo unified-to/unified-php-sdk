@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 187dee688fb0a5b05b3100f79c0eab58
+  docChecksum: c20cc0103001f7589cc7477ec75e8585
   docVersion: "1.0"
   speakeasyVersion: 1.790.2
   generationVersion: 2.918.3
-  releaseVersion: 1.6.85
-  configChecksum: e6e21e8444b17fca16d2068ae6bd3f3f
+  releaseVersion: 1.6.86
+  configChecksum: e9e2ac960480a8d418733be6e3ee3d08
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 5a48663f-3dfe-4d30-bb8d-f4756cc7f5f3
-  pristine_commit_hash: 09189cc9e7e55050706d29af336e7ffa86749075
-  pristine_tree_hash: b2479d854c2ae1c149ccdb09fb5aacd08c027544
+  generation_id: 2a0be9f7-809d-4f82-80a1-10a751023556
+  pristine_commit_hash: 7b0bee6a1abeb082d6e20f34fe82a105df869ae7
+  pristine_tree_hash: 6f4b87f4fc60881aa5759374f6b639541e207b93
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -9705,8 +9705,8 @@ trackedFiles:
     pristine_git_object: 7145d16e2528dd6d849a05278c9dd8ca0507eaed
   docs/Models/Shared/IntegrationSupport.md:
     id: e3c44c5ce641
-    last_write_checksum: sha1:4df423ec614e66250ba5580bb95e1fccaf6fd81f
-    pristine_git_object: 815f973670f02a8a2cec11d78fccb51d585d1a8d
+    last_write_checksum: sha1:fe1f3456d867196882c69ed682f09cef2853f4a2
+    pristine_git_object: 3a72ad7e4e8875d524fa6a45b2cae16ef6c055a4
   docs/Models/Shared/IntervalUnit.md:
     id: ab9fdd3d2d23
     last_write_checksum: sha1:40e7593261d0aa8ece523bc6dc83139c2952624e
@@ -9871,6 +9871,10 @@ trackedFiles:
     id: 705b44448a58
     last_write_checksum: sha1:dd59cae9ffa90f20827d6a5aad411f77099cf2c3
     pristine_git_object: bd4256225558305b46b5a44abb1bec777f257ef7
+  docs/Models/Shared/ListEffectiveStatus.md:
+    id: f6548aa9ef70
+    last_write_checksum: sha1:df4f468486046bc180d06f703004a4721773bba2
+    pristine_git_object: c0fe396d740985d71ec195706e5ded43186a2813
   docs/Models/Shared/ListEndLt.md:
     id: 072300137afa
     last_write_checksum: sha1:1908b00f6f922cb0d673bb1f7d7142517cb8fa01
@@ -22785,8 +22789,8 @@ trackedFiles:
     pristine_git_object: 210526f14d9ed3ee678d2ee5bbd4779512741ed1
   src/Models/Shared/IntegrationSupport.php:
     id: be7d273b34d4
-    last_write_checksum: sha1:7312b34bad864ba5f5633fea39a6a61eac5a861e
-    pristine_git_object: 2a69bb6e221e57fe8731088237a6426ba89132ef
+    last_write_checksum: sha1:f28ccc858ec1bac07bc87ea07545dd2e19054ead
+    pristine_git_object: fc1c0657bf76f1e334c4cb5c793db92e06c160b4
   src/Models/Shared/IntervalUnit.php:
     id: ff898ad06767
     last_write_checksum: sha1:d0700c5cb9e64fe8f2349dad09a6c52664e3587a
@@ -22935,6 +22939,10 @@ trackedFiles:
     id: f4664a737503
     last_write_checksum: sha1:eb22bdb0ce6784240cf05ba6d5918619c594a114
     pristine_git_object: ae70ecc658c9bfd6a4411bec920950486dbb1cea
+  src/Models/Shared/ListEffectiveStatus.php:
+    id: ee8c19d19b94
+    last_write_checksum: sha1:85ee9693bdefd3cca9c348b76da8716899d23989
+    pristine_git_object: bbae588c4b598d0f9d5642a81a5e4abc4794be02
   src/Models/Shared/ListEndLt.php:
     id: 41f00f78b02a
     last_write_checksum: sha1:4f00e457d72246b30160c99382625368c8c98c60
@@ -25317,8 +25325,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:bd5788f5eda08126b0792da592059a24c2c68af7
-    pristine_git_object: ead1d1a7bf7d037fbda5f306ff915eff2203b65a
+    last_write_checksum: sha1:f2b2673e65f0cbe4f10254ce236f168efc764453
+    pristine_git_object: a12a577c32268a745f6e7a8029a7e5615af7aa62
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -38676,7 +38684,12 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]->campaign->effectiveStatus` **Added**\n* `unified-to->ads->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to->ads->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to->ads->listAdsCampaigns()`: \n  *  `request` **Changed**\n  *  `response.[]->effectiveStatus` **Added**\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]->campaign->effectiveStatus` **Added**\n* `unified-to->ads->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to->ads->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to->campaign->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to->campaign->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to->campaign->listAdsCampaigns()`: \n  *  `request` **Changed**\n  *  `response.[]->effectiveStatus` **Added**\n* `unified-to->campaign->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n* `unified-to->campaign->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response.effectiveStatus` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listEffectiveStatus` **Added**
+  * `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listEffectiveStatus` **Added**
+  * `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>->listEffectiveStatus` **Added**
+  * `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>->listEffectiveStatus` **Added**
 generatedFiles:
   - .gitattributes
   - USAGE.md
