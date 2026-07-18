@@ -117,6 +117,15 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupEffectiveStatus $effectiveStatus
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('effective_status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupEffectiveStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupEffectiveStatus $effectiveStatus = null;
+
+    /**
+     *
      * @var ?\DateTime $endAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
@@ -274,6 +283,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
      * @param  ?string  $currency
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupEffectiveStatus  $effectiveStatus
      * @param  ?\DateTime  $endAt
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupFrequencyCap  $frequencyCap
      * @param  ?bool  $hasEuPoliticalAds
@@ -293,7 +303,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $name = null, ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?string $currency = null, ?PropertyAdsReportMetricsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $name = null, ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
         $this->bidStrategy = $bidStrategy;
@@ -307,6 +317,7 @@ class PropertyAdsReportMetricsGroup
         $this->createdAt = $createdAt;
         $this->creativeIds = $creativeIds;
         $this->currency = $currency;
+        $this->effectiveStatus = $effectiveStatus;
         $this->endAt = $endAt;
         $this->frequencyCap = $frequencyCap;
         $this->hasEuPoliticalAds = $hasEuPoliticalAds;

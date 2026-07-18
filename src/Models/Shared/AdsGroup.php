@@ -117,6 +117,15 @@ class AdsGroup
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\AdsGroupEffectiveStatus $effectiveStatus
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('effective_status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsGroupEffectiveStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AdsGroupEffectiveStatus $effectiveStatus = null;
+
+    /**
+     *
      * @var ?\DateTime $endAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
@@ -274,6 +283,7 @@ class AdsGroup
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
      * @param  ?string  $currency
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsGroupEffectiveStatus  $effectiveStatus
      * @param  ?\DateTime  $endAt
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupFrequencyCap  $frequencyCap
      * @param  ?bool  $hasEuPoliticalAds
@@ -293,7 +303,7 @@ class AdsGroup
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?PropertyAdsGroupBidStrategy $bidStrategy = null, ?BillingEvent $billingEvent = null, ?BudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?BudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?string $currency = null, ?\DateTime $endAt = null, ?PropertyAdsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $name = null, ?OptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsGroupStatus $status = null, ?PropertyAdsGroupTargeting $targeting = null, ?AdsGroupType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsGroupBidStrategy $bidStrategy = null, ?BillingEvent $billingEvent = null, ?BudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?BudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?string $currency = null, ?AdsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $name = null, ?OptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsGroupStatus $status = null, ?PropertyAdsGroupTargeting $targeting = null, ?AdsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
         $this->bidStrategy = $bidStrategy;
@@ -307,6 +317,7 @@ class AdsGroup
         $this->createdAt = $createdAt;
         $this->creativeIds = $creativeIds;
         $this->currency = $currency;
+        $this->effectiveStatus = $effectiveStatus;
         $this->endAt = $endAt;
         $this->frequencyCap = $frequencyCap;
         $this->hasEuPoliticalAds = $hasEuPoliticalAds;

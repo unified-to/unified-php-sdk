@@ -244,6 +244,16 @@ class AtsCandidate
     public ?string $userId = null;
 
     /**
+     * references hris employees
+     *
+     * @var ?array<string> $userIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('user_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $userIds = null;
+
+    /**
      *
      * @var ?string $webUrl
      */
@@ -278,10 +288,11 @@ class AtsCandidate
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @param  ?array<string>  $userIds
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $education = null, ?array $emails = null, ?array $experiences = null, ?string $externalIdentifier = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?array $jobIds = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $skills = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
+    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $education = null, ?array $emails = null, ?array $experiences = null, ?string $externalIdentifier = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?array $jobIds = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $skills = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $userIds = null, ?string $webUrl = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -309,6 +320,7 @@ class AtsCandidate
         $this->title = $title;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
+        $this->userIds = $userIds;
         $this->webUrl = $webUrl;
     }
 }

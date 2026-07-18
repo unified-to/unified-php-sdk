@@ -28,6 +28,13 @@ class ListAdsGroupsRequest
     public ?string $campaignId = null;
 
     /**
+     *
+     * @var ?string $effectiveStatus
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=effective_status')]
+    public ?string $effectiveStatus = null;
+
+    /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $endLt
@@ -138,6 +145,7 @@ class ListAdsGroupsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $campaignId
+     * @param  ?string  $effectiveStatus
      * @param  ?string  $endLt
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListAdsGroupsQueryParamFields>  $fields
      * @param  ?string  $ioId
@@ -154,10 +162,11 @@ class ListAdsGroupsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $campaignId = null, ?string $endLt = null, ?array $fields = null, ?string $ioId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $campaignId = null, ?string $effectiveStatus = null, ?string $endLt = null, ?array $fields = null, ?string $ioId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->campaignId = $campaignId;
+        $this->effectiveStatus = $effectiveStatus;
         $this->endLt = $endLt;
         $this->fields = $fields;
         $this->ioId = $ioId;

@@ -20,6 +20,7 @@ enum UpdateAdsGroupQueryParamFields: string
     case OrganizationId = 'organization_id';
     case InsertionorderId = 'insertionorder_id';
     case Status = 'status';
+    case EffectiveStatus = 'effective_status';
     case Targeting = 'targeting';
     case BidAmount = 'bid_amount';
     case BidStrategy = 'bid_strategy';

@@ -167,6 +167,14 @@ class Integration
 
     /**
      *
+     * @var ?bool $requiresCname
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('requires_cname')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $requiresCname = null;
+
+    /**
+     *
      * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemasSaml1|string|float|bool>|null $saml
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('saml')]
@@ -265,6 +273,7 @@ class Integration
      * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemas1|string|float|bool>|null  $partnership
      * @param  ?float  $popularity
      * @param  ?string  $rateLimitDescription
+     * @param  ?bool  $requiresCname
      * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemasSaml1|string|float|bool>|null  $saml
      * @param  array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\IntegrationSchemasSandbox1|string|float|bool>|null  $sandbox
      * @param  ?array<string, \Unified\Unified_to\Models\Shared\IntegrationSupport>  $support
@@ -276,7 +285,7 @@ class Integration
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(array $categories, string $name, string $type, ?float $activeHealthyConnections = null, array|string|float|bool|null $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?bool $isHidden = null, ?string $logoUrl = null, array|string|float|bool|null $partnership = null, ?float $popularity = null, ?string $rateLimitDescription = null, array|string|float|bool|null $saml = null, array|string|float|bool|null $sandbox = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(array $categories, string $name, string $type, ?float $activeHealthyConnections = null, array|string|float|bool|null $api = null, ?string $apiDocsUrl = null, ?bool $beta = null, ?string $color = null, ?string $createdAt = null, ?string $description = null, ?string $faIcon = null, ?bool $featured = null, ?bool $inProgress = null, ?bool $isActive = null, ?bool $isHidden = null, ?string $logoUrl = null, array|string|float|bool|null $partnership = null, ?float $popularity = null, ?string $rateLimitDescription = null, ?bool $requiresCname = null, array|string|float|bool|null $saml = null, array|string|float|bool|null $sandbox = null, ?array $support = null, ?\DateTime $testedAt = null, ?string $textColor = null, ?array $tokenInstructions = null, ?array $tokenNames = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->categories = $categories;
         $this->name = $name;
@@ -297,6 +306,7 @@ class Integration
         $this->partnership = $partnership;
         $this->popularity = $popularity;
         $this->rateLimitDescription = $rateLimitDescription;
+        $this->requiresCname = $requiresCname;
         $this->saml = $saml;
         $this->sandbox = $sandbox;
         $this->support = $support;

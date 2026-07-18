@@ -18,6 +18,7 @@ enum CreateRepoCommitQueryParamFields: string
     case RepoId = 'repo_id';
     case Message = 'message';
     case BranchId = 'branch_id';
+    case PullrequestIds = 'pullrequest_ids';
     case LinesAdded = 'lines_added';
     case LinesDeleted = 'lines_deleted';
     case LinesChanged = 'lines_changed';

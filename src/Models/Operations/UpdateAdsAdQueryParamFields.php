@@ -22,7 +22,6 @@ enum UpdateAdsAdQueryParamFields: string
     case AdType = 'ad_type';
     case AdvertiserName = 'advertiser_name';
     case CreativeIds = 'creative_ids';
-    case LogoCreativeId = 'logo_creative_id';
     case CreativeAssetUrl = 'creative_asset_url';
     case AdCopy = 'ad_copy';
     case Headline = 'headline';
@@ -33,5 +32,6 @@ enum UpdateAdsAdQueryParamFields: string
     case Path1 = 'path1';
     case Path2 = 'path2';
     case Promoted = 'promoted';
+    case LogoCreativeId = 'logo_creative_id';
     case Raw = 'raw';
 }

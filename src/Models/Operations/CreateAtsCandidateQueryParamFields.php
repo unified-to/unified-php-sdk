@@ -31,6 +31,7 @@ enum CreateAtsCandidateQueryParamFields: string
     case Sources = 'sources';
     case DateOfBirth = 'date_of_birth';
     case UserId = 'user_id';
+    case UserIds = 'user_ids';
     case WebUrl = 'web_url';
     case Experiences = 'experiences';
     case Education = 'education';
