@@ -4,16 +4,72 @@
 
 ### Available Operations
 
+* [createMessagingChannel](#createmessagingchannel) - Create a channel
 * [createMessagingMessage](#createmessagingmessage) - Create a message
 * [getMessagingChannel](#getmessagingchannel) - Retrieve a channel
 * [getMessagingMessage](#getmessagingmessage) - Retrieve a message
 * [listMessagingChannels](#listmessagingchannels) - List all channels
 * [listMessagingMessages](#listmessagingmessages) - List all messages
+* [patchMessagingChannel](#patchmessagingchannel) - Update a channel
 * [patchMessagingEvent](#patchmessagingevent) - Update an event
 * [patchMessagingMessage](#patchmessagingmessage) - Update a message
+* [removeMessagingChannel](#removemessagingchannel) - Remove a channel
 * [removeMessagingMessage](#removemessagingmessage) - Remove a message
+* [updateMessagingChannel](#updatemessagingchannel) - Update a channel
 * [updateMessagingEvent](#updatemessagingevent) - Update an event
 * [updateMessagingMessage](#updatemessagingmessage) - Update a message
+
+## createMessagingChannel
+
+Create a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateMessagingChannelRequest(
+    messagingChannel: new Shared\MessagingChannel(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->messaging->createMessagingChannel(
+    request: $request
+);
+
+if ($response->messagingChannel !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\CreateMessagingChannelRequest](../../Models/Operations/CreateMessagingChannelRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\CreateMessagingChannelResponse](../../Models/Operations/CreateMessagingChannelResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createMessagingMessage
 
@@ -269,6 +325,59 @@ if ($response->messagingMessages !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchMessagingChannel
+
+Update a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchMessagingChannelRequest(
+    messagingChannel: new Shared\MessagingChannel(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->messaging->patchMessagingChannel(
+    request: $request
+);
+
+if ($response->messagingChannel !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\PatchMessagingChannelRequest](../../Models/Operations/PatchMessagingChannelRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\PatchMessagingChannelResponse](../../Models/Operations/PatchMessagingChannelResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchMessagingEvent
 
 Update an event
@@ -375,6 +484,57 @@ if ($response->messagingMessage !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeMessagingChannel
+
+Remove a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeMessagingChannel" method="delete" path="/messaging/{connection_id}/channel/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveMessagingChannelRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->messaging->removeMessagingChannel(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\RemoveMessagingChannelRequest](../../Models/Operations/RemoveMessagingChannelRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\RemoveMessagingChannelResponse](../../Models/Operations/RemoveMessagingChannelResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeMessagingMessage
 
 Remove a message
@@ -419,6 +579,59 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveMessagingMessageResponse](../../Models/Operations/RemoveMessagingMessageResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateMessagingChannel
+
+Update a channel
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateMessagingChannelRequest(
+    messagingChannel: new Shared\MessagingChannel(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->messaging->updateMessagingChannel(
+    request: $request
+);
+
+if ($response->messagingChannel !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\UpdateMessagingChannelRequest](../../Models/Operations/UpdateMessagingChannelRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\UpdateMessagingChannelResponse](../../Models/Operations/UpdateMessagingChannelResponse.md)**
 
 ### Errors
 

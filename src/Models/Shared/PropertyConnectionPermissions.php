@@ -171,6 +171,7 @@ enum PropertyConnectionPermissions: string
     case MessagingMessageRead = 'messaging_message_read';
     case MessagingMessageWrite = 'messaging_message_write';
     case MessagingChannelRead = 'messaging_channel_read';
+    case MessagingChannelWrite = 'messaging_channel_write';
     case MessagingEventRead = 'messaging_event_read';
     case MessagingEventWrite = 'messaging_event_write';
     case KmsSpaceRead = 'kms_space_read';
