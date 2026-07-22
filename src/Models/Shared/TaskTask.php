@@ -64,6 +64,14 @@ class TaskTask
     public ?\DateTime $dueAt = null;
 
     /**
+     *
+     * @var ?\DateTime $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $endAt = null;
+
+    /**
      * $followerUserIds
      *
      * @var ?array<string> $followerUserIds
@@ -161,6 +169,14 @@ class TaskTask
 
     /**
      *
+     * @var ?\DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $startAt = null;
+
+    /**
+     *
      * @var ?\Unified\Unified_to\Models\Shared\TaskTaskStatus $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
@@ -177,6 +193,14 @@ class TaskTask
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $tags = null;
+
+    /**
+     *
+     * @var ?string $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $type = null;
 
     /**
      *
@@ -201,6 +225,7 @@ class TaskTask
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creatorUserId
      * @param  ?\DateTime  $dueAt
+     * @param  ?\DateTime  $endAt
      * @param  ?array<string>  $followerUserIds
      * @param  ?array<string>  $groupIds
      * @param  ?bool  $hasChildren
@@ -212,13 +237,15 @@ class TaskTask
      * @param  ?string  $priority
      * @param  ?string  $projectId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\TaskTaskStatus  $status
      * @param  ?array<string>  $tags
+     * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $assignedUserIds = null, ?array $attachmentIds = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?\DateTime $dueAt = null, ?array $followerUserIds = null, ?array $groupIds = null, ?bool $hasChildren = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $parentId = null, ?string $priority = null, ?string $projectId = null, ?array $raw = null, ?TaskTaskStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $assignedUserIds = null, ?array $attachmentIds = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?\DateTime $dueAt = null, ?\DateTime $endAt = null, ?array $followerUserIds = null, ?array $groupIds = null, ?bool $hasChildren = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $parentId = null, ?string $priority = null, ?string $projectId = null, ?array $raw = null, ?\DateTime $startAt = null, ?TaskTaskStatus $status = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->assignedUserIds = $assignedUserIds;
         $this->attachmentIds = $attachmentIds;
@@ -226,6 +253,7 @@ class TaskTask
         $this->createdAt = $createdAt;
         $this->creatorUserId = $creatorUserId;
         $this->dueAt = $dueAt;
+        $this->endAt = $endAt;
         $this->followerUserIds = $followerUserIds;
         $this->groupIds = $groupIds;
         $this->hasChildren = $hasChildren;
@@ -237,8 +265,10 @@ class TaskTask
         $this->priority = $priority;
         $this->projectId = $projectId;
         $this->raw = $raw;
+        $this->startAt = $startAt;
         $this->status = $status;
         $this->tags = $tags;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->url = $url;
     }

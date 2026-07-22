@@ -15,6 +15,8 @@
 | `Status`          | status            |
 | `Notes`           | notes             |
 | `DueAt`           | due_at            |
+| `StartAt`         | start_at          |
+| `EndAt`           | end_at            |
 | `Priority`        | priority          |
 | `AssignedUserIds` | assigned_user_ids |
 | `CreatorUserId`   | creator_user_id   |
@@ -25,4 +27,5 @@
 | `AttachmentIds`   | attachment_ids    |
 | `Metadata`        | metadata          |
 | `HasChildren`     | has_children      |
+| `Type`            | type              |
 | `Raw`             | raw               |

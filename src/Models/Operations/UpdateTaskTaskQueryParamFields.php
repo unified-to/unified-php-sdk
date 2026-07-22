@@ -21,6 +21,8 @@ enum UpdateTaskTaskQueryParamFields: string
     case Status = 'status';
     case Notes = 'notes';
     case DueAt = 'due_at';
+    case StartAt = 'start_at';
+    case EndAt = 'end_at';
     case Priority = 'priority';
     case AssignedUserIds = 'assigned_user_ids';
     case CreatorUserId = 'creator_user_id';
@@ -31,5 +33,6 @@ enum UpdateTaskTaskQueryParamFields: string
     case AttachmentIds = 'attachment_ids';
     case Metadata = 'metadata';
     case HasChildren = 'has_children';
+    case Type = 'type';
     case Raw = 'raw';
 }

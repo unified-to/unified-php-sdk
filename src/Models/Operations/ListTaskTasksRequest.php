@@ -20,6 +20,14 @@ class ListTaskTasksRequest
     public string $connectionId;
 
     /**
+     * The assigned user/employee ID to filter by (reference to HrisEmployee)
+     *
+     * @var ?string $assignedUserId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=assigned_user_id')]
+    public ?string $assignedUserId = null;
+
+    /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $endLt
@@ -129,6 +137,7 @@ class ListTaskTasksRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $assignedUserId
      * @param  ?string  $endLt
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListTaskTasksQueryParamFields>  $fields
      * @param  ?float  $limit
@@ -145,9 +154,10 @@ class ListTaskTasksRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $projectId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $assignedUserId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $projectId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
+        $this->assignedUserId = $assignedUserId;
         $this->endLt = $endLt;
         $this->fields = $fields;
         $this->limit = $limit;
