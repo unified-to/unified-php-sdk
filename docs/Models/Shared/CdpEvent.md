@@ -1,0 +1,18 @@
+# CdpEvent
+
+
+## Fields
+
+| Field                                                               | Type                                                                | Required                                                            | Description                                                         |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `createdAt`                                                         | [\DateTime](https://www.php.net/manual/en/class.datetime.php)       | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `id`                                                                | *?string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `identifiers`                                                       | array<[Shared\CdpIdentifier](../../Models/Shared/CdpIdentifier.md)> | :heavy_minus_sign:                                                  | The identifiers that link this event to a profile                   |
+| `metadata`                                                          | array<[Shared\CdpMetadata](../../Models/Shared/CdpMetadata.md)>     | :heavy_minus_sign:                                                  | The event payload/properties                                        |
+| `name`                                                              | *?string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `occurredAt`                                                        | [\DateTime](https://www.php.net/manual/en/class.datetime.php)       | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `profileId`                                                         | *?string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `raw`                                                               | array<string, *mixed*>                                              | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `source`                                                            | *?string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `sourceId`                                                          | *?string*                                                           | :heavy_minus_sign:                                                  | N/A                                                                 |
+| `type`                                                              | [?Shared\CdpEventType](../../Models/Shared/CdpEventType.md)         | :heavy_minus_sign:                                                  | N/A                                                                 |

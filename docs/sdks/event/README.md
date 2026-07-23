@@ -6,21 +6,27 @@
 
 * [createAnalyticsEvent](#createanalyticsevent) - Create an event
 * [createCalendarEvent](#createcalendarevent) - Create an event
+* [createCdpEvent](#createcdpevent) - Create an event
 * [createCrmEvent](#createcrmevent) - Create an event
 * [getAnalyticsEvent](#getanalyticsevent) - Retrieve an event
 * [getCalendarEvent](#getcalendarevent) - Retrieve an event
+* [getCdpEvent](#getcdpevent) - Retrieve an event
 * [getClubsEvent](#getclubsevent) - Retrieve an event
 * [getCrmEvent](#getcrmevent) - Retrieve an event
 * [listAnalyticsEvents](#listanalyticsevents) - List all events
 * [listCalendarEvents](#listcalendarevents) - List all events
+* [listCdpEvents](#listcdpevents) - List all events
 * [listClubsEvents](#listclubsevents) - List all events
 * [listCrmEvents](#listcrmevents) - List all events
 * [patchCalendarEvent](#patchcalendarevent) - Update an event
+* [patchCdpEvent](#patchcdpevent) - Update an event
 * [patchCrmEvent](#patchcrmevent) - Update an event
 * [patchMessagingEvent](#patchmessagingevent) - Update an event
 * [removeCalendarEvent](#removecalendarevent) - Remove an event
+* [removeCdpEvent](#removecdpevent) - Remove an event
 * [removeCrmEvent](#removecrmevent) - Remove an event
 * [updateCalendarEvent](#updatecalendarevent) - Update an event
+* [updateCdpEvent](#updatecdpevent) - Update an event
 * [updateCrmEvent](#updatecrmevent) - Update an event
 * [updateMessagingEvent](#updatemessagingevent) - Update an event
 
@@ -121,6 +127,58 @@ if ($response->calendarEvent !== null) {
 ### Response
 
 **[?Operations\CreateCalendarEventResponse](../../Models/Operations/CreateCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createCdpEvent
+
+Create an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createCdpEvent" method="post" path="/cdp/{connection_id}/event" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateCdpEventRequest(
+    cdpEvent: new Shared\CdpEvent(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->event->createCdpEvent(
+    request: $request
+);
+
+if ($response->cdpEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\CreateCdpEventRequest](../../Models/Operations/CreateCdpEventRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\CreateCdpEventResponse](../../Models/Operations/CreateCdpEventResponse.md)**
 
 ### Errors
 
@@ -275,6 +333,57 @@ if ($response->calendarEvent !== null) {
 ### Response
 
 **[?Operations\GetCalendarEventResponse](../../Models/Operations/GetCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCdpEvent
+
+Retrieve an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCdpEvent" method="get" path="/cdp/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCdpEventRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->getCdpEvent(
+    request: $request
+);
+
+if ($response->cdpEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\GetCdpEventRequest](../../Models/Operations/GetCdpEventRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+### Response
+
+**[?Operations\GetCdpEventResponse](../../Models/Operations/GetCdpEventResponse.md)**
 
 ### Errors
 
@@ -484,6 +593,56 @@ if ($response->calendarEvents !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listCdpEvents
+
+List all events
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCdpEvents" method="get" path="/cdp/{connection_id}/event" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCdpEventsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->event->listCdpEvents(
+    request: $request
+);
+
+if ($response->cdpEvents !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\ListCdpEventsRequest](../../Models/Operations/ListCdpEventsRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\ListCdpEventsResponse](../../Models/Operations/ListCdpEventsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listClubsEvents
 
 List all events
@@ -630,6 +789,59 @@ if ($response->calendarEvent !== null) {
 ### Response
 
 **[?Operations\PatchCalendarEventResponse](../../Models/Operations/PatchCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchCdpEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchCdpEvent" method="patch" path="/cdp/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchCdpEventRequest(
+    cdpEvent: new Shared\CdpEvent(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->patchCdpEvent(
+    request: $request
+);
+
+if ($response->cdpEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\PatchCdpEventRequest](../../Models/Operations/PatchCdpEventRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\PatchCdpEventResponse](../../Models/Operations/PatchCdpEventResponse.md)**
 
 ### Errors
 
@@ -794,6 +1006,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeCdpEvent
+
+Remove an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeCdpEvent" method="delete" path="/cdp/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveCdpEventRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->removeCdpEvent(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\RemoveCdpEventRequest](../../Models/Operations/RemoveCdpEventRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\RemoveCdpEventResponse](../../Models/Operations/RemoveCdpEventResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeCrmEvent
 
 Remove an event
@@ -891,6 +1154,59 @@ if ($response->calendarEvent !== null) {
 ### Response
 
 **[?Operations\UpdateCalendarEventResponse](../../Models/Operations/UpdateCalendarEventResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateCdpEvent
+
+Update an event
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateCdpEvent" method="put" path="/cdp/{connection_id}/event/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateCdpEventRequest(
+    cdpEvent: new Shared\CdpEvent(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->event->updateCdpEvent(
+    request: $request
+);
+
+if ($response->cdpEvent !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\UpdateCdpEventRequest](../../Models/Operations/UpdateCdpEventRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\UpdateCdpEventResponse](../../Models/Operations/UpdateCdpEventResponse.md)**
 
 ### Errors
 

@@ -206,6 +206,15 @@ if ($response->accountingAccount !== null) {
 * [updateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 * [updateAccountingVendorcredit](docs/sdks/accounting/README.md#updateaccountingvendorcredit) - Update a vendorcredit
 
+### [Activation](docs/sdks/activation/README.md)
+
+* [createCdpActivation](docs/sdks/activation/README.md#createcdpactivation) - Create an activation
+* [getCdpActivation](docs/sdks/activation/README.md#getcdpactivation) - Retrieve an activation
+* [listCdpActivations](docs/sdks/activation/README.md#listcdpactivations) - List all activations
+* [patchCdpActivation](docs/sdks/activation/README.md#patchcdpactivation) - Update an activation
+* [removeCdpActivation](docs/sdks/activation/README.md#removecdpactivation) - Remove an activation
+* [updateCdpActivation](docs/sdks/activation/README.md#updatecdpactivation) - Update an activation
+
 ### [Activity](docs/sdks/activity/README.md)
 
 * [createAtsActivity](docs/sdks/activity/README.md#createatsactivity) - Create an activity
@@ -515,6 +524,45 @@ if ($response->accountingAccount !== null) {
 * [removeTicketingCategory](docs/sdks/category/README.md#removeticketingcategory) - Remove a category
 * [updateAccountingCategory](docs/sdks/category/README.md#updateaccountingcategory) - Update a category
 * [updateTicketingCategory](docs/sdks/category/README.md#updateticketingcategory) - Update a category
+
+### [Cdp](docs/sdks/cdp/README.md)
+
+* [createCdpActivation](docs/sdks/cdp/README.md#createcdpactivation) - Create an activation
+* [createCdpDestination](docs/sdks/cdp/README.md#createcdpdestination) - Create a destination
+* [createCdpEvent](docs/sdks/cdp/README.md#createcdpevent) - Create an event
+* [createCdpProfile](docs/sdks/cdp/README.md#createcdpprofile) - Create a profile
+* [createCdpSegment](docs/sdks/cdp/README.md#createcdpsegment) - Create a segment
+* [createCdpSource](docs/sdks/cdp/README.md#createcdpsource) - Create a source
+* [getCdpActivation](docs/sdks/cdp/README.md#getcdpactivation) - Retrieve an activation
+* [getCdpDestination](docs/sdks/cdp/README.md#getcdpdestination) - Retrieve a destination
+* [getCdpEvent](docs/sdks/cdp/README.md#getcdpevent) - Retrieve an event
+* [getCdpProfile](docs/sdks/cdp/README.md#getcdpprofile) - Retrieve a profile
+* [getCdpSegment](docs/sdks/cdp/README.md#getcdpsegment) - Retrieve a segment
+* [getCdpSource](docs/sdks/cdp/README.md#getcdpsource) - Retrieve a source
+* [listCdpActivations](docs/sdks/cdp/README.md#listcdpactivations) - List all activations
+* [listCdpDestinations](docs/sdks/cdp/README.md#listcdpdestinations) - List all destinations
+* [listCdpEvents](docs/sdks/cdp/README.md#listcdpevents) - List all events
+* [listCdpProfiles](docs/sdks/cdp/README.md#listcdpprofiles) - List all profiles
+* [listCdpSegments](docs/sdks/cdp/README.md#listcdpsegments) - List all segments
+* [listCdpSources](docs/sdks/cdp/README.md#listcdpsources) - List all sources
+* [patchCdpActivation](docs/sdks/cdp/README.md#patchcdpactivation) - Update an activation
+* [patchCdpDestination](docs/sdks/cdp/README.md#patchcdpdestination) - Update a destination
+* [patchCdpEvent](docs/sdks/cdp/README.md#patchcdpevent) - Update an event
+* [patchCdpProfile](docs/sdks/cdp/README.md#patchcdpprofile) - Update a profile
+* [patchCdpSegment](docs/sdks/cdp/README.md#patchcdpsegment) - Update a segment
+* [patchCdpSource](docs/sdks/cdp/README.md#patchcdpsource) - Update a source
+* [removeCdpActivation](docs/sdks/cdp/README.md#removecdpactivation) - Remove an activation
+* [removeCdpDestination](docs/sdks/cdp/README.md#removecdpdestination) - Remove a destination
+* [removeCdpEvent](docs/sdks/cdp/README.md#removecdpevent) - Remove an event
+* [removeCdpProfile](docs/sdks/cdp/README.md#removecdpprofile) - Remove a profile
+* [removeCdpSegment](docs/sdks/cdp/README.md#removecdpsegment) - Remove a segment
+* [removeCdpSource](docs/sdks/cdp/README.md#removecdpsource) - Remove a source
+* [updateCdpActivation](docs/sdks/cdp/README.md#updatecdpactivation) - Update an activation
+* [updateCdpDestination](docs/sdks/cdp/README.md#updatecdpdestination) - Update a destination
+* [updateCdpEvent](docs/sdks/cdp/README.md#updatecdpevent) - Update an event
+* [updateCdpProfile](docs/sdks/cdp/README.md#updatecdpprofile) - Update a profile
+* [updateCdpSegment](docs/sdks/cdp/README.md#updatecdpsegment) - Update a segment
+* [updateCdpSource](docs/sdks/cdp/README.md#updatecdpsource) - Update a source
 
 ### [Change](docs/sdks/change/README.md)
 
@@ -835,6 +883,15 @@ if ($response->accountingAccount !== null) {
 * [removeHrisDeduction](docs/sdks/deduction/README.md#removehrisdeduction) - Remove a deduction
 * [updateHrisDeduction](docs/sdks/deduction/README.md#updatehrisdeduction) - Update a deduction
 
+### [Destination](docs/sdks/destination/README.md)
+
+* [createCdpDestination](docs/sdks/destination/README.md#createcdpdestination) - Create a destination
+* [getCdpDestination](docs/sdks/destination/README.md#getcdpdestination) - Retrieve a destination
+* [listCdpDestinations](docs/sdks/destination/README.md#listcdpdestinations) - List all destinations
+* [patchCdpDestination](docs/sdks/destination/README.md#patchcdpdestination) - Update a destination
+* [removeCdpDestination](docs/sdks/destination/README.md#removecdpdestination) - Remove a destination
+* [updateCdpDestination](docs/sdks/destination/README.md#updatecdpdestination) - Update a destination
+
 ### [Device](docs/sdks/device/README.md)
 
 * [createHrisDevice](docs/sdks/device/README.md#createhrisdevice) - Create a device
@@ -893,21 +950,27 @@ if ($response->accountingAccount !== null) {
 
 * [createAnalyticsEvent](docs/sdks/event/README.md#createanalyticsevent) - Create an event
 * [createCalendarEvent](docs/sdks/event/README.md#createcalendarevent) - Create an event
+* [createCdpEvent](docs/sdks/event/README.md#createcdpevent) - Create an event
 * [createCrmEvent](docs/sdks/event/README.md#createcrmevent) - Create an event
 * [getAnalyticsEvent](docs/sdks/event/README.md#getanalyticsevent) - Retrieve an event
 * [getCalendarEvent](docs/sdks/event/README.md#getcalendarevent) - Retrieve an event
+* [getCdpEvent](docs/sdks/event/README.md#getcdpevent) - Retrieve an event
 * [getClubsEvent](docs/sdks/event/README.md#getclubsevent) - Retrieve an event
 * [getCrmEvent](docs/sdks/event/README.md#getcrmevent) - Retrieve an event
 * [listAnalyticsEvents](docs/sdks/event/README.md#listanalyticsevents) - List all events
 * [listCalendarEvents](docs/sdks/event/README.md#listcalendarevents) - List all events
+* [listCdpEvents](docs/sdks/event/README.md#listcdpevents) - List all events
 * [listClubsEvents](docs/sdks/event/README.md#listclubsevents) - List all events
 * [listCrmEvents](docs/sdks/event/README.md#listcrmevents) - List all events
 * [patchCalendarEvent](docs/sdks/event/README.md#patchcalendarevent) - Update an event
+* [patchCdpEvent](docs/sdks/event/README.md#patchcdpevent) - Update an event
 * [patchCrmEvent](docs/sdks/event/README.md#patchcrmevent) - Update an event
 * [patchMessagingEvent](docs/sdks/event/README.md#patchmessagingevent) - Update an event
 * [removeCalendarEvent](docs/sdks/event/README.md#removecalendarevent) - Remove an event
+* [removeCdpEvent](docs/sdks/event/README.md#removecdpevent) - Remove an event
 * [removeCrmEvent](docs/sdks/event/README.md#removecrmevent) - Remove an event
 * [updateCalendarEvent](docs/sdks/event/README.md#updatecalendarevent) - Update an event
+* [updateCdpEvent](docs/sdks/event/README.md#updatecdpevent) - Update an event
 * [updateCrmEvent](docs/sdks/event/README.md#updatecrmevent) - Update an event
 * [updateMessagingEvent](docs/sdks/event/README.md#updatemessagingevent) - Update an event
 
@@ -1466,6 +1529,15 @@ if ($response->accountingAccount !== null) {
 * [removeCrmPipeline](docs/sdks/pipeline/README.md#removecrmpipeline) - Remove a pipeline
 * [updateCrmPipeline](docs/sdks/pipeline/README.md#updatecrmpipeline) - Update a pipeline
 
+### [Profile](docs/sdks/profile/README.md)
+
+* [createCdpProfile](docs/sdks/profile/README.md#createcdpprofile) - Create a profile
+* [getCdpProfile](docs/sdks/profile/README.md#getcdpprofile) - Retrieve a profile
+* [listCdpProfiles](docs/sdks/profile/README.md#listcdpprofiles) - List all profiles
+* [patchCdpProfile](docs/sdks/profile/README.md#patchcdpprofile) - Update a profile
+* [removeCdpProfile](docs/sdks/profile/README.md#removecdpprofile) - Remove a profile
+* [updateCdpProfile](docs/sdks/profile/README.md#updatecdpprofile) - Update a profile
+
 ### [Profitloss](docs/sdks/profitloss/README.md)
 
 * [getAccountingProfitloss](docs/sdks/profitloss/README.md#getaccountingprofitloss) - Retrieve a profitloss
@@ -1675,6 +1747,15 @@ if ($response->accountingAccount !== null) {
 * [listUnifiedWorkspaceSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [removeUnifiedWorkspaceSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedworkspacesecretsmanager) - Remove secrets manager
 
+### [Segment](docs/sdks/segment/README.md)
+
+* [createCdpSegment](docs/sdks/segment/README.md#createcdpsegment) - Create a segment
+* [getCdpSegment](docs/sdks/segment/README.md#getcdpsegment) - Retrieve a segment
+* [listCdpSegments](docs/sdks/segment/README.md#listcdpsegments) - List all segments
+* [patchCdpSegment](docs/sdks/segment/README.md#patchcdpsegment) - Update a segment
+* [removeCdpSegment](docs/sdks/segment/README.md#removecdpsegment) - Remove a segment
+* [updateCdpSegment](docs/sdks/segment/README.md#updatecdpsegment) - Update a segment
+
 ### [Session](docs/sdks/session/README.md)
 
 * [getAnalyticsSession](docs/sdks/session/README.md#getanalyticssession) - Retrieve a session
@@ -1734,6 +1815,15 @@ if ($response->accountingAccount !== null) {
 * [removeSigningSignatory](docs/sdks/signing/README.md#removesigningsignatory) - Remove a signatory
 * [updateSigningDocument](docs/sdks/signing/README.md#updatesigningdocument) - Update a document
 * [updateSigningSignatory](docs/sdks/signing/README.md#updatesigningsignatory) - Update a signatory
+
+### [Source](docs/sdks/source/README.md)
+
+* [createCdpSource](docs/sdks/source/README.md#createcdpsource) - Create a source
+* [getCdpSource](docs/sdks/source/README.md#getcdpsource) - Retrieve a source
+* [listCdpSources](docs/sdks/source/README.md#listcdpsources) - List all sources
+* [patchCdpSource](docs/sdks/source/README.md#patchcdpsource) - Update a source
+* [removeCdpSource](docs/sdks/source/README.md#removecdpsource) - Remove a source
+* [updateCdpSource](docs/sdks/source/README.md#updatecdpsource) - Update a source
 
 ### [Space](docs/sdks/space/README.md)
 

@@ -42,4 +42,5 @@ enum Categories: string
     case Signing = 'signing';
     case Clubs = 'clubs';
     case Datastore = 'datastore';
+    case Cdp = 'cdp';
 }

@@ -287,4 +287,16 @@ enum PropertyConnectionPermissions: string
     case DatastoreRecordWrite = 'datastore_record_write';
     case DatastoreQueryRead = 'datastore_query_read';
     case DatastoreQueryWrite = 'datastore_query_write';
+    case CdpProfileRead = 'cdp_profile_read';
+    case CdpProfileWrite = 'cdp_profile_write';
+    case CdpSegmentRead = 'cdp_segment_read';
+    case CdpSegmentWrite = 'cdp_segment_write';
+    case CdpEventRead = 'cdp_event_read';
+    case CdpEventWrite = 'cdp_event_write';
+    case CdpSourceRead = 'cdp_source_read';
+    case CdpSourceWrite = 'cdp_source_write';
+    case CdpDestinationRead = 'cdp_destination_read';
+    case CdpDestinationWrite = 'cdp_destination_write';
+    case CdpActivationRead = 'cdp_activation_read';
+    case CdpActivationWrite = 'cdp_activation_write';
 }

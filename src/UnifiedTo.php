@@ -130,6 +130,18 @@ class UnifiedTo
 
     public Webinar $webinar;
 
+    public Cdp $cdp;
+
+    public Activation $activation;
+
+    public Destination $destination;
+
+    public Profile $profile;
+
+    public Segment $segment;
+
+    public Source $source;
+
     public Clubs $clubs;
 
     public Location $location;
@@ -399,6 +411,12 @@ class UnifiedTo
         $this->link = new Link($this->sdkConfiguration);
         $this->recording = new Recording($this->sdkConfiguration);
         $this->webinar = new Webinar($this->sdkConfiguration);
+        $this->cdp = new Cdp($this->sdkConfiguration);
+        $this->activation = new Activation($this->sdkConfiguration);
+        $this->destination = new Destination($this->sdkConfiguration);
+        $this->profile = new Profile($this->sdkConfiguration);
+        $this->segment = new Segment($this->sdkConfiguration);
+        $this->source = new Source($this->sdkConfiguration);
         $this->clubs = new Clubs($this->sdkConfiguration);
         $this->location = new Location($this->sdkConfiguration);
         $this->member = new Member($this->sdkConfiguration);

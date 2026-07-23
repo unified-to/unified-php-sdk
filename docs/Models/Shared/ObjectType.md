@@ -155,3 +155,9 @@
 | `DatastoreTable`          | datastore_table           |
 | `DatastoreRecord`         | datastore_record          |
 | `DatastoreQuery`          | datastore_query           |
+| `CdpProfile`              | cdp_profile               |
+| `CdpSegment`              | cdp_segment               |
+| `CdpEvent`                | cdp_event                 |
+| `CdpSource`               | cdp_source                |
+| `CdpDestination`          | cdp_destination           |
+| `CdpActivation`           | cdp_activation            |

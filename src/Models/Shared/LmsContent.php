@@ -59,6 +59,14 @@ class LmsContent
 
     /**
      *
+     * @var ?string $difficulty
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('difficulty')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $difficulty = null;
+
+    /**
+     *
      * @var ?float $durationMinutes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('duration_minutes')]
@@ -146,6 +154,14 @@ class LmsContent
     public ?string $providerName = null;
 
     /**
+     *
+     * @var ?\DateTime $publishedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('published_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $publishedAt = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -182,6 +198,26 @@ class LmsContent
     public ?float $sortOrder = null;
 
     /**
+     * Topic taxonomy as {name, rank} pairs carrying the full ancestor chain (rank = depth, 0 = top level)
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsSubject> $subjects
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('subjects')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsSubject>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $subjects = null;
+
+    /**
+     * $tags
+     *
+     * @var ?array<string> $tags
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tags')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $tags = null;
+
+    /**
      *
      * @var ?\DateTime $updatedAt
      */
@@ -195,6 +231,7 @@ class LmsContent
      * @param  ?array<string>  $courseIds
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
+     * @param  ?string  $difficulty
      * @param  ?float  $durationMinutes
      * @param  ?string  $externalReference
      * @param  ?string  $id
@@ -205,20 +242,24 @@ class LmsContent
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
      * @param  ?string  $name
      * @param  ?string  $providerName
+     * @param  ?\DateTime  $publishedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $shortDescription
      * @param  ?array<string>  $skills
      * @param  ?float  $sortOrder
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsSubject>  $subjects
+     * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $categories = null, ?array $collectionIds = null, ?array $courseIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $durationMinutes = null, ?string $externalReference = null, ?string $id = null, ?array $instructorIds = null, ?bool $isActive = null, ?array $languages = null, ?array $localizations = null, ?array $media = null, ?string $name = null, ?string $providerName = null, ?array $raw = null, ?string $shortDescription = null, ?array $skills = null, ?float $sortOrder = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $categories = null, ?array $collectionIds = null, ?array $courseIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $difficulty = null, ?float $durationMinutes = null, ?string $externalReference = null, ?string $id = null, ?array $instructorIds = null, ?bool $isActive = null, ?array $languages = null, ?array $localizations = null, ?array $media = null, ?string $name = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?string $shortDescription = null, ?array $skills = null, ?float $sortOrder = null, ?array $subjects = null, ?array $tags = null, ?\DateTime $updatedAt = null)
     {
         $this->categories = $categories;
         $this->collectionIds = $collectionIds;
         $this->courseIds = $courseIds;
         $this->createdAt = $createdAt;
         $this->description = $description;
+        $this->difficulty = $difficulty;
         $this->durationMinutes = $durationMinutes;
         $this->externalReference = $externalReference;
         $this->id = $id;
@@ -229,10 +270,13 @@ class LmsContent
         $this->media = $media;
         $this->name = $name;
         $this->providerName = $providerName;
+        $this->publishedAt = $publishedAt;
         $this->raw = $raw;
         $this->shortDescription = $shortDescription;
         $this->skills = $skills;
         $this->sortOrder = $sortOrder;
+        $this->subjects = $subjects;
+        $this->tags = $tags;
         $this->updatedAt = $updatedAt;
     }
 }

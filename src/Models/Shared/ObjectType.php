@@ -161,4 +161,10 @@ enum ObjectType: string
     case DatastoreTable = 'datastore_table';
     case DatastoreRecord = 'datastore_record';
     case DatastoreQuery = 'datastore_query';
+    case CdpProfile = 'cdp_profile';
+    case CdpSegment = 'cdp_segment';
+    case CdpEvent = 'cdp_event';
+    case CdpSource = 'cdp_source';
+    case CdpDestination = 'cdp_destination';
+    case CdpActivation = 'cdp_activation';
 }

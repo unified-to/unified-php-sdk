@@ -1,0 +1,20 @@
+# CdpSegment
+
+
+## Fields
+
+| Field                                                           | Type                                                            | Required                                                        | Description                                                     |
+| --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- | --------------------------------------------------------------- |
+| `computeMode`                                                   | [?Shared\ComputeMode](../../Models/Shared/ComputeMode.md)       | :heavy_minus_sign:                                              | N/A                                                             |
+| `createdAt`                                                     | [\DateTime](https://www.php.net/manual/en/class.datetime.php)   | :heavy_minus_sign:                                              | N/A                                                             |
+| `definition`                                                    | *?string*                                                       | :heavy_minus_sign:                                              | N/A                                                             |
+| `description`                                                   | *?string*                                                       | :heavy_minus_sign:                                              | N/A                                                             |
+| `id`                                                            | *?string*                                                       | :heavy_minus_sign:                                              | N/A                                                             |
+| `isActive`                                                      | *?bool*                                                         | :heavy_minus_sign:                                              | N/A                                                             |
+| `name`                                                          | *?string*                                                       | :heavy_minus_sign:                                              | N/A                                                             |
+| `raw`                                                           | array<string, *mixed*>                                          | :heavy_minus_sign:                                              | N/A                                                             |
+| `size`                                                          | *?float*                                                        | :heavy_minus_sign:                                              | N/A                                                             |
+| `slug`                                                          | *?string*                                                       | :heavy_minus_sign:                                              | N/A                                                             |
+| `sourceId`                                                      | *?string*                                                       | :heavy_minus_sign:                                              | N/A                                                             |
+| `type`                                                          | [?Shared\CdpSegmentType](../../Models/Shared/CdpSegmentType.md) | :heavy_minus_sign:                                              | N/A                                                             |
+| `updatedAt`                                                     | [\DateTime](https://www.php.net/manual/en/class.datetime.php)   | :heavy_minus_sign:                                              | N/A                                                             |

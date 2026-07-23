@@ -17,10 +17,14 @@
 | `IsActive`          | is_active           |
 | `DurationMinutes`   | duration_minutes    |
 | `Categories`        | categories          |
+| `Subjects`          | subjects            |
 | `Skills`            | skills              |
+| `Tags`              | tags                |
+| `Difficulty`        | difficulty          |
 | `SortOrder`         | sort_order          |
 | `ProviderName`      | provider_name       |
 | `ShortDescription`  | short_description   |
+| `PublishedAt`       | published_at        |
 | `Localizations`     | localizations       |
 | `InstructorIds`     | instructor_ids      |
 | `CollectionIds`     | collection_ids      |
