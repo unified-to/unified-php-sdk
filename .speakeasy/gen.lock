@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: df9d7e70f96a426fc6497f3a82fde17e
+  docChecksum: 4926c88b7af5a30853ff3f6a7d37afe1
   docVersion: "1.0"
   speakeasyVersion: 1.790.3
   generationVersion: 2.918.4
-  releaseVersion: 1.6.90
-  configChecksum: f2b8fe9fb975013e1eff1eb51a40b2cb
+  releaseVersion: 1.6.91
+  configChecksum: e4e87ceeb052f6cffdf24a71c44968d1
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 9ec8269e-6e35-4195-9e50-af06881173f3
-  pristine_commit_hash: 5eb8d173628df0d3b3d9b827d306af4840efdcbe
-  pristine_tree_hash: f580da3497190f47bce4716fbbf7046c7db35e74
+  generation_id: 687e7a41-b6b0-4673-bec5-376d2681a4ab
+  pristine_commit_hash: 5a6705af65c53672177ec5a0f5915d138347f01c
+  pristine_tree_hash: 010a90bb40d3d239481bbc59a3efb95a2559987b
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -3521,8 +3521,8 @@ trackedFiles:
     pristine_git_object: 5a697ad618b76e7d282b754166567addb8d2bef5
   docs/Models/Operations/ListAdsReportsRequest.md:
     id: 87347f9a8d43
-    last_write_checksum: sha1:9c0445f6e1fafa1f5253ef985c6128cab6e9a55d
-    pristine_git_object: c0f7a19a45d1db8bf886e42b781f112bec1da2c3
+    last_write_checksum: sha1:387554f5a5f24c49cc28ac5ba3136dfed547112e
+    pristine_git_object: 7b852f1657569c1849bdcec6865e5dc55ef239af
   docs/Models/Operations/ListAdsReportsResponse.md:
     id: 7e6bbf3d142a
     last_write_checksum: sha1:8dff96ad472a98522eed8531b62ea37344cc8a6b
@@ -9097,8 +9097,8 @@ trackedFiles:
     pristine_git_object: abe50e393ae09e1ef3abf2483d28a17656dd3ced
   docs/Models/Shared/AdsReportMetricsType.md:
     id: 20f69a4b47c4
-    last_write_checksum: sha1:364ac1716336db99034b7f56db03cd1d6587f088
-    pristine_git_object: b61267afa421b8d8afe2aa9db2021e67f3ca1b25
+    last_write_checksum: sha1:058a5c3be0c8ec9ed0bc8ccd28fe6622436a39e7
+    pristine_git_object: 43787a47442485e8abefb5562a2ed89d097c6205
   docs/Models/Shared/AdsTarget.md:
     id: 3f7bf9f3468a
     last_write_checksum: sha1:b14862df3af8753c7b61af447892cd4d4f352202
@@ -17309,8 +17309,8 @@ trackedFiles:
     pristine_git_object: 0771ec912b3b3ec42668863c0a493213ec9a4d09
   src/Models/Operations/ListAdsReportsRequest.php:
     id: 69605d1fcab0
-    last_write_checksum: sha1:3859e89a2abbb64b0a46d80c921c92def3d76441
-    pristine_git_object: 69069e456f85112f3fe139249adb89660013c805
+    last_write_checksum: sha1:e319340f22e591131f6449624b57022b21e5815b
+    pristine_git_object: d18f903556f5f5be059d0fb6af6809fb953b3abd
   src/Models/Operations/ListAdsReportsResponse.php:
     id: 178b2c283a7a
     last_write_checksum: sha1:a7f877818ce72241d10a17a202eba3d31a6576c5
@@ -22885,8 +22885,8 @@ trackedFiles:
     pristine_git_object: 821ec73705c44cf2212f27bc403076ea0854d2de
   src/Models/Shared/AdsReportMetricsType.php:
     id: 15a7c431b75c
-    last_write_checksum: sha1:4efa00dfbe9dd2eb97d38995a63901da96b0705d
-    pristine_git_object: ed5152b95d0f72a1e86606c280b68c74e7c45836
+    last_write_checksum: sha1:cc30604b75aa6d39d3dccc81d997c3dd013173b0
+    pristine_git_object: 8a48b8ab6bb245ab400a3216980be3bd58470cf3
   src/Models/Shared/AdsTarget.php:
     id: 4caa079c76cf
     last_write_checksum: sha1:5247ddb6ee8ef2b524cf3f65f395540acffbdc3a
@@ -26525,8 +26525,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:42b3217cba36fdef67f607937a8c20d7956d9d39
-    pristine_git_object: 020024020c7e72759aea76da1cdf937570859234
+    last_write_checksum: sha1:272c3b145d9170066560535215946e8cab2aa50f
+    pristine_git_object: 99c2871bd6d9997beede670b69dc738f38eec7a2
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -40260,7 +40260,10 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedConnections()`: \n  *  `request->categories` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->integration->listUnifiedIntegrations()`: \n  *  `request->categories` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`: \n  *  `request->categories` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`: \n  *  `request->categories` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response` **Changed** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedIntegrations()`: \n  *  `request->categories` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`: \n  *  `request->categories` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->activation->updateCdpActivation()`: **Added**\n* `unified-to->segment->createCdpSegment()`: **Added**\n* `unified-to->cdp->listCdpProfiles()`: **Added**\n* `unified-to->cdp->listCdpSegments()`: **Added**\n* `unified-to->cdp->listCdpSources()`: **Added**\n* `unified-to->cdp->patchCdpActivation()`: **Added**\n* `unified-to->cdp->patchCdpDestination()`: **Added**\n* `unified-to->cdp->patchCdpEvent()`: **Added**\n* `unified-to->cdp->patchCdpProfile()`: **Added**\n* `unified-to->cdp->patchCdpSegment()`: **Added**\n* `unified-to->cdp->patchCdpSource()`: **Added**\n* `unified-to->cdp->removeCdpActivation()`: **Added**\n* `unified-to->cdp->removeCdpDestination()`: **Added**\n* `unified-to->cdp->removeCdpEvent()`: **Added**\n* `unified-to->cdp->removeCdpProfile()`: **Added**\n* `unified-to->cdp->removeCdpSegment()`: **Added**\n* `unified-to->cdp->removeCdpSource()`: **Added**\n* `unified-to->cdp->updateCdpActivation()`: **Added**\n* `unified-to->cdp->updateCdpDestination()`: **Added**\n* `unified-to->cdp->updateCdpEvent()`: **Added**\n* `unified-to->cdp->updateCdpProfile()`: **Added**\n* `unified-to->cdp->updateCdpSegment()`: **Added**\n* `unified-to->cdp->updateCdpSource()`: **Added**\n* `unified-to->activation->createCdpActivation()`: **Added**\n* `unified-to->activation->getCdpActivation()`: **Added**\n* `unified-to->activation->listCdpActivations()`: **Added**\n* `unified-to->activation->patchCdpActivation()`: **Added**\n* `unified-to->activation->removeCdpActivation()`: **Added**\n* `unified-to->cdp->listCdpDestinations()`: **Added**\n* `unified-to->destination->createCdpDestination()`: **Added**\n* `unified-to->destination->getCdpDestination()`: **Added**\n* `unified-to->destination->listCdpDestinations()`: **Added**\n* `unified-to->destination->patchCdpDestination()`: **Added**\n* `unified-to->destination->removeCdpDestination()`: **Added**\n* `unified-to->destination->updateCdpDestination()`: **Added**\n* `unified-to->profile->createCdpProfile()`: **Added**\n* `unified-to->profile->getCdpProfile()`: **Added**\n* `unified-to->profile->listCdpProfiles()`: **Added**\n* `unified-to->profile->patchCdpProfile()`: **Added**\n* `unified-to->profile->removeCdpProfile()`: **Added**\n* `unified-to->profile->updateCdpProfile()`: **Added**\n* `unified-to->cdp->listCdpEvents()`: **Added**\n* `unified-to->segment->getCdpSegment()`: **Added**\n* `unified-to->segment->listCdpSegments()`: **Added**\n* `unified-to->segment->patchCdpSegment()`: **Added**\n* `unified-to->segment->removeCdpSegment()`: **Added**\n* `unified-to->segment->updateCdpSegment()`: **Added**\n* `unified-to->source->createCdpSource()`: **Added**\n* `unified-to->source->getCdpSource()`: **Added**\n* `unified-to->source->listCdpSources()`: **Added**\n* `unified-to->source->patchCdpSource()`: **Added**\n* `unified-to->source->removeCdpSource()`: **Added**\n* `unified-to->source->updateCdpSource()`: **Added**\n* `unified-to->lms->createLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->lms->getLmsContent()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->lms->listLmsContents()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->lms->patchLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->lms->updateLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->cdp->listCdpActivations()`: **Added**\n* `unified-to->cdp->getCdpSource()`: **Added**\n* `unified-to->cdp->getCdpSegment()`: **Added**\n* `unified-to->cdp->getCdpProfile()`: **Added**\n* `unified-to->cdp->getCdpEvent()`: **Added**\n* `unified-to->cdp->getCdpDestination()`: **Added**\n* `unified-to->cdp->getCdpActivation()`: **Added**\n* `unified-to->cdp->createCdpSource()`: **Added**\n* `unified-to->cdp->createCdpSegment()`: **Added**\n* `unified-to->cdp->createCdpProfile()`: **Added**\n* `unified-to->cdp->createCdpEvent()`: **Added**\n* `unified-to->cdp->createCdpDestination()`: **Added**\n* `unified-to->cdp->createCdpActivation()`: **Added**\n* `unified-to->event->updateCdpEvent()`: **Added**\n* `unified-to->event->removeCdpEvent()`: **Added**\n* `unified-to->event->patchCdpEvent()`: **Added**\n* `unified-to->event->listCdpEvents()`: **Added**\n* `unified-to->event->getCdpEvent()`: **Added**\n* `unified-to->event->createCdpEvent()`: **Added**\n* `unified-to->content->createLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->content->getLmsContent()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->content->listLmsContents()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->content->patchLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->content->updateLmsContent()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->report->listAdsReports()`:  `response.[]->metrics[]->type` **Changed** (Breaking ⚠️)
+  * `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]->type` **Changed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - USAGE.md

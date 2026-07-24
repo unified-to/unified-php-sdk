@@ -136,4 +136,6 @@ enum AdsReportMetricsType: string
     case TwentyEightDVIEW = '28D_VIEW';
     case TwentyEightDCLICK = '28D_CLICK';
     case ThirtyDCLICK = '30D_CLICK';
+    case Visits = 'VISITS';
+    case AudioMutes = 'AUDIO_MUTES';
 }
