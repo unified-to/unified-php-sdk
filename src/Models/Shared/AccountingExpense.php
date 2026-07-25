@@ -36,6 +36,16 @@ class AccountingExpense
     public ?string $approverUserId = null;
 
     /**
+     * expense approver(s); id is HR employee/user when resolved
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingReference> $approverUsers
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('approver_users')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $approverUsers = null;
+
+    /**
      * $attachments
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment> $attachments
@@ -68,6 +78,14 @@ class AccountingExpense
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
+
+    /**
+     *
+     * @var ?string $externalNumber
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('external_number')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $externalNumber = null;
 
     /**
      *
@@ -147,6 +165,15 @@ class AccountingExpense
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingExpenseStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingExpenseStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AccountingExpenseStatus $status = null;
+
+    /**
+     *
      * @var ?float $taxAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_amount')]
@@ -178,13 +205,25 @@ class AccountingExpense
     public ?string $userId = null;
 
     /**
+     * $users
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingReference> $users
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('users')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $users = null;
+
+    /**
      * @param  ?string  $accountId
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $approverUsers
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment>  $attachments
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
+     * @param  ?string  $externalNumber
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?string  $name
@@ -194,21 +233,25 @@ class AccountingExpense
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $reimbursedAmount
      * @param  ?\DateTime  $reimbursedAt
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingExpenseStatus  $status
      * @param  ?float  $taxAmount
      * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $users
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $attachments = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
     {
         $this->accountId = $accountId;
         $this->approvedAt = $approvedAt;
         $this->approverUserId = $approverUserId;
+        $this->approverUsers = $approverUsers;
         $this->attachments = $attachments;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
+        $this->externalNumber = $externalNumber;
         $this->id = $id;
         $this->lineitems = $lineitems;
         $this->name = $name;
@@ -218,9 +261,11 @@ class AccountingExpense
         $this->raw = $raw;
         $this->reimbursedAmount = $reimbursedAmount;
         $this->reimbursedAt = $reimbursedAt;
+        $this->status = $status;
         $this->taxAmount = $taxAmount;
         $this->totalAmount = $totalAmount;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
+        $this->users = $users;
     }
 }

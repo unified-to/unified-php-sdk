@@ -30,5 +30,9 @@ enum UpdateAccountingExpenseQueryParamFields: string
     case Lineitems = 'lineitems';
     case Attachments = 'attachments';
     case OrganizationId = 'organization_id';
+    case Users = 'users';
+    case ApproverUsers = 'approver_users';
+    case Status = 'status';
+    case ExternalNumber = 'external_number';
     case Raw = 'raw';
 }

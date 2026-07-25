@@ -391,6 +391,7 @@ if ($response->accountingAccount !== null) {
 
 * [getUnifiedIntegrationAuth](docs/sdks/auth/README.md#getunifiedintegrationauth) - Authorize new connection
 * [getUnifiedIntegrationLogin](docs/sdks/auth/README.md#getunifiedintegrationlogin) - Sign in a user
+* [getUnifiedIntegrationSaml](docs/sdks/auth/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
 ### [Availability](docs/sdks/availability/README.md)
 
@@ -1335,6 +1336,7 @@ if ($response->accountingAccount !== null) {
 ### [Login](docs/sdks/login/README.md)
 
 * [getUnifiedIntegrationLogin](docs/sdks/login/README.md#getunifiedintegrationlogin) - Sign in a user
+* [getUnifiedIntegrationSaml](docs/sdks/login/README.md#getunifiedintegrationsaml) - Sign in a user via SAML
 
 ### [Martech](docs/sdks/martech/README.md)
 

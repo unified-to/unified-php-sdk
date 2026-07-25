@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class TicketingTicket
 {
     /**
+     * Array of attachment IDs retrieved from StorageFile.Get endpoint
+     *
+     * @var ?array<string> $attachmentIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('attachment_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $attachmentIds = null;
+
+    /**
      *
      * @var ?string $categoryId
      */
@@ -153,6 +163,7 @@ class TicketingTicket
     public ?string $userId = null;
 
     /**
+     * @param  ?array<string>  $attachmentIds
      * @param  ?string  $categoryId
      * @param  ?\DateTime  $closedAt
      * @param  ?\DateTime  $createdAt
@@ -172,8 +183,9 @@ class TicketingTicket
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $categoryId = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
+    public function __construct(?array $attachmentIds = null, ?string $categoryId = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
     {
+        $this->attachmentIds = $attachmentIds;
         $this->categoryId = $categoryId;
         $this->closedAt = $closedAt;
         $this->createdAt = $createdAt;

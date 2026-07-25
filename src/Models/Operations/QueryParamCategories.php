@@ -15,6 +15,7 @@ enum QueryParamCategories: string
     case Hris = 'hris';
     case Ats = 'ats';
     case Auth = 'auth';
+    case Saml = 'saml';
     case Crm = 'crm';
     case Enrich = 'enrich';
     case Martech = 'martech';

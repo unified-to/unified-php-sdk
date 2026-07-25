@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [getUnifiedIntegrationLogin](#getunifiedintegrationlogin) - Sign in a user
+* [getUnifiedIntegrationSaml](#getunifiedintegrationsaml) - Sign in a user via SAML
 
 ## getUnifiedIntegrationLogin
 
@@ -50,6 +51,57 @@ if ($response->res !== null) {
 ### Response
 
 **[?Operations\GetUnifiedIntegrationLoginResponse](../../Models/Operations/GetUnifiedIntegrationLoginResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getUnifiedIntegrationSaml
+
+Returns a SAML authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getUnifiedIntegrationSaml" method="get" path="/unified/integration/saml/{workspace_id}/{integration_type}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetUnifiedIntegrationSamlRequest(
+    integrationType: '<value>',
+    workspaceId: '<id>',
+);
+
+$response = $sdk->login->getUnifiedIntegrationSaml(
+    request: $request
+);
+
+if ($response->res !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\GetUnifiedIntegrationSamlRequest](../../Models/Operations/GetUnifiedIntegrationSamlRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\GetUnifiedIntegrationSamlResponse](../../Models/Operations/GetUnifiedIntegrationSamlResponse.md)**
 
 ### Errors
 
