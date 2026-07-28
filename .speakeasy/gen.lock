@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: f0c8e2a50fe79bd0fbd409999c098a04
+  docChecksum: 5b461abb1257ca6221e3f7381711a0fe
   docVersion: "1.0"
   speakeasyVersion: 1.791.0
   generationVersion: 2.924.0
-  releaseVersion: 1.6.92
-  configChecksum: 0738eec8ac113c154da5047a49fdf35a
+  releaseVersion: 1.6.93
+  configChecksum: 6919310d61e58ed69399dd8b923780ac
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 7f398463-2a5e-4833-97ac-487b33d22871
-  pristine_commit_hash: 1a11efec986bc26243528a1a78799a5cd7387ccc
-  pristine_tree_hash: 0a4619cb8c54ffa400c53bd49be44fd4af8c5235
+  generation_id: 45533cd7-d651-408a-bef1-85ffaaf38496
+  pristine_commit_hash: bc4a47311c4eb65a49e9fcf7764b01aff3acd0ec
+  pristine_tree_hash: 108fb6843041d645e8706bdb90698e9816bd64a1
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -1341,8 +1341,8 @@ trackedFiles:
     pristine_git_object: ecc638055bedcbd106c3ac33caf413ad2739da20
   docs/Models/Operations/CreateTaskTaskQueryParamFields.md:
     id: 04ec558dc70d
-    last_write_checksum: sha1:a43ef8d1ef43e8961349685b301fc81d8e91cc28
-    pristine_git_object: 1278b939882cc3c8eede6ba3ce1a02b8f9b96f80
+    last_write_checksum: sha1:cec17e6eae3ceebac5086a345e74fae0f37914a6
+    pristine_git_object: 5df7bade39ece5d709eadcf251672c54f6382e76
   docs/Models/Operations/CreateTaskTaskRequest.md:
     id: a99fc45c8ded
     last_write_checksum: sha1:4f54dc2d014cd248c4e78d1e50cf3b9d3609d638
@@ -3005,8 +3005,8 @@ trackedFiles:
     pristine_git_object: e3e350358d368b47677392598b317a83d1ad71cf
   docs/Models/Operations/GetTaskTaskQueryParamFields.md:
     id: e37b91765c2a
-    last_write_checksum: sha1:74b16c93ca1972f975cb9fa5531fc6e7c4e2d6c6
-    pristine_git_object: 75dfb20aeaf55579c9e05746124b8463f6141977
+    last_write_checksum: sha1:44283644b76651f8eb5440482f5522725d72d63a
+    pristine_git_object: 757cfb6e9fa96af393eac2d2d690e679b05b6d9d
   docs/Models/Operations/GetTaskTaskRequest.md:
     id: 6d5658c2d1d5
     last_write_checksum: sha1:bdaff2ac3bd910f74c238ff4877f93981bb7ea75
@@ -4845,8 +4845,8 @@ trackedFiles:
     pristine_git_object: 3c30767e2b70bf86d470abeb557ba7d995a86f39
   docs/Models/Operations/ListTaskTasksQueryParamFields.md:
     id: d337a3c6010f
-    last_write_checksum: sha1:4303c4411b500c948bf99a0cbcec61599cfe1184
-    pristine_git_object: 843753976fd39c06a6adcd53249b7388550ea8dc
+    last_write_checksum: sha1:eb8146faa7418d15904c6d080bb5dd298947af3c
+    pristine_git_object: 82ca4c9b049a1a43c1352e013f7bd1fa7e2d26ad
   docs/Models/Operations/ListTaskTasksRequest.md:
     id: 5125c1ced519
     last_write_checksum: sha1:d0636694217960b8e2489fd512e059d9e73e770f
@@ -6305,8 +6305,8 @@ trackedFiles:
     pristine_git_object: 3a64c659656405512cdd3b3af65e64fbfd968b73
   docs/Models/Operations/PatchTaskTaskQueryParamFields.md:
     id: 06686e6fe88b
-    last_write_checksum: sha1:a71a514bb6cb671e0bd20c4a02011c1e01df4c5a
-    pristine_git_object: 92dc846aec7a6323325653e410baa176c4bc78e8
+    last_write_checksum: sha1:47c5f9635737f692339d98e3e56d67a9a0e8d5d3
+    pristine_git_object: e1a55e1f365bfdc8835dc673eb35cf014e8b2df3
   docs/Models/Operations/PatchTaskTaskRequest.md:
     id: 01b951aec39c
     last_write_checksum: sha1:05905b31ff73f8b56c1f7af2cd1e22b2e9db3a75
@@ -8645,8 +8645,8 @@ trackedFiles:
     pristine_git_object: dd759db70e34c277859a620c5616084da47113ce
   docs/Models/Operations/UpdateTaskTaskQueryParamFields.md:
     id: b78e028adcb9
-    last_write_checksum: sha1:7ec41bdc546ed705340aa2f3c528bb5db4277618
-    pristine_git_object: 7e98a6c7f9a8ec38e346b83c2718aa9d1de3ff46
+    last_write_checksum: sha1:4d1eba3a95ec82f93514d353130ea3159d0243af
+    pristine_git_object: d1a4e5ca64c1fe0feb9bc13ee341a15a0b8c32d9
   docs/Models/Operations/UpdateTaskTaskRequest.md:
     id: 594b36d98a70
     last_write_checksum: sha1:5d0d5240d2b5cc3eb5346ff0294372757e1c119b
@@ -12325,8 +12325,8 @@ trackedFiles:
     pristine_git_object: 0f5bf5033bb72a818c4781467bc8e95ecfe57ce1
   docs/Models/Shared/TaskTask.md:
     id: 799728356ee6
-    last_write_checksum: sha1:e247a62fd984ff8f61c96ac1c253ccf2577978c1
-    pristine_git_object: d52db68c96b0d2fbd1956b8eabff1329f81083f1
+    last_write_checksum: sha1:4fec4769833ed74d1b97607cdf23a11597b8008e
+    pristine_git_object: d54d6d4ae71b8b4873196e4d3fef3c1f842ae632
   docs/Models/Shared/TaskTaskStatus.md:
     id: 1d5771d47315
     last_write_checksum: sha1:0ad94941e7e1ec4321f05b358ecb25a70b9c48d3
@@ -15141,8 +15141,8 @@ trackedFiles:
     pristine_git_object: 816260a22e8668ad1d3f80a714fd291ed56c8ebe
   src/Models/Operations/CreateTaskTaskQueryParamFields.php:
     id: 899b5b03856e
-    last_write_checksum: sha1:694d305ace02827bd1341a360057a39d7e2c070c
-    pristine_git_object: ba0694ab2d6dfc1b7258316c4b62e847237ba1ea
+    last_write_checksum: sha1:c86520ddb089fe6c5ccdab5ee6e06feaf57c9095
+    pristine_git_object: 3fb2364562b419a63d72989786a1a5a13b990159
   src/Models/Operations/CreateTaskTaskRequest.php:
     id: a911bb8df6a8
     last_write_checksum: sha1:679f5bf762a71339eebe90dc305986199697de56
@@ -16805,8 +16805,8 @@ trackedFiles:
     pristine_git_object: 4b0cfd417a91ad4353f0a5c8bf45e4e1bc7181aa
   src/Models/Operations/GetTaskTaskQueryParamFields.php:
     id: 7b4e4948ac41
-    last_write_checksum: sha1:8ded2c680ff296da5fd7e45a3d85585f83f79140
-    pristine_git_object: c37a7dc09e0e6f89649c4798b47d46a106e15257
+    last_write_checksum: sha1:7ce5a92b17d0f11aff552ea01cee0b1d5d16a66b
+    pristine_git_object: d04d4ad422dd167a4dd09eec45040528a4176302
   src/Models/Operations/GetTaskTaskRequest.php:
     id: 10f6e81e0255
     last_write_checksum: sha1:7f99ba020b98376678de16ecbc95e7a1f976d917
@@ -18645,8 +18645,8 @@ trackedFiles:
     pristine_git_object: e467b1243e8fb105e42d94547544819882c34bc1
   src/Models/Operations/ListTaskTasksQueryParamFields.php:
     id: fda90323b7d6
-    last_write_checksum: sha1:2d4486e8b449bafae257e072e28d0b3a8a118324
-    pristine_git_object: 6da2323bec845c855c9fc5618cfa38a148d2195f
+    last_write_checksum: sha1:a6ff10af4558e2d9626c7ae932b465b6ac4e4f7b
+    pristine_git_object: bb674d85ef578ec3d001a9dbee8296f97bdde146
   src/Models/Operations/ListTaskTasksRequest.php:
     id: 0737879dc738
     last_write_checksum: sha1:5b9f6c158464972e6d1ebc04ce7231e1366b4d23
@@ -20105,8 +20105,8 @@ trackedFiles:
     pristine_git_object: 766a6a2a3b569cde60eda62833e71eabe9a84bc8
   src/Models/Operations/PatchTaskTaskQueryParamFields.php:
     id: f7813673a584
-    last_write_checksum: sha1:b6b4e591c87276cb2a759564e0d0a2b67d104348
-    pristine_git_object: 070ca98009abf20d5ff31fbc15605fe2f4847efe
+    last_write_checksum: sha1:5e9024cf4ef13bf7e0abd8f181a57ea79be55464
+    pristine_git_object: 0210b7d313185eaba4e17faee545c76991827aa0
   src/Models/Operations/PatchTaskTaskRequest.php:
     id: 6634760bb4f8
     last_write_checksum: sha1:257f232c95a914cb708b0bfe5bd79db0f205894c
@@ -22445,8 +22445,8 @@ trackedFiles:
     pristine_git_object: 4e07d02046797f0c9241fccbc7707c4a9a4052b9
   src/Models/Operations/UpdateTaskTaskQueryParamFields.php:
     id: b6e3eec90545
-    last_write_checksum: sha1:26dae67d9e365a46adfba01e5d61a4eb6a2da0ec
-    pristine_git_object: 16010a27283f45149267ef3405ec1f6166055000
+    last_write_checksum: sha1:4c38309524af4d5b17329de0896b4012f2d39f99
+    pristine_git_object: 0229806898609c2d3c3f04cb44f8765c166de53f
   src/Models/Operations/UpdateTaskTaskRequest.php:
     id: a547b146b0f2
     last_write_checksum: sha1:dd38dfa90fe3d48b1ce496b53796c27a6a85f26a
@@ -25985,8 +25985,8 @@ trackedFiles:
     pristine_git_object: edf401bed7a37cba85343e6096ff4f44e040653f
   src/Models/Shared/TaskTask.php:
     id: 135975087c8b
-    last_write_checksum: sha1:8a60840647e4d894428d9ee14724e6552105229e
-    pristine_git_object: 8a7fce3a2c9865970b79a0b77b1ce6d53d5dfc16
+    last_write_checksum: sha1:03d7abf3145beffa18139bc9eebccdadb30bda0b
+    pristine_git_object: 947672affe5cccc3608ae2e8c070d18f2291d72b
   src/Models/Shared/TaskTaskStatus.php:
     id: a3947f4e1bb4
     last_write_checksum: sha1:1caf2ca49ae820a99a55682c32fd0079260594b0
@@ -26549,8 +26549,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:489101abeac16443910c79ced85f44a32ee81806
-    pristine_git_object: 44715be381b5c7ea773b37da545acceab988ef7a
+    last_write_checksum: sha1:182998d9ceca41d3a2cbfa1935a74c891a4b684c
+    pristine_git_object: b96ef8c1780efed3acb93efbd4a729c00e58849e
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -40293,7 +40293,7 @@ examples:
           text/plain: "<value>"
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->categories[]->enum(saml)` **Added**\n  *  `response.categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->integration->listUnifiedIntegrations()`: \n  *  `request->categories` **Changed**\n  *  `response.[]->categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`: \n  *  `request->categories` **Changed**\n  *  `response.[]->categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->categories[]->enum(saml)` **Added**\n  *  `response.categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->categories[]->enum(saml)` **Added**\n  *  `response.categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`: \n  *  `request->categories` **Changed**\n  *  `response.[]->categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->categories[]->enum(saml)` **Added**\n  *  `response.categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->categories[]->enum(saml)` **Added**\n  *  `response.categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->categories[]->enum(saml)` **Added**\n  *  `response.categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedIntegrations()`: \n  *  `request->categories` **Changed**\n  *  `response.[]->categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`: \n  *  `request->categories` **Changed**\n  *  `response.[]->categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedConnections()`: \n  *  `request->categories` **Changed**\n  *  `response.[]->categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.categories[]->enum(saml)` **Added** (Breaking ⚠️)\n* `unified-to->expense->listAccountingExpenses()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->expense->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->ticketing->updateTicketingTicket()`: \n  *  `request` **Changed**\n  *  `response.attachmentIds` **Added**\n* `unified-to->ticket->createTicketingTicket()`: \n  *  `request` **Changed**\n  *  `response.attachmentIds` **Added**\n* `unified-to->ticket->getTicketingTicket()`: \n  *  `request->fields` **Changed**\n  *  `response.attachmentIds` **Added**\n* `unified-to->ticket->listTicketingTickets()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->attachmentIds` **Added**\n* `unified-to->ticket->patchTicketingTicket()`: \n  *  `request` **Changed**\n  *  `response.attachmentIds` **Added**\n* `unified-to->ticket->updateTicketingTicket()`: \n  *  `request` **Changed**\n  *  `response.attachmentIds` **Added**\n* `unified-to->ticketing->listTicketingTickets()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->attachmentIds` **Added**\n* `unified-to->ticketing->getTicketingTicket()`: \n  *  `request->fields` **Changed**\n  *  `response.attachmentIds` **Added**\n* `unified-to->ticketing->createTicketingTicket()`: \n  *  `request` **Changed**\n  *  `response.attachmentIds` **Added**\n* `unified-to->ticketing->patchTicketingTicket()`: \n  *  `request` **Changed**\n  *  `response.attachmentIds` **Added**\n* `unified-to->expense->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->auth->getUnifiedIntegrationSaml()`: **Added**\n* `unified-to->expense->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->expense->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->updateAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->patchAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->listAccountingExpenses()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->accounting->getAccountingExpense()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->accounting->createAccountingExpense()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->login->getUnifiedIntegrationSaml()`: **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->task->createTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->task->getTaskTask()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->task->listTaskTasks()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->task->patchTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->task->updateTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

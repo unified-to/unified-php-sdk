@@ -151,6 +151,14 @@ class TaskTask
 
     /**
      *
+     * @var ?float $progress
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('progress')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $progress = null;
+
+    /**
+     *
      * @var ?string $projectId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('project_id')]
@@ -185,6 +193,14 @@ class TaskTask
     public ?TaskTaskStatus $status = null;
 
     /**
+     *
+     * @var ?float $storyPoints
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('story_points')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $storyPoints = null;
+
+    /**
      * $tags
      *
      * @var ?array<string> $tags
@@ -193,6 +209,22 @@ class TaskTask
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $tags = null;
+
+    /**
+     *
+     * @var ?float $timeSpent
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('time_spent')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $timeSpent = null;
+
+    /**
+     *
+     * @var ?string $timeSpentUnit
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('time_spent_unit')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $timeSpentUnit = null;
 
     /**
      *
@@ -235,17 +267,21 @@ class TaskTask
      * @param  ?string  $notes
      * @param  ?string  $parentId
      * @param  ?string  $priority
+     * @param  ?float  $progress
      * @param  ?string  $projectId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\TaskTaskStatus  $status
+     * @param  ?float  $storyPoints
      * @param  ?array<string>  $tags
+     * @param  ?float  $timeSpent
+     * @param  ?string  $timeSpentUnit
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $assignedUserIds = null, ?array $attachmentIds = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?\DateTime $dueAt = null, ?\DateTime $endAt = null, ?array $followerUserIds = null, ?array $groupIds = null, ?bool $hasChildren = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $parentId = null, ?string $priority = null, ?string $projectId = null, ?array $raw = null, ?\DateTime $startAt = null, ?TaskTaskStatus $status = null, ?array $tags = null, ?string $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $assignedUserIds = null, ?array $attachmentIds = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?\DateTime $dueAt = null, ?\DateTime $endAt = null, ?array $followerUserIds = null, ?array $groupIds = null, ?bool $hasChildren = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $parentId = null, ?string $priority = null, ?float $progress = null, ?string $projectId = null, ?array $raw = null, ?\DateTime $startAt = null, ?TaskTaskStatus $status = null, ?float $storyPoints = null, ?array $tags = null, ?float $timeSpent = null, ?string $timeSpentUnit = null, ?string $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->assignedUserIds = $assignedUserIds;
         $this->attachmentIds = $attachmentIds;
@@ -263,11 +299,15 @@ class TaskTask
         $this->notes = $notes;
         $this->parentId = $parentId;
         $this->priority = $priority;
+        $this->progress = $progress;
         $this->projectId = $projectId;
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->status = $status;
+        $this->storyPoints = $storyPoints;
         $this->tags = $tags;
+        $this->timeSpent = $timeSpent;
+        $this->timeSpentUnit = $timeSpentUnit;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->url = $url;

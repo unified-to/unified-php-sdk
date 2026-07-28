@@ -34,5 +34,9 @@ enum UpdateTaskTaskQueryParamFields: string
     case Metadata = 'metadata';
     case HasChildren = 'has_children';
     case Type = 'type';
+    case TimeSpent = 'time_spent';
+    case TimeSpentUnit = 'time_spent_unit';
+    case Progress = 'progress';
+    case StoryPoints = 'story_points';
     case Raw = 'raw';
 }
