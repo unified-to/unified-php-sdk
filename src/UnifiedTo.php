@@ -334,6 +334,8 @@ class UnifiedTo
 
     public Login $login;
 
+    public Saml $saml;
+
     public Issue $issue;
 
     public Webhook $webhook;
@@ -513,6 +515,7 @@ class UnifiedTo
         $this->integration = new Integration($this->sdkConfiguration);
         $this->auth = new Auth($this->sdkConfiguration);
         $this->login = new Login($this->sdkConfiguration);
+        $this->saml = new Saml($this->sdkConfiguration);
         $this->issue = new Issue($this->sdkConfiguration);
         $this->webhook = new Webhook($this->sdkConfiguration);
         $this->secretsmanager = new Secretsmanager($this->sdkConfiguration);

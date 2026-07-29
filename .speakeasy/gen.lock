@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 5b461abb1257ca6221e3f7381711a0fe
+  docChecksum: 80d7cdbe65fe311af91a91a99f56bf35
   docVersion: "1.0"
   speakeasyVersion: 1.791.0
   generationVersion: 2.924.0
-  releaseVersion: 1.6.93
-  configChecksum: 6919310d61e58ed69399dd8b923780ac
+  releaseVersion: 1.6.94
+  configChecksum: a4329fb11ee01122d6ff46c9f6a08be9
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 45533cd7-d651-408a-bef1-85ffaaf38496
-  pristine_commit_hash: bc4a47311c4eb65a49e9fcf7764b01aff3acd0ec
-  pristine_tree_hash: 108fb6843041d645e8706bdb90698e9816bd64a1
+  generation_id: e6113ce7-d756-4b61-a1c0-6cc40ec25510
+  pristine_commit_hash: 5a410ad93367ed7c4070dd1882458548ffc6b53b
+  pristine_tree_hash: 425650334abe47ffa48931dbab08244bb8bcf693
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -12817,8 +12817,8 @@ trackedFiles:
     pristine_git_object: 7e23425a542f3468beeb2a47ca0d708d3abe0025
   docs/sdks/auth/README.md:
     id: e9724f17945f
-    last_write_checksum: sha1:fbfadb31658726efa5ec96b3d526497440a9f775
-    pristine_git_object: 88d656a3ce8061d20bc0a85f11dc3e40d83b2431
+    last_write_checksum: sha1:d067d6bdac6413b52532045ad50446b66ba35504
+    pristine_git_object: 4da1df3c8102dc08e9c914635dc2a10b122a48f2
   docs/sdks/availability/README.md:
     id: 2226d6a22b27
     last_write_checksum: sha1:3477da9fcad30019a9483ef4fc556cf86dad288a
@@ -13097,8 +13097,8 @@ trackedFiles:
     pristine_git_object: d7dc59292ef21349d86ad12e4f8685e3bc84e40c
   docs/sdks/login/README.md:
     id: 795cc2a6ce04
-    last_write_checksum: sha1:f1915f308f5b3d5906e1437077e28248a82c6445
-    pristine_git_object: 489783bbb18a9a0f96539c2e6b229409ab84fdac
+    last_write_checksum: sha1:21dea8564b1684ad29f06ef23b46fade373ff36d
+    pristine_git_object: 7c606c30fd42e81ccdd75910f74fbba4818d8b3d
   docs/sdks/martech/README.md:
     id: ba21e4ca633c
     last_write_checksum: sha1:5e9e6644dea0e7b146d9b19ac3812a4599ab2441
@@ -13255,6 +13255,10 @@ trackedFiles:
     id: 276981d6d854
     last_write_checksum: sha1:f6c75a4b201693528800b41b93dee47f0ace2f0f
     pristine_git_object: dabdba3865cdf7620b7856df8633c9d0d43492af
+  docs/sdks/saml/README.md:
+    id: f6b6fd24d6c6
+    last_write_checksum: sha1:ecc010d1dd398e74c65580d840db887b1bf782a0
+    pristine_git_object: d0f9c3298d89c769f0a5462879ddc198d26c8149
   docs/sdks/scim/README.md:
     id: 1d60f0a72b05
     last_write_checksum: sha1:1b0489cdfbf682c10a3f0e5c8a00d3e2d21bebc5
@@ -13465,8 +13469,8 @@ trackedFiles:
     pristine_git_object: dbd3c6066c9171ce3944000eb1f443d71cebf2c8
   src/Auth.php:
     id: c429057d2d7a
-    last_write_checksum: sha1:44631e961a9891976c0c2844bde72758cd27344a
-    pristine_git_object: 4b288a2d4c02644f698691bebbd45ad283df760f
+    last_write_checksum: sha1:b19c56b16d9b67f39f91d598f1df0ab1111b744f
+    pristine_git_object: 4919ccafa50798671c0e037968f89053fadd7cb3
   src/Availability.php:
     id: 558c724c114e
     last_write_checksum: sha1:e65fffd973ee8ef022db39ff054c988d2e52c3b7
@@ -13809,8 +13813,8 @@ trackedFiles:
     pristine_git_object: 9149674bba3eee4197a77bc3c627c26e02d9e470
   src/Login.php:
     id: ee0077a7e180
-    last_write_checksum: sha1:96ed9df3ffe5671118e1ed28dc08c3154f52fc8c
-    pristine_git_object: a77a1227783185a093ffb5246f863d3e7dd8aca0
+    last_write_checksum: sha1:ecf461d3f221cecff0e4decb17c9d18315b0dab8
+    pristine_git_object: 33e6ae81b22f4ac1d861f1396cc1f49f14eeef1a
   src/Martech.php:
     id: 99cdd9fcb173
     last_write_checksum: sha1:fe0ea160181dc3193bb1e566ca2313e4ca92bbff
@@ -26549,8 +26553,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:182998d9ceca41d3a2cbfa1935a74c891a4b684c
-    pristine_git_object: b96ef8c1780efed3acb93efbd4a729c00e58849e
+    last_write_checksum: sha1:81b596693944dc3515b7f1266f3d1ab8f0c28d92
+    pristine_git_object: 995756446a40123819225951665c769153c2e386
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -26559,6 +26563,10 @@ trackedFiles:
     id: d7ab00de2af6
     last_write_checksum: sha1:7cf412336bdb59fdfaeaf252cb55fe0631985794
     pristine_git_object: 66f91d10587130b4a562fd8daa10f6f34d78157f
+  src/Saml.php:
+    id: 9776268a197d
+    last_write_checksum: sha1:2e72b27754d3055efaaa0180e5bdd09c17870dd4
+    pristine_git_object: f213cb7ed03dd039277748fb197e22e756141cd1
   src/Scim.php:
     id: 4db3f4871306
     last_write_checksum: sha1:468cb5668bb37502f5cac48190c819a65bc732d2
@@ -26681,8 +26689,8 @@ trackedFiles:
     pristine_git_object: 7a2727fbeeabe6ad8b1ae642ffedcce7a30db15a
   src/UnifiedTo.php:
     id: 23b841da485f
-    last_write_checksum: sha1:d1221b0732df2f42d8612e57da312e83a6ff8ac8
-    pristine_git_object: a6280560355f04713ab3e27ee85388eaf592539d
+    last_write_checksum: sha1:bee75959aa433d74d41c2a0bd2be65dd4e4f56c6
+    pristine_git_object: 35fb56d76d34eb51c940f3c28ddd94c36132d0a3
   src/UnifiedToBuilder.php:
     id: a5efeefe75a9
     last_write_checksum: sha1:9c6ea940f1040079d63715e5ea34fbe7e8342702
@@ -40293,7 +40301,10 @@ examples:
           text/plain: "<value>"
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->task->createTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->task->getTaskTask()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->task->listTaskTasks()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->task->patchTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->task->updateTaskTask()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->saml->getUnifiedIntegrationSaml()`: **Added**
+  * `unified-to->login->getUnifiedIntegrationSaml()`: **Removed** (Breaking ⚠️)
 generatedFiles:
   - .gitattributes
   - USAGE.md

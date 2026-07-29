@@ -12,7 +12,7 @@ use Unified\Unified_to\Hooks\HookContext;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Utils\Options;
 
-class Login
+class Saml
 {
     private SDKConfiguration $sdkConfiguration;
     /**
@@ -44,26 +44,26 @@ class Login
     }
 
     /**
-     * Sign in a user
+     * Sign in a user via SAML
      *
-     * Returns an authentication URL for the specified integration.  Once a successful OAuth2 code-flow authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
+     * Returns a SAML authentication URL for the specified integration.  Once a successful authentication occurs, the name and email are returned inside a jwt parameter, which is a JSON web token that is base-64 encoded.
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationLoginResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationSamlRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationSamlResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedIntegrationLogin(Operations\GetUnifiedIntegrationLoginRequest $request, ?Options $options = null): Operations\GetUnifiedIntegrationLoginResponse
+    public function getUnifiedIntegrationSaml(Operations\GetUnifiedIntegrationSamlRequest $request, ?Options $options = null): Operations\GetUnifiedIntegrationSamlResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/login/{workspace_id}/{integration_type}', Operations\GetUnifiedIntegrationLoginRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/integration/saml/{workspace_id}/{integration_type}', Operations\GetUnifiedIntegrationSamlRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
 
-        $qp = Utils\Utils::getQueryParams(Operations\GetUnifiedIntegrationLoginRequest::class, $request, $urlOverride);
+        $qp = Utils\Utils::getQueryParams(Operations\GetUnifiedIntegrationSamlRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'text/plain';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUnifiedIntegrationLogin', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUnifiedIntegrationSaml', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -88,7 +88,7 @@ class Login
 
                 $obj = $httpResponse->getBody()->getContents();
 
-                return new Operations\GetUnifiedIntegrationLoginResponse(
+                return new Operations\GetUnifiedIntegrationSamlResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
