@@ -49,6 +49,14 @@ class ListTaskCommentsRequest
     public ?string $order = null;
 
     /**
+     * The parent ID to filter by
+     *
+     * @var ?string $parentId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=parent_id')]
+    public ?string $parentId = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -93,6 +101,7 @@ class ListTaskCommentsRequest
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
+     * @param  ?string  $parentId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
@@ -100,13 +109,14 @@ class ListTaskCommentsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $taskId = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $taskId = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
+        $this->parentId = $parentId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;

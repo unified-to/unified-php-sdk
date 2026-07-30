@@ -32,6 +32,7 @@ enum PatchAccountingInvoiceQueryParamFields: string
     case Notes = 'notes';
     case RefundReason = 'refund_reason';
     case Term = 'term';
+    case PaymentTerms = 'payment_terms';
     case Lineitems = 'lineitems';
     case Status = 'status';
     case Url = 'url';
@@ -40,5 +41,7 @@ enum PatchAccountingInvoiceQueryParamFields: string
     case Attachments = 'attachments';
     case Send = 'send';
     case OrganizationId = 'organization_id';
+    case Payments = 'payments';
+    case CategoryIds = 'category_ids';
     case Raw = 'raw';
 }

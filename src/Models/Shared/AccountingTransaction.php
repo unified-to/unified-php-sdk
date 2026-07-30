@@ -20,6 +20,16 @@ class AccountingTransaction
     public ?string $accountId = null;
 
     /**
+     * $categoryIds
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      * $contacts
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionContact> $contacts
@@ -171,6 +181,7 @@ class AccountingTransaction
 
     /**
      * @param  ?string  $accountId
+     * @param  ?array<string>  $categoryIds
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionContact>  $contacts
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -191,9 +202,10 @@ class AccountingTransaction
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $organizationId = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $organizationId = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
+        $this->categoryIds = $categoryIds;
         $this->contacts = $contacts;
         $this->createdAt = $createdAt;
         $this->currency = $currency;

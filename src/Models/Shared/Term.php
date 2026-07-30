@@ -18,5 +18,8 @@ enum Term: string
     case Net20 = 'NET_20';
     case Net25 = 'NET_25';
     case Net30 = 'NET_30';
+    case Net45 = 'NET_45';
     case Net60 = 'NET_60';
+    case Net90 = 'NET_90';
+    case Other = 'OTHER';
 }

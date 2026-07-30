@@ -5,12 +5,14 @@
 ### Available Operations
 
 * [createAdsAd](#createadsad) - Create an ad
+* [createAdsAsset](#createadsasset) - Create an asset
 * [createAdsCampaign](#createadscampaign) - Create a campaign
 * [createAdsCreative](#createadscreative) - Create a creative
 * [createAdsGroup](#createadsgroup) - Create a group
 * [createAdsInsertionorder](#createadsinsertionorder) - Create an insertionorder
 * [createAdsOrganization](#createadsorganization) - Create an organization
 * [getAdsAd](#getadsad) - Retrieve an ad
+* [getAdsAsset](#getadsasset) - Retrieve an asset
 * [getAdsCampaign](#getadscampaign) - Retrieve a campaign
 * [getAdsCreative](#getadscreative) - Retrieve a creative
 * [getAdsGroup](#getadsgroup) - Retrieve a group
@@ -19,6 +21,7 @@
 * [getAdsPromoted](#getadspromoted) - Retrieve a promoted
 * [getAdsTarget](#getadstarget) - Retrieve a target
 * [listAdsAds](#listadsads) - List all ads
+* [listAdsAssets](#listadsassets) - List all assets
 * [listAdsCampaigns](#listadscampaigns) - List all campaigns
 * [listAdsCreatives](#listadscreatives) - List all creatives
 * [listAdsGroups](#listadsgroups) - List all groups
@@ -91,6 +94,58 @@ if ($response->adsAd !== null) {
 ### Response
 
 **[?Operations\CreateAdsAdResponse](../../Models/Operations/CreateAdsAdResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createAdsAsset
+
+Create an asset
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAdsAssetRequest(
+    adsAsset: new Shared\AdsAsset(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->ads->createAdsAsset(
+    request: $request
+);
+
+if ($response->adsAsset !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\CreateAdsAssetRequest](../../Models/Operations/CreateAdsAssetRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\CreateAdsAssetResponse](../../Models/Operations/CreateAdsAssetResponse.md)**
 
 ### Errors
 
@@ -402,6 +457,57 @@ if ($response->adsAd !== null) {
 ### Response
 
 **[?Operations\GetAdsAdResponse](../../Models/Operations/GetAdsAdResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsAsset
+
+Retrieve an asset
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsAsset" method="get" path="/ads/{connection_id}/asset/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsAssetRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->getAdsAsset(
+    request: $request
+);
+
+if ($response->adsAsset !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\GetAdsAssetRequest](../../Models/Operations/GetAdsAssetRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+### Response
+
+**[?Operations\GetAdsAssetResponse](../../Models/Operations/GetAdsAssetResponse.md)**
 
 ### Errors
 
@@ -809,6 +915,56 @@ if ($response->adsAds !== null) {
 ### Response
 
 **[?Operations\ListAdsAdsResponse](../../Models/Operations/ListAdsAdsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listAdsAssets
+
+List all assets
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAdsAssets" method="get" path="/ads/{connection_id}/asset" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAdsAssetsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->ads->listAdsAssets(
+    request: $request
+);
+
+if ($response->adsAssets !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\ListAdsAssetsRequest](../../Models/Operations/ListAdsAssetsRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\ListAdsAssetsResponse](../../Models/Operations/ListAdsAssetsResponse.md)**
 
 ### Errors
 

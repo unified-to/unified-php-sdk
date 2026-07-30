@@ -29,11 +29,11 @@ class Webhook
 
     /**
      *
-     * @var \Unified\Unified_to\Models\Shared\ObjectType $objectType
+     * @var \Unified\Unified_to\Models\Shared\WebhookObjectType $objectType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('object_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ObjectType')]
-    public ObjectType $objectType;
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\WebhookObjectType')]
+    public WebhookObjectType $objectType;
 
     /**
      *
@@ -212,7 +212,7 @@ class Webhook
     /**
      * @param  string  $connectionId
      * @param  \Unified\Unified_to\Models\Shared\Event  $event
-     * @param  \Unified\Unified_to\Models\Shared\ObjectType  $objectType
+     * @param  \Unified\Unified_to\Models\Shared\WebhookObjectType  $objectType
      * @param  ?\DateTime  $checkedAt
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $dbNamePrefix
@@ -236,7 +236,7 @@ class Webhook
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, Event $event, ObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $dbNamePrefix = null, ?string $dbSchema = null, ?DbType $dbType = null, ?string $dbUrl = null, ?string $fields = null, ?array $filters = null, ?string $hookUrl = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isBeta = null, ?bool $isHealthy = null, ?bool $isPaused = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(string $connectionId, Event $event, WebhookObjectType $objectType, ?\DateTime $checkedAt = null, ?\DateTime $createdAt = null, ?string $dbNamePrefix = null, ?string $dbSchema = null, ?DbType $dbType = null, ?string $dbUrl = null, ?string $fields = null, ?array $filters = null, ?string $hookUrl = null, ?string $id = null, ?string $integrationType = null, ?float $interval = null, ?bool $isBeta = null, ?bool $isHealthy = null, ?bool $isPaused = null, ?float $pageMaxLimit = null, ?array $runs = null, ?\DateTime $updatedAt = null, ?WebhookType $webhookType = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->connectionId = $connectionId;
         $this->event = $event;

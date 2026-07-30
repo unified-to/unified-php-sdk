@@ -21,11 +21,27 @@ class TaskComment
 
     /**
      *
+     * @var ?bool $hasChildren
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_children')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasChildren = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
 
     /**
      * $raw
@@ -79,7 +95,9 @@ class TaskComment
 
     /**
      * @param  ?\DateTime  $createdAt
+     * @param  ?bool  $hasChildren
      * @param  ?string  $id
+     * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $taskId
      * @param  ?string  $text
@@ -88,10 +106,12 @@ class TaskComment
      * @param  ?string  $userName
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $id = null, ?array $raw = null, ?string $taskId = null, ?string $text = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null)
+    public function __construct(?\DateTime $createdAt = null, ?bool $hasChildren = null, ?string $id = null, ?string $parentId = null, ?array $raw = null, ?string $taskId = null, ?string $text = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null)
     {
         $this->createdAt = $createdAt;
+        $this->hasChildren = $hasChildren;
         $this->id = $id;
+        $this->parentId = $parentId;
         $this->raw = $raw;
         $this->taskId = $taskId;
         $this->text = $text;

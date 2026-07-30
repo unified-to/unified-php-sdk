@@ -34,5 +34,6 @@ enum GetAccountingExpenseQueryParamFields: string
     case ApproverUsers = 'approver_users';
     case Status = 'status';
     case ExternalNumber = 'external_number';
+    case CategoryIds = 'category_ids';
     case Raw = 'raw';
 }

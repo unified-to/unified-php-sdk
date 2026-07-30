@@ -241,6 +241,8 @@ enum PropertyConnectionPermissions: string
     case AdsOrganizationWrite = 'ads_organization_write';
     case AdsCreativeRead = 'ads_creative_read';
     case AdsCreativeWrite = 'ads_creative_write';
+    case AdsAssetRead = 'ads_asset_read';
+    case AdsAssetWrite = 'ads_asset_write';
     case AdsInsertionorderRead = 'ads_insertionorder_read';
     case AdsInsertionorderWrite = 'ads_insertionorder_write';
     case AdsTargetRead = 'ads_target_read';

@@ -33,4 +33,5 @@
 | `Send`                    | send                      |
 | `OrganizationId`          | organization_id           |
 | `ApplyAmount`             | apply_amount              |
+| `Applications`            | applications              |
 | `Raw`                     | raw                       |

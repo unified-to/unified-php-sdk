@@ -12,6 +12,26 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingJournal
 {
     /**
+     * $attachments
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment> $attachments
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('attachments')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingAttachment>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $attachments = null;
+
+    /**
+     * $categoryIds
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -120,6 +140,8 @@ class AccountingJournal
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment>  $attachments
+     * @param  ?array<string>  $categoryIds
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $description
@@ -135,8 +157,10 @@ class AccountingJournal
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $attachments = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
     {
+        $this->attachments = $attachments;
+        $this->categoryIds = $categoryIds;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->description = $description;

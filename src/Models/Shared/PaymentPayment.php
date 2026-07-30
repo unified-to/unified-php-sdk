@@ -20,6 +20,16 @@ class PaymentPayment
     public ?string $accountId = null;
 
     /**
+     * What this payment was applied to (invoices, bills, credit memos, etc.). Replaces separate invoice/bill payment endpoints.
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentAllocation> $allocations
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('allocations')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentAllocation>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $allocations = null;
+
+    /**
      *
      * @var ?string $billId
      */
@@ -144,6 +154,7 @@ class PaymentPayment
 
     /**
      * @param  ?string  $accountId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentAllocation>  $allocations
      * @param  ?string  $billId
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
@@ -161,9 +172,10 @@ class PaymentPayment
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $invoiceId = null, ?string $linkId = null, ?string $notes = null, ?string $organizationId = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
+    public function __construct(?string $accountId = null, ?array $allocations = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $invoiceId = null, ?string $linkId = null, ?string $notes = null, ?string $organizationId = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {
         $this->accountId = $accountId;
+        $this->allocations = $allocations;
         $this->billId = $billId;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;

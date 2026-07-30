@@ -13,6 +13,14 @@ class AccountingCategory
 {
     /**
      *
+     * @var ?string $code
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $code = null;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -53,6 +61,14 @@ class AccountingCategory
 
     /**
      *
+     * @var ?string $organizationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $organizationId = null;
+
+    /**
+     *
      * @var ?string $parentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
@@ -71,6 +87,15 @@ class AccountingCategory
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingCategoryType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingCategoryType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AccountingCategoryType $type = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -78,25 +103,31 @@ class AccountingCategory
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?string  $code
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $name
+     * @param  ?string  $organizationId
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingCategoryType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $code = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?array $raw = null, ?AccountingCategoryType $type = null, ?\DateTime $updatedAt = null)
     {
+        $this->code = $code;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
         $this->name = $name;
+        $this->organizationId = $organizationId;
         $this->parentId = $parentId;
         $this->raw = $raw;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
     }
 }

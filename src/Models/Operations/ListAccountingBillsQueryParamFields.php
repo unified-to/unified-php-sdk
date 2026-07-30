@@ -37,6 +37,9 @@ enum ListAccountingBillsQueryParamFields: string
     case Attachments = 'attachments';
     case Send = 'send';
     case OrganizationId = 'organization_id';
-    case Raw = 'raw';
     case Term = 'term';
+    case PaymentTerms = 'payment_terms';
+    case Payments = 'payments';
+    case CategoryIds = 'category_ids';
+    case Raw = 'raw';
 }

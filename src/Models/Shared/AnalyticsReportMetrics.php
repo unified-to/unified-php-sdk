@@ -13,12 +13,12 @@ class AnalyticsReportMetrics
 {
     /**
      *
-     * @var ?\Unified\Unified_to\Models\Shared\Dimension $dimension
+     * @var ?\Unified\Unified_to\Models\Shared\AnalyticsReportMetricsDimension $dimension
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('dimension')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Dimension|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AnalyticsReportMetricsDimension|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?Dimension $dimension = null;
+    public ?AnalyticsReportMetricsDimension $dimension = null;
 
     /**
      *
@@ -46,13 +46,13 @@ class AnalyticsReportMetrics
     public ?float $value = null;
 
     /**
-     * @param  ?\Unified\Unified_to\Models\Shared\Dimension  $dimension
+     * @param  ?\Unified\Unified_to\Models\Shared\AnalyticsReportMetricsDimension  $dimension
      * @param  ?string  $dimensionValue
      * @param  ?\Unified\Unified_to\Models\Shared\AnalyticsReportMetricsType  $type
      * @param  ?float  $value
      * @phpstan-pure
      */
-    public function __construct(?Dimension $dimension = null, ?string $dimensionValue = null, ?AnalyticsReportMetricsType $type = null, ?float $value = null)
+    public function __construct(?AnalyticsReportMetricsDimension $dimension = null, ?string $dimensionValue = null, ?AnalyticsReportMetricsType $type = null, ?float $value = null)
     {
         $this->dimension = $dimension;
         $this->dimensionValue = $dimensionValue;

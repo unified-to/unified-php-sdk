@@ -24,5 +24,7 @@ enum ListAccountingOrganizationsQueryParamFields: string
     case ParentId = 'parent_id';
     case FiscalYearEndMonth = 'fiscal_year_end_month';
     case OrganizationCode = 'organization_code';
+    case Type = 'type';
+    case IsElimination = 'is_elimination';
     case Raw = 'raw';
 }

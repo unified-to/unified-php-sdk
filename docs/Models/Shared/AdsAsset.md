@@ -1,0 +1,20 @@
+# AdsAsset
+
+
+## Fields
+
+| Field                                                         | Type                                                          | Required                                                      | Description                                                   |
+| ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- | ------------------------------------------------------------- |
+| `content`                                                     | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `createdAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `fileSize`                                                    | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `height`                                                      | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |
+| `id`                                                          | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `mimeType`                                                    | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `name`                                                        | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `organizationId`                                              | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `raw`                                                         | array<string, *mixed*>                                        | :heavy_minus_sign:                                            | N/A                                                           |
+| `type`                                                        | [?Shared\AdsAssetType](../../Models/Shared/AdsAssetType.md)   | :heavy_minus_sign:                                            | N/A                                                           |
+| `updatedAt`                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php) | :heavy_minus_sign:                                            | N/A                                                           |
+| `url`                                                         | *?string*                                                     | :heavy_minus_sign:                                            | N/A                                                           |
+| `width`                                                       | *?float*                                                      | :heavy_minus_sign:                                            | N/A                                                           |

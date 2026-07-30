@@ -31,12 +31,65 @@ class AdsReportMetrics
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCreative $creative
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('creative')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCreative|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsCreative $creative = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\Dimension $dimension
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('dimension')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Dimension|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?Dimension $dimension = null;
+
+    /**
+     *
+     * @var ?string $dimensionValue
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('dimension_value')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $dimensionValue = null;
+
+    /**
+     *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroup $group
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('group')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroup|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAdsReportMetricsGroup $group = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsInsertionorder $insertionorder
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('insertionorder')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsInsertionorder|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsInsertionorder $insertionorder = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsKeyword $keyword
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('keyword')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsKeyword|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsKeyword $keyword = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsPlacement $placement
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('placement')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsPlacement|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsPlacement $placement = null;
 
     /**
      *
@@ -58,16 +111,28 @@ class AdsReportMetrics
     /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsAd  $ad
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaign  $campaign
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCreative  $creative
+     * @param  ?\Unified\Unified_to\Models\Shared\Dimension  $dimension
+     * @param  ?string  $dimensionValue
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroup  $group
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsInsertionorder  $insertionorder
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsKeyword  $keyword
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsPlacement  $placement
      * @param  ?\Unified\Unified_to\Models\Shared\AdsReportMetricsType  $type
      * @param  ?float  $value
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsAd $ad = null, ?PropertyAdsReportMetricsCampaign $campaign = null, ?PropertyAdsReportMetricsGroup $group = null, ?AdsReportMetricsType $type = null, ?float $value = null)
+    public function __construct(?PropertyAdsReportMetricsAd $ad = null, ?PropertyAdsReportMetricsCampaign $campaign = null, ?PropertyAdsReportMetricsCreative $creative = null, ?Dimension $dimension = null, ?string $dimensionValue = null, ?PropertyAdsReportMetricsGroup $group = null, ?PropertyAdsReportMetricsInsertionorder $insertionorder = null, ?PropertyAdsReportMetricsKeyword $keyword = null, ?PropertyAdsReportMetricsPlacement $placement = null, ?AdsReportMetricsType $type = null, ?float $value = null)
     {
         $this->ad = $ad;
         $this->campaign = $campaign;
+        $this->creative = $creative;
+        $this->dimension = $dimension;
+        $this->dimensionValue = $dimensionValue;
         $this->group = $group;
+        $this->insertionorder = $insertionorder;
+        $this->keyword = $keyword;
+        $this->placement = $placement;
         $this->type = $type;
         $this->value = $value;
     }

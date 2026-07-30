@@ -74,6 +74,8 @@ class UnifiedTo
 
     public Ad $ad;
 
+    public Asset $asset;
+
     public Campaign $campaign;
 
     public Creative $creative;
@@ -385,6 +387,7 @@ class UnifiedTo
         $this->vendorcredit = new Vendorcredit($this->sdkConfiguration);
         $this->ads = new Ads($this->sdkConfiguration);
         $this->ad = new Ad($this->sdkConfiguration);
+        $this->asset = new Asset($this->sdkConfiguration);
         $this->campaign = new Campaign($this->sdkConfiguration);
         $this->creative = new Creative($this->sdkConfiguration);
         $this->group = new Group($this->sdkConfiguration);

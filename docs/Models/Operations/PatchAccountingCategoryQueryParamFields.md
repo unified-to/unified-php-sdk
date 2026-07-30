@@ -3,13 +3,16 @@
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `Id`          | id            |
-| `CreatedAt`   | created_at    |
-| `UpdatedAt`   | updated_at    |
-| `Name`        | name          |
-| `Description` | description   |
-| `IsActive`    | is_active     |
-| `ParentId`    | parent_id     |
-| `Raw`         | raw           |
+| Name             | Value            |
+| ---------------- | ---------------- |
+| `Id`             | id               |
+| `CreatedAt`      | created_at       |
+| `UpdatedAt`      | updated_at       |
+| `Name`           | name             |
+| `Description`    | description      |
+| `IsActive`       | is_active        |
+| `ParentId`       | parent_id        |
+| `Type`           | type             |
+| `Code`           | code             |
+| `OrganizationId` | organization_id  |
+| `Raw`            | raw              |

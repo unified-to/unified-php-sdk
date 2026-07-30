@@ -26,5 +26,6 @@ enum ListAccountingSalesordersQueryParamFields: string
     case SalesChannel = 'sales_channel';
     case OrganizationId = 'organization_id';
     case Fees = 'fees';
+    case CategoryIds = 'category_ids';
     case Raw = 'raw';
 }

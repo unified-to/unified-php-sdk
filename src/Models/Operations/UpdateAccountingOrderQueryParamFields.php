@@ -24,5 +24,6 @@ enum UpdateAccountingOrderQueryParamFields: string
     case BillingAddress = 'billing_address';
     case Status = 'status';
     case Lineitems = 'lineitems';
+    case OrganizationId = 'organization_id';
     case Raw = 'raw';
 }

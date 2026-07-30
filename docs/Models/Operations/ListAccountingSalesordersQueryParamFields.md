@@ -20,4 +20,5 @@
 | `SalesChannel`    | sales_channel     |
 | `OrganizationId`  | organization_id   |
 | `Fees`            | fees              |
+| `CategoryIds`     | category_ids      |
 | `Raw`             | raw               |

@@ -18,5 +18,7 @@ enum UpdateTaskCommentQueryParamFields: string
     case UserId = 'user_id';
     case UserName = 'user_name';
     case TaskId = 'task_id';
+    case ParentId = 'parent_id';
+    case HasChildren = 'has_children';
     case Raw = 'raw';
 }

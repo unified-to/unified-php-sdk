@@ -24,5 +24,6 @@ enum ListAccountingPurchaseordersQueryParamFields: string
     case Status = 'status';
     case Lineitems = 'lineitems';
     case OrganizationId = 'organization_id';
+    case CategoryIds = 'category_ids';
     case Raw = 'raw';
 }

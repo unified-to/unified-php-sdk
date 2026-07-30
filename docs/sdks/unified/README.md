@@ -160,7 +160,7 @@ $request = new Operations\CreateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Created,
-        objectType: Shared\ObjectType::AtsScorecard,
+        objectType: Shared\WebhookObjectType::AtsScorecard,
     ),
 );
 
@@ -1003,7 +1003,7 @@ $request = new Operations\PatchUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Updated,
-        objectType: Shared\ObjectType::TicketingCustomer,
+        objectType: Shared\WebhookObjectType::TicketingCustomer,
     ),
     id: '<id>',
 );
@@ -1368,7 +1368,7 @@ $request = new Operations\UpdateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
         event: Shared\Event::Deleted,
-        objectType: Shared\ObjectType::MessagingChannel,
+        objectType: Shared\WebhookObjectType::MessagingChannel,
     ),
     id: '<id>',
 );

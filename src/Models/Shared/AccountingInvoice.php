@@ -38,6 +38,16 @@ class AccountingInvoice
     public ?\DateTime $cancelledAt = null;
 
     /**
+     * $categoryIds
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      *
      * @var ?string $contactId
      */
@@ -143,6 +153,25 @@ class AccountingInvoice
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoicePaymentCollectionMethod|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AccountingInvoicePaymentCollectionMethod $paymentCollectionMethod = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingInvoicePaymentTerms $paymentTerms
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payment_terms')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoicePaymentTerms|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AccountingInvoicePaymentTerms $paymentTerms = null;
+
+    /**
+     * ead-only reciprocal of PaymentPayment.allocations; payments applied to this invoice
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference> $payments
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payments')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $payments = null;
 
     /**
      *
@@ -265,6 +294,7 @@ class AccountingInvoice
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment>  $attachments
      * @param  ?float  $balanceAmount
      * @param  ?\DateTime  $cancelledAt
+     * @param  ?array<string>  $categoryIds
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -278,6 +308,8 @@ class AccountingInvoice
      * @param  ?float  $paidAmount
      * @param  ?\DateTime  $paidAt
      * @param  ?\Unified\Unified_to\Models\Shared\AccountingInvoicePaymentCollectionMethod  $paymentCollectionMethod
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingInvoicePaymentTerms  $paymentTerms
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference>  $payments
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
@@ -294,11 +326,12 @@ class AccountingInvoice
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $invoiceNumber = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingInvoicePaymentCollectionMethod $paymentCollectionMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingInvoiceStatus $status = null, ?float $taxAmount = null, ?AccountingInvoiceTerm $term = null, ?float $totalAmount = null, ?AccountingInvoiceType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $invoiceNumber = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingInvoicePaymentCollectionMethod $paymentCollectionMethod = null, ?AccountingInvoicePaymentTerms $paymentTerms = null, ?array $payments = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingInvoiceStatus $status = null, ?float $taxAmount = null, ?AccountingInvoiceTerm $term = null, ?float $totalAmount = null, ?AccountingInvoiceType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->attachments = $attachments;
         $this->balanceAmount = $balanceAmount;
         $this->cancelledAt = $cancelledAt;
+        $this->categoryIds = $categoryIds;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
@@ -312,6 +345,8 @@ class AccountingInvoice
         $this->paidAmount = $paidAmount;
         $this->paidAt = $paidAt;
         $this->paymentCollectionMethod = $paymentCollectionMethod;
+        $this->paymentTerms = $paymentTerms;
+        $this->payments = $payments;
         $this->postedAt = $postedAt;
         $this->raw = $raw;
         $this->reference = $reference;

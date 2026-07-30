@@ -72,6 +72,14 @@ class AccountingOrder
 
     /**
      *
+     * @var ?string $organizationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $organizationId = null;
+
+    /**
+     *
      * @var ?\DateTime $postedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('posted_at')]
@@ -139,6 +147,7 @@ class AccountingOrder
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
+     * @param  ?string  $organizationId
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingOrderShippingAddress  $shippingAddress
@@ -148,7 +157,7 @@ class AccountingOrder
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingOrderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?\DateTime $postedAt = null, ?array $raw = null, ?PropertyAccountingOrderShippingAddress $shippingAddress = null, ?AccountingOrderStatus $status = null, ?float $totalAmount = null, ?AccountingOrderType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?PropertyAccountingOrderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?PropertyAccountingOrderShippingAddress $shippingAddress = null, ?AccountingOrderStatus $status = null, ?float $totalAmount = null, ?AccountingOrderType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->billingAddress = $billingAddress;
@@ -157,6 +166,7 @@ class AccountingOrder
         $this->currency = $currency;
         $this->id = $id;
         $this->lineitems = $lineitems;
+        $this->organizationId = $organizationId;
         $this->postedAt = $postedAt;
         $this->raw = $raw;
         $this->shippingAddress = $shippingAddress;

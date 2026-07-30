@@ -36,6 +36,14 @@ class ListAdsReportsRequest
     public ?string $campaignId = null;
 
     /**
+     * One or more (comma-separated) of: DATE, PLATFORM, PLATFORM_POSITION, DEVICE
+     *
+     * @var ?string $dimension
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=dimension')]
+    public ?string $dimension = null;
+
+    /**
      * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $endLt
@@ -139,6 +147,7 @@ class ListAdsReportsRequest
      * @param  string  $connectionId
      * @param  ?string  $adId
      * @param  ?string  $campaignId
+     * @param  ?string  $dimension
      * @param  ?string  $endLt
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListAdsReportsQueryParamFields>  $fields
      * @param  ?string  $groupId
@@ -154,11 +163,12 @@ class ListAdsReportsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $adId = null, ?string $campaignId = null, ?string $endLt = null, ?array $fields = null, ?string $groupId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $type = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $adId = null, ?string $campaignId = null, ?string $dimension = null, ?string $endLt = null, ?array $fields = null, ?string $groupId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $type = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->adId = $adId;
         $this->campaignId = $campaignId;
+        $this->dimension = $dimension;
         $this->endLt = $endLt;
         $this->fields = $fields;
         $this->groupId = $groupId;

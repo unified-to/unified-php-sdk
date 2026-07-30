@@ -20,6 +20,16 @@ class AccountingTransactionLineItem
     public ?string $accountId = null;
 
     /**
+     * $categoryIds
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      *
      * @var ?string $description
      */
@@ -77,6 +87,7 @@ class AccountingTransactionLineItem
 
     /**
      * @param  ?string  $accountId
+     * @param  ?array<string>  $categoryIds
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?string  $name
@@ -86,9 +97,10 @@ class AccountingTransactionLineItem
      * @param  ?float  $unitQuantity
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?string $description = null, ?string $id = null, ?string $name = null, ?string $objectType = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $description = null, ?string $id = null, ?string $name = null, ?string $objectType = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null)
     {
         $this->accountId = $accountId;
+        $this->categoryIds = $categoryIds;
         $this->description = $description;
         $this->id = $id;
         $this->name = $name;

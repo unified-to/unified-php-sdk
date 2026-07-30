@@ -23,5 +23,7 @@ enum GetAccountingJournalQueryParamFields: string
     case PostedAt = 'posted_at';
     case Source = 'source';
     case OrganizationId = 'organization_id';
+    case CategoryIds = 'category_ids';
+    case Attachments = 'attachments';
     case Raw = 'raw';
 }

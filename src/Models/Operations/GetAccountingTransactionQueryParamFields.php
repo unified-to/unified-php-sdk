@@ -29,5 +29,6 @@ enum GetAccountingTransactionQueryParamFields: string
     case Currency = 'currency';
     case Contacts = 'contacts';
     case OrganizationId = 'organization_id';
+    case CategoryIds = 'category_ids';
     case Raw = 'raw';
 }

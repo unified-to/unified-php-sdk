@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingCreditmemo
 {
     /**
+     * What this credit memo was applied to (invoices/bills). Writable inline on create/update.
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingCreditApplication> $applications
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('applications')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingCreditApplication>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $applications = null;
+
+    /**
      *
      * @var ?float $applyAmount
      */
@@ -252,6 +262,7 @@ class AccountingCreditmemo
     public ?string $url = null;
 
     /**
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCreditApplication>  $applications
      * @param  ?float  $applyAmount
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment>  $attachments
      * @param  ?float  $balanceAmount
@@ -283,8 +294,9 @@ class AccountingCreditmemo
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?float $applyAmount = null, ?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creditmemoNumber = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $invoiceId = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingCreditmemoStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $applications = null, ?float $applyAmount = null, ?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creditmemoNumber = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $invoiceId = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingCreditmemoStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
+        $this->applications = $applications;
         $this->applyAmount = $applyAmount;
         $this->attachments = $attachments;
         $this->balanceAmount = $balanceAmount;

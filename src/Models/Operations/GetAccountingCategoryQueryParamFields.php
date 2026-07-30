@@ -18,5 +18,8 @@ enum GetAccountingCategoryQueryParamFields: string
     case Description = 'description';
     case IsActive = 'is_active';
     case ParentId = 'parent_id';
+    case Type = 'type';
+    case Code = 'code';
+    case OrganizationId = 'organization_id';
     case Raw = 'raw';
 }

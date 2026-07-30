@@ -12,23 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 enum Dimension: string
 {
     case Date = 'DATE';
-    case Hour = 'HOUR';
-    case DayOfWeek = 'DAY_OF_WEEK';
-    case Week = 'WEEK';
-    case Month = 'MONTH';
-    case Year = 'YEAR';
-    case Page = 'PAGE';
-    case PageTitle = 'PAGE_TITLE';
-    case EventName = 'EVENT_NAME';
-    case Source = 'SOURCE';
-    case Medium = 'MEDIUM';
-    case Campaign = 'CAMPAIGN';
-    case Country = 'COUNTRY';
-    case City = 'CITY';
-    case DeviceType = 'DEVICE_TYPE';
-    case Browser = 'BROWSER';
-    case Os = 'OS';
-    case UserType = 'USER_TYPE';
-    case LandingPage = 'LANDING_PAGE';
-    case Video = 'VIDEO';
+    case Platform = 'PLATFORM';
+    case PlatformPosition = 'PLATFORM_POSITION';
+    case Device = 'DEVICE';
 }

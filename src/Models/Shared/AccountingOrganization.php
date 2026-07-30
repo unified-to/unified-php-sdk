@@ -54,6 +54,14 @@ class AccountingOrganization
 
     /**
      *
+     * @var ?bool $isElimination
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_elimination')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isElimination = null;
+
+    /**
+     *
      * @var ?string $legalName
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('legal_name')]
@@ -112,6 +120,15 @@ class AccountingOrganization
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingOrganizationType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingOrganizationType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AccountingOrganizationType $type = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -132,6 +149,7 @@ class AccountingOrganization
      * @param  ?string  $currency
      * @param  ?float  $fiscalYearEndMonth
      * @param  ?string  $id
+     * @param  ?bool  $isElimination
      * @param  ?string  $legalName
      * @param  ?string  $name
      * @param  ?string  $organizationCode
@@ -139,17 +157,19 @@ class AccountingOrganization
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $taxNumber
      * @param  ?string  $timezone
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingOrganizationType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $website
      * @phpstan-pure
      */
-    public function __construct(?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?string $legalName = null, ?string $name = null, ?string $organizationCode = null, ?string $parentId = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $website = null)
+    public function __construct(?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?bool $isElimination = null, ?string $legalName = null, ?string $name = null, ?string $organizationCode = null, ?string $parentId = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?AccountingOrganizationType $type = null, ?\DateTime $updatedAt = null, ?string $website = null)
     {
         $this->address = $address;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->fiscalYearEndMonth = $fiscalYearEndMonth;
         $this->id = $id;
+        $this->isElimination = $isElimination;
         $this->legalName = $legalName;
         $this->name = $name;
         $this->organizationCode = $organizationCode;
@@ -157,6 +177,7 @@ class AccountingOrganization
         $this->raw = $raw;
         $this->taxNumber = $taxNumber;
         $this->timezone = $timezone;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->website = $website;
     }

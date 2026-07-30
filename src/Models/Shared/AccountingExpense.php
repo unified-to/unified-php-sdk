@@ -56,6 +56,16 @@ class AccountingExpense
     public ?array $attachments = null;
 
     /**
+     * $categoryIds
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      *
      * @var ?string $contactId
      */
@@ -220,6 +230,7 @@ class AccountingExpense
      * @param  ?string  $approverUserId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $approverUsers
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment>  $attachments
+     * @param  ?array<string>  $categoryIds
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -241,13 +252,14 @@ class AccountingExpense
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $users
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
+    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
     {
         $this->accountId = $accountId;
         $this->approvedAt = $approvedAt;
         $this->approverUserId = $approverUserId;
         $this->approverUsers = $approverUsers;
         $this->attachments = $attachments;
+        $this->categoryIds = $categoryIds;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;

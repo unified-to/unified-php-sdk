@@ -244,12 +244,14 @@ if ($response->accountingAccount !== null) {
 ### [Ads](docs/sdks/ads/README.md)
 
 * [createAdsAd](docs/sdks/ads/README.md#createadsad) - Create an ad
+* [createAdsAsset](docs/sdks/ads/README.md#createadsasset) - Create an asset
 * [createAdsCampaign](docs/sdks/ads/README.md#createadscampaign) - Create a campaign
 * [createAdsCreative](docs/sdks/ads/README.md#createadscreative) - Create a creative
 * [createAdsGroup](docs/sdks/ads/README.md#createadsgroup) - Create a group
 * [createAdsInsertionorder](docs/sdks/ads/README.md#createadsinsertionorder) - Create an insertionorder
 * [createAdsOrganization](docs/sdks/ads/README.md#createadsorganization) - Create an organization
 * [getAdsAd](docs/sdks/ads/README.md#getadsad) - Retrieve an ad
+* [getAdsAsset](docs/sdks/ads/README.md#getadsasset) - Retrieve an asset
 * [getAdsCampaign](docs/sdks/ads/README.md#getadscampaign) - Retrieve a campaign
 * [getAdsCreative](docs/sdks/ads/README.md#getadscreative) - Retrieve a creative
 * [getAdsGroup](docs/sdks/ads/README.md#getadsgroup) - Retrieve a group
@@ -258,6 +260,7 @@ if ($response->accountingAccount !== null) {
 * [getAdsPromoted](docs/sdks/ads/README.md#getadspromoted) - Retrieve a promoted
 * [getAdsTarget](docs/sdks/ads/README.md#getadstarget) - Retrieve a target
 * [listAdsAds](docs/sdks/ads/README.md#listadsads) - List all ads
+* [listAdsAssets](docs/sdks/ads/README.md#listadsassets) - List all assets
 * [listAdsCampaigns](docs/sdks/ads/README.md#listadscampaigns) - List all campaigns
 * [listAdsCreatives](docs/sdks/ads/README.md#listadscreatives) - List all creatives
 * [listAdsGroups](docs/sdks/ads/README.md#listadsgroups) - List all groups
@@ -334,6 +337,12 @@ if ($response->accountingAccount !== null) {
 * [removeAssessmentPackage](docs/sdks/assessment/README.md#removeassessmentpackage) - Delete an assessment package
 * [updateAssessmentOrder](docs/sdks/assessment/README.md#updateassessmentorder) - Update an order
 * [updateAssessmentPackage](docs/sdks/assessment/README.md#updateassessmentpackage) - Update an assessment package
+
+### [Asset](docs/sdks/asset/README.md)
+
+* [createAdsAsset](docs/sdks/asset/README.md#createadsasset) - Create an asset
+* [getAdsAsset](docs/sdks/asset/README.md#getadsasset) - Retrieve an asset
+* [listAdsAssets](docs/sdks/asset/README.md#listadsassets) - List all assets
 
 ### [Ats](docs/sdks/ats/README.md)
 

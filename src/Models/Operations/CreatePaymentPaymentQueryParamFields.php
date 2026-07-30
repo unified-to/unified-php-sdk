@@ -26,5 +26,6 @@ enum CreatePaymentPaymentQueryParamFields: string
     case AccountId = 'account_id';
     case Reference = 'reference';
     case OrganizationId = 'organization_id';
+    case Allocations = 'allocations';
     case Raw = 'raw';
 }

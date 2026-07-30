@@ -29,6 +29,16 @@ class AccountingPurchaseorder
     public ?PropertyAccountingPurchaseorderBillingAddress $billingAddress = null;
 
     /**
+     * $categoryIds
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      *
      * @var ?string $contactId
      */
@@ -133,6 +143,7 @@ class AccountingPurchaseorder
     /**
      * @param  ?string  $accountId
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingPurchaseorderBillingAddress  $billingAddress
+     * @param  ?array<string>  $categoryIds
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
@@ -147,10 +158,11 @@ class AccountingPurchaseorder
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingPurchaseorderBillingAddress $billingAddress = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?PropertyAccountingPurchaseorderShippingAddress $shippingAddress = null, ?AccountingPurchaseorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?PropertyAccountingPurchaseorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?PropertyAccountingPurchaseorderShippingAddress $shippingAddress = null, ?AccountingPurchaseorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->billingAddress = $billingAddress;
+        $this->categoryIds = $categoryIds;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
