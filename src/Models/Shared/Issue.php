@@ -50,6 +50,14 @@ class Issue
 
     /**
      *
+     * @var ?string $customerNote
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('customer_note')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $customerNote = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -112,6 +120,7 @@ class Issue
      * @param  string  $title
      * @param  string  $workspaceId
      * @param  ?string  $createdAt
+     * @param  ?string  $customerNote
      * @param  ?string  $id
      * @param  ?float  $importance
      * @param  ?float  $resolutionTime
@@ -121,13 +130,14 @@ class Issue
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(IssueStatus $status, string $ticketRef, string $title, string $workspaceId, ?string $createdAt = null, ?string $id = null, ?float $importance = null, ?float $resolutionTime = null, ?float $size = null, ?array $type = null, ?string $updatedAt = null, ?string $url = null)
+    public function __construct(IssueStatus $status, string $ticketRef, string $title, string $workspaceId, ?string $createdAt = null, ?string $customerNote = null, ?string $id = null, ?float $importance = null, ?float $resolutionTime = null, ?float $size = null, ?array $type = null, ?string $updatedAt = null, ?string $url = null)
     {
         $this->status = $status;
         $this->ticketRef = $ticketRef;
         $this->title = $title;
         $this->workspaceId = $workspaceId;
         $this->createdAt = $createdAt;
+        $this->customerNote = $customerNote;
         $this->id = $id;
         $this->importance = $importance;
         $this->resolutionTime = $resolutionTime;

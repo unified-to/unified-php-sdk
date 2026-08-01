@@ -21,6 +21,7 @@ enum CreatePaymentSubscriptionQueryParamFields: string
     case CurrentPeriodStartAt = 'current_period_start_at';
     case CanceledAt = 'canceled_at';
     case Currency = 'currency';
+    case TotalAmount = 'total_amount';
     case StartAt = 'start_at';
     case EndAt = 'end_at';
     case Status = 'status';

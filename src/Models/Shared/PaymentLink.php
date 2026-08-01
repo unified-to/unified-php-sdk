@@ -45,6 +45,14 @@ class PaymentLink
 
     /**
      *
+     * @var ?string $description
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $description = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -124,6 +132,7 @@ class PaymentLink
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
+     * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?bool  $isChargeableNow
@@ -135,12 +144,13 @@ class PaymentLink
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?string $paymentId = null, ?array $raw = null, ?string $successUrl = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?string $paymentId = null, ?array $raw = null, ?string $successUrl = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->amount = $amount;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
+        $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
         $this->isChargeableNow = $isChargeableNow;

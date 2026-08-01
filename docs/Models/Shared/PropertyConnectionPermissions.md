@@ -259,6 +259,7 @@
 | `ShippingLabelWrite`           | shipping_label_write           |
 | `ShippingTrackingRead`         | shipping_tracking_read         |
 | `ShippingRateRead`             | shipping_rate_read             |
+| `ShippingRateWrite`            | shipping_rate_write            |
 | `ShippingCarrierRead`          | shipping_carrier_read          |
 | `SigningDocumentRead`          | signing_document_read          |
 | `SigningDocumentWrite`         | signing_document_write         |

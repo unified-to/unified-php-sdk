@@ -265,6 +265,7 @@ enum PropertyConnectionPermissions: string
     case ShippingLabelWrite = 'shipping_label_write';
     case ShippingTrackingRead = 'shipping_tracking_read';
     case ShippingRateRead = 'shipping_rate_read';
+    case ShippingRateWrite = 'shipping_rate_write';
     case ShippingCarrierRead = 'shipping_carrier_read';
     case SigningDocumentRead = 'signing_document_read';
     case SigningDocumentWrite = 'signing_document_write';

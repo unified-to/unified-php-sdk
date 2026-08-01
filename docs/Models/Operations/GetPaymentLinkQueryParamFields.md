@@ -15,6 +15,7 @@
 | `PaymentId`       | payment_id        |
 | `ContactId`       | contact_id        |
 | `Url`             | url               |
+| `Description`     | description       |
 | `IsChargeableNow` | is_chargeable_now |
 | `SuccessUrl`      | success_url       |
 | `Raw`             | raw               |

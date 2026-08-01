@@ -21,6 +21,7 @@ enum PatchPaymentLinkQueryParamFields: string
     case PaymentId = 'payment_id';
     case ContactId = 'contact_id';
     case Url = 'url';
+    case Description = 'description';
     case IsChargeableNow = 'is_chargeable_now';
     case SuccessUrl = 'success_url';
     case Raw = 'raw';

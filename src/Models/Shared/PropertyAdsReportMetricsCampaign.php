@@ -39,6 +39,15 @@ class PropertyAdsReportMetricsCampaign
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignBudgetUnit $budgetUnit
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('budget_unit')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignBudgetUnit|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsCampaignBudgetUnit $budgetUnit = null;
+
+    /**
+     *
      * @var ?string $campaignBudgetIdentifier
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('campaign_budget_identifier')]
@@ -200,6 +209,7 @@ class PropertyAdsReportMetricsCampaign
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignAdvertisingChannelType  $advertisingChannelType
      * @param  ?float  $budgetAmount
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignBudgetPeriod  $budgetPeriod
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignBudgetUnit  $budgetUnit
      * @param  ?string  $campaignBudgetIdentifier
      * @param  ?string  $category
      * @param  ?\DateTime  $createdAt
@@ -221,11 +231,12 @@ class PropertyAdsReportMetricsCampaign
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsCampaignAdvertisingChannelType $advertisingChannelType = null, ?float $budgetAmount = null, ?PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod = null, ?string $campaignBudgetIdentifier = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyAdsReportMetricsCampaignEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap = null, ?PropertyAdsReportMetricsCampaignGoal $goal = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsCampaignStatus $status = null, ?PropertyAdsReportMetricsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyAdsReportMetricsCampaignAdvertisingChannelType $advertisingChannelType = null, ?float $budgetAmount = null, ?PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsCampaignBudgetUnit $budgetUnit = null, ?string $campaignBudgetIdentifier = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyAdsReportMetricsCampaignEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap = null, ?PropertyAdsReportMetricsCampaignGoal $goal = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsCampaignStatus $status = null, ?PropertyAdsReportMetricsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->advertisingChannelType = $advertisingChannelType;
         $this->budgetAmount = $budgetAmount;
         $this->budgetPeriod = $budgetPeriod;
+        $this->budgetUnit = $budgetUnit;
         $this->campaignBudgetIdentifier = $campaignBudgetIdentifier;
         $this->category = $category;
         $this->createdAt = $createdAt;

@@ -171,6 +171,14 @@ class PaymentSubscription
 
     /**
      *
+     * @var ?float $totalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $totalAmount = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -197,10 +205,11 @@ class PaymentSubscription
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentSubscriptionStatus  $status
+     * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $canceledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $currentPeriodEndAt = null, ?\DateTime $currentPeriodStartAt = null, ?float $dayOfMonth = null, ?float $dayOfWeek = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?float $interval = null, ?IntervalUnit $intervalUnit = null, ?string $invoiceId = null, ?array $lineitems = null, ?float $month = null, ?array $raw = null, ?\DateTime $startAt = null, ?PaymentSubscriptionStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $canceledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $currentPeriodEndAt = null, ?\DateTime $currentPeriodStartAt = null, ?float $dayOfMonth = null, ?float $dayOfWeek = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?float $interval = null, ?IntervalUnit $intervalUnit = null, ?string $invoiceId = null, ?array $lineitems = null, ?float $month = null, ?array $raw = null, ?\DateTime $startAt = null, ?PaymentSubscriptionStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->canceledAt = $canceledAt;
         $this->contactId = $contactId;
@@ -221,6 +230,7 @@ class PaymentSubscription
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->status = $status;
+        $this->totalAmount = $totalAmount;
         $this->updatedAt = $updatedAt;
     }
 }

@@ -22,6 +22,7 @@ enum GetAdsCampaignQueryParamFields: string
     case EndAt = 'end_at';
     case BudgetAmount = 'budget_amount';
     case BudgetPeriod = 'budget_period';
+    case BudgetUnit = 'budget_unit';
     case TotalSpendAmount = 'total_spend_amount';
     case Targeting = 'targeting';
     case Goal = 'goal';

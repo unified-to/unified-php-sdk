@@ -24,4 +24,7 @@ enum AdsGroupType: string
     case Search = 'SEARCH';
     case Audio = 'AUDIO';
     case Youtube = 'YOUTUBE';
+    case Native = 'NATIVE';
+    case Ctv = 'CTV';
+    case Dooh = 'DOOH';
 }
