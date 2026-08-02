@@ -28,6 +28,14 @@ class ListCommerceInventoriesRequest
     public ?array $fields = null;
 
     /**
+     * The item ID to filter by (reference to CommerceItem)
+     *
+     * @var ?string $itemId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=item_id')]
+    public ?string $itemId = null;
+
+    /**
      * The item variant ID to filter by (reference to CommerceCommerceItemvariant)
      *
      * @var ?string $itemVariantId
@@ -98,6 +106,7 @@ class ListCommerceInventoriesRequest
     /**
      * @param  string  $connectionId
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListCommerceInventoriesQueryParamFields>  $fields
+     * @param  ?string  $itemId
      * @param  ?string  $itemVariantId
      * @param  ?float  $limit
      * @param  ?string  $locationId
@@ -109,10 +118,11 @@ class ListCommerceInventoriesRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?string $itemVariantId = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?string $itemId = null, ?string $itemVariantId = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
+        $this->itemId = $itemId;
         $this->itemVariantId = $itemVariantId;
         $this->limit = $limit;
         $this->locationId = $locationId;

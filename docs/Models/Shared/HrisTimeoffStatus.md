@@ -3,8 +3,9 @@
 
 ## Values
 
-| Name       | Value      |
-| ---------- | ---------- |
-| `Approved` | APPROVED   |
-| `Pending`  | PENDING    |
-| `Denied`   | DENIED     |
+| Name        | Value       |
+| ----------- | ----------- |
+| `Approved`  | APPROVED    |
+| `Pending`   | PENDING     |
+| `Denied`    | DENIED      |
+| `Cancelled` | CANCELLED   |

@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 2261a49528204f202086da5d7c5d3ba5
+  docChecksum: eaa7c7c10c6b862aff52c98e1484ea59
   docVersion: "1.0"
   speakeasyVersion: 1.791.0
   generationVersion: 2.924.0
-  releaseVersion: 1.6.96
-  configChecksum: 81ff22bf8e24a37bcbe7a67f0234889e
+  releaseVersion: 1.6.97
+  configChecksum: b1f2906950f0115e075d45bca5146437
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 506fd9cc-6afb-485d-aaad-ac0d7c2a5e1c
-  pristine_commit_hash: 23e2068ddb83804b9269c109d1a64c1230037590
-  pristine_tree_hash: 722a421da182747754c67c8c784b7fca20d03dac
+  generation_id: c4007678-3469-4cf0-8336-c7edc34c374f
+  pristine_commit_hash: d1535942b5abbd9f4df476875a830eab319e94cf
+  pristine_tree_hash: 2a7ebb3be53a151806b588f1a98ea2ef2556f01d
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -3993,8 +3993,8 @@ trackedFiles:
     pristine_git_object: b1afc46fc713362e4a19c7c166bfe2f824d38440
   docs/Models/Operations/ListCommerceInventoriesRequest.md:
     id: 8e338e29c464
-    last_write_checksum: sha1:08b2766819166a647e825cb3fa5d97f61ab6d2e4
-    pristine_git_object: 9ebd24fcdd120b89806fedd52ecb5f101af05480
+    last_write_checksum: sha1:28352ecfe12528e8f3548dd03fe4e893454c75a4
+    pristine_git_object: 3586dadc6b071a2b5b41aeb28f59cf8ed4b413c5
   docs/Models/Operations/ListCommerceInventoriesResponse.md:
     id: c0781a1180d0
     last_write_checksum: sha1:0145a8f0c1011599a8ba83121b377b255c5904e3
@@ -10305,8 +10305,8 @@ trackedFiles:
     pristine_git_object: 6d848d81404958438f791f7ee483696d8346d97e
   docs/Models/Shared/HrisTimeoffStatus.md:
     id: 0a228add8c1b
-    last_write_checksum: sha1:e7c0dd1bfceb21cc9dc0d663aaca44fae4831d17
-    pristine_git_object: 751835081010e1ab184accfdbd370790a9a1e981
+    last_write_checksum: sha1:2ae14c6511ebc0aa612b6394ff1bb34ee970e7f2
+    pristine_git_object: 3768ba719e314ba7a80f7ea4dccd5230b727425b
   docs/Models/Shared/HrisTimeoffType.md:
     id: 77dc098288b1
     last_write_checksum: sha1:23faf65df6a7b5d31891efbd6be4ee0e67e88a91
@@ -17977,8 +17977,8 @@ trackedFiles:
     pristine_git_object: f05509845f430f689b059f3a721c1df17768f121
   src/Models/Operations/ListCommerceInventoriesRequest.php:
     id: 425a04099a0d
-    last_write_checksum: sha1:624664db4662f2e79bf9de1096220c73a9176d1e
-    pristine_git_object: 710a4057e652e073341dec2c1d8e90d87eadd4fc
+    last_write_checksum: sha1:a2d92e63cddc846f84c8c5622d27945ba41ba498
+    pristine_git_object: f1d74228b557bbf776aea9c5757b9e3ecc6188d2
   src/Models/Operations/ListCommerceInventoriesResponse.php:
     id: 333ba61e4484
     last_write_checksum: sha1:93280627eafeefd62f8c0a2cabf11220585c415a
@@ -24209,8 +24209,8 @@ trackedFiles:
     pristine_git_object: 6ab35790eac9f2cc9da7b96d18207e82540b5911
   src/Models/Shared/HrisTimeoffStatus.php:
     id: eccecde71702
-    last_write_checksum: sha1:7fb361e7ea5b782a1591414a02574f4bad0a1edd
-    pristine_git_object: 3865e56df363458f27da997900384c9c4d38d103
+    last_write_checksum: sha1:fad54879ac5b413db108357fa2eec85e69eec7bf
+    pristine_git_object: 39381e72dce13435137617d879303cc8f0e16a20
   src/Models/Shared/HrisTimeoffType.php:
     id: 6ef5510f6d5e
     last_write_checksum: sha1:5dc82d19fa424df445e7dccfe2a64851547ad3fd
@@ -26905,8 +26905,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:68386905d4a6bf8ea630d7619dbfc4c0a870d96b
-    pristine_git_object: 152477b958577358fe73c6e0c993a4dfc427063e
+    last_write_checksum: sha1:c3cdbd2ccb9d76f34c19ad07230c4852974995f9
+    pristine_git_object: 6aad2d5e04e9effc0a1c635ee9f4b2cf4b3b1056
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -40680,7 +40680,7 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]->enum(shippingRateWrite)` **Added**\n  *  `response.permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->ads->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->createAdsGroup()`: \n  *  `request->adsGroup->type` **Changed**\n  *  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsAd()`:  `response.adType` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->getAdsGroup()`:  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsAds()`:  `response.[]->adType` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsCampaigns()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsGroups()`:  `response.[]->type` **Changed** (Breaking ⚠️)\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsAd()`: \n  *  `request->adsAd->adType` **Changed**\n  *  `response.adType` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->patchAdsGroup()`: \n  *  `request->adsGroup->type` **Changed**\n  *  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsAd()`: \n  *  `request->adsAd->adType` **Changed**\n  *  `response.adType` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->ads->updateAdsGroup()`: \n  *  `request->adsGroup->type` **Changed**\n  *  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->ad->createAdsAd()`: \n  *  `request->adsAd->adType` **Changed**\n  *  `response.adType` **Changed** (Breaking ⚠️)\n* `unified-to->ad->getAdsAd()`:  `response.adType` **Changed** (Breaking ⚠️)\n* `unified-to->ad->listAdsAds()`:  `response.[]->adType` **Changed** (Breaking ⚠️)\n* `unified-to->ad->patchAdsAd()`: \n  *  `request->adsAd->adType` **Changed**\n  *  `response.adType` **Changed** (Breaking ⚠️)\n* `unified-to->ad->updateAdsAd()`: \n  *  `request->adsAd->adType` **Changed**\n  *  `response.adType` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->createAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->getAdsCampaign()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->listAdsCampaigns()`: \n  *  `request->fields` **Changed**\n  *  `response.[]` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->patchAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->campaign->updateAdsCampaign()`: \n  *  `request` **Changed**\n  *  `response` **Changed** (Breaking ⚠️)\n* `unified-to->group->createAdsGroup()`: \n  *  `request->adsGroup->type` **Changed**\n  *  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->group->getAdsGroup()`:  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->group->listAdsGroups()`:  `response.[]->type` **Changed** (Breaking ⚠️)\n* `unified-to->group->patchAdsGroup()`: \n  *  `request->adsGroup->type` **Changed**\n  *  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->group->updateAdsGroup()`: \n  *  `request->adsGroup->type` **Changed**\n  *  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]->enum(shippingRateWrite)` **Added**\n  *  `response.permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->ads->createAdsAd()`: \n  *  `request->adsAd->adType` **Changed**\n  *  `response.adType` **Changed** (Breaking ⚠️)\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]->enum(shippingRateWrite)` **Added**\n  *  `response.permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]->enum(shippingRateWrite)` **Added**\n  *  `response.permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]->enum(shippingRateWrite)` **Added**\n  *  `response.permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]->enum(shippingRateWrite)` **Added**\n  *  `response.permissions[]->enum(shippingRateWrite)` **Added** (Breaking ⚠️)\n* `unified-to->subscription->updatePaymentSubscription()`: \n  *  `request` **Changed**\n  *  `response.totalAmount` **Added**\n* `unified-to->payment->updatePaymentSubscription()`: \n  *  `request` **Changed**\n  *  `response.totalAmount` **Added**\n* `unified-to->payment->createPaymentSubscription()`: \n  *  `request` **Changed**\n  *  `response.totalAmount` **Added**\n* `unified-to->payment->getPaymentLink()`: \n  *  `request->fields` **Changed**\n  *  `response.description` **Added**\n* `unified-to->payment->getPaymentPayment()`: \n  *  `request->fields` **Changed**\n* `unified-to->payment->getPaymentSubscription()`: \n  *  `request->fields` **Changed**\n  *  `response.totalAmount` **Added**\n* `unified-to->payment->listPaymentLinks()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->description` **Added**\n* `unified-to->link->updatePaymentLink()`: \n  *  `request` **Changed**\n  *  `response.description` **Added**\n* `unified-to->payment->listPaymentSubscriptions()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->totalAmount` **Added**\n* `unified-to->payment->patchPaymentLink()`: \n  *  `request` **Changed**\n  *  `response.description` **Added**\n* `unified-to->payment->patchPaymentPayment()`: \n  *  `request->fields` **Changed**\n* `unified-to->payment->patchPaymentSubscription()`: \n  *  `request` **Changed**\n  *  `response.totalAmount` **Added**\n* `unified-to->payment->updatePaymentLink()`: \n  *  `request` **Changed**\n  *  `response.description` **Added**\n* `unified-to->payment->createPaymentLink()`: \n  *  `request` **Changed**\n  *  `response.description` **Added**\n* `unified-to->payment->createPaymentPayment()`: \n  *  `request->fields` **Changed**\n* `unified-to->subscription->getPaymentSubscription()`: \n  *  `request->fields` **Changed**\n  *  `response.totalAmount` **Added**\n* `unified-to->payment->updatePaymentPayment()`: \n  *  `request->fields` **Changed**\n* `unified-to->subscription->listPaymentSubscriptions()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->totalAmount` **Added**\n* `unified-to->subscription->patchPaymentSubscription()`: \n  *  `request` **Changed**\n  *  `response.totalAmount` **Added**\n* `unified-to->link->listPaymentLinks()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->description` **Added**\n* `unified-to->link->patchPaymentLink()`: \n  *  `request` **Changed**\n  *  `response.description` **Added**\n* `unified-to->subscription->createPaymentSubscription()`: \n  *  `request` **Changed**\n  *  `response.totalAmount` **Added**\n* `unified-to->link->getPaymentLink()`: \n  *  `request->fields` **Changed**\n  *  `response.description` **Added**\n* `unified-to->link->createPaymentLink()`: \n  *  `request` **Changed**\n  *  `response.description` **Added**\n* `unified-to->payment->listPaymentPayments()`: \n  *  `request->fields` **Changed**\n* `unified-to->unified->getUnifiedIssue()`:  `response.customerNote` **Added**\n* `unified-to->unified->listUnifiedIssues()`:  `response.[]->customerNote` **Added**\n* `unified-to->issue->getUnifiedIssue()`:  `response.customerNote` **Added**\n* `unified-to->issue->listUnifiedIssues()`:  `response.[]->customerNote` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->hris->getHrisTimeoff()`:  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->hris->listHrisTimeoffs()`:  `response.[]->status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->hris->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->hris->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->getHrisTimeoff()`:  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->listHrisTimeoffs()`:  `response.[]->status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->commerce->listCommerceInventories()`: \n  *  `request->itemId` **Added**\n* `unified-to->inventory->listCommerceInventories()`: \n  *  `request->itemId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

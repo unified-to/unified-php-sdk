@@ -14,4 +14,5 @@ enum HrisTimeoffStatus: string
     case Approved = 'APPROVED';
     case Pending = 'PENDING';
     case Denied = 'DENIED';
+    case Cancelled = 'CANCELLED';
 }
