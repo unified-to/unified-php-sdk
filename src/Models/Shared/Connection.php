@@ -105,6 +105,14 @@ class Connection
 
     /**
      *
+     * @var ?string $lastUnhealthyCode
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_unhealthy_code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastUnhealthyCode = null;
+
+    /**
+     *
      * @var ?string $secretsmanagerId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('secretsmanager_id')]
@@ -156,13 +164,14 @@ class Connection
      * @param  ?bool  $isPaused
      * @param  ?\DateTime  $lastHealthyAt
      * @param  ?\DateTime  $lastUnhealthyAt
+     * @param  ?string  $lastUnhealthyCode
      * @param  ?string  $secretsmanagerId
      * @param  ?string  $secretsmanagerKey
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?string $integrationName = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?string $secretsmanagerId = null, ?string $secretsmanagerKey = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(array $categories, string $integrationType, array $permissions, ?PropertyConnectionAuth $auth = null, ?\DateTime $createdAt = null, ?string $externalXref = null, ?string $id = null, ?string $integrationName = null, ?bool $isPaused = null, ?\DateTime $lastHealthyAt = null, ?\DateTime $lastUnhealthyAt = null, ?string $lastUnhealthyCode = null, ?string $secretsmanagerId = null, ?string $secretsmanagerKey = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->categories = $categories;
         $this->integrationType = $integrationType;
@@ -175,6 +184,7 @@ class Connection
         $this->isPaused = $isPaused;
         $this->lastHealthyAt = $lastHealthyAt;
         $this->lastUnhealthyAt = $lastUnhealthyAt;
+        $this->lastUnhealthyCode = $lastUnhealthyCode;
         $this->secretsmanagerId = $secretsmanagerId;
         $this->secretsmanagerKey = $secretsmanagerKey;
         $this->updatedAt = $updatedAt;

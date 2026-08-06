@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: eaa7c7c10c6b862aff52c98e1484ea59
+  docChecksum: 6bf7f9e899b77c356d345eaaf87bb444
   docVersion: "1.0"
-  speakeasyVersion: 1.791.0
-  generationVersion: 2.924.0
-  releaseVersion: 1.6.97
-  configChecksum: b1f2906950f0115e075d45bca5146437
+  speakeasyVersion: 1.791.4
+  generationVersion: 2.926.8
+  releaseVersion: 1.6.98
+  configChecksum: 776e8e6a986413e45c1a240ba995ceb7
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: c4007678-3469-4cf0-8336-c7edc34c374f
-  pristine_commit_hash: d1535942b5abbd9f4df476875a830eab319e94cf
-  pristine_tree_hash: 2a7ebb3be53a151806b588f1a98ea2ef2556f01d
+  generation_id: 3cb2d4ce-5fe8-4e7f-84ac-78fda7daf60d
+  pristine_commit_hash: cca0d510b180b2f1fc5a3286f1c1e7c3d5260593
+  pristine_tree_hash: fc280d2fa8b22fce5316cb93d61dc9634c4ebebc
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -9805,8 +9805,8 @@ trackedFiles:
     pristine_git_object: 9e8deec3fa535324c51716d508c6c92c58388369
   docs/Models/Shared/Connection.md:
     id: dc957f4fb698
-    last_write_checksum: sha1:f65c20a3cecf629ab4fe17d5f4310f2377fc7dc8
-    pristine_git_object: 0c9248c5b486ee2bb1b0cb8d38e3019e8b75757b
+    last_write_checksum: sha1:8e7e80e395d9676f67f55eea9af419653cb062e4
+    pristine_git_object: 9c6c8f816e81e364a7079fde58c3a6fe516b34b2
   docs/Models/Shared/ContentType.md:
     id: 43916f8c0440
     last_write_checksum: sha1:a177556f4959c8ff071339ee811025424cf21a77
@@ -23749,8 +23749,8 @@ trackedFiles:
     pristine_git_object: ecb77b53c4aa4b65975d1aa6d1e33ceea66b76f7
   src/Models/Shared/Connection.php:
     id: 4ca7b0896694
-    last_write_checksum: sha1:9e513aea8a2b2ab4202a32073b2755f0296b172a
-    pristine_git_object: 24be4d978d378985f7b5c66817f80df582facb5c
+    last_write_checksum: sha1:c9204c8b195892fc6f04becab3ca8e6c9d1181ae
+    pristine_git_object: d5c4dfad40ce767bd7cc54a4b291b130efb828cd
   src/Models/Shared/ContentType.php:
     id: 0b32a1e2e201
     last_write_checksum: sha1:474114e748b91ee0cf386a7f8b8f14a5734d1c7a
@@ -26905,8 +26905,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:c3cdbd2ccb9d76f34c19ad07230c4852974995f9
-    pristine_git_object: 6aad2d5e04e9effc0a1c635ee9f4b2cf4b3b1056
+    last_write_checksum: sha1:f2ea5b90baa045721e3e2ca46045ad3dd7c4f753
+    pristine_git_object: 6ce7b293580892d8c90f232b2a93dd6fbdb2418b
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -27157,8 +27157,8 @@ trackedFiles:
     pristine_git_object: b56aff349aa7e52182f304db4eb75a8bee469c35
   src/Utils/Retry/RetryUtils.php:
     id: 28597380e832
-    last_write_checksum: sha1:3ebf5ce4be2637c8e648b66837f6c35dd3f198d9
-    pristine_git_object: bdd84d156e6263346df49621eafc3e1c5a077ff8
+    last_write_checksum: sha1:14ee266f38742193eb160507bf7febc9a5917145
+    pristine_git_object: 0917e36512e2dcd6ef542804bf3f36ddebe4c557
   src/Utils/Retry/TemporaryError.php:
     id: d58c3851b91f
     last_write_checksum: sha1:4770916fe9750d93584992f71f6b5a3e4a8d168f
@@ -40680,7 +40680,7 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->hris->getHrisTimeoff()`:  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->hris->listHrisTimeoffs()`:  `response.[]->status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->hris->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->hris->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->createHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->getHrisTimeoff()`:  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->listHrisTimeoffs()`:  `response.[]->status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->patchHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->timeoff->updateHrisTimeoff()`: \n  *  `request->hrisTimeoff->status->enum(cancelled)` **Added**\n  *  `response.status->enum(cancelled)` **Added** (Breaking ⚠️)\n* `unified-to->commerce->listCommerceInventories()`: \n  *  `request->itemId` **Added**\n* `unified-to->inventory->listCommerceInventories()`: \n  *  `request->itemId` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->unified->getUnifiedConnection()`:  `response.lastUnhealthyCode` **Added**\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->lastUnhealthyCode` **Added**\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->connection->getUnifiedConnection()`:  `response.lastUnhealthyCode` **Added**\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->lastUnhealthyCode` **Added**\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
