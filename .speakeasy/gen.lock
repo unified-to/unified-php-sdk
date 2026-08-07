@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 6bf7f9e899b77c356d345eaaf87bb444
+  docChecksum: 5def7c5e27b4f683945fa43fd9eb32fb
   docVersion: "1.0"
   speakeasyVersion: 1.791.4
   generationVersion: 2.926.8
-  releaseVersion: 1.6.98
-  configChecksum: 776e8e6a986413e45c1a240ba995ceb7
+  releaseVersion: 1.6.99
+  configChecksum: 64151d7864e3dac6037dbd8afd9847ea
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 3cb2d4ce-5fe8-4e7f-84ac-78fda7daf60d
-  pristine_commit_hash: cca0d510b180b2f1fc5a3286f1c1e7c3d5260593
-  pristine_tree_hash: fc280d2fa8b22fce5316cb93d61dc9634c4ebebc
+  generation_id: ae947d97-d2e9-42e4-9090-313269f0447c
+  pristine_commit_hash: 3aa699f18760a675e35c3f0c95e5de87d4b2f01d
+  pristine_tree_hash: c5a5704d024341f0059cdd28a73cdbf1a1b37deb
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -3837,8 +3837,8 @@ trackedFiles:
     pristine_git_object: 704edf388a53fe639137aff13ac7f75398d282e5
   docs/Models/Operations/ListCdpActivationsRequest.md:
     id: 181c76a55a97
-    last_write_checksum: sha1:9a2e80213d4d0fcd453d8c9dac7d4f1f8896ad5c
-    pristine_git_object: 4e95a0f3f60a21ef58dcaeea617b1d5c9a8018be
+    last_write_checksum: sha1:205e903414d37a24d6ad4c49f71822f85db877c3
+    pristine_git_object: bc6137c4e508b9cbfa6286e20412da224bfa11ef
   docs/Models/Operations/ListCdpActivationsResponse.md:
     id: 1d58051074c3
     last_write_checksum: sha1:6353b167054ea3933c801525e194868a1d48c2d6
@@ -10353,8 +10353,8 @@ trackedFiles:
     pristine_git_object: 7145d16e2528dd6d849a05278c9dd8ca0507eaed
   docs/Models/Shared/IntegrationSupport.md:
     id: e3c44c5ce641
-    last_write_checksum: sha1:531f32be5cfca9cf07e91e48ac88966d806e63d4
-    pristine_git_object: 61c11ea3ae412bb1b6b5622d39dfd26161a274d2
+    last_write_checksum: sha1:67f1d1b57587d0007fb9f9ae6fd3638fc257f222
+    pristine_git_object: 8e16cf48ad64d4b124f1aeadeb0d22d65470704f
   docs/Models/Shared/IntervalUnit.md:
     id: ab9fdd3d2d23
     last_write_checksum: sha1:40e7593261d0aa8ece523bc6dc83139c2952624e
@@ -10695,6 +10695,10 @@ trackedFiles:
     id: befc90412529
     last_write_checksum: sha1:0bc217336233feabc7e0c611d7d28f5826f7f01c
     pristine_git_object: 9ac6c302dc616820eb3c9771b25c08b6d0ca1b7f
+  docs/Models/Shared/ListSegmentId.md:
+    id: c71d71b89820
+    last_write_checksum: sha1:86e2b1d8f4c39e9ac191da4934acc4e1581c19e5
+    pristine_git_object: d75aae3719fe549ff3f6a45420bdbe752a5259be
   docs/Models/Shared/ListSessionId.md:
     id: 7ae40ef922ff
     last_write_checksum: sha1:8b8829330d9cf4ab6c999865522a6ea9e6622b18
@@ -11003,6 +11007,10 @@ trackedFiles:
     id: 2828d4e6d91a
     last_write_checksum: sha1:e2b272ed13856cdd97841aee655069132fda63d5
     pristine_git_object: a101c9ec2a7dbbb5b0319c1b23de6a6cd7d47268
+  docs/Models/Shared/NativeWebhookSegmentId.md:
+    id: 321ba2061343
+    last_write_checksum: sha1:059ca18c1ea5fe035e5bf90de222c155c348333e
+    pristine_git_object: 04606113a10ed8f9a5709321accd4bb96042b943
   docs/Models/Shared/NativeWebhookSessionId.md:
     id: 9b7a4d608b32
     last_write_checksum: sha1:1b0fb7a1b590f12c6b89decdb3c98ec56f4b5b59
@@ -12855,6 +12863,10 @@ trackedFiles:
     id: a9f7b523b925
     last_write_checksum: sha1:5e7dc98440b102f204aa1a993e5e77939f85ae9e
     pristine_git_object: f51d477076c076108b7b1278957d7a01ae194969
+  docs/Models/Shared/VirtualWebhookSegmentId.md:
+    id: 40e1b81d7dd8
+    last_write_checksum: sha1:1e96125880b2333ae93eed66d3caccc23690376d
+    pristine_git_object: cf29d673962613552bf2e86f2ebd7632fba2ce4c
   docs/Models/Shared/VirtualWebhookSessionId.md:
     id: cd7892dea571
     last_write_checksum: sha1:11f1c4226207f4131a9a3a7211d6b69ba67eb477
@@ -17821,8 +17833,8 @@ trackedFiles:
     pristine_git_object: 3cf25bc1772a2127ec16268558a421a0d634c695
   src/Models/Operations/ListCdpActivationsRequest.php:
     id: 42f885cc9c7c
-    last_write_checksum: sha1:3f8790ab94c4a470b861866003943f378dfd01bb
-    pristine_git_object: 92d102e7847f8713ee9c87c54f239f899f0ba65b
+    last_write_checksum: sha1:95950f76792e59eb1c0c22426abc08e12ab4d542
+    pristine_git_object: 17df47a615316e842cf560d4cdcebf0e2b285d85
   src/Models/Operations/ListCdpActivationsResponse.php:
     id: 6632f62fdb56
     last_write_checksum: sha1:1745d5e75b192f95d74e52f3f0e6d7f80460bf4a
@@ -24241,8 +24253,8 @@ trackedFiles:
     pristine_git_object: 210526f14d9ed3ee678d2ee5bbd4779512741ed1
   src/Models/Shared/IntegrationSupport.php:
     id: be7d273b34d4
-    last_write_checksum: sha1:4100edfe06f6d3eb01e598739572b0d2785fa476
-    pristine_git_object: ebd90fe8da8f32a60bb50773eaec2f162b23f7ab
+    last_write_checksum: sha1:32f211715420a00a72857b1b58e0193d64b9918e
+    pristine_git_object: 86105e9ffe81bcca21fc6de8e0221f2c45db24f2
   src/Models/Shared/IntervalUnit.php:
     id: ff898ad06767
     last_write_checksum: sha1:d0700c5cb9e64fe8f2349dad09a6c52664e3587a
@@ -24567,6 +24579,10 @@ trackedFiles:
     id: cf5a8d82edf3
     last_write_checksum: sha1:1fb92d7a97100a1c0fd84e12916f65171bed8a3c
     pristine_git_object: e51acbf9ce32a5e2bda0d615659a3d08639a80a3
+  src/Models/Shared/ListSegmentId.php:
+    id: 30799d533d15
+    last_write_checksum: sha1:25f89825ed88cf9d9bb4b22c02aeca436f411471
+    pristine_git_object: f6790ec2b655c7dff53453b91e4e5632aeba017e
   src/Models/Shared/ListSessionId.php:
     id: 963634465ea9
     last_write_checksum: sha1:0e651325358f97ad0a7bcc7681b28507afd879b9
@@ -24875,6 +24891,10 @@ trackedFiles:
     id: b6ab752bd8cd
     last_write_checksum: sha1:7e4fb3ae4b60a9e0542b03090b7f20b58ae2d2a2
     pristine_git_object: 0bf6b71f69ae7b1e50763bebcf997a641b8e50a0
+  src/Models/Shared/NativeWebhookSegmentId.php:
+    id: c7b599f907c5
+    last_write_checksum: sha1:b64e29a2bd4fee55036e4fc072d5297aa01a1e08
+    pristine_git_object: b42e815b0062112e25f13c8cb87e214447a049c5
   src/Models/Shared/NativeWebhookSessionId.php:
     id: 66f77ff31f1a
     last_write_checksum: sha1:262845efc709f7cdce8cd9d44b5eec219b48ba2f
@@ -26695,6 +26715,10 @@ trackedFiles:
     id: bfe33778dc83
     last_write_checksum: sha1:832c6e8c8a78f962f89d5e650cc04838e6bde05d
     pristine_git_object: 3b77f3ee08d4a5540cb2941c6d81237ce8627f45
+  src/Models/Shared/VirtualWebhookSegmentId.php:
+    id: 88387d4fb1d4
+    last_write_checksum: sha1:adcae42d8fc0f2210f6e7579c10b50a8bad2ac87
+    pristine_git_object: 6a1a0b11e1e5a12726bd2e70213d7cd0782e6afc
   src/Models/Shared/VirtualWebhookSessionId.php:
     id: ae156d6ab7f1
     last_write_checksum: sha1:e9666c50b45a426c14f04588b35415a98c55b7e2
@@ -26905,8 +26929,8 @@ trackedFiles:
     pristine_git_object: fef475ecaa3772168c48a80311892d3d90a31cb3
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:f2ea5b90baa045721e3e2ca46045ad3dd7c4f753
-    pristine_git_object: 6ce7b293580892d8c90f232b2a93dd6fbdb2418b
+    last_write_checksum: sha1:e28dc344f2c088ae183eb4d9508fb3019d33c112
+    pristine_git_object: c6acf0a8e123bfbc05642699d58c7a01b96bd135
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -40680,7 +40704,12 @@ examples:
           application/json: [{}]
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->unified->getUnifiedConnection()`:  `response.lastUnhealthyCode` **Added**\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->lastUnhealthyCode` **Added**\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->connection->getUnifiedConnection()`:  `response.lastUnhealthyCode` **Added**\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->lastUnhealthyCode` **Added**\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->lastUnhealthyCode` **Added**\n  *  `response.lastUnhealthyCode` **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**
+  * `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**
+  * `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**
+  * `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**
 generatedFiles:
   - .gitattributes
   - USAGE.md

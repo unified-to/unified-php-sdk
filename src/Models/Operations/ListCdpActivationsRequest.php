@@ -72,6 +72,7 @@ class ListCdpActivationsRequest
     public ?string $raw = null;
 
     /**
+     * The segment ID to filter by
      *
      * @var ?string $segmentId
      */
