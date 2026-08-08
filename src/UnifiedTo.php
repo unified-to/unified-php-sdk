@@ -32,6 +32,10 @@ class UnifiedTo
 
     public Account $account;
 
+    public Agedpayable $agedpayable;
+
+    public Agedreceivable $agedreceivable;
+
     public Balancesheet $balancesheet;
 
     public Bill $bill;
@@ -56,7 +60,11 @@ class UnifiedTo
 
     public Profitloss $profitloss;
 
+    public Project $project;
+
     public Purchaseorder $purchaseorder;
+
+    public Quote $quote;
 
     public Report $report;
 
@@ -308,8 +316,6 @@ class UnifiedTo
 
     public Change $change;
 
-    public Project $project;
-
     public Ticketing $ticketing;
 
     public Customer $customer;
@@ -366,6 +372,8 @@ class UnifiedTo
     ) {
         $this->accounting = new Accounting($this->sdkConfiguration);
         $this->account = new Account($this->sdkConfiguration);
+        $this->agedpayable = new Agedpayable($this->sdkConfiguration);
+        $this->agedreceivable = new Agedreceivable($this->sdkConfiguration);
         $this->balancesheet = new Balancesheet($this->sdkConfiguration);
         $this->bill = new Bill($this->sdkConfiguration);
         $this->cashflow = new Cashflow($this->sdkConfiguration);
@@ -378,7 +386,9 @@ class UnifiedTo
         $this->order = new Order($this->sdkConfiguration);
         $this->organization = new Organization($this->sdkConfiguration);
         $this->profitloss = new Profitloss($this->sdkConfiguration);
+        $this->project = new Project($this->sdkConfiguration);
         $this->purchaseorder = new Purchaseorder($this->sdkConfiguration);
+        $this->quote = new Quote($this->sdkConfiguration);
         $this->report = new Report($this->sdkConfiguration);
         $this->salesorder = new Salesorder($this->sdkConfiguration);
         $this->taxrate = new Taxrate($this->sdkConfiguration);
@@ -504,7 +514,6 @@ class UnifiedTo
         $this->file = new File($this->sdkConfiguration);
         $this->task = new Task($this->sdkConfiguration);
         $this->change = new Change($this->sdkConfiguration);
-        $this->project = new Project($this->sdkConfiguration);
         $this->ticketing = new Ticketing($this->sdkConfiguration);
         $this->customer = new Customer($this->sdkConfiguration);
         $this->note = new Note($this->sdkConfiguration);

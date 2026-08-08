@@ -43,5 +43,6 @@ enum GetAccountingInvoiceQueryParamFields: string
     case OrganizationId = 'organization_id';
     case Payments = 'payments';
     case CategoryIds = 'category_ids';
+    case ProjectId = 'project_id';
     case Raw = 'raw';
 }

@@ -109,6 +109,15 @@ class PropertyAdsReportMetricsGroup
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupCreativeSelection $creativeSelection
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('creative_selection')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupCreativeSelection|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupCreativeSelection $creativeSelection = null;
+
+    /**
+     *
      * @var ?string $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
@@ -164,6 +173,14 @@ class PropertyAdsReportMetricsGroup
     #[\Speakeasy\Serializer\Annotation\SerializedName('insertionorder_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $insertionorderId = null;
+
+    /**
+     *
+     * @var ?string $languageLocale
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('language_locale')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $languageLocale = null;
 
     /**
      *
@@ -282,6 +299,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupCreativeSelection  $creativeSelection
      * @param  ?string  $currency
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupEffectiveStatus  $effectiveStatus
      * @param  ?\DateTime  $endAt
@@ -289,6 +307,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
      * @param  ?string  $insertionorderId
+     * @param  ?string  $languageLocale
      * @param  ?string  $name
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupOptimizationGoal  $optimizationGoal
      * @param  ?string  $organizationId
@@ -303,7 +322,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?string $currency = null, ?PropertyAdsReportMetricsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $name = null, ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?PropertyAdsReportMetricsGroupCreativeSelection $creativeSelection = null, ?string $currency = null, ?PropertyAdsReportMetricsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $languageLocale = null, ?string $name = null, ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
         $this->bidStrategy = $bidStrategy;
@@ -316,6 +335,7 @@ class PropertyAdsReportMetricsGroup
         $this->campaignId = $campaignId;
         $this->createdAt = $createdAt;
         $this->creativeIds = $creativeIds;
+        $this->creativeSelection = $creativeSelection;
         $this->currency = $currency;
         $this->effectiveStatus = $effectiveStatus;
         $this->endAt = $endAt;
@@ -323,6 +343,7 @@ class PropertyAdsReportMetricsGroup
         $this->hasEuPoliticalAds = $hasEuPoliticalAds;
         $this->id = $id;
         $this->insertionorderId = $insertionorderId;
+        $this->languageLocale = $languageLocale;
         $this->name = $name;
         $this->optimizationGoal = $optimizationGoal;
         $this->organizationId = $organizationId;

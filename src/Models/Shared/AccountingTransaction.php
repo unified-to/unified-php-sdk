@@ -114,6 +114,14 @@ class AccountingTransaction
     public ?string $paymentTerms = null;
 
     /**
+     *
+     * @var ?string $projectId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('project_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $projectId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -192,6 +200,7 @@ class AccountingTransaction
      * @param  ?string  $organizationId
      * @param  ?string  $paymentMethod
      * @param  ?string  $paymentTerms
+     * @param  ?string  $projectId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?string  $splitAccountId
@@ -202,7 +211,7 @@ class AccountingTransaction
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $organizationId = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $organizationId = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->categoryIds = $categoryIds;
@@ -216,6 +225,7 @@ class AccountingTransaction
         $this->organizationId = $organizationId;
         $this->paymentMethod = $paymentMethod;
         $this->paymentTerms = $paymentTerms;
+        $this->projectId = $projectId;
         $this->raw = $raw;
         $this->reference = $reference;
         $this->splitAccountId = $splitAccountId;

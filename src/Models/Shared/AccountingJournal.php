@@ -90,6 +90,14 @@ class AccountingJournal
     public ?\DateTime $postedAt = null;
 
     /**
+     *
+     * @var ?string $projectId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('project_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $projectId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -149,6 +157,7 @@ class AccountingJournal
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem>  $lineitems
      * @param  ?string  $organizationId
      * @param  ?\DateTime  $postedAt
+     * @param  ?string  $projectId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?string  $source
@@ -157,7 +166,7 @@ class AccountingJournal
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $attachments = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
     {
         $this->attachments = $attachments;
         $this->categoryIds = $categoryIds;
@@ -168,6 +177,7 @@ class AccountingJournal
         $this->lineitems = $lineitems;
         $this->organizationId = $organizationId;
         $this->postedAt = $postedAt;
+        $this->projectId = $projectId;
         $this->raw = $raw;
         $this->reference = $reference;
         $this->source = $source;

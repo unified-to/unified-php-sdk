@@ -13,6 +13,14 @@ class AdsOrganization
 {
     /**
      *
+     * @var ?string $accountNumber
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('account_number')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $accountNumber = null;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -34,6 +42,16 @@ class AdsOrganization
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     * Manager/agency chain, top-most manager first, closest manager last (SA360 manager/sub_manager)
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsManager> $managers
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('managers')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsManager>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $managers = null;
 
     /**
      *
@@ -63,6 +81,15 @@ class AdsOrganization
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\AdsOrganizationStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AdsOrganizationStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AdsOrganizationStatus $status = null;
+
+    /**
+     *
      * @var ?string $timezone
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('timezone')]
@@ -78,24 +105,30 @@ class AdsOrganization
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?string  $accountNumber
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsManager>  $managers
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?\Unified\Unified_to\Models\Shared\AdsOrganizationStatus  $status
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountNumber = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $managers = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?AdsOrganizationStatus $status = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
+        $this->accountNumber = $accountNumber;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->id = $id;
+        $this->managers = $managers;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;
+        $this->status = $status;
         $this->timezone = $timezone;
         $this->updatedAt = $updatedAt;
     }

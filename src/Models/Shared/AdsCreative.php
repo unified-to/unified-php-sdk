@@ -136,6 +136,16 @@ class AdsCreative
     public ?string $itemId = null;
 
     /**
+     * $labels
+     *
+     * @var ?array<string> $labels
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('labels')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $labels = null;
+
+    /**
      *
      * @var ?string $linkUrl
      */
@@ -230,6 +240,14 @@ class AdsCreative
 
     /**
      *
+     * @var ?string $urlTags
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('url_tags')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $urlTags = null;
+
+    /**
+     *
      * @var ?string $vastTagUrl
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('vast_tag_url')]
@@ -260,6 +278,7 @@ class AdsCreative
      * @param  ?\Unified\Unified_to\Models\Shared\HostingSource  $hostingSource
      * @param  ?string  $id
      * @param  ?string  $itemId
+     * @param  ?array<string>  $labels
      * @param  ?string  $linkUrl
      * @param  ?string  $name
      * @param  ?string  $organizationId
@@ -271,11 +290,12 @@ class AdsCreative
      * @param  ?string  $thirdPartyTag
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $urlTags
      * @param  ?string  $vastTagUrl
      * @param  ?float  $width
      * @phpstan-pure
      */
-    public function __construct(?array $assetUrls = null, ?string $body = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?CreativeType $creativeType = null, ?string $cta = null, ?string $data = null, ?string $externalAdReference = null, ?string $externalCreativeReference = null, ?string $externalPlacementReference = null, ?string $groupId = null, ?float $height = null, ?HostingSource $hostingSource = null, ?string $id = null, ?string $itemId = null, ?string $linkUrl = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?AdsCreativeStatus $status = null, ?string $thirdPartyTag = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $vastTagUrl = null, ?float $width = null)
+    public function __construct(?array $assetUrls = null, ?string $body = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?CreativeType $creativeType = null, ?string $cta = null, ?string $data = null, ?string $externalAdReference = null, ?string $externalCreativeReference = null, ?string $externalPlacementReference = null, ?string $groupId = null, ?float $height = null, ?HostingSource $hostingSource = null, ?string $id = null, ?string $itemId = null, ?array $labels = null, ?string $linkUrl = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?AdsCreativeStatus $status = null, ?string $thirdPartyTag = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $urlTags = null, ?string $vastTagUrl = null, ?float $width = null)
     {
         $this->assetUrls = $assetUrls;
         $this->body = $body;
@@ -292,6 +312,7 @@ class AdsCreative
         $this->hostingSource = $hostingSource;
         $this->id = $id;
         $this->itemId = $itemId;
+        $this->labels = $labels;
         $this->linkUrl = $linkUrl;
         $this->name = $name;
         $this->organizationId = $organizationId;
@@ -303,6 +324,7 @@ class AdsCreative
         $this->thirdPartyTag = $thirdPartyTag;
         $this->title = $title;
         $this->updatedAt = $updatedAt;
+        $this->urlTags = $urlTags;
         $this->vastTagUrl = $vastTagUrl;
         $this->width = $width;
     }

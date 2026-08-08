@@ -40,5 +40,7 @@ enum GetAdsGroupQueryParamFields: string
     case BillingEvent = 'billing_event';
     case Currency = 'currency';
     case Promoted = 'promoted';
+    case LanguageLocale = 'language_locale';
+    case CreativeSelection = 'creative_selection';
     case Raw = 'raw';
 }

@@ -30,5 +30,6 @@ enum UpdateAccountingTransactionQueryParamFields: string
     case Contacts = 'contacts';
     case OrganizationId = 'organization_id';
     case CategoryIds = 'category_ids';
+    case ProjectId = 'project_id';
     case Raw = 'raw';
 }

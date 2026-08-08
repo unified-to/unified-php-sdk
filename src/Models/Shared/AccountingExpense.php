@@ -148,6 +148,14 @@ class AccountingExpense
     public ?\DateTime $postedAt = null;
 
     /**
+     *
+     * @var ?string $projectId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('project_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $projectId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -241,6 +249,7 @@ class AccountingExpense
      * @param  ?string  $organizationId
      * @param  ?string  $paymentMethod
      * @param  ?\DateTime  $postedAt
+     * @param  ?string  $projectId
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $reimbursedAmount
      * @param  ?\DateTime  $reimbursedAt
@@ -252,7 +261,7 @@ class AccountingExpense
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $users
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
+    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
     {
         $this->accountId = $accountId;
         $this->approvedAt = $approvedAt;
@@ -270,6 +279,7 @@ class AccountingExpense
         $this->organizationId = $organizationId;
         $this->paymentMethod = $paymentMethod;
         $this->postedAt = $postedAt;
+        $this->projectId = $projectId;
         $this->raw = $raw;
         $this->reimbursedAmount = $reimbursedAmount;
         $this->reimbursedAt = $reimbursedAt;

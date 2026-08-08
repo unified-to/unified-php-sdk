@@ -130,6 +130,16 @@ class PropertyAdsReportMetricsCampaign
     public ?string $id = null;
 
     /**
+     * $labels
+     *
+     * @var ?array<string> $labels
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('labels')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $labels = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -220,6 +230,7 @@ class PropertyAdsReportMetricsCampaign
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignGoal  $goal
      * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
+     * @param  ?array<string>  $labels
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?float  $plannedSpendAmount
@@ -231,7 +242,7 @@ class PropertyAdsReportMetricsCampaign
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsCampaignAdvertisingChannelType $advertisingChannelType = null, ?float $budgetAmount = null, ?PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsCampaignBudgetUnit $budgetUnit = null, ?string $campaignBudgetIdentifier = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyAdsReportMetricsCampaignEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap = null, ?PropertyAdsReportMetricsCampaignGoal $goal = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsCampaignStatus $status = null, ?PropertyAdsReportMetricsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyAdsReportMetricsCampaignAdvertisingChannelType $advertisingChannelType = null, ?float $budgetAmount = null, ?PropertyAdsReportMetricsCampaignBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsCampaignBudgetUnit $budgetUnit = null, ?string $campaignBudgetIdentifier = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyAdsReportMetricsCampaignEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsCampaignFrequencyCap $frequencyCap = null, ?PropertyAdsReportMetricsCampaignGoal $goal = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?array $labels = null, ?string $name = null, ?string $organizationId = null, ?float $plannedSpendAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsCampaignStatus $status = null, ?PropertyAdsReportMetricsCampaignTargeting $targeting = null, ?float $totalSpendAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->advertisingChannelType = $advertisingChannelType;
         $this->budgetAmount = $budgetAmount;
@@ -247,6 +258,7 @@ class PropertyAdsReportMetricsCampaign
         $this->goal = $goal;
         $this->hasEuPoliticalAds = $hasEuPoliticalAds;
         $this->id = $id;
+        $this->labels = $labels;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->plannedSpendAmount = $plannedSpendAmount;

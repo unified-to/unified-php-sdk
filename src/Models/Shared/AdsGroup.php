@@ -109,6 +109,15 @@ class AdsGroup
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\CreativeSelection $creativeSelection
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('creative_selection')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CreativeSelection|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?CreativeSelection $creativeSelection = null;
+
+    /**
+     *
      * @var ?string $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
@@ -164,6 +173,14 @@ class AdsGroup
     #[\Speakeasy\Serializer\Annotation\SerializedName('insertionorder_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $insertionorderId = null;
+
+    /**
+     *
+     * @var ?string $languageLocale
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('language_locale')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $languageLocale = null;
 
     /**
      *
@@ -282,6 +299,7 @@ class AdsGroup
      * @param  ?string  $campaignId
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
+     * @param  ?\Unified\Unified_to\Models\Shared\CreativeSelection  $creativeSelection
      * @param  ?string  $currency
      * @param  ?\Unified\Unified_to\Models\Shared\AdsGroupEffectiveStatus  $effectiveStatus
      * @param  ?\DateTime  $endAt
@@ -289,6 +307,7 @@ class AdsGroup
      * @param  ?bool  $hasEuPoliticalAds
      * @param  ?string  $id
      * @param  ?string  $insertionorderId
+     * @param  ?string  $languageLocale
      * @param  ?string  $name
      * @param  ?\Unified\Unified_to\Models\Shared\OptimizationGoal  $optimizationGoal
      * @param  ?string  $organizationId
@@ -303,7 +322,7 @@ class AdsGroup
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?PropertyAdsGroupBidStrategy $bidStrategy = null, ?BillingEvent $billingEvent = null, ?BudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?AdsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?string $currency = null, ?AdsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $name = null, ?OptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsGroupStatus $status = null, ?PropertyAdsGroupTargeting $targeting = null, ?AdsGroupType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsGroupBidStrategy $bidStrategy = null, ?BillingEvent $billingEvent = null, ?BudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?AdsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?CreativeSelection $creativeSelection = null, ?string $currency = null, ?AdsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $languageLocale = null, ?string $name = null, ?OptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsGroupStatus $status = null, ?PropertyAdsGroupTargeting $targeting = null, ?AdsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
         $this->bidStrategy = $bidStrategy;
@@ -316,6 +335,7 @@ class AdsGroup
         $this->campaignId = $campaignId;
         $this->createdAt = $createdAt;
         $this->creativeIds = $creativeIds;
+        $this->creativeSelection = $creativeSelection;
         $this->currency = $currency;
         $this->effectiveStatus = $effectiveStatus;
         $this->endAt = $endAt;
@@ -323,6 +343,7 @@ class AdsGroup
         $this->hasEuPoliticalAds = $hasEuPoliticalAds;
         $this->id = $id;
         $this->insertionorderId = $insertionorderId;
+        $this->languageLocale = $languageLocale;
         $this->name = $name;
         $this->optimizationGoal = $optimizationGoal;
         $this->organizationId = $organizationId;

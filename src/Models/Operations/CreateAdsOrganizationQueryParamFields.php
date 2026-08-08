@@ -18,5 +18,8 @@ enum CreateAdsOrganizationQueryParamFields: string
     case Currency = 'currency';
     case Timezone = 'timezone';
     case ParentId = 'parent_id';
+    case Status = 'status';
+    case AccountNumber = 'account_number';
+    case Managers = 'managers';
     case Raw = 'raw';
 }

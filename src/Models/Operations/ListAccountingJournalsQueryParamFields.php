@@ -24,6 +24,7 @@ enum ListAccountingJournalsQueryParamFields: string
     case Source = 'source';
     case OrganizationId = 'organization_id';
     case CategoryIds = 'category_ids';
+    case ProjectId = 'project_id';
     case Attachments = 'attachments';
     case Raw = 'raw';
 }

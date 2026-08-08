@@ -35,5 +35,6 @@ enum UpdateAccountingExpenseQueryParamFields: string
     case Status = 'status';
     case ExternalNumber = 'external_number';
     case CategoryIds = 'category_ids';
+    case ProjectId = 'project_id';
     case Raw = 'raw';
 }

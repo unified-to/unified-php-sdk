@@ -28,5 +28,6 @@ enum ListStorageFilesQueryParamFields: string
     case Version = 'version';
     case WebUrl = 'web_url';
     case References = 'references';
+    case Tags = 'tags';
     case Raw = 'raw';
 }

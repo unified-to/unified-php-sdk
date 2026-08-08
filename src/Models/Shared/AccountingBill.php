@@ -182,6 +182,14 @@ class AccountingBill
     public ?\DateTime $postedAt = null;
 
     /**
+     *
+     * @var ?string $projectId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('project_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $projectId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -294,6 +302,7 @@ class AccountingBill
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentTerms  $paymentTerms
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference>  $payments
      * @param  ?\DateTime  $postedAt
+     * @param  ?string  $projectId
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $refundAmount
      * @param  ?string  $refundReason
@@ -307,7 +316,7 @@ class AccountingBill
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?string $billNumber = null, ?\DateTime $cancelledAt = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?PaymentTerms $paymentTerms = null, ?array $payments = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingBillStatus $status = null, ?float $taxAmount = null, ?Term $term = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?string $billNumber = null, ?\DateTime $cancelledAt = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?PaymentTerms $paymentTerms = null, ?array $payments = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingBillStatus $status = null, ?float $taxAmount = null, ?Term $term = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->attachments = $attachments;
         $this->balanceAmount = $balanceAmount;
@@ -329,6 +338,7 @@ class AccountingBill
         $this->paymentTerms = $paymentTerms;
         $this->payments = $payments;
         $this->postedAt = $postedAt;
+        $this->projectId = $projectId;
         $this->raw = $raw;
         $this->refundAmount = $refundAmount;
         $this->refundReason = $refundReason;

@@ -33,5 +33,6 @@ enum CreateAdsCampaignQueryParamFields: string
     case Currency = 'currency';
     case Category = 'category';
     case HasEuPoliticalAds = 'has_eu_political_ads';
+    case Labels = 'labels';
     case Raw = 'raw';
 }

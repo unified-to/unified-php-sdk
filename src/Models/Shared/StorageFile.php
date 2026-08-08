@@ -122,6 +122,16 @@ class StorageFile
     public ?float $size = null;
 
     /**
+     * $tags
+     *
+     * @var ?array<string> $tags
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tags')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $tags = null;
+
+    /**
      *
      * @var ?\Unified\Unified_to\Models\Shared\StorageFileType $type
      */
@@ -176,6 +186,7 @@ class StorageFile
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<\Unified\Unified_to\Models\Shared\StorageReference>  $references
      * @param  ?float  $size
+     * @param  ?array<string>  $tags
      * @param  ?\Unified\Unified_to\Models\Shared\StorageFileType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
@@ -183,7 +194,7 @@ class StorageFile
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?array $references = null, ?float $size = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $version = null, ?string $webUrl = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?array $references = null, ?float $size = null, ?array $tags = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $version = null, ?string $webUrl = null)
     {
         $this->createdAt = $createdAt;
         $this->data = $data;
@@ -198,6 +209,7 @@ class StorageFile
         $this->raw = $raw;
         $this->references = $references;
         $this->size = $size;
+        $this->tags = $tags;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;

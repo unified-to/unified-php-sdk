@@ -41,5 +41,6 @@ enum CreateAccountingBillQueryParamFields: string
     case PaymentTerms = 'payment_terms';
     case Payments = 'payments';
     case CategoryIds = 'category_ids';
+    case ProjectId = 'project_id';
     case Raw = 'raw';
 }

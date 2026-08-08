@@ -26,6 +26,7 @@ enum PatchAdsCreativeQueryParamFields: string
     case Height = 'height';
     case AssetUrls = 'asset_urls';
     case LinkUrl = 'link_url';
+    case UrlTags = 'url_tags';
     case Body = 'body';
     case Title = 'title';
     case Cta = 'cta';
@@ -38,5 +39,6 @@ enum PatchAdsCreativeQueryParamFields: string
     case Path1 = 'path1';
     case Path2 = 'path2';
     case Data = 'data';
+    case Labels = 'labels';
     case Raw = 'raw';
 }
