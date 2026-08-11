@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** AccountingOrder - @deprecated; use AccountingSalesorder or AccountingPurchaseorder */
 class AccountingOrder
 {
     /**

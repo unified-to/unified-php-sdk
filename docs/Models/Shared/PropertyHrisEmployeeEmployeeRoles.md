@@ -10,3 +10,5 @@
 | `Recruiter`   | RECRUITER     |
 | `Salesrep`    | SALESREP      |
 | `Interviewer` | INTERVIEWER   |
+| `User`        | USER          |
+| `Employee`    | EMPLOYEE      |

@@ -37,13 +37,6 @@ class ListAccountingProjectsRequest
 
     /**
      *
-     * @var ?string $isActive
-     */
-    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=is_active')]
-    public ?string $isActive = null;
-
-    /**
-     *
      * @var ?float $limit
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=limit')]
@@ -121,7 +114,6 @@ class ListAccountingProjectsRequest
      * @param  string  $connectionId
      * @param  ?string  $contactId
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListAccountingProjectsQueryParamFields>  $fields
-     * @param  ?string  $isActive
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -134,12 +126,11 @@ class ListAccountingProjectsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?string $isActive = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $status = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $parentId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $status = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->contactId = $contactId;
         $this->fields = $fields;
-        $this->isActive = $isActive;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;

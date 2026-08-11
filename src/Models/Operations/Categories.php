@@ -44,4 +44,5 @@ enum Categories: string
     case Clubs = 'clubs';
     case Datastore = 'datastore';
     case Cdp = 'cdp';
+    case Performance = 'performance';
 }

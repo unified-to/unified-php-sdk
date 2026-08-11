@@ -308,4 +308,11 @@ enum PropertyConnectionPermissions: string
     case CdpDestinationWrite = 'cdp_destination_write';
     case CdpActivationRead = 'cdp_activation_read';
     case CdpActivationWrite = 'cdp_activation_write';
+    case PerformanceCycleRead = 'performance_cycle_read';
+    case PerformanceReviewRead = 'performance_review_read';
+    case PerformanceReviewWrite = 'performance_review_write';
+    case PerformanceGoalRead = 'performance_goal_read';
+    case PerformanceGoalWrite = 'performance_goal_write';
+    case PerformanceFeedbackRead = 'performance_feedback_read';
+    case PerformanceFeedbackWrite = 'performance_feedback_write';
 }

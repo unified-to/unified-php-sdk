@@ -16,4 +16,6 @@ enum PropertyHrisEmployeeEmployeeRoles: string
     case Recruiter = 'RECRUITER';
     case Salesrep = 'SALESREP';
     case Interviewer = 'INTERVIEWER';
+    case User = 'USER';
+    case Employee = 'EMPLOYEE';
 }

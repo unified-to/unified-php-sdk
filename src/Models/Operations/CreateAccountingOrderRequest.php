@@ -13,6 +13,7 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateAccountingOrderRequest
 {
     /**
+     * @deprecated; use AccountingSalesorder or AccountingPurchaseorder
      *
      * @var \Unified\Unified_to\Models\Shared\AccountingOrder $accountingOrder
      */

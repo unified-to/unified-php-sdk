@@ -276,6 +276,14 @@ class UnifiedTo
 
     public Subscription $subscription;
 
+    public Performance $performance;
+
+    public Cycle $cycle;
+
+    public Feedback $feedback;
+
+    public Goal $goal;
+
     public Repo $repo;
 
     public Branch $branch;
@@ -494,6 +502,10 @@ class UnifiedTo
         $this->payout = new Payout($this->sdkConfiguration);
         $this->refund = new Refund($this->sdkConfiguration);
         $this->subscription = new Subscription($this->sdkConfiguration);
+        $this->performance = new Performance($this->sdkConfiguration);
+        $this->cycle = new Cycle($this->sdkConfiguration);
+        $this->feedback = new Feedback($this->sdkConfiguration);
+        $this->goal = new Goal($this->sdkConfiguration);
         $this->repo = new Repo($this->sdkConfiguration);
         $this->branch = new Branch($this->sdkConfiguration);
         $this->commit = new Commit($this->sdkConfiguration);

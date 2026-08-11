@@ -172,4 +172,8 @@ enum WebhookObjectType: string
     case CdpSource = 'cdp_source';
     case CdpDestination = 'cdp_destination';
     case CdpActivation = 'cdp_activation';
+    case PerformanceCycle = 'performance_cycle';
+    case PerformanceReview = 'performance_review';
+    case PerformanceGoal = 'performance_goal';
+    case PerformanceFeedback = 'performance_feedback';
 }
