@@ -25,5 +25,6 @@ enum PatchAccountingPurchaseorderQueryParamFields: string
     case Lineitems = 'lineitems';
     case OrganizationId = 'organization_id';
     case CategoryIds = 'category_ids';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

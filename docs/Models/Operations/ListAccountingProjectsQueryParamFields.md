@@ -37,4 +37,5 @@
 | `CategoryIds`          | category_ids           |
 | `LocationId`           | location_id            |
 | `OrganizationId`       | organization_id        |
+| `Metadata`             | metadata               |
 | `Raw`                  | raw                    |

@@ -39,6 +39,22 @@ class PaymentPayment
 
     /**
      *
+     * @var ?string $cardBrand
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('card_brand')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $cardBrand = null;
+
+    /**
+     *
+     * @var ?string $cardLast4
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('card_last4')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $cardLast4 = null;
+
+    /**
+     *
      * @var ?string $contactId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
@@ -52,6 +68,22 @@ class PaymentPayment
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
+
+    /**
+     *
+     * @var ?string $deviceId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('device_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $deviceId = null;
+
+    /**
+     *
+     * @var ?float $feeAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fee_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $feeAmount = null;
 
     /**
      *
@@ -76,6 +108,14 @@ class PaymentPayment
     #[\Speakeasy\Serializer\Annotation\SerializedName('link_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $linkId = null;
+
+    /**
+     *
+     * @var ?string $locationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('location_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $locationId = null;
 
     /**
      *
@@ -121,6 +161,40 @@ class PaymentPayment
 
     /**
      *
+     * @var ?string $salesorderId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('salesorder_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $salesorderId = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentPaymentStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentPaymentStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PaymentPaymentStatus $status = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\TenderType $tenderType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tender_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\TenderType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?TenderType $tenderType = null;
+
+    /**
+     *
+     * @var ?float $tipAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tip_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $tipAmount = null;
+
+    /**
+     *
      * @var ?float $totalAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
@@ -156,37 +230,55 @@ class PaymentPayment
      * @param  ?string  $accountId
      * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentAllocation>  $allocations
      * @param  ?string  $billId
+     * @param  ?string  $cardBrand
+     * @param  ?string  $cardLast4
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
+     * @param  ?string  $deviceId
+     * @param  ?float  $feeAmount
      * @param  ?string  $id
      * @param  ?string  $invoiceId
      * @param  ?string  $linkId
+     * @param  ?string  $locationId
      * @param  ?string  $notes
      * @param  ?string  $organizationId
      * @param  ?string  $paymentMethod
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
+     * @param  ?string  $salesorderId
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentPaymentStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\TenderType  $tenderType
+     * @param  ?float  $tipAmount
      * @param  ?float  $totalAmount
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentPaymentType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $allocations = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $invoiceId = null, ?string $linkId = null, ?string $notes = null, ?string $organizationId = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
+    public function __construct(?string $accountId = null, ?array $allocations = null, ?string $billId = null, ?string $cardBrand = null, ?string $cardLast4 = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $deviceId = null, ?float $feeAmount = null, ?string $id = null, ?string $invoiceId = null, ?string $linkId = null, ?string $locationId = null, ?string $notes = null, ?string $organizationId = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?string $salesorderId = null, ?PaymentPaymentStatus $status = null, ?TenderType $tenderType = null, ?float $tipAmount = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {
         $this->accountId = $accountId;
         $this->allocations = $allocations;
         $this->billId = $billId;
+        $this->cardBrand = $cardBrand;
+        $this->cardLast4 = $cardLast4;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
+        $this->deviceId = $deviceId;
+        $this->feeAmount = $feeAmount;
         $this->id = $id;
         $this->invoiceId = $invoiceId;
         $this->linkId = $linkId;
+        $this->locationId = $locationId;
         $this->notes = $notes;
         $this->organizationId = $organizationId;
         $this->paymentMethod = $paymentMethod;
         $this->raw = $raw;
         $this->reference = $reference;
+        $this->salesorderId = $salesorderId;
+        $this->status = $status;
+        $this->tenderType = $tenderType;
+        $this->tipAmount = $tipAmount;
         $this->totalAmount = $totalAmount;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

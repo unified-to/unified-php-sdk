@@ -116,6 +116,16 @@ class AccountingExpense
     public ?array $lineitems = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -245,6 +255,7 @@ class AccountingExpense
      * @param  ?string  $externalNumber
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?string  $paymentMethod
@@ -261,7 +272,7 @@ class AccountingExpense
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $users
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
+    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
     {
         $this->accountId = $accountId;
         $this->approvedAt = $approvedAt;
@@ -275,6 +286,7 @@ class AccountingExpense
         $this->externalNumber = $externalNumber;
         $this->id = $id;
         $this->lineitems = $lineitems;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->paymentMethod = $paymentMethod;

@@ -18,5 +18,7 @@ enum AccountingFeeType: string
     case GiftWrap = 'GIFT_WRAP';
     case Cod = 'COD';
     case Surcharge = 'SURCHARGE';
+    case Tip = 'TIP';
+    case ServiceCharge = 'SERVICE_CHARGE';
     case Other = 'OTHER';
 }

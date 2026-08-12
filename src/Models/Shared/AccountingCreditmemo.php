@@ -130,6 +130,16 @@ class AccountingCreditmemo
     public ?array $lineitems = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $notes
      */
@@ -276,6 +286,7 @@ class AccountingCreditmemo
      * @param  ?string  $id
      * @param  ?string  $invoiceId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $notes
      * @param  ?string  $organizationId
      * @param  ?float  $paidAmount
@@ -294,7 +305,7 @@ class AccountingCreditmemo
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $applications = null, ?float $applyAmount = null, ?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creditmemoNumber = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $invoiceId = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingCreditmemoStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $applications = null, ?float $applyAmount = null, ?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creditmemoNumber = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $invoiceId = null, ?array $lineitems = null, ?array $metadata = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingCreditmemoStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->applications = $applications;
         $this->applyAmount = $applyAmount;
@@ -310,6 +321,7 @@ class AccountingCreditmemo
         $this->id = $id;
         $this->invoiceId = $invoiceId;
         $this->lineitems = $lineitems;
+        $this->metadata = $metadata;
         $this->notes = $notes;
         $this->organizationId = $organizationId;
         $this->paidAmount = $paidAmount;

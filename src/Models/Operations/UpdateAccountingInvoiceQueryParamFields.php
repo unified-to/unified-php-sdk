@@ -44,5 +44,6 @@ enum UpdateAccountingInvoiceQueryParamFields: string
     case Payments = 'payments';
     case CategoryIds = 'category_ids';
     case ProjectId = 'project_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

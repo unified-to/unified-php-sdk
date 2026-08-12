@@ -27,5 +27,21 @@ enum PatchAccountingSalesorderQueryParamFields: string
     case OrganizationId = 'organization_id';
     case Fees = 'fees';
     case CategoryIds = 'category_ids';
+    case Metadata = 'metadata';
+    case OrderNumber = 'order_number';
+    case LocationId = 'location_id';
+    case EmployeeUserId = 'employee_user_id';
+    case DeviceId = 'device_id';
+    case FulfillmentType = 'fulfillment_type';
+    case GuestCount = 'guest_count';
+    case SubtotalAmount = 'subtotal_amount';
+    case TaxAmount = 'tax_amount';
+    case DiscountAmount = 'discount_amount';
+    case TipAmount = 'tip_amount';
+    case ServiceChargeAmount = 'service_charge_amount';
+    case RefundedAmount = 'refunded_amount';
+    case ClosedAt = 'closed_at';
+    case SubscriptionId = 'subscription_id';
+    case Payments = 'payments';
     case Raw = 'raw';
 }

@@ -77,6 +77,7 @@ enum WebhookObjectType: string
     case HrisLocation = 'hris_location';
     case HrisDevice = 'hris_device';
     case HrisTimeshift = 'hris_timeshift';
+    case HrisAttendance = 'hris_attendance';
     case HrisDeduction = 'hris_deduction';
     case HrisBenefit = 'hris_benefit';
     case HrisBankaccount = 'hris_bankaccount';

@@ -43,5 +43,6 @@ enum PatchAccountingProjectQueryParamFields: string
     case CategoryIds = 'category_ids';
     case LocationId = 'location_id';
     case OrganizationId = 'organization_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

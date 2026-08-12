@@ -19,4 +19,5 @@
 | `Status`          | status            |
 | `Lineitems`       | lineitems         |
 | `OrganizationId`  | organization_id   |
+| `Metadata`        | metadata          |
 | `Raw`             | raw               |

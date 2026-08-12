@@ -154,6 +154,16 @@ class AccountingQuote
     public ?string $memo = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $organizationId
      */
@@ -304,6 +314,7 @@ class AccountingQuote
      * @param  ?\DateTime  $issuedAt
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?string  $memo
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $organizationId
      * @param  ?\Unified\Unified_to\Models\Shared\AccountingQuotePaymentTerms  $paymentTerms
      * @param  ?string  $projectId
@@ -322,7 +333,7 @@ class AccountingQuote
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $acceptedAt = null, ?array $categoryIds = null, ?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $currencyRate = null, ?string $customerMessage = null, ?\DateTime $declinedAt = null, ?float $discountAmount = null, ?\DateTime $expiresAt = null, ?string $groupId = null, ?string $id = null, ?string $invoiceId = null, ?\DateTime $issuedAt = null, ?array $lineitems = null, ?string $memo = null, ?string $organizationId = null, ?AccountingQuotePaymentTerms $paymentTerms = null, ?string $projectId = null, ?string $quoteNumber = null, ?array $raw = null, ?string $reference = null, ?\DateTime $sentAt = null, ?AccountingQuoteStatus $status = null, ?float $subTotalAmount = null, ?string $summary = null, ?float $taxAmount = null, ?TaxMode $taxMode = null, ?string $title = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?\DateTime $acceptedAt = null, ?array $categoryIds = null, ?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $currencyRate = null, ?string $customerMessage = null, ?\DateTime $declinedAt = null, ?float $discountAmount = null, ?\DateTime $expiresAt = null, ?string $groupId = null, ?string $id = null, ?string $invoiceId = null, ?\DateTime $issuedAt = null, ?array $lineitems = null, ?string $memo = null, ?array $metadata = null, ?string $organizationId = null, ?AccountingQuotePaymentTerms $paymentTerms = null, ?string $projectId = null, ?string $quoteNumber = null, ?array $raw = null, ?string $reference = null, ?\DateTime $sentAt = null, ?AccountingQuoteStatus $status = null, ?float $subTotalAmount = null, ?string $summary = null, ?float $taxAmount = null, ?TaxMode $taxMode = null, ?string $title = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->acceptedAt = $acceptedAt;
         $this->categoryIds = $categoryIds;
@@ -341,6 +352,7 @@ class AccountingQuote
         $this->issuedAt = $issuedAt;
         $this->lineitems = $lineitems;
         $this->memo = $memo;
+        $this->metadata = $metadata;
         $this->organizationId = $organizationId;
         $this->paymentTerms = $paymentTerms;
         $this->projectId = $projectId;

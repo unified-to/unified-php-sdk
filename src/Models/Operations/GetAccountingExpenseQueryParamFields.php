@@ -36,5 +36,6 @@ enum GetAccountingExpenseQueryParamFields: string
     case ExternalNumber = 'external_number';
     case CategoryIds = 'category_ids';
     case ProjectId = 'project_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

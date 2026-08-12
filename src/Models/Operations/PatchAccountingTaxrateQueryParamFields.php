@@ -19,5 +19,6 @@ enum PatchAccountingTaxrateQueryParamFields: string
     case Rate = 'rate';
     case IsActive = 'is_active';
     case OrganizationId = 'organization_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

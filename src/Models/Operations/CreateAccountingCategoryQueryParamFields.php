@@ -21,5 +21,6 @@ enum CreateAccountingCategoryQueryParamFields: string
     case Type = 'type';
     case Code = 'code';
     case OrganizationId = 'organization_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

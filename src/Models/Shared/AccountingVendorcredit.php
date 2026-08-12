@@ -104,6 +104,16 @@ class AccountingVendorcredit
     public ?array $lineitems = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $notes
      */
@@ -174,6 +184,7 @@ class AccountingVendorcredit
      * @param  ?\DateTime  $dueAt
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $notes
      * @param  ?string  $organizationId
      * @param  ?\DateTime  $postedAt
@@ -183,7 +194,7 @@ class AccountingVendorcredit
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $applications = null, ?float $applyAmount = null, ?float $balanceAmount = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?string $notes = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?AccountingVendorcreditStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $applications = null, ?float $applyAmount = null, ?float $balanceAmount = null, ?string $billId = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $notes = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?AccountingVendorcreditStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->applications = $applications;
@@ -196,6 +207,7 @@ class AccountingVendorcredit
         $this->dueAt = $dueAt;
         $this->id = $id;
         $this->lineitems = $lineitems;
+        $this->metadata = $metadata;
         $this->notes = $notes;
         $this->organizationId = $organizationId;
         $this->postedAt = $postedAt;

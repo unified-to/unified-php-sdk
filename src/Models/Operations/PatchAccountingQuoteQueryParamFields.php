@@ -43,5 +43,6 @@ enum PatchAccountingQuoteQueryParamFields: string
     case CategoryIds = 'category_ids';
     case Url = 'url';
     case OrganizationId = 'organization_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

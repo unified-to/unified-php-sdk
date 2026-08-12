@@ -144,6 +144,8 @@ enum PropertyConnectionPermissions: string
     case HrisTimeoffWrite = 'hris_timeoff_write';
     case HrisTimeshiftRead = 'hris_timeshift_read';
     case HrisTimeshiftWrite = 'hris_timeshift_write';
+    case HrisAttendanceRead = 'hris_attendance_read';
+    case HrisAttendanceWrite = 'hris_attendance_write';
     case HrisCompanyRead = 'hris_company_read';
     case HrisCompanyWrite = 'hris_company_write';
     case HrisLocationRead = 'hris_location_read';

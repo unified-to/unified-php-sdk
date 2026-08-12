@@ -20,4 +20,7 @@ enum AccountingOrderStatus: string
     case Refunded = 'REFUNDED';
     case Submitted = 'SUBMITTED';
     case Deleted = 'DELETED';
+    case Open = 'OPEN';
+    case Completed = 'COMPLETED';
+    case Canceled = 'CANCELED';
 }

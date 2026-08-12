@@ -40,6 +40,14 @@ class AccountingSalesorder
 
     /**
      *
+     * @var ?\DateTime $closedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('closed_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $closedAt = null;
+
+    /**
+     *
      * @var ?string $contactId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
@@ -63,6 +71,30 @@ class AccountingSalesorder
     public ?string $currency = null;
 
     /**
+     *
+     * @var ?string $deviceId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('device_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $deviceId = null;
+
+    /**
+     *
+     * @var ?float $discountAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('discount_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $discountAmount = null;
+
+    /**
+     *
+     * @var ?string $employeeUserId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employee_user_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $employeeUserId = null;
+
+    /**
      * $fees
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingFee> $fees
@@ -71,6 +103,23 @@ class AccountingSalesorder
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingFee>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $fees = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\FulfillmentType $fulfillmentType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fulfillment_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\FulfillmentType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?FulfillmentType $fulfillmentType = null;
+
+    /**
+     *
+     * @var ?float $guestCount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('guest_count')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $guestCount = null;
 
     /**
      *
@@ -92,11 +141,47 @@ class AccountingSalesorder
 
     /**
      *
+     * @var ?string $locationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('location_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $locationId = null;
+
+    /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
+     *
+     * @var ?string $orderNumber
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('order_number')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $orderNumber = null;
+
+    /**
+     *
      * @var ?string $organizationId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $organizationId = null;
+
+    /**
+     * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference> $payments
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payments')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $payments = null;
 
     /**
      *
@@ -118,11 +203,27 @@ class AccountingSalesorder
 
     /**
      *
+     * @var ?float $refundedAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('refunded_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $refundedAmount = null;
+
+    /**
+     *
      * @var ?string $salesChannel
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sales_channel')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $salesChannel = null;
+
+    /**
+     *
+     * @var ?float $serviceChargeAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('service_charge_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $serviceChargeAmount = null;
 
     /**
      *
@@ -144,6 +245,38 @@ class AccountingSalesorder
 
     /**
      *
+     * @var ?string $subscriptionId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('subscription_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $subscriptionId = null;
+
+    /**
+     *
+     * @var ?float $subtotalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('subtotal_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $subtotalAmount = null;
+
+    /**
+     *
+     * @var ?float $taxAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tax_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $taxAmount = null;
+
+    /**
+     *
+     * @var ?float $tipAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tip_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $tipAmount = null;
+
+    /**
+     *
      * @var ?float $totalAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
@@ -162,39 +295,71 @@ class AccountingSalesorder
      * @param  ?string  $accountId
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderBillingAddress  $billingAddress
      * @param  ?array<string>  $categoryIds
+     * @param  ?\DateTime  $closedAt
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
+     * @param  ?string  $deviceId
+     * @param  ?float  $discountAmount
+     * @param  ?string  $employeeUserId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingFee>  $fees
+     * @param  ?\Unified\Unified_to\Models\Shared\FulfillmentType  $fulfillmentType
+     * @param  ?float  $guestCount
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
+     * @param  ?string  $locationId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
+     * @param  ?string  $orderNumber
      * @param  ?string  $organizationId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference>  $payments
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
+     * @param  ?float  $refundedAmount
      * @param  ?string  $salesChannel
+     * @param  ?float  $serviceChargeAmount
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderShippingAddress  $shippingAddress
      * @param  ?\Unified\Unified_to\Models\Shared\AccountingSalesorderStatus  $status
+     * @param  ?string  $subscriptionId
+     * @param  ?float  $subtotalAmount
+     * @param  ?float  $taxAmount
+     * @param  ?float  $tipAmount
      * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?array $fees = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $salesChannel = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?\DateTime $closedAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $deviceId = null, ?float $discountAmount = null, ?string $employeeUserId = null, ?array $fees = null, ?FulfillmentType $fulfillmentType = null, ?float $guestCount = null, ?string $id = null, ?array $lineitems = null, ?string $locationId = null, ?array $metadata = null, ?string $orderNumber = null, ?string $organizationId = null, ?array $payments = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundedAmount = null, ?string $salesChannel = null, ?float $serviceChargeAmount = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?string $subscriptionId = null, ?float $subtotalAmount = null, ?float $taxAmount = null, ?float $tipAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->billingAddress = $billingAddress;
         $this->categoryIds = $categoryIds;
+        $this->closedAt = $closedAt;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
+        $this->deviceId = $deviceId;
+        $this->discountAmount = $discountAmount;
+        $this->employeeUserId = $employeeUserId;
         $this->fees = $fees;
+        $this->fulfillmentType = $fulfillmentType;
+        $this->guestCount = $guestCount;
         $this->id = $id;
         $this->lineitems = $lineitems;
+        $this->locationId = $locationId;
+        $this->metadata = $metadata;
+        $this->orderNumber = $orderNumber;
         $this->organizationId = $organizationId;
+        $this->payments = $payments;
         $this->postedAt = $postedAt;
         $this->raw = $raw;
+        $this->refundedAmount = $refundedAmount;
         $this->salesChannel = $salesChannel;
+        $this->serviceChargeAmount = $serviceChargeAmount;
         $this->shippingAddress = $shippingAddress;
         $this->status = $status;
+        $this->subscriptionId = $subscriptionId;
+        $this->subtotalAmount = $subtotalAmount;
+        $this->taxAmount = $taxAmount;
+        $this->tipAmount = $tipAmount;
         $this->totalAmount = $totalAmount;
         $this->updatedAt = $updatedAt;
     }

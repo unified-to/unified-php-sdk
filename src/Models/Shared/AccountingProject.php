@@ -191,6 +191,16 @@ class AccountingProject
     public ?string $managerUserId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?float $minutesLogged
      */
@@ -304,6 +314,7 @@ class AccountingProject
      * @param  ?bool  $isBillable
      * @param  ?string  $locationId
      * @param  ?string  $managerUserId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?float  $minutesLogged
      * @param  ?float  $minutesToBeInvoiced
      * @param  ?string  $name
@@ -317,7 +328,7 @@ class AccountingProject
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $actualCostAmount = null, ?BillingType $billingType = null, ?array $categoryIds = null, ?string $code = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?float $creditNoteAmount = null, ?string $currency = null, ?float $depositAmount = null, ?float $depositAppliedAmount = null, ?string $description = null, ?\DateTime $dueAt = null, ?\DateTime $endedAt = null, ?float $estimateAmount = null, ?float $estimatedCostAmount = null, ?float $expenseAmount = null, ?string $id = null, ?float $invoicedAmount = null, ?bool $isActive = null, ?bool $isBillable = null, ?string $locationId = null, ?string $managerUserId = null, ?float $minutesLogged = null, ?float $minutesToBeInvoiced = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?float $percentComplete = null, ?array $raw = null, ?\DateTime $startedAt = null, ?AccountingProjectStatus $status = null, ?float $toBeInvoicedAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $actualCostAmount = null, ?BillingType $billingType = null, ?array $categoryIds = null, ?string $code = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?float $creditNoteAmount = null, ?string $currency = null, ?float $depositAmount = null, ?float $depositAppliedAmount = null, ?string $description = null, ?\DateTime $dueAt = null, ?\DateTime $endedAt = null, ?float $estimateAmount = null, ?float $estimatedCostAmount = null, ?float $expenseAmount = null, ?string $id = null, ?float $invoicedAmount = null, ?bool $isActive = null, ?bool $isBillable = null, ?string $locationId = null, ?string $managerUserId = null, ?array $metadata = null, ?float $minutesLogged = null, ?float $minutesToBeInvoiced = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?float $percentComplete = null, ?array $raw = null, ?\DateTime $startedAt = null, ?AccountingProjectStatus $status = null, ?float $toBeInvoicedAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->actualCostAmount = $actualCostAmount;
         $this->billingType = $billingType;
@@ -341,6 +352,7 @@ class AccountingProject
         $this->isBillable = $isBillable;
         $this->locationId = $locationId;
         $this->managerUserId = $managerUserId;
+        $this->metadata = $metadata;
         $this->minutesLogged = $minutesLogged;
         $this->minutesToBeInvoiced = $minutesToBeInvoiced;
         $this->name = $name;

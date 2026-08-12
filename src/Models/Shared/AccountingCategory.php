@@ -52,6 +52,16 @@ class AccountingCategory
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -108,6 +118,7 @@ class AccountingCategory
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?string  $parentId
@@ -116,13 +127,14 @@ class AccountingCategory
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $code = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?array $raw = null, ?AccountingCategoryType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $code = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?array $raw = null, ?AccountingCategoryType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->code = $code;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->parentId = $parentId;

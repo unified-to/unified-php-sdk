@@ -81,6 +81,16 @@ class AccountingPurchaseorder
     public ?array $lineitems = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $organizationId
      */
@@ -149,6 +159,7 @@ class AccountingPurchaseorder
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $organizationId
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
@@ -158,7 +169,7 @@ class AccountingPurchaseorder
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingPurchaseorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?PropertyAccountingPurchaseorderShippingAddress $shippingAddress = null, ?AccountingPurchaseorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?PropertyAccountingPurchaseorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?PropertyAccountingPurchaseorderShippingAddress $shippingAddress = null, ?AccountingPurchaseorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->billingAddress = $billingAddress;
@@ -168,6 +179,7 @@ class AccountingPurchaseorder
         $this->currency = $currency;
         $this->id = $id;
         $this->lineitems = $lineitems;
+        $this->metadata = $metadata;
         $this->organizationId = $organizationId;
         $this->postedAt = $postedAt;
         $this->raw = $raw;

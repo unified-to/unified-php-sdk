@@ -28,5 +28,6 @@ enum UpdateAccountingVendorcreditQueryParamFields: string
     case OrganizationId = 'organization_id';
     case ApplyAmount = 'apply_amount';
     case Applications = 'applications';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

@@ -44,6 +44,16 @@ class AccountingTaxrate
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -90,6 +100,7 @@ class AccountingTaxrate
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?float  $rate
@@ -97,12 +108,13 @@ class AccountingTaxrate
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $organizationId = null, ?float $rate = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?float $rate = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->rate = $rate;
