@@ -84,10 +84,10 @@ class LmsCourse
     /**
      * $instructors
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\LmsInstructor> $instructors
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsReference> $instructors
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('instructors')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsInstructor>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsReference>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $instructors = null;
 
@@ -192,10 +192,10 @@ class LmsCourse
     /**
      * $students
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\LmsStudent> $students
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsReference> $students
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('students')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsStudent>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsReference>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $students = null;
 
@@ -224,7 +224,7 @@ class LmsCourse
      * @param  ?float  $durationMinutes
      * @param  ?string  $id
      * @param  ?array<string>  $instructorIds
-     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsInstructor>  $instructors
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsReference>  $instructors
      * @param  ?bool  $isActive
      * @param  ?bool  $isPrivate
      * @param  ?array<string>  $languages
@@ -236,7 +236,7 @@ class LmsCourse
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $skills
      * @param  ?array<string>  $studentIds
-     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsStudent>  $students
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsReference>  $students
      * @param  ?float  $timeEstimateMinutes
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure

@@ -21,5 +21,7 @@ enum CreateLmsClassQueryParamFields: string
     case InstructorIds = 'instructor_ids';
     case StudentIds = 'student_ids';
     case Languages = 'languages';
+    case Instructors = 'instructors';
+    case Students = 'students';
     case Raw = 'raw';
 }

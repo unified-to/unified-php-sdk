@@ -90,7 +90,7 @@ class LmsContent
     public ?string $id = null;
 
     /**
-     * $instructorIds
+     * @deprecated; use instructors
      *
      * @var ?array<string> $instructorIds
      */
@@ -98,6 +98,16 @@ class LmsContent
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $instructorIds = null;
+
+    /**
+     * $instructors
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsReference> $instructors
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('instructors')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsReference>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $instructors = null;
 
     /**
      *
@@ -236,6 +246,7 @@ class LmsContent
      * @param  ?string  $externalReference
      * @param  ?string  $id
      * @param  ?array<string>  $instructorIds
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsReference>  $instructors
      * @param  ?bool  $isActive
      * @param  ?array<string>  $languages
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsContentLocalization>  $localizations
@@ -252,7 +263,7 @@ class LmsContent
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $categories = null, ?array $collectionIds = null, ?array $courseIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $difficulty = null, ?float $durationMinutes = null, ?string $externalReference = null, ?string $id = null, ?array $instructorIds = null, ?bool $isActive = null, ?array $languages = null, ?array $localizations = null, ?array $media = null, ?string $name = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?string $shortDescription = null, ?array $skills = null, ?float $sortOrder = null, ?array $subjects = null, ?array $tags = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $categories = null, ?array $collectionIds = null, ?array $courseIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $difficulty = null, ?float $durationMinutes = null, ?string $externalReference = null, ?string $id = null, ?array $instructorIds = null, ?array $instructors = null, ?bool $isActive = null, ?array $languages = null, ?array $localizations = null, ?array $media = null, ?string $name = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?string $shortDescription = null, ?array $skills = null, ?float $sortOrder = null, ?array $subjects = null, ?array $tags = null, ?\DateTime $updatedAt = null)
     {
         $this->categories = $categories;
         $this->collectionIds = $collectionIds;
@@ -264,6 +275,7 @@ class LmsContent
         $this->externalReference = $externalReference;
         $this->id = $id;
         $this->instructorIds = $instructorIds;
+        $this->instructors = $instructors;
         $this->isActive = $isActive;
         $this->languages = $languages;
         $this->localizations = $localizations;

@@ -30,9 +30,10 @@ enum ListLmsContentsQueryParamFields: string
     case SortOrder = 'sort_order';
     case ProviderName = 'provider_name';
     case ShortDescription = 'short_description';
-    case PublishedAt = 'published_at';
     case Localizations = 'localizations';
     case InstructorIds = 'instructor_ids';
     case CollectionIds = 'collection_ids';
+    case Instructors = 'instructors';
+    case PublishedAt = 'published_at';
     case Raw = 'raw';
 }
