@@ -5,6 +5,8 @@
 ### Available Operations
 
 * [createAccountingAccount](#createaccountingaccount) - Create an account
+* [createAccountingBankfeedaccount](#createaccountingbankfeedaccount) - Create a bankfeedaccount
+* [createAccountingBankfeedtransaction](#createaccountingbankfeedtransaction) - Create a bankfeedtransaction
 * [createAccountingBill](#createaccountingbill) - Create a bill
 * [createAccountingCategory](#createaccountingcategory) - Create a category
 * [createAccountingContact](#createaccountingcontact) - Create a contact
@@ -24,6 +26,8 @@
 * [getAccountingAgedpayable](#getaccountingagedpayable) - Retrieve an agedpayable
 * [getAccountingAgedreceivable](#getaccountingagedreceivable) - Retrieve an agedreceivable
 * [getAccountingBalancesheet](#getaccountingbalancesheet) - Retrieve a balancesheet
+* [getAccountingBankfeedaccount](#getaccountingbankfeedaccount) - Retrieve a bankfeedaccount
+* [getAccountingBankfeedtransaction](#getaccountingbankfeedtransaction) - Retrieve a bankfeedtransaction
 * [getAccountingBill](#getaccountingbill) - Retrieve a bill
 * [getAccountingCashflow](#getaccountingcashflow) - Retrieve a cashflow
 * [getAccountingCategory](#getaccountingcategory) - Retrieve a category
@@ -48,6 +52,8 @@
 * [listAccountingAgedpayables](#listaccountingagedpayables) - List all agedpayables
 * [listAccountingAgedreceivables](#listaccountingagedreceivables) - List all agedreceivables
 * [listAccountingBalancesheets](#listaccountingbalancesheets) - List all balancesheets
+* [listAccountingBankfeedaccounts](#listaccountingbankfeedaccounts) - List all bankfeedaccounts
+* [listAccountingBankfeedtransactions](#listaccountingbankfeedtransactions) - List all bankfeedtransactions
 * [listAccountingBills](#listaccountingbills) - List all bills
 * [listAccountingCashflows](#listaccountingcashflows) - List all cashflows
 * [listAccountingCategories](#listaccountingcategories) - List all categories
@@ -69,6 +75,8 @@
 * [listAccountingTrialbalances](#listaccountingtrialbalances) - List all trialbalances
 * [listAccountingVendorcredits](#listaccountingvendorcredits) - List all vendorcredits
 * [patchAccountingAccount](#patchaccountingaccount) - Update an account
+* [patchAccountingBankfeedaccount](#patchaccountingbankfeedaccount) - Update a bankfeedaccount
+* [patchAccountingBankfeedtransaction](#patchaccountingbankfeedtransaction) - Update a bankfeedtransaction
 * [patchAccountingBill](#patchaccountingbill) - Update a bill
 * [patchAccountingCategory](#patchaccountingcategory) - Update a category
 * [patchAccountingContact](#patchaccountingcontact) - Update a contact
@@ -85,6 +93,8 @@
 * [patchAccountingTransaction](#patchaccountingtransaction) - Update a transaction
 * [patchAccountingVendorcredit](#patchaccountingvendorcredit) - Update a vendorcredit
 * [removeAccountingAccount](#removeaccountingaccount) - Remove an account
+* [removeAccountingBankfeedaccount](#removeaccountingbankfeedaccount) - Remove a bankfeedaccount
+* [removeAccountingBankfeedtransaction](#removeaccountingbankfeedtransaction) - Remove a bankfeedtransaction
 * [removeAccountingBill](#removeaccountingbill) - Remove a bill
 * [removeAccountingCategory](#removeaccountingcategory) - Remove a category
 * [removeAccountingContact](#removeaccountingcontact) - Remove a contact
@@ -101,6 +111,8 @@
 * [removeAccountingTransaction](#removeaccountingtransaction) - Remove a transaction
 * [removeAccountingVendorcredit](#removeaccountingvendorcredit) - Remove a vendorcredit
 * [updateAccountingAccount](#updateaccountingaccount) - Update an account
+* [updateAccountingBankfeedaccount](#updateaccountingbankfeedaccount) - Update a bankfeedaccount
+* [updateAccountingBankfeedtransaction](#updateaccountingbankfeedtransaction) - Update a bankfeedtransaction
 * [updateAccountingBill](#updateaccountingbill) - Update a bill
 * [updateAccountingCategory](#updateaccountingcategory) - Update a category
 * [updateAccountingContact](#updateaccountingcontact) - Update a contact
@@ -162,6 +174,110 @@ if ($response->accountingAccount !== null) {
 ### Response
 
 **[?Operations\CreateAccountingAccountResponse](../../Models/Operations/CreateAccountingAccountResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createAccountingBankfeedaccount
+
+Create a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAccountingBankfeedaccountRequest(
+    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->createAccountingBankfeedaccount(
+    request: $request
+);
+
+if ($response->accountingBankfeedaccount !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                             | [Operations\CreateAccountingBankfeedaccountRequest](../../Models/Operations/CreateAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+### Response
+
+**[?Operations\CreateAccountingBankfeedaccountResponse](../../Models/Operations/CreateAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createAccountingBankfeedtransaction
+
+Create a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAccountingBankfeedtransactionRequest(
+    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->createAccountingBankfeedtransaction(
+    request: $request
+);
+
+if ($response->accountingBankfeedtransaction !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                                     | [Operations\CreateAccountingBankfeedtransactionRequest](../../Models/Operations/CreateAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+
+### Response
+
+**[?Operations\CreateAccountingBankfeedtransactionResponse](../../Models/Operations/CreateAccountingBankfeedtransactionResponse.md)**
 
 ### Errors
 
@@ -1146,6 +1262,108 @@ if ($response->accountingBalancesheet !== null) {
 ### Response
 
 **[?Operations\GetAccountingBalancesheetResponse](../../Models/Operations/GetAccountingBalancesheetResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAccountingBankfeedaccount
+
+Retrieve a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAccountingBankfeedaccount" method="get" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAccountingBankfeedaccountRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->getAccountingBankfeedaccount(
+    request: $request
+);
+
+if ($response->accountingBankfeedaccount !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                        | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                       | [Operations\GetAccountingBankfeedaccountRequest](../../Models/Operations/GetAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                               | The request object to use for the request.                                                                       |
+
+### Response
+
+**[?Operations\GetAccountingBankfeedaccountResponse](../../Models/Operations/GetAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAccountingBankfeedtransaction
+
+Retrieve a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAccountingBankfeedtransaction" method="get" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAccountingBankfeedtransactionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->getAccountingBankfeedtransaction(
+    request: $request
+);
+
+if ($response->accountingBankfeedtransaction !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                               | [Operations\GetAccountingBankfeedtransactionRequest](../../Models/Operations/GetAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+### Response
+
+**[?Operations\GetAccountingBankfeedtransactionResponse](../../Models/Operations/GetAccountingBankfeedtransactionResponse.md)**
 
 ### Errors
 
@@ -2373,6 +2591,106 @@ if ($response->accountingBalancesheets !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listAccountingBankfeedaccounts
+
+List all bankfeedaccounts
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAccountingBankfeedaccounts" method="get" path="/accounting/{connection_id}/bankfeedaccount" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAccountingBankfeedaccountsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->listAccountingBankfeedaccounts(
+    request: $request
+);
+
+if ($response->accountingBankfeedaccounts !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                           | [Operations\ListAccountingBankfeedaccountsRequest](../../Models/Operations/ListAccountingBankfeedaccountsRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+
+### Response
+
+**[?Operations\ListAccountingBankfeedaccountsResponse](../../Models/Operations/ListAccountingBankfeedaccountsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listAccountingBankfeedtransactions
+
+List all bankfeedtransactions
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAccountingBankfeedtransactions" method="get" path="/accounting/{connection_id}/bankfeedtransaction" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAccountingBankfeedtransactionsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->listAccountingBankfeedtransactions(
+    request: $request
+);
+
+if ($response->accountingBankfeedtransactions !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                   | [Operations\ListAccountingBankfeedtransactionsRequest](../../Models/Operations/ListAccountingBankfeedtransactionsRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+
+### Response
+
+**[?Operations\ListAccountingBankfeedtransactionsResponse](../../Models/Operations/ListAccountingBankfeedtransactionsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listAccountingBills
 
 List all bills
@@ -3426,6 +3744,112 @@ if ($response->accountingAccount !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchAccountingBankfeedaccount
+
+Update a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingBankfeedaccountRequest(
+    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingBankfeedaccount(
+    request: $request
+);
+
+if ($response->accountingBankfeedaccount !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                           | [Operations\PatchAccountingBankfeedaccountRequest](../../Models/Operations/PatchAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+
+### Response
+
+**[?Operations\PatchAccountingBankfeedaccountResponse](../../Models/Operations/PatchAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchAccountingBankfeedtransaction
+
+Update a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingBankfeedtransactionRequest(
+    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingBankfeedtransaction(
+    request: $request
+);
+
+if ($response->accountingBankfeedtransaction !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                    | Type                                                                                                                         | Required                                                                                                                     | Description                                                                                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                   | [Operations\PatchAccountingBankfeedtransactionRequest](../../Models/Operations/PatchAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                                           | The request object to use for the request.                                                                                   |
+
+### Response
+
+**[?Operations\PatchAccountingBankfeedtransactionResponse](../../Models/Operations/PatchAccountingBankfeedtransactionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchAccountingBill
 
 Update a bill
@@ -4272,6 +4696,108 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeAccountingBankfeedaccount
+
+Remove a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingBankfeedaccount" method="delete" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingBankfeedaccountRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingBankfeedaccount(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                             | [Operations\RemoveAccountingBankfeedaccountRequest](../../Models/Operations/RemoveAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+### Response
+
+**[?Operations\RemoveAccountingBankfeedaccountResponse](../../Models/Operations/RemoveAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingBankfeedtransaction
+
+Remove a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingBankfeedtransaction" method="delete" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingBankfeedtransactionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingBankfeedtransaction(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                                     | [Operations\RemoveAccountingBankfeedtransactionRequest](../../Models/Operations/RemoveAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+
+### Response
+
+**[?Operations\RemoveAccountingBankfeedtransactionResponse](../../Models/Operations/RemoveAccountingBankfeedtransactionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeAccountingBill
 
 Remove a bill
@@ -5083,6 +5609,112 @@ if ($response->accountingAccount !== null) {
 ### Response
 
 **[?Operations\UpdateAccountingAccountResponse](../../Models/Operations/UpdateAccountingAccountResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAccountingBankfeedaccount
+
+Update a bankfeedaccount
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAccountingBankfeedaccountRequest(
+    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->updateAccountingBankfeedaccount(
+    request: $request
+);
+
+if ($response->accountingBankfeedaccount !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                              | Type                                                                                                                   | Required                                                                                                               | Description                                                                                                            |
+| ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                             | [Operations\UpdateAccountingBankfeedaccountRequest](../../Models/Operations/UpdateAccountingBankfeedaccountRequest.md) | :heavy_check_mark:                                                                                                     | The request object to use for the request.                                                                             |
+
+### Response
+
+**[?Operations\UpdateAccountingBankfeedaccountResponse](../../Models/Operations/UpdateAccountingBankfeedaccountResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAccountingBankfeedtransaction
+
+Update a bankfeedtransaction
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAccountingBankfeedtransactionRequest(
+    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->updateAccountingBankfeedtransaction(
+    request: $request
+);
+
+if ($response->accountingBankfeedtransaction !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                                     | [Operations\UpdateAccountingBankfeedtransactionRequest](../../Models/Operations/UpdateAccountingBankfeedtransactionRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
+
+### Response
+
+**[?Operations\UpdateAccountingBankfeedtransactionResponse](../../Models/Operations/UpdateAccountingBankfeedtransactionResponse.md)**
 
 ### Errors
 

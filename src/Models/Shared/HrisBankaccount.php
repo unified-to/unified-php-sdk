@@ -29,12 +29,12 @@ class HrisBankaccount
 
     /**
      *
-     * @var ?\Unified\Unified_to\Models\Shared\AccountType $accountType
+     * @var ?\Unified\Unified_to\Models\Shared\HrisBankaccountAccountType $accountType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('account_type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisBankaccountAccountType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?AccountType $accountType = null;
+    public ?HrisBankaccountAccountType $accountType = null;
 
     /**
      *
@@ -121,7 +121,7 @@ class HrisBankaccount
     /**
      * @param  ?string  $accountNumber
      * @param  ?string  $accountNumberLast4
-     * @param  ?\Unified\Unified_to\Models\Shared\AccountType  $accountType
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisBankaccountAccountType  $accountType
      * @param  ?string  $bankName
      * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
@@ -134,7 +134,7 @@ class HrisBankaccount
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $accountNumber = null, ?string $accountNumberLast4 = null, ?AccountType $accountType = null, ?string $bankName = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isPrimary = null, ?string $name = null, ?array $raw = null, ?string $routingNumber = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $accountNumber = null, ?string $accountNumberLast4 = null, ?HrisBankaccountAccountType $accountType = null, ?string $bankName = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isPrimary = null, ?string $name = null, ?array $raw = null, ?string $routingNumber = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->accountNumber = $accountNumber;
         $this->accountNumberLast4 = $accountNumberLast4;

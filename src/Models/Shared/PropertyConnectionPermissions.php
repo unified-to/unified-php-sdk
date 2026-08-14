@@ -58,6 +58,10 @@ enum PropertyConnectionPermissions: string
     case AccountingAgedpayableRead = 'accounting_agedpayable_read';
     case AccountingProjectRead = 'accounting_project_read';
     case AccountingProjectWrite = 'accounting_project_write';
+    case AccountingBankfeedaccountRead = 'accounting_bankfeedaccount_read';
+    case AccountingBankfeedaccountWrite = 'accounting_bankfeedaccount_write';
+    case AccountingBankfeedtransactionRead = 'accounting_bankfeedtransaction_read';
+    case AccountingBankfeedtransactionWrite = 'accounting_bankfeedtransaction_write';
     case PaymentPayoutRead = 'payment_payout_read';
     case PaymentRefundRead = 'payment_refund_read';
     case PaymentLinkRead = 'payment_link_read';

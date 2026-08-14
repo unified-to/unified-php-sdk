@@ -13,4 +13,7 @@ enum AccountType: string
 {
     case Checking = 'CHECKING';
     case Savings = 'SAVINGS';
+    case CreditCard = 'CREDIT_CARD';
+    case Loan = 'LOAN';
+    case Other = 'OTHER';
 }

@@ -38,6 +38,10 @@ class UnifiedTo
 
     public Balancesheet $balancesheet;
 
+    public Bankfeedaccount $bankfeedaccount;
+
+    public Bankfeedtransaction $bankfeedtransaction;
+
     public Bill $bill;
 
     public Cashflow $cashflow;
@@ -385,6 +389,8 @@ class UnifiedTo
         $this->agedpayable = new Agedpayable($this->sdkConfiguration);
         $this->agedreceivable = new Agedreceivable($this->sdkConfiguration);
         $this->balancesheet = new Balancesheet($this->sdkConfiguration);
+        $this->bankfeedaccount = new Bankfeedaccount($this->sdkConfiguration);
+        $this->bankfeedtransaction = new Bankfeedtransaction($this->sdkConfiguration);
         $this->bill = new Bill($this->sdkConfiguration);
         $this->cashflow = new Cashflow($this->sdkConfiguration);
         $this->category = new Category($this->sdkConfiguration);

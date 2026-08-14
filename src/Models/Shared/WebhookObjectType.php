@@ -35,6 +35,8 @@ enum WebhookObjectType: string
     case AccountingAgedreceivable = 'accounting_agedreceivable';
     case AccountingAgedpayable = 'accounting_agedpayable';
     case AccountingProject = 'accounting_project';
+    case AccountingBankfeedaccount = 'accounting_bankfeedaccount';
+    case AccountingBankfeedtransaction = 'accounting_bankfeedtransaction';
     case PaymentPayment = 'payment_payment';
     case PaymentLink = 'payment_link';
     case PaymentPayout = 'payment_payout';
