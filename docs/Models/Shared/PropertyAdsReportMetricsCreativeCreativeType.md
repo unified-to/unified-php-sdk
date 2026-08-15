@@ -14,4 +14,5 @@
 | `PublisherHosted` | PUBLISHER_HOSTED  |
 | `AssetBased`      | ASSET_BASED       |
 | `Image`           | IMAGE             |
+| `Share`           | SHARE             |
 | `Document`        | DOCUMENT          |

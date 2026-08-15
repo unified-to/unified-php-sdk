@@ -20,5 +20,6 @@ enum PropertyAdsReportMetricsCreativeCreativeType: string
     case PublisherHosted = 'PUBLISHER_HOSTED';
     case AssetBased = 'ASSET_BASED';
     case Image = 'IMAGE';
+    case Share = 'SHARE';
     case Document = 'DOCUMENT';
 }

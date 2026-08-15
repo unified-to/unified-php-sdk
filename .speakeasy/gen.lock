@@ -1,31 +1,31 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: c2c443fb3eedde0720e069b060bd03ca
+  docChecksum: adb495d6e549f77377fe9efbe72717f5
   docVersion: "1.0"
-  speakeasyVersion: 1.793.1
-  generationVersion: 2.928.0
-  releaseVersion: 1.6.104
-  configChecksum: 7768e38484e7016a56d91b1bfcebfc1b
+  speakeasyVersion: 1.794.0
+  generationVersion: 2.930.0
+  releaseVersion: 1.6.105
+  configChecksum: 31869c23bff47307858d224814b4baed
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 6dda86ef-6fe7-4fe2-8448-47aa22cdbf04
-  pristine_commit_hash: e69dba57a75516a589470b1ed7b752ea34cd5522
-  pristine_tree_hash: 44d466e00283b3bd1ab9703b242546b9e33cedc1
+  generation_id: 6b38a63f-3ecf-4f84-9184-be5372d5eb35
+  pristine_commit_hash: 3f86bd3ee44892ef772a2c41858f91200d78e730
+  pristine_tree_hash: 13e3c1993c3a8600c13e3383ea6ebddcca06e83b
 features:
   php:
     constsAndDefaults: 0.2.2
-    core: 3.9.25
+    core: 3.9.27
     globalSecurity: 2.81.12
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.1
     inputOutputModels: 2.83.0
     methodArguments: 0.1.0
     responseFormat: 0.1.0
-    unions: 0.1.8
+    unions: 0.1.9
 trackedFiles:
   .gitattributes:
     id: 24139dae6567
@@ -37,8 +37,8 @@ trackedFiles:
     pristine_git_object: fb7e046d5200803b255c4aadb9f0b0530348cce8
   composer.json:
     id: 3957b91a0d84
-    last_write_checksum: sha1:710c4139cb04c56146d8f1b6085ab0f9b51dd523
-    pristine_git_object: 6792458a1c2a5add766a51be0c1f07b3c250ddda
+    last_write_checksum: sha1:367c30a66d4ab25f483396808bd129ae808f61f5
+    pristine_git_object: 25516ef05777eb8215d234a5895ef56cabd79ef5
   docs/Models/Operations/Categories.md:
     id: 8fe945098e9d
     last_write_checksum: sha1:4f9be8a3ec277126931433d4bfa6fb9c1aa1d053
@@ -10465,8 +10465,8 @@ trackedFiles:
     pristine_git_object: a9a036ca6e97394bf06a25161668102c6edf2c5a
   docs/Models/Shared/CreativeType.md:
     id: 0809bdca9a64
-    last_write_checksum: sha1:1204f36b69fb59d51b6a328fa2690a0d396ae980
-    pristine_git_object: aad386eb4e998357f70f88ac74ed42078c66a7eb
+    last_write_checksum: sha1:5ed1766c94c240f5017b422fbc410d1251f0ed03
+    pristine_git_object: 75bc590cb833c5c2575b48ffa938ad67fdedae9a
   docs/Models/Shared/CrmCompany.md:
     id: 024eea53e93b
     last_write_checksum: sha1:0750200aa5b5ed5b5569f92a22b8d28a3b3c601b
@@ -12249,8 +12249,8 @@ trackedFiles:
     pristine_git_object: 00c2c2966b5ad4bf7548a6d372870218f6a5f83b
   docs/Models/Shared/PropertyAdsReportMetricsCreativeCreativeType.md:
     id: fb82da253233
-    last_write_checksum: sha1:be74a90b7bc34648c62d818099f5673718906db5
-    pristine_git_object: 6745a1ceaff7885cf37e3807688cde429692e620
+    last_write_checksum: sha1:5167976e207a9e89c2c60e09c2ecec023b914056
+    pristine_git_object: bc5d74a29bf23a446814479d23d39772d085d82d
   docs/Models/Shared/PropertyAdsReportMetricsCreativeHostingSource.md:
     id: 405a1b5e3f28
     last_write_checksum: sha1:492e7a7e31f44774638642f3bf580c98465de180
@@ -25233,8 +25233,8 @@ trackedFiles:
     pristine_git_object: 18e9113dabbf5cc29a371061030c5a4047b019bb
   src/Models/Shared/CreativeType.php:
     id: 1a51d1337f44
-    last_write_checksum: sha1:280e97e64cc3300e018c2852314cdea68c33b98e
-    pristine_git_object: 1e57e32efba6751406dc9103f9792b91d5f25848
+    last_write_checksum: sha1:930e9267548442ad3ac47748dfd1792be33a1d61
+    pristine_git_object: c09f14afdbfcfc65814c323c6bc99359a0c6117b
   src/Models/Shared/CrmCompany.php:
     id: 4bb3868741ef
     last_write_checksum: sha1:f510066f374ba9edeb69452ab1959c70bb376990
@@ -26941,8 +26941,8 @@ trackedFiles:
     pristine_git_object: 7e8166fb3264f23fd6d72dc644d4b2824e30fae6
   src/Models/Shared/PropertyAdsReportMetricsCreativeCreativeType.php:
     id: b6767fb2eaca
-    last_write_checksum: sha1:ea32047e16998cfe1d64956231459f4007704bb3
-    pristine_git_object: a28dc38101121da4f29ba671dbe21d6594b83629
+    last_write_checksum: sha1:628a48df14f84b60e22e38db553c8cb03756616c
+    pristine_git_object: f998aecc6f8df0f7e8f2e7bdcc0f94ab7056c4a1
   src/Models/Shared/PropertyAdsReportMetricsCreativeHostingSource.php:
     id: 30eeb44590a7
     last_write_checksum: sha1:53ad458877ff7e0dfe0028c6616d213d07359938
@@ -28505,8 +28505,8 @@ trackedFiles:
     pristine_git_object: 0c4028bd3bd456a71802a10bc5054daf94b29def
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:48e7e5c9d2ebdb89cad1ccdb1a4a9f31058fb027
-    pristine_git_object: 398dc228389061b0ca001ccdc1be3a332c55a0de
+    last_write_checksum: sha1:597355ed67504bbe3a5cb0224e45a9eb710e6509
+    pristine_git_object: f8a1ff5a96562f45d13801772a32b1908daf7ec5
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -42705,7 +42705,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed**\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed**\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->bankfeedaccount->createAccountingBankfeedaccount()`: **Added**\n* `unified-to->bankfeedaccount->listAccountingBankfeedaccounts()`: **Added**\n* `unified-to->accounting->createAccountingBankfeedtransaction()`: **Added**\n* `unified-to->accounting->updateAccountingBankfeedaccount()`: **Added**\n* `unified-to->accounting->removeAccountingBankfeedtransaction()`: **Added**\n* `unified-to->bankfeedtransaction->listAccountingBankfeedtransactions()`: **Added**\n* `unified-to->bankfeedtransaction->getAccountingBankfeedtransaction()`: **Added**\n* `unified-to->bankfeedtransaction->createAccountingBankfeedtransaction()`: **Added**\n* `unified-to->bankfeedaccount->updateAccountingBankfeedaccount()`: **Added**\n* `unified-to->unified->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->unified->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->bankfeedaccount->removeAccountingBankfeedaccount()`: **Added**\n* `unified-to->bankfeedaccount->patchAccountingBankfeedaccount()`: **Added**\n* `unified-to->bankfeedtransaction->patchAccountingBankfeedtransaction()`: **Added**\n* `unified-to->bankfeedaccount->getAccountingBankfeedaccount()`: **Added**\n* `unified-to->bankfeedtransaction->removeAccountingBankfeedtransaction()`: **Added**\n* `unified-to->accounting->createAccountingBankfeedaccount()`: **Added**\n* `unified-to->accounting->updateAccountingBankfeedtransaction()`: **Added**\n* `unified-to->bankfeedtransaction->updateAccountingBankfeedtransaction()`: **Added**\n* `unified-to->accounting->removeAccountingBankfeedaccount()`: **Added**\n* `unified-to->accounting->patchAccountingBankfeedtransaction()`: **Added**\n* `unified-to->integration->listUnifiedIntegrationWorkspaces()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->integration->listUnifiedIntegrations()`:  `response.[]->support->Map<IntegrationSupport>` **Changed**\n* `unified-to->accounting->patchAccountingBankfeedaccount()`: **Added**\n* `unified-to->accounting->listAccountingBankfeedtransactions()`: **Added**\n* `unified-to->accounting->listAccountingBankfeedaccounts()`: **Added**\n* `unified-to->accounting->getAccountingBankfeedtransaction()`: **Added**\n* `unified-to->accounting->getAccountingBankfeedaccount()`: **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]->creative->creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->createAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->getAdsCreative()`:  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->listAdsCreatives()`:  `response.[]->creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]->creative->creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->patchAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->updateAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->createAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->getAdsCreative()`:  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->listAdsCreatives()`:  `response.[]->creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->patchAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->updateAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
