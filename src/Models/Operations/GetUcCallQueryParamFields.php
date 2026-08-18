@@ -24,5 +24,6 @@ enum GetUcCallQueryParamFields: string
     case UserName = 'user_name';
     case UserPhone = 'user_phone';
     case Type = 'type';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

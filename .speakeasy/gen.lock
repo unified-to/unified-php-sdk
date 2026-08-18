@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: adb495d6e549f77377fe9efbe72717f5
+  docChecksum: 0c936c60770ab094bb7fea41b06b41b6
   docVersion: "1.0"
-  speakeasyVersion: 1.794.0
-  generationVersion: 2.930.0
-  releaseVersion: 1.6.105
-  configChecksum: 31869c23bff47307858d224814b4baed
+  speakeasyVersion: 1.794.1
+  generationVersion: 2.931.0
+  releaseVersion: 1.6.106
+  configChecksum: 98ec5ab79a5c6ec080bd1dfd52385371
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 6b38a63f-3ecf-4f84-9184-be5372d5eb35
-  pristine_commit_hash: 3f86bd3ee44892ef772a2c41858f91200d78e730
-  pristine_tree_hash: 13e3c1993c3a8600c13e3383ea6ebddcca06e83b
+  generation_id: af4a7953-f412-4994-9306-d01dc3f99bde
+  pristine_commit_hash: 061d07f4b2ef3e5d6943105b79d2a02df95602dc
+  pristine_tree_hash: ca3da7ea616d2eaa773fdf963da6ee2d879cca68
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -1365,8 +1365,8 @@ trackedFiles:
     pristine_git_object: 8569a039548de83760346100f9261e7f48f6633a
   docs/Models/Operations/CreateShippingShipmentQueryParamFields.md:
     id: df094e09a5dd
-    last_write_checksum: sha1:bdfbaa668f2fc6f19dd850fe8924a75c04b0c78a
-    pristine_git_object: 184483f9319d925a3cb8d730394016c22e7ee5e7
+    last_write_checksum: sha1:1aa80884f624aa7d50f7c8fee4cb8836f9678686
+    pristine_git_object: 8cbf3626f7521daa42128254a4b0c57da95c1f29
   docs/Models/Operations/CreateShippingShipmentRequest.md:
     id: 6ac923b53625
     last_write_checksum: sha1:de720a2882a951c53281bf6fad76e9eade33c9df
@@ -3137,8 +3137,8 @@ trackedFiles:
     pristine_git_object: e59996bd03c82615a6d6a272e5ecc78d82e10912
   docs/Models/Operations/GetShippingShipmentQueryParamFields.md:
     id: ea7a1368b41e
-    last_write_checksum: sha1:0f2cf78c80f4a909fbfcaf52e41ef655d298abaa
-    pristine_git_object: 95ab5182f561c290aab79dbbe6e44ce7422a73c9
+    last_write_checksum: sha1:c11205115fd44dc5bf8903ba2b6a3d72d4f8c7fe
+    pristine_git_object: 5e1c39036064824fb1f09360d73c2256d9808cc1
   docs/Models/Operations/GetShippingShipmentRequest.md:
     id: 096327f66212
     last_write_checksum: sha1:1485238afa9a86771f8d88483e7148b9ebda9739
@@ -3305,8 +3305,8 @@ trackedFiles:
     pristine_git_object: 5f9b654b21f31aacba325105187964df06b32731
   docs/Models/Operations/GetUcCallQueryParamFields.md:
     id: e6d967666418
-    last_write_checksum: sha1:c2dc83aaba58f20c7949386467d56e5758e5a06c
-    pristine_git_object: 4a4e0aab0a35d02d861e4cbf332a077312b57bab
+    last_write_checksum: sha1:bb739587c1cade14b5a87177555d1a9c790a5176
+    pristine_git_object: 14347f91b92ae92e1e152ca4d279d612267c1ffb
   docs/Models/Operations/GetUcCallRequest.md:
     id: f8fb9134e9fd
     last_write_checksum: sha1:94fa49939506478b83a75f8ea76ac066a0e45124
@@ -5121,12 +5121,12 @@ trackedFiles:
     pristine_git_object: 9caebd559e5f131ab361c939846e6ef19c40ac82
   docs/Models/Operations/ListShippingShipmentsQueryParamFields.md:
     id: 813e6548090d
-    last_write_checksum: sha1:a6ec98974e64f3e85ead17a9fc28ce2473426fd8
-    pristine_git_object: 469f6e67fcedfc2990397ab0f5f85551da251f34
+    last_write_checksum: sha1:97e829b8a8d4b33e17897bdf21b21f0b4ca3a870
+    pristine_git_object: 9e72c18ca13ebdce66719a04d762a58cf7d2fa7c
   docs/Models/Operations/ListShippingShipmentsRequest.md:
     id: 2932d8c44e4d
-    last_write_checksum: sha1:fb89926d5cdf39cd0531b59f822c7451322ecf97
-    pristine_git_object: 65800f75416c4163eee39450f893286ffe21cee9
+    last_write_checksum: sha1:3c7d76b6449fe0b307bf2cdc9ce7dd72ccd3fbee
+    pristine_git_object: 7994c24af22bd92ce5e3a5e3549d451e083f8f36
   docs/Models/Operations/ListShippingShipmentsResponse.md:
     id: dc2cebe76c6a
     last_write_checksum: sha1:8310517ae8d91e1a68e5f251a5febc08de37f328
@@ -5137,8 +5137,8 @@ trackedFiles:
     pristine_git_object: d16c72b365aa111f38b566417922183a37e3e527
   docs/Models/Operations/ListShippingTrackingsRequest.md:
     id: f4e92c89a55c
-    last_write_checksum: sha1:10d1574c5d9662a201404990f74fd37c067acf69
-    pristine_git_object: e5b190dfa207a2cfa9319cbc20bdfd3bba922c5f
+    last_write_checksum: sha1:59b464e7862b9c1f762ca4ddaaf8c2858c3f300f
+    pristine_git_object: d70640dfa55f5ac9cd102c142e07d776221dbc2d
   docs/Models/Operations/ListShippingTrackingsResponse.md:
     id: 0cb4f4f58dac
     last_write_checksum: sha1:200f72cf020fc77ffb60a4009483d22d5529f7fc
@@ -5289,8 +5289,8 @@ trackedFiles:
     pristine_git_object: 6d25d42c480b85efc7be448bca7525733545589a
   docs/Models/Operations/ListUcCallsQueryParamFields.md:
     id: 283f12d4dff3
-    last_write_checksum: sha1:29eeb6cf9da810bf4ed40fe34c08008da6c2db8c
-    pristine_git_object: b47cc8439a13d5ebcee9ad34e5c2da69067cbeb9
+    last_write_checksum: sha1:59dce16efab226bca2ee5c33350c5f8da53717be
+    pristine_git_object: 04ad37bc159faed2f63665efdf5bd3239bb1eab2
   docs/Models/Operations/ListUcCallsRequest.md:
     id: 2ffb78fa1aa3
     last_write_checksum: sha1:b4d853cc8b216e33a2a79f1179e7a49748db1776
@@ -6689,8 +6689,8 @@ trackedFiles:
     pristine_git_object: 5ef650ed99af8ea503b38b439b7ef1d57f4815b7
   docs/Models/Operations/PatchShippingShipmentQueryParamFields.md:
     id: 7a3e2931f8b6
-    last_write_checksum: sha1:f35efe1abbf5c03d0c59cd51cd4599ad67722878
-    pristine_git_object: cc0288a76bedfd9c2f42b5bd78041797d50ead3d
+    last_write_checksum: sha1:f5b03679ec6f20f54d2533215eaf08cc4c688df4
+    pristine_git_object: cf2817a48b16ceed4ca2161334efc989f3a72056
   docs/Models/Operations/PatchShippingShipmentRequest.md:
     id: 46c8c9b8591e
     last_write_checksum: sha1:eaa1fb74691c5b87075b1a32ea9ba54e4324cd99
@@ -9149,8 +9149,8 @@ trackedFiles:
     pristine_git_object: e049c33b14bffe00fd6dca379707271e0bf25568
   docs/Models/Operations/UpdateShippingShipmentQueryParamFields.md:
     id: 714c77e0a7f0
-    last_write_checksum: sha1:557e4cf9e927ce636813e245b766d8ecce42cf5b
-    pristine_git_object: fb800a8e0de5a73bf89c8536aa4e7b9e20d93db5
+    last_write_checksum: sha1:7a68d37c681ac532778530454a59ec57dbef8bbd
+    pristine_git_object: 1a175fcff2008b27eb15dda96338d4eea045e809
   docs/Models/Operations/UpdateShippingShipmentRequest.md:
     id: 4aefa9418599
     last_write_checksum: sha1:96e6af44a8650dbcadfa83453d015c85acc9dc79
@@ -13113,8 +13113,12 @@ trackedFiles:
     pristine_git_object: ab026f0901de791e8f2416e83ebd0d2f95e6200a
   docs/Models/Shared/ShippingShipment.md:
     id: 3d5d4538af5e
-    last_write_checksum: sha1:c631250c5c34f50b1693587293332282f104f711
-    pristine_git_object: af2c12bd5d653f519faacbae762d2bc6bee6d715
+    last_write_checksum: sha1:9b81a87f0a4f68254591ae0bede3baefe9fb1454
+    pristine_git_object: 7ec9a414a211e44db6624338aa0f1fc7fd50015b
+  docs/Models/Shared/ShippingShipmentLineitem.md:
+    id: c64e11fb995a
+    last_write_checksum: sha1:24c69e409d138c9d5a00ba221d905b9e1fad69a8
+    pristine_git_object: 41e12c005205cd642d9361bc698f874751db117b
   docs/Models/Shared/ShippingShipmentStatus.md:
     id: c755d6564bc0
     last_write_checksum: sha1:c76e24e7453200ee66b5e84bb7e24b25529ff3a5
@@ -13321,8 +13325,8 @@ trackedFiles:
     pristine_git_object: ea47fecc369aebd9a369fae693ea891f2fa69a23
   docs/Models/Shared/UcCall.md:
     id: 8dd02ef84d6d
-    last_write_checksum: sha1:421f09ab32f9c23ab352de80325e73a1c0ea70c8
-    pristine_git_object: d686a3923e8204ed0c4e0234b48da8b9540acdd6
+    last_write_checksum: sha1:de82fd331cb80369c358a622a01e6cd21118cf96
+    pristine_git_object: f9c66c2115d11532456a43af07a30b7bd92e1b73
   docs/Models/Shared/UcCallType.md:
     id: 7b11eaaa6041
     last_write_checksum: sha1:0af58b34e993234135c584f00e3a293c819850c3
@@ -13343,6 +13347,38 @@ trackedFiles:
     id: 799e7c9a7f7b
     last_write_checksum: sha1:cd9d51befab3921246d7e9aeb890efbdc2563d19
     pristine_git_object: d52f78d956e94073bf215301f2597a0748c42a00
+  docs/Models/Shared/UcMetadata.md:
+    id: 3de0d41e6611
+    last_write_checksum: sha1:9ed4f4994859bb74487da6778b53c01b8edd1181
+    pristine_git_object: ac23695b42c4bf04ea5eb59f6f8102392341a48d
+  docs/Models/Shared/UcMetadata1.md:
+    id: d388eea5a963
+    last_write_checksum: sha1:3bbe31a8c3174109742e33bbaca4a6e10d5cffeb
+    pristine_git_object: 21934b9375b68024e3ccbcf2925e0d9d449938b5
+  docs/Models/Shared/UcMetadata5.md:
+    id: 857c56db9dd0
+    last_write_checksum: sha1:4b7ccac319994694b9e541c8d6964696ae9c1b30
+    pristine_git_object: f790e7218b2fc9e5f6b371eeabe509660645c276
+  docs/Models/Shared/UcMetadataExtraData.md:
+    id: 878d43c5d4a7
+    last_write_checksum: sha1:b8ffffcb7a14c35158484692d8f7e06dc3665adb
+    pristine_git_object: 5e65e39f12af2e671798a73d2fc4ec758dfdd3df
+  docs/Models/Shared/UcMetadataFormat.md:
+    id: 9cd8d2fb7a05
+    last_write_checksum: sha1:d211dff1b04f9138b0e5889a798507e00c617027
+    pristine_git_object: f5d2460dae5f4cac0ccbbf4690dab0ec898d817e
+  docs/Models/Shared/UcMetadataSchemas1.md:
+    id: 2a9f0132a6b4
+    last_write_checksum: sha1:cfda74857e9fae6dc0f2686e64a5944ad1b4b1a9
+    pristine_git_object: a90b5a78451f365f78b86662c128cdcf800acbab
+  docs/Models/Shared/UcMetadataSchemas5.md:
+    id: 80f0d1b62d4d
+    last_write_checksum: sha1:87e154633916dc83142db00a76bfac3737fb28af
+    pristine_git_object: eb462faf1f729bac3e0fd2238e72c040a9ee8ff0
+  docs/Models/Shared/UcMetadataValue.md:
+    id: feea640e01af
+    last_write_checksum: sha1:b0e8a5931eaa368e5d47125932d4d74233fb4990
+    pristine_git_object: 34448538ca35a531984d88fa61251087d6d31147
   docs/Models/Shared/UcRecording.md:
     id: 76455bbf6009
     last_write_checksum: sha1:fa99200499dcae3314c571e5b6a7fd2bce8900f5
@@ -16189,8 +16225,8 @@ trackedFiles:
     pristine_git_object: c26bd0bc6a385a4e9682afd27b96a9db3ff2429f
   src/Models/Operations/CreateShippingShipmentQueryParamFields.php:
     id: 5916fecbb2d4
-    last_write_checksum: sha1:9738b5518e0b1b04286aa0f252d1e63c6a1c9f9b
-    pristine_git_object: 1520fa7299ab8c67b1d59d5ab7a2add2e67d85a1
+    last_write_checksum: sha1:633354df84b899b13c16d9a0d57ccb8241cd0cfc
+    pristine_git_object: 6cadac219433917582d485151eb8455a16c4e537
   src/Models/Operations/CreateShippingShipmentRequest.php:
     id: 30dc3f6d552d
     last_write_checksum: sha1:3eec10472ab353fa834397e6c7a47c59ee2bd818
@@ -17961,8 +17997,8 @@ trackedFiles:
     pristine_git_object: 39fae23150a4fa6b2c580fd86a5b4999dccd2d17
   src/Models/Operations/GetShippingShipmentQueryParamFields.php:
     id: 16dd1ac08a1f
-    last_write_checksum: sha1:24e496c84e1a7b85a28aec18776522f35a2f0f35
-    pristine_git_object: 6f5c63e8a12eba14a5130b114ab43d78db0825f1
+    last_write_checksum: sha1:e57d18bd0a20d3b69e06bbd8d2d2b06e5c8efcfd
+    pristine_git_object: ad346b53e3d76b0cb0fcadfee78bfcd5dd69ea4b
   src/Models/Operations/GetShippingShipmentRequest.php:
     id: bcfb454e779b
     last_write_checksum: sha1:c7f87130c088481e3e447b72c64cc2b561e69ff5
@@ -18129,8 +18165,8 @@ trackedFiles:
     pristine_git_object: b741efe4cc32b9c716fd38af564f14d4ae861b06
   src/Models/Operations/GetUcCallQueryParamFields.php:
     id: a9a6fe2d6e0b
-    last_write_checksum: sha1:2d3c4910a904792b5e1aaf94cd03a0265dae7a8a
-    pristine_git_object: a96c0f3718f942355286039ef4663f39502405f4
+    last_write_checksum: sha1:a97fae70ac4bb4d10b89ee516f74deb81b441ef3
+    pristine_git_object: 9326881da1258a4c2e42e91b862f4772067bdb0c
   src/Models/Operations/GetUcCallRequest.php:
     id: b65e4c25122b
     last_write_checksum: sha1:b4e334d9d04d72d4bd32dc482266c085fb0caaf8
@@ -19945,12 +19981,12 @@ trackedFiles:
     pristine_git_object: 836f6cc374627ce4c692c460bdcf24119250f69e
   src/Models/Operations/ListShippingShipmentsQueryParamFields.php:
     id: dc59e08bd39c
-    last_write_checksum: sha1:d2165bdd22fbc2df9fbd0e88e14327c017d59ce3
-    pristine_git_object: 259e16993cc0e918ab746fac66e92f8d1a6e5f43
+    last_write_checksum: sha1:e011e04da89cdf00c94f8c3f16b4af41d86a477f
+    pristine_git_object: 94c5e64c75e2278e74564df32340150df536dfc0
   src/Models/Operations/ListShippingShipmentsRequest.php:
     id: df7d9d5943c4
-    last_write_checksum: sha1:ef64aa675a745ff48cc8da06f8f111a1915c3ede
-    pristine_git_object: ff58cb8db9bc870644dfa10f77a52bc333be7483
+    last_write_checksum: sha1:d2ddd3bc998b3da0e03c2f543a83fe3309e53fd4
+    pristine_git_object: d82092b129701ebc6d94e8ae8feb1f15f584a49e
   src/Models/Operations/ListShippingShipmentsResponse.php:
     id: b8d62fb31390
     last_write_checksum: sha1:e49d676f1952ff94c8f5b2d1871a8641fe8926cb
@@ -19961,8 +19997,8 @@ trackedFiles:
     pristine_git_object: d64bb6ef1ba44677f7d55b07ad415c45c5bcaee4
   src/Models/Operations/ListShippingTrackingsRequest.php:
     id: 66c041526960
-    last_write_checksum: sha1:3ad09e53c79624c3e508c807c7021d6ccaa381de
-    pristine_git_object: b8f7602d513ccbdb0e6c4a8de4df0359fedc50ac
+    last_write_checksum: sha1:a69a7ad4ca645c8fdd9eea2597e07698bd22fe17
+    pristine_git_object: 3b9eb52fc64a9c36ffc09345e7e27cf24a0c2c55
   src/Models/Operations/ListShippingTrackingsResponse.php:
     id: d484ea200fad
     last_write_checksum: sha1:a88407bc69d28455403d7fcba00fde7b0225bbf7
@@ -20113,8 +20149,8 @@ trackedFiles:
     pristine_git_object: 91bd02b746553b8ad9ab725aced83ad6ce711a23
   src/Models/Operations/ListUcCallsQueryParamFields.php:
     id: 3f587f048e1d
-    last_write_checksum: sha1:ac3a7d7c18f0ef9529ca421d14993b4e7058e93f
-    pristine_git_object: e8d32f9aba8548d59f914ce8376a4afff51bd59e
+    last_write_checksum: sha1:ab205a1a44c71550947f7e18b854db6ea7ce3248
+    pristine_git_object: a9b63636439ac242c053f46f2244940f114d3588
   src/Models/Operations/ListUcCallsRequest.php:
     id: bb483df58f98
     last_write_checksum: sha1:ab2c27b7b33d005c02848267c87b3989df9b192f
@@ -21513,8 +21549,8 @@ trackedFiles:
     pristine_git_object: bd3da581bcbe4aaa27d43e98722f055485e07b31
   src/Models/Operations/PatchShippingShipmentQueryParamFields.php:
     id: 2cdeb6cb19db
-    last_write_checksum: sha1:11b4c1f1f598744d650f912b01189310cefb5f11
-    pristine_git_object: 2b14559fb559ea8e3e635e2ac789525b848a50d3
+    last_write_checksum: sha1:f3e72be100992d153957c8038b05805f6ceead58
+    pristine_git_object: 66583159f6917782118f4620954071c47d6bc7e4
   src/Models/Operations/PatchShippingShipmentRequest.php:
     id: 44274b6d9503
     last_write_checksum: sha1:d9db680827c2d41872958144e591ad4ce6b04437
@@ -23973,8 +24009,8 @@ trackedFiles:
     pristine_git_object: 96b261fa496591433b4fa65c317647ed34746b27
   src/Models/Operations/UpdateShippingShipmentQueryParamFields.php:
     id: 952ed921b8c5
-    last_write_checksum: sha1:590205a54d52d02a17cfd94394eeda223ed5c45d
-    pristine_git_object: bd13bf2223a97e47269892a5b7cee5503c2a32d1
+    last_write_checksum: sha1:569bba91d219a375805ab05bbbbea29f13fbac42
+    pristine_git_object: 73bc4d2dea5a7e95f24b026529c2fb38c29b0c43
   src/Models/Operations/UpdateShippingShipmentRequest.php:
     id: 9fc1bb43ddc1
     last_write_checksum: sha1:06afbae2c6f570336e1e865ab967e49f4dda828a
@@ -27797,8 +27833,12 @@ trackedFiles:
     pristine_git_object: f4b65f7f32f4fdda7247169c25e70b5cb1c9a311
   src/Models/Shared/ShippingShipment.php:
     id: 91192460daa3
-    last_write_checksum: sha1:5d0983d1334fc685809f10d6f2121adfbc453fad
-    pristine_git_object: 096b642520eb9b55bb10cdbcc65649bc17aad39f
+    last_write_checksum: sha1:606b3a809d308a9b937d0b222d7af8092784cdd6
+    pristine_git_object: 83d6ac851332d11f23034714b04ccd887252af5f
+  src/Models/Shared/ShippingShipmentLineitem.php:
+    id: 3d4fccecc975
+    last_write_checksum: sha1:76b73e4c5c80ebaba94e76d947fb708a0ba423cc
+    pristine_git_object: 02287260c72c4ec02a6dc3de1f3e74cf289feddc
   src/Models/Shared/ShippingShipmentStatus.php:
     id: 6f1790121d58
     last_write_checksum: sha1:f26213be9a2b6afa588f05f9dde2bcf50f2c9ead
@@ -27989,8 +28029,8 @@ trackedFiles:
     pristine_git_object: 38443695e46b2d652f7cf52309e165b3426490ba
   src/Models/Shared/UcCall.php:
     id: 663e8543d1c1
-    last_write_checksum: sha1:b3c8e2658be580c578795e538ad4621a5f1b044d
-    pristine_git_object: a6da5acf0730ff50581710ac6f7a4c6e3c44e894
+    last_write_checksum: sha1:43dedd2a36dcd3820149de430cbe443b29dcbf07
+    pristine_git_object: c401a695f32707eb0347ea4abe83db8785dd479f
   src/Models/Shared/UcCallType.php:
     id: c7498157cc18
     last_write_checksum: sha1:d802ee63da9bdcadc9dee3717d477c66f9cfc93c
@@ -28011,6 +28051,22 @@ trackedFiles:
     id: 12b0d41445a2
     last_write_checksum: sha1:0bb477086231856fe6abf0acb4c04a1c99d4a664
     pristine_git_object: cb62c08d984c67a75a5c223c36a955303cf5b0c4
+  src/Models/Shared/UcMetadata.php:
+    id: eac2e7a62009
+    last_write_checksum: sha1:8c9af96332a7554422f607b416ec706d8bfa4f51
+    pristine_git_object: af8884c00f5a03e69a89e1b749f53a75e5b5a9ac
+  src/Models/Shared/UcMetadata1.php:
+    id: 200ca7ac5d0b
+    last_write_checksum: sha1:5870e2c2344c8fa66c5143e71b6195a349d5a17c
+    pristine_git_object: 85b05375328586dd2290572d3c4134a18098ec8a
+  src/Models/Shared/UcMetadataFormat.php:
+    id: 8814db735925
+    last_write_checksum: sha1:44fa9e9d78e5a67b6fb0b61b6023c6935d2d6fb1
+    pristine_git_object: 20857d9f22ce0267912d743ca11fff7d7ccb2965
+  src/Models/Shared/UcMetadataSchemas1.php:
+    id: 8890cc24cdfe
+    last_write_checksum: sha1:9cf88a7e3a29d606210425e7e552ed106b7de9a1
+    pristine_git_object: e53fe74872084a5cd841787096c98368a91a4208
   src/Models/Shared/UcRecording.php:
     id: 8526a96ae2c7
     last_write_checksum: sha1:c2c8c14fc29dc3e24fe25025049a177f85b35d78
@@ -28505,8 +28561,8 @@ trackedFiles:
     pristine_git_object: 0c4028bd3bd456a71802a10bc5054daf94b29def
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:597355ed67504bbe3a5cb0224e45a9eb710e6509
-    pristine_git_object: f8a1ff5a96562f45d13801772a32b1908daf7ec5
+    last_write_checksum: sha1:f59618f32b3f004089231d432f6a16ea2ad94c57
+    pristine_git_object: 42079698afc14f5bc37b1b36c6c89cfd5df6c784
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -42705,7 +42761,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->report->listAdsReports()`:  `response.[]->metrics[]->creative->creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->createAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->getAdsCreative()`:  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->listAdsCreatives()`:  `response.[]->creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->listAdsReports()`:  `response.[]->metrics[]->creative->creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->patchAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->ads->updateAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->createAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->getAdsCreative()`:  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->listAdsCreatives()`:  `response.[]->creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->patchAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n* `unified-to->creative->updateAdsCreative()`: \n  *  `request->adsCreative->creativeType->enum(share)` **Added**\n  *  `response.creativeType->enum(share)` **Added** (Breaking ⚠️)\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->shipping->createShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipping->getShippingShipment()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipping->listShippingShipments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->shipping->listShippingTrackings()`: \n  *  `request->orderId` **Added**\n* `unified-to->shipping->patchShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipping->updateShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipment->createShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipment->getShippingShipment()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipment->listShippingShipments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->shipment->patchShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipment->updateShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->tracking->listShippingTrackings()`: \n  *  `request->orderId` **Added**\n* `unified-to->uc->getUcCall()`: \n  *  `request->fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->uc->listUcCalls()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->metadata` **Added**\n* `unified-to->call->getUcCall()`: \n  *  `request->fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->call->listUcCalls()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->metadata` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

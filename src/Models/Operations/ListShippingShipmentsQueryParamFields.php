@@ -15,6 +15,7 @@ enum ListShippingShipmentsQueryParamFields: string
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
     case OrderId = 'order_id';
+    case OrganizationId = 'organization_id';
     case FromAddress = 'from_address';
     case ToAddress = 'to_address';
     case Packages = 'packages';
@@ -46,5 +47,8 @@ enum ListShippingShipmentsQueryParamFields: string
     case OriginalShipmentId = 'original_shipment_id';
     case ReturnReason = 'return_reason';
     case ReturnType = 'return_type';
+    case CarrierName = 'carrier_name';
+    case TrackingUrl = 'tracking_url';
+    case Lineitems = 'lineitems';
     case Raw = 'raw';
 }

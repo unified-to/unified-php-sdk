@@ -62,6 +62,16 @@ class UcCall
     public ?bool $isPrivate = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -137,6 +147,7 @@ class UcCall
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
      * @param  ?bool  $isPrivate
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyUcCallTelephone  $telephone
@@ -147,7 +158,7 @@ class UcCall
      * @param  ?string  $userPhone
      * @phpstan-pure
      */
-    public function __construct(?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPrivate = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyUcCallTelephone $telephone = null, ?UcCallType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null)
+    public function __construct(?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPrivate = null, ?array $metadata = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyUcCallTelephone $telephone = null, ?UcCallType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null)
     {
         $this->contactId = $contactId;
         $this->contacts = $contacts;
@@ -155,6 +166,7 @@ class UcCall
         $this->endAt = $endAt;
         $this->id = $id;
         $this->isPrivate = $isPrivate;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->telephone = $telephone;

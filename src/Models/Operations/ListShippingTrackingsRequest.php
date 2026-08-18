@@ -49,6 +49,14 @@ class ListShippingTrackingsRequest
     public ?string $order = null;
 
     /**
+     * The AccountingOrder ID to filter by
+     *
+     * @var ?string $orderId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=order_id')]
+    public ?string $orderId = null;
+
+    /**
      * Query string to search. eg. email address or name
      *
      * @var ?string $query
@@ -85,19 +93,21 @@ class ListShippingTrackingsRequest
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
+     * @param  ?string  $orderId
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orderId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
+        $this->orderId = $orderId;
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;

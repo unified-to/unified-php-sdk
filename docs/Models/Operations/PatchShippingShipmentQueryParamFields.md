@@ -9,6 +9,7 @@
 | `CreatedAt`                 | created_at                  |
 | `UpdatedAt`                 | updated_at                  |
 | `OrderId`                   | order_id                    |
+| `OrganizationId`            | organization_id             |
 | `FromAddress`               | from_address                |
 | `ToAddress`                 | to_address                  |
 | `Packages`                  | packages                    |
@@ -40,4 +41,7 @@
 | `OriginalShipmentId`        | original_shipment_id        |
 | `ReturnReason`              | return_reason               |
 | `ReturnType`                | return_type                 |
+| `CarrierName`               | carrier_name                |
+| `TrackingUrl`               | tracking_url                |
+| `Lineitems`                 | lineitems                   |
 | `Raw`                       | raw                         |
