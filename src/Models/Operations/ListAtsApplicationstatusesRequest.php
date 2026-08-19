@@ -28,6 +28,14 @@ class ListAtsApplicationstatusesRequest
     public ?array $fields = null;
 
     /**
+     * The job ID to filter by
+     *
+     * @var ?string $jobId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
+    public ?string $jobId = null;
+
+    /**
      *
      * @var ?float $limit
      */
@@ -82,6 +90,7 @@ class ListAtsApplicationstatusesRequest
     /**
      * @param  string  $connectionId
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesQueryParamFields>  $fields
+     * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -91,10 +100,11 @@ class ListAtsApplicationstatusesRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?array $fields = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->fields = $fields;
+        $this->jobId = $jobId;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;

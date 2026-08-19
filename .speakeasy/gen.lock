@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 0c936c60770ab094bb7fea41b06b41b6
+  docChecksum: 886b4ea0644bd8b8175e53cfbdd19e43
   docVersion: "1.0"
-  speakeasyVersion: 1.794.1
+  speakeasyVersion: 1.795.0
   generationVersion: 2.931.0
-  releaseVersion: 1.6.106
-  configChecksum: 98ec5ab79a5c6ec080bd1dfd52385371
+  releaseVersion: 1.6.107
+  configChecksum: 62b1ff90a3af5d4c71ef705d344fa997
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: af4a7953-f412-4994-9306-d01dc3f99bde
-  pristine_commit_hash: 061d07f4b2ef3e5d6943105b79d2a02df95602dc
-  pristine_tree_hash: ca3da7ea616d2eaa773fdf963da6ee2d879cca68
+  generation_id: a4d33ec4-0941-438a-a954-6c227f4e84d6
+  pristine_commit_hash: 0470165380c50ea43802c22bf64ccd8443f63e89
+  pristine_tree_hash: 46078e325611690fcc3bbfbf948dbee26688c6e2
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -3969,8 +3969,8 @@ trackedFiles:
     pristine_git_object: ca16f5bd1f85bd1a3827aa27cb4a7597b5042f79
   docs/Models/Operations/ListAtsApplicationstatusesRequest.md:
     id: c533b9a743e4
-    last_write_checksum: sha1:05391e5b3a4c9bb65484050409063d77c35d498d
-    pristine_git_object: 910fba30e9d8b38db14a45c082a1d9bb297b375f
+    last_write_checksum: sha1:a02f49a61742639fb3ee7291b6c9fe16697e7f96
+    pristine_git_object: 171a438c6d6070817a66d61012d823f0521bc93d
   docs/Models/Operations/ListAtsApplicationstatusesResponse.md:
     id: 8fa066372bb0
     last_write_checksum: sha1:dc2cdab3145dc5e6d7e8bd530a29a0011618c70b
@@ -18829,8 +18829,8 @@ trackedFiles:
     pristine_git_object: e07231315010c5afefd2109d42cc49cee43f2532
   src/Models/Operations/ListAtsApplicationstatusesRequest.php:
     id: d55ea1f885e8
-    last_write_checksum: sha1:e5ad74a0fff693d5adf2f96e8c302f90bed483b4
-    pristine_git_object: e9e3836a17fdebbcf2b36e0e55485a8b5085c35e
+    last_write_checksum: sha1:0f08c0c3d829d10a46f77a9afb45b117d5e7e876
+    pristine_git_object: 1bb2d2b32d51d5aa148bc8c0ebeb8101fe0bca87
   src/Models/Operations/ListAtsApplicationstatusesResponse.php:
     id: 50f4e5581c3e
     last_write_checksum: sha1:c487cabce930c3d12a6a5f3e95e680f9753d2fe5
@@ -28561,8 +28561,8 @@ trackedFiles:
     pristine_git_object: 0c4028bd3bd456a71802a10bc5054daf94b29def
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:f59618f32b3f004089231d432f6a16ea2ad94c57
-    pristine_git_object: 42079698afc14f5bc37b1b36c6c89cfd5df6c784
+    last_write_checksum: sha1:e87c5708ace241153470f42dc4dd8bbf7ae4003b
+    pristine_git_object: 9d8075113808eb71bb432ba9e088baa5f2f158e7
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -42761,7 +42761,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->shipping->createShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipping->getShippingShipment()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipping->listShippingShipments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->shipping->listShippingTrackings()`: \n  *  `request->orderId` **Added**\n* `unified-to->shipping->patchShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipping->updateShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipment->createShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipment->getShippingShipment()`: \n  *  `request->fields` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipment->listShippingShipments()`: \n  *  `request` **Changed**\n  *  `response.[]` **Changed**\n* `unified-to->shipment->patchShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->shipment->updateShippingShipment()`: \n  *  `request` **Changed**\n  *  `response` **Changed**\n* `unified-to->tracking->listShippingTrackings()`: \n  *  `request->orderId` **Added**\n* `unified-to->uc->getUcCall()`: \n  *  `request->fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->uc->listUcCalls()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->metadata` **Added**\n* `unified-to->call->getUcCall()`: \n  *  `request->fields` **Changed**\n  *  `response.metadata` **Added**\n* `unified-to->call->listUcCalls()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->metadata` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->ats->listAtsApplicationstatuses()`: \n  *  `request->jobId` **Added**\n* `unified-to->applicationstatus->listAtsApplicationstatuses()`: \n  *  `request->jobId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
