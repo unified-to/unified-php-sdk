@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 886b4ea0644bd8b8175e53cfbdd19e43
+  docChecksum: f1b21bdacc13bdae2d4bb40a40b83aba
   docVersion: "1.0"
   speakeasyVersion: 1.795.0
   generationVersion: 2.931.0
-  releaseVersion: 1.6.107
-  configChecksum: 62b1ff90a3af5d4c71ef705d344fa997
+  releaseVersion: 1.6.108
+  configChecksum: 74fad10eecac5e3125ff01c6eac6fc54
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: a4d33ec4-0941-438a-a954-6c227f4e84d6
-  pristine_commit_hash: 0470165380c50ea43802c22bf64ccd8443f63e89
-  pristine_tree_hash: 46078e325611690fcc3bbfbf948dbee26688c6e2
+  generation_id: d9942804-a961-457c-af9c-064ef115d16f
+  pristine_commit_hash: e698d45157d2cdae694bdd36314b5cc4c941c902
+  pristine_tree_hash: 7e92762964e57815cd479dd11054524d842864f9
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -4645,8 +4645,8 @@ trackedFiles:
     pristine_git_object: 8746ac666c070b84ace4d94c6cfe79dfa5ded265
   docs/Models/Operations/ListHrisLocationsRequest.md:
     id: 583ba8abf773
-    last_write_checksum: sha1:a47875ec52f6f93e2cacc45539d7be897f8a68ac
-    pristine_git_object: 384f7adce7fff98b975429ac3d89b0295962d5f4
+    last_write_checksum: sha1:b8f630a00e2e265b516c180e87be4fce1c72b387
+    pristine_git_object: 4a3315f165f7c9e57d4c8adb242f8eace62f199a
   docs/Models/Operations/ListHrisLocationsResponse.md:
     id: 41519397e0ba
     last_write_checksum: sha1:c6aac75cb28107428bb2c98a5ba1a1261108125b
@@ -19505,8 +19505,8 @@ trackedFiles:
     pristine_git_object: f2f923839509857510467db3e211a45e599294c5
   src/Models/Operations/ListHrisLocationsRequest.php:
     id: 7d9df7153d8a
-    last_write_checksum: sha1:2b9ed9eeadc05609443aa253e3457cfb522fa9f9
-    pristine_git_object: fb89b7768c4577fb87b9ee45ae285ac051ba28a3
+    last_write_checksum: sha1:654c41b153e5046fc115e1eb52b09f2c22e9b45c
+    pristine_git_object: c7aabfb11bc896d25708bc4dbe7b2b1e6a4e3a79
   src/Models/Operations/ListHrisLocationsResponse.php:
     id: 44becf3335bf
     last_write_checksum: sha1:51f488770f27fa5c67dd7197dd16d631d34405e2
@@ -28561,8 +28561,8 @@ trackedFiles:
     pristine_git_object: 0c4028bd3bd456a71802a10bc5054daf94b29def
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:e87c5708ace241153470f42dc4dd8bbf7ae4003b
-    pristine_git_object: 9d8075113808eb71bb432ba9e088baa5f2f158e7
+    last_write_checksum: sha1:c94fbbbd71f10183e94b81dd41a90be90fed6dd9
+    pristine_git_object: 21cbf3b2ecfda604c507d650f3b02b5467d25646
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -42761,7 +42761,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->ats->listAtsApplicationstatuses()`: \n  *  `request->jobId` **Added**\n* `unified-to->applicationstatus->listAtsApplicationstatuses()`: \n  *  `request->jobId` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->location->listHrisLocations()`: \n  *  `request->parentId` **Added**\n* `unified-to->hris->listHrisLocations()`: \n  *  `request->parentId` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
