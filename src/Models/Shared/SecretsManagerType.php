@@ -16,4 +16,10 @@ enum SecretsManagerType: string
     case Gcp = 'gcp';
     case Hashicorp = 'hashicorp';
     case Composio = 'composio';
+    case Onepassword = '1password';
+    case Bitwarden = 'bitwarden';
+    case Doppler = 'doppler';
+    case Akeyless = 'akeyless';
+    case Pipedream = 'pipedream';
+    case Alibabacloud = 'alibabacloud';
 }

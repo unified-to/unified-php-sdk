@@ -17,4 +17,5 @@ enum HrisTaxonomyType: string
     case Ability = 'ABILITY';
     case Certification = 'CERTIFICATION';
     case Role = 'ROLE';
+    case Holiday = 'HOLIDAY';
 }

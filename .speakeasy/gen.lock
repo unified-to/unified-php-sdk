@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: f1b21bdacc13bdae2d4bb40a40b83aba
+  docChecksum: ac3e4c504e331816bec27ab0719fcbcb
   docVersion: "1.0"
-  speakeasyVersion: 1.795.0
-  generationVersion: 2.931.0
-  releaseVersion: 1.6.108
-  configChecksum: 74fad10eecac5e3125ff01c6eac6fc54
+  speakeasyVersion: 1.795.1
+  generationVersion: 2.932.9
+  releaseVersion: 1.6.109
+  configChecksum: f8950600a1d781a7e0fac2b6b215192b
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: d9942804-a961-457c-af9c-064ef115d16f
-  pristine_commit_hash: e698d45157d2cdae694bdd36314b5cc4c941c902
-  pristine_tree_hash: 7e92762964e57815cd479dd11054524d842864f9
+  generation_id: 5257b3e6-e084-496b-97fd-2683ee86594b
+  pristine_commit_hash: 95eb6d80f8c101f44cfeafec276fa44e2c4453e3
+  pristine_tree_hash: 41dfc7e120c3dd38e048ff1d064c233bb14f1f2d
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -4681,8 +4681,8 @@ trackedFiles:
     pristine_git_object: d878ac7aa2330376ed708901741ae5f46b02e655
   docs/Models/Operations/ListHrisTimeoffsRequest.md:
     id: 24020e46909c
-    last_write_checksum: sha1:c60bbed12a626e9dd0cf8402264ca6c297c1cccb
-    pristine_git_object: 7517f81b51511e0b9e4ab8632c571ef196789e92
+    last_write_checksum: sha1:07d7ac0b706288fd2fbe4244dc311babc4f920aa
+    pristine_git_object: 2ca036fb0fba1a5138d6783d4d90a2b364100bc5
   docs/Models/Operations/ListHrisTimeoffsResponse.md:
     id: ebe7195f039b
     last_write_checksum: sha1:43ba2207dc264ecef2768044e64da309448c1451
@@ -10949,8 +10949,8 @@ trackedFiles:
     pristine_git_object: ac4417c4ec1e5eafba6572d9dbe95fa13cd457d2
   docs/Models/Shared/HrisTaxonomyType.md:
     id: 66a510d9a7d5
-    last_write_checksum: sha1:f42aaea899f361262038b7d2289a432ea36659d7
-    pristine_git_object: d8f2cbacc04e7a26ffed0b3d474b79044aeb7d26
+    last_write_checksum: sha1:80fd2789b650853ca57ba90eefb8dca561bd9bba
+    pristine_git_object: 156ae0fb3902104221cddecccf664e7ce264a3a7
   docs/Models/Shared/HrisTelephone.md:
     id: 68141d965bc3
     last_write_checksum: sha1:fd5552c217178f4c3ff133be28c1dfd1b619f2af
@@ -13057,8 +13057,8 @@ trackedFiles:
     pristine_git_object: 2a7065a38e00f8fe8da60285e104a69d6f68bca9
   docs/Models/Shared/SecretsManagerType.md:
     id: c8dd33b639ee
-    last_write_checksum: sha1:d7f64e9bf34f661db540c22e3dea1bc4fc73c4fa
-    pristine_git_object: 9304e0597a161ea53683077e66b163ed66747ab0
+    last_write_checksum: sha1:91001a15432bd7d854c780183e391cd6ed026e9b
+    pristine_git_object: 846d73f8400780fed57ca8c02ae74924e6ce530d
   docs/Models/Shared/Security.md:
     id: 49aae5b4624b
     last_write_checksum: sha1:79b43d6a6082ecdb8795df2ac9ebf013f386f045
@@ -13181,8 +13181,8 @@ trackedFiles:
     pristine_git_object: bc6f77b7cad26d73e506015522f221d52aa2bc69
   docs/Models/Shared/StorageFile.md:
     id: f466ce5979b8
-    last_write_checksum: sha1:084fa3f21b727fe7c3addfb3225a75e2c01fe59c
-    pristine_git_object: 7b18db3e8b2b09691011b56c27b38407d3f7dfe5
+    last_write_checksum: sha1:2f5076d3a18d89b116d070c441dcb9c7f0ceaf8e
+    pristine_git_object: d077caf71e34e1a4d64e3b3b065ae046a7148171
   docs/Models/Shared/StorageFileType.md:
     id: 1154550217c8
     last_write_checksum: sha1:137a47035c9dc6ba74ae8bff99b6f3a4c4bab1b9
@@ -19541,8 +19541,8 @@ trackedFiles:
     pristine_git_object: fd2d619d4bd18b3174c46a6e240e7dde8d827f7a
   src/Models/Operations/ListHrisTimeoffsRequest.php:
     id: 54f28812df57
-    last_write_checksum: sha1:a568333ad0802b61b1f4cfc05a2214404fa91fb0
-    pristine_git_object: 04c4badbe5488af3a678d99b00aec5648936f0e4
+    last_write_checksum: sha1:48be881e903a1a0c45da294bb34f509314f9c2ab
+    pristine_git_object: fe204d13f174e8e5313103980e9066b7281c6ad3
   src/Models/Operations/ListHrisTimeoffsResponse.php:
     id: 24aaec798051
     last_write_checksum: sha1:ca79bf4f9e103e0d64538592cfa194c2ef75f651
@@ -25713,8 +25713,8 @@ trackedFiles:
     pristine_git_object: bcef2cc26b17a526172abbf7506677217bbfbe32
   src/Models/Shared/HrisTaxonomyType.php:
     id: a56be89db37b
-    last_write_checksum: sha1:75186dd954780cd7b4000e737761c051694f52b6
-    pristine_git_object: c68bd13689bcda5c15f242030723b8eeeff7dbef
+    last_write_checksum: sha1:7df1d0eafd8e3dbfe96d59220343af0e30913a63
+    pristine_git_object: 57058bcfb96f4654647687cbdff7ee045610bfc9
   src/Models/Shared/HrisTelephone.php:
     id: d052d9a16ee4
     last_write_checksum: sha1:815bf9e37d3500c70188fca747bf39f9f91f008b
@@ -27777,8 +27777,8 @@ trackedFiles:
     pristine_git_object: 0ce7a4d31ec88a44c4bf6129629623f7b2fbe5c8
   src/Models/Shared/SecretsManagerType.php:
     id: 797d05996cd4
-    last_write_checksum: sha1:1ac1dad001b10c9ab57bd7b148462109867f165a
-    pristine_git_object: a21ea7489bf16ad07722abcf2133216ef97590b4
+    last_write_checksum: sha1:542a157d4179586486037c61f2b1e44fc1c0cc66
+    pristine_git_object: d54bd4bdf4bb950925c391947fa9e736f0a5e1a6
   src/Models/Shared/Security.php:
     id: 979d3c4f4713
     last_write_checksum: sha1:d7014ce3c6d8ff6470b3f7b7c668e9656f70c049
@@ -27901,8 +27901,8 @@ trackedFiles:
     pristine_git_object: 29d71b73b8497d70958bad593d4d9c08da0f76d6
   src/Models/Shared/StorageFile.php:
     id: 58f8a9b922f9
-    last_write_checksum: sha1:2f6a173701288c3c394795bdfabd97c1fd7c05a0
-    pristine_git_object: 85334602ac44c8dc6d27d6ce552500d84354296a
+    last_write_checksum: sha1:cb8c3dfa48cbc51bc1ccde53140765b2e2894162
+    pristine_git_object: 14e0762007059f95367da8db865442af86f38f21
   src/Models/Shared/StorageFileType.php:
     id: 3544796f8ede
     last_write_checksum: sha1:1c5667bbabe41aae48d51c43605c5c9bd6628449
@@ -28561,8 +28561,8 @@ trackedFiles:
     pristine_git_object: 0c4028bd3bd456a71802a10bc5054daf94b29def
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:c94fbbbd71f10183e94b81dd41a90be90fed6dd9
-    pristine_git_object: 21cbf3b2ecfda604c507d650f3b02b5467d25646
+    last_write_checksum: sha1:f2e7f0c5066f6a6d2945f86440d14ec4146aaabc
+    pristine_git_object: 874e96b7edb38ee021e618446c5faa8e2148c970
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -42761,7 +42761,7 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->location->listHrisLocations()`: \n  *  `request->parentId` **Added**\n* `unified-to->hris->listHrisLocations()`: \n  *  `request->parentId` **Added**\n"
+releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->getHrisTaxonomy()`:  `response.type->enum(holiday)` **Added** (Breaking ⚠️)\n* `unified-to->hris->listHrisTaxonomies()`:  `response.[]->type->enum(holiday)` **Added** (Breaking ⚠️)\n* `unified-to->taxonomy->getHrisTaxonomy()`:  `response.type->enum(holiday)` **Added** (Breaking ⚠️)\n* `unified-to->taxonomy->listHrisTaxonomies()`:  `response.[]->type->enum(holiday)` **Added** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWorkspaceSecretsmanager()`: \n  *  `request->type` **Changed**\n  *  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWorkspaceSecretsmanager()`:  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWorkspaceSecretsmanagers()`:  `response.[]->type` **Changed** (Breaking ⚠️)\n* `unified-to->secretsmanager->createUnifiedWorkspaceSecretsmanager()`: \n  *  `request->type` **Changed**\n  *  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->secretsmanager->getUnifiedWorkspaceSecretsmanager()`:  `response.type` **Changed** (Breaking ⚠️)\n* `unified-to->secretsmanager->listUnifiedWorkspaceSecretsmanagers()`:  `response.[]->type` **Changed** (Breaking ⚠️)\n* `unified-to->hris->listHrisTimeoffs()`: \n  *  `request->status` **Added**\n* `unified-to->timeoff->listHrisTimeoffs()`: \n  *  `request->status` **Added**\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md

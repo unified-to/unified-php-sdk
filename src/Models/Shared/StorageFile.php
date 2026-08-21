@@ -122,7 +122,7 @@ class StorageFile
     public ?float $size = null;
 
     /**
-     * $tags
+     * labels
      *
      * @var ?array<string> $tags
      */
