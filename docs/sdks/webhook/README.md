@@ -38,7 +38,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Created,
+        event: Shared\WebhookEvent::Created,
         objectType: Shared\WebhookObjectType::AtsScorecard,
     ),
 );
@@ -190,7 +190,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Updated,
+        event: Shared\WebhookEvent::Updated,
         objectType: Shared\WebhookObjectType::TicketingCustomer,
     ),
     id: '<id>',
@@ -346,7 +346,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Deleted,
+        event: Shared\WebhookEvent::Deleted,
         objectType: Shared\WebhookObjectType::MessagingChannel,
     ),
     id: '<id>',

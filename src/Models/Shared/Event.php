@@ -11,7 +11,24 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum Event: string
 {
-    case Updated = 'updated';
-    case Created = 'created';
-    case Deleted = 'deleted';
+    case UserCreated = 'USER_CREATED';
+    case UserDeleted = 'USER_DELETED';
+    case ConnectionHealthy = 'CONNECTION_HEALTHY';
+    case ConnectionUnhealthy = 'CONNECTION_UNHEALTHY';
+    case ConnectionCreated = 'CONNECTION_CREATED';
+    case ConnectionUpdated = 'CONNECTION_UPDATED';
+    case ConnectionDeleted = 'CONNECTION_DELETED';
+    case ConnectionPaused = 'CONNECTION_PAUSED';
+    case ConnectionUnpaused = 'CONNECTION_UNPAUSED';
+    case IntegrationActivated = 'INTEGRATION_ACTIVATED';
+    case IntegrationDeactivated = 'INTEGRATION_DEACTIVATED';
+    case IntegrationUpdated = 'INTEGRATION_UPDATED';
+    case WorkspaceUpdated = 'WORKSPACE_UPDATED';
+    case WorkspaceOverLimit = 'WORKSPACE_OVER_LIMIT';
+    case Workspace80PercentLimit = 'WORKSPACE_80PERCENT_LIMIT';
+    case WebhookCreated = 'WEBHOOK_CREATED';
+    case WebhookDeleted = 'WEBHOOK_DELETED';
+    case WebhookUnhealthy = 'WEBHOOK_UNHEALTHY';
+    case WebhookPaused = 'WEBHOOK_PAUSED';
+    case WebhookUnpaused = 'WEBHOOK_UNPAUSED';
 }

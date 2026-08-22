@@ -20,6 +20,7 @@
 * [listUnifiedIntegrationWorkspaces](#listunifiedintegrationworkspaces) - Returns all activated integrations in a workspace
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
+* [listUnifiedNotifications](#listunifiednotifications) - List event notifications
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
 * [listUnifiedWorkspaceSecretsmanagers](#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
@@ -159,7 +160,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Created,
+        event: Shared\WebhookEvent::Created,
         objectType: Shared\WebhookObjectType::AtsScorecard,
     ),
 );
@@ -823,6 +824,53 @@ if ($response->issues !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listUnifiedNotifications
+
+List event notifications
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUnifiedNotifications" method="get" path="/unified/notification" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->unified->listUnifiedNotifications(
+    request: $request
+);
+
+if ($response->notifications !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListUnifiedNotificationsRequest](../../Models/Operations/ListUnifiedNotificationsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\ListUnifiedNotificationsResponse](../../Models/Operations/ListUnifiedNotificationsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listUnifiedWebhooks
 
 Returns all registered webhooks
@@ -1002,7 +1050,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Updated,
+        event: Shared\WebhookEvent::Updated,
         objectType: Shared\WebhookObjectType::TicketingCustomer,
     ),
     id: '<id>',
@@ -1367,7 +1415,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUnifiedWebhookRequest(
     webhook: new Shared\Webhook(
         connectionId: '<id>',
-        event: Shared\Event::Deleted,
+        event: Shared\WebhookEvent::Deleted,
         objectType: Shared\WebhookObjectType::MessagingChannel,
     ),
     id: '<id>',

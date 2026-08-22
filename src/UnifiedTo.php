@@ -360,6 +360,8 @@ class UnifiedTo
 
     public Issue $issue;
 
+    public Notification $notification;
+
     public Webhook $webhook;
 
     public Secretsmanager $secretsmanager;
@@ -550,6 +552,7 @@ class UnifiedTo
         $this->login = new Login($this->sdkConfiguration);
         $this->saml = new Saml($this->sdkConfiguration);
         $this->issue = new Issue($this->sdkConfiguration);
+        $this->notification = new Notification($this->sdkConfiguration);
         $this->webhook = new Webhook($this->sdkConfiguration);
         $this->secretsmanager = new Secretsmanager($this->sdkConfiguration);
         $this->verification = new Verification($this->sdkConfiguration);
