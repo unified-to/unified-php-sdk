@@ -62,6 +62,8 @@ class UnifiedTo
 
     public Organization $organization;
 
+    public Paymentterm $paymentterm;
+
     public Profitloss $profitloss;
 
     public Project $project;
@@ -403,6 +405,7 @@ class UnifiedTo
         $this->journal = new Journal($this->sdkConfiguration);
         $this->order = new Order($this->sdkConfiguration);
         $this->organization = new Organization($this->sdkConfiguration);
+        $this->paymentterm = new Paymentterm($this->sdkConfiguration);
         $this->profitloss = new Profitloss($this->sdkConfiguration);
         $this->project = new Project($this->sdkConfiguration);
         $this->purchaseorder = new Purchaseorder($this->sdkConfiguration);

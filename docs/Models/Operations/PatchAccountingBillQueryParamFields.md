@@ -33,6 +33,7 @@
 | `OrganizationId`          | organization_id           |
 | `Term`                    | term                      |
 | `PaymentTerms`            | payment_terms             |
+| `PaymenttermId`           | paymentterm_id            |
 | `Payments`                | payments                  |
 | `CategoryIds`             | category_ids              |
 | `ProjectId`               | project_id                |

@@ -185,6 +185,14 @@ class AccountingBill
 
     /**
      *
+     * @var ?string $paymenttermId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('paymentterm_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $paymenttermId = null;
+
+    /**
+     *
      * @var ?\DateTime $postedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('posted_at')]
@@ -312,6 +320,7 @@ class AccountingBill
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentCollectionMethod  $paymentCollectionMethod
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentTerms  $paymentTerms
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference>  $payments
+     * @param  ?string  $paymenttermId
      * @param  ?\DateTime  $postedAt
      * @param  ?string  $projectId
      * @param  ?array<string, mixed>  $raw
@@ -327,7 +336,7 @@ class AccountingBill
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?string $billNumber = null, ?\DateTime $cancelledAt = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?PaymentTerms $paymentTerms = null, ?array $payments = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingBillStatus $status = null, ?float $taxAmount = null, ?Term $term = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?string $billNumber = null, ?\DateTime $cancelledAt = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?PaymentTerms $paymentTerms = null, ?array $payments = null, ?string $paymenttermId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingBillStatus $status = null, ?float $taxAmount = null, ?Term $term = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->attachments = $attachments;
         $this->balanceAmount = $balanceAmount;
@@ -349,6 +358,7 @@ class AccountingBill
         $this->paymentCollectionMethod = $paymentCollectionMethod;
         $this->paymentTerms = $paymentTerms;
         $this->payments = $payments;
+        $this->paymenttermId = $paymenttermId;
         $this->postedAt = $postedAt;
         $this->projectId = $projectId;
         $this->raw = $raw;

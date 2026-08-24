@@ -33,6 +33,7 @@ enum CreateAccountingInvoiceQueryParamFields: string
     case RefundReason = 'refund_reason';
     case Term = 'term';
     case PaymentTerms = 'payment_terms';
+    case PaymenttermId = 'paymentterm_id';
     case Lineitems = 'lineitems';
     case Status = 'status';
     case Url = 'url';

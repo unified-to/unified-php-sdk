@@ -15,6 +15,7 @@
 * [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](#createaccountingjournal) - Create a journal
 * [createAccountingOrder](#createaccountingorder) - Create an order
+* [createAccountingPaymentterm](#createaccountingpaymentterm) - Create a paymentterm
 * [createAccountingProject](#createaccountingproject) - Create a project
 * [createAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
 * [createAccountingQuote](#createaccountingquote) - Create a quote
@@ -38,6 +39,7 @@
 * [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
 * [getAccountingOrder](#getaccountingorder) - Retrieve an order
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
+* [getAccountingPaymentterm](#getaccountingpaymentterm) - Retrieve a paymentterm
 * [getAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
 * [getAccountingProject](#getaccountingproject) - Retrieve a project
 * [getAccountingPurchaseorder](#getaccountingpurchaseorder) - Retrieve a purchaseorder
@@ -64,6 +66,7 @@
 * [listAccountingJournals](#listaccountingjournals) - List all journals
 * [listAccountingOrders](#listaccountingorders) - List all orders
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
+* [listAccountingPaymentterms](#listaccountingpaymentterms) - List all paymentterms
 * [listAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
 * [listAccountingProjects](#listaccountingprojects) - List all projects
 * [listAccountingPurchaseorders](#listaccountingpurchaseorders) - List all purchaseorders
@@ -85,6 +88,7 @@
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](#patchaccountingjournal) - Update a journal
 * [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [patchAccountingPaymentterm](#patchaccountingpaymentterm) - Update a paymentterm
 * [patchAccountingProject](#patchaccountingproject) - Update a project
 * [patchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
 * [patchAccountingQuote](#patchaccountingquote) - Update a quote
@@ -103,6 +107,7 @@
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
 * [removeAccountingOrder](#removeaccountingorder) - Remove an order
+* [removeAccountingPaymentterm](#removeaccountingpaymentterm) - Remove a paymentterm
 * [removeAccountingProject](#removeaccountingproject) - Remove a project
 * [removeAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
 * [removeAccountingQuote](#removeaccountingquote) - Remove a quote
@@ -121,6 +126,7 @@
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](#updateaccountingjournal) - Update a journal
 * [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [updateAccountingPaymentterm](#updateaccountingpaymentterm) - Update a paymentterm
 * [updateAccountingProject](#updateaccountingproject) - Update a project
 * [updateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
 * [updateAccountingQuote](#updateaccountingquote) - Update a quote
@@ -694,6 +700,58 @@ if ($response->accountingOrder !== null) {
 ### Response
 
 **[?Operations\CreateAccountingOrderResponse](../../Models/Operations/CreateAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createAccountingPaymentterm
+
+Create a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAccountingPaymenttermRequest(
+    accountingPaymentterm: new Shared\AccountingPaymentterm(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->createAccountingPaymentterm(
+    request: $request
+);
+
+if ($response->accountingPaymentterm !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\CreateAccountingPaymenttermRequest](../../Models/Operations/CreateAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+### Response
+
+**[?Operations\CreateAccountingPaymenttermResponse](../../Models/Operations/CreateAccountingPaymenttermResponse.md)**
 
 ### Errors
 
@@ -1874,6 +1932,57 @@ if ($response->accountingOrganization !== null) {
 ### Response
 
 **[?Operations\GetAccountingOrganizationResponse](../../Models/Operations/GetAccountingOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAccountingPaymentterm
+
+Retrieve a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAccountingPaymentterm" method="get" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAccountingPaymenttermRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->getAccountingPaymentterm(
+    request: $request
+);
+
+if ($response->accountingPaymentterm !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\GetAccountingPaymenttermRequest](../../Models/Operations/GetAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\GetAccountingPaymenttermResponse](../../Models/Operations/GetAccountingPaymenttermResponse.md)**
 
 ### Errors
 
@@ -3191,6 +3300,56 @@ if ($response->accountingOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listAccountingPaymentterms
+
+List all paymentterms
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAccountingPaymentterms" method="get" path="/accounting/{connection_id}/paymentterm" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAccountingPaymenttermsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->accounting->listAccountingPaymentterms(
+    request: $request
+);
+
+if ($response->accountingPaymentterms !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\ListAccountingPaymenttermsRequest](../../Models/Operations/ListAccountingPaymenttermsRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\ListAccountingPaymenttermsResponse](../../Models/Operations/ListAccountingPaymenttermsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listAccountingProfitlosses
 
 List all profitlosses
@@ -4274,6 +4433,59 @@ if ($response->accountingOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchAccountingPaymentterm
+
+Update a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchAccountingPaymenttermRequest(
+    accountingPaymentterm: new Shared\AccountingPaymentterm(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->patchAccountingPaymentterm(
+    request: $request
+);
+
+if ($response->accountingPaymentterm !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\PatchAccountingPaymenttermRequest](../../Models/Operations/PatchAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\PatchAccountingPaymenttermResponse](../../Models/Operations/PatchAccountingPaymenttermResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchAccountingProject
 
 Update a project
@@ -5199,6 +5411,57 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveAccountingOrderResponse](../../Models/Operations/RemoveAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeAccountingPaymentterm
+
+Remove a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeAccountingPaymentterm" method="delete" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveAccountingPaymenttermRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->removeAccountingPaymentterm(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\RemoveAccountingPaymenttermRequest](../../Models/Operations/RemoveAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+### Response
+
+**[?Operations\RemoveAccountingPaymenttermResponse](../../Models/Operations/RemoveAccountingPaymenttermResponse.md)**
 
 ### Errors
 
@@ -6139,6 +6402,59 @@ if ($response->accountingOrder !== null) {
 ### Response
 
 **[?Operations\UpdateAccountingOrderResponse](../../Models/Operations/UpdateAccountingOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateAccountingPaymentterm
+
+Update a paymentterm
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateAccountingPaymenttermRequest(
+    accountingPaymentterm: new Shared\AccountingPaymentterm(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->accounting->updateAccountingPaymentterm(
+    request: $request
+);
+
+if ($response->accountingPaymentterm !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\UpdateAccountingPaymenttermRequest](../../Models/Operations/UpdateAccountingPaymenttermRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+### Response
+
+**[?Operations\UpdateAccountingPaymenttermResponse](../../Models/Operations/UpdateAccountingPaymenttermResponse.md)**
 
 ### Errors
 

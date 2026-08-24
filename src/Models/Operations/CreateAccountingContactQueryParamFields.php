@@ -34,5 +34,6 @@ enum CreateAccountingContactQueryParamFields: string
     case AssociatedContacts = 'associated_contacts';
     case OrganizationId = 'organization_id';
     case PaymentTerms = 'payment_terms';
+    case PaymenttermId = 'paymentterm_id';
     case Raw = 'raw';
 }

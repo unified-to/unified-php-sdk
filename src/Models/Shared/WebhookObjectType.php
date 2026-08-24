@@ -20,6 +20,7 @@ enum WebhookObjectType: string
     case AccountingVendorcredit = 'accounting_vendorcredit';
     case AccountingCreditmemo = 'accounting_creditmemo';
     case AccountingTaxrate = 'accounting_taxrate';
+    case AccountingPaymentterm = 'accounting_paymentterm';
     case AccountingOrganization = 'accounting_organization';
     case AccountingOrder = 'accounting_order';
     case AccountingSalesorder = 'accounting_salesorder';

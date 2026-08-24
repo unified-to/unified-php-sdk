@@ -39,6 +39,7 @@ enum ListAccountingBillsQueryParamFields: string
     case OrganizationId = 'organization_id';
     case Term = 'term';
     case PaymentTerms = 'payment_terms';
+    case PaymenttermId = 'paymentterm_id';
     case Payments = 'payments';
     case CategoryIds = 'category_ids';
     case ProjectId = 'project_id';
