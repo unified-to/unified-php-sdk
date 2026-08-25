@@ -45,4 +45,5 @@ enum PropertyConnectionCategories: string
     case Datastore = 'datastore';
     case Cdp = 'cdp';
     case Performance = 'performance';
+    case Social = 'social';
 }

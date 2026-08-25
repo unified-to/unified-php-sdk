@@ -29,12 +29,12 @@ class PropertyAdsGroupPacing
 
     /**
      *
-     * @var ?\Unified\Unified_to\Models\Shared\Period $period
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupPacingPeriod $period
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('period')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Period|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupPacingPeriod|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?Period $period = null;
+    public ?PropertyAdsGroupPacingPeriod $period = null;
 
     /**
      *
@@ -47,11 +47,11 @@ class PropertyAdsGroupPacing
     /**
      * @param  ?float  $dailyMaxAmount
      * @param  ?float  $dailyMaxImpressions
-     * @param  ?\Unified\Unified_to\Models\Shared\Period  $period
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupPacingPeriod  $period
      * @param  ?string  $type
      * @phpstan-pure
      */
-    public function __construct(?float $dailyMaxAmount = null, ?float $dailyMaxImpressions = null, ?Period $period = null, ?string $type = null)
+    public function __construct(?float $dailyMaxAmount = null, ?float $dailyMaxImpressions = null, ?PropertyAdsGroupPacingPeriod $period = null, ?string $type = null)
     {
         $this->dailyMaxAmount = $dailyMaxAmount;
         $this->dailyMaxImpressions = $dailyMaxImpressions;

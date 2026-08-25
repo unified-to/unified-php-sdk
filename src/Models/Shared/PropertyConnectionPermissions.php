@@ -323,4 +323,12 @@ enum PropertyConnectionPermissions: string
     case PerformanceGoalWrite = 'performance_goal_write';
     case PerformanceFeedbackRead = 'performance_feedback_read';
     case PerformanceFeedbackWrite = 'performance_feedback_write';
+    case SocialPostRead = 'social_post_read';
+    case SocialPostWrite = 'social_post_write';
+    case SocialProfileRead = 'social_profile_read';
+    case SocialProfileWrite = 'social_profile_write';
+    case SocialReviewRead = 'social_review_read';
+    case SocialReviewWrite = 'social_review_write';
+    case SocialInsightRead = 'social_insight_read';
+    case SocialInsightWrite = 'social_insight_write';
 }

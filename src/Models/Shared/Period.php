@@ -11,7 +11,10 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum Period: string
 {
-    case Unspecified = 'UNSPECIFIED';
-    case Daily = 'DAILY';
-    case Flight = 'FLIGHT';
+    case Day = 'DAY';
+    case Week = 'WEEK';
+    case Month = 'MONTH';
+    case Lifetime = 'LIFETIME';
+    case Total = 'TOTAL';
+    case Other = 'OTHER';
 }

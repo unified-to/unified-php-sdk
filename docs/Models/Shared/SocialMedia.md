@@ -1,0 +1,14 @@
+# SocialMedia
+
+
+## Fields
+
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `alt`                                                             | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               |
+| `height`                                                          | *?float*                                                          | :heavy_minus_sign:                                                | N/A                                                               |
+| `id`                                                              | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               |
+| `position`                                                        | *?float*                                                          | :heavy_minus_sign:                                                | N/A                                                               |
+| `type`                                                            | [?Shared\SocialMediaType](../../Models/Shared/SocialMediaType.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `url`                                                             | *string*                                                          | :heavy_check_mark:                                                | N/A                                                               |
+| `width`                                                           | *?float*                                                          | :heavy_minus_sign:                                                | N/A                                                               |

@@ -34,5 +34,6 @@ enum UpdateAdsCampaignQueryParamFields: string
     case Category = 'category';
     case HasEuPoliticalAds = 'has_eu_political_ads';
     case Labels = 'labels';
+    case Kpi = 'kpi';
     case Raw = 'raw';
 }

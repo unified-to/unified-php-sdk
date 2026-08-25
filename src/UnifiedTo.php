@@ -324,6 +324,12 @@ class UnifiedTo
 
     public Template $template;
 
+    public Social $social;
+
+    public Insight $insight;
+
+    public Post $post;
+
     public Storage $storage;
 
     public File $file;
@@ -536,6 +542,9 @@ class UnifiedTo
         $this->signing = new Signing($this->sdkConfiguration);
         $this->signatory = new Signatory($this->sdkConfiguration);
         $this->template = new Template($this->sdkConfiguration);
+        $this->social = new Social($this->sdkConfiguration);
+        $this->insight = new Insight($this->sdkConfiguration);
+        $this->post = new Post($this->sdkConfiguration);
         $this->storage = new Storage($this->sdkConfiguration);
         $this->file = new File($this->sdkConfiguration);
         $this->task = new Task($this->sdkConfiguration);

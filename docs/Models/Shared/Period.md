@@ -3,8 +3,11 @@
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `Unspecified` | UNSPECIFIED   |
-| `Daily`       | DAILY         |
-| `Flight`      | FLIGHT        |
+| Name       | Value      |
+| ---------- | ---------- |
+| `Day`      | DAY        |
+| `Week`     | WEEK       |
+| `Month`    | MONTH      |
+| `Lifetime` | LIFETIME   |
+| `Total`    | TOTAL      |
+| `Other`    | OTHER      |

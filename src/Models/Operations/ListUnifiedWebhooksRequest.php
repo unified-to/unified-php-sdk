@@ -43,6 +43,14 @@ class ListUnifiedWebhooksRequest
     public ?string $integrationType = null;
 
     /**
+     * Filter by health. Omit to return all.
+     *
+     * @var ?bool $isHealthy
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=is_healthy')]
+    public ?bool $isHealthy = null;
+
+    /**
      *
      * @var ?float $limit
      */
@@ -91,6 +99,7 @@ class ListUnifiedWebhooksRequest
      * @param  ?string  $createdLte
      * @param  ?string  $env
      * @param  ?string  $integrationType
+     * @param  ?bool  $isHealthy
      * @param  ?float  $limit
      * @param  ?string  $object
      * @param  ?float  $offset
@@ -99,12 +108,13 @@ class ListUnifiedWebhooksRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(?string $connectionId = null, ?string $createdLte = null, ?string $env = null, ?string $integrationType = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(?string $connectionId = null, ?string $createdLte = null, ?string $env = null, ?string $integrationType = null, ?bool $isHealthy = null, ?float $limit = null, ?string $object = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->createdLte = $createdLte;
         $this->env = $env;
         $this->integrationType = $integrationType;
+        $this->isHealthy = $isHealthy;
         $this->limit = $limit;
         $this->object = $object;
         $this->offset = $offset;

@@ -45,4 +45,5 @@ enum Categories: string
     case Datastore = 'datastore';
     case Cdp = 'cdp';
     case Performance = 'performance';
+    case Social = 'social';
 }

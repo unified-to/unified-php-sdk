@@ -180,4 +180,8 @@ enum WebhookObjectType: string
     case PerformanceReview = 'performance_review';
     case PerformanceGoal = 'performance_goal';
     case PerformanceFeedback = 'performance_feedback';
+    case SocialPost = 'social_post';
+    case SocialProfile = 'social_profile';
+    case SocialReview = 'social_review';
+    case SocialInsight = 'social_insight';
 }

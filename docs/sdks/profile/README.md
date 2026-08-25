@@ -6,7 +6,9 @@
 
 * [createCdpProfile](#createcdpprofile) - Create a profile
 * [getCdpProfile](#getcdpprofile) - Retrieve a profile
+* [getSocialProfile](#getsocialprofile) - Retrieve a profile
 * [listCdpProfiles](#listcdpprofiles) - List all profiles
+* [listSocialProfiles](#listsocialprofiles) - List all profiles
 * [patchCdpProfile](#patchcdpprofile) - Update a profile
 * [removeCdpProfile](#removecdpprofile) - Remove a profile
 * [updateCdpProfile](#updatecdpprofile) - Update a profile
@@ -114,6 +116,57 @@ if ($response->cdpProfile !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getSocialProfile
+
+Retrieve a profile
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getSocialProfile" method="get" path="/social/{connection_id}/profile/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetSocialProfileRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->profile->getSocialProfile(
+    request: $request
+);
+
+if ($response->socialProfile !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetSocialProfileRequest](../../Models/Operations/GetSocialProfileRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetSocialProfileResponse](../../Models/Operations/GetSocialProfileResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listCdpProfiles
 
 List all profiles
@@ -157,6 +210,56 @@ if ($response->cdpProfiles !== null) {
 ### Response
 
 **[?Operations\ListCdpProfilesResponse](../../Models/Operations/ListCdpProfilesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listSocialProfiles
+
+List all profiles
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listSocialProfiles" method="get" path="/social/{connection_id}/profile" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListSocialProfilesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->profile->listSocialProfiles(
+    request: $request
+);
+
+if ($response->socialProfiles !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListSocialProfilesRequest](../../Models/Operations/ListSocialProfilesRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListSocialProfilesResponse](../../Models/Operations/ListSocialProfilesResponse.md)**
 
 ### Errors
 

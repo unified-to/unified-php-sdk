@@ -39,3 +39,4 @@
 | `Datastore`    | datastore      |
 | `Cdp`          | cdp            |
 | `Performance`  | performance    |
+| `Social`       | social         |
