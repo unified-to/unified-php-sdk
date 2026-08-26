@@ -21,8 +21,8 @@
 * [listCrmDeals](#listcrmdeals) - List all deals
 * [listCrmEvents](#listcrmevents) - List all events
 * [listCrmLeads](#listcrmleads) - List all leads
-* [listCrmPicklists](#listcrmpicklists) - List all picklists
 * [listCrmPipelines](#listcrmpipelines) - List all pipelines
+* [listCrmTaxonomies](#listcrmtaxonomies) - List all taxonomies
 * [patchCrmCompany](#patchcrmcompany) - Update a company
 * [patchCrmContact](#patchcrmcontact) - Update a contact
 * [patchCrmDeal](#patchcrmdeal) - Update a deal
@@ -910,56 +910,6 @@ if ($response->crmLeads !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listCrmPicklists
-
-List all picklists
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="listCrmPicklists" method="get" path="/crm/{connection_id}/picklist" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\ListCrmPicklistsRequest(
-    connectionId: '<id>',
-);
-
-$response = $sdk->crm->listCrmPicklists(
-    request: $request
-);
-
-if ($response->crmPicklists !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
-| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `$request`                                                                               | [Operations\ListCrmPicklistsRequest](../../Models/Operations/ListCrmPicklistsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
-
-### Response
-
-**[?Operations\ListCrmPicklistsResponse](../../Models/Operations/ListCrmPicklistsResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
 ## listCrmPipelines
 
 List all pipelines
@@ -1003,6 +953,56 @@ if ($response->crmPipelines !== null) {
 ### Response
 
 **[?Operations\ListCrmPipelinesResponse](../../Models/Operations/ListCrmPipelinesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listCrmTaxonomies
+
+List all taxonomies
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCrmTaxonomies" method="get" path="/crm/{connection_id}/taxonomy" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCrmTaxonomiesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->crm->listCrmTaxonomies(
+    request: $request
+);
+
+if ($response->crmTaxonomies !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListCrmTaxonomiesRequest](../../Models/Operations/ListCrmTaxonomiesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\ListCrmTaxonomiesResponse](../../Models/Operations/ListCrmTaxonomiesResponse.md)**
 
 ### Errors
 

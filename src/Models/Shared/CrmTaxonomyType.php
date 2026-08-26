@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-enum CrmPicklistType: string
+enum CrmTaxonomyType: string
 {
     case Industry = 'INDUSTRY';
 }

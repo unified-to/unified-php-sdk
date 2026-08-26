@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Models\Shared;
-class ListCrmPicklistsResponse
+class ListCrmTaxonomiesResponse
 {
     /**
      * HTTP response content type for this operation
@@ -35,22 +35,22 @@ class ListCrmPicklistsResponse
     /**
      * Successful
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CrmPicklist> $crmPicklists
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmTaxonomy> $crmTaxonomies
      */
-    public ?array $crmPicklists = null;
+    public ?array $crmTaxonomies = null;
 
     /**
      * @param  string  $contentType
      * @param  int  $statusCode
      * @param  \Psr\Http\Message\ResponseInterface  $rawResponse
-     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmPicklist>  $crmPicklists
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmTaxonomy>  $crmTaxonomies
      * @phpstan-pure
      */
-    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $crmPicklists = null)
+    public function __construct(string $contentType, int $statusCode, \Psr\Http\Message\ResponseInterface $rawResponse, ?array $crmTaxonomies = null)
     {
         $this->contentType = $contentType;
         $this->statusCode = $statusCode;
         $this->rawResponse = $rawResponse;
-        $this->crmPicklists = $crmPicklists;
+        $this->crmTaxonomies = $crmTaxonomies;
     }
 }

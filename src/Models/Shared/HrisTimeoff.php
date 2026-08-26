@@ -100,6 +100,14 @@ class HrisTimeoff
     public ?bool $isPaid = null;
 
     /**
+     *
+     * @var ?string $originalType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('original_type')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $originalType = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -163,6 +171,7 @@ class HrisTimeoff
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
      * @param  ?bool  $isPaid
+     * @param  ?string  $originalType
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reason
      * @param  ?\DateTime  $startAt
@@ -171,7 +180,7 @@ class HrisTimeoff
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?float $duration = null, ?DurationType $durationType = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $raw = null, ?string $reason = null, ?\DateTime $startAt = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?float $duration = null, ?DurationType $durationType = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?string $originalType = null, ?array $raw = null, ?string $reason = null, ?\DateTime $startAt = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->userId = $userId;
         $this->approvedAt = $approvedAt;
@@ -184,6 +193,7 @@ class HrisTimeoff
         $this->endAt = $endAt;
         $this->id = $id;
         $this->isPaid = $isPaid;
+        $this->originalType = $originalType;
         $this->raw = $raw;
         $this->reason = $reason;
         $this->startAt = $startAt;

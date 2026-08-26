@@ -29,6 +29,7 @@ enum UpdateAccountingBillQueryParamFields: string
     case ContactId = 'contact_id';
     case Currency = 'currency';
     case Notes = 'notes';
+    case ExtendedNotes = 'extended_notes';
     case RefundReason = 'refund_reason';
     case Lineitems = 'lineitems';
     case Status = 'status';

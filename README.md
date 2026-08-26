@@ -885,8 +885,8 @@ if ($response->accountingAccount !== null) {
 * [listCrmDeals](docs/sdks/crm/README.md#listcrmdeals) - List all deals
 * [listCrmEvents](docs/sdks/crm/README.md#listcrmevents) - List all events
 * [listCrmLeads](docs/sdks/crm/README.md#listcrmleads) - List all leads
-* [listCrmPicklists](docs/sdks/crm/README.md#listcrmpicklists) - List all picklists
 * [listCrmPipelines](docs/sdks/crm/README.md#listcrmpipelines) - List all pipelines
+* [listCrmTaxonomies](docs/sdks/crm/README.md#listcrmtaxonomies) - List all taxonomies
 * [patchCrmCompany](docs/sdks/crm/README.md#patchcrmcompany) - Update a company
 * [patchCrmContact](docs/sdks/crm/README.md#patchcrmcontact) - Update a contact
 * [patchCrmDeal](docs/sdks/crm/README.md#patchcrmdeal) - Update a deal
@@ -1657,10 +1657,6 @@ if ($response->accountingAccount !== null) {
 
 * [listEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
 
-### [Picklist](docs/sdks/picklist/README.md)
-
-* [listCrmPicklists](docs/sdks/picklist/README.md#listcrmpicklists) - List all picklists
-
 ### [Pipeline](docs/sdks/pipeline/README.md)
 
 * [createCrmPipeline](docs/sdks/pipeline/README.md#createcrmpipeline) - Create a pipeline
@@ -2100,6 +2096,7 @@ if ($response->accountingAccount !== null) {
 ### [Taxonomy](docs/sdks/taxonomy/README.md)
 
 * [getHrisTaxonomy](docs/sdks/taxonomy/README.md#gethristaxonomy) - Retrieve a taxonomy
+* [listCrmTaxonomies](docs/sdks/taxonomy/README.md#listcrmtaxonomies) - List all taxonomies
 * [listHrisTaxonomies](docs/sdks/taxonomy/README.md#listhristaxonomies) - List all taxonomies
 
 ### [Taxrate](docs/sdks/taxrate/README.md)

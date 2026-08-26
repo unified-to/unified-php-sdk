@@ -24,6 +24,7 @@ enum CreateHrisTimeoffQueryParamFields: string
     case ApprovedAt = 'approved_at';
     case Comments = 'comments';
     case Reason = 'reason';
+    case OriginalType = 'original_type';
     case Type = 'type';
     case Duration = 'duration';
     case DurationType = 'duration_type';

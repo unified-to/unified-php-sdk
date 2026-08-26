@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [getHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
+* [listCrmTaxonomies](#listcrmtaxonomies) - List all taxonomies
 * [listHrisTaxonomies](#listhristaxonomies) - List all taxonomies
 
 ## getHrisTaxonomy
@@ -51,6 +52,56 @@ if ($response->hrisTaxonomy !== null) {
 ### Response
 
 **[?Operations\GetHrisTaxonomyResponse](../../Models/Operations/GetHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listCrmTaxonomies
+
+List all taxonomies
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCrmTaxonomies" method="get" path="/crm/{connection_id}/taxonomy" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCrmTaxonomiesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->taxonomy->listCrmTaxonomies(
+    request: $request
+);
+
+if ($response->crmTaxonomies !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListCrmTaxonomiesRequest](../../Models/Operations/ListCrmTaxonomiesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\ListCrmTaxonomiesResponse](../../Models/Operations/ListCrmTaxonomiesResponse.md)**
 
 ### Errors
 

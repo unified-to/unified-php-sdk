@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 
-enum ListCrmPicklistsQueryParamFields: string
+enum ListCrmTaxonomiesQueryParamFields: string
 {
     case Id = 'id';
     case Name = 'name';

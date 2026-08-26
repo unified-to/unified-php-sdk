@@ -1,4 +1,4 @@
-# CrmPicklist
+# CrmTaxonomy
 
 
 ## Fields
@@ -9,4 +9,4 @@
 | `label`                                                           | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               |
 | `name`                                                            | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               |
 | `raw`                                                             | array<string, *mixed*>                                            | :heavy_minus_sign:                                                | N/A                                                               |
-| `type`                                                            | [?Shared\CrmPicklistType](../../Models/Shared/CrmPicklistType.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `type`                                                            | [?Shared\CrmTaxonomyType](../../Models/Shared/CrmTaxonomyType.md) | :heavy_minus_sign:                                                | N/A                                                               |

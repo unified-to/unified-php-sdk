@@ -30,6 +30,7 @@ enum GetAccountingInvoiceQueryParamFields: string
     case ContactId = 'contact_id';
     case Currency = 'currency';
     case Notes = 'notes';
+    case ExtendedNotes = 'extended_notes';
     case RefundReason = 'refund_reason';
     case Term = 'term';
     case PaymentTerms = 'payment_terms';

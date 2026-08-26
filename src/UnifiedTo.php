@@ -188,9 +188,9 @@ class UnifiedTo
 
     public Lead $lead;
 
-    public Picklist $picklist;
-
     public Pipeline $pipeline;
+
+    public Taxonomy $taxonomy;
 
     public Datastore $datastore;
 
@@ -235,8 +235,6 @@ class UnifiedTo
     public Employee $employee;
 
     public Payslip $payslip;
-
-    public Taxonomy $taxonomy;
 
     public Timeoff $timeoff;
 
@@ -474,8 +472,8 @@ class UnifiedTo
         $this->crm = new Crm($this->sdkConfiguration);
         $this->deal = new Deal($this->sdkConfiguration);
         $this->lead = new Lead($this->sdkConfiguration);
-        $this->picklist = new Picklist($this->sdkConfiguration);
         $this->pipeline = new Pipeline($this->sdkConfiguration);
+        $this->taxonomy = new Taxonomy($this->sdkConfiguration);
         $this->datastore = new Datastore($this->sdkConfiguration);
         $this->database = new Database($this->sdkConfiguration);
         $this->query = new Query($this->sdkConfiguration);
@@ -498,7 +496,6 @@ class UnifiedTo
         $this->device = new Device($this->sdkConfiguration);
         $this->employee = new Employee($this->sdkConfiguration);
         $this->payslip = new Payslip($this->sdkConfiguration);
-        $this->taxonomy = new Taxonomy($this->sdkConfiguration);
         $this->timeoff = new Timeoff($this->sdkConfiguration);
         $this->timeshift = new Timeshift($this->sdkConfiguration);
         $this->kms = new Kms($this->sdkConfiguration);

@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-class CrmPicklist
+class CrmTaxonomy
 {
     /**
      *
@@ -46,22 +46,22 @@ class CrmPicklist
 
     /**
      *
-     * @var ?\Unified\Unified_to\Models\Shared\CrmPicklistType $type
+     * @var ?\Unified\Unified_to\Models\Shared\CrmTaxonomyType $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmPicklistType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CrmTaxonomyType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?CrmPicklistType $type = null;
+    public ?CrmTaxonomyType $type = null;
 
     /**
      * @param  string  $id
      * @param  ?string  $label
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?\Unified\Unified_to\Models\Shared\CrmPicklistType  $type
+     * @param  ?\Unified\Unified_to\Models\Shared\CrmTaxonomyType  $type
      * @phpstan-pure
      */
-    public function __construct(string $id, ?string $label = null, ?string $name = null, ?array $raw = null, ?CrmPicklistType $type = null)
+    public function __construct(string $id, ?string $label = null, ?string $name = null, ?array $raw = null, ?CrmTaxonomyType $type = null)
     {
         $this->id = $id;
         $this->label = $label;

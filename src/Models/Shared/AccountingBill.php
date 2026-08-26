@@ -96,6 +96,16 @@ class AccountingBill
     public ?\DateTime $dueAt = null;
 
     /**
+     * $extendedNotes
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingExtendedNote> $extendedNotes
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('extended_notes')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingExtendedNote>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $extendedNotes = null;
+
+    /**
      *
      * @var ?string $id
      */
@@ -310,6 +320,7 @@ class AccountingBill
      * @param  ?string  $currency
      * @param  ?float  $discountAmount
      * @param  ?\DateTime  $dueAt
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingExtendedNote>  $extendedNotes
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
@@ -336,7 +347,7 @@ class AccountingBill
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?string $billNumber = null, ?\DateTime $cancelledAt = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?PaymentTerms $paymentTerms = null, ?array $payments = null, ?string $paymenttermId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingBillStatus $status = null, ?float $taxAmount = null, ?Term $term = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?string $billNumber = null, ?\DateTime $cancelledAt = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?array $extendedNotes = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?PaymentCollectionMethod $paymentCollectionMethod = null, ?PaymentTerms $paymentTerms = null, ?array $payments = null, ?string $paymenttermId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingBillStatus $status = null, ?float $taxAmount = null, ?Term $term = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->attachments = $attachments;
         $this->balanceAmount = $balanceAmount;
@@ -348,6 +359,7 @@ class AccountingBill
         $this->currency = $currency;
         $this->discountAmount = $discountAmount;
         $this->dueAt = $dueAt;
+        $this->extendedNotes = $extendedNotes;
         $this->id = $id;
         $this->lineitems = $lineitems;
         $this->metadata = $metadata;

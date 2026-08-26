@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Operations;
 
 use Unified\Unified_to\Utils\SpeakeasyMetadata;
-class ListCrmPicklistsRequest
+class ListCrmTaxonomiesRequest
 {
     /**
      * ID of the connection
@@ -22,7 +22,7 @@ class ListCrmPicklistsRequest
     /**
      * Fields to return
      *
-     * @var ?array<\Unified\Unified_to\Models\Operations\ListCrmPicklistsQueryParamFields> $fields
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListCrmTaxonomiesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
@@ -88,7 +88,7 @@ class ListCrmPicklistsRequest
 
     /**
      * @param  string  $connectionId
-     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCrmPicklistsQueryParamFields>  $fields
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListCrmTaxonomiesQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order

@@ -12,3 +12,4 @@
 | `Certification` | CERTIFICATION   |
 | `Role`          | ROLE            |
 | `Holiday`       | HOLIDAY         |
+| `Leave`         | LEAVE           |
