@@ -373,7 +373,9 @@ if ($response->accountingAccount !== null) {
 
 ### [Assessment](docs/sdks/assessment/README.md)
 
+* [createAssessmentOrder](docs/sdks/assessment/README.md#createassessmentorder) - Create an order
 * [createAssessmentPackage](docs/sdks/assessment/README.md#createassessmentpackage) - Create an assessment package
+* [getAssessmentOrder](docs/sdks/assessment/README.md#getassessmentorder) - Retrieve an order
 * [getAssessmentPackage](docs/sdks/assessment/README.md#getassessmentpackage) - Get an assessment package
 * [listAssessmentPackages](docs/sdks/assessment/README.md#listassessmentpackages) - List assessment packages
 * [patchAssessmentOrder](docs/sdks/assessment/README.md#patchassessmentorder) - Update an order
@@ -1537,7 +1539,9 @@ if ($response->accountingAccount !== null) {
 ### [Order](docs/sdks/order/README.md)
 
 * [createAccountingOrder](docs/sdks/order/README.md#createaccountingorder) - Create an order
+* [createAssessmentOrder](docs/sdks/order/README.md#createassessmentorder) - Create an order
 * [getAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
+* [getAssessmentOrder](docs/sdks/order/README.md#getassessmentorder) - Retrieve an order
 * [listAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
 * [patchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
 * [patchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order

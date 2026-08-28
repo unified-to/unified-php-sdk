@@ -1,24 +1,24 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 717e539aa15792c3d978cbdc61f6bfd1
+  docChecksum: 3ffdf53db69180f3a9706188fe5b0bca
   docVersion: "1.0"
-  speakeasyVersion: 1.795.3
-  generationVersion: 2.932.9
-  releaseVersion: 1.6.113
-  configChecksum: a04a06bdce3da809a51cd06734233aa1
+  speakeasyVersion: 1.796.1
+  generationVersion: 2.933.0
+  releaseVersion: 1.6.114
+  configChecksum: a5d8b9688901f6f19aa94e668e1375db
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 2b1357a1-b34c-46b6-9a96-203b816278f5
-  pristine_commit_hash: ef966322386a0777151696b9b85c332819690fd3
-  pristine_tree_hash: 9dd6f1c2a5f8e0b28fbbccfece93db856e03f8f3
+  generation_id: c773419e-e46c-4bd3-9a19-5faf01658efd
+  pristine_commit_hash: f76ccc208ca1821ee616e8e203030645c3bcabdc
+  pristine_tree_hash: 61eeace46323b648fbc009ed2b3f0d311d9562c7
 features:
   php:
     constsAndDefaults: 0.2.2
-    core: 3.9.27
+    core: 3.9.28
     globalSecurity: 2.81.12
     globalSecurityFlattening: 0.1.2
     globalServerURLs: 2.83.1
@@ -387,6 +387,18 @@ trackedFiles:
     id: 5a0b03cb57b2
     last_write_checksum: sha1:8db58fb1217ab07f26089e08d737cbc9efc580e3
     pristine_git_object: 4e0b81630787566049ce23da25c2be5419546f30
+  docs/Models/Operations/CreateAssessmentOrderQueryParamFields.md:
+    id: b2bfb9df839d
+    last_write_checksum: sha1:e77db4acbac431183281278ec1e73efb4ab7544f
+    pristine_git_object: 486108f41ef8fe9698fcfe2df771ef1e9416c80f
+  docs/Models/Operations/CreateAssessmentOrderRequest.md:
+    id: 273d90a6e07f
+    last_write_checksum: sha1:ef22813fb1189af2842bb5f699e3e6f9d3d3637a
+    pristine_git_object: 9aeaacb36e999c6a56e6d5f957794bd121bf329a
+  docs/Models/Operations/CreateAssessmentOrderResponse.md:
+    id: 06f6fd1064e6
+    last_write_checksum: sha1:84788b9a046602ab7570c7713c5ac99e4c83b0c7
+    pristine_git_object: 2760ff51c590642591438a3fea88e1f3381eb0fa
   docs/Models/Operations/CreateAssessmentPackageRequest.md:
     id: bb1308faedb6
     last_write_checksum: sha1:af92abb01a8480ca39424c3890fda6d3bd3bccba
@@ -2067,6 +2079,18 @@ trackedFiles:
     id: c3f16a2f4337
     last_write_checksum: sha1:0068c113d14366762c359862f9b53db7d4030645
     pristine_git_object: d48a8807b22b5edfdadd7e1e4c4dc528e5ed91fe
+  docs/Models/Operations/GetAssessmentOrderQueryParamFields.md:
+    id: e337422c4e78
+    last_write_checksum: sha1:503421f1da0834e0c69cb394e799b5220f83af3d
+    pristine_git_object: d9760787ec30767998cb5e37ab8c45b9ac95b072
+  docs/Models/Operations/GetAssessmentOrderRequest.md:
+    id: 2eeb2160864c
+    last_write_checksum: sha1:b08b93e7820e54a09ca0555354229e8c94035399
+    pristine_git_object: 45463390757f2859736b596f807e5d491752d108
+  docs/Models/Operations/GetAssessmentOrderResponse.md:
+    id: 8bda7bcb6cc0
+    last_write_checksum: sha1:2e4b2143efbc689fcf5a452e462b59e1eaea04f2
+    pristine_git_object: 4af39f3637088119ba1734876a1d212a10e226e2
   docs/Models/Operations/GetAssessmentPackageRequest.md:
     id: 4de2e3cdd8c9
     last_write_checksum: sha1:31bda5802c99171d8d371691d7e40d6b758294c4
@@ -14153,8 +14177,8 @@ trackedFiles:
     pristine_git_object: b50bfdf426c2bce47e62cea6195abf904cb07e0d
   docs/sdks/assessment/README.md:
     id: 54c8061fbed1
-    last_write_checksum: sha1:eec7369e1fa1968019a8a952473800a2aa027189
-    pristine_git_object: 284436563c26a75d81b7e221aa6252992c997dba
+    last_write_checksum: sha1:7521f2bccad20e85681fdcbe75f8bab65c29e965
+    pristine_git_object: 8dd1fad2544ab2fdf7d9d96d9b1d64b401c66b21
   docs/sdks/asset/README.md:
     id: aca68248e4fc
     last_write_checksum: sha1:27f4675cd3a0399b719e54547cc52012c234a540
@@ -14509,8 +14533,8 @@ trackedFiles:
     pristine_git_object: 5fefe7deba7d89eb82d180dfa6b11081b4f1a61d
   docs/sdks/order/README.md:
     id: 9463f6b17ea6
-    last_write_checksum: sha1:d744973a3a91735a6fe65b730afb913e51165d2d
-    pristine_git_object: 16d695683f3340abffdf3679a3b55ee6d20b54ec
+    last_write_checksum: sha1:0884f8dd50072e8d4c3e7f8d60fece9d4f6889e3
+    pristine_git_object: a7ed0421ce9e91111124198e8b8c9193bb6b314b
   docs/sdks/organization/README.md:
     id: 69e4232b8432
     last_write_checksum: sha1:04570614d6e0f60f8582ea7da2d495650f5c9c23
@@ -14865,8 +14889,8 @@ trackedFiles:
     pristine_git_object: 2f8863f98b59cc8c433567aefd5a651a81952dba
   src/Assessment.php:
     id: a2e44221d22f
-    last_write_checksum: sha1:66546c801c3fa97a841ff9bc2b0e0e0fabe85b4b
-    pristine_git_object: 8fbf4f03fcb4287ea8052922b5468a2fe2481a88
+    last_write_checksum: sha1:7881ea9f2b7cf35844ae235b152c4b03b853adf9
+    pristine_git_object: 84a8911787488f8c758a8bddd45e433962bfa5fb
   src/Asset.php:
     id: 5878beab10ba
     last_write_checksum: sha1:1de671f3b92d40a7ba55b1e4227c605d85afdbf6
@@ -15627,6 +15651,18 @@ trackedFiles:
     id: 63ca714fd7f3
     last_write_checksum: sha1:514891da2f419636c07d6d0a32aa2d34b9948177
     pristine_git_object: aff1f417dbbbc5e5bf02fde02f92a4692731c61e
+  src/Models/Operations/CreateAssessmentOrderQueryParamFields.php:
+    id: c2b6f19ef208
+    last_write_checksum: sha1:7a15eef8f1d1250dc84a8108ccdf5f886c0a0145
+    pristine_git_object: dbc94d932c802b2703291158f16a5c63a824af16
+  src/Models/Operations/CreateAssessmentOrderRequest.php:
+    id: 0ee962d02f15
+    last_write_checksum: sha1:88b701d739792117c2d7c702584f6337a0f676d8
+    pristine_git_object: 391a2663d2d3dbf1b848ec1152555fd16cb26060
+  src/Models/Operations/CreateAssessmentOrderResponse.php:
+    id: 820776d8e5d3
+    last_write_checksum: sha1:bce1acbfd4cdc124a125462f7d77dd056155b32b
+    pristine_git_object: 7744552fa4e588f7daee0e27c903e36f72c02856
   src/Models/Operations/CreateAssessmentPackageRequest.php:
     id: aa0ea49bb314
     last_write_checksum: sha1:20f1543f3613719be5c540fc8bae941d737992b6
@@ -17307,6 +17343,18 @@ trackedFiles:
     id: e489a33ce52e
     last_write_checksum: sha1:db2cdc1917e5ffed5e6c04c588c4f996acd2dbef
     pristine_git_object: b78d8843166f9d93527d9ed105fb7a2a6814a227
+  src/Models/Operations/GetAssessmentOrderQueryParamFields.php:
+    id: 0bf4b1e6f2f0
+    last_write_checksum: sha1:9d01aa6024ff1c25d8607829a5eb8e89431aa58c
+    pristine_git_object: f7d78a819640ed232e66429f4c7b55e1e36f1284
+  src/Models/Operations/GetAssessmentOrderRequest.php:
+    id: ed4f22b8ee14
+    last_write_checksum: sha1:81cc4cd704bd65c112c5606ef36423cc160cbe7b
+    pristine_git_object: 73ae0a67a6b203f7ba53eba6a155ffea503ac08b
+  src/Models/Operations/GetAssessmentOrderResponse.php:
+    id: c5c75d7ad495
+    last_write_checksum: sha1:0b8fd974a592eb38436e2b6ba3fcecd529f4c684
+    pristine_git_object: ed41b79db23f9bafed05bb7da227b646237cce5f
   src/Models/Operations/GetAssessmentPackageRequest.php:
     id: df9ed9ded147
     last_write_checksum: sha1:d90c25756fe7ea92a35a6006a2e12105d51d31aa
@@ -29177,8 +29225,8 @@ trackedFiles:
     pristine_git_object: 7975476c51cacc555ee0c97eee083d41971ca98a
   src/Order.php:
     id: 758a22ac342b
-    last_write_checksum: sha1:000a2163e5eeb0e59cf2409c5a1d183e711e9b31
-    pristine_git_object: e5b8e2d37f0e5161322c3fd57d1ed4b43ba98765
+    last_write_checksum: sha1:88c80fd2ad033ab88618b8fb0fe9e101755382c6
+    pristine_git_object: e78c183821f30069f93c529ee2660493e2d260fd
   src/Organization.php:
     id: a13c385c85bd
     last_write_checksum: sha1:8bbf30e2068f99ce46eda77d579eb1fa69b1debf
@@ -29309,8 +29357,8 @@ trackedFiles:
     pristine_git_object: 77a0030116bcc6f71853e9b674d7465b6da28e40
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:357a10e5f92380f96532c87ec7ac52a986e621ab
-    pristine_git_object: f425decba6e15c578b7342a9689c4138e8f4b59e
+    last_write_checksum: sha1:b12d02807b375055df132a3000ccff1f7aec1583
+    pristine_git_object: fcc56c53e973dd0e5217b4d82060d0b6a49cec28
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -43707,9 +43755,33 @@ examples:
       responses:
         "200":
           application/json: [{"id": "<id>"}]
+  createAssessmentOrder:
+    speakeasy-default-create-assessment-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+      requestBody:
+        application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
+      responses:
+        "200":
+          application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
+  getAssessmentOrder:
+    speakeasy-default-get-assessment-order:
+      parameters:
+        path:
+          connection_id: "<id>"
+          id: "<id>"
+      responses:
+        "200":
+          application/json: {"connection_id": "<id>", "workspace_id": "<id>"}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->hris->getHrisTaxonomy()`:  `response.type->enum(leave)` **Added** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed** (Breaking ⚠️)\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed** (Breaking ⚠️)\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed** (Breaking ⚠️)\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed** (Breaking ⚠️)\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed** (Breaking ⚠️)\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType` **Changed** (Breaking ⚠️)\n  *  `response.objectType` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->taxonomy->listHrisTaxonomies()`:  `response.[]->type->enum(leave)` **Added** (Breaking ⚠️)\n* `unified-to->taxonomy->getHrisTaxonomy()`:  `response.type->enum(leave)` **Added** (Breaking ⚠️)\n* `unified-to->hris->listHrisTaxonomies()`:  `response.[]->type->enum(leave)` **Added** (Breaking ⚠️)\n* `unified-to->bill->createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->bill->patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->hris->getHrisTimeoff()`: \n  *  `request->fields` **Changed**\n  *  `response.originalType` **Added**\n* `unified-to->invoice->updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->hris->listHrisTimeoffs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->originalType` **Added**\n* `unified-to->hris->patchHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.originalType` **Added**\n* `unified-to->hris->updateHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.originalType` **Added**\n* `unified-to->invoice->patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->invoice->listAccountingInvoices()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->extendedNotes` **Added**\n* `unified-to->timeoff->createHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.originalType` **Added**\n* `unified-to->timeoff->getHrisTimeoff()`: \n  *  `request->fields` **Changed**\n  *  `response.originalType` **Added**\n* `unified-to->timeoff->listHrisTimeoffs()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->originalType` **Added**\n* `unified-to->timeoff->patchHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.originalType` **Added**\n* `unified-to->timeoff->updateHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.originalType` **Added**\n* `unified-to->invoice->getAccountingInvoice()`: \n  *  `request->fields` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->invoice->createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->bill->updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->hris->createHrisTimeoff()`: \n  *  `request` **Changed**\n  *  `response.originalType` **Added**\n* `unified-to->bill->listAccountingBills()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->extendedNotes` **Added**\n* `unified-to->bill->getAccountingBill()`: \n  *  `request->fields` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->crm->listCrmTaxonomies()`: **Added**\n* `unified-to->accounting->updateAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->accounting->updateAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->accounting->patchAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->accounting->patchAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->accounting->listAccountingInvoices()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->extendedNotes` **Added**\n* `unified-to->accounting->listAccountingBills()`: \n  *  `request->fields` **Changed**\n  *  `response.[]->extendedNotes` **Added**\n* `unified-to->accounting->getAccountingInvoice()`: \n  *  `request->fields` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->accounting->getAccountingBill()`: \n  *  `request->fields` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->accounting->createAccountingInvoice()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->accounting->createAccountingBill()`: \n  *  `request` **Changed**\n  *  `response.extendedNotes` **Added**\n* `unified-to->picklist->listCrmPicklists()`: **Removed** (Breaking ⚠️)\n* `unified-to->crm->listCrmPicklists()`: **Removed** (Breaking ⚠️)\n* `unified-to->taxonomy->listCrmTaxonomies()`: **Added**\n"
+releaseNotes: |
+  ## Php SDK Changes:
+  * `unified-to->order->createAssessmentOrder()`: **Added**
+  * `unified-to->order->getAssessmentOrder()`: **Added**
+  * `unified-to->assessment->createAssessmentOrder()`: **Added**
+  * `unified-to->assessment->getAssessmentOrder()`: **Added**
 generatedFiles:
   - .gitattributes
   - USAGE.md

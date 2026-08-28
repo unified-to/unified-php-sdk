@@ -4,7 +4,9 @@
 
 ### Available Operations
 
+* [createAssessmentOrder](#createassessmentorder) - Create an order
 * [createAssessmentPackage](#createassessmentpackage) - Create an assessment package
+* [getAssessmentOrder](#getassessmentorder) - Retrieve an order
 * [getAssessmentPackage](#getassessmentpackage) - Get an assessment package
 * [listAssessmentPackages](#listassessmentpackages) - List assessment packages
 * [patchAssessmentOrder](#patchassessmentorder) - Update an order
@@ -12,6 +14,61 @@
 * [removeAssessmentPackage](#removeassessmentpackage) - Delete an assessment package
 * [updateAssessmentOrder](#updateassessmentorder) - Update an order
 * [updateAssessmentPackage](#updateassessmentpackage) - Update an assessment package
+
+## createAssessmentOrder
+
+Create an order
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateAssessmentOrderRequest(
+    assessmentOrder: new Shared\AssessmentOrder(
+        connectionId: '<id>',
+        workspaceId: '<id>',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->assessment->createAssessmentOrder(
+    request: $request
+);
+
+if ($response->assessmentOrder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\CreateAssessmentOrderRequest](../../Models/Operations/CreateAssessmentOrderRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\CreateAssessmentOrderResponse](../../Models/Operations/CreateAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createAssessmentPackage
 
@@ -60,6 +117,57 @@ if ($response->assessmentPackage !== null) {
 ### Response
 
 **[?Operations\CreateAssessmentPackageResponse](../../Models/Operations/CreateAssessmentPackageResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAssessmentOrder
+
+Retrieve an order
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAssessmentOrder" method="get" path="/assessment/{connection_id}/order/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAssessmentOrderRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->assessment->getAssessmentOrder(
+    request: $request
+);
+
+if ($response->assessmentOrder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetAssessmentOrderRequest](../../Models/Operations/GetAssessmentOrderRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\GetAssessmentOrderResponse](../../Models/Operations/GetAssessmentOrderResponse.md)**
 
 ### Errors
 
