@@ -4,9 +4,62 @@
 
 ### Available Operations
 
+* [createHrisTaxonomy](#createhristaxonomy) - Create a taxonomy
 * [getHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
 * [listCrmTaxonomies](#listcrmtaxonomies) - List all taxonomies
 * [listHrisTaxonomies](#listhristaxonomies) - List all taxonomies
+
+## createHrisTaxonomy
+
+Create a taxonomy
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateHrisTaxonomyRequest(
+    hrisTaxonomy: new Shared\HrisTaxonomy(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->taxonomy->createHrisTaxonomy(
+    request: $request
+);
+
+if ($response->hrisTaxonomy !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateHrisTaxonomyRequest](../../Models/Operations/CreateHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\CreateHrisTaxonomyResponse](../../Models/Operations/CreateHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getHrisTaxonomy
 

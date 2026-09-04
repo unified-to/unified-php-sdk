@@ -1157,6 +1157,7 @@ if ($response->accountingAccount !== null) {
 * [createHrisEmployee](docs/sdks/hris/README.md#createhrisemployee) - Create an employee
 * [createHrisGroup](docs/sdks/hris/README.md#createhrisgroup) - Create a group
 * [createHrisLocation](docs/sdks/hris/README.md#createhrislocation) - Create a location
+* [createHrisTaxonomy](docs/sdks/hris/README.md#createhristaxonomy) - Create a taxonomy
 * [createHrisTimeoff](docs/sdks/hris/README.md#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](docs/sdks/hris/README.md#createhristimeshift) - Create a timeshift
 * [getHrisAttendance](docs/sdks/hris/README.md#gethrisattendance) - Retrieve an attendance
@@ -2099,6 +2100,7 @@ if ($response->accountingAccount !== null) {
 
 ### [Taxonomy](docs/sdks/taxonomy/README.md)
 
+* [createHrisTaxonomy](docs/sdks/taxonomy/README.md#createhristaxonomy) - Create a taxonomy
 * [getHrisTaxonomy](docs/sdks/taxonomy/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [listCrmTaxonomies](docs/sdks/taxonomy/README.md#listcrmtaxonomies) - List all taxonomies
 * [listHrisTaxonomies](docs/sdks/taxonomy/README.md#listhristaxonomies) - List all taxonomies

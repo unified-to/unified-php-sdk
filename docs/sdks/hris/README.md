@@ -14,6 +14,7 @@
 * [createHrisEmployee](#createhrisemployee) - Create an employee
 * [createHrisGroup](#createhrisgroup) - Create a group
 * [createHrisLocation](#createhrislocation) - Create a location
+* [createHrisTaxonomy](#createhristaxonomy) - Create a taxonomy
 * [createHrisTimeoff](#createhristimeoff) - Create a timeoff
 * [createHrisTimeshift](#createhristimeshift) - Create a timeshift
 * [getHrisAttendance](#gethrisattendance) - Retrieve an attendance
@@ -599,6 +600,58 @@ if ($response->hrisLocation !== null) {
 ### Response
 
 **[?Operations\CreateHrisLocationResponse](../../Models/Operations/CreateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createHrisTaxonomy
+
+Create a taxonomy
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateHrisTaxonomyRequest(
+    hrisTaxonomy: new Shared\HrisTaxonomy(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->hris->createHrisTaxonomy(
+    request: $request
+);
+
+if ($response->hrisTaxonomy !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreateHrisTaxonomyRequest](../../Models/Operations/CreateHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\CreateHrisTaxonomyResponse](../../Models/Operations/CreateHrisTaxonomyResponse.md)**
 
 ### Errors
 

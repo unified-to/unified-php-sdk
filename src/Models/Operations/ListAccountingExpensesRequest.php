@@ -20,6 +20,14 @@ class ListAccountingExpensesRequest
     public string $connectionId;
 
     /**
+     * The expense approver user/employee ID to filter by (reference to HrisEmployee)
+     *
+     * @var ?string $approverUserId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=approver_user_id')]
+    public ?string $approverUserId = null;
+
+    /**
      * The category ID to filter by (reference to AccountingCategory)
      *
      * @var ?string $categoryId
@@ -145,6 +153,7 @@ class ListAccountingExpensesRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $approverUserId
      * @param  ?string  $categoryId
      * @param  ?string  $contactId
      * @param  ?string  $endLt
@@ -163,9 +172,10 @@ class ListAccountingExpensesRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $categoryId = null, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?string $groupId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $approverUserId = null, ?string $categoryId = null, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?string $groupId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $orgId = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
+        $this->approverUserId = $approverUserId;
         $this->categoryId = $categoryId;
         $this->contactId = $contactId;
         $this->endLt = $endLt;
