@@ -72,16 +72,6 @@ class LmsCourse
     public ?string $id = null;
 
     /**
-     * @deprecated; use instructors
-     *
-     * @var ?array<string> $instructorIds
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('instructor_ids')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $instructorIds = null;
-
-    /**
      * $instructors
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\LmsReference> $instructors
@@ -180,16 +170,6 @@ class LmsCourse
     public ?array $skills = null;
 
     /**
-     * @deprecated; use students
-     *
-     * @var ?array<string> $studentIds
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('student_ids')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $studentIds = null;
-
-    /**
      * $students
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\LmsReference> $students
@@ -223,7 +203,6 @@ class LmsCourse
      * @param  ?string  $description
      * @param  ?float  $durationMinutes
      * @param  ?string  $id
-     * @param  ?array<string>  $instructorIds
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsReference>  $instructors
      * @param  ?bool  $isActive
      * @param  ?bool  $isPrivate
@@ -235,13 +214,12 @@ class LmsCourse
      * @param  ?\DateTime  $publishedAt
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $skills
-     * @param  ?array<string>  $studentIds
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsReference>  $students
      * @param  ?float  $timeEstimateMinutes
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $categories = null, ?array $contentIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $durationMinutes = null, ?string $id = null, ?array $instructorIds = null, ?array $instructors = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $languages = null, ?array $media = null, ?string $name = null, ?float $priceAmount = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?array $skills = null, ?array $studentIds = null, ?array $students = null, ?float $timeEstimateMinutes = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $categories = null, ?array $contentIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $durationMinutes = null, ?string $id = null, ?array $instructors = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $languages = null, ?array $media = null, ?string $name = null, ?float $priceAmount = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?array $skills = null, ?array $students = null, ?float $timeEstimateMinutes = null, ?\DateTime $updatedAt = null)
     {
         $this->categories = $categories;
         $this->contentIds = $contentIds;
@@ -250,7 +228,6 @@ class LmsCourse
         $this->description = $description;
         $this->durationMinutes = $durationMinutes;
         $this->id = $id;
-        $this->instructorIds = $instructorIds;
         $this->instructors = $instructors;
         $this->isActive = $isActive;
         $this->isPrivate = $isPrivate;
@@ -262,7 +239,6 @@ class LmsCourse
         $this->publishedAt = $publishedAt;
         $this->raw = $raw;
         $this->skills = $skills;
-        $this->studentIds = $studentIds;
         $this->students = $students;
         $this->timeEstimateMinutes = $timeEstimateMinutes;
         $this->updatedAt = $updatedAt;

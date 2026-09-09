@@ -19,9 +19,6 @@ enum ListUcRecordingsQueryParamFields: string
     case ExpiresAt = 'expires_at';
     case CallId = 'call_id';
     case WebUrl = 'web_url';
-    case ContactId = 'contact_id';
-    case ContactName = 'contact_name';
-    case ContactPhone = 'contact_phone';
     case Contacts = 'contacts';
     case UserId = 'user_id';
     case Media = 'media';

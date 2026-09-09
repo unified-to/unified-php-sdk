@@ -22,16 +22,6 @@ class AccountingProfitloss
     public ?array $categoryIds = null;
 
     /**
-     * @deprecated – use cost_of_goods_sold_sections instead
-     *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory> $costOfGoodsSold
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('cost_of_goods_sold')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $costOfGoodsSold = null;
-
-    /**
      * $costOfGoodsSoldSections
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection> $costOfGoodsSoldSections
@@ -74,16 +64,6 @@ class AccountingProfitloss
     public ?\DateTime $endAt = null;
 
     /**
-     * @deprecated – use expenses_sections instead
-     *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory> $expenses
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('expenses')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $expenses = null;
-
-    /**
      * $expensesSections
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection> $expensesSections
@@ -103,29 +83,11 @@ class AccountingProfitloss
 
     /**
      *
-     * @var ?float $grossProfitAmount
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('gross_profit_amount')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?float $grossProfitAmount = null;
-
-    /**
-     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
-
-    /**
-     * @deprecated – use income_sections instead
-     *
-     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory> $income
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('income')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $income = null;
 
     /**
      * $incomeSections
@@ -162,14 +124,6 @@ class AccountingProfitloss
     public ?float $netIncomeAmount = null;
 
     /**
-     *
-     * @var ?float $netProfitAmount
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('net_profit_amount')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?float $netProfitAmount = null;
-
-    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -197,48 +151,38 @@ class AccountingProfitloss
 
     /**
      * @param  ?array<string>  $categoryIds
-     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>  $costOfGoodsSold
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>  $costOfGoodsSoldSections
      * @param  ?float  $costOfGoodsSoldTotalAmount
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
-     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>  $expenses
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>  $expensesSections
      * @param  ?float  $expensesTotalAmount
-     * @param  ?float  $grossProfitAmount
      * @param  ?string  $id
-     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossCategory>  $income
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>  $incomeSections
      * @param  ?float  $incomeTotalAmount
      * @param  ?string  $name
      * @param  ?float  $netIncomeAmount
-     * @param  ?float  $netProfitAmount
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $categoryIds = null, ?array $costOfGoodsSold = null, ?array $costOfGoodsSoldSections = null, ?float $costOfGoodsSoldTotalAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $expenses = null, ?array $expensesSections = null, ?float $expensesTotalAmount = null, ?float $grossProfitAmount = null, ?string $id = null, ?array $income = null, ?array $incomeSections = null, ?float $incomeTotalAmount = null, ?string $name = null, ?float $netIncomeAmount = null, ?float $netProfitAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $categoryIds = null, ?array $costOfGoodsSoldSections = null, ?float $costOfGoodsSoldTotalAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $expensesSections = null, ?float $expensesTotalAmount = null, ?string $id = null, ?array $incomeSections = null, ?float $incomeTotalAmount = null, ?string $name = null, ?float $netIncomeAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->categoryIds = $categoryIds;
-        $this->costOfGoodsSold = $costOfGoodsSold;
         $this->costOfGoodsSoldSections = $costOfGoodsSoldSections;
         $this->costOfGoodsSoldTotalAmount = $costOfGoodsSoldTotalAmount;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->endAt = $endAt;
-        $this->expenses = $expenses;
         $this->expensesSections = $expensesSections;
         $this->expensesTotalAmount = $expensesTotalAmount;
-        $this->grossProfitAmount = $grossProfitAmount;
         $this->id = $id;
-        $this->income = $income;
         $this->incomeSections = $incomeSections;
         $this->incomeTotalAmount = $incomeTotalAmount;
         $this->name = $name;
         $this->netIncomeAmount = $netIncomeAmount;
-        $this->netProfitAmount = $netProfitAmount;
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->updatedAt = $updatedAt;

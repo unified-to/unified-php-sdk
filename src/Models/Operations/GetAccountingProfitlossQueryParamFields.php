@@ -19,11 +19,6 @@ enum GetAccountingProfitlossQueryParamFields: string
     case EndAt = 'end_at';
     case Name = 'name';
     case Currency = 'currency';
-    case Income = 'income';
-    case Expenses = 'expenses';
-    case CostOfGoodsSold = 'cost_of_goods_sold';
-    case GrossProfitAmount = 'gross_profit_amount';
-    case NetProfitAmount = 'net_profit_amount';
     case IncomeTotalAmount = 'income_total_amount';
     case NetIncomeAmount = 'net_income_amount';
     case ExpensesTotalAmount = 'expenses_total_amount';

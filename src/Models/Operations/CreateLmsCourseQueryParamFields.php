@@ -23,9 +23,7 @@ enum CreateLmsCourseQueryParamFields: string
     case Categories = 'categories';
     case Currency = 'currency';
     case Media = 'media';
-    case InstructorIds = 'instructor_ids';
     case Instructors = 'instructors';
-    case StudentIds = 'student_ids';
     case Students = 'students';
     case ContentIds = 'content_ids';
     case Skills = 'skills';

@@ -31,7 +31,6 @@ enum UpdateLmsContentQueryParamFields: string
     case ProviderName = 'provider_name';
     case ShortDescription = 'short_description';
     case Localizations = 'localizations';
-    case InstructorIds = 'instructor_ids';
     case CollectionIds = 'collection_ids';
     case Instructors = 'instructors';
     case PublishedAt = 'published_at';

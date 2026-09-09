@@ -35,7 +35,6 @@ enum UpdateCommerceItemQueryParamFields: string
     case Variants = 'variants';
     case Tags = 'tags';
     case Media = 'media';
-    case CollectionIds = 'collection_ids';
     case AccountId = 'account_id';
     case Metadata = 'metadata';
     case Collections = 'collections';

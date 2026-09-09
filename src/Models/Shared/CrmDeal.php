@@ -74,6 +74,14 @@ class CrmDeal
 
     /**
      *
+     * @var ?string $description
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('description')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $description = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -105,22 +113,6 @@ class CrmDeal
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
-
-    /**
-     *
-     * @var ?string $pipeline
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('pipeline')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $pipeline = null;
-
-    /**
-     *
-     * @var ?string $pipelineId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('pipeline_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $pipelineId = null;
 
     /**
      * $pipelines
@@ -157,22 +149,6 @@ class CrmDeal
     #[\Speakeasy\Serializer\Annotation\SerializedName('source')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $source = null;
-
-    /**
-     *
-     * @var ?string $stage
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('stage')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $stage = null;
-
-    /**
-     *
-     * @var ?string $stageId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('stage_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $stageId = null;
 
     /**
      * $stages
@@ -226,18 +202,15 @@ class CrmDeal
      * @param  ?array<string>  $contactIds
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
+     * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?string  $lostReason
      * @param  ?array<\Unified\Unified_to\Models\Shared\CrmMetadata>  $metadata
      * @param  ?string  $name
-     * @param  ?string  $pipeline
-     * @param  ?string  $pipelineId
      * @param  ?array<\Unified\Unified_to\Models\Shared\CrmReference>  $pipelines
      * @param  ?float  $probability
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $source
-     * @param  ?string  $stage
-     * @param  ?string  $stageId
      * @param  ?array<\Unified\Unified_to\Models\Shared\CrmReference>  $stages
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
@@ -245,7 +218,7 @@ class CrmDeal
      * @param  ?string  $wonReason
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $closingAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?string $pipeline = null, ?string $pipelineId = null, ?array $pipelines = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?string $stage = null, ?string $stageId = null, ?array $stages = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
+    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $closingAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?array $pipelines = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?array $stages = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
     {
         $this->amount = $amount;
         $this->closedAt = $closedAt;
@@ -254,18 +227,15 @@ class CrmDeal
         $this->contactIds = $contactIds;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
+        $this->description = $description;
         $this->id = $id;
         $this->lostReason = $lostReason;
         $this->metadata = $metadata;
         $this->name = $name;
-        $this->pipeline = $pipeline;
-        $this->pipelineId = $pipelineId;
         $this->pipelines = $pipelines;
         $this->probability = $probability;
         $this->raw = $raw;
         $this->source = $source;
-        $this->stage = $stage;
-        $this->stageId = $stageId;
         $this->stages = $stages;
         $this->tags = $tags;
         $this->updatedAt = $updatedAt;

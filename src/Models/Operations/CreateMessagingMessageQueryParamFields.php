@@ -14,11 +14,8 @@ enum CreateMessagingMessageQueryParamFields: string
     case Id = 'id';
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
-    case ChannelId = 'channel_id';
-    case ChannelIds = 'channel_ids';
     case Channels = 'channels';
     case ParentId = 'parent_id';
-    case RootMessageId = 'root_message_id';
     case MessageThreadIdentifier = 'message_thread_identifier';
     case AuthorMember = 'author_member';
     case DestinationMembers = 'destination_members';

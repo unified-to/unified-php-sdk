@@ -54,14 +54,6 @@ class AccountingAccount
 
     /**
      *
-     * @var ?string $group
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('group')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $group = null;
-
-    /**
-     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -112,36 +104,12 @@ class AccountingAccount
 
     /**
      *
-     * @var ?string $section
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('section')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $section = null;
-
-    /**
-     *
      * @var ?\Unified\Unified_to\Models\Shared\Status $status
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Status|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?Status $status = null;
-
-    /**
-     *
-     * @var ?string $subgroup
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('subgroup')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $subgroup = null;
-
-    /**
-     *
-     * @var ?string $subsection
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('subsection')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $subsection = null;
 
     /**
      * $taxonomy
@@ -176,40 +144,32 @@ class AccountingAccount
      * @param  ?string  $currency
      * @param  ?string  $customerDefinedCode
      * @param  ?string  $description
-     * @param  ?string  $group
      * @param  ?string  $id
      * @param  ?bool  $isPayable
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
-     * @param  ?string  $section
      * @param  ?\Unified\Unified_to\Models\Shared\Status  $status
-     * @param  ?string  $subgroup
-     * @param  ?string  $subsection
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAccountTaxonomy>  $taxonomy
      * @param  ?\Unified\Unified_to\Models\Shared\Type  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $group = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?array $raw = null, ?string $section = null, ?Status $status = null, ?string $subgroup = null, ?string $subsection = null, ?array $taxonomy = null, ?Type $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?array $raw = null, ?Status $status = null, ?array $taxonomy = null, ?Type $type = null, ?\DateTime $updatedAt = null)
     {
         $this->balance = $balance;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->customerDefinedCode = $customerDefinedCode;
         $this->description = $description;
-        $this->group = $group;
         $this->id = $id;
         $this->isPayable = $isPayable;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->parentId = $parentId;
         $this->raw = $raw;
-        $this->section = $section;
         $this->status = $status;
-        $this->subgroup = $subgroup;
-        $this->subsection = $subsection;
         $this->taxonomy = $taxonomy;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

@@ -20,30 +20,6 @@ class UcRecording
     public ?string $callId = null;
 
     /**
-     *
-     * @var ?string $contactId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $contactId = null;
-
-    /**
-     *
-     * @var ?string $contactName
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_name')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $contactName = null;
-
-    /**
-     *
-     * @var ?string $contactPhone
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_phone')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $contactPhone = null;
-
-    /**
      * $contacts
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\UcContact> $contacts
@@ -164,9 +140,6 @@ class UcRecording
 
     /**
      * @param  ?string  $callId
-     * @param  ?string  $contactId
-     * @param  ?string  $contactName
-     * @param  ?string  $contactPhone
      * @param  ?array<\Unified\Unified_to\Models\Shared\UcContact>  $contacts
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
@@ -183,12 +156,9 @@ class UcRecording
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?string $callId = null, ?string $contactId = null, ?string $contactName = null, ?string $contactPhone = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcRecordingType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
+    public function __construct(?string $callId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcRecordingType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
     {
         $this->callId = $callId;
-        $this->contactId = $contactId;
-        $this->contactName = $contactName;
-        $this->contactPhone = $contactPhone;
         $this->contacts = $contacts;
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;

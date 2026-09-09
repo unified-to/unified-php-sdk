@@ -42,24 +42,6 @@ class PropertyMessagingEventMessage
     public ?array $buttons = null;
 
     /**
-     *
-     * @var ?string $channelId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('channel_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $channelId = null;
-
-    /**
-     * @deprecated; use channels instead
-     *
-     * @var ?array<string> $channelIds
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('channel_ids')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $channelIds = null;
-
-    /**
      * Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted.
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\MessagingReference> $channels
@@ -201,14 +183,6 @@ class PropertyMessagingEventMessage
 
     /**
      *
-     * @var ?string $rootMessageId
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('root_message_id')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?string $rootMessageId = null;
-
-    /**
-     *
      * @var ?string $subject
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('subject')]
@@ -235,8 +209,6 @@ class PropertyMessagingEventMessage
      * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingAttachment>  $attachments
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventMessageAuthorMember  $authorMember
      * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingButton>  $buttons
-     * @param  ?string  $channelId
-     * @param  ?array<string>  $channelIds
      * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingReference>  $channels
      * @param  ?\DateTime  $createdAt
      * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMember>  $destinationMembers
@@ -253,19 +225,16 @@ class PropertyMessagingEventMessage
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingReaction>  $reactions
      * @param  ?string  $reference
-     * @param  ?string  $rootMessageId
      * @param  ?string  $subject
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?PropertyMessagingEventMessageAuthorMember $authorMember = null, ?array $buttons = null, ?string $channelId = null, ?array $channelIds = null, ?array $channels = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?bool $isUnread = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $messageThreadIdentifier = null, ?string $parentId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $rootMessageId = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?PropertyMessagingEventMessageAuthorMember $authorMember = null, ?array $buttons = null, ?array $channels = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?bool $isUnread = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $messageThreadIdentifier = null, ?string $parentId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->authorMember = $authorMember;
         $this->buttons = $buttons;
-        $this->channelId = $channelId;
-        $this->channelIds = $channelIds;
         $this->channels = $channels;
         $this->createdAt = $createdAt;
         $this->destinationMembers = $destinationMembers;
@@ -282,7 +251,6 @@ class PropertyMessagingEventMessage
         $this->raw = $raw;
         $this->reactions = $reactions;
         $this->reference = $reference;
-        $this->rootMessageId = $rootMessageId;
         $this->subject = $subject;
         $this->updatedAt = $updatedAt;
         $this->webUrl = $webUrl;

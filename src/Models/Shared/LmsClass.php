@@ -44,16 +44,6 @@ class LmsClass
     public ?string $id = null;
 
     /**
-     * @deprecated; use instructors
-     *
-     * @var ?array<string> $instructorIds
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('instructor_ids')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $instructorIds = null;
-
-    /**
      * $instructors
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\LmsReference> $instructors
@@ -102,16 +92,6 @@ class LmsClass
     public ?array $raw = null;
 
     /**
-     * @deprecated; use students
-     *
-     * @var ?array<string> $studentIds
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('student_ids')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $studentIds = null;
-
-    /**
      * $students
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\LmsReference> $students
@@ -134,30 +114,26 @@ class LmsClass
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id
-     * @param  ?array<string>  $instructorIds
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsReference>  $instructors
      * @param  ?array<string>  $languages
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
-     * @param  ?array<string>  $studentIds
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsReference>  $students
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $courseId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?array $instructorIds = null, ?array $instructors = null, ?array $languages = null, ?array $media = null, ?string $name = null, ?array $raw = null, ?array $studentIds = null, ?array $students = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $courseId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?array $instructors = null, ?array $languages = null, ?array $media = null, ?string $name = null, ?array $raw = null, ?array $students = null, ?\DateTime $updatedAt = null)
     {
         $this->courseId = $courseId;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
-        $this->instructorIds = $instructorIds;
         $this->instructors = $instructors;
         $this->languages = $languages;
         $this->media = $media;
         $this->name = $name;
         $this->raw = $raw;
-        $this->studentIds = $studentIds;
         $this->students = $students;
         $this->updatedAt = $updatedAt;
     }

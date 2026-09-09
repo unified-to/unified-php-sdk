@@ -19,10 +19,6 @@ enum PatchCrmDealQueryParamFields: string
     case Currency = 'currency';
     case ClosedAt = 'closed_at';
     case ClosingAt = 'closing_at';
-    case Stage = 'stage';
-    case StageId = 'stage_id';
-    case Pipeline = 'pipeline';
-    case PipelineId = 'pipeline_id';
     case Stages = 'stages';
     case Pipelines = 'pipelines';
     case Source = 'source';
@@ -34,5 +30,6 @@ enum PatchCrmDealQueryParamFields: string
     case ContactIds = 'contact_ids';
     case CompanyIds = 'company_ids';
     case Metadata = 'metadata';
+    case Description = 'description';
     case Raw = 'raw';
 }

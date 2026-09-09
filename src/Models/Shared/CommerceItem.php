@@ -20,16 +20,6 @@ class CommerceItem
     public ?string $accountId = null;
 
     /**
-     *  @deprecated; use collections instead
-     *
-     * @var ?array<string> $collectionIds
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('collection_ids')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $collectionIds = null;
-
-    /**
      * points to Collection with id, name, and type fields
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\CommerceReference> $collections
@@ -286,7 +276,6 @@ class CommerceItem
 
     /**
      * @param  ?string  $accountId
-     * @param  ?array<string>  $collectionIds
      * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceReference>  $collections
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
@@ -319,10 +308,9 @@ class CommerceItem
      * @param  ?\Unified\Unified_to\Models\Shared\WeightUnit  $weightUnit
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $collectionIds = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $duration = null, ?string $globalCode = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isTaxable = null, ?bool $isVisible = null, ?string $locationId = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?float $totalStock = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null, ?float $weight = null, ?WeightUnit $weightUnit = null)
+    public function __construct(?string $accountId = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $duration = null, ?string $globalCode = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isTaxable = null, ?bool $isVisible = null, ?string $locationId = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?float $totalStock = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null, ?float $weight = null, ?WeightUnit $weightUnit = null)
     {
         $this->accountId = $accountId;
-        $this->collectionIds = $collectionIds;
         $this->collections = $collections;
         $this->createdAt = $createdAt;
         $this->description = $description;
