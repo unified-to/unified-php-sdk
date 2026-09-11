@@ -25,7 +25,6 @@ enum WebhookObjectType: string
     case AccountingOrder = 'accounting_order';
     case AccountingSalesorder = 'accounting_salesorder';
     case AccountingPurchaseorder = 'accounting_purchaseorder';
-    case AccountingReport = 'accounting_report';
     case AccountingBalancesheet = 'accounting_balancesheet';
     case AccountingProfitloss = 'accounting_profitloss';
     case AccountingTrialbalance = 'accounting_trialbalance';

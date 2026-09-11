@@ -240,16 +240,6 @@ class CommerceItem
     public ?\DateTime $updatedAt = null;
 
     /**
-     * first variant is the default variant
-     *
-     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceItemvariant> $variants
-     */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('variants')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceItemvariant>|null')]
-    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?array $variants = null;
-
-    /**
      *
      * @var ?string $vendorName
      */
@@ -302,13 +292,12 @@ class CommerceItem
      * @param  ?float  $totalStock
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
-     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemvariant>  $variants
      * @param  ?string  $vendorName
      * @param  ?float  $weight
      * @param  ?\Unified\Unified_to\Models\Shared\WeightUnit  $weightUnit
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $duration = null, ?string $globalCode = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isTaxable = null, ?bool $isVisible = null, ?string $locationId = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?float $totalStock = null, ?string $type = null, ?\DateTime $updatedAt = null, ?array $variants = null, ?string $vendorName = null, ?float $weight = null, ?WeightUnit $weightUnit = null)
+    public function __construct(?string $accountId = null, ?array $collections = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $duration = null, ?string $globalCode = null, ?string $id = null, ?string $inventoryId = null, ?bool $isActive = null, ?bool $isFeatured = null, ?bool $isTaxable = null, ?bool $isVisible = null, ?string $locationId = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $prices = null, ?string $publicDescription = null, ?string $publicName = null, ?array $raw = null, ?bool $requiresShipping = null, ?string $slug = null, ?array $tags = null, ?string $taxrateId = null, ?float $totalStock = null, ?string $type = null, ?\DateTime $updatedAt = null, ?string $vendorName = null, ?float $weight = null, ?WeightUnit $weightUnit = null)
     {
         $this->accountId = $accountId;
         $this->collections = $collections;
@@ -337,7 +326,6 @@ class CommerceItem
         $this->totalStock = $totalStock;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
-        $this->variants = $variants;
         $this->vendorName = $vendorName;
         $this->weight = $weight;
         $this->weightUnit = $weightUnit;

@@ -32,7 +32,6 @@ enum UpdateCommerceItemQueryParamFields: string
     case Prices = 'prices';
     case InventoryId = 'inventory_id';
     case TotalStock = 'total_stock';
-    case Variants = 'variants';
     case Tags = 'tags';
     case Media = 'media';
     case AccountId = 'account_id';

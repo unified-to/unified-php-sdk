@@ -72,8 +72,6 @@ class UnifiedTo
 
     public Quote $quote;
 
-    public Report $report;
-
     public Salesorder $salesorder;
 
     public Taxrate $taxrate;
@@ -99,6 +97,8 @@ class UnifiedTo
     public Insertionorder $insertionorder;
 
     public Promoted $promoted;
+
+    public Report $report;
 
     public Target $target;
 
@@ -414,7 +414,6 @@ class UnifiedTo
         $this->project = new Project($this->sdkConfiguration);
         $this->purchaseorder = new Purchaseorder($this->sdkConfiguration);
         $this->quote = new Quote($this->sdkConfiguration);
-        $this->report = new Report($this->sdkConfiguration);
         $this->salesorder = new Salesorder($this->sdkConfiguration);
         $this->taxrate = new Taxrate($this->sdkConfiguration);
         $this->transaction = new Transaction($this->sdkConfiguration);
@@ -428,6 +427,7 @@ class UnifiedTo
         $this->group = new Group($this->sdkConfiguration);
         $this->insertionorder = new Insertionorder($this->sdkConfiguration);
         $this->promoted = new Promoted($this->sdkConfiguration);
+        $this->report = new Report($this->sdkConfiguration);
         $this->target = new Target($this->sdkConfiguration);
         $this->analytics = new Analytics($this->sdkConfiguration);
         $this->event = new Event($this->sdkConfiguration);

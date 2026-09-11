@@ -34,8 +34,6 @@
 | `AccountingPurchaseorderWrite`       | accounting_purchaseorder_write       |
 | `AccountingSalesorderRead`           | accounting_salesorder_read           |
 | `AccountingSalesorderWrite`          | accounting_salesorder_write          |
-| `AccountingReportRead`               | accounting_report_read               |
-| `AccountingReportWrite`              | accounting_report_write              |
 | `AccountingTrialbalanceRead`         | accounting_trialbalance_read         |
 | `AccountingTrialbalanceWrite`        | accounting_trialbalance_write        |
 | `AccountingProfitlossRead`           | accounting_profitloss_read           |

@@ -11,7 +11,6 @@ namespace Unified\Unified_to\Models\Shared;
 
 enum AccountingInvoiceType: string
 {
-    case Bill = 'BILL';
     case Invoice = 'INVOICE';
     case Creditmemo = 'CREDITMEMO';
 }
