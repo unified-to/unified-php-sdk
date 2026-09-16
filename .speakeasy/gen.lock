@@ -1,20 +1,20 @@
 lockVersion: 2.0.0
 id: 2b560ec4-b84f-4215-b917-90b5f7369715
 management:
-  docChecksum: 2603dd36aa034d8cef9a411c0f95cad1
+  docChecksum: d97af36e486283112b42dc840ba12587
   docVersion: "1.0"
-  speakeasyVersion: 1.796.4
-  generationVersion: 2.935.1
-  releaseVersion: 1.6.117
-  configChecksum: 057dab038f6d93238aa0353731fc2ead
+  speakeasyVersion: 1.797.0
+  generationVersion: 2.937.18
+  releaseVersion: 1.6.118
+  configChecksum: db530d1440f9c1a04994ce0b4b9c60cd
   repoURL: https://github.com/unified-to/unified-php-sdk.git
   repoSubDirectory: .
   installationURL: https://github.com/unified-to/unified-php-sdk.git
   published: true
 persistentEdits:
-  generation_id: 4c324a25-4100-46c9-bbad-df3d7e8f260a
-  pristine_commit_hash: 7b1a7d567cc313f7eb0b9f6f7e45a3d513950d90
-  pristine_tree_hash: 6e1c0591e03593fc15e897ac247d2ad86e8879fd
+  generation_id: 67e731da-ab59-4846-b60f-b04ab9c73b21
+  pristine_commit_hash: aa518044f6836dc738eacc8231721cce01d02d28
+  pristine_tree_hash: 5257bf6702385ecddf0cd38d17e5b44b40432d01
 features:
   php:
     constsAndDefaults: 0.2.2
@@ -1589,8 +1589,8 @@ trackedFiles:
     pristine_git_object: aec24dfa9f3b93b15707acf927708ac3e910e68f
   docs/Models/Operations/CreateUnifiedWebhookRequest.md:
     id: 00b425bb0927
-    last_write_checksum: sha1:aedf6efffbea34129a3e5b6e738953379a859f25
-    pristine_git_object: b29a3bb834d1b4f9a19211c8dfb857dcbd3b1454
+    last_write_checksum: sha1:8f794ae15ec7e1cc711e13325edf3dca7887ceae
+    pristine_git_object: b611052d7b667224ca076c210ac57d9af1765558
   docs/Models/Operations/CreateUnifiedWebhookResponse.md:
     id: 8e02812f282e
     last_write_checksum: sha1:d8afc6f92739fe4787b1b8a2440eae3419b2de75
@@ -16821,8 +16821,8 @@ trackedFiles:
     pristine_git_object: 4af80ff41ecefdd5a99ff2a82251070a2fe11385
   src/Models/Operations/CreateUnifiedWebhookRequest.php:
     id: f1eb2c76f9a1
-    last_write_checksum: sha1:4e73156d9e9ea22f94e6e7cb9490b1bbd1d53703
-    pristine_git_object: 40b614fb5f95957fa61f87e4eb237161460a915a
+    last_write_checksum: sha1:b0e385d0858e1b5bcc0adc19709853e5d4cf765c
+    pristine_git_object: 8c2b1fa6f431d07376511914cabbaf05bcf2d250
   src/Models/Operations/CreateUnifiedWebhookResponse.php:
     id: b047c6cb7945
     last_write_checksum: sha1:d40b4c9a0866657bb2e8de3089da110eb87f0c0a
@@ -29293,8 +29293,8 @@ trackedFiles:
     pristine_git_object: 77a0030116bcc6f71853e9b674d7465b6da28e40
   src/SDKConfiguration.php:
     id: 9d60ab0bec0b
-    last_write_checksum: sha1:f94924ee4b78f6576c5d4e08ba311170f98644ca
-    pristine_git_object: 130841ba7b2ebd0f2f674a47a183fb69f85319c4
+    last_write_checksum: sha1:94cc02a10b7f9ec266efc04d90c93db7f3ef4b62
+    pristine_git_object: 025d2dc3c04bdde1dac8f85befaf33a943c5b4f2
   src/Saleschannel.php:
     id: 2c62bfa1c063
     last_write_checksum: sha1:0287ea8a3e8fb114f252a29b614f8a274cd64822
@@ -29581,8 +29581,8 @@ trackedFiles:
     pristine_git_object: 588ce8a826c3433fe670223ad0298e2e32db1273
   src/Utils/Utils.php:
     id: c902f57e2422
-    last_write_checksum: sha1:f98a456cd0837a28f43328ebadfd32cf302f3aba
-    pristine_git_object: 9cda9791d21cfc285ba1717fe358cc7d51c44b41
+    last_write_checksum: sha1:da7970253782a035522261aa990792a8545111c2
+    pristine_git_object: f34182113ab14cd19390496a0722a99745c37670
   src/Vendorcredit.php:
     id: 8a4dbb1b7770
     last_write_checksum: sha1:478f8dc8447bc5e6dc8f7894d575fb3438325574
@@ -43722,7 +43722,6 @@ examples:
           application/json: {}
 examplesVersion: 1.0.2
 generatedTests: {}
-releaseNotes: "## Php SDK Changes:\n* `unified-to->item->patchCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->webhook->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->webhook->patchUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->accounting->createAccountingInvoice()`: \n  *  `request->accountingInvoice->type->enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->accounting->getAccountingInvoice()`:  `response.type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->accounting->listAccountingInvoices()`:  `response.[]->type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->accounting->patchAccountingInvoice()`: \n  *  `request->accountingInvoice->type->enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->accounting->updateAccountingInvoice()`: \n  *  `request->accountingInvoice->type->enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->invoice->createAccountingInvoice()`: \n  *  `request->accountingInvoice->type->enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->invoice->getAccountingInvoice()`:  `response.type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->invoice->listAccountingInvoices()`:  `response.[]->type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->invoice->patchAccountingInvoice()`: \n  *  `request->accountingInvoice->type->enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->invoice->updateAccountingInvoice()`: \n  *  `request->accountingInvoice->type->enum(bill)` **Removed** (Breaking ⚠️)\n  *  `response.type->enum(bill)` **Removed** (Breaking ⚠️)\n* `unified-to->commerce->createCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to->commerce->getCommerceItem()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to->commerce->listCommerceItems()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]->variants` **Removed** (Breaking ⚠️)\n* `unified-to->commerce->patchCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to->commerce->updateCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to->item->createCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to->webhook->listUnifiedWebhooks()`:  `response.[]->objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->webhook->getUnifiedWebhook()`:  `response.objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->item->listCommerceItems()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.[]->variants` **Removed** (Breaking ⚠️)\n* `unified-to->item->updateCommerceItem()`: \n  *  `request` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->getUnifiedWebhook()`:  `response.objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->listUnifiedWebhooks()`:  `response.[]->objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->unified->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->item->getCommerceItem()`: \n  *  `request->fields` **Changed** (Breaking ⚠️)\n  *  `response.variants` **Removed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->unified->updateUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->connection->createUnifiedConnection()`: \n  *  `request->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->getUnifiedConnection()`:  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->listUnifiedConnections()`:  `response.[]->permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->patchUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->connection->updateUnifiedConnection()`: \n  *  `request->connection->permissions[]` **Changed** (Breaking ⚠️)\n  *  `response.permissions[]` **Changed** (Breaking ⚠️)\n* `unified-to->webhook->createUnifiedWebhook()`: \n  *  `request->webhook->objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n  *  `response.objectType->enum(accountingReport)` **Removed** (Breaking ⚠️)\n* `unified-to->accounting->listAccountingReports()`: **Removed** (Breaking ⚠️)\n* `unified-to->accounting->getAccountingReport()`: **Removed** (Breaking ⚠️)\n* `unified-to->report->listAccountingReports()`: **Removed** (Breaking ⚠️)\n* `unified-to->report->getAccountingReport()`: **Removed** (Breaking ⚠️)\n"
 generatedFiles:
   - .gitattributes
   - USAGE.md
