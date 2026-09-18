@@ -17,7 +17,7 @@ Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="php" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisBenefitRequest(
-    hrisBenefit: new Shared\HrisBenefit(),
+    hrisBenefit: new Shared\HrisBenefit(
+        coverageLevel: Shared\CoverageLevel::EmployeeSpouse,
+        createdAt: Utils\Utils::parseDateTime('2020-06-11T01:24:05.654Z'),
+        currency: 'JOD',
+        description: 'Vomito voluptas dolor sed.',
+        employerContributionAmount: 185006,
+        employerContributionMaxAmount: 179093,
+        employerContributionType: Shared\EmployerContributionType::Percentage,
+        frequency: Shared\HrisBenefitFrequency::Hour,
+        id: '316f6179-1072-40b5-ac95-647349da2fa6',
+        isActive: false,
+        name: 'Frozen Wooden Ball',
+        tax: Shared\Tax::PreTax,
+        type: Shared\HrisBenefitType::Garnishment,
+        updatedAt: Utils\Utils::parseDateTime('2023-03-06T11:00:21.275Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +186,7 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +195,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +204,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisBenefitRequest(
-    hrisBenefit: new Shared\HrisBenefit(),
+    hrisBenefit: new Shared\HrisBenefit(
+        coverageLevel: Shared\CoverageLevel::EmployeeSpouse,
+        createdAt: Utils\Utils::parseDateTime('2020-06-11T01:24:05.654Z'),
+        currency: 'JOD',
+        description: 'Vomito voluptas dolor sed.',
+        employerContributionAmount: 185006,
+        employerContributionMaxAmount: 179093,
+        employerContributionType: Shared\EmployerContributionType::Percentage,
+        frequency: Shared\HrisBenefitFrequency::Hour,
+        id: '20ebb126-9b3a-4c47-8f83-06f96f663e09',
+        isActive: false,
+        name: 'Frozen Wooden Ball',
+        tax: Shared\Tax::PreTax,
+        type: Shared\HrisBenefitType::Garnishment,
+        updatedAt: Utils\Utils::parseDateTime('2023-03-06T11:00:21.279Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +306,7 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +315,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +324,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisBenefitRequest(
-    hrisBenefit: new Shared\HrisBenefit(),
+    hrisBenefit: new Shared\HrisBenefit(
+        coverageLevel: Shared\CoverageLevel::EmployeeSpouse,
+        createdAt: Utils\Utils::parseDateTime('2020-06-11T01:24:05.654Z'),
+        currency: 'JOD',
+        description: 'Vomito voluptas dolor sed.',
+        employerContributionAmount: 185006,
+        employerContributionMaxAmount: 179093,
+        employerContributionType: Shared\EmployerContributionType::Percentage,
+        frequency: Shared\HrisBenefitFrequency::Hour,
+        id: '20ebb126-9b3a-4c47-8f83-06f96f663e09',
+        isActive: false,
+        name: 'Frozen Wooden Ball',
+        tax: Shared\Tax::PreTax,
+        type: Shared\HrisBenefitType::Garnishment,
+        updatedAt: Utils\Utils::parseDateTime('2023-03-06T11:00:21.279Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

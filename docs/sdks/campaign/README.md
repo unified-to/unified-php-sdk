@@ -23,7 +23,7 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="php" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -32,6 +32,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -40,7 +41,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsCampaignRequest(
-    adsCampaign: new Shared\AdsCampaign(),
+    adsCampaign: new Shared\AdsCampaign(
+        budgetAmount: 8743.179536121897,
+        budgetPeriod: Shared\BudgetPeriod::Monthly,
+        category: 'CREDIT',
+        createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\EffectiveStatus::NotEligible,
+        endAt: Utils\Utils::parseDateTime('2025-05-09T08:18:07.695Z'),
+        id: '035b7305-00db-4ce3-b37c-91dd72083e2f',
+        labels: [
+            'comedo',
+        ],
+        name: 'Emard Inc',
+        startAt: Utils\Utils::parseDateTime('2022-07-20T04:51:20.139Z'),
+        status: Shared\AdsCampaignStatus::ProcessingFailed,
+        targeting: new Shared\PropertyAdsCampaignTargeting(),
+        totalSpendAmount: 2349.8642875347286,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-05T13:34:49.061Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -75,7 +94,7 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" -->
+<!-- UsageSnippet language="php" operationID="createMartechCampaign" method="post" path="/martech/{connection_id}/campaign" example="martech_campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -84,6 +103,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -92,7 +112,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateMartechCampaignRequest(
-    marketingCampaign: new Shared\MarketingCampaign(),
+    marketingCampaign: new Shared\MarketingCampaign(
+        createdAt: Utils\Utils::parseDateTime('2023-08-01T22:29:12.121Z'),
+        fromEmail: 'Nick.Beahan@hotmail.com',
+        fromName: 'Javier Rempel',
+        id: 'dc45e3b6-f4a6-42ba-8e36-119d58a09bef',
+        listIds: [
+            'bde5cab9-cf2f-4ed5-adab-b33c88bac5af',
+        ],
+        name: 'Consequatur atqui sustineo.',
+        previewText: 'Bellicus tener cinis causa cavus toties.',
+        replyToEmail: 'Antwan.Abshire@hotmail.com',
+        sendAt: Utils\Utils::parseDateTime('2023-03-28T12:33:25.052Z'),
+        status: Shared\MarketingCampaignStatus::Sent,
+        subjectLine: 'Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.',
+        type: 'plaintext',
+        updatedAt: Utils\Utils::parseDateTime('2023-12-17T22:11:31.702Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -329,7 +365,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -338,6 +374,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -346,7 +383,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsCampaignRequest(
-    adsCampaign: new Shared\AdsCampaign(),
+    adsCampaign: new Shared\AdsCampaign(
+        budgetAmount: 8743.179536121897,
+        budgetPeriod: Shared\BudgetPeriod::Monthly,
+        category: 'CREDIT',
+        createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\EffectiveStatus::NotEligible,
+        endAt: Utils\Utils::parseDateTime('2025-05-09T08:18:07.796Z'),
+        id: '12366083-0173-485b-8373-fcce77c38066',
+        labels: [
+            'comedo',
+        ],
+        name: 'Emard Inc',
+        startAt: Utils\Utils::parseDateTime('2022-07-20T04:51:20.144Z'),
+        status: Shared\AdsCampaignStatus::ProcessingFailed,
+        targeting: new Shared\PropertyAdsCampaignTargeting(),
+        totalSpendAmount: 2349.8642875347286,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-05T13:34:49.182Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -382,7 +437,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMartechCampaign" method="patch" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -391,6 +446,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -399,7 +455,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchMartechCampaignRequest(
-    marketingCampaign: new Shared\MarketingCampaign(),
+    marketingCampaign: new Shared\MarketingCampaign(
+        createdAt: Utils\Utils::parseDateTime('2023-08-01T22:29:12.121Z'),
+        fromEmail: 'Nick.Beahan@hotmail.com',
+        fromName: 'Javier Rempel',
+        id: 'cbd04008-409d-46a4-b81c-914038b61fff',
+        listIds: [
+            'bde5cab9-cf2f-4ed5-adab-b33c88bac5af',
+        ],
+        name: 'Consequatur atqui sustineo.',
+        previewText: 'Bellicus tener cinis causa cavus toties.',
+        replyToEmail: 'Antwan.Abshire@hotmail.com',
+        sendAt: Utils\Utils::parseDateTime('2023-03-28T12:33:25.052Z'),
+        status: Shared\MarketingCampaignStatus::Sent,
+        subjectLine: 'Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.',
+        type: 'plaintext',
+        updatedAt: Utils\Utils::parseDateTime('2023-12-17T22:11:31.702Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -537,7 +609,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -546,6 +618,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -554,7 +627,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsCampaignRequest(
-    adsCampaign: new Shared\AdsCampaign(),
+    adsCampaign: new Shared\AdsCampaign(
+        budgetAmount: 8743.179536121897,
+        budgetPeriod: Shared\BudgetPeriod::Monthly,
+        category: 'CREDIT',
+        createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\EffectiveStatus::NotEligible,
+        endAt: Utils\Utils::parseDateTime('2025-05-09T08:18:07.796Z'),
+        id: '12366083-0173-485b-8373-fcce77c38066',
+        labels: [
+            'comedo',
+        ],
+        name: 'Emard Inc',
+        startAt: Utils\Utils::parseDateTime('2022-07-20T04:51:20.144Z'),
+        status: Shared\AdsCampaignStatus::ProcessingFailed,
+        targeting: new Shared\PropertyAdsCampaignTargeting(),
+        totalSpendAmount: 2349.8642875347286,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-05T13:34:49.182Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -590,7 +681,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMartechCampaign" method="put" path="/martech/{connection_id}/campaign/{id}" example="martech_campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -599,6 +690,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -607,7 +699,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateMartechCampaignRequest(
-    marketingCampaign: new Shared\MarketingCampaign(),
+    marketingCampaign: new Shared\MarketingCampaign(
+        createdAt: Utils\Utils::parseDateTime('2023-08-01T22:29:12.121Z'),
+        fromEmail: 'Nick.Beahan@hotmail.com',
+        fromName: 'Javier Rempel',
+        id: 'cbd04008-409d-46a4-b81c-914038b61fff',
+        listIds: [
+            'bde5cab9-cf2f-4ed5-adab-b33c88bac5af',
+        ],
+        name: 'Consequatur atqui sustineo.',
+        previewText: 'Bellicus tener cinis causa cavus toties.',
+        replyToEmail: 'Antwan.Abshire@hotmail.com',
+        sendAt: Utils\Utils::parseDateTime('2023-03-28T12:33:25.052Z'),
+        status: Shared\MarketingCampaignStatus::Sent,
+        subjectLine: 'Depromo depulso turpis teres apparatus placeat ventus tolero cunctatio.',
+        type: 'plaintext',
+        updatedAt: Utils\Utils::parseDateTime('2023-12-17T22:11:31.702Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

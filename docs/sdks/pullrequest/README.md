@@ -17,7 +17,7 @@ Create a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="php" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" example="repo_pullrequest" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,21 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateRepoPullrequestRequest(
-    repoPullrequest: new Shared\RepoPullrequest(),
+    repoPullrequest: new Shared\RepoPullrequest(
+        closedAt: Utils\Utils::parseDateTime('2025-04-11T21:28:25.897Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
+        id: '832dda65-a597-414c-8aa9-f7a588518dab',
+        labels: [
+            'adhuc',
+            'quaerat',
+        ],
+        notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
+        sourceBranchId: 'microchip-navigate',
+        status: Shared\RepoPullrequestStatus::Rejected,
+        targetBranchId: 'feed-reboot',
+        title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
+        updatedAt: Utils\Utils::parseDateTime('2024-12-30T23:42:33.219Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +185,7 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +194,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +203,21 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchRepoPullrequestRequest(
-    repoPullrequest: new Shared\RepoPullrequest(),
+    repoPullrequest: new Shared\RepoPullrequest(
+        closedAt: Utils\Utils::parseDateTime('2025-04-11T21:28:25.901Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
+        id: 'fa18946b-87ab-4a8f-b26e-6f7468374b6e',
+        labels: [
+            'adhuc',
+            'quaerat',
+        ],
+        notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
+        sourceBranchId: 'microchip-navigate',
+        status: Shared\RepoPullrequestStatus::Rejected,
+        targetBranchId: 'feed-reboot',
+        title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
+        updatedAt: Utils\Utils::parseDateTime('2024-12-30T23:42:33.222Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +304,7 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +313,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +322,21 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateRepoPullrequestRequest(
-    repoPullrequest: new Shared\RepoPullrequest(),
+    repoPullrequest: new Shared\RepoPullrequest(
+        closedAt: Utils\Utils::parseDateTime('2025-04-11T21:28:25.901Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
+        id: 'fa18946b-87ab-4a8f-b26e-6f7468374b6e',
+        labels: [
+            'adhuc',
+            'quaerat',
+        ],
+        notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
+        sourceBranchId: 'microchip-navigate',
+        status: Shared\RepoPullrequestStatus::Rejected,
+        targetBranchId: 'feed-reboot',
+        title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
+        updatedAt: Utils\Utils::parseDateTime('2024-12-30T23:42:33.222Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

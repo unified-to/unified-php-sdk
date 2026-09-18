@@ -17,7 +17,7 @@ Create a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="php" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" example="commerce_reservation" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceReservationRequest(
-    commerceReservation: new Shared\CommerceReservation(),
+    commerceReservation: new Shared\CommerceReservation(
+        createdAt: Utils\Utils::parseDateTime('2021-12-14T19:50:31.151Z'),
+        endAt: Utils\Utils::parseDateTime('2022-01-01T22:00:17.868Z'),
+        guestEmail: 'Sunny.Strosin77@yahoo.com',
+        guestName: 'Annette Franecki',
+        guestPhone: '(990) 317-6213',
+        id: '48b4fec8-c826-47e4-b2cf-38a3b14a6d6c',
+        itemName: 'Practical Ceramic Shoes',
+        notes: 'Adsum textilis ipsum despecto.',
+        size: 10,
+        staffName: 'Vickie Fahey',
+        startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
+        status: Shared\CommerceReservationStatus::Pending,
+        updatedAt: Utils\Utils::parseDateTime('2022-12-27T17:11:32.827Z'),
+        url: 'https://cluttered-pine.info/',
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +186,7 @@ Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +195,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +204,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceReservationRequest(
-    commerceReservation: new Shared\CommerceReservation(),
+    commerceReservation: new Shared\CommerceReservation(
+        createdAt: Utils\Utils::parseDateTime('2021-12-14T19:50:31.151Z'),
+        endAt: Utils\Utils::parseDateTime('2022-01-01T22:00:17.868Z'),
+        guestEmail: 'Sunny.Strosin77@yahoo.com',
+        guestName: 'Annette Franecki',
+        guestPhone: '(990) 317-6213',
+        id: '86061eab-8816-4b57-87b6-a84bdd529f94',
+        itemName: 'Practical Ceramic Shoes',
+        notes: 'Adsum textilis ipsum despecto.',
+        size: 10,
+        staffName: 'Vickie Fahey',
+        startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
+        status: Shared\CommerceReservationStatus::Pending,
+        updatedAt: Utils\Utils::parseDateTime('2022-12-27T17:11:32.829Z'),
+        url: 'https://cluttered-pine.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +306,7 @@ Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +315,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +324,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceReservationRequest(
-    commerceReservation: new Shared\CommerceReservation(),
+    commerceReservation: new Shared\CommerceReservation(
+        createdAt: Utils\Utils::parseDateTime('2021-12-14T19:50:31.151Z'),
+        endAt: Utils\Utils::parseDateTime('2022-01-01T22:00:17.868Z'),
+        guestEmail: 'Sunny.Strosin77@yahoo.com',
+        guestName: 'Annette Franecki',
+        guestPhone: '(990) 317-6213',
+        id: '86061eab-8816-4b57-87b6-a84bdd529f94',
+        itemName: 'Practical Ceramic Shoes',
+        notes: 'Adsum textilis ipsum despecto.',
+        size: 10,
+        staffName: 'Vickie Fahey',
+        startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
+        status: Shared\CommerceReservationStatus::Pending,
+        updatedAt: Utils\Utils::parseDateTime('2022-12-27T17:11:32.829Z'),
+        url: 'https://cluttered-pine.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

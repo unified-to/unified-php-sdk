@@ -17,7 +17,7 @@ Create a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="php" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" example="analytics_visitor" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAnalyticsVisitorRequest(
-    analyticsVisitor: new Shared\AnalyticsVisitor(),
+    analyticsVisitor: new Shared\AnalyticsVisitor(
+        createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        email: 'Dallas_Mitchell@yahoo.com',
+        firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        id: 'c4f48c8f-56d2-4cc8-b3f0-9a83509307e5',
+        lastSeenAt: Utils\Utils::parseDateTime('2021-12-04T18:09:09.077Z'),
+        metadata: [
+            'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
+        ],
+        name: 'Desiree O\'Hara',
+        totalEvents: 3639,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-03T08:27:48.122Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +183,7 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +192,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +201,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAnalyticsVisitorRequest(
-    analyticsVisitor: new Shared\AnalyticsVisitor(),
+    analyticsVisitor: new Shared\AnalyticsVisitor(
+        createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        email: 'Dallas_Mitchell@yahoo.com',
+        firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        id: '88e685e7-218d-418d-889f-1a6162b7ce74',
+        lastSeenAt: Utils\Utils::parseDateTime('2021-12-04T18:09:09.082Z'),
+        metadata: [
+            'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
+        ],
+        name: 'Desiree O\'Hara',
+        totalEvents: 3639,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-03T08:27:48.137Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +300,7 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +309,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +318,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAnalyticsVisitorRequest(
-    analyticsVisitor: new Shared\AnalyticsVisitor(),
+    analyticsVisitor: new Shared\AnalyticsVisitor(
+        createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        email: 'Dallas_Mitchell@yahoo.com',
+        firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        id: '88e685e7-218d-418d-889f-1a6162b7ce74',
+        lastSeenAt: Utils\Utils::parseDateTime('2021-12-04T18:09:09.082Z'),
+        metadata: [
+            'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
+        ],
+        name: 'Desiree O\'Hara',
+        totalEvents: 3639,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-03T08:27:48.137Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

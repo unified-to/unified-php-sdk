@@ -31,7 +31,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" example="task_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -40,6 +40,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -48,7 +49,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskCommentRequest(
-    taskComment: new Shared\TaskComment(),
+    taskComment: new Shared\TaskComment(
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
+        hasChildren: true,
+        id: '8f75dd61-8488-4668-b620-ddba262fb3c8',
+        text: 'Colo ulciscor sublime tabernus.',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-24T01:12:37.035Z'),
+        userName: 'Santina Abbott',
+    ),
     connectionId: '<id>',
 );
 
@@ -83,7 +91,7 @@ Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="php" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" example="task_project" -->
 ```php
 declare(strict_types=1);
 
@@ -92,6 +100,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -100,7 +109,37 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskProjectRequest(
-    taskProject: new Shared\TaskProject(),
+    taskProject: new Shared\TaskProject(
+        createdAt: Utils\Utils::parseDateTime('2023-06-23T16:39:40.446Z'),
+        description: 'Valetudo aggredior accommodo curiositas vox.',
+        hasChildren: false,
+        hasTasks: false,
+        id: '45aee72e-5fee-4ccf-a039-368b6e4a67b1',
+        metadata: [
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: '465260a6-1709-4d5f-8a7b-3b6e372e50df',
+                namespace: 'custom',
+                slug: 'decens',
+                value: 'uterque',
+            ),
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: '04623d6c-540c-4941-9109-bbc1936072ef',
+                namespace: 'custom',
+                slug: 'benevolentia',
+                value: 'pariatur',
+            ),
+        ],
+        name: 'Garden',
+        updatedAt: Utils\Utils::parseDateTime('2023-10-08T14:52:26.140Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -135,7 +174,7 @@ Create a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" -->
+<!-- UsageSnippet language="php" operationID="createTaskTask" method="post" path="/task/{connection_id}/task" example="task_task" -->
 ```php
 declare(strict_types=1);
 
@@ -144,6 +183,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -152,7 +192,32 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskTaskRequest(
-    taskTask: new Shared\TaskTask(),
+    taskTask: new Shared\TaskTask(
+        attachmentIds: [],
+        completedAt: Utils\Utils::parseDateTime('2022-03-24T11:50:57.839Z'),
+        createdAt: Utils\Utils::parseDateTime('2019-01-31T08:34:55.626Z'),
+        dueAt: Utils\Utils::parseDateTime('2026-04-23T08:40:37.798Z'),
+        endAt: Utils\Utils::parseDateTime('2022-10-13T17:21:47.453Z'),
+        hasChildren: true,
+        id: '467d5d84-3e1c-45e3-8eb5-deb032295cc4',
+        metadata: [],
+        name: 'Direct Markets Architect',
+        notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
+        priority: 'LOW',
+        progress: 2,
+        startAt: Utils\Utils::parseDateTime('2022-01-19T11:23:18.934Z'),
+        status: Shared\TaskTaskStatus::InProgress,
+        storyPoints: 0,
+        tags: [
+            'concido',
+            'rerum',
+        ],
+        timeSpent: 957,
+        timeSpentUnit: 'SECONDS',
+        type: 'tubineus',
+        updatedAt: Utils\Utils::parseDateTime('2019-07-13T10:49:06.255Z'),
+        url: 'https://dismal-silk.net/',
+    ),
     connectionId: '<id>',
 );
 
@@ -591,7 +656,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -600,6 +665,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -608,7 +674,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskCommentRequest(
-    taskComment: new Shared\TaskComment(),
+    taskComment: new Shared\TaskComment(
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
+        hasChildren: true,
+        id: 'bb64593e-fe9e-4f21-a5db-356051726f07',
+        text: 'Colo ulciscor sublime tabernus.',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-24T01:12:37.037Z'),
+        userName: 'Santina Abbott',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -644,7 +717,7 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```php
 declare(strict_types=1);
 
@@ -653,6 +726,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -661,7 +735,37 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskProjectRequest(
-    taskProject: new Shared\TaskProject(),
+    taskProject: new Shared\TaskProject(
+        createdAt: Utils\Utils::parseDateTime('2023-06-23T16:39:40.446Z'),
+        description: 'Valetudo aggredior accommodo curiositas vox.',
+        hasChildren: false,
+        hasTasks: false,
+        id: '90773dc6-3e85-438a-a2b9-7d34938be3fb',
+        metadata: [
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: 'a1386e7a-c55a-4cd2-bc88-929adb865752',
+                namespace: 'custom',
+                slug: 'decens',
+                value: 'uterque',
+            ),
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: '5cdcc465-2080-411f-b343-355dd0b8cb3e',
+                namespace: 'custom',
+                slug: 'benevolentia',
+                value: 'pariatur',
+            ),
+        ],
+        name: 'Garden',
+        updatedAt: Utils\Utils::parseDateTime('2023-10-08T14:52:26.141Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -697,7 +801,7 @@ Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTaskTask" method="patch" path="/task/{connection_id}/task/{id}" example="task_task" -->
 ```php
 declare(strict_types=1);
 
@@ -706,6 +810,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -714,7 +819,32 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskTaskRequest(
-    taskTask: new Shared\TaskTask(),
+    taskTask: new Shared\TaskTask(
+        attachmentIds: [],
+        completedAt: Utils\Utils::parseDateTime('2022-03-24T11:50:57.848Z'),
+        createdAt: Utils\Utils::parseDateTime('2019-01-31T08:34:55.626Z'),
+        dueAt: Utils\Utils::parseDateTime('2026-04-23T08:40:37.819Z'),
+        endAt: Utils\Utils::parseDateTime('2022-10-13T17:21:47.463Z'),
+        hasChildren: true,
+        id: '8c24e8eb-d30a-4a76-a0ff-6fbc62917a92',
+        metadata: [],
+        name: 'Direct Markets Architect',
+        notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
+        priority: 'LOW',
+        progress: 2,
+        startAt: Utils\Utils::parseDateTime('2022-01-19T11:23:18.942Z'),
+        status: Shared\TaskTaskStatus::InProgress,
+        storyPoints: 0,
+        tags: [
+            'concido',
+            'rerum',
+        ],
+        timeSpent: 957,
+        timeSpentUnit: 'SECONDS',
+        type: 'tubineus',
+        updatedAt: Utils\Utils::parseDateTime('2019-07-13T10:49:06.257Z'),
+        url: 'https://dismal-silk.net/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -903,7 +1033,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -912,6 +1042,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -920,7 +1051,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskCommentRequest(
-    taskComment: new Shared\TaskComment(),
+    taskComment: new Shared\TaskComment(
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
+        hasChildren: true,
+        id: 'bb64593e-fe9e-4f21-a5db-356051726f07',
+        text: 'Colo ulciscor sublime tabernus.',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-24T01:12:37.037Z'),
+        userName: 'Santina Abbott',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -956,7 +1094,7 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```php
 declare(strict_types=1);
 
@@ -965,6 +1103,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -973,7 +1112,37 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskProjectRequest(
-    taskProject: new Shared\TaskProject(),
+    taskProject: new Shared\TaskProject(
+        createdAt: Utils\Utils::parseDateTime('2023-06-23T16:39:40.446Z'),
+        description: 'Valetudo aggredior accommodo curiositas vox.',
+        hasChildren: false,
+        hasTasks: false,
+        id: '90773dc6-3e85-438a-a2b9-7d34938be3fb',
+        metadata: [
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: 'a1386e7a-c55a-4cd2-bc88-929adb865752',
+                namespace: 'custom',
+                slug: 'decens',
+                value: 'uterque',
+            ),
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: '5cdcc465-2080-411f-b343-355dd0b8cb3e',
+                namespace: 'custom',
+                slug: 'benevolentia',
+                value: 'pariatur',
+            ),
+        ],
+        name: 'Garden',
+        updatedAt: Utils\Utils::parseDateTime('2023-10-08T14:52:26.141Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1009,7 +1178,7 @@ Update a task
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTaskTask" method="put" path="/task/{connection_id}/task/{id}" example="task_task" -->
 ```php
 declare(strict_types=1);
 
@@ -1018,6 +1187,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1026,7 +1196,32 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskTaskRequest(
-    taskTask: new Shared\TaskTask(),
+    taskTask: new Shared\TaskTask(
+        attachmentIds: [],
+        completedAt: Utils\Utils::parseDateTime('2022-03-24T11:50:57.848Z'),
+        createdAt: Utils\Utils::parseDateTime('2019-01-31T08:34:55.626Z'),
+        dueAt: Utils\Utils::parseDateTime('2026-04-23T08:40:37.819Z'),
+        endAt: Utils\Utils::parseDateTime('2022-10-13T17:21:47.463Z'),
+        hasChildren: true,
+        id: '8c24e8eb-d30a-4a76-a0ff-6fbc62917a92',
+        metadata: [],
+        name: 'Direct Markets Architect',
+        notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
+        priority: 'LOW',
+        progress: 2,
+        startAt: Utils\Utils::parseDateTime('2022-01-19T11:23:18.942Z'),
+        status: Shared\TaskTaskStatus::InProgress,
+        storyPoints: 0,
+        tags: [
+            'concido',
+            'rerum',
+        ],
+        timeSpent: 957,
+        timeSpentUnit: 'SECONDS',
+        type: 'tubineus',
+        updatedAt: Utils\Utils::parseDateTime('2019-07-13T10:49:06.257Z'),
+        url: 'https://dismal-silk.net/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

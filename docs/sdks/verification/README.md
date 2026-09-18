@@ -19,7 +19,7 @@ Create a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" -->
+<!-- UsageSnippet language="php" operationID="createVerificationRequest" method="post" path="/verification/{connection_id}/request" example="verification_request" -->
 ```php
 declare(strict_types=1);
 
@@ -28,6 +28,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -36,7 +37,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateVerificationRequestRequest(
-    verificationRequest: new Shared\VerificationRequest(),
+    verificationRequest: new Shared\VerificationRequest(
+        createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
+        id: '080c49ad-e423-4e1a-9358-060cb44ca6d0',
+        parameters: [],
+        profileAddresses: [],
+        profileEmails: [],
+        profileTelephones: [],
+        responseDetails: [],
+        responseDownloadUrls: [],
+        responseSource: 'Implemented regional protocol',
+        responseStatus: Shared\VerificationRequestResponseStatus::Pending,
+        updatedAt: Utils\Utils::parseDateTime('2023-12-26T03:33:23.893Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -273,7 +286,7 @@ Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchVerificationRequest" method="patch" path="/verification/{connection_id}/request/{id}" example="verification_request" -->
 ```php
 declare(strict_types=1);
 
@@ -282,6 +295,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -290,7 +304,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchVerificationRequestRequest(
-    verificationRequest: new Shared\VerificationRequest(),
+    verificationRequest: new Shared\VerificationRequest(
+        createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
+        id: '974b7441-5f9e-44da-953b-8a83f416a05a',
+        parameters: [],
+        profileAddresses: [],
+        profileEmails: [],
+        profileTelephones: [],
+        responseDetails: [],
+        responseDownloadUrls: [],
+        responseSource: 'Implemented regional protocol',
+        responseStatus: Shared\VerificationRequestResponseStatus::Pending,
+        updatedAt: Utils\Utils::parseDateTime('2023-12-26T03:33:23.893Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -377,7 +403,7 @@ Update a request
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateVerificationRequest" method="put" path="/verification/{connection_id}/request/{id}" example="verification_request" -->
 ```php
 declare(strict_types=1);
 
@@ -386,6 +412,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -394,7 +421,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateVerificationRequestRequest(
-    verificationRequest: new Shared\VerificationRequest(),
+    verificationRequest: new Shared\VerificationRequest(
+        createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
+        id: '974b7441-5f9e-44da-953b-8a83f416a05a',
+        parameters: [],
+        profileAddresses: [],
+        profileEmails: [],
+        profileTelephones: [],
+        responseDetails: [],
+        responseDownloadUrls: [],
+        responseSource: 'Implemented regional protocol',
+        responseStatus: Shared\VerificationRequestResponseStatus::Pending,
+        updatedAt: Utils\Utils::parseDateTime('2023-12-26T03:33:23.893Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -60,7 +60,7 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" -->
+<!-- UsageSnippet language="php" operationID="createCommerceCollection" method="post" path="/commerce/{connection_id}/collection" example="commerce_collection" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +69,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -78,7 +79,48 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
+        description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
+        id: '3419d282-dce6-4fc4-8eee-b840cf76fcb5',
+        isActive: true,
+        isFeatured: false,
+        isVisible: false,
+        itemMetadata: [],
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Defungo adopto thorax.',
+                height: 759,
+                id: '34fa97fe-0b0a-444b-924a-1a28a7e0f493',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '61046c83-1200-4acd-9c42-71a30dffe121',
+                        slug: 'censura',
+                        value: 'toties',
+                    ),
+                ],
+                position: 80,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
+                width: 40,
+            ),
+        ],
+        metadata: [
+            new Shared\CommerceMetadata(
+                id: '21f810ab-efd6-47a2-acc5-490bf09ba8a9',
+                slug: 'aetas',
+                value: 'consuasor',
+            ),
+        ],
+        name: 'Small Marble Chips',
+        publicDescription: 'Generic Gloves designed with Cotton for miserable performance',
+        publicName: 'Small Marble Chips',
+        tags: [
+            'ambulo',
+            'adeptio',
+            'contego',
+        ],
+        type: Shared\CommerceCollectionType::Collection,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-26T04:56:58.168Z'),
     ),
     connectionId: '<id>',
 );
@@ -114,7 +156,7 @@ Create an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="php" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" example="commerce_inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -123,6 +165,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -131,7 +174,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceInventoryRequest(
-    commerceInventory: new Shared\CommerceInventory(),
+    commerceInventory: new Shared\CommerceInventory(
+        available: 337,
+        updatedAt: Utils\Utils::parseDateTime('2025-10-24T19:36:02.385Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -166,7 +212,7 @@ Create an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" -->
+<!-- UsageSnippet language="php" operationID="createCommerceItem" method="post" path="/commerce/{connection_id}/item" example="commerce_item" -->
 ```php
 declare(strict_types=1);
 
@@ -175,6 +221,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -183,7 +230,86 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceItemRequest(
-    commerceItem: new Shared\CommerceItem(),
+    commerceItem: new Shared\CommerceItem(
+        collections: [],
+        createdAt: Utils\Utils::parseDateTime('2019-06-21T20:16:18.628Z'),
+        description: 'Vulnero ustulo abeo.',
+        duration: 87,
+        globalCode: 'calamitas',
+        id: '5fba0154-ab43-4f60-8dca-e2300c5b929d',
+        isActive: false,
+        isFeatured: true,
+        isTaxable: true,
+        isVisible: true,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Caterva eveniet acies candidus.',
+                height: 663,
+                id: 'db50afef-857c-44db-8fbd-82d0cfec3c3f',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '7c5e07ba-3998-48b2-8d0e-058994e4b655',
+                        slug: 'doloremque',
+                        value: 'allatus',
+                    ),
+                ],
+                position: 67,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://picsum.photos/seed/73y0uzyK/972/3753',
+                width: 88,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Comedo.',
+                height: 189,
+                id: 'c8a44df6-a8a6-4800-8558-2c5dc8c93375',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '4312fb96-360c-4805-802f-105b89bff3c3',
+                        slug: 'bis',
+                        value: 'somniculosus',
+                    ),
+                ],
+                position: 3,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
+                width: 66,
+            ),
+        ],
+        metadata: [
+            new Shared\CommerceMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CommerceMetadataFormat::Text,
+                id: '4c3e6af6-af96-47c5-914e-40b11b961f4e',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'terebro',
+            ),
+        ],
+        name: 'Handcrafted Rubber Tuna',
+        prices: [
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 474,
+                currency: 'OMR',
+                price: 1438,
+            ),
+        ],
+        publicDescription: 'Custodia ventus solio compono.',
+        publicName: 'Handcrafted Rubber Tuna',
+        requiresShipping: true,
+        slug: 'cohors-turba-optio',
+        tags: [
+            'blanditiis',
+            'tandem',
+        ],
+        totalStock: 579,
+        type: 'beatae',
+        updatedAt: Utils\Utils::parseDateTime('2022-04-06T18:36:36.475Z'),
+        vendorName: 'Mayer - Flatley',
+        weight: 22,
+        weightUnit: Shared\WeightUnit::Kg,
+    ),
     connectionId: '<id>',
 );
 
@@ -218,7 +344,7 @@ Create an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" -->
+<!-- UsageSnippet language="php" operationID="createCommerceItemvariant" method="post" path="/commerce/{connection_id}/itemvariant" example="commerce_itemvariant" -->
 ```php
 declare(strict_types=1);
 
@@ -227,6 +353,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -235,7 +362,106 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceItemvariantRequest(
-    commerceItemvariant: new Shared\CommerceItemvariant(),
+    commerceItemvariant: new Shared\CommerceItemvariant(
+        availableAt: Utils\Utils::parseDateTime('2022-02-02T16:10:33.503Z'),
+        createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
+        description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
+        height: 52,
+        id: 'e91bd93d-f42d-411b-94a7-65de6a5266f0',
+        isActive: false,
+        isFeatured: false,
+        isVisible: false,
+        length: 94,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Calcar delibero cursim summisse.',
+                height: 394,
+                id: '0df68d48-9b71-42c0-9969-280f1fdfe13c',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'e7d8e687-46cc-46fd-a40f-6f4bfee0573a',
+                        slug: 'illo',
+                        value: 'quia',
+                    ),
+                ],
+                position: 92,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/u0YdHqlRu/2007/3208',
+                width: 54,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Civitas acies substantia tergo.',
+                height: 351,
+                id: 'b3d97b80-9ce7-451f-84d6-8915c6572400',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '0603e178-df79-48f5-bf17-d7407cc55fad',
+                        slug: 'libero',
+                        value: 'capitulus',
+                    ),
+                ],
+                position: 44,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://loremflickr.com/2230/1237?lock=8628070842159966',
+                width: 55,
+            ),
+        ],
+        metadata: [
+            new Shared\CommerceMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CommerceMetadataFormat::Text,
+                id: '62d59580-daa5-47f6-be71-16d9a091f88c',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'nihil',
+            ),
+        ],
+        name: 'Keyboard',
+        options: [
+            new Shared\CommerceItemOption(
+                id: 'dd40d854-d6df-4abb-85af-484f0f8e438f',
+                name: 'Steel',
+                position: 97,
+                values: [
+                    'Granite',
+                    'Plastic',
+                ],
+            ),
+        ],
+        prices: [
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 3745,
+                currency: 'COP',
+                price: 4913,
+            ),
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 438,
+                currency: 'PHP',
+                price: 1378,
+            ),
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 1614,
+                currency: 'PHP',
+                price: 8702,
+            ),
+        ],
+        publicDescription: 'Stylish Soap designed to make you stand out with insistent looks',
+        publicName: 'Keyboard',
+        requiresShipping: false,
+        sizeUnit: Shared\SizeUnit::Cm,
+        sku: '978-0-7051-0955-0',
+        tags: [
+            'vomito',
+            'custodia',
+        ],
+        totalStock: 929,
+        updatedAt: Utils\Utils::parseDateTime('2025-05-24T09:43:44.260Z'),
+        weight: 61,
+        weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
+        width: 26,
+    ),
     connectionId: '<id>',
 );
 
@@ -270,7 +496,7 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" example="commerce_location" -->
 ```php
 declare(strict_types=1);
 
@@ -279,6 +505,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -287,7 +514,61 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(),
+    commerceLocation: new Shared\CommerceLocation(
+        address: new Shared\PropertyCommerceLocationAddress(
+            address1: '29896 The Limes',
+            city: 'New Kenny',
+            countryCode: 'US',
+            postalCode: '14490-0609',
+            region: 'Virginia',
+            regionCode: 'MS',
+        ),
+        categories: [],
+        createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
+        currency: 'XCD',
+        description: 'Adsidue audentia.',
+        id: '91d66956-d6f9-4cbb-ab60-9661155b85d7',
+        imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
+        isActive: false,
+        languageLocale: 'vulgaris',
+        latitude: 0,
+        locationType: Shared\LocationType::Restaurant,
+        longitude: 0,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Addo.',
+                height: 283,
+                id: '5132660e-2e6f-424d-aa7e-0a9b50c103f0',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '77ae4026-f169-4563-b908-fc01a4fcd22a',
+                        slug: 'abutor',
+                        value: 'damno',
+                    ),
+                ],
+                position: 40,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+                width: 1,
+            ),
+        ],
+        name: 'Olson - Mraz',
+        priceLevel: '',
+        rating: 0,
+        reviewCount: 0,
+        telephones: [
+            new Shared\CommerceTelephone(
+                telephone: '(872) 522-3201',
+                type: Shared\CommerceTelephoneType::Other,
+            ),
+            new Shared\CommerceTelephone(
+                telephone: '(236) 274-2445',
+                type: Shared\CommerceTelephoneType::Mobile,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2024-04-09T09:35:32.572Z'),
+        webUrl: 'https://chilly-edge.info',
+    ),
     connectionId: '<id>',
 );
 
@@ -322,7 +603,7 @@ Create a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" -->
+<!-- UsageSnippet language="php" operationID="createCommerceReservation" method="post" path="/commerce/{connection_id}/reservation" example="commerce_reservation" -->
 ```php
 declare(strict_types=1);
 
@@ -331,6 +612,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -339,7 +621,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceReservationRequest(
-    commerceReservation: new Shared\CommerceReservation(),
+    commerceReservation: new Shared\CommerceReservation(
+        createdAt: Utils\Utils::parseDateTime('2021-12-14T19:50:31.151Z'),
+        endAt: Utils\Utils::parseDateTime('2022-01-01T22:00:17.868Z'),
+        guestEmail: 'Sunny.Strosin77@yahoo.com',
+        guestName: 'Annette Franecki',
+        guestPhone: '(990) 317-6213',
+        id: '48b4fec8-c826-47e4-b2cf-38a3b14a6d6c',
+        itemName: 'Practical Ceramic Shoes',
+        notes: 'Adsum textilis ipsum despecto.',
+        size: 10,
+        staffName: 'Vickie Fahey',
+        startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
+        status: Shared\CommerceReservationStatus::Pending,
+        updatedAt: Utils\Utils::parseDateTime('2022-12-27T17:11:32.827Z'),
+        url: 'https://cluttered-pine.info/',
+    ),
     connectionId: '<id>',
 );
 
@@ -374,7 +671,7 @@ Create a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" -->
+<!-- UsageSnippet language="php" operationID="createCommerceReview" method="post" path="/commerce/{connection_id}/review" example="commerce_review" -->
 ```php
 declare(strict_types=1);
 
@@ -383,6 +680,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -391,7 +689,78 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceReviewRequest(
-    commerceReview: new Shared\CommerceReview(),
+    commerceReview: new Shared\CommerceReview(
+        authorAvatarUrl: 'https://picsum.photos/seed/ix4Br3LA/2245/1245',
+        authorEmail: 'Cleve_Yundt@hotmail.com',
+        authorLocation: 'ipsum',
+        authorName: 'Marsha Krajcik',
+        comments: [],
+        content: 'Taedium thymum adipiscor amicitia cui.',
+        createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
+        helpfulVotes: 26,
+        id: '4fd70694-78ea-4845-8cfd-fb0a37bfa7bf',
+        isFeatured: true,
+        isPublic: true,
+        isVerified: false,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Adulescens.',
+                height: 519,
+                id: 'c8b80212-cd7f-41e2-b6e3-7294fea81e2a',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '452d0fa8-5b10-4109-91c2-6566f8e932fb',
+                        slug: 'aggero',
+                        value: 'tero',
+                    ),
+                ],
+                position: 72,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://loremflickr.com/882/1004?lock=7448492654002422',
+                width: 75,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Pauci timidus sol comburo thema.',
+                height: 297,
+                id: '8e7837ec-853d-4caf-87bb-c54209ad0dd8',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '0ddd48e7-a2a1-4c74-9751-c9806f394cb6',
+                        slug: 'vito',
+                        value: 'cuppedia',
+                    ),
+                ],
+                position: 61,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/3QDZ8/1208/2171',
+                width: 96,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Cuppedia vestrum patruus.',
+                height: 6,
+                id: '4e71cdb2-33b2-4522-ac27-9a2e440ecd3c',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'f35502a1-1e61-41ea-8e16-b472814df008',
+                        slug: 'arbitro',
+                        value: 'villa',
+                    ),
+                ],
+                position: 60,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://picsum.photos/seed/ytybC/2616/710',
+                width: 74,
+            ),
+        ],
+        metadata: [],
+        rating: 3,
+        status: Shared\CommerceReviewStatus::Approved,
+        title: 'Coepi adamo amicitia auxilium toties.',
+        unhelpfulVotes: 49,
+        updatedAt: Utils\Utils::parseDateTime('2025-07-24T23:15:12.459Z'),
+        url: 'https://excitable-underneath.com',
+        verifiedPurchase: false,
+    ),
     connectionId: '<id>',
 );
 
@@ -426,7 +795,7 @@ Create a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="php" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" example="commerce_saleschannel" -->
 ```php
 declare(strict_types=1);
 
@@ -435,6 +804,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -443,7 +813,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceSaleschannelRequest(
-    commerceSaleschannel: new Shared\CommerceSaleschannel(),
+    commerceSaleschannel: new Shared\CommerceSaleschannel(
+        collections: [],
+        createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
+        description: 'Utroque denuncio solutio.',
+        id: '8d954fc2-7ffa-454a-bbb5-8d5e317f9e69',
+        isActive: false,
+        slug: 'amiculum-congregatio-suspendo',
+        updatedAt: Utils\Utils::parseDateTime('2025-01-06T17:43:36.088Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -1336,7 +1714,7 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceCollection" method="patch" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```php
 declare(strict_types=1);
 
@@ -1345,6 +1723,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1354,7 +1733,48 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
+        description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
+        id: '2bbe5ca1-390b-4202-b7d2-227d5f0a786c',
+        isActive: true,
+        isFeatured: false,
+        isVisible: false,
+        itemMetadata: [],
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Defungo adopto thorax.',
+                height: 759,
+                id: '99a914df-ecf0-4122-8bea-74a724992ff8',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '2a043026-4837-4360-8a24-048b3832486d',
+                        slug: 'censura',
+                        value: 'toties',
+                    ),
+                ],
+                position: 80,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
+                width: 40,
+            ),
+        ],
+        metadata: [
+            new Shared\CommerceMetadata(
+                id: 'a2b67bc8-9e14-4cc1-a935-47870dff2357',
+                slug: 'aetas',
+                value: 'consuasor',
+            ),
+        ],
+        name: 'Small Marble Chips',
+        publicDescription: 'Generic Gloves designed with Cotton for miserable performance',
+        publicName: 'Small Marble Chips',
+        tags: [
+            'ambulo',
+            'adeptio',
+            'contego',
+        ],
+        type: Shared\CommerceCollectionType::Collection,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-26T04:56:58.183Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1391,7 +1811,7 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -1400,6 +1820,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1408,7 +1829,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceInventoryRequest(
-    commerceInventory: new Shared\CommerceInventory(),
+    commerceInventory: new Shared\CommerceInventory(
+        available: 337,
+        updatedAt: Utils\Utils::parseDateTime('2025-10-24T19:36:02.388Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1444,7 +1868,7 @@ Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceItem" method="patch" path="/commerce/{connection_id}/item/{id}" example="commerce_item" -->
 ```php
 declare(strict_types=1);
 
@@ -1453,6 +1877,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1461,7 +1886,86 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceItemRequest(
-    commerceItem: new Shared\CommerceItem(),
+    commerceItem: new Shared\CommerceItem(
+        collections: [],
+        createdAt: Utils\Utils::parseDateTime('2019-06-21T20:16:18.628Z'),
+        description: 'Vulnero ustulo abeo.',
+        duration: 87,
+        globalCode: 'calamitas',
+        id: 'ce10ed07-29b4-4a3a-b333-97868f005d64',
+        isActive: false,
+        isFeatured: true,
+        isTaxable: true,
+        isVisible: true,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Caterva eveniet acies candidus.',
+                height: 663,
+                id: '8eb4c487-aa91-4fea-a6cf-1e57451a0cbd',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '8eb58f32-57ed-47f5-b40c-b207b17edf6d',
+                        slug: 'doloremque',
+                        value: 'allatus',
+                    ),
+                ],
+                position: 67,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://picsum.photos/seed/73y0uzyK/972/3753',
+                width: 88,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Comedo.',
+                height: 189,
+                id: '755528df-8de9-4a11-ba54-3c6290ad895a',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'b7f3116f-5d21-49ec-80c8-6f6f5111ee8a',
+                        slug: 'bis',
+                        value: 'somniculosus',
+                    ),
+                ],
+                position: 3,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
+                width: 66,
+            ),
+        ],
+        metadata: [
+            new Shared\CommerceMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CommerceMetadataFormat::Text,
+                id: '1d1e3a67-0a1c-4a62-bcd5-f973a5a4ac7b',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'terebro',
+            ),
+        ],
+        name: 'Handcrafted Rubber Tuna',
+        prices: [
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 474,
+                currency: 'OMR',
+                price: 1438,
+            ),
+        ],
+        publicDescription: 'Custodia ventus solio compono.',
+        publicName: 'Handcrafted Rubber Tuna',
+        requiresShipping: true,
+        slug: 'cohors-turba-optio',
+        tags: [
+            'blanditiis',
+            'tandem',
+        ],
+        totalStock: 579,
+        type: 'beatae',
+        updatedAt: Utils\Utils::parseDateTime('2022-04-06T18:36:36.487Z'),
+        vendorName: 'Mayer - Flatley',
+        weight: 22,
+        weightUnit: Shared\WeightUnit::Kg,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1497,7 +2001,7 @@ Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceItemvariant" method="patch" path="/commerce/{connection_id}/itemvariant/{id}" example="commerce_itemvariant" -->
 ```php
 declare(strict_types=1);
 
@@ -1506,6 +2010,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1514,7 +2019,106 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceItemvariantRequest(
-    commerceItemvariant: new Shared\CommerceItemvariant(),
+    commerceItemvariant: new Shared\CommerceItemvariant(
+        availableAt: Utils\Utils::parseDateTime('2022-02-02T16:10:33.503Z'),
+        createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
+        description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
+        height: 52,
+        id: 'fd2b82ff-c6ef-47a1-afd0-6d70bceda470',
+        isActive: false,
+        isFeatured: false,
+        isVisible: false,
+        length: 94,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Calcar delibero cursim summisse.',
+                height: 394,
+                id: '3108e06a-1e96-4c0c-828e-08c3aab51784',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'adb2dd1f-776a-4dd2-ad42-99d0a9fa02cc',
+                        slug: 'illo',
+                        value: 'quia',
+                    ),
+                ],
+                position: 92,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/u0YdHqlRu/2007/3208',
+                width: 54,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Civitas acies substantia tergo.',
+                height: 351,
+                id: 'e61ab1fa-6a83-4092-b44d-6834239c6dc1',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '0ec8612f-e417-4ed7-84ee-cfa4e1791828',
+                        slug: 'libero',
+                        value: 'capitulus',
+                    ),
+                ],
+                position: 44,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://loremflickr.com/2230/1237?lock=8628070842159966',
+                width: 55,
+            ),
+        ],
+        metadata: [
+            new Shared\CommerceMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CommerceMetadataFormat::Text,
+                id: '56754fab-a4c3-44db-9852-e5d9ce383b99',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'nihil',
+            ),
+        ],
+        name: 'Keyboard',
+        options: [
+            new Shared\CommerceItemOption(
+                id: 'f99075f0-3294-4e09-85af-893aa8e611d4',
+                name: 'Steel',
+                position: 97,
+                values: [
+                    'Granite',
+                    'Plastic',
+                ],
+            ),
+        ],
+        prices: [
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 3745,
+                currency: 'COP',
+                price: 4913,
+            ),
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 438,
+                currency: 'PHP',
+                price: 1378,
+            ),
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 1614,
+                currency: 'PHP',
+                price: 8702,
+            ),
+        ],
+        publicDescription: 'Stylish Soap designed to make you stand out with insistent looks',
+        publicName: 'Keyboard',
+        requiresShipping: false,
+        sizeUnit: Shared\SizeUnit::Cm,
+        sku: '978-0-7051-0955-0',
+        tags: [
+            'vomito',
+            'custodia',
+        ],
+        totalStock: 929,
+        updatedAt: Utils\Utils::parseDateTime('2025-05-24T09:43:44.303Z'),
+        weight: 61,
+        weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
+        width: 26,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1550,7 +2154,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```php
 declare(strict_types=1);
 
@@ -1559,6 +2163,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1567,7 +2172,61 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(),
+    commerceLocation: new Shared\CommerceLocation(
+        address: new Shared\PropertyCommerceLocationAddress(
+            address1: '29896 The Limes',
+            city: 'New Kenny',
+            countryCode: 'US',
+            postalCode: '14490-0609',
+            region: 'Virginia',
+            regionCode: 'MS',
+        ),
+        categories: [],
+        createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
+        currency: 'XCD',
+        description: 'Adsidue audentia.',
+        id: '6353175c-63a0-4c16-9970-194a80526550',
+        imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
+        isActive: false,
+        languageLocale: 'vulgaris',
+        latitude: 0,
+        locationType: Shared\LocationType::Restaurant,
+        longitude: 0,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Addo.',
+                height: 283,
+                id: '0034a07c-d090-4d9a-af96-8a39943f2077',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '49c850e4-ae1d-4f2f-a9e9-69f5b5a345e7',
+                        slug: 'abutor',
+                        value: 'damno',
+                    ),
+                ],
+                position: 40,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+                width: 1,
+            ),
+        ],
+        name: 'Olson - Mraz',
+        priceLevel: '',
+        rating: 0,
+        reviewCount: 0,
+        telephones: [
+            new Shared\CommerceTelephone(
+                telephone: '(872) 522-3201',
+                type: Shared\CommerceTelephoneType::Other,
+            ),
+            new Shared\CommerceTelephone(
+                telephone: '(236) 274-2445',
+                type: Shared\CommerceTelephoneType::Mobile,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2024-04-09T09:35:32.582Z'),
+        webUrl: 'https://chilly-edge.info',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1603,7 +2262,7 @@ Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceReservation" method="patch" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```php
 declare(strict_types=1);
 
@@ -1612,6 +2271,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1620,7 +2280,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceReservationRequest(
-    commerceReservation: new Shared\CommerceReservation(),
+    commerceReservation: new Shared\CommerceReservation(
+        createdAt: Utils\Utils::parseDateTime('2021-12-14T19:50:31.151Z'),
+        endAt: Utils\Utils::parseDateTime('2022-01-01T22:00:17.868Z'),
+        guestEmail: 'Sunny.Strosin77@yahoo.com',
+        guestName: 'Annette Franecki',
+        guestPhone: '(990) 317-6213',
+        id: '86061eab-8816-4b57-87b6-a84bdd529f94',
+        itemName: 'Practical Ceramic Shoes',
+        notes: 'Adsum textilis ipsum despecto.',
+        size: 10,
+        staffName: 'Vickie Fahey',
+        startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
+        status: Shared\CommerceReservationStatus::Pending,
+        updatedAt: Utils\Utils::parseDateTime('2022-12-27T17:11:32.829Z'),
+        url: 'https://cluttered-pine.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1656,7 +2331,7 @@ Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceReview" method="patch" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```php
 declare(strict_types=1);
 
@@ -1665,6 +2340,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1673,7 +2349,78 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceReviewRequest(
-    commerceReview: new Shared\CommerceReview(),
+    commerceReview: new Shared\CommerceReview(
+        authorAvatarUrl: 'https://picsum.photos/seed/ix4Br3LA/2245/1245',
+        authorEmail: 'Cleve_Yundt@hotmail.com',
+        authorLocation: 'ipsum',
+        authorName: 'Marsha Krajcik',
+        comments: [],
+        content: 'Taedium thymum adipiscor amicitia cui.',
+        createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
+        helpfulVotes: 26,
+        id: '11fdf0dc-87db-4ca0-b0df-80e0513b1570',
+        isFeatured: true,
+        isPublic: true,
+        isVerified: false,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Adulescens.',
+                height: 519,
+                id: '48648231-8196-48ab-985e-fe88d00c6aea',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'eb75ced8-bbdb-4aff-9314-7d040467133d',
+                        slug: 'aggero',
+                        value: 'tero',
+                    ),
+                ],
+                position: 72,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://loremflickr.com/882/1004?lock=7448492654002422',
+                width: 75,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Pauci timidus sol comburo thema.',
+                height: 297,
+                id: '117ae068-320a-460f-97e0-02980763f5d2',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '76605c8f-43f6-4f34-9378-dbafcab38254',
+                        slug: 'vito',
+                        value: 'cuppedia',
+                    ),
+                ],
+                position: 61,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/3QDZ8/1208/2171',
+                width: 96,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Cuppedia vestrum patruus.',
+                height: 6,
+                id: 'de2fa192-ceaf-45cb-89ce-4e0bdc67332d',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'cc893abe-07df-4b15-9d44-e3a6f7168d6b',
+                        slug: 'arbitro',
+                        value: 'villa',
+                    ),
+                ],
+                position: 60,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://picsum.photos/seed/ytybC/2616/710',
+                width: 74,
+            ),
+        ],
+        metadata: [],
+        rating: 3,
+        status: Shared\CommerceReviewStatus::Approved,
+        title: 'Coepi adamo amicitia auxilium toties.',
+        unhelpfulVotes: 49,
+        updatedAt: Utils\Utils::parseDateTime('2025-07-24T23:15:12.499Z'),
+        url: 'https://excitable-underneath.com',
+        verifiedPurchase: false,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1709,7 +2456,7 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```php
 declare(strict_types=1);
 
@@ -1718,6 +2465,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1726,7 +2474,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceSaleschannelRequest(
-    commerceSaleschannel: new Shared\CommerceSaleschannel(),
+    commerceSaleschannel: new Shared\CommerceSaleschannel(
+        collections: [],
+        createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
+        description: 'Utroque denuncio solutio.',
+        id: '2baeb707-36c4-4b92-873c-13d3d2d01ffd',
+        isActive: false,
+        slug: 'amiculum-congregatio-suspendo',
+        updatedAt: Utils\Utils::parseDateTime('2025-01-06T17:43:36.091Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2170,7 +2926,7 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceCollection" method="put" path="/commerce/{connection_id}/collection/{id}" example="commerce_collection" -->
 ```php
 declare(strict_types=1);
 
@@ -2179,6 +2935,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2188,7 +2945,48 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
+        description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
+        id: '2bbe5ca1-390b-4202-b7d2-227d5f0a786c',
+        isActive: true,
+        isFeatured: false,
+        isVisible: false,
+        itemMetadata: [],
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Defungo adopto thorax.',
+                height: 759,
+                id: '99a914df-ecf0-4122-8bea-74a724992ff8',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '2a043026-4837-4360-8a24-048b3832486d',
+                        slug: 'censura',
+                        value: 'toties',
+                    ),
+                ],
+                position: 80,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://loremflickr.com/1319/1257?lock=7280448425732025',
+                width: 40,
+            ),
+        ],
+        metadata: [
+            new Shared\CommerceMetadata(
+                id: 'a2b67bc8-9e14-4cc1-a935-47870dff2357',
+                slug: 'aetas',
+                value: 'consuasor',
+            ),
+        ],
+        name: 'Small Marble Chips',
+        publicDescription: 'Generic Gloves designed with Cotton for miserable performance',
+        publicName: 'Small Marble Chips',
+        tags: [
+            'ambulo',
+            'adeptio',
+            'contego',
+        ],
+        type: Shared\CommerceCollectionType::Collection,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-26T04:56:58.183Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2225,7 +3023,7 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -2234,6 +3032,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2242,7 +3041,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceInventoryRequest(
-    commerceInventory: new Shared\CommerceInventory(),
+    commerceInventory: new Shared\CommerceInventory(
+        available: 337,
+        updatedAt: Utils\Utils::parseDateTime('2025-10-24T19:36:02.388Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2278,7 +3080,7 @@ Update an item
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceItem" method="put" path="/commerce/{connection_id}/item/{id}" example="commerce_item" -->
 ```php
 declare(strict_types=1);
 
@@ -2287,6 +3089,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2295,7 +3098,86 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceItemRequest(
-    commerceItem: new Shared\CommerceItem(),
+    commerceItem: new Shared\CommerceItem(
+        collections: [],
+        createdAt: Utils\Utils::parseDateTime('2019-06-21T20:16:18.628Z'),
+        description: 'Vulnero ustulo abeo.',
+        duration: 87,
+        globalCode: 'calamitas',
+        id: 'ce10ed07-29b4-4a3a-b333-97868f005d64',
+        isActive: false,
+        isFeatured: true,
+        isTaxable: true,
+        isVisible: true,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Caterva eveniet acies candidus.',
+                height: 663,
+                id: '8eb4c487-aa91-4fea-a6cf-1e57451a0cbd',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '8eb58f32-57ed-47f5-b40c-b207b17edf6d',
+                        slug: 'doloremque',
+                        value: 'allatus',
+                    ),
+                ],
+                position: 67,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://picsum.photos/seed/73y0uzyK/972/3753',
+                width: 88,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Comedo.',
+                height: 189,
+                id: '755528df-8de9-4a11-ba54-3c6290ad895a',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'b7f3116f-5d21-49ec-80c8-6f6f5111ee8a',
+                        slug: 'bis',
+                        value: 'somniculosus',
+                    ),
+                ],
+                position: 3,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/Ao4iatfO/771/3906',
+                width: 66,
+            ),
+        ],
+        metadata: [
+            new Shared\CommerceMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CommerceMetadataFormat::Text,
+                id: '1d1e3a67-0a1c-4a62-bcd5-f973a5a4ac7b',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'terebro',
+            ),
+        ],
+        name: 'Handcrafted Rubber Tuna',
+        prices: [
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 474,
+                currency: 'OMR',
+                price: 1438,
+            ),
+        ],
+        publicDescription: 'Custodia ventus solio compono.',
+        publicName: 'Handcrafted Rubber Tuna',
+        requiresShipping: true,
+        slug: 'cohors-turba-optio',
+        tags: [
+            'blanditiis',
+            'tandem',
+        ],
+        totalStock: 579,
+        type: 'beatae',
+        updatedAt: Utils\Utils::parseDateTime('2022-04-06T18:36:36.487Z'),
+        vendorName: 'Mayer - Flatley',
+        weight: 22,
+        weightUnit: Shared\WeightUnit::Kg,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2331,7 +3213,7 @@ Update an itemvariant
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceItemvariant" method="put" path="/commerce/{connection_id}/itemvariant/{id}" example="commerce_itemvariant" -->
 ```php
 declare(strict_types=1);
 
@@ -2340,6 +3222,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2348,7 +3231,106 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceItemvariantRequest(
-    commerceItemvariant: new Shared\CommerceItemvariant(),
+    commerceItemvariant: new Shared\CommerceItemvariant(
+        availableAt: Utils\Utils::parseDateTime('2022-02-02T16:10:33.503Z'),
+        createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
+        description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
+        height: 52,
+        id: 'fd2b82ff-c6ef-47a1-afd0-6d70bceda470',
+        isActive: false,
+        isFeatured: false,
+        isVisible: false,
+        length: 94,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Calcar delibero cursim summisse.',
+                height: 394,
+                id: '3108e06a-1e96-4c0c-828e-08c3aab51784',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'adb2dd1f-776a-4dd2-ad42-99d0a9fa02cc',
+                        slug: 'illo',
+                        value: 'quia',
+                    ),
+                ],
+                position: 92,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/u0YdHqlRu/2007/3208',
+                width: 54,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Civitas acies substantia tergo.',
+                height: 351,
+                id: 'e61ab1fa-6a83-4092-b44d-6834239c6dc1',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '0ec8612f-e417-4ed7-84ee-cfa4e1791828',
+                        slug: 'libero',
+                        value: 'capitulus',
+                    ),
+                ],
+                position: 44,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://loremflickr.com/2230/1237?lock=8628070842159966',
+                width: 55,
+            ),
+        ],
+        metadata: [
+            new Shared\CommerceMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CommerceMetadataFormat::Text,
+                id: '56754fab-a4c3-44db-9852-e5d9ce383b99',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'nihil',
+            ),
+        ],
+        name: 'Keyboard',
+        options: [
+            new Shared\CommerceItemOption(
+                id: 'f99075f0-3294-4e09-85af-893aa8e611d4',
+                name: 'Steel',
+                position: 97,
+                values: [
+                    'Granite',
+                    'Plastic',
+                ],
+            ),
+        ],
+        prices: [
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 3745,
+                currency: 'COP',
+                price: 4913,
+            ),
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 438,
+                currency: 'PHP',
+                price: 1378,
+            ),
+            new Shared\CommerceItemPrice(
+                compareAtPrice: 1614,
+                currency: 'PHP',
+                price: 8702,
+            ),
+        ],
+        publicDescription: 'Stylish Soap designed to make you stand out with insistent looks',
+        publicName: 'Keyboard',
+        requiresShipping: false,
+        sizeUnit: Shared\SizeUnit::Cm,
+        sku: '978-0-7051-0955-0',
+        tags: [
+            'vomito',
+            'custodia',
+        ],
+        totalStock: 929,
+        updatedAt: Utils\Utils::parseDateTime('2025-05-24T09:43:44.303Z'),
+        weight: 61,
+        weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
+        width: 26,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2384,7 +3366,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```php
 declare(strict_types=1);
 
@@ -2393,6 +3375,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2401,7 +3384,61 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(),
+    commerceLocation: new Shared\CommerceLocation(
+        address: new Shared\PropertyCommerceLocationAddress(
+            address1: '29896 The Limes',
+            city: 'New Kenny',
+            countryCode: 'US',
+            postalCode: '14490-0609',
+            region: 'Virginia',
+            regionCode: 'MS',
+        ),
+        categories: [],
+        createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
+        currency: 'XCD',
+        description: 'Adsidue audentia.',
+        id: '6353175c-63a0-4c16-9970-194a80526550',
+        imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
+        isActive: false,
+        languageLocale: 'vulgaris',
+        latitude: 0,
+        locationType: Shared\LocationType::Restaurant,
+        longitude: 0,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Addo.',
+                height: 283,
+                id: '0034a07c-d090-4d9a-af96-8a39943f2077',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '49c850e4-ae1d-4f2f-a9e9-69f5b5a345e7',
+                        slug: 'abutor',
+                        value: 'damno',
+                    ),
+                ],
+                position: 40,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+                width: 1,
+            ),
+        ],
+        name: 'Olson - Mraz',
+        priceLevel: '',
+        rating: 0,
+        reviewCount: 0,
+        telephones: [
+            new Shared\CommerceTelephone(
+                telephone: '(872) 522-3201',
+                type: Shared\CommerceTelephoneType::Other,
+            ),
+            new Shared\CommerceTelephone(
+                telephone: '(236) 274-2445',
+                type: Shared\CommerceTelephoneType::Mobile,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2024-04-09T09:35:32.582Z'),
+        webUrl: 'https://chilly-edge.info',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2437,7 +3474,7 @@ Update a reservation
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceReservation" method="put" path="/commerce/{connection_id}/reservation/{id}" example="commerce_reservation" -->
 ```php
 declare(strict_types=1);
 
@@ -2446,6 +3483,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2454,7 +3492,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceReservationRequest(
-    commerceReservation: new Shared\CommerceReservation(),
+    commerceReservation: new Shared\CommerceReservation(
+        createdAt: Utils\Utils::parseDateTime('2021-12-14T19:50:31.151Z'),
+        endAt: Utils\Utils::parseDateTime('2022-01-01T22:00:17.868Z'),
+        guestEmail: 'Sunny.Strosin77@yahoo.com',
+        guestName: 'Annette Franecki',
+        guestPhone: '(990) 317-6213',
+        id: '86061eab-8816-4b57-87b6-a84bdd529f94',
+        itemName: 'Practical Ceramic Shoes',
+        notes: 'Adsum textilis ipsum despecto.',
+        size: 10,
+        staffName: 'Vickie Fahey',
+        startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
+        status: Shared\CommerceReservationStatus::Pending,
+        updatedAt: Utils\Utils::parseDateTime('2022-12-27T17:11:32.829Z'),
+        url: 'https://cluttered-pine.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2490,7 +3543,7 @@ Update a review
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceReview" method="put" path="/commerce/{connection_id}/review/{id}" example="commerce_review" -->
 ```php
 declare(strict_types=1);
 
@@ -2499,6 +3552,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2507,7 +3561,78 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceReviewRequest(
-    commerceReview: new Shared\CommerceReview(),
+    commerceReview: new Shared\CommerceReview(
+        authorAvatarUrl: 'https://picsum.photos/seed/ix4Br3LA/2245/1245',
+        authorEmail: 'Cleve_Yundt@hotmail.com',
+        authorLocation: 'ipsum',
+        authorName: 'Marsha Krajcik',
+        comments: [],
+        content: 'Taedium thymum adipiscor amicitia cui.',
+        createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
+        helpfulVotes: 26,
+        id: '11fdf0dc-87db-4ca0-b0df-80e0513b1570',
+        isFeatured: true,
+        isPublic: true,
+        isVerified: false,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Adulescens.',
+                height: 519,
+                id: '48648231-8196-48ab-985e-fe88d00c6aea',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'eb75ced8-bbdb-4aff-9314-7d040467133d',
+                        slug: 'aggero',
+                        value: 'tero',
+                    ),
+                ],
+                position: 72,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://loremflickr.com/882/1004?lock=7448492654002422',
+                width: 75,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Pauci timidus sol comburo thema.',
+                height: 297,
+                id: '117ae068-320a-460f-97e0-02980763f5d2',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '76605c8f-43f6-4f34-9378-dbafcab38254',
+                        slug: 'vito',
+                        value: 'cuppedia',
+                    ),
+                ],
+                position: 61,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/3QDZ8/1208/2171',
+                width: 96,
+            ),
+            new Shared\CommerceItemMedia(
+                alt: 'Cuppedia vestrum patruus.',
+                height: 6,
+                id: 'de2fa192-ceaf-45cb-89ce-4e0bdc67332d',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: 'cc893abe-07df-4b15-9d44-e3a6f7168d6b',
+                        slug: 'arbitro',
+                        value: 'villa',
+                    ),
+                ],
+                position: 60,
+                type: Shared\CommerceItemMediaType::Video,
+                url: 'https://picsum.photos/seed/ytybC/2616/710',
+                width: 74,
+            ),
+        ],
+        metadata: [],
+        rating: 3,
+        status: Shared\CommerceReviewStatus::Approved,
+        title: 'Coepi adamo amicitia auxilium toties.',
+        unhelpfulVotes: 49,
+        updatedAt: Utils\Utils::parseDateTime('2025-07-24T23:15:12.499Z'),
+        url: 'https://excitable-underneath.com',
+        verifiedPurchase: false,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2543,7 +3668,7 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```php
 declare(strict_types=1);
 
@@ -2552,6 +3677,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2560,7 +3686,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceSaleschannelRequest(
-    commerceSaleschannel: new Shared\CommerceSaleschannel(),
+    commerceSaleschannel: new Shared\CommerceSaleschannel(
+        collections: [],
+        createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
+        description: 'Utroque denuncio solutio.',
+        id: '2baeb707-36c4-4b92-873c-13d3d2d01ffd',
+        isActive: false,
+        slug: 'amiculum-congregatio-suspendo',
+        updatedAt: Utils\Utils::parseDateTime('2025-01-06T17:43:36.091Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

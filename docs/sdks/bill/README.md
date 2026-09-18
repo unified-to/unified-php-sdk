@@ -17,7 +17,7 @@ Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="php" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" example="accounting_bill" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,30 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingBillRequest(
-    accountingBill: new Shared\AccountingBill(),
+    accountingBill: new Shared\AccountingBill(
+        attachments: [],
+        billNumber: 'vitae',
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2019-08-08T23:03:14.104Z'),
+        currency: 'AUD',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2019-08-11T20:52:55.321Z'),
+        extendedNotes: [],
+        id: '1627318e-450f-4bd4-9eb4-a8962bccdcb6',
+        lineitems: [],
+        metadata: [],
+        notes: 'Tutamen cilicium infit.',
+        paymentCollectionMethod: Shared\PaymentCollectionMethod::ChargeAutomatically,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2024-04-04T07:22:54.368Z'),
+        send: true,
+        status: Shared\AccountingBillStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\Term::Net10,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T00:57:24.292Z'),
+        url: 'https://coarse-interviewer.biz/',
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +194,7 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +203,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +212,30 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingBillRequest(
-    accountingBill: new Shared\AccountingBill(),
+    accountingBill: new Shared\AccountingBill(
+        attachments: [],
+        billNumber: 'vitae',
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2019-08-08T23:03:14.104Z'),
+        currency: 'AUD',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2019-08-11T20:52:55.321Z'),
+        extendedNotes: [],
+        id: '3f483847-c69d-4f32-b681-5b73801236b0',
+        lineitems: [],
+        metadata: [],
+        notes: 'Tutamen cilicium infit.',
+        paymentCollectionMethod: Shared\PaymentCollectionMethod::ChargeAutomatically,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2024-04-04T07:22:54.390Z'),
+        send: true,
+        status: Shared\AccountingBillStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\Term::Net10,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T00:57:24.319Z'),
+        url: 'https://coarse-interviewer.biz/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +322,7 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +331,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +340,30 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingBillRequest(
-    accountingBill: new Shared\AccountingBill(),
+    accountingBill: new Shared\AccountingBill(
+        attachments: [],
+        billNumber: 'vitae',
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2019-08-08T23:03:14.104Z'),
+        currency: 'AUD',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2019-08-11T20:52:55.321Z'),
+        extendedNotes: [],
+        id: '3f483847-c69d-4f32-b681-5b73801236b0',
+        lineitems: [],
+        metadata: [],
+        notes: 'Tutamen cilicium infit.',
+        paymentCollectionMethod: Shared\PaymentCollectionMethod::ChargeAutomatically,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2024-04-04T07:22:54.390Z'),
+        send: true,
+        status: Shared\AccountingBillStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\Term::Net10,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T00:57:24.319Z'),
+        url: 'https://coarse-interviewer.biz/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -17,7 +17,7 @@ Create a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" -->
+<!-- UsageSnippet language="php" operationID="createDatastoreRecord" method="post" path="/datastore/{connection_id}/record" example="datastore_record" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -35,9 +36,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateDatastoreRecordRequest(
     datastoreRecord: new Shared\DatastoreRecord(
+        createdAt: Utils\Utils::parseDateTime('2022-07-10T04:42:03.076Z'),
         fields: [
 
         ],
+        id: '4ccc9507-44ff-4b15-9130-c2bd6684bee8',
+        rowNumber: 33,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-12T16:23:42.378Z'),
     ),
     connectionId: '<id>',
 );
@@ -174,7 +179,7 @@ Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchDatastoreRecord" method="patch" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```php
 declare(strict_types=1);
 
@@ -183,6 +188,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -192,9 +198,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchDatastoreRecordRequest(
     datastoreRecord: new Shared\DatastoreRecord(
+        createdAt: Utils\Utils::parseDateTime('2022-07-10T04:42:03.076Z'),
         fields: [
 
         ],
+        id: '850a90d3-404f-495a-b3ee-4b719f7bc5e0',
+        rowNumber: 33,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-12T16:23:42.383Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -282,7 +292,7 @@ Update a record
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateDatastoreRecord" method="put" path="/datastore/{connection_id}/record/{id}" example="datastore_record" -->
 ```php
 declare(strict_types=1);
 
@@ -291,6 +301,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -300,9 +311,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateDatastoreRecordRequest(
     datastoreRecord: new Shared\DatastoreRecord(
+        createdAt: Utils\Utils::parseDateTime('2022-07-10T04:42:03.076Z'),
         fields: [
 
         ],
+        id: '850a90d3-404f-495a-b3ee-4b719f7bc5e0',
+        rowNumber: 33,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-12T16:23:42.383Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

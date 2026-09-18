@@ -55,7 +55,7 @@ Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="php" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```php
 declare(strict_types=1);
 
@@ -64,6 +64,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -72,7 +73,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsAdRequest(
-    adsAd: new Shared\AdsAd(),
+    adsAd: new Shared\AdsAd(
+        adCopy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+        adType: Shared\AdType::Social,
+        advertiserName: 'Robel, Nader and Rau',
+        createdAt: Utils\Utils::parseDateTime('2022-11-08T03:38:20.978Z'),
+        creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
+        description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
+        finalUrl: 'https://improbable-sanity.com',
+        id: '8ac8beee-3041-4926-b113-1dff835ea640',
+        name: 'Hermiston Group',
+        status: Shared\AdsAdStatus::Archived,
+        updatedAt: Utils\Utils::parseDateTime('2024-06-05T02:38:02.005Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -107,7 +120,7 @@ Create an asset
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+<!-- UsageSnippet language="php" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" example="ads_asset" -->
 ```php
 declare(strict_types=1);
 
@@ -116,6 +129,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -124,7 +138,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsAssetRequest(
-    adsAsset: new Shared\AdsAsset(),
+    adsAsset: new Shared\AdsAsset(
+        createdAt: Utils\Utils::parseDateTime('2020-03-27T20:14:38.603Z'),
+        height: 400,
+        id: 'cf04b48a-1f16-45f9-9d24-a576906153e1',
+        mimeType: 'IMAGE_PNG',
+        name: 'Lockman - DuBuque',
+        type: Shared\AdsAssetType::Image,
+        updatedAt: Utils\Utils::parseDateTime('2022-03-15T04:24:55.196Z'),
+        url: 'https://informal-perfection.com/',
+        width: 600,
+    ),
     connectionId: '<id>',
 );
 
@@ -159,7 +183,7 @@ Create a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" -->
+<!-- UsageSnippet language="php" operationID="createAdsCampaign" method="post" path="/ads/{connection_id}/campaign" example="ads_campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -168,6 +192,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -176,7 +201,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsCampaignRequest(
-    adsCampaign: new Shared\AdsCampaign(),
+    adsCampaign: new Shared\AdsCampaign(
+        budgetAmount: 8743.179536121897,
+        budgetPeriod: Shared\BudgetPeriod::Monthly,
+        category: 'CREDIT',
+        createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\EffectiveStatus::NotEligible,
+        endAt: Utils\Utils::parseDateTime('2025-05-09T08:18:07.695Z'),
+        id: '035b7305-00db-4ce3-b37c-91dd72083e2f',
+        labels: [
+            'comedo',
+        ],
+        name: 'Emard Inc',
+        startAt: Utils\Utils::parseDateTime('2022-07-20T04:51:20.139Z'),
+        status: Shared\AdsCampaignStatus::ProcessingFailed,
+        targeting: new Shared\PropertyAdsCampaignTargeting(),
+        totalSpendAmount: 2349.8642875347286,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-05T13:34:49.061Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -211,7 +254,7 @@ Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="php" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" example="ads_creative" -->
 ```php
 declare(strict_types=1);
 
@@ -220,6 +263,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -228,7 +272,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsCreativeRequest(
-    adsCreative: new Shared\AdsCreative(),
+    adsCreative: new Shared\AdsCreative(
+        createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
+        id: 'c463cc88-8e1a-4b52-83cd-0ba93cdb00fd',
+        labels: [
+            'coma',
+            'accedo',
+            'termes',
+        ],
+        name: 'Brekke, Bradtke and Robel',
+        status: Shared\AdsCreativeStatus::Paused,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-21T01:01:18.433Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -263,7 +318,7 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```php
 declare(strict_types=1);
 
@@ -272,6 +327,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -280,7 +336,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsGroupRequest(
-    adsGroup: new Shared\AdsGroup(),
+    adsGroup: new Shared\AdsGroup(
+        bidAmount: 26.16030164062977,
+        budgetAmount: 5099.175239447504,
+        budgetPeriod: Shared\AdsGroupBudgetPeriod::Monthly,
+        createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
+        endAt: Utils\Utils::parseDateTime('2026-05-24T13:17:52.367Z'),
+        id: '30d10ffd-082f-4cea-bf5f-adc7fc79b8af',
+        languageLocale: 'fr-FR',
+        name: 'Stark - Baumbach',
+        startAt: Utils\Utils::parseDateTime('2025-12-10T21:09:58.115Z'),
+        status: Shared\AdsGroupStatus::Processing,
+        targeting: new Shared\PropertyAdsGroupTargeting(),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-02T16:45:32.787Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -315,7 +386,7 @@ Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="php" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```php
 declare(strict_types=1);
 
@@ -324,6 +395,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -332,7 +404,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsInsertionorderRequest(
-    adsInsertionorder: new Shared\AdsInsertionorder(),
+    adsInsertionorder: new Shared\AdsInsertionorder(
+        createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
+        id: '6e9538a8-c71d-4d5f-8ddd-5ffd1b58c243',
+        name: 'Kunde, Smith and Reinger',
+        status: Shared\AdsInsertionorderStatus::Unspecified,
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T12:31:21.679Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -367,7 +445,7 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -376,6 +454,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -384,7 +463,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsOrganizationRequest(
-    adsOrganization: new Shared\AdsOrganization(),
+    adsOrganization: new Shared\AdsOrganization(
+        accountNumber: 'LQUJx8zQBW',
+        createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
+        currency: 'USD',
+        id: '2dcef265-035e-4877-9dcb-52b425c0a389',
+        managers: [
+            new Shared\AdsManager(
+                id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
+                name: 'Parker, Leannon and Gibson',
+            ),
+        ],
+        name: 'Ankunding Inc',
+        status: Shared\AdsOrganizationStatus::Processing,
+        timezone: 'Europe/Chisinau',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-27T02:30:46.720Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -1378,7 +1472,7 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```php
 declare(strict_types=1);
 
@@ -1387,6 +1481,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1395,7 +1490,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsAdRequest(
-    adsAd: new Shared\AdsAd(),
+    adsAd: new Shared\AdsAd(
+        adCopy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+        adType: Shared\AdType::Social,
+        advertiserName: 'Robel, Nader and Rau',
+        createdAt: Utils\Utils::parseDateTime('2022-11-08T03:38:20.978Z'),
+        creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
+        description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
+        finalUrl: 'https://improbable-sanity.com',
+        id: '91eed89c-4e4f-4566-a55a-c1b3ac1bcb6c',
+        name: 'Hermiston Group',
+        status: Shared\AdsAdStatus::Archived,
+        updatedAt: Utils\Utils::parseDateTime('2024-06-05T02:38:02.012Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1431,7 +1538,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsCampaign" method="patch" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -1440,6 +1547,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1448,7 +1556,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsCampaignRequest(
-    adsCampaign: new Shared\AdsCampaign(),
+    adsCampaign: new Shared\AdsCampaign(
+        budgetAmount: 8743.179536121897,
+        budgetPeriod: Shared\BudgetPeriod::Monthly,
+        category: 'CREDIT',
+        createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\EffectiveStatus::NotEligible,
+        endAt: Utils\Utils::parseDateTime('2025-05-09T08:18:07.796Z'),
+        id: '12366083-0173-485b-8373-fcce77c38066',
+        labels: [
+            'comedo',
+        ],
+        name: 'Emard Inc',
+        startAt: Utils\Utils::parseDateTime('2022-07-20T04:51:20.144Z'),
+        status: Shared\AdsCampaignStatus::ProcessingFailed,
+        targeting: new Shared\PropertyAdsCampaignTargeting(),
+        totalSpendAmount: 2349.8642875347286,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-05T13:34:49.182Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1484,7 +1610,7 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```php
 declare(strict_types=1);
 
@@ -1493,6 +1619,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1501,7 +1628,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsCreativeRequest(
-    adsCreative: new Shared\AdsCreative(),
+    adsCreative: new Shared\AdsCreative(
+        createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
+        id: 'f202a073-a108-4edf-8ab7-59edfc36014e',
+        labels: [
+            'coma',
+            'accedo',
+            'termes',
+        ],
+        name: 'Brekke, Bradtke and Robel',
+        status: Shared\AdsCreativeStatus::Paused,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-21T01:01:18.437Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1537,7 +1675,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```php
 declare(strict_types=1);
 
@@ -1546,6 +1684,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1554,7 +1693,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsGroupRequest(
-    adsGroup: new Shared\AdsGroup(),
+    adsGroup: new Shared\AdsGroup(
+        bidAmount: 26.16030164062977,
+        budgetAmount: 5099.175239447504,
+        budgetPeriod: Shared\AdsGroupBudgetPeriod::Monthly,
+        createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
+        endAt: Utils\Utils::parseDateTime('2026-05-24T13:17:52.526Z'),
+        id: '3d753590-4b9b-4ac5-b8cd-62429576a473',
+        languageLocale: 'fr-FR',
+        name: 'Stark - Baumbach',
+        startAt: Utils\Utils::parseDateTime('2025-12-10T21:09:58.263Z'),
+        status: Shared\AdsGroupStatus::Processing,
+        targeting: new Shared\PropertyAdsGroupTargeting(),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-02T16:45:32.842Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1590,7 +1744,7 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```php
 declare(strict_types=1);
 
@@ -1599,6 +1753,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1607,7 +1762,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsInsertionorderRequest(
-    adsInsertionorder: new Shared\AdsInsertionorder(),
+    adsInsertionorder: new Shared\AdsInsertionorder(
+        createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
+        id: '02927d22-b29d-4410-b89d-84c6944e04b6',
+        name: 'Kunde, Smith and Reinger',
+        status: Shared\AdsInsertionorderStatus::Unspecified,
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T12:31:21.679Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1643,7 +1804,7 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -1652,6 +1813,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1660,7 +1822,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsOrganizationRequest(
-    adsOrganization: new Shared\AdsOrganization(),
+    adsOrganization: new Shared\AdsOrganization(
+        accountNumber: 'LQUJx8zQBW',
+        createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
+        currency: 'USD',
+        id: '5ed729c1-13ee-41a9-9c74-48e8d280748c',
+        managers: [
+            new Shared\AdsManager(
+                id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
+                name: 'Parker, Leannon and Gibson',
+            ),
+        ],
+        name: 'Ankunding Inc',
+        status: Shared\AdsOrganizationStatus::Processing,
+        timezone: 'Europe/Chisinau',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-27T02:30:46.730Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2002,7 +2179,7 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```php
 declare(strict_types=1);
 
@@ -2011,6 +2188,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2019,7 +2197,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsAdRequest(
-    adsAd: new Shared\AdsAd(),
+    adsAd: new Shared\AdsAd(
+        adCopy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+        adType: Shared\AdType::Social,
+        advertiserName: 'Robel, Nader and Rau',
+        createdAt: Utils\Utils::parseDateTime('2022-11-08T03:38:20.978Z'),
+        creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
+        description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
+        finalUrl: 'https://improbable-sanity.com',
+        id: '91eed89c-4e4f-4566-a55a-c1b3ac1bcb6c',
+        name: 'Hermiston Group',
+        status: Shared\AdsAdStatus::Archived,
+        updatedAt: Utils\Utils::parseDateTime('2024-06-05T02:38:02.012Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2055,7 +2245,7 @@ Update a campaign
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsCampaign" method="put" path="/ads/{connection_id}/campaign/{id}" example="ads_campaign" -->
 ```php
 declare(strict_types=1);
 
@@ -2064,6 +2254,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2072,7 +2263,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsCampaignRequest(
-    adsCampaign: new Shared\AdsCampaign(),
+    adsCampaign: new Shared\AdsCampaign(
+        budgetAmount: 8743.179536121897,
+        budgetPeriod: Shared\BudgetPeriod::Monthly,
+        category: 'CREDIT',
+        createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\EffectiveStatus::NotEligible,
+        endAt: Utils\Utils::parseDateTime('2025-05-09T08:18:07.796Z'),
+        id: '12366083-0173-485b-8373-fcce77c38066',
+        labels: [
+            'comedo',
+        ],
+        name: 'Emard Inc',
+        startAt: Utils\Utils::parseDateTime('2022-07-20T04:51:20.144Z'),
+        status: Shared\AdsCampaignStatus::ProcessingFailed,
+        targeting: new Shared\PropertyAdsCampaignTargeting(),
+        totalSpendAmount: 2349.8642875347286,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-05T13:34:49.182Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2108,7 +2317,7 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```php
 declare(strict_types=1);
 
@@ -2117,6 +2326,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2125,7 +2335,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsCreativeRequest(
-    adsCreative: new Shared\AdsCreative(),
+    adsCreative: new Shared\AdsCreative(
+        createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
+        id: 'f202a073-a108-4edf-8ab7-59edfc36014e',
+        labels: [
+            'coma',
+            'accedo',
+            'termes',
+        ],
+        name: 'Brekke, Bradtke and Robel',
+        status: Shared\AdsCreativeStatus::Paused,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-21T01:01:18.437Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2161,7 +2382,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```php
 declare(strict_types=1);
 
@@ -2170,6 +2391,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2178,7 +2400,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsGroupRequest(
-    adsGroup: new Shared\AdsGroup(),
+    adsGroup: new Shared\AdsGroup(
+        bidAmount: 26.16030164062977,
+        budgetAmount: 5099.175239447504,
+        budgetPeriod: Shared\AdsGroupBudgetPeriod::Monthly,
+        createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
+        endAt: Utils\Utils::parseDateTime('2026-05-24T13:17:52.526Z'),
+        id: '3d753590-4b9b-4ac5-b8cd-62429576a473',
+        languageLocale: 'fr-FR',
+        name: 'Stark - Baumbach',
+        startAt: Utils\Utils::parseDateTime('2025-12-10T21:09:58.263Z'),
+        status: Shared\AdsGroupStatus::Processing,
+        targeting: new Shared\PropertyAdsGroupTargeting(),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-02T16:45:32.842Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2214,7 +2451,7 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```php
 declare(strict_types=1);
 
@@ -2223,6 +2460,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2231,7 +2469,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsInsertionorderRequest(
-    adsInsertionorder: new Shared\AdsInsertionorder(),
+    adsInsertionorder: new Shared\AdsInsertionorder(
+        createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
+        id: '02927d22-b29d-4410-b89d-84c6944e04b6',
+        name: 'Kunde, Smith and Reinger',
+        status: Shared\AdsInsertionorderStatus::Unspecified,
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T12:31:21.679Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2267,7 +2511,7 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -2276,6 +2520,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2284,7 +2529,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsOrganizationRequest(
-    adsOrganization: new Shared\AdsOrganization(),
+    adsOrganization: new Shared\AdsOrganization(
+        accountNumber: 'LQUJx8zQBW',
+        createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
+        currency: 'USD',
+        id: '5ed729c1-13ee-41a9-9c74-48e8d280748c',
+        managers: [
+            new Shared\AdsManager(
+                id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
+                name: 'Parker, Leannon and Gibson',
+            ),
+        ],
+        name: 'Ankunding Inc',
+        status: Shared\AdsOrganizationStatus::Processing,
+        timezone: 'Europe/Chisinau',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-27T02:30:46.730Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

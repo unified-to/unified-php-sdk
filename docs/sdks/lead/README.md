@@ -17,7 +17,7 @@ Create a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="php" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" example="crm_lead" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,62 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCrmLeadRequest(
-    crmLead: new Shared\CrmLead(),
+    crmLead: new Shared\CrmLead(
+        address: new Shared\PropertyCrmLeadAddress(
+            address1: '528 Forest Road',
+            address2: 'Apt. 643',
+            city: 'Palm Springs',
+            countryCode: 'US',
+            postalCode: '55624-6499',
+            region: 'New Jersey',
+            regionCode: 'LA',
+        ),
+        companyName: 'Tillman - Wiegand',
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T11:27:59.003Z'),
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer16@yahoo.com',
+                type: Shared\CrmEmailType::Other,
+            ),
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer@yahoo.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+        ],
+        firstName: 'Velda',
+        id: '1f745f9b-4957-47fa-a75d-7eeb6ace9ec3',
+        isActive: true,
+        lastName: 'Sporer',
+        linkUrls: [
+            'https://classic-sightseeing.com/',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '3fcf48e0-292d-4a61-9a86-57c5c47d25d5',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'sublime',
+            ),
+        ],
+        name: 'Velda Sporer',
+        source: 'aetas',
+        status: 'vesco',
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(955) 643-9849',
+                type: Shared\CrmTelephoneType::Other,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(621) 811-8800',
+                type: Shared\CrmTelephoneType::Work,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2020-05-15T02:08:41.200Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +226,7 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +235,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +244,62 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCrmLeadRequest(
-    crmLead: new Shared\CrmLead(),
+    crmLead: new Shared\CrmLead(
+        address: new Shared\PropertyCrmLeadAddress(
+            address1: '528 Forest Road',
+            address2: 'Apt. 643',
+            city: 'Palm Springs',
+            countryCode: 'US',
+            postalCode: '55624-6499',
+            region: 'New Jersey',
+            regionCode: 'LA',
+        ),
+        companyName: 'Tillman - Wiegand',
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T11:27:59.003Z'),
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer16@yahoo.com',
+                type: Shared\CrmEmailType::Other,
+            ),
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer@yahoo.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+        ],
+        firstName: 'Velda',
+        id: '69281a28-16bf-4876-bc6a-f051442edbfc',
+        isActive: true,
+        lastName: 'Sporer',
+        linkUrls: [
+            'https://classic-sightseeing.com/',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '21b57846-8e49-459f-b6e4-bd3ad1a38f76',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'sublime',
+            ),
+        ],
+        name: 'Velda Sporer',
+        source: 'aetas',
+        status: 'vesco',
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(955) 643-9849',
+                type: Shared\CrmTelephoneType::Other,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(621) 811-8800',
+                type: Shared\CrmTelephoneType::Work,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2020-05-15T02:08:41.202Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +386,7 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +395,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +404,62 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCrmLeadRequest(
-    crmLead: new Shared\CrmLead(),
+    crmLead: new Shared\CrmLead(
+        address: new Shared\PropertyCrmLeadAddress(
+            address1: '528 Forest Road',
+            address2: 'Apt. 643',
+            city: 'Palm Springs',
+            countryCode: 'US',
+            postalCode: '55624-6499',
+            region: 'New Jersey',
+            regionCode: 'LA',
+        ),
+        companyName: 'Tillman - Wiegand',
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T11:27:59.003Z'),
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer16@yahoo.com',
+                type: Shared\CrmEmailType::Other,
+            ),
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer@yahoo.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+        ],
+        firstName: 'Velda',
+        id: '69281a28-16bf-4876-bc6a-f051442edbfc',
+        isActive: true,
+        lastName: 'Sporer',
+        linkUrls: [
+            'https://classic-sightseeing.com/',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '21b57846-8e49-459f-b6e4-bd3ad1a38f76',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'sublime',
+            ),
+        ],
+        name: 'Velda Sporer',
+        source: 'aetas',
+        status: 'vesco',
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(955) 643-9849',
+                type: Shared\CrmTelephoneType::Other,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(621) 811-8800',
+                type: Shared\CrmTelephoneType::Work,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2020-05-15T02:08:41.202Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

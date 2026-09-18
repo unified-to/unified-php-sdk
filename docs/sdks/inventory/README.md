@@ -17,7 +17,7 @@ Create an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" -->
+<!-- UsageSnippet language="php" operationID="createCommerceInventory" method="post" path="/commerce/{connection_id}/inventory" example="commerce_inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceInventoryRequest(
-    commerceInventory: new Shared\CommerceInventory(),
+    commerceInventory: new Shared\CommerceInventory(
+        available: 337,
+        updatedAt: Utils\Utils::parseDateTime('2025-10-24T19:36:02.385Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +174,7 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceInventory" method="patch" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +183,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +192,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceInventoryRequest(
-    commerceInventory: new Shared\CommerceInventory(),
+    commerceInventory: new Shared\CommerceInventory(
+        available: 337,
+        updatedAt: Utils\Utils::parseDateTime('2025-10-24T19:36:02.388Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +282,7 @@ Update an inventory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceInventory" method="put" path="/commerce/{connection_id}/inventory/{id}" example="commerce_inventory" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +291,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +300,10 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceInventoryRequest(
-    commerceInventory: new Shared\CommerceInventory(),
+    commerceInventory: new Shared\CommerceInventory(
+        available: 337,
+        updatedAt: Utils\Utils::parseDateTime('2025-10-24T19:36:02.388Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

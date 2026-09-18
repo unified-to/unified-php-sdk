@@ -17,7 +17,7 @@ Create a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" -->
+<!-- UsageSnippet language="php" operationID="createSigningSignatory" method="post" path="/signing/{connection_id}/signatory" example="signing_signatory" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateSigningSignatoryRequest(
-    signingSignatory: new Shared\SigningSignatory(),
+    signingSignatory: new Shared\SigningSignatory(
+        createdAt: Utils\Utils::parseDateTime('2022-04-16T19:25:01.966Z'),
+        email: 'Hardy.Wehner@gmail.com',
+        id: 'e11704e5-4a6b-49a1-8ff3-c2ef955024df',
+        order: 5,
+        role: Shared\SigningSignatoryRole::Signer,
+        status: Shared\SigningSignatoryStatus::Signed,
+        updatedAt: Utils\Utils::parseDateTime('2026-08-10T19:02:39.218Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +179,7 @@ Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchSigningSignatory" method="patch" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +188,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +197,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchSigningSignatoryRequest(
-    signingSignatory: new Shared\SigningSignatory(),
+    signingSignatory: new Shared\SigningSignatory(
+        createdAt: Utils\Utils::parseDateTime('2022-04-16T19:25:01.966Z'),
+        email: 'Hardy.Wehner@gmail.com',
+        id: '2dddb61a-c2f1-41e5-a442-e8612fd5d810',
+        order: 5,
+        role: Shared\SigningSignatoryRole::Signer,
+        status: Shared\SigningSignatoryStatus::Signed,
+        updatedAt: Utils\Utils::parseDateTime('2026-08-10T19:02:39.225Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +292,7 @@ Update a signatory
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateSigningSignatory" method="put" path="/signing/{connection_id}/signatory/{id}" example="signing_signatory" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +301,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +310,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateSigningSignatoryRequest(
-    signingSignatory: new Shared\SigningSignatory(),
+    signingSignatory: new Shared\SigningSignatory(
+        createdAt: Utils\Utils::parseDateTime('2022-04-16T19:25:01.966Z'),
+        email: 'Hardy.Wehner@gmail.com',
+        id: '2dddb61a-c2f1-41e5-a442-e8612fd5d810',
+        order: 5,
+        role: Shared\SigningSignatoryRole::Signer,
+        status: Shared\SigningSignatoryStatus::Signed,
+        updatedAt: Utils\Utils::parseDateTime('2026-08-10T19:02:39.225Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

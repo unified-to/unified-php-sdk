@@ -17,7 +17,7 @@ Create a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="php" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" example="lms_course" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,50 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsCourseRequest(
-    lmsCourse: new Shared\LmsCourse(),
+    lmsCourse: new Shared\LmsCourse(
+        categories: [
+            'tergiversatio',
+            'tumultus',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-10-06T09:58:53.559Z'),
+        currency: 'FJD',
+        description: 'Vinco alias aut capitulus.',
+        durationMinutes: 148,
+        id: '331d18e9-e8e6-4780-82b7-840b2cab5a6b',
+        instructors: [],
+        isActive: true,
+        isPrivate: false,
+        languages: [
+            'desparatus',
+            'earum',
+            'deripio',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+                description: 'Adipiscor.',
+                languages: [
+                    'ms',
+                    'te',
+                ],
+                name: 'tandem',
+                thumbnailUrl: 'https://picsum.photos/seed/syTatRhK03/928/273',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+            ),
+        ],
+        name: 'comptus',
+        priceAmount: 84,
+        providerName: 'Homenick - Wunsch',
+        publishedAt: Utils\Utils::parseDateTime('2023-12-30T03:35:03.902Z'),
+        skills: [
+            'adiuvo',
+            'tam',
+        ],
+        students: [],
+        timeEstimateMinutes: 100,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T22:30:45.421Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +214,7 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +223,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +232,50 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsCourseRequest(
-    lmsCourse: new Shared\LmsCourse(),
+    lmsCourse: new Shared\LmsCourse(
+        categories: [
+            'tergiversatio',
+            'tumultus',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-10-06T09:58:53.559Z'),
+        currency: 'FJD',
+        description: 'Vinco alias aut capitulus.',
+        durationMinutes: 148,
+        id: 'a43a26d9-ca54-499a-9343-e34e82e552ee',
+        instructors: [],
+        isActive: true,
+        isPrivate: false,
+        languages: [
+            'desparatus',
+            'earum',
+            'deripio',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+                description: 'Adipiscor.',
+                languages: [
+                    'ms',
+                    'te',
+                ],
+                name: 'tandem',
+                thumbnailUrl: 'https://picsum.photos/seed/syTatRhK03/928/273',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+            ),
+        ],
+        name: 'comptus',
+        priceAmount: 84,
+        providerName: 'Homenick - Wunsch',
+        publishedAt: Utils\Utils::parseDateTime('2023-12-30T03:35:03.902Z'),
+        skills: [
+            'adiuvo',
+            'tam',
+        ],
+        students: [],
+        timeEstimateMinutes: 100,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T22:30:45.422Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +362,7 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +371,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +380,50 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsCourseRequest(
-    lmsCourse: new Shared\LmsCourse(),
+    lmsCourse: new Shared\LmsCourse(
+        categories: [
+            'tergiversatio',
+            'tumultus',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-10-06T09:58:53.559Z'),
+        currency: 'FJD',
+        description: 'Vinco alias aut capitulus.',
+        durationMinutes: 148,
+        id: 'a43a26d9-ca54-499a-9343-e34e82e552ee',
+        instructors: [],
+        isActive: true,
+        isPrivate: false,
+        languages: [
+            'desparatus',
+            'earum',
+            'deripio',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+                description: 'Adipiscor.',
+                languages: [
+                    'ms',
+                    'te',
+                ],
+                name: 'tandem',
+                thumbnailUrl: 'https://picsum.photos/seed/syTatRhK03/928/273',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+            ),
+        ],
+        name: 'comptus',
+        priceAmount: 84,
+        providerName: 'Homenick - Wunsch',
+        publishedAt: Utils\Utils::parseDateTime('2023-12-30T03:35:03.902Z'),
+        skills: [
+            'adiuvo',
+            'tam',
+        ],
+        students: [],
+        timeEstimateMinutes: 100,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T22:30:45.422Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

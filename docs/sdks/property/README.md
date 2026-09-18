@@ -17,7 +17,7 @@ Create a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" -->
+<!-- UsageSnippet language="php" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" example="analytics_property" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAnalyticsPropertyRequest(
-    analyticsProperty: new Shared\AnalyticsProperty(),
+    analyticsProperty: new Shared\AnalyticsProperty(
+        createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
+        currency: 'USD',
+        id: '00a86f83-224b-45eb-bbd1-39a1c17049a3',
+        name: 'Daniel, Goldner and Dickinson',
+        timezone: 'UTC',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T16:36:17.230Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +178,7 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +187,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +196,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAnalyticsPropertyRequest(
-    analyticsProperty: new Shared\AnalyticsProperty(),
+    analyticsProperty: new Shared\AnalyticsProperty(
+        createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
+        currency: 'USD',
+        id: 'ef237fcd-37a7-47f3-ab39-e030cb387de2',
+        name: 'Daniel, Goldner and Dickinson',
+        timezone: 'UTC',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T16:36:17.230Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +290,7 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +299,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +308,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAnalyticsPropertyRequest(
-    analyticsProperty: new Shared\AnalyticsProperty(),
+    analyticsProperty: new Shared\AnalyticsProperty(
+        createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
+        currency: 'USD',
+        id: 'ef237fcd-37a7-47f3-ab39-e030cb387de2',
+        name: 'Daniel, Goldner and Dickinson',
+        timezone: 'UTC',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T16:36:17.230Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

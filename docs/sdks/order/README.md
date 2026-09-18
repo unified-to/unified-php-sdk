@@ -21,7 +21,7 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="php" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" example="accounting_order" -->
 ```php
 declare(strict_types=1);
 
@@ -30,6 +30,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -38,7 +39,35 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingOrderRequest(
-    accountingOrder: new Shared\AccountingOrder(),
+    accountingOrder: new Shared\AccountingOrder(
+        billingAddress: new Shared\PropertyAccountingOrderBillingAddress(
+            address1: '802 Bechtelar Park',
+            address2: 'Apt. 436',
+            city: 'Daniellaville',
+            countryCode: 'US',
+            postalCode: '36947',
+            region: 'Wisconsin',
+            regionCode: 'NY',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
+        currency: 'USD',
+        id: '75670c85-d5fc-4880-bc55-8ed412c74b8f',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2022-04-05T00:14:19.079Z'),
+        shippingAddress: new Shared\PropertyAccountingOrderShippingAddress(
+            address1: '9745 Betty Shore',
+            city: 'South Alainaland',
+            countryCode: 'US',
+            postalCode: '25274-7654',
+            region: 'New Hampshire',
+            regionCode: 'LA',
+        ),
+        status: Shared\AccountingOrderStatus::Submitted,
+        totalAmount: 0,
+        type: Shared\AccountingOrderType::Purchase,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-17T22:40:34.509Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -73,7 +102,7 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" -->
+<!-- UsageSnippet language="php" operationID="createAssessmentOrder" method="post" path="/assessment/{connection_id}/order" example="assessment_order" -->
 ```php
 declare(strict_types=1);
 
@@ -82,6 +111,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -92,6 +122,34 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
+        createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
+        id: 'c1ac5b49-bcaf-455e-b5ae-fa53d6f69d7a',
+        parameters: [],
+        profileAddresses: [],
+        profileDateOfBirth: '1989-07-22T16:18:37.650Z',
+        profileEmails: [
+            'Cleta.Daugherty@gmail.com',
+        ],
+        profileFirstName: 'Amy',
+        profileGender: Shared\ProfileGender::NonBinary,
+        profileLastName: 'Kris-Windler',
+        profileName: 'Amy Kris-Windler',
+        profileResumeUrl: 'https://enchanted-cycle.biz/',
+        profileSocialMediaUrls: [],
+        profileTelephones: [
+            '(828) 263-1594 x5248',
+        ],
+        reference: 'ab',
+        responseAttributes: [],
+        responseDetails: [],
+        responseDownloadUrls: [],
+        responseMaxScore: 82,
+        responseScore: 92,
+        responseStatus: Shared\ResponseStatus::Failed,
+        responseUrl: 'https://irresponsible-trench.info/',
+        status: Shared\AssessmentOrderStatus::Rejected,
+        targetUrl: 'https://cautious-turret.info',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-17T01:52:03.034Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -280,7 +338,7 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```php
 declare(strict_types=1);
 
@@ -289,6 +347,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -297,7 +356,35 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingOrderRequest(
-    accountingOrder: new Shared\AccountingOrder(),
+    accountingOrder: new Shared\AccountingOrder(
+        billingAddress: new Shared\PropertyAccountingOrderBillingAddress(
+            address1: '802 Bechtelar Park',
+            address2: 'Apt. 436',
+            city: 'Daniellaville',
+            countryCode: 'US',
+            postalCode: '36947',
+            region: 'Wisconsin',
+            regionCode: 'NY',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
+        currency: 'USD',
+        id: 'cb5b9dd7-2eb0-44aa-ae76-2722a1975caf',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2022-04-05T00:14:19.088Z'),
+        shippingAddress: new Shared\PropertyAccountingOrderShippingAddress(
+            address1: '9745 Betty Shore',
+            city: 'South Alainaland',
+            countryCode: 'US',
+            postalCode: '25274-7654',
+            region: 'New Hampshire',
+            regionCode: 'LA',
+        ),
+        status: Shared\AccountingOrderStatus::Submitted,
+        totalAmount: 0,
+        type: Shared\AccountingOrderType::Purchase,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-17T22:40:34.512Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -333,7 +420,7 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAssessmentOrder" method="patch" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```php
 declare(strict_types=1);
 
@@ -342,6 +429,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -352,6 +440,34 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
+        createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
+        id: '921ee5cd-cfd1-4512-b08a-56a192518abe',
+        parameters: [],
+        profileAddresses: [],
+        profileDateOfBirth: '1989-07-22T16:18:37.650Z',
+        profileEmails: [
+            'Cleta.Daugherty@gmail.com',
+        ],
+        profileFirstName: 'Amy',
+        profileGender: Shared\ProfileGender::NonBinary,
+        profileLastName: 'Kris-Windler',
+        profileName: 'Amy Kris-Windler',
+        profileResumeUrl: 'https://enchanted-cycle.biz/',
+        profileSocialMediaUrls: [],
+        profileTelephones: [
+            '(828) 263-1594 x5248',
+        ],
+        reference: 'ab',
+        responseAttributes: [],
+        responseDetails: [],
+        responseDownloadUrls: [],
+        responseMaxScore: 82,
+        responseScore: 92,
+        responseStatus: Shared\ResponseStatus::Failed,
+        responseUrl: 'https://irresponsible-trench.info/',
+        status: Shared\AssessmentOrderStatus::Rejected,
+        targetUrl: 'https://cautious-turret.info',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-17T01:52:03.042Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -440,7 +556,7 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```php
 declare(strict_types=1);
 
@@ -449,6 +565,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -457,7 +574,35 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingOrderRequest(
-    accountingOrder: new Shared\AccountingOrder(),
+    accountingOrder: new Shared\AccountingOrder(
+        billingAddress: new Shared\PropertyAccountingOrderBillingAddress(
+            address1: '802 Bechtelar Park',
+            address2: 'Apt. 436',
+            city: 'Daniellaville',
+            countryCode: 'US',
+            postalCode: '36947',
+            region: 'Wisconsin',
+            regionCode: 'NY',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
+        currency: 'USD',
+        id: 'cb5b9dd7-2eb0-44aa-ae76-2722a1975caf',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2022-04-05T00:14:19.088Z'),
+        shippingAddress: new Shared\PropertyAccountingOrderShippingAddress(
+            address1: '9745 Betty Shore',
+            city: 'South Alainaland',
+            countryCode: 'US',
+            postalCode: '25274-7654',
+            region: 'New Hampshire',
+            regionCode: 'LA',
+        ),
+        status: Shared\AccountingOrderStatus::Submitted,
+        totalAmount: 0,
+        type: Shared\AccountingOrderType::Purchase,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-17T22:40:34.512Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -493,7 +638,7 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAssessmentOrder" method="put" path="/assessment/{connection_id}/order/{id}" example="assessment_order" -->
 ```php
 declare(strict_types=1);
 
@@ -502,6 +647,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -512,6 +658,34 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
+        createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
+        id: '921ee5cd-cfd1-4512-b08a-56a192518abe',
+        parameters: [],
+        profileAddresses: [],
+        profileDateOfBirth: '1989-07-22T16:18:37.650Z',
+        profileEmails: [
+            'Cleta.Daugherty@gmail.com',
+        ],
+        profileFirstName: 'Amy',
+        profileGender: Shared\ProfileGender::NonBinary,
+        profileLastName: 'Kris-Windler',
+        profileName: 'Amy Kris-Windler',
+        profileResumeUrl: 'https://enchanted-cycle.biz/',
+        profileSocialMediaUrls: [],
+        profileTelephones: [
+            '(828) 263-1594 x5248',
+        ],
+        reference: 'ab',
+        responseAttributes: [],
+        responseDetails: [],
+        responseDownloadUrls: [],
+        responseMaxScore: 82,
+        responseScore: 92,
+        responseStatus: Shared\ResponseStatus::Failed,
+        responseUrl: 'https://irresponsible-trench.info/',
+        status: Shared\AssessmentOrderStatus::Rejected,
+        targetUrl: 'https://cautious-turret.info',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-17T01:52:03.042Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',

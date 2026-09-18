@@ -17,7 +17,7 @@ Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="php" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingJournalRequest(
-    accountingJournal: new Shared\AccountingJournal(),
+    accountingJournal: new Shared\AccountingJournal(
+        attachments: [],
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T15:14:55.881Z'),
+        currency: 'FKP',
+        description: 'Calco constans adipisci.',
+        id: 'f509f941-ad29-4b9d-b184-a751b62a37d6',
+        postedAt: Utils\Utils::parseDateTime('2023-10-19T01:51:30.395Z'),
+        reference: 'ullam',
+        source: 'crustulum',
+        taxAmount: 78672,
+        updatedAt: Utils\Utils::parseDateTime('2022-01-01T11:08:39.568Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +183,7 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +192,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +201,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingJournalRequest(
-    accountingJournal: new Shared\AccountingJournal(),
+    accountingJournal: new Shared\AccountingJournal(
+        attachments: [],
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T15:14:55.881Z'),
+        currency: 'FKP',
+        description: 'Calco constans adipisci.',
+        id: '12490857-8ddf-4be5-abd0-47fc89cc49a2',
+        postedAt: Utils\Utils::parseDateTime('2023-10-19T01:51:30.403Z'),
+        reference: 'ullam',
+        source: 'crustulum',
+        taxAmount: 78672,
+        updatedAt: Utils\Utils::parseDateTime('2022-01-01T11:08:39.572Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +300,7 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +309,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +318,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingJournalRequest(
-    accountingJournal: new Shared\AccountingJournal(),
+    accountingJournal: new Shared\AccountingJournal(
+        attachments: [],
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T15:14:55.881Z'),
+        currency: 'FKP',
+        description: 'Calco constans adipisci.',
+        id: '12490857-8ddf-4be5-abd0-47fc89cc49a2',
+        postedAt: Utils\Utils::parseDateTime('2023-10-19T01:51:30.403Z'),
+        reference: 'ullam',
+        source: 'crustulum',
+        taxAmount: 78672,
+        updatedAt: Utils\Utils::parseDateTime('2022-01-01T11:08:39.572Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

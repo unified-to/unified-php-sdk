@@ -17,7 +17,7 @@ Create a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="php" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" example="hris_timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -35,7 +36,24 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
+        approvedAt: Utils\Utils::parseDateTime('2023-06-05T14:31:38.445Z'),
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 76761,
+                currency: 'JPY',
+                frequency: Shared\HrisCompensationFrequency::Hour,
+                notes: 'Annus adficio suasoria architecto aggero.',
+                type: Shared\HrisCompensationType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
+        endAt: Utils\Utils::parseDateTime('2026-08-25T08:28:11.837Z'),
+        hours: 8,
+        id: '8091d49f-00cf-416b-a771-e6834ab7026d',
+        isApproved: true,
+        startAt: Utils\Utils::parseDateTime('2023-06-24T19:29:28.668Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-22T20:53:14.292Z'),
     ),
     connectionId: '<id>',
 );
@@ -172,7 +190,7 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -181,6 +199,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -190,7 +209,24 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
+        approvedAt: Utils\Utils::parseDateTime('2023-06-05T14:31:38.450Z'),
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 76761,
+                currency: 'JPY',
+                frequency: Shared\HrisCompensationFrequency::Hour,
+                notes: 'Annus adficio suasoria architecto aggero.',
+                type: Shared\HrisCompensationType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
+        endAt: Utils\Utils::parseDateTime('2026-08-25T08:28:11.847Z'),
+        hours: 8,
+        id: '7cccfab5-5f8c-4543-ba66-c6178393a826',
+        isApproved: true,
+        startAt: Utils\Utils::parseDateTime('2023-06-24T19:29:28.673Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-22T20:53:14.295Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -278,7 +314,7 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -287,6 +323,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -296,7 +333,24 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
+        approvedAt: Utils\Utils::parseDateTime('2023-06-05T14:31:38.450Z'),
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 76761,
+                currency: 'JPY',
+                frequency: Shared\HrisCompensationFrequency::Hour,
+                notes: 'Annus adficio suasoria architecto aggero.',
+                type: Shared\HrisCompensationType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
+        endAt: Utils\Utils::parseDateTime('2026-08-25T08:28:11.847Z'),
+        hours: 8,
+        id: '7cccfab5-5f8c-4543-ba66-c6178393a826',
+        isApproved: true,
+        startAt: Utils\Utils::parseDateTime('2023-06-24T19:29:28.673Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-22T20:53:14.295Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

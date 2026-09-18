@@ -53,7 +53,7 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" example="lms_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -62,6 +62,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -70,7 +71,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsActivityRequest(
-    lmsActivity: new Shared\LmsActivity(),
+    lmsActivity: new Shared\LmsActivity(
+        assignedGrade: 'summopere',
+        completedAt: Utils\Utils::parseDateTime('2025-04-12T21:07:59.666Z'),
+        createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
+        durationMinutes: 55,
+        id: '8164f3ea-523a-40a6-b339-ccb2ed97db46',
+        isCompleted: true,
+        progressPercentage: 100,
+        startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-23T21:44:46.408Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -105,7 +116,7 @@ Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="php" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" example="lms_class" -->
 ```php
 declare(strict_types=1);
 
@@ -114,6 +125,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -122,7 +134,32 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsClassRequest(
-    lmsClass: new Shared\LmsClass(),
+    lmsClass: new Shared\LmsClass(
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
+        description: 'Anser sperno decerno.',
+        id: 'd8129459-c4f9-456b-b7d0-772361f02d7e',
+        instructors: [],
+        languages: [
+            'in',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+                description: 'Esse confido.',
+                languages: [
+                    'fa',
+                    'da',
+                ],
+                name: 'illo',
+                thumbnailUrl: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+                type: Shared\LmsMediaType::Video,
+                url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+            ),
+        ],
+        name: 'virtus',
+        students: [],
+        updatedAt: Utils\Utils::parseDateTime('2025-07-07T21:36:07.725Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -157,7 +194,7 @@ Create a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" -->
+<!-- UsageSnippet language="php" operationID="createLmsCollection" method="post" path="/lms/{connection_id}/collection" example="lms_collection" -->
 ```php
 declare(strict_types=1);
 
@@ -166,6 +203,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -174,7 +212,27 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsCollectionRequest(
-    lmsCollection: new Shared\LmsCollection(),
+    lmsCollection: new Shared\LmsCollection(
+        createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
+        description: 'Ab.',
+        id: '1ab00658-e2ea-4b35-a619-50f17b801210',
+        isActive: true,
+        media: [
+            new Shared\LmsMedia(
+                content: 'Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.',
+                description: 'Aliquam tardus careo hic umbra.',
+                languages: [
+                    'gl',
+                ],
+                name: 'thymum',
+                thumbnailUrl: 'https://picsum.photos/seed/15O5EfV/2982/752',
+                type: Shared\LmsMediaType::Headshot,
+                url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+            ),
+        ],
+        name: 'ara',
+        updatedAt: Utils\Utils::parseDateTime('2026-06-28T08:00:28.382Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -209,7 +267,7 @@ Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="php" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" example="lms_content" -->
 ```php
 declare(strict_types=1);
 
@@ -218,6 +276,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -226,7 +285,96 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsContentRequest(
-    lmsContent: new Shared\LmsContent(),
+    lmsContent: new Shared\LmsContent(
+        categories: [
+            'territo',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2020-10-22T22:30:50.963Z'),
+        description: 'Usque laboriosam ventosus adflicto.',
+        difficulty: 'Beginner',
+        durationMinutes: 19,
+        externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
+        id: '752eba73-40d0-4a58-bca3-4a1ef9b6e063',
+        instructors: [
+            new Shared\LmsReference(
+                id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
+                name: 'Winston Ferry',
+            ),
+        ],
+        isActive: true,
+        languages: [
+            'despecto',
+            'suppellex',
+        ],
+        localizations: [
+            new Shared\LmsContentLocalization(
+                description: 'Numquam.',
+                language: 'es',
+                name: 'validus',
+            ),
+            new Shared\LmsContentLocalization(
+                description: 'Callide.',
+                language: 'fr',
+                name: 'crux',
+            ),
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.',
+                description: 'Venia aeternus tandem spargo.',
+                languages: [
+                    'zu',
+                    'ba',
+                ],
+                name: 'subiungo',
+                thumbnailUrl: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+            ),
+            new Shared\LmsMedia(
+                content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
+                description: 'Comedo valde caste combibo.',
+                languages: [
+                    'it',
+                    'hu',
+                ],
+                name: 'beneficium',
+                thumbnailUrl: 'https://picsum.photos/seed/pNFr1/2597/885',
+                type: Shared\LmsMediaType::Web,
+                url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+            ),
+            new Shared\LmsMedia(
+                content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
+                description: 'Tunc barba decens.',
+                languages: [
+                    'bn',
+                    'yo',
+                ],
+                name: 'qui',
+                thumbnailUrl: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
+                type: Shared\LmsMediaType::Image,
+                url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+            ),
+        ],
+        name: 'ut',
+        providerName: 'Berge LLC',
+        publishedAt: Utils\Utils::parseDateTime('2023-11-08T11:32:09.080Z'),
+        shortDescription: 'Commemoro.',
+        skills: [
+            'trucido',
+        ],
+        sortOrder: 3,
+        subjects: [
+            new Shared\LmsSubject(
+                name: 'tibi',
+                rank: 1,
+            ),
+        ],
+        tags: [
+            'dens',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-09-23T11:13:24.667Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -261,7 +409,7 @@ Create a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" -->
+<!-- UsageSnippet language="php" operationID="createLmsCourse" method="post" path="/lms/{connection_id}/course" example="lms_course" -->
 ```php
 declare(strict_types=1);
 
@@ -270,6 +418,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -278,7 +427,50 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsCourseRequest(
-    lmsCourse: new Shared\LmsCourse(),
+    lmsCourse: new Shared\LmsCourse(
+        categories: [
+            'tergiversatio',
+            'tumultus',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-10-06T09:58:53.559Z'),
+        currency: 'FJD',
+        description: 'Vinco alias aut capitulus.',
+        durationMinutes: 148,
+        id: '331d18e9-e8e6-4780-82b7-840b2cab5a6b',
+        instructors: [],
+        isActive: true,
+        isPrivate: false,
+        languages: [
+            'desparatus',
+            'earum',
+            'deripio',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+                description: 'Adipiscor.',
+                languages: [
+                    'ms',
+                    'te',
+                ],
+                name: 'tandem',
+                thumbnailUrl: 'https://picsum.photos/seed/syTatRhK03/928/273',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+            ),
+        ],
+        name: 'comptus',
+        priceAmount: 84,
+        providerName: 'Homenick - Wunsch',
+        publishedAt: Utils\Utils::parseDateTime('2023-12-30T03:35:03.902Z'),
+        skills: [
+            'adiuvo',
+            'tam',
+        ],
+        students: [],
+        timeEstimateMinutes: 100,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T22:30:45.421Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -313,7 +505,7 @@ Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="php" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" example="lms_instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -322,6 +514,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -330,7 +523,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsInstructorRequest(
-    lmsInstructor: new Shared\LmsInstructor(),
+    lmsInstructor: new Shared\LmsInstructor(
+        createdAt: Utils\Utils::parseDateTime('2021-10-12T16:38:54.979Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Deangelo',
+        id: 'f8bbba27-b96d-4906-9cee-f5b6cf875466',
+        imageUrl: 'https://avatars.githubusercontent.com/u/20232618',
+        lastName: 'Ritchie',
+        name: 'Deangelo Ritchie',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(352) 551-7989',
+                type: Shared\LmsTelephoneType::Home,
+            ),
+        ],
+        title: 'Product Solutions Engineer',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-29T14:06:13.939Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -365,7 +577,7 @@ Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="php" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" example="lms_student" -->
 ```php
 declare(strict_types=1);
 
@@ -374,6 +586,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -382,7 +595,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsStudentRequest(
-    lmsStudent: new Shared\LmsStudent(),
+    lmsStudent: new Shared\LmsStudent(
+        address: new Shared\PropertyLmsStudentAddress(
+            address1: '94082 Kassandra Camp',
+            address2: 'Apt. 461',
+            city: 'New Ibrahimmouth',
+            countryCode: 'US',
+            postalCode: '52851',
+            region: 'Tennessee',
+            regionCode: 'NV',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-03-23T06:59:29.777Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Marcella',
+        id: '8bc0cb22-4e46-4da8-b2ef-49aa7508d4ce',
+        imageUrl: 'https://avatars.githubusercontent.com/u/36301374',
+        lastName: 'Murazik',
+        name: 'Marcella Murazik',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(482) 469-8067',
+                type: Shared\LmsTelephoneType::Fax,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-06-19T13:55:47.489Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -1124,7 +1364,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -1133,6 +1373,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1141,7 +1382,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsActivityRequest(
-    lmsActivity: new Shared\LmsActivity(),
+    lmsActivity: new Shared\LmsActivity(
+        assignedGrade: 'summopere',
+        completedAt: Utils\Utils::parseDateTime('2025-04-12T21:07:59.668Z'),
+        createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
+        durationMinutes: 55,
+        id: '298664cf-609d-4c74-a5e3-42882c090d10',
+        isCompleted: true,
+        progressPercentage: 100,
+        startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-23T21:44:46.409Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1177,7 +1428,7 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```php
 declare(strict_types=1);
 
@@ -1186,6 +1437,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1194,7 +1446,32 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsClassRequest(
-    lmsClass: new Shared\LmsClass(),
+    lmsClass: new Shared\LmsClass(
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
+        description: 'Anser sperno decerno.',
+        id: '5b6e90ee-13ec-49d8-a899-81a77863d9ef',
+        instructors: [],
+        languages: [
+            'in',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+                description: 'Esse confido.',
+                languages: [
+                    'fa',
+                    'da',
+                ],
+                name: 'illo',
+                thumbnailUrl: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+                type: Shared\LmsMediaType::Video,
+                url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+            ),
+        ],
+        name: 'virtus',
+        students: [],
+        updatedAt: Utils\Utils::parseDateTime('2025-07-07T21:36:07.739Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1230,7 +1507,7 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsCollection" method="patch" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```php
 declare(strict_types=1);
 
@@ -1239,6 +1516,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1247,7 +1525,27 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsCollectionRequest(
-    lmsCollection: new Shared\LmsCollection(),
+    lmsCollection: new Shared\LmsCollection(
+        createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
+        description: 'Ab.',
+        id: '21b49871-9a20-4b45-bd53-284af2278280',
+        isActive: true,
+        media: [
+            new Shared\LmsMedia(
+                content: 'Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.',
+                description: 'Aliquam tardus careo hic umbra.',
+                languages: [
+                    'gl',
+                ],
+                name: 'thymum',
+                thumbnailUrl: 'https://picsum.photos/seed/15O5EfV/2982/752',
+                type: Shared\LmsMediaType::Headshot,
+                url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+            ),
+        ],
+        name: 'ara',
+        updatedAt: Utils\Utils::parseDateTime('2026-06-28T08:00:28.390Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1283,7 +1581,7 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```php
 declare(strict_types=1);
 
@@ -1292,6 +1590,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1300,7 +1599,96 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsContentRequest(
-    lmsContent: new Shared\LmsContent(),
+    lmsContent: new Shared\LmsContent(
+        categories: [
+            'territo',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2020-10-22T22:30:50.963Z'),
+        description: 'Usque laboriosam ventosus adflicto.',
+        difficulty: 'Beginner',
+        durationMinutes: 19,
+        externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
+        id: '93ebc3a9-fd1d-4164-a395-aec8aec0abe4',
+        instructors: [
+            new Shared\LmsReference(
+                id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
+                name: 'Winston Ferry',
+            ),
+        ],
+        isActive: true,
+        languages: [
+            'despecto',
+            'suppellex',
+        ],
+        localizations: [
+            new Shared\LmsContentLocalization(
+                description: 'Numquam.',
+                language: 'es',
+                name: 'validus',
+            ),
+            new Shared\LmsContentLocalization(
+                description: 'Callide.',
+                language: 'fr',
+                name: 'crux',
+            ),
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.',
+                description: 'Venia aeternus tandem spargo.',
+                languages: [
+                    'zu',
+                    'ba',
+                ],
+                name: 'subiungo',
+                thumbnailUrl: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+            ),
+            new Shared\LmsMedia(
+                content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
+                description: 'Comedo valde caste combibo.',
+                languages: [
+                    'it',
+                    'hu',
+                ],
+                name: 'beneficium',
+                thumbnailUrl: 'https://picsum.photos/seed/pNFr1/2597/885',
+                type: Shared\LmsMediaType::Web,
+                url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+            ),
+            new Shared\LmsMedia(
+                content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
+                description: 'Tunc barba decens.',
+                languages: [
+                    'bn',
+                    'yo',
+                ],
+                name: 'qui',
+                thumbnailUrl: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
+                type: Shared\LmsMediaType::Image,
+                url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+            ),
+        ],
+        name: 'ut',
+        providerName: 'Berge LLC',
+        publishedAt: Utils\Utils::parseDateTime('2023-11-08T11:32:09.080Z'),
+        shortDescription: 'Commemoro.',
+        skills: [
+            'trucido',
+        ],
+        sortOrder: 3,
+        subjects: [
+            new Shared\LmsSubject(
+                name: 'tibi',
+                rank: 1,
+            ),
+        ],
+        tags: [
+            'dens',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-09-23T11:13:24.676Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1336,7 +1724,7 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsCourse" method="patch" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```php
 declare(strict_types=1);
 
@@ -1345,6 +1733,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1353,7 +1742,50 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsCourseRequest(
-    lmsCourse: new Shared\LmsCourse(),
+    lmsCourse: new Shared\LmsCourse(
+        categories: [
+            'tergiversatio',
+            'tumultus',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-10-06T09:58:53.559Z'),
+        currency: 'FJD',
+        description: 'Vinco alias aut capitulus.',
+        durationMinutes: 148,
+        id: 'a43a26d9-ca54-499a-9343-e34e82e552ee',
+        instructors: [],
+        isActive: true,
+        isPrivate: false,
+        languages: [
+            'desparatus',
+            'earum',
+            'deripio',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+                description: 'Adipiscor.',
+                languages: [
+                    'ms',
+                    'te',
+                ],
+                name: 'tandem',
+                thumbnailUrl: 'https://picsum.photos/seed/syTatRhK03/928/273',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+            ),
+        ],
+        name: 'comptus',
+        priceAmount: 84,
+        providerName: 'Homenick - Wunsch',
+        publishedAt: Utils\Utils::parseDateTime('2023-12-30T03:35:03.902Z'),
+        skills: [
+            'adiuvo',
+            'tam',
+        ],
+        students: [],
+        timeEstimateMinutes: 100,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T22:30:45.422Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1389,7 +1821,7 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -1398,6 +1830,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1406,7 +1839,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsInstructorRequest(
-    lmsInstructor: new Shared\LmsInstructor(),
+    lmsInstructor: new Shared\LmsInstructor(
+        createdAt: Utils\Utils::parseDateTime('2021-10-12T16:38:54.979Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Deangelo',
+        id: '7f3e0677-de81-4291-9b61-baab002fad9f',
+        imageUrl: 'https://avatars.githubusercontent.com/u/20232618',
+        lastName: 'Ritchie',
+        name: 'Deangelo Ritchie',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(352) 551-7989',
+                type: Shared\LmsTelephoneType::Home,
+            ),
+        ],
+        title: 'Product Solutions Engineer',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-29T14:06:13.948Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1442,7 +1894,7 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```php
 declare(strict_types=1);
 
@@ -1451,6 +1903,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1459,7 +1912,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsStudentRequest(
-    lmsStudent: new Shared\LmsStudent(),
+    lmsStudent: new Shared\LmsStudent(
+        address: new Shared\PropertyLmsStudentAddress(
+            address1: '94082 Kassandra Camp',
+            address2: 'Apt. 461',
+            city: 'New Ibrahimmouth',
+            countryCode: 'US',
+            postalCode: '52851',
+            region: 'Tennessee',
+            regionCode: 'NV',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-03-23T06:59:29.777Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Marcella',
+        id: '8c067562-a326-4d81-a8ae-f087841b1a98',
+        imageUrl: 'https://avatars.githubusercontent.com/u/36301374',
+        lastName: 'Murazik',
+        name: 'Marcella Murazik',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(482) 469-8067',
+                type: Shared\LmsTelephoneType::Fax,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-06-19T13:55:47.495Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1852,7 +2332,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -1861,6 +2341,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1869,7 +2350,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsActivityRequest(
-    lmsActivity: new Shared\LmsActivity(),
+    lmsActivity: new Shared\LmsActivity(
+        assignedGrade: 'summopere',
+        completedAt: Utils\Utils::parseDateTime('2025-04-12T21:07:59.668Z'),
+        createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
+        durationMinutes: 55,
+        id: '298664cf-609d-4c74-a5e3-42882c090d10',
+        isCompleted: true,
+        progressPercentage: 100,
+        startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-23T21:44:46.409Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1905,7 +2396,7 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```php
 declare(strict_types=1);
 
@@ -1914,6 +2405,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1922,7 +2414,32 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsClassRequest(
-    lmsClass: new Shared\LmsClass(),
+    lmsClass: new Shared\LmsClass(
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
+        description: 'Anser sperno decerno.',
+        id: '5b6e90ee-13ec-49d8-a899-81a77863d9ef',
+        instructors: [],
+        languages: [
+            'in',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+                description: 'Esse confido.',
+                languages: [
+                    'fa',
+                    'da',
+                ],
+                name: 'illo',
+                thumbnailUrl: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+                type: Shared\LmsMediaType::Video,
+                url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+            ),
+        ],
+        name: 'virtus',
+        students: [],
+        updatedAt: Utils\Utils::parseDateTime('2025-07-07T21:36:07.739Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1958,7 +2475,7 @@ Update a collection
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsCollection" method="put" path="/lms/{connection_id}/collection/{id}" example="lms_collection" -->
 ```php
 declare(strict_types=1);
 
@@ -1967,6 +2484,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1975,7 +2493,27 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsCollectionRequest(
-    lmsCollection: new Shared\LmsCollection(),
+    lmsCollection: new Shared\LmsCollection(
+        createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
+        description: 'Ab.',
+        id: '21b49871-9a20-4b45-bd53-284af2278280',
+        isActive: true,
+        media: [
+            new Shared\LmsMedia(
+                content: 'Accusamus earum sulum libero adficio testimonium vitae. Calcar contra vergo curis sollers. Caste brevis denuo. Tam amita ducimus capillus. Vulgaris temporibus arbustum solium id. Suppono commodo fuga surculus tripudio doloribus.',
+                description: 'Aliquam tardus careo hic umbra.',
+                languages: [
+                    'gl',
+                ],
+                name: 'thymum',
+                thumbnailUrl: 'https://picsum.photos/seed/15O5EfV/2982/752',
+                type: Shared\LmsMediaType::Headshot,
+                url: 'https://loremflickr.com/2679/70?lock=6078357625960554',
+            ),
+        ],
+        name: 'ara',
+        updatedAt: Utils\Utils::parseDateTime('2026-06-28T08:00:28.390Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2011,7 +2549,7 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```php
 declare(strict_types=1);
 
@@ -2020,6 +2558,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2028,7 +2567,96 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsContentRequest(
-    lmsContent: new Shared\LmsContent(),
+    lmsContent: new Shared\LmsContent(
+        categories: [
+            'territo',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2020-10-22T22:30:50.963Z'),
+        description: 'Usque laboriosam ventosus adflicto.',
+        difficulty: 'Beginner',
+        durationMinutes: 19,
+        externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
+        id: '93ebc3a9-fd1d-4164-a395-aec8aec0abe4',
+        instructors: [
+            new Shared\LmsReference(
+                id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
+                name: 'Winston Ferry',
+            ),
+        ],
+        isActive: true,
+        languages: [
+            'despecto',
+            'suppellex',
+        ],
+        localizations: [
+            new Shared\LmsContentLocalization(
+                description: 'Numquam.',
+                language: 'es',
+                name: 'validus',
+            ),
+            new Shared\LmsContentLocalization(
+                description: 'Callide.',
+                language: 'fr',
+                name: 'crux',
+            ),
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.',
+                description: 'Venia aeternus tandem spargo.',
+                languages: [
+                    'zu',
+                    'ba',
+                ],
+                name: 'subiungo',
+                thumbnailUrl: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+            ),
+            new Shared\LmsMedia(
+                content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
+                description: 'Comedo valde caste combibo.',
+                languages: [
+                    'it',
+                    'hu',
+                ],
+                name: 'beneficium',
+                thumbnailUrl: 'https://picsum.photos/seed/pNFr1/2597/885',
+                type: Shared\LmsMediaType::Web,
+                url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+            ),
+            new Shared\LmsMedia(
+                content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
+                description: 'Tunc barba decens.',
+                languages: [
+                    'bn',
+                    'yo',
+                ],
+                name: 'qui',
+                thumbnailUrl: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
+                type: Shared\LmsMediaType::Image,
+                url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+            ),
+        ],
+        name: 'ut',
+        providerName: 'Berge LLC',
+        publishedAt: Utils\Utils::parseDateTime('2023-11-08T11:32:09.080Z'),
+        shortDescription: 'Commemoro.',
+        skills: [
+            'trucido',
+        ],
+        sortOrder: 3,
+        subjects: [
+            new Shared\LmsSubject(
+                name: 'tibi',
+                rank: 1,
+            ),
+        ],
+        tags: [
+            'dens',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-09-23T11:13:24.676Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2064,7 +2692,7 @@ Update a course
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsCourse" method="put" path="/lms/{connection_id}/course/{id}" example="lms_course" -->
 ```php
 declare(strict_types=1);
 
@@ -2073,6 +2701,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2081,7 +2710,50 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsCourseRequest(
-    lmsCourse: new Shared\LmsCourse(),
+    lmsCourse: new Shared\LmsCourse(
+        categories: [
+            'tergiversatio',
+            'tumultus',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-10-06T09:58:53.559Z'),
+        currency: 'FJD',
+        description: 'Vinco alias aut capitulus.',
+        durationMinutes: 148,
+        id: 'a43a26d9-ca54-499a-9343-e34e82e552ee',
+        instructors: [],
+        isActive: true,
+        isPrivate: false,
+        languages: [
+            'desparatus',
+            'earum',
+            'deripio',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adeptio crudelis ipsum utrimque quae architecto. Cum eius conitor anser abutor error adsuesco abeo. Denego nihil caries aveho.',
+                description: 'Adipiscor.',
+                languages: [
+                    'ms',
+                    'te',
+                ],
+                name: 'tandem',
+                thumbnailUrl: 'https://picsum.photos/seed/syTatRhK03/928/273',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://picsum.photos/seed/fQAbsk/2472/1671',
+            ),
+        ],
+        name: 'comptus',
+        priceAmount: 84,
+        providerName: 'Homenick - Wunsch',
+        publishedAt: Utils\Utils::parseDateTime('2023-12-30T03:35:03.902Z'),
+        skills: [
+            'adiuvo',
+            'tam',
+        ],
+        students: [],
+        timeEstimateMinutes: 100,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T22:30:45.422Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2117,7 +2789,7 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -2126,6 +2798,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2134,7 +2807,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsInstructorRequest(
-    lmsInstructor: new Shared\LmsInstructor(),
+    lmsInstructor: new Shared\LmsInstructor(
+        createdAt: Utils\Utils::parseDateTime('2021-10-12T16:38:54.979Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Deangelo',
+        id: '7f3e0677-de81-4291-9b61-baab002fad9f',
+        imageUrl: 'https://avatars.githubusercontent.com/u/20232618',
+        lastName: 'Ritchie',
+        name: 'Deangelo Ritchie',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(352) 551-7989',
+                type: Shared\LmsTelephoneType::Home,
+            ),
+        ],
+        title: 'Product Solutions Engineer',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-29T14:06:13.948Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2170,7 +2862,7 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```php
 declare(strict_types=1);
 
@@ -2179,6 +2871,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2187,7 +2880,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsStudentRequest(
-    lmsStudent: new Shared\LmsStudent(),
+    lmsStudent: new Shared\LmsStudent(
+        address: new Shared\PropertyLmsStudentAddress(
+            address1: '94082 Kassandra Camp',
+            address2: 'Apt. 461',
+            city: 'New Ibrahimmouth',
+            countryCode: 'US',
+            postalCode: '52851',
+            region: 'Tennessee',
+            regionCode: 'NV',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-03-23T06:59:29.777Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Marcella',
+        id: '8c067562-a326-4d81-a8ae-f087841b1a98',
+        imageUrl: 'https://avatars.githubusercontent.com/u/36301374',
+        lastName: 'Murazik',
+        name: 'Marcella Murazik',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(482) 469-8067',
+                type: Shared\LmsTelephoneType::Fax,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-06-19T13:55:47.495Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

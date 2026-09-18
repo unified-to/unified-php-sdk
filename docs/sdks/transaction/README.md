@@ -17,7 +17,7 @@ Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="php" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingTransactionRequest(
-    accountingTransaction: new Shared\AccountingTransaction(),
+    accountingTransaction: new Shared\AccountingTransaction(
+        createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
+        id: '8bad21b5-c9a3-4b30-99e9-f1c19b0faf34',
+        lineitems: [
+            new Shared\AccountingTransactionLineItem(
+                categoryIds: [],
+                description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+                id: '882cb0c8-fff0-4acf-a65b-f11a7921f17e',
+                name: 'Salad',
+                objectType: 'delicate',
+                totalAmount: 58531,
+                unitAmount: 536,
+                unitQuantity: 91,
+            ),
+        ],
+        memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+        taxAmount: 0,
+        totalAmount: 94452,
+        updatedAt: Utils\Utils::parseDateTime('2021-09-10T02:36:26.081Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +190,7 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +199,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +208,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingTransactionRequest(
-    accountingTransaction: new Shared\AccountingTransaction(),
+    accountingTransaction: new Shared\AccountingTransaction(
+        createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
+        id: 'b441cd13-8ef9-45e5-9902-9a2002d9a492',
+        lineitems: [
+            new Shared\AccountingTransactionLineItem(
+                categoryIds: [],
+                description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+                id: '236bdaf2-3428-4b72-94e8-eefc15d6ff92',
+                name: 'Salad',
+                objectType: 'delicate',
+                totalAmount: 58531,
+                unitAmount: 536,
+                unitQuantity: 91,
+            ),
+        ],
+        memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+        taxAmount: 0,
+        totalAmount: 94452,
+        updatedAt: Utils\Utils::parseDateTime('2021-09-10T02:36:26.085Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +314,7 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +323,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +332,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingTransactionRequest(
-    accountingTransaction: new Shared\AccountingTransaction(),
+    accountingTransaction: new Shared\AccountingTransaction(
+        createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
+        id: 'b441cd13-8ef9-45e5-9902-9a2002d9a492',
+        lineitems: [
+            new Shared\AccountingTransactionLineItem(
+                categoryIds: [],
+                description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+                id: '236bdaf2-3428-4b72-94e8-eefc15d6ff92',
+                name: 'Salad',
+                objectType: 'delicate',
+                totalAmount: 58531,
+                unitAmount: 536,
+                unitQuantity: 91,
+            ),
+        ],
+        memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+        taxAmount: 0,
+        totalAmount: 94452,
+        updatedAt: Utils\Utils::parseDateTime('2021-09-10T02:36:26.085Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

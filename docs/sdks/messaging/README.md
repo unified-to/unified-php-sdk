@@ -25,7 +25,7 @@ Create a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="php" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" example="messaging_channel" -->
 ```php
 declare(strict_types=1);
 
@@ -34,6 +34,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -42,7 +43,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateMessagingChannelRequest(
-    messagingChannel: new Shared\MessagingChannel(),
+    messagingChannel: new Shared\MessagingChannel(
+        createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
+        description: 'Dolores tutis.',
+        hasSubchannels: true,
+        id: 'fb1b5821-f6ca-4c41-8bd1-9f5079b8d3c5',
+        isActive: false,
+        isPrivate: true,
+        members: [],
+        name: 'tego',
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T02:23:02.328Z'),
+        webUrl: 'https://svelte-rule.name/',
+    ),
     connectionId: '<id>',
 );
 
@@ -77,7 +89,7 @@ Create a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" -->
+<!-- UsageSnippet language="php" operationID="createMessagingMessage" method="post" path="/messaging/{connection_id}/message" example="messaging_message" -->
 ```php
 declare(strict_types=1);
 
@@ -86,6 +98,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -94,7 +107,39 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateMessagingMessageRequest(
-    messagingMessage: new Shared\MessagingMessage(),
+    messagingMessage: new Shared\MessagingMessage(
+        attachments: [
+            new Shared\MessagingAttachment(
+                contentIdentifier: '161e86c4-e7e2-4474-b8f0-4b9b20eb658a',
+                contentType: 'coaegresco',
+                downloadUrl: 'https://rotating-advertisement.org',
+                filename: 'super',
+                messageId: '0e9f56f8-b871-4241-bbc3-03b9df99a687',
+                size: 327,
+            ),
+        ],
+        buttons: [
+            new Shared\MessagingButton(
+                id: 'b44f7771-2bd9-4367-a7a8-f4671aacbe11',
+                text: 'denuo',
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2021-11-26T09:26:33.973Z'),
+        destinationMembers: [],
+        hasChildren: true,
+        hiddenMembers: [],
+        id: '0e9f56f8-b871-4241-bbc3-03b9df99a687',
+        isUnread: false,
+        mentionedMembers: [],
+        message: 'Sum utique aliquid.',
+        messageHtml: 'Articulus tardus tergiversatio.',
+        messageMarkdown: 'Territo uterque tergo curiositas.',
+        reactions: [],
+        reference: '571483f2-d95b-4f06-8b78-d35e7046bb74',
+        subject: 'Cernuus optio cohaero summisse in.',
+        updatedAt: Utils\Utils::parseDateTime('2023-07-06T11:13:12.894Z'),
+        webUrl: 'https://grumpy-kit.net',
+    ),
     connectionId: '<id>',
 );
 
@@ -331,7 +376,7 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```php
 declare(strict_types=1);
 
@@ -340,6 +385,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -348,7 +394,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchMessagingChannelRequest(
-    messagingChannel: new Shared\MessagingChannel(),
+    messagingChannel: new Shared\MessagingChannel(
+        createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
+        description: 'Dolores tutis.',
+        hasSubchannels: true,
+        id: 'd1a2cea2-7d86-4148-9de6-63fe81d8eec0',
+        isActive: false,
+        isPrivate: true,
+        members: [],
+        name: 'tego',
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T02:23:02.334Z'),
+        webUrl: 'https://svelte-rule.name/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -384,7 +441,7 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMessagingEvent" method="patch" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```php
 declare(strict_types=1);
 
@@ -393,6 +450,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -401,7 +459,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchMessagingEventRequest(
-    messagingEvent: new Shared\MessagingEvent(),
+    messagingEvent: new Shared\MessagingEvent(
+        channel: new Shared\PropertyMessagingEventChannel(
+            id: '',
+            name: '',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2019-05-30T19:44:46.461Z'),
+        id: '2d35fa2d-719d-4908-a5f7-4f072a513e09',
+        isReplacingOriginal: false,
+        type: Shared\MessagingEventType::ButtonClick,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -437,7 +504,7 @@ Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMessagingMessage" method="patch" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```php
 declare(strict_types=1);
 
@@ -446,6 +513,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -454,7 +522,39 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchMessagingMessageRequest(
-    messagingMessage: new Shared\MessagingMessage(),
+    messagingMessage: new Shared\MessagingMessage(
+        attachments: [
+            new Shared\MessagingAttachment(
+                contentIdentifier: 'b34c4bd5-6663-46cd-adcd-769b1dd1ad4e',
+                contentType: 'coaegresco',
+                downloadUrl: 'https://rotating-advertisement.org',
+                filename: 'super',
+                messageId: '26efa364-23bb-47d7-96b4-25435901b984',
+                size: 327,
+            ),
+        ],
+        buttons: [
+            new Shared\MessagingButton(
+                id: '4cd5ac8d-c5cd-4ce8-a70a-9c6efc044a41',
+                text: 'denuo',
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2021-11-26T09:26:33.973Z'),
+        destinationMembers: [],
+        hasChildren: true,
+        hiddenMembers: [],
+        id: '26efa364-23bb-47d7-96b4-25435901b984',
+        isUnread: false,
+        mentionedMembers: [],
+        message: 'Sum utique aliquid.',
+        messageHtml: 'Articulus tardus tergiversatio.',
+        messageMarkdown: 'Territo uterque tergo curiositas.',
+        reactions: [],
+        reference: '571483f2-d95b-4f06-8b78-d35e7046bb74',
+        subject: 'Cernuus optio cohaero summisse in.',
+        updatedAt: Utils\Utils::parseDateTime('2023-07-06T11:13:12.905Z'),
+        webUrl: 'https://grumpy-kit.net',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -592,7 +692,7 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```php
 declare(strict_types=1);
 
@@ -601,6 +701,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -609,7 +710,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateMessagingChannelRequest(
-    messagingChannel: new Shared\MessagingChannel(),
+    messagingChannel: new Shared\MessagingChannel(
+        createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
+        description: 'Dolores tutis.',
+        hasSubchannels: true,
+        id: 'd1a2cea2-7d86-4148-9de6-63fe81d8eec0',
+        isActive: false,
+        isPrivate: true,
+        members: [],
+        name: 'tego',
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T02:23:02.334Z'),
+        webUrl: 'https://svelte-rule.name/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -645,7 +757,7 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMessagingEvent" method="put" path="/messaging/{connection_id}/event/{id}" example="messaging_event" -->
 ```php
 declare(strict_types=1);
 
@@ -654,6 +766,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -662,7 +775,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateMessagingEventRequest(
-    messagingEvent: new Shared\MessagingEvent(),
+    messagingEvent: new Shared\MessagingEvent(
+        channel: new Shared\PropertyMessagingEventChannel(
+            id: '',
+            name: '',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2019-05-30T19:44:46.461Z'),
+        id: '2d35fa2d-719d-4908-a5f7-4f072a513e09',
+        isReplacingOriginal: false,
+        type: Shared\MessagingEventType::ButtonClick,
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -698,7 +820,7 @@ Update a message
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMessagingMessage" method="put" path="/messaging/{connection_id}/message/{id}" example="messaging_message" -->
 ```php
 declare(strict_types=1);
 
@@ -707,6 +829,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -715,7 +838,39 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateMessagingMessageRequest(
-    messagingMessage: new Shared\MessagingMessage(),
+    messagingMessage: new Shared\MessagingMessage(
+        attachments: [
+            new Shared\MessagingAttachment(
+                contentIdentifier: 'b34c4bd5-6663-46cd-adcd-769b1dd1ad4e',
+                contentType: 'coaegresco',
+                downloadUrl: 'https://rotating-advertisement.org',
+                filename: 'super',
+                messageId: '26efa364-23bb-47d7-96b4-25435901b984',
+                size: 327,
+            ),
+        ],
+        buttons: [
+            new Shared\MessagingButton(
+                id: '4cd5ac8d-c5cd-4ce8-a70a-9c6efc044a41',
+                text: 'denuo',
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2021-11-26T09:26:33.973Z'),
+        destinationMembers: [],
+        hasChildren: true,
+        hiddenMembers: [],
+        id: '26efa364-23bb-47d7-96b4-25435901b984',
+        isUnread: false,
+        mentionedMembers: [],
+        message: 'Sum utique aliquid.',
+        messageHtml: 'Articulus tardus tergiversatio.',
+        messageMarkdown: 'Territo uterque tergo curiositas.',
+        reactions: [],
+        reference: '571483f2-d95b-4f06-8b78-d35e7046bb74',
+        subject: 'Cernuus optio cohaero summisse in.',
+        updatedAt: Utils\Utils::parseDateTime('2023-07-06T11:13:12.905Z'),
+        webUrl: 'https://grumpy-kit.net',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

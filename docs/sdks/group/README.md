@@ -31,7 +31,7 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="createAdsGroup" method="post" path="/ads/{connection_id}/group" example="ads_group" -->
 ```php
 declare(strict_types=1);
 
@@ -40,6 +40,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -48,7 +49,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsGroupRequest(
-    adsGroup: new Shared\AdsGroup(),
+    adsGroup: new Shared\AdsGroup(
+        bidAmount: 26.16030164062977,
+        budgetAmount: 5099.175239447504,
+        budgetPeriod: Shared\AdsGroupBudgetPeriod::Monthly,
+        createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
+        endAt: Utils\Utils::parseDateTime('2026-05-24T13:17:52.367Z'),
+        id: '30d10ffd-082f-4cea-bf5f-adc7fc79b8af',
+        languageLocale: 'fr-FR',
+        name: 'Stark - Baumbach',
+        startAt: Utils\Utils::parseDateTime('2025-12-10T21:09:58.115Z'),
+        status: Shared\AdsGroupStatus::Processing,
+        targeting: new Shared\PropertyAdsGroupTargeting(),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-02T16:45:32.787Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -83,7 +99,7 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```php
 declare(strict_types=1);
 
@@ -92,6 +108,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -100,7 +117,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisGroupRequest(
-    hrisGroup: new Shared\HrisGroup(),
+    hrisGroup: new Shared\HrisGroup(
+        createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
+        description: 'Absorbeo casso.',
+        id: '75c0e738-bb94-4051-9c72-8e563c3e92ea',
+        isActive: false,
+        name: 'Games',
+        type: Shared\HrisGroupType::BusinessUnit,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T14:24:36.666Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -593,7 +618,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsGroup" method="patch" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```php
 declare(strict_types=1);
 
@@ -602,6 +627,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -610,7 +636,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsGroupRequest(
-    adsGroup: new Shared\AdsGroup(),
+    adsGroup: new Shared\AdsGroup(
+        bidAmount: 26.16030164062977,
+        budgetAmount: 5099.175239447504,
+        budgetPeriod: Shared\AdsGroupBudgetPeriod::Monthly,
+        createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
+        endAt: Utils\Utils::parseDateTime('2026-05-24T13:17:52.526Z'),
+        id: '3d753590-4b9b-4ac5-b8cd-62429576a473',
+        languageLocale: 'fr-FR',
+        name: 'Stark - Baumbach',
+        startAt: Utils\Utils::parseDateTime('2025-12-10T21:09:58.263Z'),
+        status: Shared\AdsGroupStatus::Processing,
+        targeting: new Shared\PropertyAdsGroupTargeting(),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-02T16:45:32.842Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -646,7 +687,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```php
 declare(strict_types=1);
 
@@ -655,6 +696,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -663,7 +705,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisGroupRequest(
-    hrisGroup: new Shared\HrisGroup(),
+    hrisGroup: new Shared\HrisGroup(
+        createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
+        description: 'Absorbeo casso.',
+        id: '8d454ca4-ebee-4004-9ee1-070a8a4f8f74',
+        isActive: false,
+        name: 'Games',
+        type: Shared\HrisGroupType::BusinessUnit,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T14:24:36.672Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -907,7 +957,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsGroup" method="put" path="/ads/{connection_id}/group/{id}" example="ads_group" -->
 ```php
 declare(strict_types=1);
 
@@ -916,6 +966,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -924,7 +975,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsGroupRequest(
-    adsGroup: new Shared\AdsGroup(),
+    adsGroup: new Shared\AdsGroup(
+        bidAmount: 26.16030164062977,
+        budgetAmount: 5099.175239447504,
+        budgetPeriod: Shared\AdsGroupBudgetPeriod::Monthly,
+        createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
+        currency: 'USD',
+        effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
+        endAt: Utils\Utils::parseDateTime('2026-05-24T13:17:52.526Z'),
+        id: '3d753590-4b9b-4ac5-b8cd-62429576a473',
+        languageLocale: 'fr-FR',
+        name: 'Stark - Baumbach',
+        startAt: Utils\Utils::parseDateTime('2025-12-10T21:09:58.263Z'),
+        status: Shared\AdsGroupStatus::Processing,
+        targeting: new Shared\PropertyAdsGroupTargeting(),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-02T16:45:32.842Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -960,7 +1026,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```php
 declare(strict_types=1);
 
@@ -969,6 +1035,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -977,7 +1044,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisGroupRequest(
-    hrisGroup: new Shared\HrisGroup(),
+    hrisGroup: new Shared\HrisGroup(
+        createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
+        description: 'Absorbeo casso.',
+        id: '8d454ca4-ebee-4004-9ee1-070a8a4f8f74',
+        isActive: false,
+        name: 'Games',
+        type: Shared\HrisGroupType::BusinessUnit,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T14:24:36.672Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

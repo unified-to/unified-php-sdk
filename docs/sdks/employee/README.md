@@ -17,7 +17,7 @@ Create an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="php" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" example="hris_employee" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,121 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisEmployeeRequest(
-    hrisEmployee: new Shared\HrisEmployee(),
+    hrisEmployee: new Shared\HrisEmployee(
+        address: new Shared\PropertyHrisEmployeeAddress(
+            address1: '52008 Lansdowne Road',
+            address2: 'Apt. 101',
+            city: 'Connellyberg',
+            countryCode: 'US',
+            postalCode: '18978',
+            region: 'South Dakota',
+            regionCode: 'NM',
+        ),
+        bio: 'sushi devotee, singer',
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 69148,
+                currency: 'CRC',
+                frequency: Shared\HrisCompensationFrequency::Quarter,
+                notes: 'Tergeo laborum laboriosam tutis.',
+                type: Shared\HrisCompensationType::Equity,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
+        currency: 'IDR',
+        dateOfBirth: Utils\Utils::parseDateTime('2001-04-22'),
+        emails: [
+            new Shared\HrisEmail(
+                email: 'Zetta_Prohaska67@hotmail.com',
+                type: Shared\HrisEmailType::Home,
+            ),
+        ],
+        employeeNumber: 'YuOt169CGu',
+        employmentStatus: Shared\EmploymentStatus::Active,
+        employmentType: Shared\HrisEmployeeEmploymentType::Volunteer,
+        firstName: 'Zetta',
+        gender: Shared\HrisEmployeeGender::Intersex,
+        hasMfa: true,
+        hiredAt: Utils\Utils::parseDateTime('2023-05-10T16:14:24.235Z'),
+        id: '0b47556b-dd67-4604-a3e7-3326e7ac2cc4',
+        imageUrl: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
+        languageLocale: 'es',
+        lastName: 'Prohaska',
+        locations: [],
+        maritalStatus: Shared\MaritalStatus::Married,
+        metadata: [
+            new Shared\HrisMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\HrisMetadataFormat::Text,
+                id: '8ff023c4-b1c3-4575-904d-5a28abce4f7c',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'tenetur',
+            ),
+        ],
+        name: 'Zetta Prohaska',
+        pronouns: 'she/her',
+        relationships: [
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Deshaun.Sanford24@yahoo.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Rebeca.Dibbert11@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Hester80@gmail.com',
+                    ),
+                ],
+                name: 'Automotive',
+                type: Shared\HrisEmployeerelationshipType::Emergency,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Benedict_Wisozk83@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Princess_Rath43@gmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Elmira92@yahoo.com',
+                    ),
+                ],
+                name: 'Music',
+                type: Shared\HrisEmployeerelationshipType::Friend,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Jane30@gmail.com',
+                    ),
+                ],
+                name: 'Jewelry',
+                type: Shared\HrisEmployeerelationshipType::Sibling,
+            ),
+        ],
+        salutation: 'Miss',
+        ssnSin: 'yMRtj0Q3xO',
+        storageQuotaAllocated: 3674489,
+        storageQuotaAvailable: 7748057,
+        storageQuotaUsed: 301727,
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(409) 801-3705',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        terminationReason: 'Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.',
+        timeoffDaysTotal: 12,
+        timeoffDaysUsed: 6,
+        timezone: 'Africa/Harare',
+        title: 'Investor Paradigm Liaison',
+        updatedAt: Utils\Utils::parseDateTime('2022-02-19T07:01:46.451Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +285,7 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +294,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +303,121 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisEmployeeRequest(
-    hrisEmployee: new Shared\HrisEmployee(),
+    hrisEmployee: new Shared\HrisEmployee(
+        address: new Shared\PropertyHrisEmployeeAddress(
+            address1: '52008 Lansdowne Road',
+            address2: 'Apt. 101',
+            city: 'Connellyberg',
+            countryCode: 'US',
+            postalCode: '18978',
+            region: 'South Dakota',
+            regionCode: 'NM',
+        ),
+        bio: 'sushi devotee, singer',
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 69148,
+                currency: 'CRC',
+                frequency: Shared\HrisCompensationFrequency::Quarter,
+                notes: 'Tergeo laborum laboriosam tutis.',
+                type: Shared\HrisCompensationType::Equity,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
+        currency: 'IDR',
+        dateOfBirth: Utils\Utils::parseDateTime('2001-04-22'),
+        emails: [
+            new Shared\HrisEmail(
+                email: 'Zetta_Prohaska67@hotmail.com',
+                type: Shared\HrisEmailType::Home,
+            ),
+        ],
+        employeeNumber: 'YuOt169CGu',
+        employmentStatus: Shared\EmploymentStatus::Active,
+        employmentType: Shared\HrisEmployeeEmploymentType::Volunteer,
+        firstName: 'Zetta',
+        gender: Shared\HrisEmployeeGender::Intersex,
+        hasMfa: true,
+        hiredAt: Utils\Utils::parseDateTime('2023-05-10T16:14:24.268Z'),
+        id: '5a45c156-b945-45a7-bdbb-7fcc013a456d',
+        imageUrl: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
+        languageLocale: 'es',
+        lastName: 'Prohaska',
+        locations: [],
+        maritalStatus: Shared\MaritalStatus::Married,
+        metadata: [
+            new Shared\HrisMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\HrisMetadataFormat::Text,
+                id: 'a06af6d2-ccab-4f6e-b714-1de7dc125067',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'tenetur',
+            ),
+        ],
+        name: 'Zetta Prohaska',
+        pronouns: 'she/her',
+        relationships: [
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Deshaun.Sanford24@yahoo.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Rebeca.Dibbert11@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Hester80@gmail.com',
+                    ),
+                ],
+                name: 'Automotive',
+                type: Shared\HrisEmployeerelationshipType::Emergency,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Benedict_Wisozk83@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Princess_Rath43@gmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Elmira92@yahoo.com',
+                    ),
+                ],
+                name: 'Music',
+                type: Shared\HrisEmployeerelationshipType::Friend,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Jane30@gmail.com',
+                    ),
+                ],
+                name: 'Jewelry',
+                type: Shared\HrisEmployeerelationshipType::Sibling,
+            ),
+        ],
+        salutation: 'Miss',
+        ssnSin: 'yMRtj0Q3xO',
+        storageQuotaAllocated: 3674489,
+        storageQuotaAvailable: 7748057,
+        storageQuotaUsed: 301727,
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(409) 801-3705',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        terminationReason: 'Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.',
+        timeoffDaysTotal: 12,
+        timeoffDaysUsed: 6,
+        timezone: 'Africa/Harare',
+        title: 'Investor Paradigm Liaison',
+        updatedAt: Utils\Utils::parseDateTime('2022-02-19T07:01:46.473Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +504,7 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +513,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +522,121 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisEmployeeRequest(
-    hrisEmployee: new Shared\HrisEmployee(),
+    hrisEmployee: new Shared\HrisEmployee(
+        address: new Shared\PropertyHrisEmployeeAddress(
+            address1: '52008 Lansdowne Road',
+            address2: 'Apt. 101',
+            city: 'Connellyberg',
+            countryCode: 'US',
+            postalCode: '18978',
+            region: 'South Dakota',
+            regionCode: 'NM',
+        ),
+        bio: 'sushi devotee, singer',
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 69148,
+                currency: 'CRC',
+                frequency: Shared\HrisCompensationFrequency::Quarter,
+                notes: 'Tergeo laborum laboriosam tutis.',
+                type: Shared\HrisCompensationType::Equity,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
+        currency: 'IDR',
+        dateOfBirth: Utils\Utils::parseDateTime('2001-04-22'),
+        emails: [
+            new Shared\HrisEmail(
+                email: 'Zetta_Prohaska67@hotmail.com',
+                type: Shared\HrisEmailType::Home,
+            ),
+        ],
+        employeeNumber: 'YuOt169CGu',
+        employmentStatus: Shared\EmploymentStatus::Active,
+        employmentType: Shared\HrisEmployeeEmploymentType::Volunteer,
+        firstName: 'Zetta',
+        gender: Shared\HrisEmployeeGender::Intersex,
+        hasMfa: true,
+        hiredAt: Utils\Utils::parseDateTime('2023-05-10T16:14:24.268Z'),
+        id: '5a45c156-b945-45a7-bdbb-7fcc013a456d',
+        imageUrl: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
+        languageLocale: 'es',
+        lastName: 'Prohaska',
+        locations: [],
+        maritalStatus: Shared\MaritalStatus::Married,
+        metadata: [
+            new Shared\HrisMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\HrisMetadataFormat::Text,
+                id: 'a06af6d2-ccab-4f6e-b714-1de7dc125067',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'tenetur',
+            ),
+        ],
+        name: 'Zetta Prohaska',
+        pronouns: 'she/her',
+        relationships: [
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Deshaun.Sanford24@yahoo.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Rebeca.Dibbert11@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Hester80@gmail.com',
+                    ),
+                ],
+                name: 'Automotive',
+                type: Shared\HrisEmployeerelationshipType::Emergency,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Benedict_Wisozk83@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Princess_Rath43@gmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Elmira92@yahoo.com',
+                    ),
+                ],
+                name: 'Music',
+                type: Shared\HrisEmployeerelationshipType::Friend,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Jane30@gmail.com',
+                    ),
+                ],
+                name: 'Jewelry',
+                type: Shared\HrisEmployeerelationshipType::Sibling,
+            ),
+        ],
+        salutation: 'Miss',
+        ssnSin: 'yMRtj0Q3xO',
+        storageQuotaAllocated: 3674489,
+        storageQuotaAvailable: 7748057,
+        storageQuotaUsed: 301727,
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(409) 801-3705',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        terminationReason: 'Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.',
+        timeoffDaysTotal: 12,
+        timeoffDaysUsed: 6,
+        timezone: 'Africa/Harare',
+        title: 'Investor Paradigm Liaison',
+        updatedAt: Utils\Utils::parseDateTime('2022-02-19T07:01:46.473Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

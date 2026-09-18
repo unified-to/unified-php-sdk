@@ -17,7 +17,7 @@ Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="php" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" example="ats_scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,24 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsScorecardRequest(
-    atsScorecard: new Shared\AtsScorecard(),
+    atsScorecard: new Shared\AtsScorecard(
+        comment: 'Maiores enim.',
+        createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
+        id: 'c3766d54-1065-46a2-982d-4b25ae89fd81',
+        questions: [
+            new Shared\AtsScorecardQuestion(
+                description: 'Sulum textor eveniet facere vita.',
+                text: 'Aliquam.',
+            ),
+            new Shared\AtsScorecardQuestion(
+                answer: 'Decretum.',
+                description: 'Conatus cicuta doloremque statua bonus.',
+                text: 'Pecto vulpes libero vomer comburo.',
+            ),
+        ],
+        recommendation: Shared\Recommendation::StrongYes,
+        updatedAt: Utils\Utils::parseDateTime('2023-05-27T11:10:09.894Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +188,7 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +197,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +206,24 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsScorecardRequest(
-    atsScorecard: new Shared\AtsScorecard(),
+    atsScorecard: new Shared\AtsScorecard(
+        comment: 'Maiores enim.',
+        createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
+        id: '94a1a56d-57e5-4b2f-8e60-532dc14fd628',
+        questions: [
+            new Shared\AtsScorecardQuestion(
+                description: 'Sulum textor eveniet facere vita.',
+                text: 'Aliquam.',
+            ),
+            new Shared\AtsScorecardQuestion(
+                answer: 'Decretum.',
+                description: 'Conatus cicuta doloremque statua bonus.',
+                text: 'Pecto vulpes libero vomer comburo.',
+            ),
+        ],
+        recommendation: Shared\Recommendation::StrongYes,
+        updatedAt: Utils\Utils::parseDateTime('2023-05-27T11:10:09.897Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +310,7 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +319,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +328,24 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsScorecardRequest(
-    atsScorecard: new Shared\AtsScorecard(),
+    atsScorecard: new Shared\AtsScorecard(
+        comment: 'Maiores enim.',
+        createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
+        id: '94a1a56d-57e5-4b2f-8e60-532dc14fd628',
+        questions: [
+            new Shared\AtsScorecardQuestion(
+                description: 'Sulum textor eveniet facere vita.',
+                text: 'Aliquam.',
+            ),
+            new Shared\AtsScorecardQuestion(
+                answer: 'Decretum.',
+                description: 'Conatus cicuta doloremque statua bonus.',
+                text: 'Pecto vulpes libero vomer comburo.',
+            ),
+        ],
+        recommendation: Shared\Recommendation::StrongYes,
+        updatedAt: Utils\Utils::parseDateTime('2023-05-27T11:10:09.897Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

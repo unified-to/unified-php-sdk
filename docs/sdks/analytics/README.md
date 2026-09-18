@@ -29,7 +29,7 @@ Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="createAnalyticsEvent" method="post" path="/analytics/{connection_id}/event" example="analytics_event" -->
 ```php
 declare(strict_types=1);
 
@@ -38,6 +38,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -46,7 +47,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAnalyticsEventRequest(
-    analyticsEvent: new Shared\AnalyticsEvent(),
+    analyticsEvent: new Shared\AnalyticsEvent(
+        createdAt: Utils\Utils::parseDateTime('2023-06-21T03:13:22.954Z'),
+        eventType: Shared\EventType::ScreenView,
+        id: '4f8ee0cd-206a-47b6-9018-3ce971c41ee1',
+        metadata: [
+            'key' => new Shared\PropertyAnalyticsEventMetadata(),
+        ],
+        name: 'Xk707ttsb51v',
+        updatedAt: Utils\Utils::parseDateTime('2023-09-22T02:14:25.938Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -81,7 +91,7 @@ Create a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" -->
+<!-- UsageSnippet language="php" operationID="createAnalyticsProperty" method="post" path="/analytics/{connection_id}/property" example="analytics_property" -->
 ```php
 declare(strict_types=1);
 
@@ -90,6 +100,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -98,7 +109,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAnalyticsPropertyRequest(
-    analyticsProperty: new Shared\AnalyticsProperty(),
+    analyticsProperty: new Shared\AnalyticsProperty(
+        createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
+        currency: 'USD',
+        id: '00a86f83-224b-45eb-bbd1-39a1c17049a3',
+        name: 'Daniel, Goldner and Dickinson',
+        timezone: 'UTC',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T16:36:17.230Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -133,7 +151,7 @@ Create a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" -->
+<!-- UsageSnippet language="php" operationID="createAnalyticsVisitor" method="post" path="/analytics/{connection_id}/visitor" example="analytics_visitor" -->
 ```php
 declare(strict_types=1);
 
@@ -142,6 +160,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -150,7 +169,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAnalyticsVisitorRequest(
-    analyticsVisitor: new Shared\AnalyticsVisitor(),
+    analyticsVisitor: new Shared\AnalyticsVisitor(
+        createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        email: 'Dallas_Mitchell@yahoo.com',
+        firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        id: 'c4f48c8f-56d2-4cc8-b3f0-9a83509307e5',
+        lastSeenAt: Utils\Utils::parseDateTime('2021-12-04T18:09:09.077Z'),
+        metadata: [
+            'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
+        ],
+        name: 'Desiree O\'Hara',
+        totalEvents: 3639,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-03T08:27:48.122Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -639,7 +670,7 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAnalyticsProperty" method="patch" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```php
 declare(strict_types=1);
 
@@ -648,6 +679,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -656,7 +688,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAnalyticsPropertyRequest(
-    analyticsProperty: new Shared\AnalyticsProperty(),
+    analyticsProperty: new Shared\AnalyticsProperty(
+        createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
+        currency: 'USD',
+        id: 'ef237fcd-37a7-47f3-ab39-e030cb387de2',
+        name: 'Daniel, Goldner and Dickinson',
+        timezone: 'UTC',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T16:36:17.230Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -692,7 +731,7 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAnalyticsVisitor" method="patch" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```php
 declare(strict_types=1);
 
@@ -701,6 +740,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -709,7 +749,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAnalyticsVisitorRequest(
-    analyticsVisitor: new Shared\AnalyticsVisitor(),
+    analyticsVisitor: new Shared\AnalyticsVisitor(
+        createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        email: 'Dallas_Mitchell@yahoo.com',
+        firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        id: '88e685e7-218d-418d-889f-1a6162b7ce74',
+        lastSeenAt: Utils\Utils::parseDateTime('2021-12-04T18:09:09.082Z'),
+        metadata: [
+            'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
+        ],
+        name: 'Desiree O\'Hara',
+        totalEvents: 3639,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-03T08:27:48.137Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -847,7 +899,7 @@ Update a property
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAnalyticsProperty" method="put" path="/analytics/{connection_id}/property/{id}" example="analytics_property" -->
 ```php
 declare(strict_types=1);
 
@@ -856,6 +908,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -864,7 +917,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAnalyticsPropertyRequest(
-    analyticsProperty: new Shared\AnalyticsProperty(),
+    analyticsProperty: new Shared\AnalyticsProperty(
+        createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
+        currency: 'USD',
+        id: 'ef237fcd-37a7-47f3-ab39-e030cb387de2',
+        name: 'Daniel, Goldner and Dickinson',
+        timezone: 'UTC',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T16:36:17.230Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -900,7 +960,7 @@ Update a visitor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAnalyticsVisitor" method="put" path="/analytics/{connection_id}/visitor/{id}" example="analytics_visitor" -->
 ```php
 declare(strict_types=1);
 
@@ -909,6 +969,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -917,7 +978,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAnalyticsVisitorRequest(
-    analyticsVisitor: new Shared\AnalyticsVisitor(),
+    analyticsVisitor: new Shared\AnalyticsVisitor(
+        createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        email: 'Dallas_Mitchell@yahoo.com',
+        firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
+        id: '88e685e7-218d-418d-889f-1a6162b7ce74',
+        lastSeenAt: Utils\Utils::parseDateTime('2021-12-04T18:09:09.082Z'),
+        metadata: [
+            'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
+        ],
+        name: 'Desiree O\'Hara',
+        totalEvents: 3639,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-03T08:27:48.137Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

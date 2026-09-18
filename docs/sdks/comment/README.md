@@ -29,7 +29,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" example="kms_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -38,6 +38,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -46,7 +47,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(),
+    kmsComment: new Shared\KmsComment(
+        content: 'Decimus tolero viriliter usque.',
+        contentType: Shared\ContentType::Html,
+        createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
+        id: 'af2c4b2b-7330-482d-9b7a-0225f7113cde',
+        type: Shared\KmsCommentType::Page,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-16T08:15:05.546Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -81,7 +89,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="createTaskComment" method="post" path="/task/{connection_id}/comment" example="task_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -90,6 +98,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -98,7 +107,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskCommentRequest(
-    taskComment: new Shared\TaskComment(),
+    taskComment: new Shared\TaskComment(
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
+        hasChildren: true,
+        id: '8f75dd61-8488-4668-b620-ddba262fb3c8',
+        text: 'Colo ulciscor sublime tabernus.',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-24T01:12:37.035Z'),
+        userName: 'Santina Abbott',
+    ),
     connectionId: '<id>',
 );
 
@@ -133,7 +149,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -150,7 +166,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateUcCommentRequest(
-    ucComment: new Shared\UcComment(),
+    ucComment: new Shared\UcComment(
+        content: 'Vociferor vitiosus.',
+        createdAt: '2023-04-02T23:42:31.571Z',
+        id: '0799f5c4-cd42-46d0-8ad5-f45577f33875',
+        updatedAt: '2024-02-01T19:29:01.666Z',
+    ),
     connectionId: '<id>',
 );
 
@@ -488,7 +509,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -497,6 +518,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -505,7 +527,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(),
+    kmsComment: new Shared\KmsComment(
+        content: 'Decimus tolero viriliter usque.',
+        contentType: Shared\ContentType::Html,
+        createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
+        id: 'a97bbd39-6b81-4780-a0d8-1bd6952df736',
+        type: Shared\KmsCommentType::Page,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-16T08:15:05.548Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -541,7 +570,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTaskComment" method="patch" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -550,6 +579,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -558,7 +588,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskCommentRequest(
-    taskComment: new Shared\TaskComment(),
+    taskComment: new Shared\TaskComment(
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
+        hasChildren: true,
+        id: 'bb64593e-fe9e-4f21-a5db-356051726f07',
+        text: 'Colo ulciscor sublime tabernus.',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-24T01:12:37.037Z'),
+        userName: 'Santina Abbott',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -594,7 +631,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -611,7 +648,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchUcCommentRequest(
-    ucComment: new Shared\UcComment(),
+    ucComment: new Shared\UcComment(
+        content: 'Vociferor vitiosus.',
+        createdAt: '2023-04-02T23:42:31.571Z',
+        id: '8a4a0ba6-4264-407c-8765-0815731be5d8',
+        updatedAt: '2024-02-01T19:29:01.667Z',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -800,7 +842,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -809,6 +851,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -817,7 +860,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(),
+    kmsComment: new Shared\KmsComment(
+        content: 'Decimus tolero viriliter usque.',
+        contentType: Shared\ContentType::Html,
+        createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
+        id: 'a97bbd39-6b81-4780-a0d8-1bd6952df736',
+        type: Shared\KmsCommentType::Page,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-16T08:15:05.548Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -853,7 +903,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTaskComment" method="put" path="/task/{connection_id}/comment/{id}" example="task_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -862,6 +912,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -870,7 +921,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskCommentRequest(
-    taskComment: new Shared\TaskComment(),
+    taskComment: new Shared\TaskComment(
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
+        hasChildren: true,
+        id: 'bb64593e-fe9e-4f21-a5db-356051726f07',
+        text: 'Colo ulciscor sublime tabernus.',
+        updatedAt: Utils\Utils::parseDateTime('2021-09-24T01:12:37.037Z'),
+        userName: 'Santina Abbott',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -906,7 +964,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -923,7 +981,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateUcCommentRequest(
-    ucComment: new Shared\UcComment(),
+    ucComment: new Shared\UcComment(
+        content: 'Vociferor vitiosus.',
+        createdAt: '2023-04-02T23:42:31.571Z',
+        id: '8a4a0ba6-4264-407c-8765-0815731be5d8',
+        updatedAt: '2024-02-01T19:29:01.667Z',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

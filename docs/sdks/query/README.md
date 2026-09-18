@@ -12,7 +12,7 @@ Create a query
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" -->
+<!-- UsageSnippet language="php" operationID="createDatastoreQuery" method="post" path="/datastore/{connection_id}/query" example="datastore_query" -->
 ```php
 declare(strict_types=1);
 
@@ -29,7 +29,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateDatastoreQueryRequest(
-    datastoreQuery: new Shared\DatastoreQuery(),
+    datastoreQuery: new Shared\DatastoreQuery(
+        query: new Shared\PropertyDatastoreQueryQuery(
+            filter: new Shared\PropertyDatastoreQueryQueryFilter(
+                type: Shared\PropertyDatastoreQueryQueryFilterType::Or,
+            ),
+            select: [
+                '*',
+            ],
+            sql: '',
+        ),
+    ),
     connectionId: '<id>',
 );
 

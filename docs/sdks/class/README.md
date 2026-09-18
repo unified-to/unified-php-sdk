@@ -17,7 +17,7 @@ Create a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" -->
+<!-- UsageSnippet language="php" operationID="createLmsClass" method="post" path="/lms/{connection_id}/class" example="lms_class" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,32 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsClassRequest(
-    lmsClass: new Shared\LmsClass(),
+    lmsClass: new Shared\LmsClass(
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
+        description: 'Anser sperno decerno.',
+        id: 'd8129459-c4f9-456b-b7d0-772361f02d7e',
+        instructors: [],
+        languages: [
+            'in',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+                description: 'Esse confido.',
+                languages: [
+                    'fa',
+                    'da',
+                ],
+                name: 'illo',
+                thumbnailUrl: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+                type: Shared\LmsMediaType::Video,
+                url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+            ),
+        ],
+        name: 'virtus',
+        students: [],
+        updatedAt: Utils\Utils::parseDateTime('2025-07-07T21:36:07.725Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +196,7 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsClass" method="patch" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +205,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +214,32 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsClassRequest(
-    lmsClass: new Shared\LmsClass(),
+    lmsClass: new Shared\LmsClass(
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
+        description: 'Anser sperno decerno.',
+        id: '5b6e90ee-13ec-49d8-a899-81a77863d9ef',
+        instructors: [],
+        languages: [
+            'in',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+                description: 'Esse confido.',
+                languages: [
+                    'fa',
+                    'da',
+                ],
+                name: 'illo',
+                thumbnailUrl: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+                type: Shared\LmsMediaType::Video,
+                url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+            ),
+        ],
+        name: 'virtus',
+        students: [],
+        updatedAt: Utils\Utils::parseDateTime('2025-07-07T21:36:07.739Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +326,7 @@ Update a class
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsClass" method="put" path="/lms/{connection_id}/class/{id}" example="lms_class" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +335,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +344,32 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsClassRequest(
-    lmsClass: new Shared\LmsClass(),
+    lmsClass: new Shared\LmsClass(
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
+        description: 'Anser sperno decerno.',
+        id: '5b6e90ee-13ec-49d8-a899-81a77863d9ef',
+        instructors: [],
+        languages: [
+            'in',
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Defetiscor aetas acies benevolentia ulterius. Creta bis beneficium canis. Bonus valeo vulgo creator arca peior ceno earum culpa. Tabesco apostolus talis. Ultra accommodo deinde sono culpo arto cruciamentum triduana.',
+                description: 'Esse confido.',
+                languages: [
+                    'fa',
+                    'da',
+                ],
+                name: 'illo',
+                thumbnailUrl: 'https://loremflickr.com/199/1934?lock=4323325966476891',
+                type: Shared\LmsMediaType::Video,
+                url: 'https://loremflickr.com/487/921?lock=5127962071241632',
+            ),
+        ],
+        name: 'virtus',
+        students: [],
+        updatedAt: Utils\Utils::parseDateTime('2025-07-07T21:36:07.739Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

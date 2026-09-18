@@ -139,7 +139,7 @@ Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="php" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```php
 declare(strict_types=1);
 
@@ -148,6 +148,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -156,7 +157,31 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingAccountRequest(
-    accountingAccount: new Shared\AccountingAccount(),
+    accountingAccount: new Shared\AccountingAccount(
+        balance: 12092,
+        createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
+        currency: 'BOB',
+        customerDefinedCode: 'quo',
+        description: 'Spoliatio comedo vilitas harum cupiditate.',
+        id: 'd0de0893-6cd3-4f44-9f1b-0d2d89c37c03',
+        isPayable: true,
+        name: 'Electronic Aluminum Tuna',
+        status: Shared\Status::Archived,
+        taxonomy: [
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'vesper',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'iste',
+            ),
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'adamo',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'peccatus',
+            ),
+        ],
+        type: Shared\Type::Bank,
+        updatedAt: Utils\Utils::parseDateTime('2023-01-03T03:11:16.644Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -191,7 +216,7 @@ Create a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="php" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -200,6 +225,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -208,7 +234,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingBankfeedaccountRequest(
-    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(),
+    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(
+        accountId: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+        accountNumber: '30369722',
+        accountNumberLast4: '9722',
+        accountType: Shared\AccountType::Loan,
+        balance: 90358,
+        bankName: 'Weissnat Inc',
+        createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        currency: 'SSP',
+        feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        id: '88021d36-d2e1-4067-8071-424af1c54fed',
+        name: 'Corwin, Donnelly and Connelly Savings',
+        routingNumber: '667753156',
+        status: Shared\AccountingBankfeedaccountStatus::Active,
+        updatedAt: Utils\Utils::parseDateTime('2024-04-11T12:56:36.249Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -243,7 +284,7 @@ Create a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="php" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```php
 declare(strict_types=1);
 
@@ -252,6 +293,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -260,7 +302,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingBankfeedtransactionRequest(
-    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(),
+    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(
+        accountId: 'b7dc4175-1368-4b89-a700-d621b6666648',
+        amount: 60889,
+        bankCategory: 'Games',
+        bankfeedaccountId: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+        categoryIds: [],
+        contactId: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+        createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
+        currency: 'SRD',
+        description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+        id: 'd7e5f1b9-8fad-485f-85be-e2c6175122b6',
+        isPending: true,
+        merchantName: 'Reichert, Erdman and Tillman',
+        postedAt: Utils\Utils::parseDateTime('2025-03-23T18:33:52.190Z'),
+        reference: '93642593',
+        transactionAt: Utils\Utils::parseDateTime('2022-07-27T19:48:08.850Z'),
+        type: Shared\AccountingBankfeedtransactionType::Credit,
+        updatedAt: Utils\Utils::parseDateTime('2022-05-23T20:47:18.778Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -295,7 +355,7 @@ Create a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" -->
+<!-- UsageSnippet language="php" operationID="createAccountingBill" method="post" path="/accounting/{connection_id}/bill" example="accounting_bill" -->
 ```php
 declare(strict_types=1);
 
@@ -304,6 +364,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -312,7 +373,30 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingBillRequest(
-    accountingBill: new Shared\AccountingBill(),
+    accountingBill: new Shared\AccountingBill(
+        attachments: [],
+        billNumber: 'vitae',
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2019-08-08T23:03:14.104Z'),
+        currency: 'AUD',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2019-08-11T20:52:55.321Z'),
+        extendedNotes: [],
+        id: '1627318e-450f-4bd4-9eb4-a8962bccdcb6',
+        lineitems: [],
+        metadata: [],
+        notes: 'Tutamen cilicium infit.',
+        paymentCollectionMethod: Shared\PaymentCollectionMethod::ChargeAutomatically,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2024-04-04T07:22:54.368Z'),
+        send: true,
+        status: Shared\AccountingBillStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\Term::Net10,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T00:57:24.292Z'),
+        url: 'https://coarse-interviewer.biz/',
+    ),
     connectionId: '<id>',
 );
 
@@ -347,7 +431,7 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" example="accounting_category" -->
 ```php
 declare(strict_types=1);
 
@@ -356,6 +440,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -364,7 +449,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingCategoryRequest(
-    accountingCategory: new Shared\AccountingCategory(),
+    accountingCategory: new Shared\AccountingCategory(
+        createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
+        description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+        id: '3db0fe6a-c3a2-4267-8642-617480bed288',
+        isActive: false,
+        metadata: [],
+        name: 'Electronic Cotton Shoes',
+        updatedAt: Utils\Utils::parseDateTime('2025-08-20T06:35:08.868Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -399,7 +492,7 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="createAccountingContact" method="post" path="/accounting/{connection_id}/contact" example="accounting_contact" -->
 ```php
 declare(strict_types=1);
 
@@ -408,6 +501,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -416,7 +510,74 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingContactRequest(
-    accountingContact: new Shared\AccountingContact(),
+    accountingContact: new Shared\AccountingContact(
+        associatedContacts: [
+            new Shared\AccountingAssociatedContact(
+                id: '64db133c-a40e-49c2-987d-c6a778d0f2c6',
+                name: 'Delores Reynolds',
+            ),
+            new Shared\AccountingAssociatedContact(
+                id: 'c0cf85e1-b3ee-485e-82e0-ce6565489f11',
+                name: 'Delores Reynolds',
+            ),
+        ],
+        billingAddress: new Shared\PropertyAccountingContactBillingAddress(
+            address1: '2633 Stoney Lane',
+            address2: 'Suite 176',
+            city: 'Ladariusboro',
+            countryCode: 'US',
+            postalCode: '70131-2908',
+            region: 'Illinois',
+            regionCode: 'NV',
+        ),
+        companyName: 'Marquardt Inc',
+        createdAt: Utils\Utils::parseDateTime('2021-08-15T14:56:50.258Z'),
+        currency: 'ISK',
+        emails: [
+            new Shared\AccountingEmail(
+                email: 'Delores.Reynolds10@hotmail.com',
+                type: Shared\AccountingEmailType::Home,
+            ),
+        ],
+        firstName: 'Delores',
+        id: 'a4d150ef-8494-4a1a-adab-ecb1cb1d56f3',
+        identification: 'amicitia',
+        isActive: true,
+        isCustomer: true,
+        lastName: 'Reynolds',
+        name: 'Delores Reynolds',
+        paymentMethods: [
+            new Shared\AccountingContactPaymentMethod(
+                default: true,
+                id: '1383e031-5a5c-4a2d-ac0b-14791ac3db58',
+                name: 'Visa 1234',
+                type: Shared\AccountingContactPaymentMethodType::Card,
+            ),
+        ],
+        portalUrl: 'https://scented-t-shirt.info/',
+        shippingAddress: new Shared\PropertyAccountingContactShippingAddress(
+            address1: '786 Renner Stream',
+            address2: 'Apt. 555',
+            city: 'Roanoke',
+            countryCode: 'US',
+            postalCode: '80686-7556',
+            region: 'Vermont',
+            regionCode: 'NE',
+        ),
+        taxExemption: Shared\TaxExemption::Resale,
+        taxNumber: 'amplexus',
+        telephones: [
+            new Shared\AccountingTelephone(
+                telephone: '(427) 701-7160',
+                type: Shared\AccountingTelephoneType::Home,
+            ),
+            new Shared\AccountingTelephone(
+                telephone: '(540) 913-9171',
+                type: Shared\AccountingTelephoneType::Fax,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2023-12-04T22:27:39.732Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -451,7 +612,7 @@ Create a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" -->
+<!-- UsageSnippet language="php" operationID="createAccountingCreditmemo" method="post" path="/accounting/{connection_id}/creditmemo" example="accounting_creditmemo" -->
 ```php
 declare(strict_types=1);
 
@@ -460,6 +621,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -468,7 +630,37 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingCreditmemoRequest(
-    accountingCreditmemo: new Shared\AccountingCreditmemo(),
+    accountingCreditmemo: new Shared\AccountingCreditmemo(
+        applications: [],
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://enlightened-chairperson.com/',
+                id: 'a2e78277-a327-461a-bdfc-588c1e4cc0ce',
+                mimeType: 'complectus',
+                name: 'thesis',
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2023-09-20T01:47:01.571Z'),
+        creditmemoNumber: 'ulterius',
+        currency: 'MKD',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2023-10-18T04:35:00.543Z'),
+        id: 'd9d43cc4-e6f7-4ef3-8000-d90df9f449e5',
+        lineitems: [],
+        metadata: [],
+        notes: 'Dedecor amo adfero torqueo quas.',
+        paymentCollectionMethod: Shared\AccountingCreditmemoPaymentCollectionMethod::ChargeAutomatically,
+        postedAt: Utils\Utils::parseDateTime('2025-11-15T11:02:17.288Z'),
+        refundAmount: 0,
+        refundReason: 'Virgo inflammatio quibusdam aestivus magnam.',
+        refundedAt: Utils\Utils::parseDateTime('2023-10-23T00:35:36.814Z'),
+        send: false,
+        status: Shared\AccountingCreditmemoStatus::Paid,
+        taxAmount: 0,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2024-11-15T13:32:18.737Z'),
+        url: 'https://lighthearted-bandwidth.net/',
+    ),
     connectionId: '<id>',
 );
 
@@ -503,7 +695,7 @@ Create an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" -->
+<!-- UsageSnippet language="php" operationID="createAccountingExpense" method="post" path="/accounting/{connection_id}/expense" example="accounting_expense" -->
 ```php
 declare(strict_types=1);
 
@@ -512,6 +704,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -520,7 +713,44 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingExpenseRequest(
-    accountingExpense: new Shared\AccountingExpense(),
+    accountingExpense: new Shared\AccountingExpense(
+        approvedAt: Utils\Utils::parseDateTime('2026-05-09T18:22:43.545Z'),
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://ripe-napkin.biz/',
+                id: 'bd5cc77e-13cc-4bca-a782-8ff91143671d',
+                mimeType: 'annus',
+                name: 'cohibeo',
+            ),
+        ],
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
+        currency: 'SSP',
+        externalNumber: 'necessitatibus',
+        id: '88076234-223e-4b3a-aca4-464f2e81b951',
+        lineitems: [
+            new Shared\AccountingLineitem(
+                id: '6ca0a920-8d40-4469-aa13-8159a794e842',
+                itemDescription: 'Innovative Table featuring left technology and Rubber construction',
+                itemName: 'Luxurious Cotton Pizza',
+                itemSku: '978-0-8324-6620-5',
+                notes: 'Degusto conventus defendo valetudo.',
+                taxAmount: 2501,
+                totalAmount: 168,
+                unitAmount: 3059,
+                unitQuantity: 1,
+            ),
+        ],
+        metadata: [],
+        name: 'Refined Steel Shoes',
+        paymentMethod: 'CASH',
+        postedAt: Utils\Utils::parseDateTime('2021-06-04T05:03:49.243Z'),
+        reimbursedAmount: 1833,
+        status: Shared\AccountingExpenseStatus::Submitted,
+        taxAmount: 2602,
+        totalAmount: 3580,
+        updatedAt: Utils\Utils::parseDateTime('2026-05-09T18:22:43.545Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -555,7 +785,7 @@ Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="php" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" example="accounting_invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -564,6 +794,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -572,7 +803,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingInvoiceRequest(
-    accountingInvoice: new Shared\AccountingInvoice(),
+    accountingInvoice: new Shared\AccountingInvoice(
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://glossy-markup.net/',
+                id: '6166f06c-cb77-42dd-b349-592c6cdfad5d',
+                mimeType: 'benevolentia',
+                name: 'vespillo',
+            ),
+        ],
+        balanceAmount: -1,
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2022-11-07T14:17:29.587Z'),
+        currency: 'RWF',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2022-11-27T21:25:37.363Z'),
+        extendedNotes: [],
+        id: '8ba2d961-496b-4dc9-bacb-595ccd9a3734',
+        invoiceNumber: 'vinco',
+        lineitems: [],
+        metadata: [],
+        notes: 'Auctus comburo clarus ubi.',
+        paidAmount: 0,
+        paidAt: Utils\Utils::parseDateTime('2022-11-25T15:00:28.871Z'),
+        paymentCollectionMethod: Shared\AccountingInvoicePaymentCollectionMethod::SendInvoice,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-03-26T22:46:20.573Z'),
+        reference: 'adinventitias',
+        send: true,
+        status: Shared\AccountingInvoiceStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\AccountingInvoiceTerm::Net45,
+        totalAmount: 0,
+        type: Shared\AccountingInvoiceType::Creditmemo,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T06:48:43.166Z'),
+        url: 'https://gifted-yarmulke.info/',
+    ),
     connectionId: '<id>',
 );
 
@@ -607,7 +873,7 @@ Create a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" -->
+<!-- UsageSnippet language="php" operationID="createAccountingJournal" method="post" path="/accounting/{connection_id}/journal" example="accounting_journal" -->
 ```php
 declare(strict_types=1);
 
@@ -616,6 +882,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -624,7 +891,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingJournalRequest(
-    accountingJournal: new Shared\AccountingJournal(),
+    accountingJournal: new Shared\AccountingJournal(
+        attachments: [],
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T15:14:55.881Z'),
+        currency: 'FKP',
+        description: 'Calco constans adipisci.',
+        id: 'f509f941-ad29-4b9d-b184-a751b62a37d6',
+        postedAt: Utils\Utils::parseDateTime('2023-10-19T01:51:30.395Z'),
+        reference: 'ullam',
+        source: 'crustulum',
+        taxAmount: 78672,
+        updatedAt: Utils\Utils::parseDateTime('2022-01-01T11:08:39.568Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -659,7 +938,7 @@ Create an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" -->
+<!-- UsageSnippet language="php" operationID="createAccountingOrder" method="post" path="/accounting/{connection_id}/order" example="accounting_order" -->
 ```php
 declare(strict_types=1);
 
@@ -668,6 +947,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -676,7 +956,35 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingOrderRequest(
-    accountingOrder: new Shared\AccountingOrder(),
+    accountingOrder: new Shared\AccountingOrder(
+        billingAddress: new Shared\PropertyAccountingOrderBillingAddress(
+            address1: '802 Bechtelar Park',
+            address2: 'Apt. 436',
+            city: 'Daniellaville',
+            countryCode: 'US',
+            postalCode: '36947',
+            region: 'Wisconsin',
+            regionCode: 'NY',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
+        currency: 'USD',
+        id: '75670c85-d5fc-4880-bc55-8ed412c74b8f',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2022-04-05T00:14:19.079Z'),
+        shippingAddress: new Shared\PropertyAccountingOrderShippingAddress(
+            address1: '9745 Betty Shore',
+            city: 'South Alainaland',
+            countryCode: 'US',
+            postalCode: '25274-7654',
+            region: 'New Hampshire',
+            regionCode: 'LA',
+        ),
+        status: Shared\AccountingOrderStatus::Submitted,
+        totalAmount: 0,
+        type: Shared\AccountingOrderType::Purchase,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-17T22:40:34.509Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -711,7 +1019,7 @@ Create a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="php" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```php
 declare(strict_types=1);
 
@@ -720,6 +1028,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -728,7 +1037,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingPaymenttermRequest(
-    accountingPaymentterm: new Shared\AccountingPaymentterm(),
+    accountingPaymentterm: new Shared\AccountingPaymentterm(
+        category: Shared\Category::Standard,
+        createdAt: Utils\Utils::parseDateTime('2021-08-22T22:42:42.265Z'),
+        dayOfMonthDue: 4,
+        description: 'Cogito pecco eos cultura.',
+        discountDayOfMonth: 13,
+        discountDays: 4,
+        discountPercent: 5,
+        dueDays: 57,
+        dueNextMonthDays: 9,
+        id: '521c3b7f-1411-4cdd-b4d6-b720a17bedf2',
+        isActive: false,
+        metadata: [],
+        name: 'Net 30',
+        type: Shared\AccountingPaymenttermType::Net15,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-11T11:06:20.942Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -815,7 +1140,7 @@ Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="php" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -824,6 +1149,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -832,7 +1158,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingPurchaseorderRequest(
-    accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
+    accountingPurchaseorder: new Shared\AccountingPurchaseorder(
+        billingAddress: new Shared\PropertyAccountingPurchaseorderBillingAddress(
+            address1: '37214 Tanya Walks',
+            city: 'South Annabelleton',
+            countryCode: 'US',
+            postalCode: '30337',
+            region: 'Nevada',
+            regionCode: 'MA',
+        ),
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
+        currency: 'ZMW',
+        id: '7ca20b57-36d7-416c-895f-ebd50bd69068',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2025-04-25T03:31:00.662Z'),
+        shippingAddress: new Shared\PropertyAccountingPurchaseorderShippingAddress(
+            address1: '649 Maggio Overpass',
+            city: 'Lake Jaylan',
+            countryCode: 'US',
+            postalCode: '99211-6547',
+            region: 'North Carolina',
+            regionCode: 'ID',
+        ),
+        status: Shared\AccountingPurchaseorderStatus::PartiallyRefunded,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2021-02-26T03:18:45.818Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -919,7 +1272,7 @@ Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="php" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" example="accounting_salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -928,6 +1281,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -936,7 +1290,56 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingSalesorderRequest(
-    accountingSalesorder: new Shared\AccountingSalesorder(),
+    accountingSalesorder: new Shared\AccountingSalesorder(
+        billingAddress: new Shared\PropertyAccountingSalesorderBillingAddress(
+            address1: '26530 Stroman Rest',
+            address2: 'Suite 801',
+            city: 'Pocatello',
+            countryCode: 'US',
+            postalCode: '05015-8546',
+            region: 'Louisiana',
+            regionCode: 'MO',
+        ),
+        categoryIds: [],
+        closedAt: Utils\Utils::parseDateTime('2023-08-16T21:47:16.752Z'),
+        createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
+        currency: 'ANG',
+        discountAmount: 99,
+        employeeUserId: '4a6b8990-c85a-499f-82d0-5011c3c95a0b',
+        fees: [
+            new Shared\AccountingFee(
+                amount: 519,
+                currency: 'XCD',
+                type: Shared\AccountingFeeType::Promotion,
+            ),
+        ],
+        fulfillmentType: Shared\FulfillmentType::Takeout,
+        guestCount: 8,
+        id: '8ab70945-b5d4-4f64-a9c3-bd5af04ec1cb',
+        lineitems: [],
+        metadata: [],
+        orderNumber: '988187',
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-01-11T02:10:29.889Z'),
+        refundedAmount: 0,
+        salesChannel: 'Harvey, Collier and Weimann',
+        serviceChargeAmount: 63,
+        shippingAddress: new Shared\PropertyAccountingSalesorderShippingAddress(
+            address1: '9878 Bradley Mill',
+            address2: 'Apt. 215',
+            city: 'Port Matildestad',
+            countryCode: 'US',
+            postalCode: '07989-2148',
+            region: 'Arkansas',
+            regionCode: 'AK',
+        ),
+        status: Shared\AccountingSalesorderStatus::Refunded,
+        subtotalAmount: 0,
+        taxAmount: 63,
+        tipAmount: 34,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2022-02-10T18:49:08.307Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -971,7 +1374,7 @@ Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="php" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -980,6 +1383,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -988,7 +1392,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingTaxrateRequest(
-    accountingTaxrate: new Shared\AccountingTaxrate(),
+    accountingTaxrate: new Shared\AccountingTaxrate(
+        createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
+        description: 'Nemo atrox tricesimus creator aranea.',
+        id: 'a06c3544-caf7-4a72-9a80-b178c81f1bd1',
+        isActive: false,
+        metadata: [],
+        name: 'cogo',
+        rate: 1,
+        updatedAt: Utils\Utils::parseDateTime('2025-11-04T07:53:07.001Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -1023,7 +1436,7 @@ Create a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" -->
+<!-- UsageSnippet language="php" operationID="createAccountingTransaction" method="post" path="/accounting/{connection_id}/transaction" example="accounting_transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -1032,6 +1445,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1040,7 +1454,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingTransactionRequest(
-    accountingTransaction: new Shared\AccountingTransaction(),
+    accountingTransaction: new Shared\AccountingTransaction(
+        createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
+        id: '8bad21b5-c9a3-4b30-99e9-f1c19b0faf34',
+        lineitems: [
+            new Shared\AccountingTransactionLineItem(
+                categoryIds: [],
+                description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+                id: '882cb0c8-fff0-4acf-a65b-f11a7921f17e',
+                name: 'Salad',
+                objectType: 'delicate',
+                totalAmount: 58531,
+                unitAmount: 536,
+                unitQuantity: 91,
+            ),
+        ],
+        memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+        taxAmount: 0,
+        totalAmount: 94452,
+        updatedAt: Utils\Utils::parseDateTime('2021-09-10T02:36:26.081Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -1075,7 +1508,7 @@ Create a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+<!-- UsageSnippet language="php" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" example="accounting_vendorcredit" -->
 ```php
 declare(strict_types=1);
 
@@ -1084,6 +1517,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1092,7 +1526,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingVendorcreditRequest(
-    accountingVendorcredit: new Shared\AccountingVendorcredit(),
+    accountingVendorcredit: new Shared\AccountingVendorcredit(
+        applications: [],
+        applyAmount: 1,
+        balanceAmount: 0,
+        createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
+        currency: 'KGS',
+        dueAt: Utils\Utils::parseDateTime('2023-05-06T20:38:46.775Z'),
+        id: 'b95b7aab-87cc-4c2d-b4d8-be2bc44abf20',
+        lineitems: [],
+        metadata: [],
+        notes: 'Conatus cruciamentum decor avaritia tantum.',
+        postedAt: Utils\Utils::parseDateTime('2023-09-28T16:43:35.372Z'),
+        status: Shared\AccountingVendorcreditStatus::Submitted,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T14:35:38.362Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -3753,7 +4202,7 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```php
 declare(strict_types=1);
 
@@ -3762,6 +4211,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3770,7 +4220,31 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingAccountRequest(
-    accountingAccount: new Shared\AccountingAccount(),
+    accountingAccount: new Shared\AccountingAccount(
+        balance: 12092,
+        createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
+        currency: 'BOB',
+        customerDefinedCode: 'quo',
+        description: 'Spoliatio comedo vilitas harum cupiditate.',
+        id: 'f8647ab4-1089-471e-82b9-db710d4b4cd1',
+        isPayable: true,
+        name: 'Electronic Aluminum Tuna',
+        status: Shared\Status::Archived,
+        taxonomy: [
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'vesper',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'iste',
+            ),
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'adamo',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'peccatus',
+            ),
+        ],
+        type: Shared\Type::Bank,
+        updatedAt: Utils\Utils::parseDateTime('2023-01-03T03:11:16.645Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3806,7 +4280,7 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -3815,6 +4289,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3823,7 +4298,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingBankfeedaccountRequest(
-    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(),
+    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(
+        accountId: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+        accountNumber: '30369722',
+        accountNumberLast4: '9722',
+        accountType: Shared\AccountType::Loan,
+        balance: 90358,
+        bankName: 'Weissnat Inc',
+        createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        currency: 'SSP',
+        feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        id: '71af6e72-4ef0-4ca2-accd-2e4a5df1789b',
+        name: 'Corwin, Donnelly and Connelly Savings',
+        routingNumber: '667753156',
+        status: Shared\AccountingBankfeedaccountStatus::Active,
+        updatedAt: Utils\Utils::parseDateTime('2024-04-11T12:56:36.252Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3859,7 +4349,7 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```php
 declare(strict_types=1);
 
@@ -3868,6 +4358,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3876,7 +4367,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingBankfeedtransactionRequest(
-    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(),
+    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(
+        accountId: 'b7dc4175-1368-4b89-a700-d621b6666648',
+        amount: 60889,
+        bankCategory: 'Games',
+        bankfeedaccountId: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+        categoryIds: [],
+        contactId: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+        createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
+        currency: 'SRD',
+        description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+        id: '0fc0602a-eb02-41c9-ae51-62d4f9d00e2a',
+        isPending: true,
+        merchantName: 'Reichert, Erdman and Tillman',
+        postedAt: Utils\Utils::parseDateTime('2025-03-23T18:33:52.195Z'),
+        reference: '93642593',
+        transactionAt: Utils\Utils::parseDateTime('2022-07-27T19:48:08.850Z'),
+        type: Shared\AccountingBankfeedtransactionType::Credit,
+        updatedAt: Utils\Utils::parseDateTime('2022-05-23T20:47:18.778Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3912,7 +4421,7 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingBill" method="patch" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```php
 declare(strict_types=1);
 
@@ -3921,6 +4430,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3929,7 +4439,30 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingBillRequest(
-    accountingBill: new Shared\AccountingBill(),
+    accountingBill: new Shared\AccountingBill(
+        attachments: [],
+        billNumber: 'vitae',
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2019-08-08T23:03:14.104Z'),
+        currency: 'AUD',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2019-08-11T20:52:55.321Z'),
+        extendedNotes: [],
+        id: '3f483847-c69d-4f32-b681-5b73801236b0',
+        lineitems: [],
+        metadata: [],
+        notes: 'Tutamen cilicium infit.',
+        paymentCollectionMethod: Shared\PaymentCollectionMethod::ChargeAutomatically,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2024-04-04T07:22:54.390Z'),
+        send: true,
+        status: Shared\AccountingBillStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\Term::Net10,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T00:57:24.319Z'),
+        url: 'https://coarse-interviewer.biz/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3965,7 +4498,7 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```php
 declare(strict_types=1);
 
@@ -3974,6 +4507,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3982,7 +4516,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingCategoryRequest(
-    accountingCategory: new Shared\AccountingCategory(),
+    accountingCategory: new Shared\AccountingCategory(
+        createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
+        description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+        id: '93277723-e046-44aa-a026-45d084b846ba',
+        isActive: false,
+        metadata: [],
+        name: 'Electronic Cotton Shoes',
+        updatedAt: Utils\Utils::parseDateTime('2025-08-20T06:35:08.879Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4018,7 +4560,7 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingContact" method="patch" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```php
 declare(strict_types=1);
 
@@ -4027,6 +4569,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4035,7 +4578,74 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingContactRequest(
-    accountingContact: new Shared\AccountingContact(),
+    accountingContact: new Shared\AccountingContact(
+        associatedContacts: [
+            new Shared\AccountingAssociatedContact(
+                id: 'b60d88e0-5a87-43aa-be6f-5f253940e7b7',
+                name: 'Delores Reynolds',
+            ),
+            new Shared\AccountingAssociatedContact(
+                id: 'd430e725-2cc2-4061-802d-24851f584e94',
+                name: 'Delores Reynolds',
+            ),
+        ],
+        billingAddress: new Shared\PropertyAccountingContactBillingAddress(
+            address1: '2633 Stoney Lane',
+            address2: 'Suite 176',
+            city: 'Ladariusboro',
+            countryCode: 'US',
+            postalCode: '70131-2908',
+            region: 'Illinois',
+            regionCode: 'NV',
+        ),
+        companyName: 'Marquardt Inc',
+        createdAt: Utils\Utils::parseDateTime('2021-08-15T14:56:50.258Z'),
+        currency: 'ISK',
+        emails: [
+            new Shared\AccountingEmail(
+                email: 'Delores.Reynolds10@hotmail.com',
+                type: Shared\AccountingEmailType::Home,
+            ),
+        ],
+        firstName: 'Delores',
+        id: '4a7ec450-6956-4149-b102-9dfa8738e269',
+        identification: 'amicitia',
+        isActive: true,
+        isCustomer: true,
+        lastName: 'Reynolds',
+        name: 'Delores Reynolds',
+        paymentMethods: [
+            new Shared\AccountingContactPaymentMethod(
+                default: true,
+                id: '0ea87d98-73a6-4440-83d2-2e0720c7955d',
+                name: 'Visa 1234',
+                type: Shared\AccountingContactPaymentMethodType::Card,
+            ),
+        ],
+        portalUrl: 'https://scented-t-shirt.info/',
+        shippingAddress: new Shared\PropertyAccountingContactShippingAddress(
+            address1: '786 Renner Stream',
+            address2: 'Apt. 555',
+            city: 'Roanoke',
+            countryCode: 'US',
+            postalCode: '80686-7556',
+            region: 'Vermont',
+            regionCode: 'NE',
+        ),
+        taxExemption: Shared\TaxExemption::Resale,
+        taxNumber: 'amplexus',
+        telephones: [
+            new Shared\AccountingTelephone(
+                telephone: '(427) 701-7160',
+                type: Shared\AccountingTelephoneType::Home,
+            ),
+            new Shared\AccountingTelephone(
+                telephone: '(540) 913-9171',
+                type: Shared\AccountingTelephoneType::Fax,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2023-12-04T22:27:39.748Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4071,7 +4681,7 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingCreditmemo" method="patch" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```php
 declare(strict_types=1);
 
@@ -4080,6 +4690,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4088,7 +4699,37 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingCreditmemoRequest(
-    accountingCreditmemo: new Shared\AccountingCreditmemo(),
+    accountingCreditmemo: new Shared\AccountingCreditmemo(
+        applications: [],
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://enlightened-chairperson.com/',
+                id: '59c8a1c4-da42-4783-a812-64dcb296cd11',
+                mimeType: 'complectus',
+                name: 'thesis',
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2023-09-20T01:47:01.571Z'),
+        creditmemoNumber: 'ulterius',
+        currency: 'MKD',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2023-10-18T04:35:00.543Z'),
+        id: '9d39b333-dc7c-4257-9d31-6224e3cf763f',
+        lineitems: [],
+        metadata: [],
+        notes: 'Dedecor amo adfero torqueo quas.',
+        paymentCollectionMethod: Shared\AccountingCreditmemoPaymentCollectionMethod::ChargeAutomatically,
+        postedAt: Utils\Utils::parseDateTime('2025-11-15T11:02:17.323Z'),
+        refundAmount: 0,
+        refundReason: 'Virgo inflammatio quibusdam aestivus magnam.',
+        refundedAt: Utils\Utils::parseDateTime('2023-10-23T00:35:36.814Z'),
+        send: false,
+        status: Shared\AccountingCreditmemoStatus::Paid,
+        taxAmount: 0,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2024-11-15T13:32:18.756Z'),
+        url: 'https://lighthearted-bandwidth.net/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4124,7 +4765,7 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingExpense" method="patch" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```php
 declare(strict_types=1);
 
@@ -4133,6 +4774,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4141,7 +4783,44 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingExpenseRequest(
-    accountingExpense: new Shared\AccountingExpense(),
+    accountingExpense: new Shared\AccountingExpense(
+        approvedAt: Utils\Utils::parseDateTime('2026-05-09T18:22:43.593Z'),
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://ripe-napkin.biz/',
+                id: 'a8e3f070-1872-415b-9119-ca0b34b31468',
+                mimeType: 'annus',
+                name: 'cohibeo',
+            ),
+        ],
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
+        currency: 'SSP',
+        externalNumber: 'necessitatibus',
+        id: 'ffc10913-4fbd-41ae-9963-7a351c4b602c',
+        lineitems: [
+            new Shared\AccountingLineitem(
+                id: '1903c335-9417-435e-9c88-755817c4e617',
+                itemDescription: 'Innovative Table featuring left technology and Rubber construction',
+                itemName: 'Luxurious Cotton Pizza',
+                itemSku: '978-0-8324-6620-5',
+                notes: 'Degusto conventus defendo valetudo.',
+                taxAmount: 2501,
+                totalAmount: 168,
+                unitAmount: 3059,
+                unitQuantity: 1,
+            ),
+        ],
+        metadata: [],
+        name: 'Refined Steel Shoes',
+        paymentMethod: 'CASH',
+        postedAt: Utils\Utils::parseDateTime('2021-06-04T05:03:49.251Z'),
+        reimbursedAmount: 1833,
+        status: Shared\AccountingExpenseStatus::Submitted,
+        taxAmount: 2602,
+        totalAmount: 3580,
+        updatedAt: Utils\Utils::parseDateTime('2026-05-09T18:22:43.593Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4177,7 +4856,7 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -4186,6 +4865,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4194,7 +4874,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingInvoiceRequest(
-    accountingInvoice: new Shared\AccountingInvoice(),
+    accountingInvoice: new Shared\AccountingInvoice(
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://glossy-markup.net/',
+                id: 'c2fa60c7-8d72-4568-9854-fa432fadbf78',
+                mimeType: 'benevolentia',
+                name: 'vespillo',
+            ),
+        ],
+        balanceAmount: -1,
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2022-11-07T14:17:29.587Z'),
+        currency: 'RWF',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2022-11-27T21:25:37.363Z'),
+        extendedNotes: [],
+        id: '6f607a62-e620-4f17-87c7-372e8a20cfc8',
+        invoiceNumber: 'vinco',
+        lineitems: [],
+        metadata: [],
+        notes: 'Auctus comburo clarus ubi.',
+        paidAmount: 0,
+        paidAt: Utils\Utils::parseDateTime('2022-11-25T15:00:28.871Z'),
+        paymentCollectionMethod: Shared\AccountingInvoicePaymentCollectionMethod::SendInvoice,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-03-26T22:46:20.613Z'),
+        reference: 'adinventitias',
+        send: true,
+        status: Shared\AccountingInvoiceStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\AccountingInvoiceTerm::Net45,
+        totalAmount: 0,
+        type: Shared\AccountingInvoiceType::Creditmemo,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T06:48:43.169Z'),
+        url: 'https://gifted-yarmulke.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4230,7 +4945,7 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingJournal" method="patch" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```php
 declare(strict_types=1);
 
@@ -4239,6 +4954,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4247,7 +4963,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingJournalRequest(
-    accountingJournal: new Shared\AccountingJournal(),
+    accountingJournal: new Shared\AccountingJournal(
+        attachments: [],
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T15:14:55.881Z'),
+        currency: 'FKP',
+        description: 'Calco constans adipisci.',
+        id: '12490857-8ddf-4be5-abd0-47fc89cc49a2',
+        postedAt: Utils\Utils::parseDateTime('2023-10-19T01:51:30.403Z'),
+        reference: 'ullam',
+        source: 'crustulum',
+        taxAmount: 78672,
+        updatedAt: Utils\Utils::parseDateTime('2022-01-01T11:08:39.572Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4283,7 +5011,7 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingOrder" method="patch" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```php
 declare(strict_types=1);
 
@@ -4292,6 +5020,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4300,7 +5029,35 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingOrderRequest(
-    accountingOrder: new Shared\AccountingOrder(),
+    accountingOrder: new Shared\AccountingOrder(
+        billingAddress: new Shared\PropertyAccountingOrderBillingAddress(
+            address1: '802 Bechtelar Park',
+            address2: 'Apt. 436',
+            city: 'Daniellaville',
+            countryCode: 'US',
+            postalCode: '36947',
+            region: 'Wisconsin',
+            regionCode: 'NY',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
+        currency: 'USD',
+        id: 'cb5b9dd7-2eb0-44aa-ae76-2722a1975caf',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2022-04-05T00:14:19.088Z'),
+        shippingAddress: new Shared\PropertyAccountingOrderShippingAddress(
+            address1: '9745 Betty Shore',
+            city: 'South Alainaland',
+            countryCode: 'US',
+            postalCode: '25274-7654',
+            region: 'New Hampshire',
+            regionCode: 'LA',
+        ),
+        status: Shared\AccountingOrderStatus::Submitted,
+        totalAmount: 0,
+        type: Shared\AccountingOrderType::Purchase,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-17T22:40:34.512Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4336,7 +5093,7 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```php
 declare(strict_types=1);
 
@@ -4345,6 +5102,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4353,7 +5111,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingPaymenttermRequest(
-    accountingPaymentterm: new Shared\AccountingPaymentterm(),
+    accountingPaymentterm: new Shared\AccountingPaymentterm(
+        category: Shared\Category::Standard,
+        createdAt: Utils\Utils::parseDateTime('2021-08-22T22:42:42.265Z'),
+        dayOfMonthDue: 4,
+        description: 'Cogito pecco eos cultura.',
+        discountDayOfMonth: 13,
+        discountDays: 4,
+        discountPercent: 5,
+        dueDays: 57,
+        dueNextMonthDays: 9,
+        id: 'e5fb978b-ad68-4c8c-a957-b79b40fb97eb',
+        isActive: false,
+        metadata: [],
+        name: 'Net 30',
+        type: Shared\AccountingPaymenttermType::Net15,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-11T11:06:20.951Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4442,7 +5216,7 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -4451,6 +5225,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4459,7 +5234,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingPurchaseorderRequest(
-    accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
+    accountingPurchaseorder: new Shared\AccountingPurchaseorder(
+        billingAddress: new Shared\PropertyAccountingPurchaseorderBillingAddress(
+            address1: '37214 Tanya Walks',
+            city: 'South Annabelleton',
+            countryCode: 'US',
+            postalCode: '30337',
+            region: 'Nevada',
+            regionCode: 'MA',
+        ),
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
+        currency: 'ZMW',
+        id: 'ab47e1ac-633d-4704-847d-b63d10b40137',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2025-04-25T03:31:00.688Z'),
+        shippingAddress: new Shared\PropertyAccountingPurchaseorderShippingAddress(
+            address1: '649 Maggio Overpass',
+            city: 'Lake Jaylan',
+            countryCode: 'US',
+            postalCode: '99211-6547',
+            region: 'North Carolina',
+            regionCode: 'ID',
+        ),
+        status: Shared\AccountingPurchaseorderStatus::PartiallyRefunded,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2021-02-26T03:18:45.820Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4548,7 +5350,7 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -4557,6 +5359,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4565,7 +5368,56 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingSalesorderRequest(
-    accountingSalesorder: new Shared\AccountingSalesorder(),
+    accountingSalesorder: new Shared\AccountingSalesorder(
+        billingAddress: new Shared\PropertyAccountingSalesorderBillingAddress(
+            address1: '26530 Stroman Rest',
+            address2: 'Suite 801',
+            city: 'Pocatello',
+            countryCode: 'US',
+            postalCode: '05015-8546',
+            region: 'Louisiana',
+            regionCode: 'MO',
+        ),
+        categoryIds: [],
+        closedAt: Utils\Utils::parseDateTime('2023-08-16T21:47:16.768Z'),
+        createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
+        currency: 'ANG',
+        discountAmount: 99,
+        employeeUserId: '4a6b8990-c85a-499f-82d0-5011c3c95a0b',
+        fees: [
+            new Shared\AccountingFee(
+                amount: 519,
+                currency: 'XCD',
+                type: Shared\AccountingFeeType::Promotion,
+            ),
+        ],
+        fulfillmentType: Shared\FulfillmentType::Takeout,
+        guestCount: 8,
+        id: '26cb0a60-aeeb-49dc-aa08-231bb0af605c',
+        lineitems: [],
+        metadata: [],
+        orderNumber: '988187',
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-01-11T02:10:29.930Z'),
+        refundedAmount: 0,
+        salesChannel: 'Harvey, Collier and Weimann',
+        serviceChargeAmount: 63,
+        shippingAddress: new Shared\PropertyAccountingSalesorderShippingAddress(
+            address1: '9878 Bradley Mill',
+            address2: 'Apt. 215',
+            city: 'Port Matildestad',
+            countryCode: 'US',
+            postalCode: '07989-2148',
+            region: 'Arkansas',
+            regionCode: 'AK',
+        ),
+        status: Shared\AccountingSalesorderStatus::Refunded,
+        subtotalAmount: 0,
+        taxAmount: 63,
+        tipAmount: 34,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2022-02-10T18:49:08.308Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4601,7 +5453,7 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -4610,6 +5462,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4618,7 +5471,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingTaxrateRequest(
-    accountingTaxrate: new Shared\AccountingTaxrate(),
+    accountingTaxrate: new Shared\AccountingTaxrate(
+        createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
+        description: 'Nemo atrox tricesimus creator aranea.',
+        id: '8fa77bc6-6812-4b82-8d10-5c03bf48971c',
+        isActive: false,
+        metadata: [],
+        name: 'cogo',
+        rate: 1,
+        updatedAt: Utils\Utils::parseDateTime('2025-11-04T07:53:07.007Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4654,7 +5516,7 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingTransaction" method="patch" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -4663,6 +5525,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4671,7 +5534,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingTransactionRequest(
-    accountingTransaction: new Shared\AccountingTransaction(),
+    accountingTransaction: new Shared\AccountingTransaction(
+        createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
+        id: 'b441cd13-8ef9-45e5-9902-9a2002d9a492',
+        lineitems: [
+            new Shared\AccountingTransactionLineItem(
+                categoryIds: [],
+                description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+                id: '236bdaf2-3428-4b72-94e8-eefc15d6ff92',
+                name: 'Salad',
+                objectType: 'delicate',
+                totalAmount: 58531,
+                unitAmount: 536,
+                unitQuantity: 91,
+            ),
+        ],
+        memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+        taxAmount: 0,
+        totalAmount: 94452,
+        updatedAt: Utils\Utils::parseDateTime('2021-09-10T02:36:26.085Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -4707,7 +5589,7 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```php
 declare(strict_types=1);
 
@@ -4716,6 +5598,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4724,7 +5607,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingVendorcreditRequest(
-    accountingVendorcredit: new Shared\AccountingVendorcredit(),
+    accountingVendorcredit: new Shared\AccountingVendorcredit(
+        applications: [],
+        applyAmount: 1,
+        balanceAmount: 0,
+        createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
+        currency: 'KGS',
+        dueAt: Utils\Utils::parseDateTime('2023-05-06T20:38:46.775Z'),
+        id: '1353821c-3fd0-42b1-9c7d-0aa07a3eebe2',
+        lineitems: [],
+        metadata: [],
+        notes: 'Conatus cruciamentum decor avaritia tantum.',
+        postedAt: Utils\Utils::parseDateTime('2023-09-28T16:43:35.374Z'),
+        status: Shared\AccountingVendorcreditStatus::Submitted,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T14:35:38.366Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -5729,7 +6627,7 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```php
 declare(strict_types=1);
 
@@ -5738,6 +6636,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -5746,7 +6645,31 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingAccountRequest(
-    accountingAccount: new Shared\AccountingAccount(),
+    accountingAccount: new Shared\AccountingAccount(
+        balance: 12092,
+        createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
+        currency: 'BOB',
+        customerDefinedCode: 'quo',
+        description: 'Spoliatio comedo vilitas harum cupiditate.',
+        id: 'f8647ab4-1089-471e-82b9-db710d4b4cd1',
+        isPayable: true,
+        name: 'Electronic Aluminum Tuna',
+        status: Shared\Status::Archived,
+        taxonomy: [
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'vesper',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'iste',
+            ),
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'adamo',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'peccatus',
+            ),
+        ],
+        type: Shared\Type::Bank,
+        updatedAt: Utils\Utils::parseDateTime('2023-01-03T03:11:16.645Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -5782,7 +6705,7 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -5791,6 +6714,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -5799,7 +6723,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingBankfeedaccountRequest(
-    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(),
+    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(
+        accountId: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+        accountNumber: '30369722',
+        accountNumberLast4: '9722',
+        accountType: Shared\AccountType::Loan,
+        balance: 90358,
+        bankName: 'Weissnat Inc',
+        createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        currency: 'SSP',
+        feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        id: '71af6e72-4ef0-4ca2-accd-2e4a5df1789b',
+        name: 'Corwin, Donnelly and Connelly Savings',
+        routingNumber: '667753156',
+        status: Shared\AccountingBankfeedaccountStatus::Active,
+        updatedAt: Utils\Utils::parseDateTime('2024-04-11T12:56:36.252Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -5835,7 +6774,7 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```php
 declare(strict_types=1);
 
@@ -5844,6 +6783,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -5852,7 +6792,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingBankfeedtransactionRequest(
-    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(),
+    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(
+        accountId: 'b7dc4175-1368-4b89-a700-d621b6666648',
+        amount: 60889,
+        bankCategory: 'Games',
+        bankfeedaccountId: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+        categoryIds: [],
+        contactId: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+        createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
+        currency: 'SRD',
+        description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+        id: '0fc0602a-eb02-41c9-ae51-62d4f9d00e2a',
+        isPending: true,
+        merchantName: 'Reichert, Erdman and Tillman',
+        postedAt: Utils\Utils::parseDateTime('2025-03-23T18:33:52.195Z'),
+        reference: '93642593',
+        transactionAt: Utils\Utils::parseDateTime('2022-07-27T19:48:08.850Z'),
+        type: Shared\AccountingBankfeedtransactionType::Credit,
+        updatedAt: Utils\Utils::parseDateTime('2022-05-23T20:47:18.778Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -5888,7 +6846,7 @@ Update a bill
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingBill" method="put" path="/accounting/{connection_id}/bill/{id}" example="accounting_bill" -->
 ```php
 declare(strict_types=1);
 
@@ -5897,6 +6855,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -5905,7 +6864,30 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingBillRequest(
-    accountingBill: new Shared\AccountingBill(),
+    accountingBill: new Shared\AccountingBill(
+        attachments: [],
+        billNumber: 'vitae',
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2019-08-08T23:03:14.104Z'),
+        currency: 'AUD',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2019-08-11T20:52:55.321Z'),
+        extendedNotes: [],
+        id: '3f483847-c69d-4f32-b681-5b73801236b0',
+        lineitems: [],
+        metadata: [],
+        notes: 'Tutamen cilicium infit.',
+        paymentCollectionMethod: Shared\PaymentCollectionMethod::ChargeAutomatically,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2024-04-04T07:22:54.390Z'),
+        send: true,
+        status: Shared\AccountingBillStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\Term::Net10,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T00:57:24.319Z'),
+        url: 'https://coarse-interviewer.biz/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -5941,7 +6923,7 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```php
 declare(strict_types=1);
 
@@ -5950,6 +6932,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -5958,7 +6941,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingCategoryRequest(
-    accountingCategory: new Shared\AccountingCategory(),
+    accountingCategory: new Shared\AccountingCategory(
+        createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
+        description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+        id: '93277723-e046-44aa-a026-45d084b846ba',
+        isActive: false,
+        metadata: [],
+        name: 'Electronic Cotton Shoes',
+        updatedAt: Utils\Utils::parseDateTime('2025-08-20T06:35:08.879Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -5994,7 +6985,7 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingContact" method="put" path="/accounting/{connection_id}/contact/{id}" example="accounting_contact" -->
 ```php
 declare(strict_types=1);
 
@@ -6003,6 +6994,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6011,7 +7003,74 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingContactRequest(
-    accountingContact: new Shared\AccountingContact(),
+    accountingContact: new Shared\AccountingContact(
+        associatedContacts: [
+            new Shared\AccountingAssociatedContact(
+                id: 'b60d88e0-5a87-43aa-be6f-5f253940e7b7',
+                name: 'Delores Reynolds',
+            ),
+            new Shared\AccountingAssociatedContact(
+                id: 'd430e725-2cc2-4061-802d-24851f584e94',
+                name: 'Delores Reynolds',
+            ),
+        ],
+        billingAddress: new Shared\PropertyAccountingContactBillingAddress(
+            address1: '2633 Stoney Lane',
+            address2: 'Suite 176',
+            city: 'Ladariusboro',
+            countryCode: 'US',
+            postalCode: '70131-2908',
+            region: 'Illinois',
+            regionCode: 'NV',
+        ),
+        companyName: 'Marquardt Inc',
+        createdAt: Utils\Utils::parseDateTime('2021-08-15T14:56:50.258Z'),
+        currency: 'ISK',
+        emails: [
+            new Shared\AccountingEmail(
+                email: 'Delores.Reynolds10@hotmail.com',
+                type: Shared\AccountingEmailType::Home,
+            ),
+        ],
+        firstName: 'Delores',
+        id: '4a7ec450-6956-4149-b102-9dfa8738e269',
+        identification: 'amicitia',
+        isActive: true,
+        isCustomer: true,
+        lastName: 'Reynolds',
+        name: 'Delores Reynolds',
+        paymentMethods: [
+            new Shared\AccountingContactPaymentMethod(
+                default: true,
+                id: '0ea87d98-73a6-4440-83d2-2e0720c7955d',
+                name: 'Visa 1234',
+                type: Shared\AccountingContactPaymentMethodType::Card,
+            ),
+        ],
+        portalUrl: 'https://scented-t-shirt.info/',
+        shippingAddress: new Shared\PropertyAccountingContactShippingAddress(
+            address1: '786 Renner Stream',
+            address2: 'Apt. 555',
+            city: 'Roanoke',
+            countryCode: 'US',
+            postalCode: '80686-7556',
+            region: 'Vermont',
+            regionCode: 'NE',
+        ),
+        taxExemption: Shared\TaxExemption::Resale,
+        taxNumber: 'amplexus',
+        telephones: [
+            new Shared\AccountingTelephone(
+                telephone: '(427) 701-7160',
+                type: Shared\AccountingTelephoneType::Home,
+            ),
+            new Shared\AccountingTelephone(
+                telephone: '(540) 913-9171',
+                type: Shared\AccountingTelephoneType::Fax,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2023-12-04T22:27:39.748Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6047,7 +7106,7 @@ Update a creditmemo
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingCreditmemo" method="put" path="/accounting/{connection_id}/creditmemo/{id}" example="accounting_creditmemo" -->
 ```php
 declare(strict_types=1);
 
@@ -6056,6 +7115,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6064,7 +7124,37 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingCreditmemoRequest(
-    accountingCreditmemo: new Shared\AccountingCreditmemo(),
+    accountingCreditmemo: new Shared\AccountingCreditmemo(
+        applications: [],
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://enlightened-chairperson.com/',
+                id: '59c8a1c4-da42-4783-a812-64dcb296cd11',
+                mimeType: 'complectus',
+                name: 'thesis',
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2023-09-20T01:47:01.571Z'),
+        creditmemoNumber: 'ulterius',
+        currency: 'MKD',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2023-10-18T04:35:00.543Z'),
+        id: '9d39b333-dc7c-4257-9d31-6224e3cf763f',
+        lineitems: [],
+        metadata: [],
+        notes: 'Dedecor amo adfero torqueo quas.',
+        paymentCollectionMethod: Shared\AccountingCreditmemoPaymentCollectionMethod::ChargeAutomatically,
+        postedAt: Utils\Utils::parseDateTime('2025-11-15T11:02:17.323Z'),
+        refundAmount: 0,
+        refundReason: 'Virgo inflammatio quibusdam aestivus magnam.',
+        refundedAt: Utils\Utils::parseDateTime('2023-10-23T00:35:36.814Z'),
+        send: false,
+        status: Shared\AccountingCreditmemoStatus::Paid,
+        taxAmount: 0,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2024-11-15T13:32:18.756Z'),
+        url: 'https://lighthearted-bandwidth.net/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6100,7 +7190,7 @@ Update an expense
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingExpense" method="put" path="/accounting/{connection_id}/expense/{id}" example="accounting_expense" -->
 ```php
 declare(strict_types=1);
 
@@ -6109,6 +7199,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6117,7 +7208,44 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingExpenseRequest(
-    accountingExpense: new Shared\AccountingExpense(),
+    accountingExpense: new Shared\AccountingExpense(
+        approvedAt: Utils\Utils::parseDateTime('2026-05-09T18:22:43.593Z'),
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://ripe-napkin.biz/',
+                id: 'a8e3f070-1872-415b-9119-ca0b34b31468',
+                mimeType: 'annus',
+                name: 'cohibeo',
+            ),
+        ],
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
+        currency: 'SSP',
+        externalNumber: 'necessitatibus',
+        id: 'ffc10913-4fbd-41ae-9963-7a351c4b602c',
+        lineitems: [
+            new Shared\AccountingLineitem(
+                id: '1903c335-9417-435e-9c88-755817c4e617',
+                itemDescription: 'Innovative Table featuring left technology and Rubber construction',
+                itemName: 'Luxurious Cotton Pizza',
+                itemSku: '978-0-8324-6620-5',
+                notes: 'Degusto conventus defendo valetudo.',
+                taxAmount: 2501,
+                totalAmount: 168,
+                unitAmount: 3059,
+                unitQuantity: 1,
+            ),
+        ],
+        metadata: [],
+        name: 'Refined Steel Shoes',
+        paymentMethod: 'CASH',
+        postedAt: Utils\Utils::parseDateTime('2021-06-04T05:03:49.251Z'),
+        reimbursedAmount: 1833,
+        status: Shared\AccountingExpenseStatus::Submitted,
+        taxAmount: 2602,
+        totalAmount: 3580,
+        updatedAt: Utils\Utils::parseDateTime('2026-05-09T18:22:43.593Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6153,7 +7281,7 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -6162,6 +7290,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6170,7 +7299,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingInvoiceRequest(
-    accountingInvoice: new Shared\AccountingInvoice(),
+    accountingInvoice: new Shared\AccountingInvoice(
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://glossy-markup.net/',
+                id: 'c2fa60c7-8d72-4568-9854-fa432fadbf78',
+                mimeType: 'benevolentia',
+                name: 'vespillo',
+            ),
+        ],
+        balanceAmount: -1,
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2022-11-07T14:17:29.587Z'),
+        currency: 'RWF',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2022-11-27T21:25:37.363Z'),
+        extendedNotes: [],
+        id: '6f607a62-e620-4f17-87c7-372e8a20cfc8',
+        invoiceNumber: 'vinco',
+        lineitems: [],
+        metadata: [],
+        notes: 'Auctus comburo clarus ubi.',
+        paidAmount: 0,
+        paidAt: Utils\Utils::parseDateTime('2022-11-25T15:00:28.871Z'),
+        paymentCollectionMethod: Shared\AccountingInvoicePaymentCollectionMethod::SendInvoice,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-03-26T22:46:20.613Z'),
+        reference: 'adinventitias',
+        send: true,
+        status: Shared\AccountingInvoiceStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\AccountingInvoiceTerm::Net45,
+        totalAmount: 0,
+        type: Shared\AccountingInvoiceType::Creditmemo,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T06:48:43.169Z'),
+        url: 'https://gifted-yarmulke.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6206,7 +7370,7 @@ Update a journal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingJournal" method="put" path="/accounting/{connection_id}/journal/{id}" example="accounting_journal" -->
 ```php
 declare(strict_types=1);
 
@@ -6215,6 +7379,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6223,7 +7388,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingJournalRequest(
-    accountingJournal: new Shared\AccountingJournal(),
+    accountingJournal: new Shared\AccountingJournal(
+        attachments: [],
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-02-20T15:14:55.881Z'),
+        currency: 'FKP',
+        description: 'Calco constans adipisci.',
+        id: '12490857-8ddf-4be5-abd0-47fc89cc49a2',
+        postedAt: Utils\Utils::parseDateTime('2023-10-19T01:51:30.403Z'),
+        reference: 'ullam',
+        source: 'crustulum',
+        taxAmount: 78672,
+        updatedAt: Utils\Utils::parseDateTime('2022-01-01T11:08:39.572Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6259,7 +7436,7 @@ Update an order
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingOrder" method="put" path="/accounting/{connection_id}/order/{id}" example="accounting_order" -->
 ```php
 declare(strict_types=1);
 
@@ -6268,6 +7445,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6276,7 +7454,35 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingOrderRequest(
-    accountingOrder: new Shared\AccountingOrder(),
+    accountingOrder: new Shared\AccountingOrder(
+        billingAddress: new Shared\PropertyAccountingOrderBillingAddress(
+            address1: '802 Bechtelar Park',
+            address2: 'Apt. 436',
+            city: 'Daniellaville',
+            countryCode: 'US',
+            postalCode: '36947',
+            region: 'Wisconsin',
+            regionCode: 'NY',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
+        currency: 'USD',
+        id: 'cb5b9dd7-2eb0-44aa-ae76-2722a1975caf',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2022-04-05T00:14:19.088Z'),
+        shippingAddress: new Shared\PropertyAccountingOrderShippingAddress(
+            address1: '9745 Betty Shore',
+            city: 'South Alainaland',
+            countryCode: 'US',
+            postalCode: '25274-7654',
+            region: 'New Hampshire',
+            regionCode: 'LA',
+        ),
+        status: Shared\AccountingOrderStatus::Submitted,
+        totalAmount: 0,
+        type: Shared\AccountingOrderType::Purchase,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-17T22:40:34.512Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6312,7 +7518,7 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```php
 declare(strict_types=1);
 
@@ -6321,6 +7527,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6329,7 +7536,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingPaymenttermRequest(
-    accountingPaymentterm: new Shared\AccountingPaymentterm(),
+    accountingPaymentterm: new Shared\AccountingPaymentterm(
+        category: Shared\Category::Standard,
+        createdAt: Utils\Utils::parseDateTime('2021-08-22T22:42:42.265Z'),
+        dayOfMonthDue: 4,
+        description: 'Cogito pecco eos cultura.',
+        discountDayOfMonth: 13,
+        discountDays: 4,
+        discountPercent: 5,
+        dueDays: 57,
+        dueNextMonthDays: 9,
+        id: 'e5fb978b-ad68-4c8c-a957-b79b40fb97eb',
+        isActive: false,
+        metadata: [],
+        name: 'Net 30',
+        type: Shared\AccountingPaymenttermType::Net15,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-11T11:06:20.951Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6418,7 +7641,7 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -6427,6 +7650,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6435,7 +7659,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingPurchaseorderRequest(
-    accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
+    accountingPurchaseorder: new Shared\AccountingPurchaseorder(
+        billingAddress: new Shared\PropertyAccountingPurchaseorderBillingAddress(
+            address1: '37214 Tanya Walks',
+            city: 'South Annabelleton',
+            countryCode: 'US',
+            postalCode: '30337',
+            region: 'Nevada',
+            regionCode: 'MA',
+        ),
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
+        currency: 'ZMW',
+        id: 'ab47e1ac-633d-4704-847d-b63d10b40137',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2025-04-25T03:31:00.688Z'),
+        shippingAddress: new Shared\PropertyAccountingPurchaseorderShippingAddress(
+            address1: '649 Maggio Overpass',
+            city: 'Lake Jaylan',
+            countryCode: 'US',
+            postalCode: '99211-6547',
+            region: 'North Carolina',
+            regionCode: 'ID',
+        ),
+        status: Shared\AccountingPurchaseorderStatus::PartiallyRefunded,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2021-02-26T03:18:45.820Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6524,7 +7775,7 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -6533,6 +7784,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6541,7 +7793,56 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingSalesorderRequest(
-    accountingSalesorder: new Shared\AccountingSalesorder(),
+    accountingSalesorder: new Shared\AccountingSalesorder(
+        billingAddress: new Shared\PropertyAccountingSalesorderBillingAddress(
+            address1: '26530 Stroman Rest',
+            address2: 'Suite 801',
+            city: 'Pocatello',
+            countryCode: 'US',
+            postalCode: '05015-8546',
+            region: 'Louisiana',
+            regionCode: 'MO',
+        ),
+        categoryIds: [],
+        closedAt: Utils\Utils::parseDateTime('2023-08-16T21:47:16.768Z'),
+        createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
+        currency: 'ANG',
+        discountAmount: 99,
+        employeeUserId: '4a6b8990-c85a-499f-82d0-5011c3c95a0b',
+        fees: [
+            new Shared\AccountingFee(
+                amount: 519,
+                currency: 'XCD',
+                type: Shared\AccountingFeeType::Promotion,
+            ),
+        ],
+        fulfillmentType: Shared\FulfillmentType::Takeout,
+        guestCount: 8,
+        id: '26cb0a60-aeeb-49dc-aa08-231bb0af605c',
+        lineitems: [],
+        metadata: [],
+        orderNumber: '988187',
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-01-11T02:10:29.930Z'),
+        refundedAmount: 0,
+        salesChannel: 'Harvey, Collier and Weimann',
+        serviceChargeAmount: 63,
+        shippingAddress: new Shared\PropertyAccountingSalesorderShippingAddress(
+            address1: '9878 Bradley Mill',
+            address2: 'Apt. 215',
+            city: 'Port Matildestad',
+            countryCode: 'US',
+            postalCode: '07989-2148',
+            region: 'Arkansas',
+            regionCode: 'AK',
+        ),
+        status: Shared\AccountingSalesorderStatus::Refunded,
+        subtotalAmount: 0,
+        taxAmount: 63,
+        tipAmount: 34,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2022-02-10T18:49:08.308Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6577,7 +7878,7 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -6586,6 +7887,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6594,7 +7896,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingTaxrateRequest(
-    accountingTaxrate: new Shared\AccountingTaxrate(),
+    accountingTaxrate: new Shared\AccountingTaxrate(
+        createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
+        description: 'Nemo atrox tricesimus creator aranea.',
+        id: '8fa77bc6-6812-4b82-8d10-5c03bf48971c',
+        isActive: false,
+        metadata: [],
+        name: 'cogo',
+        rate: 1,
+        updatedAt: Utils\Utils::parseDateTime('2025-11-04T07:53:07.007Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6630,7 +7941,7 @@ Update a transaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingTransaction" method="put" path="/accounting/{connection_id}/transaction/{id}" example="accounting_transaction" -->
 ```php
 declare(strict_types=1);
 
@@ -6639,6 +7950,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6647,7 +7959,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingTransactionRequest(
-    accountingTransaction: new Shared\AccountingTransaction(),
+    accountingTransaction: new Shared\AccountingTransaction(
+        createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
+        id: 'b441cd13-8ef9-45e5-9902-9a2002d9a492',
+        lineitems: [
+            new Shared\AccountingTransactionLineItem(
+                categoryIds: [],
+                description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
+                id: '236bdaf2-3428-4b72-94e8-eefc15d6ff92',
+                name: 'Salad',
+                objectType: 'delicate',
+                totalAmount: 58531,
+                unitAmount: 536,
+                unitQuantity: 91,
+            ),
+        ],
+        memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+        taxAmount: 0,
+        totalAmount: 94452,
+        updatedAt: Utils\Utils::parseDateTime('2021-09-10T02:36:26.085Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -6683,7 +8014,7 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```php
 declare(strict_types=1);
 
@@ -6692,6 +8023,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -6700,7 +8032,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingVendorcreditRequest(
-    accountingVendorcredit: new Shared\AccountingVendorcredit(),
+    accountingVendorcredit: new Shared\AccountingVendorcredit(
+        applications: [],
+        applyAmount: 1,
+        balanceAmount: 0,
+        createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
+        currency: 'KGS',
+        dueAt: Utils\Utils::parseDateTime('2023-05-06T20:38:46.775Z'),
+        id: '1353821c-3fd0-42b1-9c7d-0aa07a3eebe2',
+        lineitems: [],
+        metadata: [],
+        notes: 'Conatus cruciamentum decor avaritia tantum.',
+        postedAt: Utils\Utils::parseDateTime('2023-09-28T16:43:35.374Z'),
+        status: Shared\AccountingVendorcreditStatus::Submitted,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T14:35:38.366Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

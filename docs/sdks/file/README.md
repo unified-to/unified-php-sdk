@@ -17,7 +17,7 @@ Create a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" -->
+<!-- UsageSnippet language="php" operationID="createStorageFile" method="post" path="/storage/{connection_id}/file" example="storage_file" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,36 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateStorageFileRequest(
-    storageFile: new Shared\StorageFile(),
+    storageFile: new Shared\StorageFile(
+        createdAt: Utils\Utils::parseDateTime('2021-09-12T16:48:23.774Z'),
+        data: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+',
+        description: 'Crastinus cupiditate debilito cimentarius virgo.',
+        downloadUrl: 'https://stingy-casement.name/',
+        hash: 'fe6a659e-75cd-4079-9b76-351f9af2205a',
+        id: 'c81e663c-c858-4d34-80f2-08735319590e',
+        mimeType: 'FOLDER',
+        name: 'softly.tiff',
+        references: [
+            new Shared\StorageReference(
+                id: 'ab705f3b-e368-4a94-8b22-d5f693c14a76',
+                name: 'tamisium viduo odio cauda',
+                type: 'accounting_bill',
+            ),
+            new Shared\StorageReference(
+                id: '9f0f694e-b6f4-4c12-b5f6-ab08d4e81140',
+                name: 'quia',
+                type: 'accounting_expense',
+            ),
+        ],
+        size: 10276,
+        tags: [
+            'spoliatio',
+        ],
+        type: Shared\StorageFileType::File,
+        updatedAt: Utils\Utils::parseDateTime('2023-01-27T11:57:49.414Z'),
+        version: '1',
+        webUrl: 'https://sandy-distinction.info/',
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +200,7 @@ Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchStorageFile" method="patch" path="/storage/{connection_id}/file/{id}" example="storage_file" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +209,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +218,36 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchStorageFileRequest(
-    storageFile: new Shared\StorageFile(),
+    storageFile: new Shared\StorageFile(
+        createdAt: Utils\Utils::parseDateTime('2021-09-12T16:48:23.774Z'),
+        data: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+',
+        description: 'Crastinus cupiditate debilito cimentarius virgo.',
+        downloadUrl: 'https://stingy-casement.name/',
+        hash: 'fe6a659e-75cd-4079-9b76-351f9af2205a',
+        id: 'a7f0e432-9802-4aeb-b853-f52ac4b91e9d',
+        mimeType: 'FOLDER',
+        name: 'softly.tiff',
+        references: [
+            new Shared\StorageReference(
+                id: 'ab705f3b-e368-4a94-8b22-d5f693c14a76',
+                name: 'tamisium viduo odio cauda',
+                type: 'accounting_bill',
+            ),
+            new Shared\StorageReference(
+                id: '9f0f694e-b6f4-4c12-b5f6-ab08d4e81140',
+                name: 'quia',
+                type: 'accounting_expense',
+            ),
+        ],
+        size: 10276,
+        tags: [
+            'spoliatio',
+        ],
+        type: Shared\StorageFileType::File,
+        updatedAt: Utils\Utils::parseDateTime('2023-01-27T11:57:49.418Z'),
+        version: '1',
+        webUrl: 'https://sandy-distinction.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +334,7 @@ Update a file
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateStorageFile" method="put" path="/storage/{connection_id}/file/{id}" example="storage_file" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +343,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +352,36 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateStorageFileRequest(
-    storageFile: new Shared\StorageFile(),
+    storageFile: new Shared\StorageFile(
+        createdAt: Utils\Utils::parseDateTime('2021-09-12T16:48:23.774Z'),
+        data: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgYmFzZVByb2ZpbGU9ImZ1bGwiIHdpZHRoPSI4MzIiIGhlaWdodD0iMTg2MSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFmYzM1NSIvPjx0ZXh0IHg9IjQxNiIgeT0iOTMwLjUiIGZvbnQtc2l6ZT0iMjAiIGFsaWdubWVudC1iYXNlbGluZT0ibWlkZGxlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSJ3aGl0ZSI+ODMyeDE4NjE8L3RleHQ+PC9zdmc+',
+        description: 'Crastinus cupiditate debilito cimentarius virgo.',
+        downloadUrl: 'https://stingy-casement.name/',
+        hash: 'fe6a659e-75cd-4079-9b76-351f9af2205a',
+        id: 'a7f0e432-9802-4aeb-b853-f52ac4b91e9d',
+        mimeType: 'FOLDER',
+        name: 'softly.tiff',
+        references: [
+            new Shared\StorageReference(
+                id: 'ab705f3b-e368-4a94-8b22-d5f693c14a76',
+                name: 'tamisium viduo odio cauda',
+                type: 'accounting_bill',
+            ),
+            new Shared\StorageReference(
+                id: '9f0f694e-b6f4-4c12-b5f6-ab08d4e81140',
+                name: 'quia',
+                type: 'accounting_expense',
+            ),
+        ],
+        size: 10276,
+        tags: [
+            'spoliatio',
+        ],
+        type: Shared\StorageFileType::File,
+        updatedAt: Utils\Utils::parseDateTime('2023-01-27T11:57:49.418Z'),
+        version: '1',
+        webUrl: 'https://sandy-distinction.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

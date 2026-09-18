@@ -17,7 +17,7 @@ Create a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" -->
+<!-- UsageSnippet language="php" operationID="createAccountingBankfeedaccount" method="post" path="/accounting/{connection_id}/bankfeedaccount" example="accounting_bankfeedaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingBankfeedaccountRequest(
-    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(),
+    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(
+        accountId: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+        accountNumber: '30369722',
+        accountNumberLast4: '9722',
+        accountType: Shared\AccountType::Loan,
+        balance: 90358,
+        bankName: 'Weissnat Inc',
+        createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        currency: 'SSP',
+        feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        id: '88021d36-d2e1-4067-8071-424af1c54fed',
+        name: 'Corwin, Donnelly and Connelly Savings',
+        routingNumber: '667753156',
+        status: Shared\AccountingBankfeedaccountStatus::Active,
+        updatedAt: Utils\Utils::parseDateTime('2024-04-11T12:56:36.249Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +186,7 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedaccount" method="patch" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +195,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +204,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingBankfeedaccountRequest(
-    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(),
+    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(
+        accountId: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+        accountNumber: '30369722',
+        accountNumberLast4: '9722',
+        accountType: Shared\AccountType::Loan,
+        balance: 90358,
+        bankName: 'Weissnat Inc',
+        createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        currency: 'SSP',
+        feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        id: '71af6e72-4ef0-4ca2-accd-2e4a5df1789b',
+        name: 'Corwin, Donnelly and Connelly Savings',
+        routingNumber: '667753156',
+        status: Shared\AccountingBankfeedaccountStatus::Active,
+        updatedAt: Utils\Utils::parseDateTime('2024-04-11T12:56:36.252Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +306,7 @@ Update a bankfeedaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedaccount" method="put" path="/accounting/{connection_id}/bankfeedaccount/{id}" example="accounting_bankfeedaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +315,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +324,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingBankfeedaccountRequest(
-    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(),
+    accountingBankfeedaccount: new Shared\AccountingBankfeedaccount(
+        accountId: 'baa0e9a4-65e9-4bf5-856a-ce46fc36ebb1',
+        accountNumber: '30369722',
+        accountNumberLast4: '9722',
+        accountType: Shared\AccountType::Loan,
+        balance: 90358,
+        bankName: 'Weissnat Inc',
+        createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        currency: 'SSP',
+        feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
+        id: '71af6e72-4ef0-4ca2-accd-2e4a5df1789b',
+        name: 'Corwin, Donnelly and Connelly Savings',
+        routingNumber: '667753156',
+        status: Shared\AccountingBankfeedaccountStatus::Active,
+        updatedAt: Utils\Utils::parseDateTime('2024-04-11T12:56:36.252Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

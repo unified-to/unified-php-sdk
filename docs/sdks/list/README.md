@@ -17,7 +17,7 @@ Create a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" -->
+<!-- UsageSnippet language="php" operationID="createMartechList" method="post" path="/martech/{connection_id}/list" example="martech_list" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,28 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateMartechListRequest(
-    marketingList: new Shared\MarketingList(),
+    marketingList: new Shared\MarketingList(
+        address: new Shared\PropertyMarketingListAddress(
+            address1: '922 Elmore Manor',
+            address2: 'Suite 925',
+            city: 'Deerfield Beach',
+            country: 'Bahrain',
+            postalCode: '30765-6471',
+            region: 'FL',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2019-09-18T02:01:36.950Z'),
+        description: 'Currus.',
+        id: 'fc94207f-13b6-44e9-9b44-85fde76eb97b',
+        isActive: true,
+        language: 'it',
+        name: 'Annette Nolan',
+        senderCompany: 'Hickle - Homenick',
+        senderEmail: 'Matt_Steuber@hotmail.com',
+        senderName: 'Salvatore Roob',
+        senderPhone: '896-328-1153 x4957',
+        subject: 'Tenetur thymum circumvenio triumphus celo.',
+        updatedAt: Utils\Utils::parseDateTime('2022-08-30T12:22:37.862Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +192,7 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMartechList" method="patch" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +201,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +210,28 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchMartechListRequest(
-    marketingList: new Shared\MarketingList(),
+    marketingList: new Shared\MarketingList(
+        address: new Shared\PropertyMarketingListAddress(
+            address1: '922 Elmore Manor',
+            address2: 'Suite 925',
+            city: 'Deerfield Beach',
+            country: 'Bahrain',
+            postalCode: '30765-6471',
+            region: 'FL',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2019-09-18T02:01:36.950Z'),
+        description: 'Currus.',
+        id: '30d55553-d77e-4993-8c73-9a813399ad09',
+        isActive: true,
+        language: 'it',
+        name: 'Annette Nolan',
+        senderCompany: 'Hickle - Homenick',
+        senderEmail: 'Matt_Steuber@hotmail.com',
+        senderName: 'Salvatore Roob',
+        senderPhone: '896-328-1153 x4957',
+        subject: 'Tenetur thymum circumvenio triumphus celo.',
+        updatedAt: Utils\Utils::parseDateTime('2022-08-30T12:22:37.867Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +318,7 @@ Update a list
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMartechList" method="put" path="/martech/{connection_id}/list/{id}" example="martech_list" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +327,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +336,28 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateMartechListRequest(
-    marketingList: new Shared\MarketingList(),
+    marketingList: new Shared\MarketingList(
+        address: new Shared\PropertyMarketingListAddress(
+            address1: '922 Elmore Manor',
+            address2: 'Suite 925',
+            city: 'Deerfield Beach',
+            country: 'Bahrain',
+            postalCode: '30765-6471',
+            region: 'FL',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2019-09-18T02:01:36.950Z'),
+        description: 'Currus.',
+        id: '30d55553-d77e-4993-8c73-9a813399ad09',
+        isActive: true,
+        language: 'it',
+        name: 'Annette Nolan',
+        senderCompany: 'Hickle - Homenick',
+        senderEmail: 'Matt_Steuber@hotmail.com',
+        senderName: 'Salvatore Roob',
+        senderPhone: '896-328-1153 x4957',
+        subject: 'Tenetur thymum circumvenio triumphus celo.',
+        updatedAt: Utils\Utils::parseDateTime('2022-08-30T12:22:37.867Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

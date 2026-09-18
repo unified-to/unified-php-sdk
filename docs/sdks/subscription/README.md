@@ -17,7 +17,7 @@ Create a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="php" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" example="payment_subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreatePaymentSubscriptionRequest(
-    paymentSubscription: new Shared\PaymentSubscription(),
+    paymentSubscription: new Shared\PaymentSubscription(
+        createdAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
+        currency: 'WST',
+        currentPeriodEndAt: Utils\Utils::parseDateTime('2023-06-03T04:20:29.157Z'),
+        currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-21T03:55:58.846Z'),
+        dayOfMonth: 1,
+        description: 'Innovative Mouse featuring important technology and Bamboo construction',
+        endAt: Utils\Utils::parseDateTime('2023-05-21T12:36:09.234Z'),
+        id: '520dca25-7af1-4a90-b496-2b696361bc87',
+        interval: 1,
+        intervalUnit: Shared\IntervalUnit::Month,
+        lineitems: [],
+        startAt: Utils\Utils::parseDateTime('2023-05-29T06:04:51.030Z'),
+        status: Shared\PaymentSubscriptionStatus::Active,
+        totalAmount: 75616,
+        updatedAt: Utils\Utils::parseDateTime('2023-12-15T22:33:11.956Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +187,7 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +196,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +205,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchPaymentSubscriptionRequest(
-    paymentSubscription: new Shared\PaymentSubscription(),
+    paymentSubscription: new Shared\PaymentSubscription(
+        createdAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
+        currency: 'WST',
+        currentPeriodEndAt: Utils\Utils::parseDateTime('2023-06-03T04:20:29.157Z'),
+        currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-21T03:55:58.846Z'),
+        dayOfMonth: 1,
+        description: 'Innovative Mouse featuring important technology and Bamboo construction',
+        endAt: Utils\Utils::parseDateTime('2023-05-21T12:36:09.234Z'),
+        id: '8bf216ec-d8c2-4d56-abaa-ebbcd300daea',
+        interval: 1,
+        intervalUnit: Shared\IntervalUnit::Month,
+        lineitems: [],
+        startAt: Utils\Utils::parseDateTime('2023-05-29T06:04:51.030Z'),
+        status: Shared\PaymentSubscriptionStatus::Active,
+        totalAmount: 75616,
+        updatedAt: Utils\Utils::parseDateTime('2023-12-15T22:33:11.960Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +308,7 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="php" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +317,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +326,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdatePaymentSubscriptionRequest(
-    paymentSubscription: new Shared\PaymentSubscription(),
+    paymentSubscription: new Shared\PaymentSubscription(
+        createdAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
+        currency: 'WST',
+        currentPeriodEndAt: Utils\Utils::parseDateTime('2023-06-03T04:20:29.157Z'),
+        currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-21T03:55:58.846Z'),
+        dayOfMonth: 1,
+        description: 'Innovative Mouse featuring important technology and Bamboo construction',
+        endAt: Utils\Utils::parseDateTime('2023-05-21T12:36:09.234Z'),
+        id: '8bf216ec-d8c2-4d56-abaa-ebbcd300daea',
+        interval: 1,
+        intervalUnit: Shared\IntervalUnit::Month,
+        lineitems: [],
+        startAt: Utils\Utils::parseDateTime('2023-05-29T06:04:51.030Z'),
+        status: Shared\PaymentSubscriptionStatus::Active,
+        totalAmount: 75616,
+        updatedAt: Utils\Utils::parseDateTime('2023-12-15T22:33:11.960Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

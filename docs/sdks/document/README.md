@@ -29,7 +29,7 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" example="ats_document" -->
 ```php
 declare(strict_types=1);
 
@@ -38,6 +38,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -46,7 +47,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsDocumentRequest(
-    atsDocument: new Shared\AtsDocument(),
+    atsDocument: new Shared\AtsDocument(
+        createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
+        documentUrl: 'https://vengeful-lashes.biz',
+        filename: 'bah_white_frantically.bz',
+        id: 'f5d325b1-f389-407f-80f3-b0e13640af83',
+        type: Shared\AtsDocumentType::Resume,
+        updatedAt: Utils\Utils::parseDateTime('2022-11-28T22:09:20.368Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -81,7 +89,7 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```php
 declare(strict_types=1);
 
@@ -90,6 +98,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -98,7 +107,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisDocumentRequest(
-    hrisDocument: new Shared\HrisDocument(),
+    hrisDocument: new Shared\HrisDocument(
+        createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
+        documentUrl: 'https://sore-decision.biz/',
+        filename: 'ridge_forager.xsl',
+        id: '9c44ea1a-df06-48eb-ae08-025996b09343',
+        type: Shared\HrisDocumentType::Policy,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-17T01:54:33.584Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -133,7 +149,7 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="createSigningDocument" method="post" path="/signing/{connection_id}/document" example="signing_document" -->
 ```php
 declare(strict_types=1);
 
@@ -142,6 +158,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -150,7 +167,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateSigningDocumentRequest(
-    signingDocument: new Shared\SigningDocument(),
+    signingDocument: new Shared\SigningDocument(
+        createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-12-16T10:16:00.523Z'),
+        id: '612631b6-684b-49dc-96db-d38fa0359205',
+        name: 'nam audax absens',
+        status: Shared\SigningDocumentStatus::Voided,
+        updatedAt: Utils\Utils::parseDateTime('2025-08-07T18:10:54.132Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -488,7 +512,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```php
 declare(strict_types=1);
 
@@ -497,6 +521,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -505,7 +530,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsDocumentRequest(
-    atsDocument: new Shared\AtsDocument(),
+    atsDocument: new Shared\AtsDocument(
+        createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
+        documentUrl: 'https://vengeful-lashes.biz',
+        filename: 'bah_white_frantically.bz',
+        id: '7f66a233-f2f5-4130-bfe9-fb665c831d3a',
+        type: Shared\AtsDocumentType::Resume,
+        updatedAt: Utils\Utils::parseDateTime('2022-11-28T22:09:20.370Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -541,7 +573,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```php
 declare(strict_types=1);
 
@@ -550,6 +582,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -558,7 +591,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisDocumentRequest(
-    hrisDocument: new Shared\HrisDocument(),
+    hrisDocument: new Shared\HrisDocument(
+        createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
+        documentUrl: 'https://sore-decision.biz/',
+        filename: 'ridge_forager.xsl',
+        id: 'b42682b1-d9f4-4260-af8a-f6317dd1bd80',
+        type: Shared\HrisDocumentType::Policy,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-17T01:54:33.589Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -594,7 +634,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchSigningDocument" method="patch" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```php
 declare(strict_types=1);
 
@@ -603,6 +643,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -611,7 +652,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchSigningDocumentRequest(
-    signingDocument: new Shared\SigningDocument(),
+    signingDocument: new Shared\SigningDocument(
+        createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-12-16T10:16:00.529Z'),
+        id: '810af0fb-6771-449e-ad43-7be6a36e4839',
+        name: 'nam audax absens',
+        status: Shared\SigningDocumentStatus::Voided,
+        updatedAt: Utils\Utils::parseDateTime('2025-08-07T18:10:54.137Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -800,7 +848,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```php
 declare(strict_types=1);
 
@@ -809,6 +857,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -817,7 +866,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsDocumentRequest(
-    atsDocument: new Shared\AtsDocument(),
+    atsDocument: new Shared\AtsDocument(
+        createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
+        documentUrl: 'https://vengeful-lashes.biz',
+        filename: 'bah_white_frantically.bz',
+        id: '7f66a233-f2f5-4130-bfe9-fb665c831d3a',
+        type: Shared\AtsDocumentType::Resume,
+        updatedAt: Utils\Utils::parseDateTime('2022-11-28T22:09:20.370Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -853,7 +909,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```php
 declare(strict_types=1);
 
@@ -862,6 +918,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -870,7 +927,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisDocumentRequest(
-    hrisDocument: new Shared\HrisDocument(),
+    hrisDocument: new Shared\HrisDocument(
+        createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
+        documentUrl: 'https://sore-decision.biz/',
+        filename: 'ridge_forager.xsl',
+        id: 'b42682b1-d9f4-4260-af8a-f6317dd1bd80',
+        type: Shared\HrisDocumentType::Policy,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-17T01:54:33.589Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -906,7 +970,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateSigningDocument" method="put" path="/signing/{connection_id}/document/{id}" example="signing_document" -->
 ```php
 declare(strict_types=1);
 
@@ -915,6 +979,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -923,7 +988,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateSigningDocumentRequest(
-    signingDocument: new Shared\SigningDocument(),
+    signingDocument: new Shared\SigningDocument(
+        createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-12-16T10:16:00.529Z'),
+        id: '810af0fb-6771-449e-ad43-7be6a36e4839',
+        name: 'nam audax absens',
+        status: Shared\SigningDocumentStatus::Voided,
+        updatedAt: Utils\Utils::parseDateTime('2025-08-07T18:10:54.137Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

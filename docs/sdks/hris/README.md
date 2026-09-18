@@ -88,7 +88,7 @@ Create an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="php" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```php
 declare(strict_types=1);
 
@@ -107,9 +107,39 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisAttendanceRequest(
     hrisAttendance: new Shared\HrisAttendance(
+        address: new Shared\PropertyHrisAttendanceAddress(
+            address1: '14108 Allie Flats',
+            city: 'Kearaborough',
+            countryCode: 'US',
+            postalCode: '23844-2344',
+            region: 'Tennessee',
+            regionCode: 'CA',
+        ),
+        approvedAt: Utils\Utils::parseDateTime('2021-08-13T10:36:02.582Z'),
+        breaks: [
+            new Shared\HrisAttendanceBreak(
+                durationMinutes: 12,
+                endAt: Utils\Utils::parseDateTime('2023-10-22T16:22:21.274Z'),
+                id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
+                isPaid: true,
+                name: 'Lunch',
+                startAt: Utils\Utils::parseDateTime('2023-10-15T20:48:40.844Z'),
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
+        currency: 'UGX',
+        declaredTipsAmount: 161,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-07-01T14:10:09.942Z'),
-        startAt: Utils\Utils::parseDateTime('2026-03-31T03:51:43.280Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-06T03:55:51.518Z'),
+        hourlyRate: 53,
+        hours: 10,
+        id: '6f3bbdc4-75ab-4b78-bdfb-8918d1b18b95',
+        jobName: 'Global Creative Supervisor',
+        nonCashTipsAmount: 54,
+        startAt: Utils\Utils::parseDateTime('2021-11-09T10:25:57.025Z'),
+        status: Shared\HrisAttendanceStatus::Closed,
+        timezone: 'America/Atikokan',
+        updatedAt: Utils\Utils::parseDateTime('2022-01-17T01:24:59.755Z'),
     ),
     connectionId: '<id>',
 );
@@ -145,7 +175,7 @@ Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="php" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -154,6 +184,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -162,7 +193,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisBankaccountRequest(
-    hrisBankaccount: new Shared\HrisBankaccount(),
+    hrisBankaccount: new Shared\HrisBankaccount(
+        accountNumber: '****3777',
+        accountNumberLast4: '3777',
+        accountType: Shared\HrisBankaccountAccountType::Checking,
+        bankName: 'Huel Group',
+        createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
+        id: '4e298ff9-1f66-4c1f-b1ec-5ee895cda7bf',
+        isPrimary: false,
+        name: 'Checking Account',
+        routingNumber: '448650724',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-04T11:30:29.787Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -197,7 +239,7 @@ Create a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" -->
+<!-- UsageSnippet language="php" operationID="createHrisBenefit" method="post" path="/hris/{connection_id}/benefit" example="hris_benefit" -->
 ```php
 declare(strict_types=1);
 
@@ -206,6 +248,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -214,7 +257,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisBenefitRequest(
-    hrisBenefit: new Shared\HrisBenefit(),
+    hrisBenefit: new Shared\HrisBenefit(
+        coverageLevel: Shared\CoverageLevel::EmployeeSpouse,
+        createdAt: Utils\Utils::parseDateTime('2020-06-11T01:24:05.654Z'),
+        currency: 'JOD',
+        description: 'Vomito voluptas dolor sed.',
+        employerContributionAmount: 185006,
+        employerContributionMaxAmount: 179093,
+        employerContributionType: Shared\EmployerContributionType::Percentage,
+        frequency: Shared\HrisBenefitFrequency::Hour,
+        id: '316f6179-1072-40b5-ac95-647349da2fa6',
+        isActive: false,
+        name: 'Frozen Wooden Ball',
+        tax: Shared\Tax::PreTax,
+        type: Shared\HrisBenefitType::Garnishment,
+        updatedAt: Utils\Utils::parseDateTime('2023-03-06T11:00:21.275Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -249,7 +307,7 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" -->
+<!-- UsageSnippet language="php" operationID="createHrisCompany" method="post" path="/hris/{connection_id}/company" example="hris_company" -->
 ```php
 declare(strict_types=1);
 
@@ -258,6 +316,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -266,7 +325,21 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisCompanyRequest(
-    hrisCompany: new Shared\HrisCompany(),
+    hrisCompany: new Shared\HrisCompany(
+        address: new Shared\PropertyHrisCompanyAddress(
+            address1: '2549 Church Walk',
+            city: 'Lake Nettiebury',
+            countryCode: 'US',
+            postalCode: '32877-4898',
+            region: 'Idaho',
+            regionCode: 'PA',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
+        id: 'a9419166-ed13-4cc3-9ca1-f086d2325ece',
+        legalName: 'Schultz LLC',
+        name: 'Gottlieb Group',
+        updatedAt: Utils\Utils::parseDateTime('2026-09-05T21:10:56.918Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -301,7 +374,7 @@ Create a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" -->
+<!-- UsageSnippet language="php" operationID="createHrisDeduction" method="post" path="/hris/{connection_id}/deduction" example="hris_deduction" -->
 ```php
 declare(strict_types=1);
 
@@ -310,6 +383,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -318,7 +392,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisDeductionRequest(
-    hrisDeduction: new Shared\HrisDeduction(),
+    hrisDeduction: new Shared\HrisDeduction(
+        amount: 139655,
+        coverageLevel: Shared\HrisDeductionCoverageLevel::EmployeeOnly,
+        createdAt: Utils\Utils::parseDateTime('2020-02-05T01:46:31.384Z'),
+        endAt: Utils\Utils::parseDateTime('2026-05-22T22:51:41.898Z'),
+        frequency: Shared\HrisDeductionFrequency::Month,
+        id: '80baec67-8dfd-44cb-a5e3-8faaaf906a97',
+        isActive: false,
+        notes: 'Carmen desidero.',
+        startAt: Utils\Utils::parseDateTime('2025-02-18T04:37:41.118Z'),
+        type: Shared\HrisDeductionType::Fixed,
+        updatedAt: Utils\Utils::parseDateTime('2024-03-01T23:41:41.373Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -353,7 +439,7 @@ Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="php" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```php
 declare(strict_types=1);
 
@@ -362,6 +448,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -370,7 +457,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(),
+    hrisDevice: new Shared\HrisDevice(
+        adminUserIds: [],
+        assetTag: 'dpho9OuFNG',
+        createdAt: Utils\Utils::parseDateTime('2019-04-04T17:11:40.322Z'),
+        hasAntivirus: false,
+        hasFirewall: true,
+        hasHdEncrypted: true,
+        hasPasswordManager: true,
+        hasScreenlock: true,
+        id: 'aa9bf3e8-ef2a-4460-9de0-f7f31a76743e',
+        isMissing: false,
+        manufacturer: 'Sanford - Hamill',
+        model: 'Refined',
+        name: 'cross_contamination_if.rar',
+        os: 'monitor',
+        osVersion: '1.12.16',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-21T00:56:05.168Z'),
+        version: '2.20.17',
+    ),
     connectionId: '<id>',
 );
 
@@ -405,7 +510,7 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="createHrisDocument" method="post" path="/hris/{connection_id}/document" example="hris_document" -->
 ```php
 declare(strict_types=1);
 
@@ -414,6 +519,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -422,7 +528,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisDocumentRequest(
-    hrisDocument: new Shared\HrisDocument(),
+    hrisDocument: new Shared\HrisDocument(
+        createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
+        documentUrl: 'https://sore-decision.biz/',
+        filename: 'ridge_forager.xsl',
+        id: '9c44ea1a-df06-48eb-ae08-025996b09343',
+        type: Shared\HrisDocumentType::Policy,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-17T01:54:33.584Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -457,7 +570,7 @@ Create an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" -->
+<!-- UsageSnippet language="php" operationID="createHrisEmployee" method="post" path="/hris/{connection_id}/employee" example="hris_employee" -->
 ```php
 declare(strict_types=1);
 
@@ -466,6 +579,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -474,7 +588,121 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisEmployeeRequest(
-    hrisEmployee: new Shared\HrisEmployee(),
+    hrisEmployee: new Shared\HrisEmployee(
+        address: new Shared\PropertyHrisEmployeeAddress(
+            address1: '52008 Lansdowne Road',
+            address2: 'Apt. 101',
+            city: 'Connellyberg',
+            countryCode: 'US',
+            postalCode: '18978',
+            region: 'South Dakota',
+            regionCode: 'NM',
+        ),
+        bio: 'sushi devotee, singer',
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 69148,
+                currency: 'CRC',
+                frequency: Shared\HrisCompensationFrequency::Quarter,
+                notes: 'Tergeo laborum laboriosam tutis.',
+                type: Shared\HrisCompensationType::Equity,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
+        currency: 'IDR',
+        dateOfBirth: Utils\Utils::parseDateTime('2001-04-22'),
+        emails: [
+            new Shared\HrisEmail(
+                email: 'Zetta_Prohaska67@hotmail.com',
+                type: Shared\HrisEmailType::Home,
+            ),
+        ],
+        employeeNumber: 'YuOt169CGu',
+        employmentStatus: Shared\EmploymentStatus::Active,
+        employmentType: Shared\HrisEmployeeEmploymentType::Volunteer,
+        firstName: 'Zetta',
+        gender: Shared\HrisEmployeeGender::Intersex,
+        hasMfa: true,
+        hiredAt: Utils\Utils::parseDateTime('2023-05-10T16:14:24.235Z'),
+        id: '0b47556b-dd67-4604-a3e7-3326e7ac2cc4',
+        imageUrl: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
+        languageLocale: 'es',
+        lastName: 'Prohaska',
+        locations: [],
+        maritalStatus: Shared\MaritalStatus::Married,
+        metadata: [
+            new Shared\HrisMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\HrisMetadataFormat::Text,
+                id: '8ff023c4-b1c3-4575-904d-5a28abce4f7c',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'tenetur',
+            ),
+        ],
+        name: 'Zetta Prohaska',
+        pronouns: 'she/her',
+        relationships: [
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Deshaun.Sanford24@yahoo.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Rebeca.Dibbert11@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Hester80@gmail.com',
+                    ),
+                ],
+                name: 'Automotive',
+                type: Shared\HrisEmployeerelationshipType::Emergency,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Benedict_Wisozk83@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Princess_Rath43@gmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Elmira92@yahoo.com',
+                    ),
+                ],
+                name: 'Music',
+                type: Shared\HrisEmployeerelationshipType::Friend,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Jane30@gmail.com',
+                    ),
+                ],
+                name: 'Jewelry',
+                type: Shared\HrisEmployeerelationshipType::Sibling,
+            ),
+        ],
+        salutation: 'Miss',
+        ssnSin: 'yMRtj0Q3xO',
+        storageQuotaAllocated: 3674489,
+        storageQuotaAvailable: 7748057,
+        storageQuotaUsed: 301727,
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(409) 801-3705',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        terminationReason: 'Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.',
+        timeoffDaysTotal: 12,
+        timeoffDaysUsed: 6,
+        timezone: 'Africa/Harare',
+        title: 'Investor Paradigm Liaison',
+        updatedAt: Utils\Utils::parseDateTime('2022-02-19T07:01:46.451Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -509,7 +737,7 @@ Create a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" -->
+<!-- UsageSnippet language="php" operationID="createHrisGroup" method="post" path="/hris/{connection_id}/group" example="hris_group" -->
 ```php
 declare(strict_types=1);
 
@@ -518,6 +746,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -526,7 +755,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisGroupRequest(
-    hrisGroup: new Shared\HrisGroup(),
+    hrisGroup: new Shared\HrisGroup(
+        createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
+        description: 'Absorbeo casso.',
+        id: '75c0e738-bb94-4051-9c72-8e563c3e92ea',
+        isActive: false,
+        name: 'Games',
+        type: Shared\HrisGroupType::BusinessUnit,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T14:24:36.666Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -561,7 +798,7 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```php
 declare(strict_types=1);
 
@@ -570,6 +807,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -578,7 +816,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisLocationRequest(
-    hrisLocation: new Shared\HrisLocation(),
+    hrisLocation: new Shared\HrisLocation(
+        address: new Shared\PropertyHrisLocationAddress(
+            address1: '2743 Connelly Summit',
+            address2: 'Apt. 350',
+            city: 'Titusville',
+            countryCode: 'US',
+            postalCode: '16154-1095',
+            region: 'Oregon',
+            regionCode: 'AL',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
+        currency: 'MUR',
+        description: 'Acervus caries.',
+        externalIdentifier: 'f7f353fd-05db-464e-813d-53ebc1a79d24',
+        id: '854e19af-cf20-4edc-8a76-c80b50974f65',
+        isActive: true,
+        isHq: false,
+        languageLocale: 'fr',
+        name: 'adhuc',
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(710) 550-6997',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(208) 555-8542',
+                type: Shared\HrisTelephoneType::Home,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(712) 473-5482',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        timezone: 'America/Guyana',
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T00:39:51.875Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -613,7 +886,7 @@ Create a taxonomy
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" -->
+<!-- UsageSnippet language="php" operationID="createHrisTaxonomy" method="post" path="/hris/{connection_id}/taxonomy" example="hris_taxonomy" -->
 ```php
 declare(strict_types=1);
 
@@ -622,6 +895,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -630,7 +904,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisTaxonomyRequest(
-    hrisTaxonomy: new Shared\HrisTaxonomy(),
+    hrisTaxonomy: new Shared\HrisTaxonomy(
+        createdAt: Utils\Utils::parseDateTime('2022-06-23T02:10:00.789Z'),
+        description: 'Apto demonstro audacia adstringo cursim tristis solio careo.',
+        domain: 'Electronics',
+        id: 'ede085db-5709-4d53-a490-746f3de5be17',
+        isActive: false,
+        name: 'International Functionality Architect',
+        parentId: '6524b2a7-6520-4e15-8c4e-1aa6793db837',
+        roleIds: [
+            '2b1ef757-eb4c-4207-8af1-929afe49cd65',
+        ],
+        subcategory: 'Bamboo',
+        type: Shared\HrisTaxonomyType::Knowledge,
+        updatedAt: Utils\Utils::parseDateTime('2023-05-22T04:57:25.374Z'),
+        url: 'https://our-polarisation.name',
+    ),
     connectionId: '<id>',
 );
 
@@ -665,7 +954,7 @@ Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="php" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```php
 declare(strict_types=1);
 
@@ -674,6 +963,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -683,6 +973,20 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
+        approvedAt: Utils\Utils::parseDateTime('2022-02-20T21:02:37.695Z'),
+        comments: 'Blandior ventus curiositas amplitudo.',
+        createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
+        duration: 4,
+        durationType: Shared\DurationType::Day,
+        endAt: Utils\Utils::parseDateTime('2024-12-07T13:50:55.449Z'),
+        id: 'efd938fb-bb4a-492d-b313-90f0578f3165',
+        isPaid: true,
+        originalType: 'acerbitas ut',
+        reason: 'verto',
+        startAt: Utils\Utils::parseDateTime('2023-08-23T06:56:44.757Z'),
+        status: Shared\HrisTimeoffStatus::Denied,
+        type: Shared\HrisTimeoffType::InLieu,
+        updatedAt: Utils\Utils::parseDateTime('2022-07-07T19:34:54.248Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -719,7 +1023,7 @@ Create a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" -->
+<!-- UsageSnippet language="php" operationID="createHrisTimeshift" method="post" path="/hris/{connection_id}/timeshift" example="hris_timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -728,6 +1032,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -737,7 +1042,24 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
+        approvedAt: Utils\Utils::parseDateTime('2023-06-05T14:31:38.445Z'),
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 76761,
+                currency: 'JPY',
+                frequency: Shared\HrisCompensationFrequency::Hour,
+                notes: 'Annus adficio suasoria architecto aggero.',
+                type: Shared\HrisCompensationType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
+        endAt: Utils\Utils::parseDateTime('2026-08-25T08:28:11.837Z'),
+        hours: 8,
+        id: '8091d49f-00cf-416b-a771-e6834ab7026d',
+        isApproved: true,
+        startAt: Utils\Utils::parseDateTime('2023-06-24T19:29:28.668Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-22T20:53:14.292Z'),
     ),
     connectionId: '<id>',
 );
@@ -2187,7 +2509,7 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```php
 declare(strict_types=1);
 
@@ -2206,9 +2528,39 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisAttendanceRequest(
     hrisAttendance: new Shared\HrisAttendance(
+        address: new Shared\PropertyHrisAttendanceAddress(
+            address1: '14108 Allie Flats',
+            city: 'Kearaborough',
+            countryCode: 'US',
+            postalCode: '23844-2344',
+            region: 'Tennessee',
+            regionCode: 'CA',
+        ),
+        approvedAt: Utils\Utils::parseDateTime('2021-08-13T10:36:02.582Z'),
+        breaks: [
+            new Shared\HrisAttendanceBreak(
+                durationMinutes: 12,
+                endAt: Utils\Utils::parseDateTime('2023-10-22T16:22:21.282Z'),
+                id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
+                isPaid: true,
+                name: 'Lunch',
+                startAt: Utils\Utils::parseDateTime('2023-10-15T20:48:40.852Z'),
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
+        currency: 'UGX',
+        declaredTipsAmount: 161,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-09-28T22:23:28.906Z'),
-        startAt: Utils\Utils::parseDateTime('2025-01-18T09:17:09.936Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-06T03:55:51.527Z'),
+        hourlyRate: 53,
+        hours: 10,
+        id: 'cbcfba0c-c599-4187-8cc1-b796e089ae62',
+        jobName: 'Global Creative Supervisor',
+        nonCashTipsAmount: 54,
+        startAt: Utils\Utils::parseDateTime('2021-11-09T10:25:57.026Z'),
+        status: Shared\HrisAttendanceStatus::Closed,
+        timezone: 'America/Atikokan',
+        updatedAt: Utils\Utils::parseDateTime('2022-01-17T01:24:59.757Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2245,7 +2597,7 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -2254,6 +2606,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2262,7 +2615,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisBankaccountRequest(
-    hrisBankaccount: new Shared\HrisBankaccount(),
+    hrisBankaccount: new Shared\HrisBankaccount(
+        accountNumber: '****3777',
+        accountNumberLast4: '3777',
+        accountType: Shared\HrisBankaccountAccountType::Checking,
+        bankName: 'Huel Group',
+        createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
+        id: '6b53796b-c6e2-4608-939f-57d8d920c7b2',
+        isPrimary: false,
+        name: 'Checking Account',
+        routingNumber: '448650724',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-04T11:30:29.792Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2298,7 +2662,7 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisBenefit" method="patch" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```php
 declare(strict_types=1);
 
@@ -2307,6 +2671,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2315,7 +2680,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisBenefitRequest(
-    hrisBenefit: new Shared\HrisBenefit(),
+    hrisBenefit: new Shared\HrisBenefit(
+        coverageLevel: Shared\CoverageLevel::EmployeeSpouse,
+        createdAt: Utils\Utils::parseDateTime('2020-06-11T01:24:05.654Z'),
+        currency: 'JOD',
+        description: 'Vomito voluptas dolor sed.',
+        employerContributionAmount: 185006,
+        employerContributionMaxAmount: 179093,
+        employerContributionType: Shared\EmployerContributionType::Percentage,
+        frequency: Shared\HrisBenefitFrequency::Hour,
+        id: '20ebb126-9b3a-4c47-8f83-06f96f663e09',
+        isActive: false,
+        name: 'Frozen Wooden Ball',
+        tax: Shared\Tax::PreTax,
+        type: Shared\HrisBenefitType::Garnishment,
+        updatedAt: Utils\Utils::parseDateTime('2023-03-06T11:00:21.279Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2351,7 +2731,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisCompany" method="patch" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```php
 declare(strict_types=1);
 
@@ -2360,6 +2740,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2368,7 +2749,21 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisCompanyRequest(
-    hrisCompany: new Shared\HrisCompany(),
+    hrisCompany: new Shared\HrisCompany(
+        address: new Shared\PropertyHrisCompanyAddress(
+            address1: '2549 Church Walk',
+            city: 'Lake Nettiebury',
+            countryCode: 'US',
+            postalCode: '32877-4898',
+            region: 'Idaho',
+            regionCode: 'PA',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
+        id: '6d8a376c-449b-4d6f-8921-ca1ab6158e9a',
+        legalName: 'Schultz LLC',
+        name: 'Gottlieb Group',
+        updatedAt: Utils\Utils::parseDateTime('2026-09-05T21:10:56.930Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2404,7 +2799,7 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisDeduction" method="patch" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```php
 declare(strict_types=1);
 
@@ -2413,6 +2808,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2421,7 +2817,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisDeductionRequest(
-    hrisDeduction: new Shared\HrisDeduction(),
+    hrisDeduction: new Shared\HrisDeduction(
+        amount: 139655,
+        coverageLevel: Shared\HrisDeductionCoverageLevel::EmployeeOnly,
+        createdAt: Utils\Utils::parseDateTime('2020-02-05T01:46:31.384Z'),
+        endAt: Utils\Utils::parseDateTime('2026-05-22T22:51:41.904Z'),
+        frequency: Shared\HrisDeductionFrequency::Month,
+        id: '2aec3d2c-839a-4dda-90d3-91870b50eae7',
+        isActive: false,
+        notes: 'Carmen desidero.',
+        startAt: Utils\Utils::parseDateTime('2025-02-18T04:37:41.123Z'),
+        type: Shared\HrisDeductionType::Fixed,
+        updatedAt: Utils\Utils::parseDateTime('2024-03-01T23:41:41.377Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2457,7 +2865,7 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```php
 declare(strict_types=1);
 
@@ -2466,6 +2874,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2474,7 +2883,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(),
+    hrisDevice: new Shared\HrisDevice(
+        adminUserIds: [],
+        assetTag: 'dpho9OuFNG',
+        createdAt: Utils\Utils::parseDateTime('2019-04-04T17:11:40.322Z'),
+        hasAntivirus: false,
+        hasFirewall: true,
+        hasHdEncrypted: true,
+        hasPasswordManager: true,
+        hasScreenlock: true,
+        id: '6ad75d41-833e-41c9-af5a-7c98b7cac6f5',
+        isMissing: false,
+        manufacturer: 'Sanford - Hamill',
+        model: 'Refined',
+        name: 'cross_contamination_if.rar',
+        os: 'monitor',
+        osVersion: '1.12.16',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-21T00:56:05.174Z'),
+        version: '2.20.17',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2510,7 +2937,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisDocument" method="patch" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```php
 declare(strict_types=1);
 
@@ -2519,6 +2946,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2527,7 +2955,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisDocumentRequest(
-    hrisDocument: new Shared\HrisDocument(),
+    hrisDocument: new Shared\HrisDocument(
+        createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
+        documentUrl: 'https://sore-decision.biz/',
+        filename: 'ridge_forager.xsl',
+        id: 'b42682b1-d9f4-4260-af8a-f6317dd1bd80',
+        type: Shared\HrisDocumentType::Policy,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-17T01:54:33.589Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2563,7 +2998,7 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisEmployee" method="patch" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```php
 declare(strict_types=1);
 
@@ -2572,6 +3007,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2580,7 +3016,121 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisEmployeeRequest(
-    hrisEmployee: new Shared\HrisEmployee(),
+    hrisEmployee: new Shared\HrisEmployee(
+        address: new Shared\PropertyHrisEmployeeAddress(
+            address1: '52008 Lansdowne Road',
+            address2: 'Apt. 101',
+            city: 'Connellyberg',
+            countryCode: 'US',
+            postalCode: '18978',
+            region: 'South Dakota',
+            regionCode: 'NM',
+        ),
+        bio: 'sushi devotee, singer',
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 69148,
+                currency: 'CRC',
+                frequency: Shared\HrisCompensationFrequency::Quarter,
+                notes: 'Tergeo laborum laboriosam tutis.',
+                type: Shared\HrisCompensationType::Equity,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
+        currency: 'IDR',
+        dateOfBirth: Utils\Utils::parseDateTime('2001-04-22'),
+        emails: [
+            new Shared\HrisEmail(
+                email: 'Zetta_Prohaska67@hotmail.com',
+                type: Shared\HrisEmailType::Home,
+            ),
+        ],
+        employeeNumber: 'YuOt169CGu',
+        employmentStatus: Shared\EmploymentStatus::Active,
+        employmentType: Shared\HrisEmployeeEmploymentType::Volunteer,
+        firstName: 'Zetta',
+        gender: Shared\HrisEmployeeGender::Intersex,
+        hasMfa: true,
+        hiredAt: Utils\Utils::parseDateTime('2023-05-10T16:14:24.268Z'),
+        id: '5a45c156-b945-45a7-bdbb-7fcc013a456d',
+        imageUrl: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
+        languageLocale: 'es',
+        lastName: 'Prohaska',
+        locations: [],
+        maritalStatus: Shared\MaritalStatus::Married,
+        metadata: [
+            new Shared\HrisMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\HrisMetadataFormat::Text,
+                id: 'a06af6d2-ccab-4f6e-b714-1de7dc125067',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'tenetur',
+            ),
+        ],
+        name: 'Zetta Prohaska',
+        pronouns: 'she/her',
+        relationships: [
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Deshaun.Sanford24@yahoo.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Rebeca.Dibbert11@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Hester80@gmail.com',
+                    ),
+                ],
+                name: 'Automotive',
+                type: Shared\HrisEmployeerelationshipType::Emergency,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Benedict_Wisozk83@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Princess_Rath43@gmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Elmira92@yahoo.com',
+                    ),
+                ],
+                name: 'Music',
+                type: Shared\HrisEmployeerelationshipType::Friend,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Jane30@gmail.com',
+                    ),
+                ],
+                name: 'Jewelry',
+                type: Shared\HrisEmployeerelationshipType::Sibling,
+            ),
+        ],
+        salutation: 'Miss',
+        ssnSin: 'yMRtj0Q3xO',
+        storageQuotaAllocated: 3674489,
+        storageQuotaAvailable: 7748057,
+        storageQuotaUsed: 301727,
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(409) 801-3705',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        terminationReason: 'Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.',
+        timeoffDaysTotal: 12,
+        timeoffDaysUsed: 6,
+        timezone: 'Africa/Harare',
+        title: 'Investor Paradigm Liaison',
+        updatedAt: Utils\Utils::parseDateTime('2022-02-19T07:01:46.473Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2616,7 +3166,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisGroup" method="patch" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```php
 declare(strict_types=1);
 
@@ -2625,6 +3175,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2633,7 +3184,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisGroupRequest(
-    hrisGroup: new Shared\HrisGroup(),
+    hrisGroup: new Shared\HrisGroup(
+        createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
+        description: 'Absorbeo casso.',
+        id: '8d454ca4-ebee-4004-9ee1-070a8a4f8f74',
+        isActive: false,
+        name: 'Games',
+        type: Shared\HrisGroupType::BusinessUnit,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T14:24:36.672Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2669,7 +3228,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```php
 declare(strict_types=1);
 
@@ -2678,6 +3237,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2686,7 +3246,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisLocationRequest(
-    hrisLocation: new Shared\HrisLocation(),
+    hrisLocation: new Shared\HrisLocation(
+        address: new Shared\PropertyHrisLocationAddress(
+            address1: '2743 Connelly Summit',
+            address2: 'Apt. 350',
+            city: 'Titusville',
+            countryCode: 'US',
+            postalCode: '16154-1095',
+            region: 'Oregon',
+            regionCode: 'AL',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
+        currency: 'MUR',
+        description: 'Acervus caries.',
+        externalIdentifier: '633d799f-e467-4730-a2c1-d0442c073b57',
+        id: 'd267ea88-128c-42f6-8cdf-1a9e361e0183',
+        isActive: true,
+        isHq: false,
+        languageLocale: 'fr',
+        name: 'adhuc',
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(710) 550-6997',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(208) 555-8542',
+                type: Shared\HrisTelephoneType::Home,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(712) 473-5482',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        timezone: 'America/Guyana',
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T00:39:51.880Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2722,7 +3317,7 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```php
 declare(strict_types=1);
 
@@ -2731,6 +3326,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2740,6 +3336,20 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
+        approvedAt: Utils\Utils::parseDateTime('2022-02-20T21:02:37.696Z'),
+        comments: 'Blandior ventus curiositas amplitudo.',
+        createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
+        duration: 4,
+        durationType: Shared\DurationType::Day,
+        endAt: Utils\Utils::parseDateTime('2024-12-07T13:50:55.454Z'),
+        id: 'c38c4f38-07e2-4fb7-b3aa-93df41a86943',
+        isPaid: true,
+        originalType: 'acerbitas ut',
+        reason: 'verto',
+        startAt: Utils\Utils::parseDateTime('2023-08-23T06:56:44.760Z'),
+        status: Shared\HrisTimeoffStatus::Denied,
+        type: Shared\HrisTimeoffType::InLieu,
+        updatedAt: Utils\Utils::parseDateTime('2022-07-07T19:34:54.250Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -2777,7 +3387,7 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisTimeshift" method="patch" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -2786,6 +3396,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2795,7 +3406,24 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
+        approvedAt: Utils\Utils::parseDateTime('2023-06-05T14:31:38.450Z'),
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 76761,
+                currency: 'JPY',
+                frequency: Shared\HrisCompensationFrequency::Hour,
+                notes: 'Annus adficio suasoria architecto aggero.',
+                type: Shared\HrisCompensationType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
+        endAt: Utils\Utils::parseDateTime('2026-08-25T08:28:11.847Z'),
+        hours: 8,
+        id: '7cccfab5-5f8c-4543-ba66-c6178393a826',
+        isApproved: true,
+        startAt: Utils\Utils::parseDateTime('2023-06-24T19:29:28.673Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-22T20:53:14.295Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3444,7 +4072,7 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```php
 declare(strict_types=1);
 
@@ -3463,9 +4091,39 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisAttendanceRequest(
     hrisAttendance: new Shared\HrisAttendance(
+        address: new Shared\PropertyHrisAttendanceAddress(
+            address1: '14108 Allie Flats',
+            city: 'Kearaborough',
+            countryCode: 'US',
+            postalCode: '23844-2344',
+            region: 'Tennessee',
+            regionCode: 'CA',
+        ),
+        approvedAt: Utils\Utils::parseDateTime('2021-08-13T10:36:02.582Z'),
+        breaks: [
+            new Shared\HrisAttendanceBreak(
+                durationMinutes: 12,
+                endAt: Utils\Utils::parseDateTime('2023-10-22T16:22:21.282Z'),
+                id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
+                isPaid: true,
+                name: 'Lunch',
+                startAt: Utils\Utils::parseDateTime('2023-10-15T20:48:40.852Z'),
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
+        currency: 'UGX',
+        declaredTipsAmount: 161,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-07-06T19:51:15.352Z'),
-        startAt: Utils\Utils::parseDateTime('2024-05-22T08:12:53.996Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-06T03:55:51.527Z'),
+        hourlyRate: 53,
+        hours: 10,
+        id: 'cbcfba0c-c599-4187-8cc1-b796e089ae62',
+        jobName: 'Global Creative Supervisor',
+        nonCashTipsAmount: 54,
+        startAt: Utils\Utils::parseDateTime('2021-11-09T10:25:57.026Z'),
+        status: Shared\HrisAttendanceStatus::Closed,
+        timezone: 'America/Atikokan',
+        updatedAt: Utils\Utils::parseDateTime('2022-01-17T01:24:59.757Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3502,7 +4160,7 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -3511,6 +4169,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3519,7 +4178,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisBankaccountRequest(
-    hrisBankaccount: new Shared\HrisBankaccount(),
+    hrisBankaccount: new Shared\HrisBankaccount(
+        accountNumber: '****3777',
+        accountNumberLast4: '3777',
+        accountType: Shared\HrisBankaccountAccountType::Checking,
+        bankName: 'Huel Group',
+        createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
+        id: '6b53796b-c6e2-4608-939f-57d8d920c7b2',
+        isPrimary: false,
+        name: 'Checking Account',
+        routingNumber: '448650724',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-04T11:30:29.792Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3555,7 +4225,7 @@ Update a benefit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisBenefit" method="put" path="/hris/{connection_id}/benefit/{id}" example="hris_benefit" -->
 ```php
 declare(strict_types=1);
 
@@ -3564,6 +4234,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3572,7 +4243,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisBenefitRequest(
-    hrisBenefit: new Shared\HrisBenefit(),
+    hrisBenefit: new Shared\HrisBenefit(
+        coverageLevel: Shared\CoverageLevel::EmployeeSpouse,
+        createdAt: Utils\Utils::parseDateTime('2020-06-11T01:24:05.654Z'),
+        currency: 'JOD',
+        description: 'Vomito voluptas dolor sed.',
+        employerContributionAmount: 185006,
+        employerContributionMaxAmount: 179093,
+        employerContributionType: Shared\EmployerContributionType::Percentage,
+        frequency: Shared\HrisBenefitFrequency::Hour,
+        id: '20ebb126-9b3a-4c47-8f83-06f96f663e09',
+        isActive: false,
+        name: 'Frozen Wooden Ball',
+        tax: Shared\Tax::PreTax,
+        type: Shared\HrisBenefitType::Garnishment,
+        updatedAt: Utils\Utils::parseDateTime('2023-03-06T11:00:21.279Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3608,7 +4294,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisCompany" method="put" path="/hris/{connection_id}/company/{id}" example="hris_company" -->
 ```php
 declare(strict_types=1);
 
@@ -3617,6 +4303,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3625,7 +4312,21 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisCompanyRequest(
-    hrisCompany: new Shared\HrisCompany(),
+    hrisCompany: new Shared\HrisCompany(
+        address: new Shared\PropertyHrisCompanyAddress(
+            address1: '2549 Church Walk',
+            city: 'Lake Nettiebury',
+            countryCode: 'US',
+            postalCode: '32877-4898',
+            region: 'Idaho',
+            regionCode: 'PA',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
+        id: '6d8a376c-449b-4d6f-8921-ca1ab6158e9a',
+        legalName: 'Schultz LLC',
+        name: 'Gottlieb Group',
+        updatedAt: Utils\Utils::parseDateTime('2026-09-05T21:10:56.930Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3661,7 +4362,7 @@ Update a deduction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisDeduction" method="put" path="/hris/{connection_id}/deduction/{id}" example="hris_deduction" -->
 ```php
 declare(strict_types=1);
 
@@ -3670,6 +4371,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3678,7 +4380,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisDeductionRequest(
-    hrisDeduction: new Shared\HrisDeduction(),
+    hrisDeduction: new Shared\HrisDeduction(
+        amount: 139655,
+        coverageLevel: Shared\HrisDeductionCoverageLevel::EmployeeOnly,
+        createdAt: Utils\Utils::parseDateTime('2020-02-05T01:46:31.384Z'),
+        endAt: Utils\Utils::parseDateTime('2026-05-22T22:51:41.904Z'),
+        frequency: Shared\HrisDeductionFrequency::Month,
+        id: '2aec3d2c-839a-4dda-90d3-91870b50eae7',
+        isActive: false,
+        notes: 'Carmen desidero.',
+        startAt: Utils\Utils::parseDateTime('2025-02-18T04:37:41.123Z'),
+        type: Shared\HrisDeductionType::Fixed,
+        updatedAt: Utils\Utils::parseDateTime('2024-03-01T23:41:41.377Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3714,7 +4428,7 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```php
 declare(strict_types=1);
 
@@ -3723,6 +4437,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3731,7 +4446,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(),
+    hrisDevice: new Shared\HrisDevice(
+        adminUserIds: [],
+        assetTag: 'dpho9OuFNG',
+        createdAt: Utils\Utils::parseDateTime('2019-04-04T17:11:40.322Z'),
+        hasAntivirus: false,
+        hasFirewall: true,
+        hasHdEncrypted: true,
+        hasPasswordManager: true,
+        hasScreenlock: true,
+        id: '6ad75d41-833e-41c9-af5a-7c98b7cac6f5',
+        isMissing: false,
+        manufacturer: 'Sanford - Hamill',
+        model: 'Refined',
+        name: 'cross_contamination_if.rar',
+        os: 'monitor',
+        osVersion: '1.12.16',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-21T00:56:05.174Z'),
+        version: '2.20.17',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3767,7 +4500,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisDocument" method="put" path="/hris/{connection_id}/document/{id}" example="hris_document" -->
 ```php
 declare(strict_types=1);
 
@@ -3776,6 +4509,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3784,7 +4518,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisDocumentRequest(
-    hrisDocument: new Shared\HrisDocument(),
+    hrisDocument: new Shared\HrisDocument(
+        createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
+        documentUrl: 'https://sore-decision.biz/',
+        filename: 'ridge_forager.xsl',
+        id: 'b42682b1-d9f4-4260-af8a-f6317dd1bd80',
+        type: Shared\HrisDocumentType::Policy,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-17T01:54:33.589Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3820,7 +4561,7 @@ Update an employee
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisEmployee" method="put" path="/hris/{connection_id}/employee/{id}" example="hris_employee" -->
 ```php
 declare(strict_types=1);
 
@@ -3829,6 +4570,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3837,7 +4579,121 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisEmployeeRequest(
-    hrisEmployee: new Shared\HrisEmployee(),
+    hrisEmployee: new Shared\HrisEmployee(
+        address: new Shared\PropertyHrisEmployeeAddress(
+            address1: '52008 Lansdowne Road',
+            address2: 'Apt. 101',
+            city: 'Connellyberg',
+            countryCode: 'US',
+            postalCode: '18978',
+            region: 'South Dakota',
+            regionCode: 'NM',
+        ),
+        bio: 'sushi devotee, singer',
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 69148,
+                currency: 'CRC',
+                frequency: Shared\HrisCompensationFrequency::Quarter,
+                notes: 'Tergeo laborum laboriosam tutis.',
+                type: Shared\HrisCompensationType::Equity,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
+        currency: 'IDR',
+        dateOfBirth: Utils\Utils::parseDateTime('2001-04-22'),
+        emails: [
+            new Shared\HrisEmail(
+                email: 'Zetta_Prohaska67@hotmail.com',
+                type: Shared\HrisEmailType::Home,
+            ),
+        ],
+        employeeNumber: 'YuOt169CGu',
+        employmentStatus: Shared\EmploymentStatus::Active,
+        employmentType: Shared\HrisEmployeeEmploymentType::Volunteer,
+        firstName: 'Zetta',
+        gender: Shared\HrisEmployeeGender::Intersex,
+        hasMfa: true,
+        hiredAt: Utils\Utils::parseDateTime('2023-05-10T16:14:24.268Z'),
+        id: '5a45c156-b945-45a7-bdbb-7fcc013a456d',
+        imageUrl: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
+        languageLocale: 'es',
+        lastName: 'Prohaska',
+        locations: [],
+        maritalStatus: Shared\MaritalStatus::Married,
+        metadata: [
+            new Shared\HrisMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\HrisMetadataFormat::Text,
+                id: 'a06af6d2-ccab-4f6e-b714-1de7dc125067',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'tenetur',
+            ),
+        ],
+        name: 'Zetta Prohaska',
+        pronouns: 'she/her',
+        relationships: [
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Deshaun.Sanford24@yahoo.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Rebeca.Dibbert11@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Hester80@gmail.com',
+                    ),
+                ],
+                name: 'Automotive',
+                type: Shared\HrisEmployeerelationshipType::Emergency,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Benedict_Wisozk83@hotmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Princess_Rath43@gmail.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Elmira92@yahoo.com',
+                    ),
+                ],
+                name: 'Music',
+                type: Shared\HrisEmployeerelationshipType::Friend,
+            ),
+            new Shared\HrisEmployeerelationship(
+                emails: [
+                    new Shared\HrisEmail(
+                        email: 'Jane30@gmail.com',
+                    ),
+                ],
+                name: 'Jewelry',
+                type: Shared\HrisEmployeerelationshipType::Sibling,
+            ),
+        ],
+        salutation: 'Miss',
+        ssnSin: 'yMRtj0Q3xO',
+        storageQuotaAllocated: 3674489,
+        storageQuotaAvailable: 7748057,
+        storageQuotaUsed: 301727,
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(409) 801-3705',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        terminationReason: 'Communis adnuo damnatio atavus terebro acies canis cogito triumphus creber temptatio defendo cubo amissio paulatim corroboro.',
+        timeoffDaysTotal: 12,
+        timeoffDaysUsed: 6,
+        timezone: 'Africa/Harare',
+        title: 'Investor Paradigm Liaison',
+        updatedAt: Utils\Utils::parseDateTime('2022-02-19T07:01:46.473Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3873,7 +4729,7 @@ Update a group
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisGroup" method="put" path="/hris/{connection_id}/group/{id}" example="hris_group" -->
 ```php
 declare(strict_types=1);
 
@@ -3882,6 +4738,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3890,7 +4747,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisGroupRequest(
-    hrisGroup: new Shared\HrisGroup(),
+    hrisGroup: new Shared\HrisGroup(
+        createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
+        description: 'Absorbeo casso.',
+        id: '8d454ca4-ebee-4004-9ee1-070a8a4f8f74',
+        isActive: false,
+        name: 'Games',
+        type: Shared\HrisGroupType::BusinessUnit,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T14:24:36.672Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3926,7 +4791,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```php
 declare(strict_types=1);
 
@@ -3935,6 +4800,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3943,7 +4809,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisLocationRequest(
-    hrisLocation: new Shared\HrisLocation(),
+    hrisLocation: new Shared\HrisLocation(
+        address: new Shared\PropertyHrisLocationAddress(
+            address1: '2743 Connelly Summit',
+            address2: 'Apt. 350',
+            city: 'Titusville',
+            countryCode: 'US',
+            postalCode: '16154-1095',
+            region: 'Oregon',
+            regionCode: 'AL',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
+        currency: 'MUR',
+        description: 'Acervus caries.',
+        externalIdentifier: '633d799f-e467-4730-a2c1-d0442c073b57',
+        id: 'd267ea88-128c-42f6-8cdf-1a9e361e0183',
+        isActive: true,
+        isHq: false,
+        languageLocale: 'fr',
+        name: 'adhuc',
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(710) 550-6997',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(208) 555-8542',
+                type: Shared\HrisTelephoneType::Home,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(712) 473-5482',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        timezone: 'America/Guyana',
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T00:39:51.880Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -3979,7 +4880,7 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```php
 declare(strict_types=1);
 
@@ -3988,6 +4889,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -3997,6 +4899,20 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
+        approvedAt: Utils\Utils::parseDateTime('2022-02-20T21:02:37.696Z'),
+        comments: 'Blandior ventus curiositas amplitudo.',
+        createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
+        duration: 4,
+        durationType: Shared\DurationType::Day,
+        endAt: Utils\Utils::parseDateTime('2024-12-07T13:50:55.454Z'),
+        id: 'c38c4f38-07e2-4fb7-b3aa-93df41a86943',
+        isPaid: true,
+        originalType: 'acerbitas ut',
+        reason: 'verto',
+        startAt: Utils\Utils::parseDateTime('2023-08-23T06:56:44.760Z'),
+        status: Shared\HrisTimeoffStatus::Denied,
+        type: Shared\HrisTimeoffType::InLieu,
+        updatedAt: Utils\Utils::parseDateTime('2022-07-07T19:34:54.250Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -4034,7 +4950,7 @@ Update a timeshift
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisTimeshift" method="put" path="/hris/{connection_id}/timeshift/{id}" example="hris_timeshift" -->
 ```php
 declare(strict_types=1);
 
@@ -4043,6 +4959,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -4052,7 +4969,24 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
+        approvedAt: Utils\Utils::parseDateTime('2023-06-05T14:31:38.450Z'),
+        compensation: [
+            new Shared\HrisCompensation(
+                amount: 76761,
+                currency: 'JPY',
+                frequency: Shared\HrisCompensationFrequency::Hour,
+                notes: 'Annus adficio suasoria architecto aggero.',
+                type: Shared\HrisCompensationType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
+        endAt: Utils\Utils::parseDateTime('2026-08-25T08:28:11.847Z'),
+        hours: 8,
+        id: '7cccfab5-5f8c-4543-ba66-c6178393a826',
+        isApproved: true,
+        startAt: Utils\Utils::parseDateTime('2023-06-24T19:29:28.673Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-22T20:53:14.295Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

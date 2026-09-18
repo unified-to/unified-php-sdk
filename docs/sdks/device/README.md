@@ -17,7 +17,7 @@ Create a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" -->
+<!-- UsageSnippet language="php" operationID="createHrisDevice" method="post" path="/hris/{connection_id}/device" example="hris_device" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(),
+    hrisDevice: new Shared\HrisDevice(
+        adminUserIds: [],
+        assetTag: 'dpho9OuFNG',
+        createdAt: Utils\Utils::parseDateTime('2019-04-04T17:11:40.322Z'),
+        hasAntivirus: false,
+        hasFirewall: true,
+        hasHdEncrypted: true,
+        hasPasswordManager: true,
+        hasScreenlock: true,
+        id: 'aa9bf3e8-ef2a-4460-9de0-f7f31a76743e',
+        isMissing: false,
+        manufacturer: 'Sanford - Hamill',
+        model: 'Refined',
+        name: 'cross_contamination_if.rar',
+        os: 'monitor',
+        osVersion: '1.12.16',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-21T00:56:05.168Z'),
+        version: '2.20.17',
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +189,7 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisDevice" method="patch" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +198,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +207,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(),
+    hrisDevice: new Shared\HrisDevice(
+        adminUserIds: [],
+        assetTag: 'dpho9OuFNG',
+        createdAt: Utils\Utils::parseDateTime('2019-04-04T17:11:40.322Z'),
+        hasAntivirus: false,
+        hasFirewall: true,
+        hasHdEncrypted: true,
+        hasPasswordManager: true,
+        hasScreenlock: true,
+        id: '6ad75d41-833e-41c9-af5a-7c98b7cac6f5',
+        isMissing: false,
+        manufacturer: 'Sanford - Hamill',
+        model: 'Refined',
+        name: 'cross_contamination_if.rar',
+        os: 'monitor',
+        osVersion: '1.12.16',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-21T00:56:05.174Z'),
+        version: '2.20.17',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +312,7 @@ Update a device
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisDevice" method="put" path="/hris/{connection_id}/device/{id}" example="hris_device" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +321,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +330,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisDeviceRequest(
-    hrisDevice: new Shared\HrisDevice(),
+    hrisDevice: new Shared\HrisDevice(
+        adminUserIds: [],
+        assetTag: 'dpho9OuFNG',
+        createdAt: Utils\Utils::parseDateTime('2019-04-04T17:11:40.322Z'),
+        hasAntivirus: false,
+        hasFirewall: true,
+        hasHdEncrypted: true,
+        hasPasswordManager: true,
+        hasScreenlock: true,
+        id: '6ad75d41-833e-41c9-af5a-7c98b7cac6f5',
+        isMissing: false,
+        manufacturer: 'Sanford - Hamill',
+        model: 'Refined',
+        name: 'cross_contamination_if.rar',
+        os: 'monitor',
+        osVersion: '1.12.16',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-21T00:56:05.174Z'),
+        version: '2.20.17',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -25,7 +25,7 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" example="ats_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -34,6 +34,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -42,7 +43,79 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsActivityRequest(
-    atsActivity: new Shared\AtsActivity(),
+    atsActivity: new Shared\AtsActivity(
+        bcc: [
+            new Shared\AtsEmail(
+                email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+                name: 'Rochelle Franey-Bechtelar',
+                type: Shared\AtsEmailType::Home,
+            ),
+        ],
+        cc: [
+            new Shared\AtsEmail(
+                email: 'Sasha24@hotmail.com',
+                name: 'Dr. Elbert Kuvalis',
+                type: Shared\AtsEmailType::Home,
+            ),
+            new Shared\AtsEmail(
+                email: 'Rosetta_Donnelly@gmail.com',
+                name: 'Ramon Daniel',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Kathryne_Jast@yahoo.com',
+                name: 'Christian Jacobson',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Eldred95@yahoo.com',
+                name: 'Edna Bogan',
+                type: Shared\AtsEmailType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
+        description: 'Amplus.',
+        from: new Shared\PropertyAtsActivityFrom(
+            email: 'Norwood.Wiza47@yahoo.com',
+            name: 'Toby Grant',
+            type: Shared\PropertyAtsActivityFromType::Other,
+        ),
+        id: 'acf1f007-dc5d-4246-8e38-14cc3dcebf62',
+        isPrivate: false,
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '0c3cf076-e1ff-4693-b380-60374c282504',
+                namespace: 'activity',
+                slug: 'acer',
+                value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+            ),
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '4c62f087-2fde-491d-8650-38b579851893',
+                namespace: 'activity',
+                slug: 'tremo',
+                value: 'Amita delectus dicta temptatio utroque ex.',
+            ),
+        ],
+        subType: 'TASK',
+        title: 'Senior Interactions Manager',
+        to: [
+            new Shared\AtsEmail(
+                email: 'Sister91@hotmail.com',
+                name: 'Eddie Nienow PhD',
+                type: Shared\AtsEmailType::Work,
+            ),
+        ],
+        type: Shared\AtsActivityType::Task,
+        updatedAt: Utils\Utils::parseDateTime('2026-03-06T13:33:13.014Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -77,7 +150,7 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="createLmsActivity" method="post" path="/lms/{connection_id}/activity" example="lms_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -86,6 +159,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -94,7 +168,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsActivityRequest(
-    lmsActivity: new Shared\LmsActivity(),
+    lmsActivity: new Shared\LmsActivity(
+        assignedGrade: 'summopere',
+        completedAt: Utils\Utils::parseDateTime('2025-04-12T21:07:59.666Z'),
+        createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
+        durationMinutes: 55,
+        id: '8164f3ea-523a-40a6-b339-ccb2ed97db46',
+        isCompleted: true,
+        progressPercentage: 100,
+        startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-23T21:44:46.408Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -432,7 +516,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -441,6 +525,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -449,7 +534,79 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsActivityRequest(
-    atsActivity: new Shared\AtsActivity(),
+    atsActivity: new Shared\AtsActivity(
+        bcc: [
+            new Shared\AtsEmail(
+                email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+                name: 'Rochelle Franey-Bechtelar',
+                type: Shared\AtsEmailType::Home,
+            ),
+        ],
+        cc: [
+            new Shared\AtsEmail(
+                email: 'Sasha24@hotmail.com',
+                name: 'Dr. Elbert Kuvalis',
+                type: Shared\AtsEmailType::Home,
+            ),
+            new Shared\AtsEmail(
+                email: 'Rosetta_Donnelly@gmail.com',
+                name: 'Ramon Daniel',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Kathryne_Jast@yahoo.com',
+                name: 'Christian Jacobson',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Eldred95@yahoo.com',
+                name: 'Edna Bogan',
+                type: Shared\AtsEmailType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
+        description: 'Amplus.',
+        from: new Shared\PropertyAtsActivityFrom(
+            email: 'Norwood.Wiza47@yahoo.com',
+            name: 'Toby Grant',
+            type: Shared\PropertyAtsActivityFromType::Other,
+        ),
+        id: '09c0b7c8-cf09-47e6-81e4-b38db8539844',
+        isPrivate: false,
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'fe4795f4-2563-4dfd-aee7-e96757e80130',
+                namespace: 'activity',
+                slug: 'acer',
+                value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+            ),
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '8775bf75-34f3-422c-b017-9d59c4ee1a4f',
+                namespace: 'activity',
+                slug: 'tremo',
+                value: 'Amita delectus dicta temptatio utroque ex.',
+            ),
+        ],
+        subType: 'TASK',
+        title: 'Senior Interactions Manager',
+        to: [
+            new Shared\AtsEmail(
+                email: 'Sister91@hotmail.com',
+                name: 'Eddie Nienow PhD',
+                type: Shared\AtsEmailType::Work,
+            ),
+        ],
+        type: Shared\AtsActivityType::Task,
+        updatedAt: Utils\Utils::parseDateTime('2026-03-06T13:33:13.030Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -485,7 +642,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsActivity" method="patch" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -494,6 +651,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -502,7 +660,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsActivityRequest(
-    lmsActivity: new Shared\LmsActivity(),
+    lmsActivity: new Shared\LmsActivity(
+        assignedGrade: 'summopere',
+        completedAt: Utils\Utils::parseDateTime('2025-04-12T21:07:59.668Z'),
+        createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
+        durationMinutes: 55,
+        id: '298664cf-609d-4c74-a5e3-42882c090d10',
+        isCompleted: true,
+        progressPercentage: 100,
+        startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-23T21:44:46.409Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -640,7 +808,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -649,6 +817,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -657,7 +826,79 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsActivityRequest(
-    atsActivity: new Shared\AtsActivity(),
+    atsActivity: new Shared\AtsActivity(
+        bcc: [
+            new Shared\AtsEmail(
+                email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+                name: 'Rochelle Franey-Bechtelar',
+                type: Shared\AtsEmailType::Home,
+            ),
+        ],
+        cc: [
+            new Shared\AtsEmail(
+                email: 'Sasha24@hotmail.com',
+                name: 'Dr. Elbert Kuvalis',
+                type: Shared\AtsEmailType::Home,
+            ),
+            new Shared\AtsEmail(
+                email: 'Rosetta_Donnelly@gmail.com',
+                name: 'Ramon Daniel',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Kathryne_Jast@yahoo.com',
+                name: 'Christian Jacobson',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Eldred95@yahoo.com',
+                name: 'Edna Bogan',
+                type: Shared\AtsEmailType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
+        description: 'Amplus.',
+        from: new Shared\PropertyAtsActivityFrom(
+            email: 'Norwood.Wiza47@yahoo.com',
+            name: 'Toby Grant',
+            type: Shared\PropertyAtsActivityFromType::Other,
+        ),
+        id: '09c0b7c8-cf09-47e6-81e4-b38db8539844',
+        isPrivate: false,
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'fe4795f4-2563-4dfd-aee7-e96757e80130',
+                namespace: 'activity',
+                slug: 'acer',
+                value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+            ),
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '8775bf75-34f3-422c-b017-9d59c4ee1a4f',
+                namespace: 'activity',
+                slug: 'tremo',
+                value: 'Amita delectus dicta temptatio utroque ex.',
+            ),
+        ],
+        subType: 'TASK',
+        title: 'Senior Interactions Manager',
+        to: [
+            new Shared\AtsEmail(
+                email: 'Sister91@hotmail.com',
+                name: 'Eddie Nienow PhD',
+                type: Shared\AtsEmailType::Work,
+            ),
+        ],
+        type: Shared\AtsActivityType::Task,
+        updatedAt: Utils\Utils::parseDateTime('2026-03-06T13:33:13.030Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -693,7 +934,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsActivity" method="put" path="/lms/{connection_id}/activity/{id}" example="lms_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -702,6 +943,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -710,7 +952,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsActivityRequest(
-    lmsActivity: new Shared\LmsActivity(),
+    lmsActivity: new Shared\LmsActivity(
+        assignedGrade: 'summopere',
+        completedAt: Utils\Utils::parseDateTime('2025-04-12T21:07:59.668Z'),
+        createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
+        durationMinutes: 55,
+        id: '298664cf-609d-4c74-a5e3-42882c090d10',
+        isCompleted: true,
+        progressPercentage: 100,
+        startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-23T21:44:46.409Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

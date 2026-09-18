@@ -17,7 +17,7 @@ Create an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" -->
+<!-- UsageSnippet language="php" operationID="createHrisAttendance" method="post" path="/hris/{connection_id}/attendance" example="hris_attendance" -->
 ```php
 declare(strict_types=1);
 
@@ -36,9 +36,39 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisAttendanceRequest(
     hrisAttendance: new Shared\HrisAttendance(
+        address: new Shared\PropertyHrisAttendanceAddress(
+            address1: '14108 Allie Flats',
+            city: 'Kearaborough',
+            countryCode: 'US',
+            postalCode: '23844-2344',
+            region: 'Tennessee',
+            regionCode: 'CA',
+        ),
+        approvedAt: Utils\Utils::parseDateTime('2021-08-13T10:36:02.582Z'),
+        breaks: [
+            new Shared\HrisAttendanceBreak(
+                durationMinutes: 12,
+                endAt: Utils\Utils::parseDateTime('2023-10-22T16:22:21.274Z'),
+                id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
+                isPaid: true,
+                name: 'Lunch',
+                startAt: Utils\Utils::parseDateTime('2023-10-15T20:48:40.844Z'),
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
+        currency: 'UGX',
+        declaredTipsAmount: 161,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-07-01T14:10:09.942Z'),
-        startAt: Utils\Utils::parseDateTime('2026-03-31T03:51:43.280Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-06T03:55:51.518Z'),
+        hourlyRate: 53,
+        hours: 10,
+        id: '6f3bbdc4-75ab-4b78-bdfb-8918d1b18b95',
+        jobName: 'Global Creative Supervisor',
+        nonCashTipsAmount: 54,
+        startAt: Utils\Utils::parseDateTime('2021-11-09T10:25:57.025Z'),
+        status: Shared\HrisAttendanceStatus::Closed,
+        timezone: 'America/Atikokan',
+        updatedAt: Utils\Utils::parseDateTime('2022-01-17T01:24:59.755Z'),
     ),
     connectionId: '<id>',
 );
@@ -175,7 +205,7 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisAttendance" method="patch" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```php
 declare(strict_types=1);
 
@@ -194,9 +224,39 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisAttendanceRequest(
     hrisAttendance: new Shared\HrisAttendance(
+        address: new Shared\PropertyHrisAttendanceAddress(
+            address1: '14108 Allie Flats',
+            city: 'Kearaborough',
+            countryCode: 'US',
+            postalCode: '23844-2344',
+            region: 'Tennessee',
+            regionCode: 'CA',
+        ),
+        approvedAt: Utils\Utils::parseDateTime('2021-08-13T10:36:02.582Z'),
+        breaks: [
+            new Shared\HrisAttendanceBreak(
+                durationMinutes: 12,
+                endAt: Utils\Utils::parseDateTime('2023-10-22T16:22:21.282Z'),
+                id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
+                isPaid: true,
+                name: 'Lunch',
+                startAt: Utils\Utils::parseDateTime('2023-10-15T20:48:40.852Z'),
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
+        currency: 'UGX',
+        declaredTipsAmount: 161,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-09-28T22:23:28.906Z'),
-        startAt: Utils\Utils::parseDateTime('2025-01-18T09:17:09.936Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-06T03:55:51.527Z'),
+        hourlyRate: 53,
+        hours: 10,
+        id: 'cbcfba0c-c599-4187-8cc1-b796e089ae62',
+        jobName: 'Global Creative Supervisor',
+        nonCashTipsAmount: 54,
+        startAt: Utils\Utils::parseDateTime('2021-11-09T10:25:57.026Z'),
+        status: Shared\HrisAttendanceStatus::Closed,
+        timezone: 'America/Atikokan',
+        updatedAt: Utils\Utils::parseDateTime('2022-01-17T01:24:59.757Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -284,7 +344,7 @@ Update an attendance
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisAttendance" method="put" path="/hris/{connection_id}/attendance/{id}" example="hris_attendance" -->
 ```php
 declare(strict_types=1);
 
@@ -303,9 +363,39 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisAttendanceRequest(
     hrisAttendance: new Shared\HrisAttendance(
+        address: new Shared\PropertyHrisAttendanceAddress(
+            address1: '14108 Allie Flats',
+            city: 'Kearaborough',
+            countryCode: 'US',
+            postalCode: '23844-2344',
+            region: 'Tennessee',
+            regionCode: 'CA',
+        ),
+        approvedAt: Utils\Utils::parseDateTime('2021-08-13T10:36:02.582Z'),
+        breaks: [
+            new Shared\HrisAttendanceBreak(
+                durationMinutes: 12,
+                endAt: Utils\Utils::parseDateTime('2023-10-22T16:22:21.282Z'),
+                id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
+                isPaid: true,
+                name: 'Lunch',
+                startAt: Utils\Utils::parseDateTime('2023-10-15T20:48:40.852Z'),
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
+        currency: 'UGX',
+        declaredTipsAmount: 161,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-07-06T19:51:15.352Z'),
-        startAt: Utils\Utils::parseDateTime('2024-05-22T08:12:53.996Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-06T03:55:51.527Z'),
+        hourlyRate: 53,
+        hours: 10,
+        id: 'cbcfba0c-c599-4187-8cc1-b796e089ae62',
+        jobName: 'Global Creative Supervisor',
+        nonCashTipsAmount: 54,
+        startAt: Utils\Utils::parseDateTime('2021-11-09T10:25:57.026Z'),
+        status: Shared\HrisAttendanceStatus::Closed,
+        timezone: 'America/Atikokan',
+        updatedAt: Utils\Utils::parseDateTime('2022-01-17T01:24:59.757Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

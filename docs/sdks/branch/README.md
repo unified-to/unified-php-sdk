@@ -17,7 +17,7 @@ Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="php" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" example="repo_branch" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -35,8 +36,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
+        id: '910a7ea7-c8c6-4b98-be91-5079d6b41a9c',
+        name: 'voluptas',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2020-01-03T14:15:01.616Z'),
     ),
     connectionId: '<id>',
 );
@@ -173,7 +177,7 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```php
 declare(strict_types=1);
 
@@ -182,6 +186,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -191,8 +196,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
+        id: 'bcbd7332-7112-4169-93f5-f369b354498a',
+        name: 'voluptas',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2020-01-03T14:15:01.617Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -280,7 +288,7 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```php
 declare(strict_types=1);
 
@@ -289,6 +297,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -298,8 +307,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
+        id: 'bcbd7332-7112-4169-93f5-f369b354498a',
+        name: 'voluptas',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2020-01-03T14:15:01.617Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

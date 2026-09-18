@@ -19,7 +19,7 @@ Create an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" -->
+<!-- UsageSnippet language="php" operationID="createAssessmentPackage" method="post" path="/assessment/{connection_id}/package" example="assessment_package" -->
 ```php
 declare(strict_types=1);
 
@@ -28,6 +28,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -37,7 +38,28 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAssessmentPackageRequest(
     assessmentPackage: new Shared\AssessmentPackage(
-        type: Shared\AssessmentPackageType::ReferenceCheck,
+        aliases: [
+            'quia',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-11-18T19:48:39.433Z'),
+        description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
+        hasRedirectUrl: true,
+        hasTargetUrl: false,
+        id: '0435d018-800a-4a76-893c-838a92db1440',
+        infoUrl: 'https://ugly-instance.biz/',
+        integrationTypes: [
+            'viridis',
+        ],
+        maxScore: 22,
+        name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
+        needsIpAddress: true,
+        parameters: [],
+        regions: [],
+        tags: [
+            'clamo',
+        ],
+        type: Shared\AssessmentPackageType::VideoInterview,
+        updatedAt: Utils\Utils::parseDateTime('2023-09-18T05:28:57.677Z'),
     ),
     connectionId: '<id>',
 );
@@ -275,7 +297,7 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAssessmentPackage" method="patch" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```php
 declare(strict_types=1);
 
@@ -284,6 +306,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -293,7 +316,28 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAssessmentPackageRequest(
     assessmentPackage: new Shared\AssessmentPackage(
-        type: Shared\AssessmentPackageType::BackgroundCheck,
+        aliases: [
+            'quia',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-11-18T19:48:39.433Z'),
+        description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
+        hasRedirectUrl: true,
+        hasTargetUrl: false,
+        id: '9acbc041-f170-4955-b857-58b1712b4b42',
+        infoUrl: 'https://ugly-instance.biz/',
+        integrationTypes: [
+            'viridis',
+        ],
+        maxScore: 22,
+        name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
+        needsIpAddress: true,
+        parameters: [],
+        regions: [],
+        tags: [
+            'clamo',
+        ],
+        type: Shared\AssessmentPackageType::VideoInterview,
+        updatedAt: Utils\Utils::parseDateTime('2023-09-18T05:28:57.680Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -381,7 +425,7 @@ Update an assessment package
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAssessmentPackage" method="put" path="/assessment/{connection_id}/package/{id}" example="assessment_package" -->
 ```php
 declare(strict_types=1);
 
@@ -390,6 +434,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -399,7 +444,28 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAssessmentPackageRequest(
     assessmentPackage: new Shared\AssessmentPackage(
-        type: Shared\AssessmentPackageType::Other,
+        aliases: [
+            'quia',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-11-18T19:48:39.433Z'),
+        description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
+        hasRedirectUrl: true,
+        hasTargetUrl: false,
+        id: '9acbc041-f170-4955-b857-58b1712b4b42',
+        infoUrl: 'https://ugly-instance.biz/',
+        integrationTypes: [
+            'viridis',
+        ],
+        maxScore: 22,
+        name: 'Carus sed vox doloremque vigor surgo tabella cupiditas abduco clarus.',
+        needsIpAddress: true,
+        parameters: [],
+        regions: [],
+        tags: [
+            'clamo',
+        ],
+        type: Shared\AssessmentPackageType::VideoInterview,
+        updatedAt: Utils\Utils::parseDateTime('2023-09-18T05:28:57.680Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

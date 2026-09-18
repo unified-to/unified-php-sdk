@@ -17,7 +17,7 @@ Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="php" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" example="crm_pipeline" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,27 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCrmPipelineRequest(
-    crmPipeline: new Shared\CrmPipeline(),
+    crmPipeline: new Shared\CrmPipeline(
+        createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+        dealProbability: 99,
+        displayOrder: 8,
+        id: 'bee55908-6617-47b4-a130-51a7477bf893',
+        isActive: true,
+        name: 'Small Steel Bacon',
+        stages: [
+            new Shared\CrmStage(
+                active: false,
+                createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+                dealProbability: 84,
+                displayOrder: 72,
+                id: '2ef85783-686a-46d9-b947-6f69229f667f',
+                isClosed: true,
+                name: 'Veniam.',
+                updatedAt: Utils\Utils::parseDateTime('2025-09-16T09:58:54.230Z'),
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2025-10-07T15:03:40.498Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +191,7 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +200,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +209,27 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCrmPipelineRequest(
-    crmPipeline: new Shared\CrmPipeline(),
+    crmPipeline: new Shared\CrmPipeline(
+        createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+        dealProbability: 99,
+        displayOrder: 8,
+        id: '3a3b12e3-59bd-41b2-9f81-a1befb36103a',
+        isActive: true,
+        name: 'Small Steel Bacon',
+        stages: [
+            new Shared\CrmStage(
+                active: false,
+                createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+                dealProbability: 84,
+                displayOrder: 72,
+                id: 'f4b82baf-d539-4647-80a7-0686e6f3bce5',
+                isClosed: true,
+                name: 'Veniam.',
+                updatedAt: Utils\Utils::parseDateTime('2025-09-16T09:58:54.235Z'),
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2025-10-07T15:03:40.503Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +316,7 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +325,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +334,27 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCrmPipelineRequest(
-    crmPipeline: new Shared\CrmPipeline(),
+    crmPipeline: new Shared\CrmPipeline(
+        createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+        dealProbability: 99,
+        displayOrder: 8,
+        id: '3a3b12e3-59bd-41b2-9f81-a1befb36103a',
+        isActive: true,
+        name: 'Small Steel Bacon',
+        stages: [
+            new Shared\CrmStage(
+                active: false,
+                createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+                dealProbability: 84,
+                displayOrder: 72,
+                id: 'f4b82baf-d539-4647-80a7-0686e6f3bce5',
+                isClosed: true,
+                name: 'Veniam.',
+                updatedAt: Utils\Utils::parseDateTime('2025-09-16T09:58:54.235Z'),
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2025-10-07T15:03:40.503Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

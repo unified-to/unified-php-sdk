@@ -17,7 +17,7 @@ Create a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" -->
+<!-- UsageSnippet language="php" operationID="createAccountingVendorcredit" method="post" path="/accounting/{connection_id}/vendorcredit" example="accounting_vendorcredit" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingVendorcreditRequest(
-    accountingVendorcredit: new Shared\AccountingVendorcredit(),
+    accountingVendorcredit: new Shared\AccountingVendorcredit(
+        applications: [],
+        applyAmount: 1,
+        balanceAmount: 0,
+        createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
+        currency: 'KGS',
+        dueAt: Utils\Utils::parseDateTime('2023-05-06T20:38:46.775Z'),
+        id: 'b95b7aab-87cc-4c2d-b4d8-be2bc44abf20',
+        lineitems: [],
+        metadata: [],
+        notes: 'Conatus cruciamentum decor avaritia tantum.',
+        postedAt: Utils\Utils::parseDateTime('2023-09-28T16:43:35.372Z'),
+        status: Shared\AccountingVendorcreditStatus::Submitted,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T14:35:38.362Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +186,7 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingVendorcredit" method="patch" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +195,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +204,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingVendorcreditRequest(
-    accountingVendorcredit: new Shared\AccountingVendorcredit(),
+    accountingVendorcredit: new Shared\AccountingVendorcredit(
+        applications: [],
+        applyAmount: 1,
+        balanceAmount: 0,
+        createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
+        currency: 'KGS',
+        dueAt: Utils\Utils::parseDateTime('2023-05-06T20:38:46.775Z'),
+        id: '1353821c-3fd0-42b1-9c7d-0aa07a3eebe2',
+        lineitems: [],
+        metadata: [],
+        notes: 'Conatus cruciamentum decor avaritia tantum.',
+        postedAt: Utils\Utils::parseDateTime('2023-09-28T16:43:35.374Z'),
+        status: Shared\AccountingVendorcreditStatus::Submitted,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T14:35:38.366Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +306,7 @@ Update a vendorcredit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingVendorcredit" method="put" path="/accounting/{connection_id}/vendorcredit/{id}" example="accounting_vendorcredit" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +315,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +324,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingVendorcreditRequest(
-    accountingVendorcredit: new Shared\AccountingVendorcredit(),
+    accountingVendorcredit: new Shared\AccountingVendorcredit(
+        applications: [],
+        applyAmount: 1,
+        balanceAmount: 0,
+        createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
+        currency: 'KGS',
+        dueAt: Utils\Utils::parseDateTime('2023-05-06T20:38:46.775Z'),
+        id: '1353821c-3fd0-42b1-9c7d-0aa07a3eebe2',
+        lineitems: [],
+        metadata: [],
+        notes: 'Conatus cruciamentum decor avaritia tantum.',
+        postedAt: Utils\Utils::parseDateTime('2023-09-28T16:43:35.374Z'),
+        status: Shared\AccountingVendorcreditStatus::Submitted,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T14:35:38.366Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

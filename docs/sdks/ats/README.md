@@ -60,7 +60,7 @@ Create an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" -->
+<!-- UsageSnippet language="php" operationID="createAtsActivity" method="post" path="/ats/{connection_id}/activity" example="ats_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -69,6 +69,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -77,7 +78,79 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsActivityRequest(
-    atsActivity: new Shared\AtsActivity(),
+    atsActivity: new Shared\AtsActivity(
+        bcc: [
+            new Shared\AtsEmail(
+                email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+                name: 'Rochelle Franey-Bechtelar',
+                type: Shared\AtsEmailType::Home,
+            ),
+        ],
+        cc: [
+            new Shared\AtsEmail(
+                email: 'Sasha24@hotmail.com',
+                name: 'Dr. Elbert Kuvalis',
+                type: Shared\AtsEmailType::Home,
+            ),
+            new Shared\AtsEmail(
+                email: 'Rosetta_Donnelly@gmail.com',
+                name: 'Ramon Daniel',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Kathryne_Jast@yahoo.com',
+                name: 'Christian Jacobson',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Eldred95@yahoo.com',
+                name: 'Edna Bogan',
+                type: Shared\AtsEmailType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
+        description: 'Amplus.',
+        from: new Shared\PropertyAtsActivityFrom(
+            email: 'Norwood.Wiza47@yahoo.com',
+            name: 'Toby Grant',
+            type: Shared\PropertyAtsActivityFromType::Other,
+        ),
+        id: 'acf1f007-dc5d-4246-8e38-14cc3dcebf62',
+        isPrivate: false,
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '0c3cf076-e1ff-4693-b380-60374c282504',
+                namespace: 'activity',
+                slug: 'acer',
+                value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+            ),
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '4c62f087-2fde-491d-8650-38b579851893',
+                namespace: 'activity',
+                slug: 'tremo',
+                value: 'Amita delectus dicta temptatio utroque ex.',
+            ),
+        ],
+        subType: 'TASK',
+        title: 'Senior Interactions Manager',
+        to: [
+            new Shared\AtsEmail(
+                email: 'Sister91@hotmail.com',
+                name: 'Eddie Nienow PhD',
+                type: Shared\AtsEmailType::Work,
+            ),
+        ],
+        type: Shared\AtsActivityType::Task,
+        updatedAt: Utils\Utils::parseDateTime('2026-03-06T13:33:13.014Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -112,7 +185,7 @@ Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="php" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" example="ats_application" -->
 ```php
 declare(strict_types=1);
 
@@ -121,6 +194,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -129,7 +203,33 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsApplicationRequest(
-    atsApplication: new Shared\AtsApplication(),
+    atsApplication: new Shared\AtsApplication(
+        answers: [],
+        appliedAt: Utils\Utils::parseDateTime('2025-09-08T08:47:38.152Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
+        hiredAt: Utils\Utils::parseDateTime('2026-04-14T14:33:00.903Z'),
+        id: 'f5c781be-7431-407c-8e74-374b5b0e8a9e',
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+                namespace: 'application',
+                slug: 'despecto',
+                value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+            ),
+        ],
+        offers: [],
+        originalStatus: 'vomica',
+        originalSubstatus: 'allatus',
+        rejectedAt: Utils\Utils::parseDateTime('2026-09-08T19:50:15.645Z'),
+        rejectedReason: 'Cometes amplitudo videlicet talio.',
+        source: 'credo',
+        status: Shared\AtsApplicationStatus::Reviewing,
+        updatedAt: Utils\Utils::parseDateTime('2026-09-15T11:08:47.343Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -164,7 +264,7 @@ Create a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" -->
+<!-- UsageSnippet language="php" operationID="createAtsCandidate" method="post" path="/ats/{connection_id}/candidate" example="ats_candidate" -->
 ```php
 declare(strict_types=1);
 
@@ -173,6 +273,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -181,7 +282,92 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsCandidateRequest(
-    atsCandidate: new Shared\AtsCandidate(),
+    atsCandidate: new Shared\AtsCandidate(
+        address: new Shared\PropertyAtsCandidateAddress(
+            address1: '802 Roberts Squares',
+            address2: 'Suite 550',
+            city: 'Lake Raeganside',
+            countryCode: 'US',
+            postalCode: '44530-0054',
+            region: 'Tennessee',
+            regionCode: 'NV',
+        ),
+        companyName: 'Ferry, Legros and Feest',
+        createdAt: Utils\Utils::parseDateTime('2023-10-16T05:42:56.049Z'),
+        education: [
+            new Shared\AtsCandidateEducation(
+                degree: 'mouser throughout',
+                endAt: Utils\Utils::parseDateTime('1992-11-28T20:23:20.311Z'),
+                fieldOfStudy: 'solutio',
+                institution: 'Heller - Lubowitz',
+                level: 'phd',
+                startAt: Utils\Utils::parseDateTime('2001-03-26T08:12:11.510Z'),
+            ),
+        ],
+        emails: [
+            new Shared\AtsEmail(
+                email: 'Ardith.Beatty@hotmail.com',
+                name: 'Opal Lindgren',
+                type: Shared\AtsEmailType::Work,
+            ),
+            new Shared\AtsEmail(
+                email: 'Ardith_Beatty@gmail.com',
+                name: 'Kristi Nader',
+                type: Shared\AtsEmailType::Other,
+            ),
+        ],
+        experiences: [
+            new Shared\AtsCandidateExperience(
+                companyName: 'Donnelly, Buckridge and Steuber',
+                endAt: Utils\Utils::parseDateTime('1978-06-20T02:53:48.383Z'),
+                startAt: Utils\Utils::parseDateTime('1980-02-06T17:16:53.798Z'),
+                title: 'Principal Brand Strategist',
+            ),
+        ],
+        firstName: 'Ardith',
+        id: '272ac50a-16de-4eae-835e-fbed3d634d60',
+        imageUrl: 'https://loremflickr.com/40/3693?lock=5634712403880328',
+        jobIds: [],
+        lastName: 'Beatty',
+        linkUrls: [
+            'https://sizzling-legislature.com',
+            'https://soupy-interchange.net',
+            'https://troubled-substitution.info',
+        ],
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '21a95a9a-1c1b-48fd-bd06-abf645e27fc1',
+                namespace: 'custom',
+                slug: 'custom_field',
+                value: 'cariosus',
+            ),
+        ],
+        name: 'Ardith Beatty',
+        origin: Shared\Origin::Sourced,
+        skills: [
+            'vita',
+            'cohors',
+        ],
+        sources: [
+            'tactus',
+        ],
+        tags: [
+            'aliquid',
+        ],
+        telephones: [
+            new Shared\AtsTelephone(
+                telephone: '(779) 296-5994',
+                type: Shared\AtsTelephoneType::Home,
+            ),
+        ],
+        title: 'Principal Implementation Analyst',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-22T21:06:41.552Z'),
+        webUrl: 'https://expert-lender.name/',
+    ),
     connectionId: '<id>',
 );
 
@@ -216,7 +402,7 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" -->
+<!-- UsageSnippet language="php" operationID="createAtsCompany" method="post" path="/ats/{connection_id}/company" example="ats_company" -->
 ```php
 declare(strict_types=1);
 
@@ -225,6 +411,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -233,7 +420,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsCompanyRequest(
-    atsCompany: new Shared\AtsCompany(),
+    atsCompany: new Shared\AtsCompany(
+        createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
+        id: '78ced29d-f1a8-4c36-b440-5b1b3a3be5ab',
+        name: 'Gulgowski, Dibbert and Wilderman',
+        phone: '1-602-210-4548',
+        updatedAt: Utils\Utils::parseDateTime('2020-09-24T19:30:08.481Z'),
+        websiteUrl: 'https://somber-substitution.com/',
+    ),
     connectionId: '<id>',
 );
 
@@ -268,7 +462,7 @@ Create a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" -->
+<!-- UsageSnippet language="php" operationID="createAtsDocument" method="post" path="/ats/{connection_id}/document" example="ats_document" -->
 ```php
 declare(strict_types=1);
 
@@ -277,6 +471,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -285,7 +480,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsDocumentRequest(
-    atsDocument: new Shared\AtsDocument(),
+    atsDocument: new Shared\AtsDocument(
+        createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
+        documentUrl: 'https://vengeful-lashes.biz',
+        filename: 'bah_white_frantically.bz',
+        id: 'f5d325b1-f389-407f-80f3-b0e13640af83',
+        type: Shared\AtsDocumentType::Resume,
+        updatedAt: Utils\Utils::parseDateTime('2022-11-28T22:09:20.368Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -320,7 +522,7 @@ Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="php" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" example="ats_interview" -->
 ```php
 declare(strict_types=1);
 
@@ -329,6 +531,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -337,7 +540,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsInterviewRequest(
-    atsInterview: new Shared\AtsInterview(),
+    atsInterview: new Shared\AtsInterview(
+        createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
+        endAt: Utils\Utils::parseDateTime('2025-09-23T08:17:25.145Z'),
+        externalEventXref: '1fc4a432-1e66-4f05-aeae-2d71e9763288',
+        id: 'f8c16ff1-c75f-442a-80c0-c1353415f3a5',
+        location: '26596 Halle Trafficway',
+        startAt: Utils\Utils::parseDateTime('2025-05-19T06:25:27.904Z'),
+        status: Shared\AtsInterviewStatus::Scheduled,
+        updatedAt: Utils\Utils::parseDateTime('2026-02-04T00:36:47.789Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -372,7 +584,7 @@ Create a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" -->
+<!-- UsageSnippet language="php" operationID="createAtsJob" method="post" path="/ats/{connection_id}/job" example="ats_job" -->
 ```php
 declare(strict_types=1);
 
@@ -381,6 +593,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -389,7 +602,134 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsJobRequest(
-    atsJob: new Shared\AtsJob(),
+    atsJob: new Shared\AtsJob(
+        addresses: [
+            new Shared\AtsAddress(
+                address1: '98097 Carlo Trail',
+                city: 'South Judd',
+                countryCode: 'US',
+                postalCode: '89776-0669',
+                region: 'Mississippi',
+                regionCode: 'FL',
+            ),
+        ],
+        compensation: [
+            new Shared\AtsCompensation(
+                currency: 'AUD',
+                frequency: Shared\Frequency::Day,
+                max: 174303,
+                min: 174042,
+                type: Shared\AtsCompensationType::Bonus,
+            ),
+            new Shared\AtsCompensation(
+                currency: 'MZN',
+                frequency: Shared\Frequency::Month,
+                max: 171171,
+                min: 151975,
+                type: Shared\AtsCompensationType::Salary,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2023-06-16T12:51:44.518Z'),
+        description: 'Global',
+        employmentType: Shared\EmploymentType::Freelance,
+        hiringManagers: [
+            new Shared\AtsReference(
+                id: 'fd9852e3-9035-4f42-beb3-bbf4e4022122',
+                name: 'Eloise Mueller PhD',
+            ),
+        ],
+        id: 'abc2040b-9b88-4732-b5d7-71802f164f1e',
+        industry: 'Gorgeous Plastic Computer',
+        languageLocale: 'en',
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '0aa5fa8f-8b57-49d4-995e-c5d830f8a096',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'acceptus',
+            ),
+        ],
+        minimumDegree: 'Bachelor',
+        minimumExperienceYears: 3,
+        name: 'Forward Brand Producer',
+        numberOfOpenings: 1,
+        openings: [
+            new Shared\AtsJobOpening(
+                closeReason: 'Admoveo trado textilis.',
+                openedAt: Utils\Utils::parseDateTime('2026-05-09T12:55:15.647Z'),
+                status: Shared\AtsJobOpeningStatus::Open,
+            ),
+        ],
+        postings: [
+            new Shared\AtsJobPosting(
+                address: new Shared\PropertyAtsJobPostingAddress(
+                    address1: '8460 Nils Trace',
+                    city: 'West Mervinburgh',
+                    countryCode: 'US',
+                    postalCode: '14162',
+                    region: 'Maine',
+                    regionCode: 'MO',
+                ),
+                createdAt: Utils\Utils::parseDateTime('2026-07-02T04:13:27.297Z'),
+                description: 'Deduco cultellus alii terebro depono thesaurus.',
+                id: 'f6101769-deb3-4721-978c-d205638870ee',
+                isActive: false,
+                location: '6788 Oxford Road',
+                name: 'Forward Security Orchestrator',
+                postingUrl: 'https://ajar-metabolite.net/',
+                updatedAt: Utils\Utils::parseDateTime('2026-07-27T18:33:41.642Z'),
+            ),
+        ],
+        publicJobUrls: [
+            'https://trustworthy-elver.info',
+            'https://parched-dash.info',
+        ],
+        questions: [
+            new Shared\AtsJobQuestion(
+                description: 'Trepide provident taceo rem.',
+                id: '289f27c0-311c-41e5-ad9d-cbe2097332c2',
+                options: [
+                    'censura',
+                    'tum',
+                ],
+                prompt: 'Spectaculum mollitia arcus compello.',
+                question: 'Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.',
+                required: true,
+                type: Shared\AtsJobQuestionType::Text,
+            ),
+            new Shared\AtsJobQuestion(
+                id: 'b3a0b53b-38f3-4e8d-84b9-f413a900d79b',
+                options: [
+                    'odit',
+                ],
+                prompt: 'Similique absque temeritas celebrer enim.',
+                question: 'Vinitor sodalitas desino sollers viduo volo.',
+                required: false,
+                type: Shared\AtsJobQuestionType::Text,
+            ),
+            new Shared\AtsJobQuestion(
+                description: 'Abstergo possimus quibusdam deinde amoveo.',
+                id: '568be61d-060e-4d8c-a8ab-8a17cb25edf3',
+                options: [
+                    'vallum',
+                ],
+                prompt: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
+                question: 'Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.',
+                required: false,
+                type: Shared\AtsJobQuestionType::Text,
+            ),
+        ],
+        skills: [
+            'amiculum',
+            'crux',
+        ],
+        status: Shared\AtsJobStatus::Archived,
+        updatedAt: Utils\Utils::parseDateTime('2026-01-31T18:21:01.088Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -424,7 +764,7 @@ Create a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" -->
+<!-- UsageSnippet language="php" operationID="createAtsScorecard" method="post" path="/ats/{connection_id}/scorecard" example="ats_scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -433,6 +773,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -441,7 +782,24 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsScorecardRequest(
-    atsScorecard: new Shared\AtsScorecard(),
+    atsScorecard: new Shared\AtsScorecard(
+        comment: 'Maiores enim.',
+        createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
+        id: 'c3766d54-1065-46a2-982d-4b25ae89fd81',
+        questions: [
+            new Shared\AtsScorecardQuestion(
+                description: 'Sulum textor eveniet facere vita.',
+                text: 'Aliquam.',
+            ),
+            new Shared\AtsScorecardQuestion(
+                answer: 'Decretum.',
+                description: 'Conatus cicuta doloremque statua bonus.',
+                text: 'Pecto vulpes libero vomer comburo.',
+            ),
+        ],
+        recommendation: Shared\Recommendation::StrongYes,
+        updatedAt: Utils\Utils::parseDateTime('2023-05-27T11:10:09.894Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -1334,7 +1692,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsActivity" method="patch" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -1343,6 +1701,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1351,7 +1710,79 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsActivityRequest(
-    atsActivity: new Shared\AtsActivity(),
+    atsActivity: new Shared\AtsActivity(
+        bcc: [
+            new Shared\AtsEmail(
+                email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+                name: 'Rochelle Franey-Bechtelar',
+                type: Shared\AtsEmailType::Home,
+            ),
+        ],
+        cc: [
+            new Shared\AtsEmail(
+                email: 'Sasha24@hotmail.com',
+                name: 'Dr. Elbert Kuvalis',
+                type: Shared\AtsEmailType::Home,
+            ),
+            new Shared\AtsEmail(
+                email: 'Rosetta_Donnelly@gmail.com',
+                name: 'Ramon Daniel',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Kathryne_Jast@yahoo.com',
+                name: 'Christian Jacobson',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Eldred95@yahoo.com',
+                name: 'Edna Bogan',
+                type: Shared\AtsEmailType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
+        description: 'Amplus.',
+        from: new Shared\PropertyAtsActivityFrom(
+            email: 'Norwood.Wiza47@yahoo.com',
+            name: 'Toby Grant',
+            type: Shared\PropertyAtsActivityFromType::Other,
+        ),
+        id: '09c0b7c8-cf09-47e6-81e4-b38db8539844',
+        isPrivate: false,
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'fe4795f4-2563-4dfd-aee7-e96757e80130',
+                namespace: 'activity',
+                slug: 'acer',
+                value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+            ),
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '8775bf75-34f3-422c-b017-9d59c4ee1a4f',
+                namespace: 'activity',
+                slug: 'tremo',
+                value: 'Amita delectus dicta temptatio utroque ex.',
+            ),
+        ],
+        subType: 'TASK',
+        title: 'Senior Interactions Manager',
+        to: [
+            new Shared\AtsEmail(
+                email: 'Sister91@hotmail.com',
+                name: 'Eddie Nienow PhD',
+                type: Shared\AtsEmailType::Work,
+            ),
+        ],
+        type: Shared\AtsActivityType::Task,
+        updatedAt: Utils\Utils::parseDateTime('2026-03-06T13:33:13.030Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1387,7 +1818,7 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```php
 declare(strict_types=1);
 
@@ -1396,6 +1827,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1404,7 +1836,33 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsApplicationRequest(
-    atsApplication: new Shared\AtsApplication(),
+    atsApplication: new Shared\AtsApplication(
+        answers: [],
+        appliedAt: Utils\Utils::parseDateTime('2025-09-08T08:47:38.167Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
+        hiredAt: Utils\Utils::parseDateTime('2026-04-14T14:33:00.923Z'),
+        id: '4bdbd24c-49ab-4e27-ac80-6a54129ab0c8',
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+                namespace: 'application',
+                slug: 'despecto',
+                value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+            ),
+        ],
+        offers: [],
+        originalStatus: 'vomica',
+        originalSubstatus: 'allatus',
+        rejectedAt: Utils\Utils::parseDateTime('2026-09-08T19:50:15.667Z'),
+        rejectedReason: 'Cometes amplitudo videlicet talio.',
+        source: 'credo',
+        status: Shared\AtsApplicationStatus::Reviewing,
+        updatedAt: Utils\Utils::parseDateTime('2026-09-15T11:08:47.366Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1440,7 +1898,7 @@ Update a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsCandidate" method="patch" path="/ats/{connection_id}/candidate/{id}" example="ats_candidate" -->
 ```php
 declare(strict_types=1);
 
@@ -1449,6 +1907,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1457,7 +1916,92 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsCandidateRequest(
-    atsCandidate: new Shared\AtsCandidate(),
+    atsCandidate: new Shared\AtsCandidate(
+        address: new Shared\PropertyAtsCandidateAddress(
+            address1: '802 Roberts Squares',
+            address2: 'Suite 550',
+            city: 'Lake Raeganside',
+            countryCode: 'US',
+            postalCode: '44530-0054',
+            region: 'Tennessee',
+            regionCode: 'NV',
+        ),
+        companyName: 'Ferry, Legros and Feest',
+        createdAt: Utils\Utils::parseDateTime('2023-10-16T05:42:56.049Z'),
+        education: [
+            new Shared\AtsCandidateEducation(
+                degree: 'mouser throughout',
+                endAt: Utils\Utils::parseDateTime('1992-11-28T20:23:20.311Z'),
+                fieldOfStudy: 'solutio',
+                institution: 'Heller - Lubowitz',
+                level: 'phd',
+                startAt: Utils\Utils::parseDateTime('2001-03-26T08:12:11.510Z'),
+            ),
+        ],
+        emails: [
+            new Shared\AtsEmail(
+                email: 'Ardith.Beatty@hotmail.com',
+                name: 'Opal Lindgren',
+                type: Shared\AtsEmailType::Work,
+            ),
+            new Shared\AtsEmail(
+                email: 'Ardith_Beatty@gmail.com',
+                name: 'Kristi Nader',
+                type: Shared\AtsEmailType::Other,
+            ),
+        ],
+        experiences: [
+            new Shared\AtsCandidateExperience(
+                companyName: 'Donnelly, Buckridge and Steuber',
+                endAt: Utils\Utils::parseDateTime('1978-06-20T02:53:48.383Z'),
+                startAt: Utils\Utils::parseDateTime('1980-02-06T17:16:53.798Z'),
+                title: 'Principal Brand Strategist',
+            ),
+        ],
+        firstName: 'Ardith',
+        id: '059e01ee-fbbb-4c2e-be6b-de1775ee7110',
+        imageUrl: 'https://loremflickr.com/40/3693?lock=5634712403880328',
+        jobIds: [],
+        lastName: 'Beatty',
+        linkUrls: [
+            'https://sizzling-legislature.com',
+            'https://soupy-interchange.net',
+            'https://troubled-substitution.info',
+        ],
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'b53dfb09-8f2b-4e22-b329-912e0b34feac',
+                namespace: 'custom',
+                slug: 'custom_field',
+                value: 'cariosus',
+            ),
+        ],
+        name: 'Ardith Beatty',
+        origin: Shared\Origin::Sourced,
+        skills: [
+            'vita',
+            'cohors',
+        ],
+        sources: [
+            'tactus',
+        ],
+        tags: [
+            'aliquid',
+        ],
+        telephones: [
+            new Shared\AtsTelephone(
+                telephone: '(779) 296-5994',
+                type: Shared\AtsTelephoneType::Home,
+            ),
+        ],
+        title: 'Principal Implementation Analyst',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-22T21:06:41.557Z'),
+        webUrl: 'https://expert-lender.name/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1493,7 +2037,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsCompany" method="patch" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```php
 declare(strict_types=1);
 
@@ -1502,6 +2046,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1510,7 +2055,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsCompanyRequest(
-    atsCompany: new Shared\AtsCompany(),
+    atsCompany: new Shared\AtsCompany(
+        createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
+        id: '5e05144a-6f51-43b6-ac5c-236493b0ba10',
+        name: 'Gulgowski, Dibbert and Wilderman',
+        phone: '1-602-210-4548',
+        updatedAt: Utils\Utils::parseDateTime('2020-09-24T19:30:08.483Z'),
+        websiteUrl: 'https://somber-substitution.com/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1546,7 +2098,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsDocument" method="patch" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```php
 declare(strict_types=1);
 
@@ -1555,6 +2107,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1563,7 +2116,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsDocumentRequest(
-    atsDocument: new Shared\AtsDocument(),
+    atsDocument: new Shared\AtsDocument(
+        createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
+        documentUrl: 'https://vengeful-lashes.biz',
+        filename: 'bah_white_frantically.bz',
+        id: '7f66a233-f2f5-4130-bfe9-fb665c831d3a',
+        type: Shared\AtsDocumentType::Resume,
+        updatedAt: Utils\Utils::parseDateTime('2022-11-28T22:09:20.370Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1599,7 +2159,7 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```php
 declare(strict_types=1);
 
@@ -1608,6 +2168,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1616,7 +2177,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsInterviewRequest(
-    atsInterview: new Shared\AtsInterview(),
+    atsInterview: new Shared\AtsInterview(
+        createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
+        endAt: Utils\Utils::parseDateTime('2025-09-23T08:17:25.151Z'),
+        externalEventXref: '6a22031c-0b28-4d56-ba42-1c31bf19c09f',
+        id: '93efa9e8-7024-4008-b4ed-f951ce0c19c3',
+        location: '26596 Halle Trafficway',
+        startAt: Utils\Utils::parseDateTime('2025-05-19T06:25:27.909Z'),
+        status: Shared\AtsInterviewStatus::Scheduled,
+        updatedAt: Utils\Utils::parseDateTime('2026-02-04T00:36:47.796Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1652,7 +2222,7 @@ Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsJob" method="patch" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```php
 declare(strict_types=1);
 
@@ -1661,6 +2231,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1669,7 +2240,134 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsJobRequest(
-    atsJob: new Shared\AtsJob(),
+    atsJob: new Shared\AtsJob(
+        addresses: [
+            new Shared\AtsAddress(
+                address1: '98097 Carlo Trail',
+                city: 'South Judd',
+                countryCode: 'US',
+                postalCode: '89776-0669',
+                region: 'Mississippi',
+                regionCode: 'FL',
+            ),
+        ],
+        compensation: [
+            new Shared\AtsCompensation(
+                currency: 'AUD',
+                frequency: Shared\Frequency::Day,
+                max: 174303,
+                min: 174042,
+                type: Shared\AtsCompensationType::Bonus,
+            ),
+            new Shared\AtsCompensation(
+                currency: 'MZN',
+                frequency: Shared\Frequency::Month,
+                max: 171171,
+                min: 151975,
+                type: Shared\AtsCompensationType::Salary,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2023-06-16T12:51:44.518Z'),
+        description: 'Global',
+        employmentType: Shared\EmploymentType::Freelance,
+        hiringManagers: [
+            new Shared\AtsReference(
+                id: 'fd9852e3-9035-4f42-beb3-bbf4e4022122',
+                name: 'Eloise Mueller PhD',
+            ),
+        ],
+        id: '8b5ecc4b-1ec7-4db3-968d-b6ea34c37645',
+        industry: 'Gorgeous Plastic Computer',
+        languageLocale: 'en',
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '32fa1129-286d-4567-887f-5cf5e2605c1d',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'acceptus',
+            ),
+        ],
+        minimumDegree: 'Bachelor',
+        minimumExperienceYears: 3,
+        name: 'Forward Brand Producer',
+        numberOfOpenings: 1,
+        openings: [
+            new Shared\AtsJobOpening(
+                closeReason: 'Admoveo trado textilis.',
+                openedAt: Utils\Utils::parseDateTime('2026-05-09T12:55:15.681Z'),
+                status: Shared\AtsJobOpeningStatus::Open,
+            ),
+        ],
+        postings: [
+            new Shared\AtsJobPosting(
+                address: new Shared\PropertyAtsJobPostingAddress(
+                    address1: '8460 Nils Trace',
+                    city: 'West Mervinburgh',
+                    countryCode: 'US',
+                    postalCode: '14162',
+                    region: 'Maine',
+                    regionCode: 'MO',
+                ),
+                createdAt: Utils\Utils::parseDateTime('2026-07-02T04:13:27.334Z'),
+                description: 'Deduco cultellus alii terebro depono thesaurus.',
+                id: 'f6101769-deb3-4721-978c-d205638870ee',
+                isActive: false,
+                location: '6788 Oxford Road',
+                name: 'Forward Security Orchestrator',
+                postingUrl: 'https://ajar-metabolite.net/',
+                updatedAt: Utils\Utils::parseDateTime('2026-07-27T18:33:41.678Z'),
+            ),
+        ],
+        publicJobUrls: [
+            'https://trustworthy-elver.info',
+            'https://parched-dash.info',
+        ],
+        questions: [
+            new Shared\AtsJobQuestion(
+                description: 'Trepide provident taceo rem.',
+                id: '289f27c0-311c-41e5-ad9d-cbe2097332c2',
+                options: [
+                    'censura',
+                    'tum',
+                ],
+                prompt: 'Spectaculum mollitia arcus compello.',
+                question: 'Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.',
+                required: true,
+                type: Shared\AtsJobQuestionType::Text,
+            ),
+            new Shared\AtsJobQuestion(
+                id: 'b3a0b53b-38f3-4e8d-84b9-f413a900d79b',
+                options: [
+                    'odit',
+                ],
+                prompt: 'Similique absque temeritas celebrer enim.',
+                question: 'Vinitor sodalitas desino sollers viduo volo.',
+                required: false,
+                type: Shared\AtsJobQuestionType::Text,
+            ),
+            new Shared\AtsJobQuestion(
+                description: 'Abstergo possimus quibusdam deinde amoveo.',
+                id: '568be61d-060e-4d8c-a8ab-8a17cb25edf3',
+                options: [
+                    'vallum',
+                ],
+                prompt: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
+                question: 'Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.',
+                required: false,
+                type: Shared\AtsJobQuestionType::Text,
+            ),
+        ],
+        skills: [
+            'amiculum',
+            'crux',
+        ],
+        status: Shared\AtsJobStatus::Archived,
+        updatedAt: Utils\Utils::parseDateTime('2026-01-31T18:21:01.118Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1705,7 +2403,7 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsScorecard" method="patch" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -1714,6 +2412,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1722,7 +2421,24 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsScorecardRequest(
-    atsScorecard: new Shared\AtsScorecard(),
+    atsScorecard: new Shared\AtsScorecard(
+        comment: 'Maiores enim.',
+        createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
+        id: '94a1a56d-57e5-4b2f-8e60-532dc14fd628',
+        questions: [
+            new Shared\AtsScorecardQuestion(
+                description: 'Sulum textor eveniet facere vita.',
+                text: 'Aliquam.',
+            ),
+            new Shared\AtsScorecardQuestion(
+                answer: 'Decretum.',
+                description: 'Conatus cicuta doloremque statua bonus.',
+                text: 'Pecto vulpes libero vomer comburo.',
+            ),
+        ],
+        recommendation: Shared\Recommendation::StrongYes,
+        updatedAt: Utils\Utils::parseDateTime('2023-05-27T11:10:09.897Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2166,7 +2882,7 @@ Update an activity
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsActivity" method="put" path="/ats/{connection_id}/activity/{id}" example="ats_activity" -->
 ```php
 declare(strict_types=1);
 
@@ -2175,6 +2891,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2183,7 +2900,79 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsActivityRequest(
-    atsActivity: new Shared\AtsActivity(),
+    atsActivity: new Shared\AtsActivity(
+        bcc: [
+            new Shared\AtsEmail(
+                email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
+                name: 'Rochelle Franey-Bechtelar',
+                type: Shared\AtsEmailType::Home,
+            ),
+        ],
+        cc: [
+            new Shared\AtsEmail(
+                email: 'Sasha24@hotmail.com',
+                name: 'Dr. Elbert Kuvalis',
+                type: Shared\AtsEmailType::Home,
+            ),
+            new Shared\AtsEmail(
+                email: 'Rosetta_Donnelly@gmail.com',
+                name: 'Ramon Daniel',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Kathryne_Jast@yahoo.com',
+                name: 'Christian Jacobson',
+                type: Shared\AtsEmailType::Other,
+            ),
+            new Shared\AtsEmail(
+                email: 'Eldred95@yahoo.com',
+                name: 'Edna Bogan',
+                type: Shared\AtsEmailType::Other,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
+        description: 'Amplus.',
+        from: new Shared\PropertyAtsActivityFrom(
+            email: 'Norwood.Wiza47@yahoo.com',
+            name: 'Toby Grant',
+            type: Shared\PropertyAtsActivityFromType::Other,
+        ),
+        id: '09c0b7c8-cf09-47e6-81e4-b38db8539844',
+        isPrivate: false,
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'fe4795f4-2563-4dfd-aee7-e96757e80130',
+                namespace: 'activity',
+                slug: 'acer',
+                value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
+            ),
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '8775bf75-34f3-422c-b017-9d59c4ee1a4f',
+                namespace: 'activity',
+                slug: 'tremo',
+                value: 'Amita delectus dicta temptatio utroque ex.',
+            ),
+        ],
+        subType: 'TASK',
+        title: 'Senior Interactions Manager',
+        to: [
+            new Shared\AtsEmail(
+                email: 'Sister91@hotmail.com',
+                name: 'Eddie Nienow PhD',
+                type: Shared\AtsEmailType::Work,
+            ),
+        ],
+        type: Shared\AtsActivityType::Task,
+        updatedAt: Utils\Utils::parseDateTime('2026-03-06T13:33:13.030Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2219,7 +3008,7 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```php
 declare(strict_types=1);
 
@@ -2228,6 +3017,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2236,7 +3026,33 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsApplicationRequest(
-    atsApplication: new Shared\AtsApplication(),
+    atsApplication: new Shared\AtsApplication(
+        answers: [],
+        appliedAt: Utils\Utils::parseDateTime('2025-09-08T08:47:38.167Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
+        hiredAt: Utils\Utils::parseDateTime('2026-04-14T14:33:00.923Z'),
+        id: '4bdbd24c-49ab-4e27-ac80-6a54129ab0c8',
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+                namespace: 'application',
+                slug: 'despecto',
+                value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+            ),
+        ],
+        offers: [],
+        originalStatus: 'vomica',
+        originalSubstatus: 'allatus',
+        rejectedAt: Utils\Utils::parseDateTime('2026-09-08T19:50:15.667Z'),
+        rejectedReason: 'Cometes amplitudo videlicet talio.',
+        source: 'credo',
+        status: Shared\AtsApplicationStatus::Reviewing,
+        updatedAt: Utils\Utils::parseDateTime('2026-09-15T11:08:47.366Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2272,7 +3088,7 @@ Update a candidate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsCandidate" method="put" path="/ats/{connection_id}/candidate/{id}" example="ats_candidate" -->
 ```php
 declare(strict_types=1);
 
@@ -2281,6 +3097,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2289,7 +3106,92 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsCandidateRequest(
-    atsCandidate: new Shared\AtsCandidate(),
+    atsCandidate: new Shared\AtsCandidate(
+        address: new Shared\PropertyAtsCandidateAddress(
+            address1: '802 Roberts Squares',
+            address2: 'Suite 550',
+            city: 'Lake Raeganside',
+            countryCode: 'US',
+            postalCode: '44530-0054',
+            region: 'Tennessee',
+            regionCode: 'NV',
+        ),
+        companyName: 'Ferry, Legros and Feest',
+        createdAt: Utils\Utils::parseDateTime('2023-10-16T05:42:56.049Z'),
+        education: [
+            new Shared\AtsCandidateEducation(
+                degree: 'mouser throughout',
+                endAt: Utils\Utils::parseDateTime('1992-11-28T20:23:20.311Z'),
+                fieldOfStudy: 'solutio',
+                institution: 'Heller - Lubowitz',
+                level: 'phd',
+                startAt: Utils\Utils::parseDateTime('2001-03-26T08:12:11.510Z'),
+            ),
+        ],
+        emails: [
+            new Shared\AtsEmail(
+                email: 'Ardith.Beatty@hotmail.com',
+                name: 'Opal Lindgren',
+                type: Shared\AtsEmailType::Work,
+            ),
+            new Shared\AtsEmail(
+                email: 'Ardith_Beatty@gmail.com',
+                name: 'Kristi Nader',
+                type: Shared\AtsEmailType::Other,
+            ),
+        ],
+        experiences: [
+            new Shared\AtsCandidateExperience(
+                companyName: 'Donnelly, Buckridge and Steuber',
+                endAt: Utils\Utils::parseDateTime('1978-06-20T02:53:48.383Z'),
+                startAt: Utils\Utils::parseDateTime('1980-02-06T17:16:53.798Z'),
+                title: 'Principal Brand Strategist',
+            ),
+        ],
+        firstName: 'Ardith',
+        id: '059e01ee-fbbb-4c2e-be6b-de1775ee7110',
+        imageUrl: 'https://loremflickr.com/40/3693?lock=5634712403880328',
+        jobIds: [],
+        lastName: 'Beatty',
+        linkUrls: [
+            'https://sizzling-legislature.com',
+            'https://soupy-interchange.net',
+            'https://troubled-substitution.info',
+        ],
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'b53dfb09-8f2b-4e22-b329-912e0b34feac',
+                namespace: 'custom',
+                slug: 'custom_field',
+                value: 'cariosus',
+            ),
+        ],
+        name: 'Ardith Beatty',
+        origin: Shared\Origin::Sourced,
+        skills: [
+            'vita',
+            'cohors',
+        ],
+        sources: [
+            'tactus',
+        ],
+        tags: [
+            'aliquid',
+        ],
+        telephones: [
+            new Shared\AtsTelephone(
+                telephone: '(779) 296-5994',
+                type: Shared\AtsTelephoneType::Home,
+            ),
+        ],
+        title: 'Principal Implementation Analyst',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-22T21:06:41.557Z'),
+        webUrl: 'https://expert-lender.name/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2325,7 +3227,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsCompany" method="put" path="/ats/{connection_id}/company/{id}" example="ats_company" -->
 ```php
 declare(strict_types=1);
 
@@ -2334,6 +3236,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2342,7 +3245,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsCompanyRequest(
-    atsCompany: new Shared\AtsCompany(),
+    atsCompany: new Shared\AtsCompany(
+        createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
+        id: '5e05144a-6f51-43b6-ac5c-236493b0ba10',
+        name: 'Gulgowski, Dibbert and Wilderman',
+        phone: '1-602-210-4548',
+        updatedAt: Utils\Utils::parseDateTime('2020-09-24T19:30:08.483Z'),
+        websiteUrl: 'https://somber-substitution.com/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2378,7 +3288,7 @@ Update a document
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsDocument" method="put" path="/ats/{connection_id}/document/{id}" example="ats_document" -->
 ```php
 declare(strict_types=1);
 
@@ -2387,6 +3297,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2395,7 +3306,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsDocumentRequest(
-    atsDocument: new Shared\AtsDocument(),
+    atsDocument: new Shared\AtsDocument(
+        createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
+        documentUrl: 'https://vengeful-lashes.biz',
+        filename: 'bah_white_frantically.bz',
+        id: '7f66a233-f2f5-4130-bfe9-fb665c831d3a',
+        type: Shared\AtsDocumentType::Resume,
+        updatedAt: Utils\Utils::parseDateTime('2022-11-28T22:09:20.370Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2431,7 +3349,7 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```php
 declare(strict_types=1);
 
@@ -2440,6 +3358,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2448,7 +3367,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsInterviewRequest(
-    atsInterview: new Shared\AtsInterview(),
+    atsInterview: new Shared\AtsInterview(
+        createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
+        endAt: Utils\Utils::parseDateTime('2025-09-23T08:17:25.151Z'),
+        externalEventXref: '6a22031c-0b28-4d56-ba42-1c31bf19c09f',
+        id: '93efa9e8-7024-4008-b4ed-f951ce0c19c3',
+        location: '26596 Halle Trafficway',
+        startAt: Utils\Utils::parseDateTime('2025-05-19T06:25:27.909Z'),
+        status: Shared\AtsInterviewStatus::Scheduled,
+        updatedAt: Utils\Utils::parseDateTime('2026-02-04T00:36:47.796Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2484,7 +3412,7 @@ Update a job
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsJob" method="put" path="/ats/{connection_id}/job/{id}" example="ats_job" -->
 ```php
 declare(strict_types=1);
 
@@ -2493,6 +3421,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2501,7 +3430,134 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsJobRequest(
-    atsJob: new Shared\AtsJob(),
+    atsJob: new Shared\AtsJob(
+        addresses: [
+            new Shared\AtsAddress(
+                address1: '98097 Carlo Trail',
+                city: 'South Judd',
+                countryCode: 'US',
+                postalCode: '89776-0669',
+                region: 'Mississippi',
+                regionCode: 'FL',
+            ),
+        ],
+        compensation: [
+            new Shared\AtsCompensation(
+                currency: 'AUD',
+                frequency: Shared\Frequency::Day,
+                max: 174303,
+                min: 174042,
+                type: Shared\AtsCompensationType::Bonus,
+            ),
+            new Shared\AtsCompensation(
+                currency: 'MZN',
+                frequency: Shared\Frequency::Month,
+                max: 171171,
+                min: 151975,
+                type: Shared\AtsCompensationType::Salary,
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2023-06-16T12:51:44.518Z'),
+        description: 'Global',
+        employmentType: Shared\EmploymentType::Freelance,
+        hiringManagers: [
+            new Shared\AtsReference(
+                id: 'fd9852e3-9035-4f42-beb3-bbf4e4022122',
+                name: 'Eloise Mueller PhD',
+            ),
+        ],
+        id: '8b5ecc4b-1ec7-4db3-968d-b6ea34c37645',
+        industry: 'Gorgeous Plastic Computer',
+        languageLocale: 'en',
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: '32fa1129-286d-4567-887f-5cf5e2605c1d',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'acceptus',
+            ),
+        ],
+        minimumDegree: 'Bachelor',
+        minimumExperienceYears: 3,
+        name: 'Forward Brand Producer',
+        numberOfOpenings: 1,
+        openings: [
+            new Shared\AtsJobOpening(
+                closeReason: 'Admoveo trado textilis.',
+                openedAt: Utils\Utils::parseDateTime('2026-05-09T12:55:15.681Z'),
+                status: Shared\AtsJobOpeningStatus::Open,
+            ),
+        ],
+        postings: [
+            new Shared\AtsJobPosting(
+                address: new Shared\PropertyAtsJobPostingAddress(
+                    address1: '8460 Nils Trace',
+                    city: 'West Mervinburgh',
+                    countryCode: 'US',
+                    postalCode: '14162',
+                    region: 'Maine',
+                    regionCode: 'MO',
+                ),
+                createdAt: Utils\Utils::parseDateTime('2026-07-02T04:13:27.334Z'),
+                description: 'Deduco cultellus alii terebro depono thesaurus.',
+                id: 'f6101769-deb3-4721-978c-d205638870ee',
+                isActive: false,
+                location: '6788 Oxford Road',
+                name: 'Forward Security Orchestrator',
+                postingUrl: 'https://ajar-metabolite.net/',
+                updatedAt: Utils\Utils::parseDateTime('2026-07-27T18:33:41.678Z'),
+            ),
+        ],
+        publicJobUrls: [
+            'https://trustworthy-elver.info',
+            'https://parched-dash.info',
+        ],
+        questions: [
+            new Shared\AtsJobQuestion(
+                description: 'Trepide provident taceo rem.',
+                id: '289f27c0-311c-41e5-ad9d-cbe2097332c2',
+                options: [
+                    'censura',
+                    'tum',
+                ],
+                prompt: 'Spectaculum mollitia arcus compello.',
+                question: 'Sodalitas nemo natus attonbitus reprehenderit voro depono constans vehemens ante.',
+                required: true,
+                type: Shared\AtsJobQuestionType::Text,
+            ),
+            new Shared\AtsJobQuestion(
+                id: 'b3a0b53b-38f3-4e8d-84b9-f413a900d79b',
+                options: [
+                    'odit',
+                ],
+                prompt: 'Similique absque temeritas celebrer enim.',
+                question: 'Vinitor sodalitas desino sollers viduo volo.',
+                required: false,
+                type: Shared\AtsJobQuestionType::Text,
+            ),
+            new Shared\AtsJobQuestion(
+                description: 'Abstergo possimus quibusdam deinde amoveo.',
+                id: '568be61d-060e-4d8c-a8ab-8a17cb25edf3',
+                options: [
+                    'vallum',
+                ],
+                prompt: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
+                question: 'Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.',
+                required: false,
+                type: Shared\AtsJobQuestionType::Text,
+            ),
+        ],
+        skills: [
+            'amiculum',
+            'crux',
+        ],
+        status: Shared\AtsJobStatus::Archived,
+        updatedAt: Utils\Utils::parseDateTime('2026-01-31T18:21:01.118Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -2537,7 +3593,7 @@ Update a scorecard
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsScorecard" method="put" path="/ats/{connection_id}/scorecard/{id}" example="ats_scorecard" -->
 ```php
 declare(strict_types=1);
 
@@ -2546,6 +3602,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -2554,7 +3611,24 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsScorecardRequest(
-    atsScorecard: new Shared\AtsScorecard(),
+    atsScorecard: new Shared\AtsScorecard(
+        comment: 'Maiores enim.',
+        createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
+        id: '94a1a56d-57e5-4b2f-8e60-532dc14fd628',
+        questions: [
+            new Shared\AtsScorecardQuestion(
+                description: 'Sulum textor eveniet facere vita.',
+                text: 'Aliquam.',
+            ),
+            new Shared\AtsScorecardQuestion(
+                answer: 'Decretum.',
+                description: 'Conatus cicuta doloremque statua bonus.',
+                text: 'Pecto vulpes libero vomer comburo.',
+            ),
+        ],
+        recommendation: Shared\Recommendation::StrongYes,
+        updatedAt: Utils\Utils::parseDateTime('2023-05-27T11:10:09.897Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

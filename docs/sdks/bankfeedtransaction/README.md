@@ -17,7 +17,7 @@ Create a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" -->
+<!-- UsageSnippet language="php" operationID="createAccountingBankfeedtransaction" method="post" path="/accounting/{connection_id}/bankfeedtransaction" example="accounting_bankfeedtransaction" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingBankfeedtransactionRequest(
-    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(),
+    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(
+        accountId: 'b7dc4175-1368-4b89-a700-d621b6666648',
+        amount: 60889,
+        bankCategory: 'Games',
+        bankfeedaccountId: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+        categoryIds: [],
+        contactId: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+        createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
+        currency: 'SRD',
+        description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+        id: 'd7e5f1b9-8fad-485f-85be-e2c6175122b6',
+        isPending: true,
+        merchantName: 'Reichert, Erdman and Tillman',
+        postedAt: Utils\Utils::parseDateTime('2025-03-23T18:33:52.190Z'),
+        reference: '93642593',
+        transactionAt: Utils\Utils::parseDateTime('2022-07-27T19:48:08.850Z'),
+        type: Shared\AccountingBankfeedtransactionType::Credit,
+        updatedAt: Utils\Utils::parseDateTime('2022-05-23T20:47:18.778Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +189,7 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingBankfeedtransaction" method="patch" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +198,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +207,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingBankfeedtransactionRequest(
-    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(),
+    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(
+        accountId: 'b7dc4175-1368-4b89-a700-d621b6666648',
+        amount: 60889,
+        bankCategory: 'Games',
+        bankfeedaccountId: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+        categoryIds: [],
+        contactId: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+        createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
+        currency: 'SRD',
+        description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+        id: '0fc0602a-eb02-41c9-ae51-62d4f9d00e2a',
+        isPending: true,
+        merchantName: 'Reichert, Erdman and Tillman',
+        postedAt: Utils\Utils::parseDateTime('2025-03-23T18:33:52.195Z'),
+        reference: '93642593',
+        transactionAt: Utils\Utils::parseDateTime('2022-07-27T19:48:08.850Z'),
+        type: Shared\AccountingBankfeedtransactionType::Credit,
+        updatedAt: Utils\Utils::parseDateTime('2022-05-23T20:47:18.778Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +312,7 @@ Update a bankfeedtransaction
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingBankfeedtransaction" method="put" path="/accounting/{connection_id}/bankfeedtransaction/{id}" example="accounting_bankfeedtransaction" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +321,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +330,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingBankfeedtransactionRequest(
-    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(),
+    accountingBankfeedtransaction: new Shared\AccountingBankfeedtransaction(
+        accountId: 'b7dc4175-1368-4b89-a700-d621b6666648',
+        amount: 60889,
+        bankCategory: 'Games',
+        bankfeedaccountId: '34c1d05f-5b62-4bcd-9121-3be8b720941f',
+        categoryIds: [],
+        contactId: '1ef58ebe-f9c9-46f6-9d9c-2df2658503be',
+        createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
+        currency: 'SRD',
+        description: 'payment transaction at McLaughlin - Schaden using card ending with ****8233 for DOP 574.03 in account ***9523.',
+        id: '0fc0602a-eb02-41c9-ae51-62d4f9d00e2a',
+        isPending: true,
+        merchantName: 'Reichert, Erdman and Tillman',
+        postedAt: Utils\Utils::parseDateTime('2025-03-23T18:33:52.195Z'),
+        reference: '93642593',
+        transactionAt: Utils\Utils::parseDateTime('2022-07-27T19:48:08.850Z'),
+        type: Shared\AccountingBankfeedtransactionType::Credit,
+        updatedAt: Utils\Utils::parseDateTime('2022-05-23T20:47:18.778Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

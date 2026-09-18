@@ -25,7 +25,7 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="createAdsOrganization" method="post" path="/ads/{connection_id}/organization" example="ads_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -34,6 +34,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -42,7 +43,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsOrganizationRequest(
-    adsOrganization: new Shared\AdsOrganization(),
+    adsOrganization: new Shared\AdsOrganization(
+        accountNumber: 'LQUJx8zQBW',
+        createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
+        currency: 'USD',
+        id: '2dcef265-035e-4877-9dcb-52b425c0a389',
+        managers: [
+            new Shared\AdsManager(
+                id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
+                name: 'Parker, Leannon and Gibson',
+            ),
+        ],
+        name: 'Ankunding Inc',
+        status: Shared\AdsOrganizationStatus::Processing,
+        timezone: 'Europe/Chisinau',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-27T02:30:46.720Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -77,7 +93,7 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" example="repo_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -86,6 +102,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -94,7 +111,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateRepoOrganizationRequest(
-    repoOrganization: new Shared\RepoOrganization(),
+    repoOrganization: new Shared\RepoOrganization(
+        avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+        createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
+        description: 'Trepide defendo supra testimonium ager.',
+        id: 'b2fae39f-83b2-4f92-9838-66f9f34dfae1',
+        name: 'Denesik - Lemke',
+        updatedAt: Utils\Utils::parseDateTime('2023-08-12T23:34:40.316Z'),
+        webUrl: 'https://turbulent-overheard.biz',
+    ),
     connectionId: '<id>',
 );
 
@@ -432,7 +457,7 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsOrganization" method="patch" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -441,6 +466,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -449,7 +475,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsOrganizationRequest(
-    adsOrganization: new Shared\AdsOrganization(),
+    adsOrganization: new Shared\AdsOrganization(
+        accountNumber: 'LQUJx8zQBW',
+        createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
+        currency: 'USD',
+        id: '5ed729c1-13ee-41a9-9c74-48e8d280748c',
+        managers: [
+            new Shared\AdsManager(
+                id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
+                name: 'Parker, Leannon and Gibson',
+            ),
+        ],
+        name: 'Ankunding Inc',
+        status: Shared\AdsOrganizationStatus::Processing,
+        timezone: 'Europe/Chisinau',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-27T02:30:46.730Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -485,7 +526,7 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -494,6 +535,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -502,7 +544,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchRepoOrganizationRequest(
-    repoOrganization: new Shared\RepoOrganization(),
+    repoOrganization: new Shared\RepoOrganization(
+        avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+        createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
+        description: 'Trepide defendo supra testimonium ager.',
+        id: '51493ffd-a0c6-411e-b158-55b80104e6a6',
+        name: 'Denesik - Lemke',
+        updatedAt: Utils\Utils::parseDateTime('2023-08-12T23:34:40.317Z'),
+        webUrl: 'https://turbulent-overheard.biz',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -640,7 +690,7 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsOrganization" method="put" path="/ads/{connection_id}/organization/{id}" example="ads_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -649,6 +699,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -657,7 +708,22 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsOrganizationRequest(
-    adsOrganization: new Shared\AdsOrganization(),
+    adsOrganization: new Shared\AdsOrganization(
+        accountNumber: 'LQUJx8zQBW',
+        createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
+        currency: 'USD',
+        id: '5ed729c1-13ee-41a9-9c74-48e8d280748c',
+        managers: [
+            new Shared\AdsManager(
+                id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
+                name: 'Parker, Leannon and Gibson',
+            ),
+        ],
+        name: 'Ankunding Inc',
+        status: Shared\AdsOrganizationStatus::Processing,
+        timezone: 'Europe/Chisinau',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-27T02:30:46.730Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -693,7 +759,7 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -702,6 +768,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -710,7 +777,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateRepoOrganizationRequest(
-    repoOrganization: new Shared\RepoOrganization(),
+    repoOrganization: new Shared\RepoOrganization(
+        avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+        createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
+        description: 'Trepide defendo supra testimonium ager.',
+        id: '51493ffd-a0c6-411e-b158-55b80104e6a6',
+        name: 'Denesik - Lemke',
+        updatedAt: Utils\Utils::parseDateTime('2023-08-12T23:34:40.317Z'),
+        webUrl: 'https://turbulent-overheard.biz',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

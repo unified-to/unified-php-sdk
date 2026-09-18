@@ -17,7 +17,7 @@ Create an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" -->
+<!-- UsageSnippet language="php" operationID="createAtsApplication" method="post" path="/ats/{connection_id}/application" example="ats_application" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,33 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsApplicationRequest(
-    atsApplication: new Shared\AtsApplication(),
+    atsApplication: new Shared\AtsApplication(
+        answers: [],
+        appliedAt: Utils\Utils::parseDateTime('2025-09-08T08:47:38.152Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
+        hiredAt: Utils\Utils::parseDateTime('2026-04-14T14:33:00.903Z'),
+        id: 'f5c781be-7431-407c-8e74-374b5b0e8a9e',
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+                namespace: 'application',
+                slug: 'despecto',
+                value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+            ),
+        ],
+        offers: [],
+        originalStatus: 'vomica',
+        originalSubstatus: 'allatus',
+        rejectedAt: Utils\Utils::parseDateTime('2026-09-08T19:50:15.645Z'),
+        rejectedReason: 'Cometes amplitudo videlicet talio.',
+        source: 'credo',
+        status: Shared\AtsApplicationStatus::Reviewing,
+        updatedAt: Utils\Utils::parseDateTime('2026-09-15T11:08:47.343Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +197,7 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsApplication" method="patch" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +206,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +215,33 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsApplicationRequest(
-    atsApplication: new Shared\AtsApplication(),
+    atsApplication: new Shared\AtsApplication(
+        answers: [],
+        appliedAt: Utils\Utils::parseDateTime('2025-09-08T08:47:38.167Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
+        hiredAt: Utils\Utils::parseDateTime('2026-04-14T14:33:00.923Z'),
+        id: '4bdbd24c-49ab-4e27-ac80-6a54129ab0c8',
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+                namespace: 'application',
+                slug: 'despecto',
+                value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+            ),
+        ],
+        offers: [],
+        originalStatus: 'vomica',
+        originalSubstatus: 'allatus',
+        rejectedAt: Utils\Utils::parseDateTime('2026-09-08T19:50:15.667Z'),
+        rejectedReason: 'Cometes amplitudo videlicet talio.',
+        source: 'credo',
+        status: Shared\AtsApplicationStatus::Reviewing,
+        updatedAt: Utils\Utils::parseDateTime('2026-09-15T11:08:47.366Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +328,7 @@ Update an application
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsApplication" method="put" path="/ats/{connection_id}/application/{id}" example="ats_application" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +337,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +346,33 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsApplicationRequest(
-    atsApplication: new Shared\AtsApplication(),
+    atsApplication: new Shared\AtsApplication(
+        answers: [],
+        appliedAt: Utils\Utils::parseDateTime('2025-09-08T08:47:38.167Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
+        hiredAt: Utils\Utils::parseDateTime('2026-04-14T14:33:00.923Z'),
+        id: '4bdbd24c-49ab-4e27-ac80-6a54129ab0c8',
+        metadata: [
+            new Shared\AtsMetadata(
+                extraData: [
+
+                ],
+                format: Shared\AtsMetadataFormat::Text,
+                id: 'a1302a79-0341-40e6-b91a-daeb95584617',
+                namespace: 'application',
+                slug: 'despecto',
+                value: 'Argentum decretum cultellus aveho distinctio verecundia stella depono.',
+            ),
+        ],
+        offers: [],
+        originalStatus: 'vomica',
+        originalSubstatus: 'allatus',
+        rejectedAt: Utils\Utils::parseDateTime('2026-09-08T19:50:15.667Z'),
+        rejectedReason: 'Cometes amplitudo videlicet talio.',
+        source: 'credo',
+        status: Shared\AtsApplicationStatus::Reviewing,
+        updatedAt: Utils\Utils::parseDateTime('2026-09-15T11:08:47.366Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

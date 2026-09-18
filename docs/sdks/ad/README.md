@@ -17,7 +17,7 @@ Create an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" -->
+<!-- UsageSnippet language="php" operationID="createAdsAd" method="post" path="/ads/{connection_id}/ad" example="ads_ad" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsAdRequest(
-    adsAd: new Shared\AdsAd(),
+    adsAd: new Shared\AdsAd(
+        adCopy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+        adType: Shared\AdType::Social,
+        advertiserName: 'Robel, Nader and Rau',
+        createdAt: Utils\Utils::parseDateTime('2022-11-08T03:38:20.978Z'),
+        creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
+        description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
+        finalUrl: 'https://improbable-sanity.com',
+        id: '8ac8beee-3041-4926-b113-1dff835ea640',
+        name: 'Hermiston Group',
+        status: Shared\AdsAdStatus::Archived,
+        updatedAt: Utils\Utils::parseDateTime('2024-06-05T02:38:02.005Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +183,7 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsAd" method="patch" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +192,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +201,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsAdRequest(
-    adsAd: new Shared\AdsAd(),
+    adsAd: new Shared\AdsAd(
+        adCopy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+        adType: Shared\AdType::Social,
+        advertiserName: 'Robel, Nader and Rau',
+        createdAt: Utils\Utils::parseDateTime('2022-11-08T03:38:20.978Z'),
+        creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
+        description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
+        finalUrl: 'https://improbable-sanity.com',
+        id: '91eed89c-4e4f-4566-a55a-c1b3ac1bcb6c',
+        name: 'Hermiston Group',
+        status: Shared\AdsAdStatus::Archived,
+        updatedAt: Utils\Utils::parseDateTime('2024-06-05T02:38:02.012Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +300,7 @@ Update an ad
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsAd" method="put" path="/ads/{connection_id}/ad/{id}" example="ads_ad" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +309,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +318,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsAdRequest(
-    adsAd: new Shared\AdsAd(),
+    adsAd: new Shared\AdsAd(
+        adCopy: 'Ascisco tolero caute sapiente. Valens unde comedo cursus crinis nobis thema. Cohaero nisi ullam tum unde ultio vilicus auditor capio.',
+        adType: Shared\AdType::Social,
+        advertiserName: 'Robel, Nader and Rau',
+        createdAt: Utils\Utils::parseDateTime('2022-11-08T03:38:20.978Z'),
+        creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
+        description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
+        finalUrl: 'https://improbable-sanity.com',
+        id: '91eed89c-4e4f-4566-a55a-c1b3ac1bcb6c',
+        name: 'Hermiston Group',
+        status: Shared\AdsAdStatus::Archived,
+        updatedAt: Utils\Utils::parseDateTime('2024-06-05T02:38:02.012Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

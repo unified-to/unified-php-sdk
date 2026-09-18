@@ -33,7 +33,7 @@ Create a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" -->
+<!-- UsageSnippet language="php" operationID="createPaymentLink" method="post" path="/payment/{connection_id}/link" example="payment_link" -->
 ```php
 declare(strict_types=1);
 
@@ -42,6 +42,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -50,7 +51,84 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreatePaymentLinkRequest(
-    paymentLink: new Shared\PaymentLink(),
+    paymentLink: new Shared\PaymentLink(
+        amount: 81211,
+        createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
+        currency: 'GYD',
+        description: 'Adfero ipsa terreo benevolentia utrum.',
+        id: 'de479ef6-b430-4a15-8da6-1f9387b41484',
+        isActive: true,
+        isChargeableNow: false,
+        lineitems: [
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-08-21T00:45:53.202Z'),
+                id: '6d3a2ccc-ef98-423d-96f9-cda5eb139cf9',
+                itemDescription: 'Experience the white brilliance of our Hat, perfect for aggravating environments',
+                itemName: 'Licensed Marble Mouse',
+                itemSku: 'TAD4EYLVRI',
+                notes: 'Charisma theca video verus conduco attollo cervus decretum viridis.',
+                taxAmount: 221,
+                totalAmount: 1841,
+                unitAmount: 270,
+                unitQuantity: 6,
+                updatedAt: Utils\Utils::parseDateTime('2023-02-12T17:31:25.507Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-09-30T05:29:29.258Z'),
+                discountAmount: 15,
+                id: 'e437d531-00a4-4111-8a73-4cae055a0907',
+                itemDescription: 'New Chicken model with 79 GB RAM, 846 GB storage, and lovely features',
+                itemName: 'Intelligent Steel Table',
+                itemSku: 'V8HQCDQYUZ',
+                taxAmount: 150,
+                totalAmount: 2037,
+                unitAmount: 317,
+                unitQuantity: 6,
+                updatedAt: Utils\Utils::parseDateTime('2023-05-31T11:10:09.190Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-12-16T13:52:52.341Z'),
+                id: 'f26d9e66-ea9a-4f9d-bd31-5509c236d0ed',
+                itemDescription: 'Dach - Wolff\'s most advanced Car technology increases dense capabilities',
+                itemName: 'Modern Gold Soap',
+                itemSku: 'DYGKCTCLDJ',
+                taxAmount: 41,
+                totalAmount: 281,
+                unitAmount: 30,
+                unitQuantity: 8,
+                updatedAt: Utils\Utils::parseDateTime('2023-05-22T16:35:07.583Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-08-12T19:45:39.705Z'),
+                id: '79bc962c-2ced-4c6b-9a83-ebf5eed59ce2',
+                itemDescription: 'The sleek and unimportant Salad comes with salmon LED lighting for smart functionality',
+                itemName: 'Generic Aluminum Ball',
+                itemSku: 'BSBAXWAAFF',
+                notes: 'Cubo adversus victus subito asperiores vereor cibo tabgo.',
+                taxAmount: 6,
+                totalAmount: 78,
+                unitAmount: 24,
+                unitQuantity: 3,
+                updatedAt: Utils\Utils::parseDateTime('2023-11-13T12:39:15.951Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-02-14T06:21:13.641Z'),
+                discountAmount: 171,
+                id: '90920f4b-3321-4866-80e7-39acc835e708',
+                itemDescription: 'New Bike model with 29 GB RAM, 271 GB storage, and minty features',
+                itemName: 'Incredible Aluminum Chicken',
+                itemSku: '6ERMJK20HE',
+                taxAmount: 263,
+                totalAmount: 3708,
+                unitAmount: 452,
+                unitQuantity: 8,
+                updatedAt: Utils\Utils::parseDateTime('2023-01-31T21:39:30.894Z'),
+            ),
+        ],
+        successUrl: 'https://parched-kettledrum.com/',
+        updatedAt: Utils\Utils::parseDateTime('2025-12-10T19:01:30.840Z'),
+        url: 'https://forceful-laughter.biz/',
+    ),
     connectionId: '<id>',
 );
 
@@ -85,7 +163,7 @@ Create a payment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createPaymentPayment" method="post" path="/payment/{connection_id}/payment" -->
+<!-- UsageSnippet language="php" operationID="createPaymentPayment" method="post" path="/payment/{connection_id}/payment" example="payment_payment" -->
 ```php
 declare(strict_types=1);
 
@@ -94,6 +172,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -102,7 +181,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreatePaymentPaymentRequest(
-    paymentPayment: new Shared\PaymentPayment(),
+    paymentPayment: new Shared\PaymentPayment(
+        allocations: [],
+        cardBrand: 'AMEX',
+        cardLast4: '0819',
+        createdAt: Utils\Utils::parseDateTime('2022-03-10T00:19:42.086Z'),
+        currency: 'BIF',
+        feeAmount: 3,
+        id: '206f57b8-8bfb-45ff-a577-0bac8f8902bc',
+        locationId: '94f7c68e-07de-40d1-9d6f-a0896363913f',
+        notes: 'Tactus vilicus.',
+        paymentMethod: 'BANK_TRANSFER',
+        reference: 'auctus',
+        status: Shared\PaymentPaymentStatus::Succeeded,
+        tenderType: Shared\TenderType::Check,
+        tipAmount: 2,
+        totalAmount: 44219,
+        type: Shared\PaymentPaymentType::Invoice,
+        updatedAt: Utils\Utils::parseDateTime('2025-05-24T15:10:03.791Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -137,7 +234,7 @@ Create a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" -->
+<!-- UsageSnippet language="php" operationID="createPaymentSubscription" method="post" path="/payment/{connection_id}/subscription" example="payment_subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -146,6 +243,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -154,7 +252,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreatePaymentSubscriptionRequest(
-    paymentSubscription: new Shared\PaymentSubscription(),
+    paymentSubscription: new Shared\PaymentSubscription(
+        createdAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
+        currency: 'WST',
+        currentPeriodEndAt: Utils\Utils::parseDateTime('2023-06-03T04:20:29.157Z'),
+        currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-21T03:55:58.846Z'),
+        dayOfMonth: 1,
+        description: 'Innovative Mouse featuring important technology and Bamboo construction',
+        endAt: Utils\Utils::parseDateTime('2023-05-21T12:36:09.234Z'),
+        id: '520dca25-7af1-4a90-b496-2b696361bc87',
+        interval: 1,
+        intervalUnit: Shared\IntervalUnit::Month,
+        lineitems: [],
+        startAt: Utils\Utils::parseDateTime('2023-05-29T06:04:51.030Z'),
+        status: Shared\PaymentSubscriptionStatus::Active,
+        totalAmount: 75616,
+        updatedAt: Utils\Utils::parseDateTime('2023-12-15T22:33:11.956Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -694,7 +808,7 @@ Update a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchPaymentLink" method="patch" path="/payment/{connection_id}/link/{id}" example="payment_link" -->
 ```php
 declare(strict_types=1);
 
@@ -703,6 +817,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -711,7 +826,84 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchPaymentLinkRequest(
-    paymentLink: new Shared\PaymentLink(),
+    paymentLink: new Shared\PaymentLink(
+        amount: 81211,
+        createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
+        currency: 'GYD',
+        description: 'Adfero ipsa terreo benevolentia utrum.',
+        id: 'db0281de-883c-4789-b3bf-6e424da44339',
+        isActive: true,
+        isChargeableNow: false,
+        lineitems: [
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-08-21T00:45:53.202Z'),
+                id: '70ab16c4-a237-4fb1-a155-d534c2a143ea',
+                itemDescription: 'Experience the white brilliance of our Hat, perfect for aggravating environments',
+                itemName: 'Licensed Marble Mouse',
+                itemSku: 'TAD4EYLVRI',
+                notes: 'Charisma theca video verus conduco attollo cervus decretum viridis.',
+                taxAmount: 221,
+                totalAmount: 1841,
+                unitAmount: 270,
+                unitQuantity: 6,
+                updatedAt: Utils\Utils::parseDateTime('2023-02-12T17:31:25.507Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-09-30T05:29:29.258Z'),
+                discountAmount: 15,
+                id: 'e9727ff7-05ea-4df0-9651-77dae78bb75b',
+                itemDescription: 'New Chicken model with 79 GB RAM, 846 GB storage, and lovely features',
+                itemName: 'Intelligent Steel Table',
+                itemSku: 'V8HQCDQYUZ',
+                taxAmount: 150,
+                totalAmount: 2037,
+                unitAmount: 317,
+                unitQuantity: 6,
+                updatedAt: Utils\Utils::parseDateTime('2023-05-31T11:10:09.190Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-12-16T13:52:52.341Z'),
+                id: '7f4f4212-96eb-4d13-b559-e00e7971c34c',
+                itemDescription: 'Dach - Wolff\'s most advanced Car technology increases dense capabilities',
+                itemName: 'Modern Gold Soap',
+                itemSku: 'DYGKCTCLDJ',
+                taxAmount: 41,
+                totalAmount: 281,
+                unitAmount: 30,
+                unitQuantity: 8,
+                updatedAt: Utils\Utils::parseDateTime('2023-05-22T16:35:07.583Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-08-12T19:45:39.705Z'),
+                id: '9897b41f-48fb-4094-b5ce-3c0576ec0e4b',
+                itemDescription: 'The sleek and unimportant Salad comes with salmon LED lighting for smart functionality',
+                itemName: 'Generic Aluminum Ball',
+                itemSku: 'BSBAXWAAFF',
+                notes: 'Cubo adversus victus subito asperiores vereor cibo tabgo.',
+                taxAmount: 6,
+                totalAmount: 78,
+                unitAmount: 24,
+                unitQuantity: 3,
+                updatedAt: Utils\Utils::parseDateTime('2023-11-13T12:39:15.951Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-02-14T06:21:13.641Z'),
+                discountAmount: 171,
+                id: '6e24a907-e092-4ef3-93c7-c545cbbec59d',
+                itemDescription: 'New Bike model with 29 GB RAM, 271 GB storage, and minty features',
+                itemName: 'Incredible Aluminum Chicken',
+                itemSku: '6ERMJK20HE',
+                taxAmount: 263,
+                totalAmount: 3708,
+                unitAmount: 452,
+                unitQuantity: 8,
+                updatedAt: Utils\Utils::parseDateTime('2023-01-31T21:39:30.894Z'),
+            ),
+        ],
+        successUrl: 'https://parched-kettledrum.com/',
+        updatedAt: Utils\Utils::parseDateTime('2025-12-10T19:01:30.853Z'),
+        url: 'https://forceful-laughter.biz/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -747,7 +939,7 @@ Update a payment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchPaymentPayment" method="patch" path="/payment/{connection_id}/payment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchPaymentPayment" method="patch" path="/payment/{connection_id}/payment/{id}" example="payment_payment" -->
 ```php
 declare(strict_types=1);
 
@@ -756,6 +948,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -764,7 +957,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchPaymentPaymentRequest(
-    paymentPayment: new Shared\PaymentPayment(),
+    paymentPayment: new Shared\PaymentPayment(
+        allocations: [],
+        cardBrand: 'AMEX',
+        cardLast4: '0819',
+        createdAt: Utils\Utils::parseDateTime('2022-03-10T00:19:42.086Z'),
+        currency: 'BIF',
+        feeAmount: 3,
+        id: '3180a536-a4c5-4c2d-916c-df4b9be7701e',
+        locationId: '94f7c68e-07de-40d1-9d6f-a0896363913f',
+        notes: 'Tactus vilicus.',
+        paymentMethod: 'BANK_TRANSFER',
+        reference: 'auctus',
+        status: Shared\PaymentPaymentStatus::Succeeded,
+        tenderType: Shared\TenderType::Check,
+        tipAmount: 2,
+        totalAmount: 44219,
+        type: Shared\PaymentPaymentType::Invoice,
+        updatedAt: Utils\Utils::parseDateTime('2025-05-24T15:10:03.807Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -800,7 +1011,7 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchPaymentSubscription" method="patch" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -809,6 +1020,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -817,7 +1029,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchPaymentSubscriptionRequest(
-    paymentSubscription: new Shared\PaymentSubscription(),
+    paymentSubscription: new Shared\PaymentSubscription(
+        createdAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
+        currency: 'WST',
+        currentPeriodEndAt: Utils\Utils::parseDateTime('2023-06-03T04:20:29.157Z'),
+        currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-21T03:55:58.846Z'),
+        dayOfMonth: 1,
+        description: 'Innovative Mouse featuring important technology and Bamboo construction',
+        endAt: Utils\Utils::parseDateTime('2023-05-21T12:36:09.234Z'),
+        id: '8bf216ec-d8c2-4d56-abaa-ebbcd300daea',
+        interval: 1,
+        intervalUnit: Shared\IntervalUnit::Month,
+        lineitems: [],
+        startAt: Utils\Utils::parseDateTime('2023-05-29T06:04:51.030Z'),
+        status: Shared\PaymentSubscriptionStatus::Active,
+        totalAmount: 75616,
+        updatedAt: Utils\Utils::parseDateTime('2023-12-15T22:33:11.960Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1006,7 +1234,7 @@ Update a link
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" -->
+<!-- UsageSnippet language="php" operationID="updatePaymentLink" method="put" path="/payment/{connection_id}/link/{id}" example="payment_link" -->
 ```php
 declare(strict_types=1);
 
@@ -1015,6 +1243,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1023,7 +1252,84 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdatePaymentLinkRequest(
-    paymentLink: new Shared\PaymentLink(),
+    paymentLink: new Shared\PaymentLink(
+        amount: 81211,
+        createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
+        currency: 'GYD',
+        description: 'Adfero ipsa terreo benevolentia utrum.',
+        id: 'db0281de-883c-4789-b3bf-6e424da44339',
+        isActive: true,
+        isChargeableNow: false,
+        lineitems: [
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-08-21T00:45:53.202Z'),
+                id: '70ab16c4-a237-4fb1-a155-d534c2a143ea',
+                itemDescription: 'Experience the white brilliance of our Hat, perfect for aggravating environments',
+                itemName: 'Licensed Marble Mouse',
+                itemSku: 'TAD4EYLVRI',
+                notes: 'Charisma theca video verus conduco attollo cervus decretum viridis.',
+                taxAmount: 221,
+                totalAmount: 1841,
+                unitAmount: 270,
+                unitQuantity: 6,
+                updatedAt: Utils\Utils::parseDateTime('2023-02-12T17:31:25.507Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-09-30T05:29:29.258Z'),
+                discountAmount: 15,
+                id: 'e9727ff7-05ea-4df0-9651-77dae78bb75b',
+                itemDescription: 'New Chicken model with 79 GB RAM, 846 GB storage, and lovely features',
+                itemName: 'Intelligent Steel Table',
+                itemSku: 'V8HQCDQYUZ',
+                taxAmount: 150,
+                totalAmount: 2037,
+                unitAmount: 317,
+                unitQuantity: 6,
+                updatedAt: Utils\Utils::parseDateTime('2023-05-31T11:10:09.190Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-12-16T13:52:52.341Z'),
+                id: '7f4f4212-96eb-4d13-b559-e00e7971c34c',
+                itemDescription: 'Dach - Wolff\'s most advanced Car technology increases dense capabilities',
+                itemName: 'Modern Gold Soap',
+                itemSku: 'DYGKCTCLDJ',
+                taxAmount: 41,
+                totalAmount: 281,
+                unitAmount: 30,
+                unitQuantity: 8,
+                updatedAt: Utils\Utils::parseDateTime('2023-05-22T16:35:07.583Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-08-12T19:45:39.705Z'),
+                id: '9897b41f-48fb-4094-b5ce-3c0576ec0e4b',
+                itemDescription: 'The sleek and unimportant Salad comes with salmon LED lighting for smart functionality',
+                itemName: 'Generic Aluminum Ball',
+                itemSku: 'BSBAXWAAFF',
+                notes: 'Cubo adversus victus subito asperiores vereor cibo tabgo.',
+                taxAmount: 6,
+                totalAmount: 78,
+                unitAmount: 24,
+                unitQuantity: 3,
+                updatedAt: Utils\Utils::parseDateTime('2023-11-13T12:39:15.951Z'),
+            ),
+            new Shared\PaymentLineitem(
+                createdAt: Utils\Utils::parseDateTime('2023-02-14T06:21:13.641Z'),
+                discountAmount: 171,
+                id: '6e24a907-e092-4ef3-93c7-c545cbbec59d',
+                itemDescription: 'New Bike model with 29 GB RAM, 271 GB storage, and minty features',
+                itemName: 'Incredible Aluminum Chicken',
+                itemSku: '6ERMJK20HE',
+                taxAmount: 263,
+                totalAmount: 3708,
+                unitAmount: 452,
+                unitQuantity: 8,
+                updatedAt: Utils\Utils::parseDateTime('2023-01-31T21:39:30.894Z'),
+            ),
+        ],
+        successUrl: 'https://parched-kettledrum.com/',
+        updatedAt: Utils\Utils::parseDateTime('2025-12-10T19:01:30.853Z'),
+        url: 'https://forceful-laughter.biz/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1059,7 +1365,7 @@ Update a payment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updatePaymentPayment" method="put" path="/payment/{connection_id}/payment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updatePaymentPayment" method="put" path="/payment/{connection_id}/payment/{id}" example="payment_payment" -->
 ```php
 declare(strict_types=1);
 
@@ -1068,6 +1374,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1076,7 +1383,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdatePaymentPaymentRequest(
-    paymentPayment: new Shared\PaymentPayment(),
+    paymentPayment: new Shared\PaymentPayment(
+        allocations: [],
+        cardBrand: 'AMEX',
+        cardLast4: '0819',
+        createdAt: Utils\Utils::parseDateTime('2022-03-10T00:19:42.086Z'),
+        currency: 'BIF',
+        feeAmount: 3,
+        id: '3180a536-a4c5-4c2d-916c-df4b9be7701e',
+        locationId: '94f7c68e-07de-40d1-9d6f-a0896363913f',
+        notes: 'Tactus vilicus.',
+        paymentMethod: 'BANK_TRANSFER',
+        reference: 'auctus',
+        status: Shared\PaymentPaymentStatus::Succeeded,
+        tenderType: Shared\TenderType::Check,
+        tipAmount: 2,
+        totalAmount: 44219,
+        type: Shared\PaymentPaymentType::Invoice,
+        updatedAt: Utils\Utils::parseDateTime('2025-05-24T15:10:03.807Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1112,7 +1437,7 @@ Update a subscription
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" -->
+<!-- UsageSnippet language="php" operationID="updatePaymentSubscription" method="put" path="/payment/{connection_id}/subscription/{id}" example="payment_subscription" -->
 ```php
 declare(strict_types=1);
 
@@ -1121,6 +1446,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1129,7 +1455,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdatePaymentSubscriptionRequest(
-    paymentSubscription: new Shared\PaymentSubscription(),
+    paymentSubscription: new Shared\PaymentSubscription(
+        createdAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
+        currency: 'WST',
+        currentPeriodEndAt: Utils\Utils::parseDateTime('2023-06-03T04:20:29.157Z'),
+        currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-21T03:55:58.846Z'),
+        dayOfMonth: 1,
+        description: 'Innovative Mouse featuring important technology and Bamboo construction',
+        endAt: Utils\Utils::parseDateTime('2023-05-21T12:36:09.234Z'),
+        id: '8bf216ec-d8c2-4d56-abaa-ebbcd300daea',
+        interval: 1,
+        intervalUnit: Shared\IntervalUnit::Month,
+        lineitems: [],
+        startAt: Utils\Utils::parseDateTime('2023-05-29T06:04:51.030Z'),
+        status: Shared\PaymentSubscriptionStatus::Active,
+        totalAmount: 75616,
+        updatedAt: Utils\Utils::parseDateTime('2023-12-15T22:33:11.960Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

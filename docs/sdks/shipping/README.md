@@ -28,7 +28,7 @@ Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="php" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" example="shipping_label" -->
 ```php
 declare(strict_types=1);
 
@@ -37,6 +37,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -45,7 +46,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateShippingLabelRequest(
-    shippingLabel: new Shared\ShippingLabel(),
+    shippingLabel: new Shared\ShippingLabel(
+        createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
+        id: '8a9fdac6-1d21-4676-94e6-f599db0abbff',
+        isVoided: false,
+        labelCost: 40.83653403213248,
+        labelCostCurrency: 'USD',
+        labelFormat: Shared\LabelFormat::Png,
+        labelUrl: 'https://optimal-meadow.net',
+        serviceCode: 'GIz',
+        status: Shared\ShippingLabelStatus::Exception,
+        trackingNumber: 'zYv60FOIBUJ6',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-16T18:20:19.960Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -80,7 +93,7 @@ Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="php" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" example="shipping_rate" -->
 ```php
 declare(strict_types=1);
 
@@ -89,6 +102,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -97,7 +111,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateShippingRateRequest(
-    shippingRate: new Shared\ShippingRate(),
+    shippingRate: new Shared\ShippingRate(
+        currency: 'USD',
+        id: 'fd4d5e96-852b-4873-8e6e-43312813cbda',
+        rates: [
+            new Shared\ShippingRateRate(
+                amount: 54.679719475097954,
+                baseAmount: 76.45537888631225,
+                currency: 'USD',
+                deliveryDays: 8,
+                description: 'Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.',
+                estimatedDays: 10,
+                estimatedDeliveryEndAt: Utils\Utils::parseDateTime('2024-01-31T23:11:45.447Z'),
+                isGuaranteed: true,
+                isNegotiatedRate: true,
+                taxAmount: 2.2701712837442756,
+                title: 'Turcotte Inc',
+            ),
+        ],
+    ),
     connectionId: '<id>',
 );
 
@@ -132,7 +164,7 @@ Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="php" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" example="shipping_shipment" -->
 ```php
 declare(strict_types=1);
 
@@ -141,6 +173,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -149,7 +182,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateShippingShipmentRequest(
-    shippingShipment: new Shared\ShippingShipment(),
+    shippingShipment: new Shared\ShippingShipment(
+        carrierName: 'Bogisich, Franey and Koelpin',
+        createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
+        id: 'c1cbcd72-dc11-4fa0-a28b-06831de01b1c',
+        rateAmount: 8.86546263936907,
+        rateCurrency: 'USD',
+        rateEstimatedDays: 8,
+        rateServiceName: 'Fisher - Kilback',
+        serviceCode: 'F7U',
+        shippedAt: Utils\Utils::parseDateTime('2025-08-24T18:19:39.641Z'),
+        status: Shared\ShippingShipmentStatus::Pending,
+        trackingUrl: 'https://shallow-secrecy.info/',
+        updatedAt: Utils\Utils::parseDateTime('2025-07-03T02:06:45.236Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -588,7 +634,7 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```php
 declare(strict_types=1);
 
@@ -597,6 +643,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -605,7 +652,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchShippingLabelRequest(
-    shippingLabel: new Shared\ShippingLabel(),
+    shippingLabel: new Shared\ShippingLabel(
+        createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
+        id: '8f2aee4c-d719-4427-a982-e29285195abb',
+        isVoided: false,
+        labelCost: 40.83653403213248,
+        labelCostCurrency: 'USD',
+        labelFormat: Shared\LabelFormat::Png,
+        labelUrl: 'https://optimal-meadow.net',
+        serviceCode: 'GIz',
+        status: Shared\ShippingLabelStatus::Exception,
+        trackingNumber: 'zYv60FOIBUJ6',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-16T18:20:19.963Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -641,7 +700,7 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```php
 declare(strict_types=1);
 
@@ -650,6 +709,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -658,7 +718,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchShippingShipmentRequest(
-    shippingShipment: new Shared\ShippingShipment(),
+    shippingShipment: new Shared\ShippingShipment(
+        carrierName: 'Bogisich, Franey and Koelpin',
+        createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
+        id: '76bfc6fc-b647-4048-8cd8-dbe130a58995',
+        rateAmount: 8.86546263936907,
+        rateCurrency: 'USD',
+        rateEstimatedDays: 8,
+        rateServiceName: 'Fisher - Kilback',
+        serviceCode: 'F7U',
+        shippedAt: Utils\Utils::parseDateTime('2025-08-24T18:19:39.686Z'),
+        status: Shared\ShippingShipmentStatus::Pending,
+        trackingUrl: 'https://shallow-secrecy.info/',
+        updatedAt: Utils\Utils::parseDateTime('2025-07-03T02:06:45.279Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -796,7 +869,7 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```php
 declare(strict_types=1);
 
@@ -805,6 +878,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -813,7 +887,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateShippingLabelRequest(
-    shippingLabel: new Shared\ShippingLabel(),
+    shippingLabel: new Shared\ShippingLabel(
+        createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
+        id: '8f2aee4c-d719-4427-a982-e29285195abb',
+        isVoided: false,
+        labelCost: 40.83653403213248,
+        labelCostCurrency: 'USD',
+        labelFormat: Shared\LabelFormat::Png,
+        labelUrl: 'https://optimal-meadow.net',
+        serviceCode: 'GIz',
+        status: Shared\ShippingLabelStatus::Exception,
+        trackingNumber: 'zYv60FOIBUJ6',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-16T18:20:19.963Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -849,7 +935,7 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```php
 declare(strict_types=1);
 
@@ -858,6 +944,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -866,7 +953,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateShippingShipmentRequest(
-    shippingShipment: new Shared\ShippingShipment(),
+    shippingShipment: new Shared\ShippingShipment(
+        carrierName: 'Bogisich, Franey and Koelpin',
+        createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
+        id: '76bfc6fc-b647-4048-8cd8-dbe130a58995',
+        rateAmount: 8.86546263936907,
+        rateCurrency: 'USD',
+        rateEstimatedDays: 8,
+        rateServiceName: 'Fisher - Kilback',
+        serviceCode: 'F7U',
+        shippedAt: Utils\Utils::parseDateTime('2025-08-24T18:19:39.686Z'),
+        status: Shared\ShippingShipmentStatus::Pending,
+        trackingUrl: 'https://shallow-secrecy.info/',
+        updatedAt: Utils\Utils::parseDateTime('2025-07-03T02:06:45.279Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

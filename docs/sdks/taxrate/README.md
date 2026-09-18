@@ -17,7 +17,7 @@ Create a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" -->
+<!-- UsageSnippet language="php" operationID="createAccountingTaxrate" method="post" path="/accounting/{connection_id}/taxrate" example="accounting_taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingTaxrateRequest(
-    accountingTaxrate: new Shared\AccountingTaxrate(),
+    accountingTaxrate: new Shared\AccountingTaxrate(
+        createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
+        description: 'Nemo atrox tricesimus creator aranea.',
+        id: 'a06c3544-caf7-4a72-9a80-b178c81f1bd1',
+        isActive: false,
+        metadata: [],
+        name: 'cogo',
+        rate: 1,
+        updatedAt: Utils\Utils::parseDateTime('2025-11-04T07:53:07.001Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +180,7 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingTaxrate" method="patch" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +189,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +198,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingTaxrateRequest(
-    accountingTaxrate: new Shared\AccountingTaxrate(),
+    accountingTaxrate: new Shared\AccountingTaxrate(
+        createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
+        description: 'Nemo atrox tricesimus creator aranea.',
+        id: '8fa77bc6-6812-4b82-8d10-5c03bf48971c',
+        isActive: false,
+        metadata: [],
+        name: 'cogo',
+        rate: 1,
+        updatedAt: Utils\Utils::parseDateTime('2025-11-04T07:53:07.007Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +294,7 @@ Update a taxrate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingTaxrate" method="put" path="/accounting/{connection_id}/taxrate/{id}" example="accounting_taxrate" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +303,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +312,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingTaxrateRequest(
-    accountingTaxrate: new Shared\AccountingTaxrate(),
+    accountingTaxrate: new Shared\AccountingTaxrate(
+        createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
+        description: 'Nemo atrox tricesimus creator aranea.',
+        id: '8fa77bc6-6812-4b82-8d10-5c03bf48971c',
+        isActive: false,
+        metadata: [],
+        name: 'cogo',
+        rate: 1,
+        updatedAt: Utils\Utils::parseDateTime('2025-11-04T07:53:07.007Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

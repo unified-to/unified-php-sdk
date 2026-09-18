@@ -17,7 +17,7 @@ Create a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" -->
+<!-- UsageSnippet language="php" operationID="createHrisBankaccount" method="post" path="/hris/{connection_id}/bankaccount" example="hris_bankaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisBankaccountRequest(
-    hrisBankaccount: new Shared\HrisBankaccount(),
+    hrisBankaccount: new Shared\HrisBankaccount(
+        accountNumber: '****3777',
+        accountNumberLast4: '3777',
+        accountType: Shared\HrisBankaccountAccountType::Checking,
+        bankName: 'Huel Group',
+        createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
+        id: '4e298ff9-1f66-4c1f-b1ec-5ee895cda7bf',
+        isPrimary: false,
+        name: 'Checking Account',
+        routingNumber: '448650724',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-04T11:30:29.787Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +182,7 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisBankaccount" method="patch" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +191,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +200,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisBankaccountRequest(
-    hrisBankaccount: new Shared\HrisBankaccount(),
+    hrisBankaccount: new Shared\HrisBankaccount(
+        accountNumber: '****3777',
+        accountNumberLast4: '3777',
+        accountType: Shared\HrisBankaccountAccountType::Checking,
+        bankName: 'Huel Group',
+        createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
+        id: '6b53796b-c6e2-4608-939f-57d8d920c7b2',
+        isPrimary: false,
+        name: 'Checking Account',
+        routingNumber: '448650724',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-04T11:30:29.792Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +298,7 @@ Update a bankaccount
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisBankaccount" method="put" path="/hris/{connection_id}/bankaccount/{id}" example="hris_bankaccount" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +307,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +316,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisBankaccountRequest(
-    hrisBankaccount: new Shared\HrisBankaccount(),
+    hrisBankaccount: new Shared\HrisBankaccount(
+        accountNumber: '****3777',
+        accountNumberLast4: '3777',
+        accountType: Shared\HrisBankaccountAccountType::Checking,
+        bankName: 'Huel Group',
+        createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
+        id: '6b53796b-c6e2-4608-939f-57d8d920c7b2',
+        isPrimary: false,
+        name: 'Checking Account',
+        routingNumber: '448650724',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-04T11:30:29.792Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

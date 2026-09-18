@@ -17,7 +17,7 @@ Create an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" -->
+<!-- UsageSnippet language="php" operationID="createAccountingInvoice" method="post" path="/accounting/{connection_id}/invoice" example="accounting_invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingInvoiceRequest(
-    accountingInvoice: new Shared\AccountingInvoice(),
+    accountingInvoice: new Shared\AccountingInvoice(
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://glossy-markup.net/',
+                id: '6166f06c-cb77-42dd-b349-592c6cdfad5d',
+                mimeType: 'benevolentia',
+                name: 'vespillo',
+            ),
+        ],
+        balanceAmount: -1,
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2022-11-07T14:17:29.587Z'),
+        currency: 'RWF',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2022-11-27T21:25:37.363Z'),
+        extendedNotes: [],
+        id: '8ba2d961-496b-4dc9-bacb-595ccd9a3734',
+        invoiceNumber: 'vinco',
+        lineitems: [],
+        metadata: [],
+        notes: 'Auctus comburo clarus ubi.',
+        paidAmount: 0,
+        paidAt: Utils\Utils::parseDateTime('2022-11-25T15:00:28.871Z'),
+        paymentCollectionMethod: Shared\AccountingInvoicePaymentCollectionMethod::SendInvoice,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-03-26T22:46:20.573Z'),
+        reference: 'adinventitias',
+        send: true,
+        status: Shared\AccountingInvoiceStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\AccountingInvoiceTerm::Net45,
+        totalAmount: 0,
+        type: Shared\AccountingInvoiceType::Creditmemo,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T06:48:43.166Z'),
+        url: 'https://gifted-yarmulke.info/',
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +206,7 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingInvoice" method="patch" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +215,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +224,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingInvoiceRequest(
-    accountingInvoice: new Shared\AccountingInvoice(),
+    accountingInvoice: new Shared\AccountingInvoice(
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://glossy-markup.net/',
+                id: 'c2fa60c7-8d72-4568-9854-fa432fadbf78',
+                mimeType: 'benevolentia',
+                name: 'vespillo',
+            ),
+        ],
+        balanceAmount: -1,
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2022-11-07T14:17:29.587Z'),
+        currency: 'RWF',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2022-11-27T21:25:37.363Z'),
+        extendedNotes: [],
+        id: '6f607a62-e620-4f17-87c7-372e8a20cfc8',
+        invoiceNumber: 'vinco',
+        lineitems: [],
+        metadata: [],
+        notes: 'Auctus comburo clarus ubi.',
+        paidAmount: 0,
+        paidAt: Utils\Utils::parseDateTime('2022-11-25T15:00:28.871Z'),
+        paymentCollectionMethod: Shared\AccountingInvoicePaymentCollectionMethod::SendInvoice,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-03-26T22:46:20.613Z'),
+        reference: 'adinventitias',
+        send: true,
+        status: Shared\AccountingInvoiceStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\AccountingInvoiceTerm::Net45,
+        totalAmount: 0,
+        type: Shared\AccountingInvoiceType::Creditmemo,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T06:48:43.169Z'),
+        url: 'https://gifted-yarmulke.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +346,7 @@ Update an invoice
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingInvoice" method="put" path="/accounting/{connection_id}/invoice/{id}" example="accounting_invoice" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +355,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +364,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingInvoiceRequest(
-    accountingInvoice: new Shared\AccountingInvoice(),
+    accountingInvoice: new Shared\AccountingInvoice(
+        attachments: [
+            new Shared\AccountingAttachment(
+                downloadUrl: 'https://glossy-markup.net/',
+                id: 'c2fa60c7-8d72-4568-9854-fa432fadbf78',
+                mimeType: 'benevolentia',
+                name: 'vespillo',
+            ),
+        ],
+        balanceAmount: -1,
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2022-11-07T14:17:29.587Z'),
+        currency: 'RWF',
+        discountAmount: 0,
+        dueAt: Utils\Utils::parseDateTime('2022-11-27T21:25:37.363Z'),
+        extendedNotes: [],
+        id: '6f607a62-e620-4f17-87c7-372e8a20cfc8',
+        invoiceNumber: 'vinco',
+        lineitems: [],
+        metadata: [],
+        notes: 'Auctus comburo clarus ubi.',
+        paidAmount: 0,
+        paidAt: Utils\Utils::parseDateTime('2022-11-25T15:00:28.871Z'),
+        paymentCollectionMethod: Shared\AccountingInvoicePaymentCollectionMethod::SendInvoice,
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-03-26T22:46:20.613Z'),
+        reference: 'adinventitias',
+        send: true,
+        status: Shared\AccountingInvoiceStatus::Deleted,
+        taxAmount: 0,
+        term: Shared\AccountingInvoiceTerm::Net45,
+        totalAmount: 0,
+        type: Shared\AccountingInvoiceType::Creditmemo,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T06:48:43.169Z'),
+        url: 'https://gifted-yarmulke.info/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

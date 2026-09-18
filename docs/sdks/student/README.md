@@ -17,7 +17,7 @@ Create a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" -->
+<!-- UsageSnippet language="php" operationID="createLmsStudent" method="post" path="/lms/{connection_id}/student" example="lms_student" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsStudentRequest(
-    lmsStudent: new Shared\LmsStudent(),
+    lmsStudent: new Shared\LmsStudent(
+        address: new Shared\PropertyLmsStudentAddress(
+            address1: '94082 Kassandra Camp',
+            address2: 'Apt. 461',
+            city: 'New Ibrahimmouth',
+            countryCode: 'US',
+            postalCode: '52851',
+            region: 'Tennessee',
+            regionCode: 'NV',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-03-23T06:59:29.777Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Marcella',
+        id: '8bc0cb22-4e46-4da8-b2ef-49aa7508d4ce',
+        imageUrl: 'https://avatars.githubusercontent.com/u/36301374',
+        lastName: 'Murazik',
+        name: 'Marcella Murazik',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(482) 469-8067',
+                type: Shared\LmsTelephoneType::Fax,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-06-19T13:55:47.489Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +198,7 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsStudent" method="patch" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +207,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +216,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsStudentRequest(
-    lmsStudent: new Shared\LmsStudent(),
+    lmsStudent: new Shared\LmsStudent(
+        address: new Shared\PropertyLmsStudentAddress(
+            address1: '94082 Kassandra Camp',
+            address2: 'Apt. 461',
+            city: 'New Ibrahimmouth',
+            countryCode: 'US',
+            postalCode: '52851',
+            region: 'Tennessee',
+            regionCode: 'NV',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-03-23T06:59:29.777Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Marcella',
+        id: '8c067562-a326-4d81-a8ae-f087841b1a98',
+        imageUrl: 'https://avatars.githubusercontent.com/u/36301374',
+        lastName: 'Murazik',
+        name: 'Marcella Murazik',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(482) 469-8067',
+                type: Shared\LmsTelephoneType::Fax,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-06-19T13:55:47.495Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +330,7 @@ Update a student
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsStudent" method="put" path="/lms/{connection_id}/student/{id}" example="lms_student" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +339,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +348,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsStudentRequest(
-    lmsStudent: new Shared\LmsStudent(),
+    lmsStudent: new Shared\LmsStudent(
+        address: new Shared\PropertyLmsStudentAddress(
+            address1: '94082 Kassandra Camp',
+            address2: 'Apt. 461',
+            city: 'New Ibrahimmouth',
+            countryCode: 'US',
+            postalCode: '52851',
+            region: 'Tennessee',
+            regionCode: 'NV',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-03-23T06:59:29.777Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Marcella',
+        id: '8c067562-a326-4d81-a8ae-f087841b1a98',
+        imageUrl: 'https://avatars.githubusercontent.com/u/36301374',
+        lastName: 'Murazik',
+        name: 'Marcella Murazik',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(482) 469-8067',
+                type: Shared\LmsTelephoneType::Fax,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-06-19T13:55:47.495Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

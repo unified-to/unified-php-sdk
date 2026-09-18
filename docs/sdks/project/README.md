@@ -75,7 +75,7 @@ Create a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" -->
+<!-- UsageSnippet language="php" operationID="createTaskProject" method="post" path="/task/{connection_id}/project" example="task_project" -->
 ```php
 declare(strict_types=1);
 
@@ -84,6 +84,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -92,7 +93,37 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTaskProjectRequest(
-    taskProject: new Shared\TaskProject(),
+    taskProject: new Shared\TaskProject(
+        createdAt: Utils\Utils::parseDateTime('2023-06-23T16:39:40.446Z'),
+        description: 'Valetudo aggredior accommodo curiositas vox.',
+        hasChildren: false,
+        hasTasks: false,
+        id: '45aee72e-5fee-4ccf-a039-368b6e4a67b1',
+        metadata: [
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: '465260a6-1709-4d5f-8a7b-3b6e372e50df',
+                namespace: 'custom',
+                slug: 'decens',
+                value: 'uterque',
+            ),
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: '04623d6c-540c-4941-9109-bbc1936072ef',
+                namespace: 'custom',
+                slug: 'benevolentia',
+                value: 'pariatur',
+            ),
+        ],
+        name: 'Garden',
+        updatedAt: Utils\Utils::parseDateTime('2023-10-08T14:52:26.140Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -382,7 +413,7 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTaskProject" method="patch" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```php
 declare(strict_types=1);
 
@@ -391,6 +422,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -399,7 +431,37 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTaskProjectRequest(
-    taskProject: new Shared\TaskProject(),
+    taskProject: new Shared\TaskProject(
+        createdAt: Utils\Utils::parseDateTime('2023-06-23T16:39:40.446Z'),
+        description: 'Valetudo aggredior accommodo curiositas vox.',
+        hasChildren: false,
+        hasTasks: false,
+        id: '90773dc6-3e85-438a-a2b9-7d34938be3fb',
+        metadata: [
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: 'a1386e7a-c55a-4cd2-bc88-929adb865752',
+                namespace: 'custom',
+                slug: 'decens',
+                value: 'uterque',
+            ),
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: '5cdcc465-2080-411f-b343-355dd0b8cb3e',
+                namespace: 'custom',
+                slug: 'benevolentia',
+                value: 'pariatur',
+            ),
+        ],
+        name: 'Garden',
+        updatedAt: Utils\Utils::parseDateTime('2023-10-08T14:52:26.141Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -590,7 +652,7 @@ Update a project
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTaskProject" method="put" path="/task/{connection_id}/project/{id}" example="task_project" -->
 ```php
 declare(strict_types=1);
 
@@ -599,6 +661,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -607,7 +670,37 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTaskProjectRequest(
-    taskProject: new Shared\TaskProject(),
+    taskProject: new Shared\TaskProject(
+        createdAt: Utils\Utils::parseDateTime('2023-06-23T16:39:40.446Z'),
+        description: 'Valetudo aggredior accommodo curiositas vox.',
+        hasChildren: false,
+        hasTasks: false,
+        id: '90773dc6-3e85-438a-a2b9-7d34938be3fb',
+        metadata: [
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: 'a1386e7a-c55a-4cd2-bc88-929adb865752',
+                namespace: 'custom',
+                slug: 'decens',
+                value: 'uterque',
+            ),
+            new Shared\TaskMetadata(
+                extraData: [
+
+                ],
+                format: Shared\TaskMetadataFormat::Text,
+                id: '5cdcc465-2080-411f-b343-355dd0b8cb3e',
+                namespace: 'custom',
+                slug: 'benevolentia',
+                value: 'pariatur',
+            ),
+        ],
+        name: 'Garden',
+        updatedAt: Utils\Utils::parseDateTime('2023-10-08T14:52:26.141Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

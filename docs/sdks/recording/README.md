@@ -19,7 +19,7 @@ Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="php" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```php
 declare(strict_types=1);
 
@@ -28,6 +28,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -36,7 +37,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateUcRecordingRequest(
-    ucRecording: new Shared\UcRecording(),
+    ucRecording: new Shared\UcRecording(
+        contacts: [],
+        createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-21T20:25:03.937Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-03-28T16:20:45.918Z'),
+        id: '9bb37bb5-bcc7-496b-91d6-9ba3da4d46f3',
+        media: [],
+        startAt: Utils\Utils::parseDateTime('2023-04-22T20:25:19.456Z'),
+        type: Shared\UcRecordingType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-24T08:23:34.885Z'),
+        userName: 'Melyna Larson',
+        userPhone: '1-915-327-0429 x509',
+        webUrl: 'https://spherical-comparison.org',
+    ),
     connectionId: '<id>',
 );
 
@@ -273,7 +287,7 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```php
 declare(strict_types=1);
 
@@ -282,6 +296,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -290,7 +305,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchUcRecordingRequest(
-    ucRecording: new Shared\UcRecording(),
+    ucRecording: new Shared\UcRecording(
+        contacts: [],
+        createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-21T20:25:03.945Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-03-28T16:20:45.935Z'),
+        id: '70237347-36d8-4eca-9224-cee256883565',
+        media: [],
+        startAt: Utils\Utils::parseDateTime('2023-04-22T20:25:19.459Z'),
+        type: Shared\UcRecordingType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-24T08:23:34.897Z'),
+        userName: 'Melyna Larson',
+        userPhone: '1-915-327-0429 x509',
+        webUrl: 'https://spherical-comparison.org',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -377,7 +405,7 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```php
 declare(strict_types=1);
 
@@ -386,6 +414,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -394,7 +423,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateUcRecordingRequest(
-    ucRecording: new Shared\UcRecording(),
+    ucRecording: new Shared\UcRecording(
+        contacts: [],
+        createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-21T20:25:03.945Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-03-28T16:20:45.935Z'),
+        id: '70237347-36d8-4eca-9224-cee256883565',
+        media: [],
+        startAt: Utils\Utils::parseDateTime('2023-04-22T20:25:19.459Z'),
+        type: Shared\UcRecordingType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-24T08:23:34.897Z'),
+        userName: 'Melyna Larson',
+        userPhone: '1-915-327-0429 x509',
+        webUrl: 'https://spherical-comparison.org',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

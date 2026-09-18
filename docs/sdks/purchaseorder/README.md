@@ -17,7 +17,7 @@ Create a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" -->
+<!-- UsageSnippet language="php" operationID="createAccountingPurchaseorder" method="post" path="/accounting/{connection_id}/purchaseorder" example="accounting_purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingPurchaseorderRequest(
-    accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
+    accountingPurchaseorder: new Shared\AccountingPurchaseorder(
+        billingAddress: new Shared\PropertyAccountingPurchaseorderBillingAddress(
+            address1: '37214 Tanya Walks',
+            city: 'South Annabelleton',
+            countryCode: 'US',
+            postalCode: '30337',
+            region: 'Nevada',
+            regionCode: 'MA',
+        ),
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
+        currency: 'ZMW',
+        id: '7ca20b57-36d7-416c-895f-ebd50bd69068',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2025-04-25T03:31:00.662Z'),
+        shippingAddress: new Shared\PropertyAccountingPurchaseorderShippingAddress(
+            address1: '649 Maggio Overpass',
+            city: 'Lake Jaylan',
+            countryCode: 'US',
+            postalCode: '99211-6547',
+            region: 'North Carolina',
+            regionCode: 'ID',
+        ),
+        status: Shared\AccountingPurchaseorderStatus::PartiallyRefunded,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2021-02-26T03:18:45.818Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +198,7 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingPurchaseorder" method="patch" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +207,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +216,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingPurchaseorderRequest(
-    accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
+    accountingPurchaseorder: new Shared\AccountingPurchaseorder(
+        billingAddress: new Shared\PropertyAccountingPurchaseorderBillingAddress(
+            address1: '37214 Tanya Walks',
+            city: 'South Annabelleton',
+            countryCode: 'US',
+            postalCode: '30337',
+            region: 'Nevada',
+            regionCode: 'MA',
+        ),
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
+        currency: 'ZMW',
+        id: 'ab47e1ac-633d-4704-847d-b63d10b40137',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2025-04-25T03:31:00.688Z'),
+        shippingAddress: new Shared\PropertyAccountingPurchaseorderShippingAddress(
+            address1: '649 Maggio Overpass',
+            city: 'Lake Jaylan',
+            countryCode: 'US',
+            postalCode: '99211-6547',
+            region: 'North Carolina',
+            regionCode: 'ID',
+        ),
+        status: Shared\AccountingPurchaseorderStatus::PartiallyRefunded,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2021-02-26T03:18:45.820Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +330,7 @@ Update a purchaseorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingPurchaseorder" method="put" path="/accounting/{connection_id}/purchaseorder/{id}" example="accounting_purchaseorder" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +339,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +348,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingPurchaseorderRequest(
-    accountingPurchaseorder: new Shared\AccountingPurchaseorder(),
+    accountingPurchaseorder: new Shared\AccountingPurchaseorder(
+        billingAddress: new Shared\PropertyAccountingPurchaseorderBillingAddress(
+            address1: '37214 Tanya Walks',
+            city: 'South Annabelleton',
+            countryCode: 'US',
+            postalCode: '30337',
+            region: 'Nevada',
+            regionCode: 'MA',
+        ),
+        categoryIds: [],
+        createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
+        currency: 'ZMW',
+        id: 'ab47e1ac-633d-4704-847d-b63d10b40137',
+        lineitems: [],
+        metadata: [],
+        postedAt: Utils\Utils::parseDateTime('2025-04-25T03:31:00.688Z'),
+        shippingAddress: new Shared\PropertyAccountingPurchaseorderShippingAddress(
+            address1: '649 Maggio Overpass',
+            city: 'Lake Jaylan',
+            countryCode: 'US',
+            postalCode: '99211-6547',
+            region: 'North Carolina',
+            regionCode: 'ID',
+        ),
+        status: Shared\AccountingPurchaseorderStatus::PartiallyRefunded,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2021-02-26T03:18:45.820Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

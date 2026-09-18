@@ -17,7 +17,7 @@ Create an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" -->
+<!-- UsageSnippet language="php" operationID="createLmsInstructor" method="post" path="/lms/{connection_id}/instructor" example="lms_instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsInstructorRequest(
-    lmsInstructor: new Shared\LmsInstructor(),
+    lmsInstructor: new Shared\LmsInstructor(
+        createdAt: Utils\Utils::parseDateTime('2021-10-12T16:38:54.979Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Deangelo',
+        id: 'f8bbba27-b96d-4906-9cee-f5b6cf875466',
+        imageUrl: 'https://avatars.githubusercontent.com/u/20232618',
+        lastName: 'Ritchie',
+        name: 'Deangelo Ritchie',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(352) 551-7989',
+                type: Shared\LmsTelephoneType::Home,
+            ),
+        ],
+        title: 'Product Solutions Engineer',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-29T14:06:13.939Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +190,7 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsInstructor" method="patch" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +199,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +208,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsInstructorRequest(
-    lmsInstructor: new Shared\LmsInstructor(),
+    lmsInstructor: new Shared\LmsInstructor(
+        createdAt: Utils\Utils::parseDateTime('2021-10-12T16:38:54.979Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Deangelo',
+        id: '7f3e0677-de81-4291-9b61-baab002fad9f',
+        imageUrl: 'https://avatars.githubusercontent.com/u/20232618',
+        lastName: 'Ritchie',
+        name: 'Deangelo Ritchie',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(352) 551-7989',
+                type: Shared\LmsTelephoneType::Home,
+            ),
+        ],
+        title: 'Product Solutions Engineer',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-29T14:06:13.948Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +314,7 @@ Update an instructor
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsInstructor" method="put" path="/lms/{connection_id}/instructor/{id}" example="lms_instructor" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +323,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +332,26 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsInstructorRequest(
-    lmsInstructor: new Shared\LmsInstructor(),
+    lmsInstructor: new Shared\LmsInstructor(
+        createdAt: Utils\Utils::parseDateTime('2021-10-12T16:38:54.979Z'),
+        emails: [
+            new Shared\LmsEmail(),
+            new Shared\LmsEmail(),
+        ],
+        firstName: 'Deangelo',
+        id: '7f3e0677-de81-4291-9b61-baab002fad9f',
+        imageUrl: 'https://avatars.githubusercontent.com/u/20232618',
+        lastName: 'Ritchie',
+        name: 'Deangelo Ritchie',
+        telephones: [
+            new Shared\LmsTelephone(
+                telephone: '(352) 551-7989',
+                type: Shared\LmsTelephoneType::Home,
+            ),
+        ],
+        title: 'Product Solutions Engineer',
+        updatedAt: Utils\Utils::parseDateTime('2025-06-29T14:06:13.948Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

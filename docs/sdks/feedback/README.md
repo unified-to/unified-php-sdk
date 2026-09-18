@@ -14,7 +14,7 @@ Create a feedback
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" -->
+<!-- UsageSnippet language="php" operationID="createPerformanceFeedback" method="post" path="/performance/{connection_id}/feedback" example="performance_feedback" -->
 ```php
 declare(strict_types=1);
 
@@ -23,6 +23,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -32,6 +33,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreatePerformanceFeedbackRequest(
     performanceFeedback: new Shared\PerformanceFeedback(
+        createdAt: Utils\Utils::parseDateTime('2023-04-11T16:21:53.862Z'),
+        id: 'de543a3e-c001-4b57-9822-ed7b68a7df1f',
+        isVisible: true,
+        message: 'Tabernus corpus voluptate aestus.',
+        tags: [
+            'well-to-do',
+            'hexagon',
+        ],
+        type: Shared\PerformanceFeedbackType::Praise,
+        updatedAt: Utils\Utils::parseDateTime('2025-08-12T15:37:22.961Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',

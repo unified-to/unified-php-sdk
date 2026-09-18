@@ -17,7 +17,7 @@ Create a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" -->
+<!-- UsageSnippet language="php" operationID="createDatastoreDatabase" method="post" path="/datastore/{connection_id}/database" example="datastore_database" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateDatastoreDatabaseRequest(
-    datastoreDatabase: new Shared\DatastoreDatabase(),
+    datastoreDatabase: new Shared\DatastoreDatabase(
+        createdAt: Utils\Utils::parseDateTime('2019-03-05T14:31:00.223Z'),
+        description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
+        id: '47c27a48-1877-42f9-bc43-28d84d810b88',
+        isActive: true,
+        name: 'Rau - O\'Reilly',
+        password: 'iYLhYwOHm0NLDvI',
+        region: 'France',
+        updatedAt: Utils\Utils::parseDateTime('2023-06-12T03:10:27.170Z'),
+        webUrl: 'https://optimal-signature.name',
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +181,7 @@ Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchDatastoreDatabase" method="patch" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +190,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +199,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchDatastoreDatabaseRequest(
-    datastoreDatabase: new Shared\DatastoreDatabase(),
+    datastoreDatabase: new Shared\DatastoreDatabase(
+        createdAt: Utils\Utils::parseDateTime('2019-03-05T14:31:00.223Z'),
+        description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
+        id: '4ca08192-ee21-463a-b433-6ac53b436e43',
+        isActive: true,
+        name: 'Rau - O\'Reilly',
+        password: 'iYLhYwOHm0NLDvI',
+        region: 'France',
+        updatedAt: Utils\Utils::parseDateTime('2023-06-12T03:10:27.173Z'),
+        webUrl: 'https://optimal-signature.name',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +296,7 @@ Update a database
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateDatastoreDatabase" method="put" path="/datastore/{connection_id}/database/{id}" example="datastore_database" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +305,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +314,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateDatastoreDatabaseRequest(
-    datastoreDatabase: new Shared\DatastoreDatabase(),
+    datastoreDatabase: new Shared\DatastoreDatabase(
+        createdAt: Utils\Utils::parseDateTime('2019-03-05T14:31:00.223Z'),
+        description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
+        id: '4ca08192-ee21-463a-b433-6ac53b436e43',
+        isActive: true,
+        name: 'Rau - O\'Reilly',
+        password: 'iYLhYwOHm0NLDvI',
+        region: 'France',
+        updatedAt: Utils\Utils::parseDateTime('2023-06-12T03:10:27.173Z'),
+        webUrl: 'https://optimal-signature.name',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

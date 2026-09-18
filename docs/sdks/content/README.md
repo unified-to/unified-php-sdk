@@ -17,7 +17,7 @@ Create a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" -->
+<!-- UsageSnippet language="php" operationID="createLmsContent" method="post" path="/lms/{connection_id}/content" example="lms_content" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,96 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateLmsContentRequest(
-    lmsContent: new Shared\LmsContent(),
+    lmsContent: new Shared\LmsContent(
+        categories: [
+            'territo',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2020-10-22T22:30:50.963Z'),
+        description: 'Usque laboriosam ventosus adflicto.',
+        difficulty: 'Beginner',
+        durationMinutes: 19,
+        externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
+        id: '752eba73-40d0-4a58-bca3-4a1ef9b6e063',
+        instructors: [
+            new Shared\LmsReference(
+                id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
+                name: 'Winston Ferry',
+            ),
+        ],
+        isActive: true,
+        languages: [
+            'despecto',
+            'suppellex',
+        ],
+        localizations: [
+            new Shared\LmsContentLocalization(
+                description: 'Numquam.',
+                language: 'es',
+                name: 'validus',
+            ),
+            new Shared\LmsContentLocalization(
+                description: 'Callide.',
+                language: 'fr',
+                name: 'crux',
+            ),
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.',
+                description: 'Venia aeternus tandem spargo.',
+                languages: [
+                    'zu',
+                    'ba',
+                ],
+                name: 'subiungo',
+                thumbnailUrl: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+            ),
+            new Shared\LmsMedia(
+                content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
+                description: 'Comedo valde caste combibo.',
+                languages: [
+                    'it',
+                    'hu',
+                ],
+                name: 'beneficium',
+                thumbnailUrl: 'https://picsum.photos/seed/pNFr1/2597/885',
+                type: Shared\LmsMediaType::Web,
+                url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+            ),
+            new Shared\LmsMedia(
+                content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
+                description: 'Tunc barba decens.',
+                languages: [
+                    'bn',
+                    'yo',
+                ],
+                name: 'qui',
+                thumbnailUrl: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
+                type: Shared\LmsMediaType::Image,
+                url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+            ),
+        ],
+        name: 'ut',
+        providerName: 'Berge LLC',
+        publishedAt: Utils\Utils::parseDateTime('2023-11-08T11:32:09.080Z'),
+        shortDescription: 'Commemoro.',
+        skills: [
+            'trucido',
+        ],
+        sortOrder: 3,
+        subjects: [
+            new Shared\LmsSubject(
+                name: 'tibi',
+                rank: 1,
+            ),
+        ],
+        tags: [
+            'dens',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-09-23T11:13:24.667Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +260,7 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchLmsContent" method="patch" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +269,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +278,96 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchLmsContentRequest(
-    lmsContent: new Shared\LmsContent(),
+    lmsContent: new Shared\LmsContent(
+        categories: [
+            'territo',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2020-10-22T22:30:50.963Z'),
+        description: 'Usque laboriosam ventosus adflicto.',
+        difficulty: 'Beginner',
+        durationMinutes: 19,
+        externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
+        id: '93ebc3a9-fd1d-4164-a395-aec8aec0abe4',
+        instructors: [
+            new Shared\LmsReference(
+                id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
+                name: 'Winston Ferry',
+            ),
+        ],
+        isActive: true,
+        languages: [
+            'despecto',
+            'suppellex',
+        ],
+        localizations: [
+            new Shared\LmsContentLocalization(
+                description: 'Numquam.',
+                language: 'es',
+                name: 'validus',
+            ),
+            new Shared\LmsContentLocalization(
+                description: 'Callide.',
+                language: 'fr',
+                name: 'crux',
+            ),
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.',
+                description: 'Venia aeternus tandem spargo.',
+                languages: [
+                    'zu',
+                    'ba',
+                ],
+                name: 'subiungo',
+                thumbnailUrl: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+            ),
+            new Shared\LmsMedia(
+                content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
+                description: 'Comedo valde caste combibo.',
+                languages: [
+                    'it',
+                    'hu',
+                ],
+                name: 'beneficium',
+                thumbnailUrl: 'https://picsum.photos/seed/pNFr1/2597/885',
+                type: Shared\LmsMediaType::Web,
+                url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+            ),
+            new Shared\LmsMedia(
+                content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
+                description: 'Tunc barba decens.',
+                languages: [
+                    'bn',
+                    'yo',
+                ],
+                name: 'qui',
+                thumbnailUrl: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
+                type: Shared\LmsMediaType::Image,
+                url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+            ),
+        ],
+        name: 'ut',
+        providerName: 'Berge LLC',
+        publishedAt: Utils\Utils::parseDateTime('2023-11-08T11:32:09.080Z'),
+        shortDescription: 'Commemoro.',
+        skills: [
+            'trucido',
+        ],
+        sortOrder: 3,
+        subjects: [
+            new Shared\LmsSubject(
+                name: 'tibi',
+                rank: 1,
+            ),
+        ],
+        tags: [
+            'dens',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-09-23T11:13:24.676Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +454,7 @@ Update a content
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateLmsContent" method="put" path="/lms/{connection_id}/content/{id}" example="lms_content" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +463,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +472,96 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateLmsContentRequest(
-    lmsContent: new Shared\LmsContent(),
+    lmsContent: new Shared\LmsContent(
+        categories: [
+            'territo',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2020-10-22T22:30:50.963Z'),
+        description: 'Usque laboriosam ventosus adflicto.',
+        difficulty: 'Beginner',
+        durationMinutes: 19,
+        externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
+        id: '93ebc3a9-fd1d-4164-a395-aec8aec0abe4',
+        instructors: [
+            new Shared\LmsReference(
+                id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
+                name: 'Winston Ferry',
+            ),
+        ],
+        isActive: true,
+        languages: [
+            'despecto',
+            'suppellex',
+        ],
+        localizations: [
+            new Shared\LmsContentLocalization(
+                description: 'Numquam.',
+                language: 'es',
+                name: 'validus',
+            ),
+            new Shared\LmsContentLocalization(
+                description: 'Callide.',
+                language: 'fr',
+                name: 'crux',
+            ),
+        ],
+        media: [
+            new Shared\LmsMedia(
+                content: 'Adnuo antepono vulticulus incidunt. Commemoro voro ocer arca velut vigor venustas una audeo. Consectetur totidem amor amo vigor. Patior ulciscor cohors necessitatibus beatae. Copiose cedo sub decens acer.',
+                description: 'Venia aeternus tandem spargo.',
+                languages: [
+                    'zu',
+                    'ba',
+                ],
+                name: 'subiungo',
+                thumbnailUrl: 'https://loremflickr.com/2056/3712?lock=5644845642923518',
+                type: Shared\LmsMediaType::Other,
+                url: 'https://loremflickr.com/2593/1553?lock=8591263400111785',
+            ),
+            new Shared\LmsMedia(
+                content: 'Terminatio acidus tripudio teres. Compono demum aut aestivus ambitus pecus tergum verumtamen vestrum. Absque adversus desino aut tabernus tollo vigor. Cur agnitio totidem consuasor bene doloribus. Vetus abundans curriculum curatio usitas.',
+                description: 'Comedo valde caste combibo.',
+                languages: [
+                    'it',
+                    'hu',
+                ],
+                name: 'beneficium',
+                thumbnailUrl: 'https://picsum.photos/seed/pNFr1/2597/885',
+                type: Shared\LmsMediaType::Web,
+                url: 'https://loremflickr.com/3597/239?lock=7142808124990633',
+            ),
+            new Shared\LmsMedia(
+                content: 'Coepi demo adversus capillus aro unus templum. Aspicio alius vehemens terminatio varietas vomica. Apud thorax defero decet impedit verbera pauci laboriosam molestiae urbanus. Aveho vergo crux certus nulla caute sophismata. Caute voluptatibus patrocinor demo verumtamen adeo canis sapiente depraedor verus.',
+                description: 'Tunc barba decens.',
+                languages: [
+                    'bn',
+                    'yo',
+                ],
+                name: 'qui',
+                thumbnailUrl: 'https://loremflickr.com/1375/3377?lock=6601832177607674',
+                type: Shared\LmsMediaType::Image,
+                url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
+            ),
+        ],
+        name: 'ut',
+        providerName: 'Berge LLC',
+        publishedAt: Utils\Utils::parseDateTime('2023-11-08T11:32:09.080Z'),
+        shortDescription: 'Commemoro.',
+        skills: [
+            'trucido',
+        ],
+        sortOrder: 3,
+        subjects: [
+            new Shared\LmsSubject(
+                name: 'tibi',
+                rank: 1,
+            ),
+        ],
+        tags: [
+            'dens',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2022-09-23T11:13:24.676Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

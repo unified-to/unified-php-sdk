@@ -17,7 +17,7 @@ Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="php" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" example="repo_commit" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -35,7 +36,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
+        createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
+        id: '2b258466-11d8-48b7-9819-81c316c7fd79',
+        linesAdded: 313,
+        linesChanged: 659,
+        linesDeleted: 482,
+        message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-16T02:59:00.115Z'),
     ),
     connectionId: '<id>',
 );
@@ -172,7 +180,7 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```php
 declare(strict_types=1);
 
@@ -181,6 +189,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -190,7 +199,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
+        createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
+        id: 'ffccec29-c641-498b-bc54-3e2c3721ac76',
+        linesAdded: 313,
+        linesChanged: 659,
+        linesDeleted: 482,
+        message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-16T02:59:00.118Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -278,7 +294,7 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```php
 declare(strict_types=1);
 
@@ -287,6 +303,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -296,7 +313,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
+        createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
+        id: 'ffccec29-c641-498b-bc54-3e2c3721ac76',
+        linesAdded: 313,
+        linesChanged: 659,
+        linesDeleted: 482,
+        message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-16T02:59:00.118Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

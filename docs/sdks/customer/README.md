@@ -17,7 +17,7 @@ Create a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" -->
+<!-- UsageSnippet language="php" operationID="createTicketingCustomer" method="post" path="/ticketing/{connection_id}/customer" example="ticketing_customer" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,36 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTicketingCustomerRequest(
-    ticketingCustomer: new Shared\TicketingCustomer(),
+    ticketingCustomer: new Shared\TicketingCustomer(
+        createdAt: Utils\Utils::parseDateTime('2021-03-15T12:33:14.875Z'),
+        emails: [
+            new Shared\TicketingEmail(
+                email: 'Christian_Windler@gmail.com',
+                type: Shared\TicketingEmailType::Home,
+            ),
+        ],
+        id: '7aaf843a-eb51-4f52-8529-70aa2d242803',
+        name: 'Christian Windler',
+        tags: [
+            'casso',
+            'peccatus',
+        ],
+        telephones: [
+            new Shared\TicketingTelephone(
+                telephone: '(532) 242-0482',
+                type: Shared\TicketingTelephoneType::Other,
+            ),
+            new Shared\TicketingTelephone(
+                telephone: '(826) 283-7431',
+                type: Shared\TicketingTelephoneType::Mobile,
+            ),
+            new Shared\TicketingTelephone(
+                telephone: '(483) 314-6826',
+                type: Shared\TicketingTelephoneType::Mobile,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2026-05-04T07:38:52.565Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +200,7 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTicketingCustomer" method="patch" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +209,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +218,36 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTicketingCustomerRequest(
-    ticketingCustomer: new Shared\TicketingCustomer(),
+    ticketingCustomer: new Shared\TicketingCustomer(
+        createdAt: Utils\Utils::parseDateTime('2021-03-15T12:33:14.875Z'),
+        emails: [
+            new Shared\TicketingEmail(
+                email: 'Christian_Windler@gmail.com',
+                type: Shared\TicketingEmailType::Home,
+            ),
+        ],
+        id: '81231dce-2c6b-48df-af99-3f67b7571c0d',
+        name: 'Christian Windler',
+        tags: [
+            'casso',
+            'peccatus',
+        ],
+        telephones: [
+            new Shared\TicketingTelephone(
+                telephone: '(532) 242-0482',
+                type: Shared\TicketingTelephoneType::Other,
+            ),
+            new Shared\TicketingTelephone(
+                telephone: '(826) 283-7431',
+                type: Shared\TicketingTelephoneType::Mobile,
+            ),
+            new Shared\TicketingTelephone(
+                telephone: '(483) 314-6826',
+                type: Shared\TicketingTelephoneType::Mobile,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2026-05-04T07:38:52.574Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +334,7 @@ Update a customer
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTicketingCustomer" method="put" path="/ticketing/{connection_id}/customer/{id}" example="ticketing_customer" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +343,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +352,36 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTicketingCustomerRequest(
-    ticketingCustomer: new Shared\TicketingCustomer(),
+    ticketingCustomer: new Shared\TicketingCustomer(
+        createdAt: Utils\Utils::parseDateTime('2021-03-15T12:33:14.875Z'),
+        emails: [
+            new Shared\TicketingEmail(
+                email: 'Christian_Windler@gmail.com',
+                type: Shared\TicketingEmailType::Home,
+            ),
+        ],
+        id: '81231dce-2c6b-48df-af99-3f67b7571c0d',
+        name: 'Christian Windler',
+        tags: [
+            'casso',
+            'peccatus',
+        ],
+        telephones: [
+            new Shared\TicketingTelephone(
+                telephone: '(532) 242-0482',
+                type: Shared\TicketingTelephoneType::Other,
+            ),
+            new Shared\TicketingTelephone(
+                telephone: '(826) 283-7431',
+                type: Shared\TicketingTelephoneType::Mobile,
+            ),
+            new Shared\TicketingTelephone(
+                telephone: '(483) 314-6826',
+                type: Shared\TicketingTelephoneType::Mobile,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2026-05-04T07:38:52.574Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -17,7 +17,7 @@ Create a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" -->
+<!-- UsageSnippet language="php" operationID="createAccountingSalesorder" method="post" path="/accounting/{connection_id}/salesorder" example="accounting_salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,56 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingSalesorderRequest(
-    accountingSalesorder: new Shared\AccountingSalesorder(),
+    accountingSalesorder: new Shared\AccountingSalesorder(
+        billingAddress: new Shared\PropertyAccountingSalesorderBillingAddress(
+            address1: '26530 Stroman Rest',
+            address2: 'Suite 801',
+            city: 'Pocatello',
+            countryCode: 'US',
+            postalCode: '05015-8546',
+            region: 'Louisiana',
+            regionCode: 'MO',
+        ),
+        categoryIds: [],
+        closedAt: Utils\Utils::parseDateTime('2023-08-16T21:47:16.752Z'),
+        createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
+        currency: 'ANG',
+        discountAmount: 99,
+        employeeUserId: '4a6b8990-c85a-499f-82d0-5011c3c95a0b',
+        fees: [
+            new Shared\AccountingFee(
+                amount: 519,
+                currency: 'XCD',
+                type: Shared\AccountingFeeType::Promotion,
+            ),
+        ],
+        fulfillmentType: Shared\FulfillmentType::Takeout,
+        guestCount: 8,
+        id: '8ab70945-b5d4-4f64-a9c3-bd5af04ec1cb',
+        lineitems: [],
+        metadata: [],
+        orderNumber: '988187',
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-01-11T02:10:29.889Z'),
+        refundedAmount: 0,
+        salesChannel: 'Harvey, Collier and Weimann',
+        serviceChargeAmount: 63,
+        shippingAddress: new Shared\PropertyAccountingSalesorderShippingAddress(
+            address1: '9878 Bradley Mill',
+            address2: 'Apt. 215',
+            city: 'Port Matildestad',
+            countryCode: 'US',
+            postalCode: '07989-2148',
+            region: 'Arkansas',
+            regionCode: 'AK',
+        ),
+        status: Shared\AccountingSalesorderStatus::Refunded,
+        subtotalAmount: 0,
+        taxAmount: 63,
+        tipAmount: 34,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2022-02-10T18:49:08.307Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +220,7 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingSalesorder" method="patch" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +229,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +238,56 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingSalesorderRequest(
-    accountingSalesorder: new Shared\AccountingSalesorder(),
+    accountingSalesorder: new Shared\AccountingSalesorder(
+        billingAddress: new Shared\PropertyAccountingSalesorderBillingAddress(
+            address1: '26530 Stroman Rest',
+            address2: 'Suite 801',
+            city: 'Pocatello',
+            countryCode: 'US',
+            postalCode: '05015-8546',
+            region: 'Louisiana',
+            regionCode: 'MO',
+        ),
+        categoryIds: [],
+        closedAt: Utils\Utils::parseDateTime('2023-08-16T21:47:16.768Z'),
+        createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
+        currency: 'ANG',
+        discountAmount: 99,
+        employeeUserId: '4a6b8990-c85a-499f-82d0-5011c3c95a0b',
+        fees: [
+            new Shared\AccountingFee(
+                amount: 519,
+                currency: 'XCD',
+                type: Shared\AccountingFeeType::Promotion,
+            ),
+        ],
+        fulfillmentType: Shared\FulfillmentType::Takeout,
+        guestCount: 8,
+        id: '26cb0a60-aeeb-49dc-aa08-231bb0af605c',
+        lineitems: [],
+        metadata: [],
+        orderNumber: '988187',
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-01-11T02:10:29.930Z'),
+        refundedAmount: 0,
+        salesChannel: 'Harvey, Collier and Weimann',
+        serviceChargeAmount: 63,
+        shippingAddress: new Shared\PropertyAccountingSalesorderShippingAddress(
+            address1: '9878 Bradley Mill',
+            address2: 'Apt. 215',
+            city: 'Port Matildestad',
+            countryCode: 'US',
+            postalCode: '07989-2148',
+            region: 'Arkansas',
+            regionCode: 'AK',
+        ),
+        status: Shared\AccountingSalesorderStatus::Refunded,
+        subtotalAmount: 0,
+        taxAmount: 63,
+        tipAmount: 34,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2022-02-10T18:49:08.308Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +374,7 @@ Update a salesorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingSalesorder" method="put" path="/accounting/{connection_id}/salesorder/{id}" example="accounting_salesorder" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +383,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +392,56 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingSalesorderRequest(
-    accountingSalesorder: new Shared\AccountingSalesorder(),
+    accountingSalesorder: new Shared\AccountingSalesorder(
+        billingAddress: new Shared\PropertyAccountingSalesorderBillingAddress(
+            address1: '26530 Stroman Rest',
+            address2: 'Suite 801',
+            city: 'Pocatello',
+            countryCode: 'US',
+            postalCode: '05015-8546',
+            region: 'Louisiana',
+            regionCode: 'MO',
+        ),
+        categoryIds: [],
+        closedAt: Utils\Utils::parseDateTime('2023-08-16T21:47:16.768Z'),
+        createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
+        currency: 'ANG',
+        discountAmount: 99,
+        employeeUserId: '4a6b8990-c85a-499f-82d0-5011c3c95a0b',
+        fees: [
+            new Shared\AccountingFee(
+                amount: 519,
+                currency: 'XCD',
+                type: Shared\AccountingFeeType::Promotion,
+            ),
+        ],
+        fulfillmentType: Shared\FulfillmentType::Takeout,
+        guestCount: 8,
+        id: '26cb0a60-aeeb-49dc-aa08-231bb0af605c',
+        lineitems: [],
+        metadata: [],
+        orderNumber: '988187',
+        payments: [],
+        postedAt: Utils\Utils::parseDateTime('2026-01-11T02:10:29.930Z'),
+        refundedAmount: 0,
+        salesChannel: 'Harvey, Collier and Weimann',
+        serviceChargeAmount: 63,
+        shippingAddress: new Shared\PropertyAccountingSalesorderShippingAddress(
+            address1: '9878 Bradley Mill',
+            address2: 'Apt. 215',
+            city: 'Port Matildestad',
+            countryCode: 'US',
+            postalCode: '07989-2148',
+            region: 'Arkansas',
+            regionCode: 'AK',
+        ),
+        status: Shared\AccountingSalesorderStatus::Refunded,
+        subtotalAmount: 0,
+        taxAmount: 63,
+        tipAmount: 34,
+        totalAmount: 0,
+        updatedAt: Utils\Utils::parseDateTime('2022-02-10T18:49:08.308Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

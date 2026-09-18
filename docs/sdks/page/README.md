@@ -17,7 +17,7 @@ Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="php" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" example="kms_page" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -35,7 +36,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        type: Shared\KmsPageType::Text,
+        createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
+        downloadUrl: 'https://agitated-validity.info',
+        hasChildren: true,
+        id: '428020b5-07f4-4b3b-bf4f-9dd1d68d49ea',
+        isActive: true,
+        metadata: [],
+        title: 'even minister extract',
+        type: Shared\KmsPageType::Html,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-10T18:25:11.303Z'),
+        webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
 );
@@ -172,7 +182,7 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```php
 declare(strict_types=1);
 
@@ -181,6 +191,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -190,7 +201,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        type: Shared\KmsPageType::Other,
+        createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
+        downloadUrl: 'https://agitated-validity.info',
+        hasChildren: true,
+        id: '26da09eb-a3d5-44be-928e-ae404415c517',
+        isActive: true,
+        metadata: [],
+        title: 'even minister extract',
+        type: Shared\KmsPageType::Html,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-10T18:25:11.325Z'),
+        webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -278,7 +298,7 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```php
 declare(strict_types=1);
 
@@ -287,6 +307,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -296,7 +317,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        type: Shared\KmsPageType::Other,
+        createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
+        downloadUrl: 'https://agitated-validity.info',
+        hasChildren: true,
+        id: '26da09eb-a3d5-44be-928e-ae404415c517',
+        isActive: true,
+        metadata: [],
+        title: 'even minister extract',
+        type: Shared\KmsPageType::Html,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-10T18:25:11.325Z'),
+        webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
     id: '<id>',

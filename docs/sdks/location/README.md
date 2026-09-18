@@ -25,7 +25,7 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="createCommerceLocation" method="post" path="/commerce/{connection_id}/location" example="commerce_location" -->
 ```php
 declare(strict_types=1);
 
@@ -34,6 +34,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -42,7 +43,61 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(),
+    commerceLocation: new Shared\CommerceLocation(
+        address: new Shared\PropertyCommerceLocationAddress(
+            address1: '29896 The Limes',
+            city: 'New Kenny',
+            countryCode: 'US',
+            postalCode: '14490-0609',
+            region: 'Virginia',
+            regionCode: 'MS',
+        ),
+        categories: [],
+        createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
+        currency: 'XCD',
+        description: 'Adsidue audentia.',
+        id: '91d66956-d6f9-4cbb-ab60-9661155b85d7',
+        imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
+        isActive: false,
+        languageLocale: 'vulgaris',
+        latitude: 0,
+        locationType: Shared\LocationType::Restaurant,
+        longitude: 0,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Addo.',
+                height: 283,
+                id: '5132660e-2e6f-424d-aa7e-0a9b50c103f0',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '77ae4026-f169-4563-b908-fc01a4fcd22a',
+                        slug: 'abutor',
+                        value: 'damno',
+                    ),
+                ],
+                position: 40,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+                width: 1,
+            ),
+        ],
+        name: 'Olson - Mraz',
+        priceLevel: '',
+        rating: 0,
+        reviewCount: 0,
+        telephones: [
+            new Shared\CommerceTelephone(
+                telephone: '(872) 522-3201',
+                type: Shared\CommerceTelephoneType::Other,
+            ),
+            new Shared\CommerceTelephone(
+                telephone: '(236) 274-2445',
+                type: Shared\CommerceTelephoneType::Mobile,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2024-04-09T09:35:32.572Z'),
+        webUrl: 'https://chilly-edge.info',
+    ),
     connectionId: '<id>',
 );
 
@@ -77,7 +132,7 @@ Create a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" -->
+<!-- UsageSnippet language="php" operationID="createHrisLocation" method="post" path="/hris/{connection_id}/location" example="hris_location" -->
 ```php
 declare(strict_types=1);
 
@@ -86,6 +141,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -94,7 +150,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateHrisLocationRequest(
-    hrisLocation: new Shared\HrisLocation(),
+    hrisLocation: new Shared\HrisLocation(
+        address: new Shared\PropertyHrisLocationAddress(
+            address1: '2743 Connelly Summit',
+            address2: 'Apt. 350',
+            city: 'Titusville',
+            countryCode: 'US',
+            postalCode: '16154-1095',
+            region: 'Oregon',
+            regionCode: 'AL',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
+        currency: 'MUR',
+        description: 'Acervus caries.',
+        externalIdentifier: 'f7f353fd-05db-464e-813d-53ebc1a79d24',
+        id: '854e19af-cf20-4edc-8a76-c80b50974f65',
+        isActive: true,
+        isHq: false,
+        languageLocale: 'fr',
+        name: 'adhuc',
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(710) 550-6997',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(208) 555-8542',
+                type: Shared\HrisTelephoneType::Home,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(712) 473-5482',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        timezone: 'America/Guyana',
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T00:39:51.875Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -432,7 +523,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceLocation" method="patch" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```php
 declare(strict_types=1);
 
@@ -441,6 +532,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -449,7 +541,61 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(),
+    commerceLocation: new Shared\CommerceLocation(
+        address: new Shared\PropertyCommerceLocationAddress(
+            address1: '29896 The Limes',
+            city: 'New Kenny',
+            countryCode: 'US',
+            postalCode: '14490-0609',
+            region: 'Virginia',
+            regionCode: 'MS',
+        ),
+        categories: [],
+        createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
+        currency: 'XCD',
+        description: 'Adsidue audentia.',
+        id: '6353175c-63a0-4c16-9970-194a80526550',
+        imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
+        isActive: false,
+        languageLocale: 'vulgaris',
+        latitude: 0,
+        locationType: Shared\LocationType::Restaurant,
+        longitude: 0,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Addo.',
+                height: 283,
+                id: '0034a07c-d090-4d9a-af96-8a39943f2077',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '49c850e4-ae1d-4f2f-a9e9-69f5b5a345e7',
+                        slug: 'abutor',
+                        value: 'damno',
+                    ),
+                ],
+                position: 40,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+                width: 1,
+            ),
+        ],
+        name: 'Olson - Mraz',
+        priceLevel: '',
+        rating: 0,
+        reviewCount: 0,
+        telephones: [
+            new Shared\CommerceTelephone(
+                telephone: '(872) 522-3201',
+                type: Shared\CommerceTelephoneType::Other,
+            ),
+            new Shared\CommerceTelephone(
+                telephone: '(236) 274-2445',
+                type: Shared\CommerceTelephoneType::Mobile,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2024-04-09T09:35:32.582Z'),
+        webUrl: 'https://chilly-edge.info',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -485,7 +631,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisLocation" method="patch" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```php
 declare(strict_types=1);
 
@@ -494,6 +640,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -502,7 +649,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchHrisLocationRequest(
-    hrisLocation: new Shared\HrisLocation(),
+    hrisLocation: new Shared\HrisLocation(
+        address: new Shared\PropertyHrisLocationAddress(
+            address1: '2743 Connelly Summit',
+            address2: 'Apt. 350',
+            city: 'Titusville',
+            countryCode: 'US',
+            postalCode: '16154-1095',
+            region: 'Oregon',
+            regionCode: 'AL',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
+        currency: 'MUR',
+        description: 'Acervus caries.',
+        externalIdentifier: '633d799f-e467-4730-a2c1-d0442c073b57',
+        id: 'd267ea88-128c-42f6-8cdf-1a9e361e0183',
+        isActive: true,
+        isHq: false,
+        languageLocale: 'fr',
+        name: 'adhuc',
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(710) 550-6997',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(208) 555-8542',
+                type: Shared\HrisTelephoneType::Home,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(712) 473-5482',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        timezone: 'America/Guyana',
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T00:39:51.880Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -640,7 +822,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceLocation" method="put" path="/commerce/{connection_id}/location/{id}" example="commerce_location" -->
 ```php
 declare(strict_types=1);
 
@@ -649,6 +831,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -657,7 +840,61 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceLocationRequest(
-    commerceLocation: new Shared\CommerceLocation(),
+    commerceLocation: new Shared\CommerceLocation(
+        address: new Shared\PropertyCommerceLocationAddress(
+            address1: '29896 The Limes',
+            city: 'New Kenny',
+            countryCode: 'US',
+            postalCode: '14490-0609',
+            region: 'Virginia',
+            regionCode: 'MS',
+        ),
+        categories: [],
+        createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
+        currency: 'XCD',
+        description: 'Adsidue audentia.',
+        id: '6353175c-63a0-4c16-9970-194a80526550',
+        imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
+        isActive: false,
+        languageLocale: 'vulgaris',
+        latitude: 0,
+        locationType: Shared\LocationType::Restaurant,
+        longitude: 0,
+        media: [
+            new Shared\CommerceItemMedia(
+                alt: 'Addo.',
+                height: 283,
+                id: '0034a07c-d090-4d9a-af96-8a39943f2077',
+                metadata: [
+                    new Shared\CommerceMetadata(
+                        id: '49c850e4-ae1d-4f2f-a9e9-69f5b5a345e7',
+                        slug: 'abutor',
+                        value: 'damno',
+                    ),
+                ],
+                position: 40,
+                type: Shared\CommerceItemMediaType::Image,
+                url: 'https://picsum.photos/seed/QVh7ViTV/3964/1567',
+                width: 1,
+            ),
+        ],
+        name: 'Olson - Mraz',
+        priceLevel: '',
+        rating: 0,
+        reviewCount: 0,
+        telephones: [
+            new Shared\CommerceTelephone(
+                telephone: '(872) 522-3201',
+                type: Shared\CommerceTelephoneType::Other,
+            ),
+            new Shared\CommerceTelephone(
+                telephone: '(236) 274-2445',
+                type: Shared\CommerceTelephoneType::Mobile,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2024-04-09T09:35:32.582Z'),
+        webUrl: 'https://chilly-edge.info',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -693,7 +930,7 @@ Update a location
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisLocation" method="put" path="/hris/{connection_id}/location/{id}" example="hris_location" -->
 ```php
 declare(strict_types=1);
 
@@ -702,6 +939,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -710,7 +948,42 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateHrisLocationRequest(
-    hrisLocation: new Shared\HrisLocation(),
+    hrisLocation: new Shared\HrisLocation(
+        address: new Shared\PropertyHrisLocationAddress(
+            address1: '2743 Connelly Summit',
+            address2: 'Apt. 350',
+            city: 'Titusville',
+            countryCode: 'US',
+            postalCode: '16154-1095',
+            region: 'Oregon',
+            regionCode: 'AL',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
+        currency: 'MUR',
+        description: 'Acervus caries.',
+        externalIdentifier: '633d799f-e467-4730-a2c1-d0442c073b57',
+        id: 'd267ea88-128c-42f6-8cdf-1a9e361e0183',
+        isActive: true,
+        isHq: false,
+        languageLocale: 'fr',
+        name: 'adhuc',
+        telephones: [
+            new Shared\HrisTelephone(
+                telephone: '(710) 550-6997',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(208) 555-8542',
+                type: Shared\HrisTelephoneType::Home,
+            ),
+            new Shared\HrisTelephone(
+                telephone: '(712) 473-5482',
+                type: Shared\HrisTelephoneType::Fax,
+            ),
+        ],
+        timezone: 'America/Guyana',
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T00:39:51.880Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

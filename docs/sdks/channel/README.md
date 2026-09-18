@@ -17,7 +17,7 @@ Create a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" -->
+<!-- UsageSnippet language="php" operationID="createMessagingChannel" method="post" path="/messaging/{connection_id}/channel" example="messaging_channel" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateMessagingChannelRequest(
-    messagingChannel: new Shared\MessagingChannel(),
+    messagingChannel: new Shared\MessagingChannel(
+        createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
+        description: 'Dolores tutis.',
+        hasSubchannels: true,
+        id: 'fb1b5821-f6ca-4c41-8bd1-9f5079b8d3c5',
+        isActive: false,
+        isPrivate: true,
+        members: [],
+        name: 'tego',
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T02:23:02.328Z'),
+        webUrl: 'https://svelte-rule.name/',
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +182,7 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMessagingChannel" method="patch" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +191,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +200,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchMessagingChannelRequest(
-    messagingChannel: new Shared\MessagingChannel(),
+    messagingChannel: new Shared\MessagingChannel(
+        createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
+        description: 'Dolores tutis.',
+        hasSubchannels: true,
+        id: 'd1a2cea2-7d86-4148-9de6-63fe81d8eec0',
+        isActive: false,
+        isPrivate: true,
+        members: [],
+        name: 'tego',
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T02:23:02.334Z'),
+        webUrl: 'https://svelte-rule.name/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +298,7 @@ Update a channel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMessagingChannel" method="put" path="/messaging/{connection_id}/channel/{id}" example="messaging_channel" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +307,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +316,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateMessagingChannelRequest(
-    messagingChannel: new Shared\MessagingChannel(),
+    messagingChannel: new Shared\MessagingChannel(
+        createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
+        description: 'Dolores tutis.',
+        hasSubchannels: true,
+        id: 'd1a2cea2-7d86-4148-9de6-63fe81d8eec0',
+        isActive: false,
+        isPrivate: true,
+        members: [],
+        name: 'tego',
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T02:23:02.334Z'),
+        webUrl: 'https://svelte-rule.name/',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -17,7 +17,7 @@ Create an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" -->
+<!-- UsageSnippet language="php" operationID="createAtsInterview" method="post" path="/ats/{connection_id}/interview" example="ats_interview" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAtsInterviewRequest(
-    atsInterview: new Shared\AtsInterview(),
+    atsInterview: new Shared\AtsInterview(
+        createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
+        endAt: Utils\Utils::parseDateTime('2025-09-23T08:17:25.145Z'),
+        externalEventXref: '1fc4a432-1e66-4f05-aeae-2d71e9763288',
+        id: 'f8c16ff1-c75f-442a-80c0-c1353415f3a5',
+        location: '26596 Halle Trafficway',
+        startAt: Utils\Utils::parseDateTime('2025-05-19T06:25:27.904Z'),
+        status: Shared\AtsInterviewStatus::Scheduled,
+        updatedAt: Utils\Utils::parseDateTime('2026-02-04T00:36:47.789Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +180,7 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAtsInterview" method="patch" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +189,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +198,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAtsInterviewRequest(
-    atsInterview: new Shared\AtsInterview(),
+    atsInterview: new Shared\AtsInterview(
+        createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
+        endAt: Utils\Utils::parseDateTime('2025-09-23T08:17:25.151Z'),
+        externalEventXref: '6a22031c-0b28-4d56-ba42-1c31bf19c09f',
+        id: '93efa9e8-7024-4008-b4ed-f951ce0c19c3',
+        location: '26596 Halle Trafficway',
+        startAt: Utils\Utils::parseDateTime('2025-05-19T06:25:27.909Z'),
+        status: Shared\AtsInterviewStatus::Scheduled,
+        updatedAt: Utils\Utils::parseDateTime('2026-02-04T00:36:47.796Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +294,7 @@ Update an interview
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAtsInterview" method="put" path="/ats/{connection_id}/interview/{id}" example="ats_interview" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +303,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +312,16 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAtsInterviewRequest(
-    atsInterview: new Shared\AtsInterview(),
+    atsInterview: new Shared\AtsInterview(
+        createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
+        endAt: Utils\Utils::parseDateTime('2025-09-23T08:17:25.151Z'),
+        externalEventXref: '6a22031c-0b28-4d56-ba42-1c31bf19c09f',
+        id: '93efa9e8-7024-4008-b4ed-f951ce0c19c3',
+        location: '26596 Halle Trafficway',
+        startAt: Utils\Utils::parseDateTime('2025-05-19T06:25:27.909Z'),
+        status: Shared\AtsInterviewStatus::Scheduled,
+        updatedAt: Utils\Utils::parseDateTime('2026-02-04T00:36:47.796Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

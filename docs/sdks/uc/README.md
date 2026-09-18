@@ -31,7 +31,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="createUcComment" method="post" path="/uc/{connection_id}/comment" example="uc_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -48,7 +48,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateUcCommentRequest(
-    ucComment: new Shared\UcComment(),
+    ucComment: new Shared\UcComment(
+        content: 'Vociferor vitiosus.',
+        createdAt: '2023-04-02T23:42:31.571Z',
+        id: '0799f5c4-cd42-46d0-8ad5-f45577f33875',
+        updatedAt: '2024-02-01T19:29:01.666Z',
+    ),
     connectionId: '<id>',
 );
 
@@ -83,7 +88,7 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="createUcContact" method="post" path="/uc/{connection_id}/contact" example="uc_contact" -->
 ```php
 declare(strict_types=1);
 
@@ -92,6 +97,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -100,7 +106,36 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateUcContactRequest(
-    ucContact: new Shared\UcContact(),
+    ucContact: new Shared\UcContact(
+        company: 'Tillman Group',
+        createdAt: Utils\Utils::parseDateTime('2019-10-28T11:06:56.460Z'),
+        emails: [
+            new Shared\UcEmail(
+                email: 'Luther_Rogahn32@yahoo.com',
+                type: Shared\UcEmailType::Work,
+            ),
+        ],
+        firstName: 'Luther',
+        id: '7ffe79ab-179b-4292-be46-39b5ec7db1b0',
+        lastName: 'Rogahn',
+        name: 'Luther Rogahn',
+        telephones: [
+            new Shared\UcTelephone(
+                telephone: '(809) 992-1681',
+                type: Shared\UcTelephoneType::Fax,
+            ),
+            new Shared\UcTelephone(
+                telephone: '(868) 238-2746',
+                type: Shared\UcTelephoneType::Home,
+            ),
+            new Shared\UcTelephone(
+                telephone: '(219) 736-0357',
+                type: Shared\UcTelephoneType::Mobile,
+            ),
+        ],
+        title: 'Chief Optimization Executive',
+        updatedAt: Utils\Utils::parseDateTime('2023-11-18T22:29:57.338Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -135,7 +170,7 @@ Create a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" -->
+<!-- UsageSnippet language="php" operationID="createUcRecording" method="post" path="/uc/{connection_id}/recording" example="uc_recording" -->
 ```php
 declare(strict_types=1);
 
@@ -144,6 +179,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -152,7 +188,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateUcRecordingRequest(
-    ucRecording: new Shared\UcRecording(),
+    ucRecording: new Shared\UcRecording(
+        contacts: [],
+        createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-21T20:25:03.937Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-03-28T16:20:45.918Z'),
+        id: '9bb37bb5-bcc7-496b-91d6-9ba3da4d46f3',
+        media: [],
+        startAt: Utils\Utils::parseDateTime('2023-04-22T20:25:19.456Z'),
+        type: Shared\UcRecordingType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-24T08:23:34.885Z'),
+        userName: 'Melyna Larson',
+        userPhone: '1-915-327-0429 x509',
+        webUrl: 'https://spherical-comparison.org',
+    ),
     connectionId: '<id>',
 );
 
@@ -591,7 +640,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchUcComment" method="patch" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -608,7 +657,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchUcCommentRequest(
-    ucComment: new Shared\UcComment(),
+    ucComment: new Shared\UcComment(
+        content: 'Vociferor vitiosus.',
+        createdAt: '2023-04-02T23:42:31.571Z',
+        id: '8a4a0ba6-4264-407c-8765-0815731be5d8',
+        updatedAt: '2024-02-01T19:29:01.667Z',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -644,7 +698,7 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchUcContact" method="patch" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```php
 declare(strict_types=1);
 
@@ -653,6 +707,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -661,7 +716,36 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchUcContactRequest(
-    ucContact: new Shared\UcContact(),
+    ucContact: new Shared\UcContact(
+        company: 'Tillman Group',
+        createdAt: Utils\Utils::parseDateTime('2019-10-28T11:06:56.460Z'),
+        emails: [
+            new Shared\UcEmail(
+                email: 'Luther_Rogahn32@yahoo.com',
+                type: Shared\UcEmailType::Work,
+            ),
+        ],
+        firstName: 'Luther',
+        id: '8a9d8dfd-1a11-4da9-a537-8e7072a26094',
+        lastName: 'Rogahn',
+        name: 'Luther Rogahn',
+        telephones: [
+            new Shared\UcTelephone(
+                telephone: '(809) 992-1681',
+                type: Shared\UcTelephoneType::Fax,
+            ),
+            new Shared\UcTelephone(
+                telephone: '(868) 238-2746',
+                type: Shared\UcTelephoneType::Home,
+            ),
+            new Shared\UcTelephone(
+                telephone: '(219) 736-0357',
+                type: Shared\UcTelephoneType::Mobile,
+            ),
+        ],
+        title: 'Chief Optimization Executive',
+        updatedAt: Utils\Utils::parseDateTime('2023-11-18T22:29:57.342Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -697,7 +781,7 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchUcRecording" method="patch" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```php
 declare(strict_types=1);
 
@@ -706,6 +790,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -714,7 +799,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchUcRecordingRequest(
-    ucRecording: new Shared\UcRecording(),
+    ucRecording: new Shared\UcRecording(
+        contacts: [],
+        createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-21T20:25:03.945Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-03-28T16:20:45.935Z'),
+        id: '70237347-36d8-4eca-9224-cee256883565',
+        media: [],
+        startAt: Utils\Utils::parseDateTime('2023-04-22T20:25:19.459Z'),
+        type: Shared\UcRecordingType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-24T08:23:34.897Z'),
+        userName: 'Melyna Larson',
+        userPhone: '1-915-327-0429 x509',
+        webUrl: 'https://spherical-comparison.org',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -903,7 +1001,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcComment" method="put" path="/uc/{connection_id}/comment/{id}" example="uc_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -920,7 +1018,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateUcCommentRequest(
-    ucComment: new Shared\UcComment(),
+    ucComment: new Shared\UcComment(
+        content: 'Vociferor vitiosus.',
+        createdAt: '2023-04-02T23:42:31.571Z',
+        id: '8a4a0ba6-4264-407c-8765-0815731be5d8',
+        updatedAt: '2024-02-01T19:29:01.667Z',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -956,7 +1059,7 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcContact" method="put" path="/uc/{connection_id}/contact/{id}" example="uc_contact" -->
 ```php
 declare(strict_types=1);
 
@@ -965,6 +1068,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -973,7 +1077,36 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateUcContactRequest(
-    ucContact: new Shared\UcContact(),
+    ucContact: new Shared\UcContact(
+        company: 'Tillman Group',
+        createdAt: Utils\Utils::parseDateTime('2019-10-28T11:06:56.460Z'),
+        emails: [
+            new Shared\UcEmail(
+                email: 'Luther_Rogahn32@yahoo.com',
+                type: Shared\UcEmailType::Work,
+            ),
+        ],
+        firstName: 'Luther',
+        id: '8a9d8dfd-1a11-4da9-a537-8e7072a26094',
+        lastName: 'Rogahn',
+        name: 'Luther Rogahn',
+        telephones: [
+            new Shared\UcTelephone(
+                telephone: '(809) 992-1681',
+                type: Shared\UcTelephoneType::Fax,
+            ),
+            new Shared\UcTelephone(
+                telephone: '(868) 238-2746',
+                type: Shared\UcTelephoneType::Home,
+            ),
+            new Shared\UcTelephone(
+                telephone: '(219) 736-0357',
+                type: Shared\UcTelephoneType::Mobile,
+            ),
+        ],
+        title: 'Chief Optimization Executive',
+        updatedAt: Utils\Utils::parseDateTime('2023-11-18T22:29:57.342Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1009,7 +1142,7 @@ Update a recording
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateUcRecording" method="put" path="/uc/{connection_id}/recording/{id}" example="uc_recording" -->
 ```php
 declare(strict_types=1);
 
@@ -1018,6 +1151,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1026,7 +1160,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateUcRecordingRequest(
-    ucRecording: new Shared\UcRecording(),
+    ucRecording: new Shared\UcRecording(
+        contacts: [],
+        createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-21T20:25:03.945Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-03-28T16:20:45.935Z'),
+        id: '70237347-36d8-4eca-9224-cee256883565',
+        media: [],
+        startAt: Utils\Utils::parseDateTime('2023-04-22T20:25:19.459Z'),
+        type: Shared\UcRecordingType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2025-02-24T08:23:34.897Z'),
+        userName: 'Melyna Larson',
+        userPhone: '1-915-327-0429 x509',
+        webUrl: 'https://spherical-comparison.org',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

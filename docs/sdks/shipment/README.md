@@ -17,7 +17,7 @@ Create a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" -->
+<!-- UsageSnippet language="php" operationID="createShippingShipment" method="post" path="/shipping/{connection_id}/shipment" example="shipping_shipment" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateShippingShipmentRequest(
-    shippingShipment: new Shared\ShippingShipment(),
+    shippingShipment: new Shared\ShippingShipment(
+        carrierName: 'Bogisich, Franey and Koelpin',
+        createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
+        id: 'c1cbcd72-dc11-4fa0-a28b-06831de01b1c',
+        rateAmount: 8.86546263936907,
+        rateCurrency: 'USD',
+        rateEstimatedDays: 8,
+        rateServiceName: 'Fisher - Kilback',
+        serviceCode: 'F7U',
+        shippedAt: Utils\Utils::parseDateTime('2025-08-24T18:19:39.641Z'),
+        status: Shared\ShippingShipmentStatus::Pending,
+        trackingUrl: 'https://shallow-secrecy.info/',
+        updatedAt: Utils\Utils::parseDateTime('2025-07-03T02:06:45.236Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +184,7 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchShippingShipment" method="patch" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +193,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +202,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchShippingShipmentRequest(
-    shippingShipment: new Shared\ShippingShipment(),
+    shippingShipment: new Shared\ShippingShipment(
+        carrierName: 'Bogisich, Franey and Koelpin',
+        createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
+        id: '76bfc6fc-b647-4048-8cd8-dbe130a58995',
+        rateAmount: 8.86546263936907,
+        rateCurrency: 'USD',
+        rateEstimatedDays: 8,
+        rateServiceName: 'Fisher - Kilback',
+        serviceCode: 'F7U',
+        shippedAt: Utils\Utils::parseDateTime('2025-08-24T18:19:39.686Z'),
+        status: Shared\ShippingShipmentStatus::Pending,
+        trackingUrl: 'https://shallow-secrecy.info/',
+        updatedAt: Utils\Utils::parseDateTime('2025-07-03T02:06:45.279Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +302,7 @@ Update a shipment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateShippingShipment" method="put" path="/shipping/{connection_id}/shipment/{id}" example="shipping_shipment" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +311,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +320,20 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateShippingShipmentRequest(
-    shippingShipment: new Shared\ShippingShipment(),
+    shippingShipment: new Shared\ShippingShipment(
+        carrierName: 'Bogisich, Franey and Koelpin',
+        createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
+        id: '76bfc6fc-b647-4048-8cd8-dbe130a58995',
+        rateAmount: 8.86546263936907,
+        rateCurrency: 'USD',
+        rateEstimatedDays: 8,
+        rateServiceName: 'Fisher - Kilback',
+        serviceCode: 'F7U',
+        shippedAt: Utils\Utils::parseDateTime('2025-08-24T18:19:39.686Z'),
+        status: Shared\ShippingShipmentStatus::Pending,
+        trackingUrl: 'https://shallow-secrecy.info/',
+        updatedAt: Utils\Utils::parseDateTime('2025-07-03T02:06:45.279Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

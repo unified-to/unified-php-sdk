@@ -17,7 +17,7 @@ Create a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" -->
+<!-- UsageSnippet language="php" operationID="createAdsCreative" method="post" path="/ads/{connection_id}/creative" example="ads_creative" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsCreativeRequest(
-    adsCreative: new Shared\AdsCreative(),
+    adsCreative: new Shared\AdsCreative(
+        createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
+        id: 'c463cc88-8e1a-4b52-83cd-0ba93cdb00fd',
+        labels: [
+            'coma',
+            'accedo',
+            'termes',
+        ],
+        name: 'Brekke, Bradtke and Robel',
+        status: Shared\AdsCreativeStatus::Paused,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-21T01:01:18.433Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +182,7 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsCreative" method="patch" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +191,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +200,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsCreativeRequest(
-    adsCreative: new Shared\AdsCreative(),
+    adsCreative: new Shared\AdsCreative(
+        createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
+        id: 'f202a073-a108-4edf-8ab7-59edfc36014e',
+        labels: [
+            'coma',
+            'accedo',
+            'termes',
+        ],
+        name: 'Brekke, Bradtke and Robel',
+        status: Shared\AdsCreativeStatus::Paused,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-21T01:01:18.437Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +298,7 @@ Update a creative
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsCreative" method="put" path="/ads/{connection_id}/creative/{id}" example="ads_creative" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +307,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +316,18 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsCreativeRequest(
-    adsCreative: new Shared\AdsCreative(),
+    adsCreative: new Shared\AdsCreative(
+        createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
+        id: 'f202a073-a108-4edf-8ab7-59edfc36014e',
+        labels: [
+            'coma',
+            'accedo',
+            'termes',
+        ],
+        name: 'Brekke, Bradtke and Robel',
+        status: Shared\AdsCreativeStatus::Paused,
+        updatedAt: Utils\Utils::parseDateTime('2021-06-21T01:01:18.437Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

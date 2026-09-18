@@ -41,7 +41,7 @@ Create a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" -->
+<!-- UsageSnippet language="php" operationID="createRepoBranch" method="post" path="/repo/{connection_id}/branch" example="repo_branch" -->
 ```php
 declare(strict_types=1);
 
@@ -50,6 +50,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -59,8 +60,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
+        id: '910a7ea7-c8c6-4b98-be91-5079d6b41a9c',
+        name: 'voluptas',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2020-01-03T14:15:01.616Z'),
     ),
     connectionId: '<id>',
 );
@@ -96,7 +100,7 @@ Create a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" -->
+<!-- UsageSnippet language="php" operationID="createRepoCommit" method="post" path="/repo/{connection_id}/commit" example="repo_commit" -->
 ```php
 declare(strict_types=1);
 
@@ -105,6 +109,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -114,7 +119,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
+        createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
+        id: '2b258466-11d8-48b7-9819-81c316c7fd79',
+        linesAdded: 313,
+        linesChanged: 659,
+        linesDeleted: 482,
+        message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-16T02:59:00.115Z'),
     ),
     connectionId: '<id>',
 );
@@ -150,7 +162,7 @@ Create an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" -->
+<!-- UsageSnippet language="php" operationID="createRepoOrganization" method="post" path="/repo/{connection_id}/organization" example="repo_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -159,6 +171,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -167,7 +180,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateRepoOrganizationRequest(
-    repoOrganization: new Shared\RepoOrganization(),
+    repoOrganization: new Shared\RepoOrganization(
+        avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+        createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
+        description: 'Trepide defendo supra testimonium ager.',
+        id: 'b2fae39f-83b2-4f92-9838-66f9f34dfae1',
+        name: 'Denesik - Lemke',
+        updatedAt: Utils\Utils::parseDateTime('2023-08-12T23:34:40.316Z'),
+        webUrl: 'https://turbulent-overheard.biz',
+    ),
     connectionId: '<id>',
 );
 
@@ -202,7 +223,7 @@ Create a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" -->
+<!-- UsageSnippet language="php" operationID="createRepoPullrequest" method="post" path="/repo/{connection_id}/pullrequest" example="repo_pullrequest" -->
 ```php
 declare(strict_types=1);
 
@@ -211,6 +232,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -219,7 +241,21 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateRepoPullrequestRequest(
-    repoPullrequest: new Shared\RepoPullrequest(),
+    repoPullrequest: new Shared\RepoPullrequest(
+        closedAt: Utils\Utils::parseDateTime('2025-04-11T21:28:25.897Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
+        id: '832dda65-a597-414c-8aa9-f7a588518dab',
+        labels: [
+            'adhuc',
+            'quaerat',
+        ],
+        notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
+        sourceBranchId: 'microchip-navigate',
+        status: Shared\RepoPullrequestStatus::Rejected,
+        targetBranchId: 'feed-reboot',
+        title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
+        updatedAt: Utils\Utils::parseDateTime('2024-12-30T23:42:33.219Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -254,7 +290,7 @@ Create a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="php" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" example="repo_repository" -->
 ```php
 declare(strict_types=1);
 
@@ -263,6 +299,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -272,7 +309,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
+        description: 'Tribuo torqueo aetas ustulo illum.',
+        id: '441972fc-9653-4a1e-9354-288bb23805bd',
+        isPrivate: false,
+        name: 'suggero',
+        owner: 'Marcella Kuhic',
+        updatedAt: Utils\Utils::parseDateTime('2024-02-23T00:27:15.992Z'),
+        webUrl: 'https://brown-phrase.info',
     ),
     connectionId: '<id>',
 );
@@ -813,7 +857,7 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoBranch" method="patch" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```php
 declare(strict_types=1);
 
@@ -822,6 +866,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -831,8 +876,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
+        id: 'bcbd7332-7112-4169-93f5-f369b354498a',
+        name: 'voluptas',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2020-01-03T14:15:01.617Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -869,7 +917,7 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoCommit" method="patch" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```php
 declare(strict_types=1);
 
@@ -878,6 +926,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -887,7 +936,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
+        createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
+        id: 'ffccec29-c641-498b-bc54-3e2c3721ac76',
+        linesAdded: 313,
+        linesChanged: 659,
+        linesDeleted: 482,
+        message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-16T02:59:00.118Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -924,7 +980,7 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoOrganization" method="patch" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -933,6 +989,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -941,7 +998,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchRepoOrganizationRequest(
-    repoOrganization: new Shared\RepoOrganization(),
+    repoOrganization: new Shared\RepoOrganization(
+        avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+        createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
+        description: 'Trepide defendo supra testimonium ager.',
+        id: '51493ffd-a0c6-411e-b158-55b80104e6a6',
+        name: 'Denesik - Lemke',
+        updatedAt: Utils\Utils::parseDateTime('2023-08-12T23:34:40.317Z'),
+        webUrl: 'https://turbulent-overheard.biz',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -977,7 +1042,7 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoPullrequest" method="patch" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```php
 declare(strict_types=1);
 
@@ -986,6 +1051,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -994,7 +1060,21 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchRepoPullrequestRequest(
-    repoPullrequest: new Shared\RepoPullrequest(),
+    repoPullrequest: new Shared\RepoPullrequest(
+        closedAt: Utils\Utils::parseDateTime('2025-04-11T21:28:25.901Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
+        id: 'fa18946b-87ab-4a8f-b26e-6f7468374b6e',
+        labels: [
+            'adhuc',
+            'quaerat',
+        ],
+        notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
+        sourceBranchId: 'microchip-navigate',
+        status: Shared\RepoPullrequestStatus::Rejected,
+        targetBranchId: 'feed-reboot',
+        title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
+        updatedAt: Utils\Utils::parseDateTime('2024-12-30T23:42:33.222Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1030,7 +1110,7 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```php
 declare(strict_types=1);
 
@@ -1039,6 +1119,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1048,7 +1129,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
+        description: 'Tribuo torqueo aetas ustulo illum.',
+        id: '1b975a2e-8554-4381-bb01-f7ffd98de8bb',
+        isPrivate: false,
+        name: 'suggero',
+        owner: 'Marcella Kuhic',
+        updatedAt: Utils\Utils::parseDateTime('2024-02-23T00:27:15.993Z'),
+        webUrl: 'https://brown-phrase.info',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1340,7 +1428,7 @@ Update a branch
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoBranch" method="put" path="/repo/{connection_id}/branch/{id}" example="repo_branch" -->
 ```php
 declare(strict_types=1);
 
@@ -1349,6 +1437,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1358,8 +1447,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
+        id: 'bcbd7332-7112-4169-93f5-f369b354498a',
+        name: 'voluptas',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2020-01-03T14:15:01.617Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1396,7 +1488,7 @@ Update a commit
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoCommit" method="put" path="/repo/{connection_id}/commit/{id}" example="repo_commit" -->
 ```php
 declare(strict_types=1);
 
@@ -1405,6 +1497,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1414,7 +1507,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
+        createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
+        id: 'ffccec29-c641-498b-bc54-3e2c3721ac76',
+        linesAdded: 313,
+        linesChanged: 659,
+        linesDeleted: 482,
+        message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
         repoId: '<id>',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-16T02:59:00.118Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1451,7 +1551,7 @@ Update an organization
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoOrganization" method="put" path="/repo/{connection_id}/organization/{id}" example="repo_organization" -->
 ```php
 declare(strict_types=1);
 
@@ -1460,6 +1560,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1468,7 +1569,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateRepoOrganizationRequest(
-    repoOrganization: new Shared\RepoOrganization(),
+    repoOrganization: new Shared\RepoOrganization(
+        avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
+        createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
+        description: 'Trepide defendo supra testimonium ager.',
+        id: '51493ffd-a0c6-411e-b158-55b80104e6a6',
+        name: 'Denesik - Lemke',
+        updatedAt: Utils\Utils::parseDateTime('2023-08-12T23:34:40.317Z'),
+        webUrl: 'https://turbulent-overheard.biz',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1504,7 +1613,7 @@ Update a pullrequest
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoPullrequest" method="put" path="/repo/{connection_id}/pullrequest/{id}" example="repo_pullrequest" -->
 ```php
 declare(strict_types=1);
 
@@ -1513,6 +1622,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1521,7 +1631,21 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateRepoPullrequestRequest(
-    repoPullrequest: new Shared\RepoPullrequest(),
+    repoPullrequest: new Shared\RepoPullrequest(
+        closedAt: Utils\Utils::parseDateTime('2025-04-11T21:28:25.901Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
+        id: 'fa18946b-87ab-4a8f-b26e-6f7468374b6e',
+        labels: [
+            'adhuc',
+            'quaerat',
+        ],
+        notes: 'Coadunatio turbo curtus ceno consuasor aggero. Suggero adeo creptio tutamen vulnus aqua delicate adopto derelinquo caritas. Maiores vulgivagus succurro temporibus.',
+        sourceBranchId: 'microchip-navigate',
+        status: Shared\RepoPullrequestStatus::Rejected,
+        targetBranchId: 'feed-reboot',
+        title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
+        updatedAt: Utils\Utils::parseDateTime('2024-12-30T23:42:33.222Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1557,7 +1681,7 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```php
 declare(strict_types=1);
 
@@ -1566,6 +1690,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1575,7 +1700,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
+        description: 'Tribuo torqueo aetas ustulo illum.',
+        id: '1b975a2e-8554-4381-bb01-f7ffd98de8bb',
+        isPrivate: false,
+        name: 'suggero',
+        owner: 'Marcella Kuhic',
+        updatedAt: Utils\Utils::parseDateTime('2024-02-23T00:27:15.993Z'),
+        webUrl: 'https://brown-phrase.info',
     ),
     connectionId: '<id>',
     id: '<id>',

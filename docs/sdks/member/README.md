@@ -19,7 +19,7 @@ Create a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" -->
+<!-- UsageSnippet language="php" operationID="createMartechMember" method="post" path="/martech/{connection_id}/member" example="martech_member" -->
 ```php
 declare(strict_types=1);
 
@@ -28,6 +28,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -36,7 +37,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateMartechMemberRequest(
-    marketingMember: new Shared\MarketingMember(),
+    marketingMember: new Shared\MarketingMember(
+        company: 'Miller - Franecki',
+        createdAt: Utils\Utils::parseDateTime('2022-04-15T15:32:38.496Z'),
+        emails: [
+            new Shared\MarketingEmail(
+                email: 'Thalia.Abernathy61@gmail.com',
+                type: Shared\MarketingEmailType::Home,
+            ),
+            new Shared\MarketingEmail(
+                email: 'Maymie59@hotmail.com',
+                type: Shared\MarketingEmailType::Home,
+            ),
+            new Shared\MarketingEmail(
+                email: 'Coty27@hotmail.com',
+                type: Shared\MarketingEmailType::Work,
+            ),
+        ],
+        firstName: 'Jude',
+        id: '8944d36e-b636-4219-a282-142fb98fee97',
+        lastName: 'Leffler',
+        name: 'Jude Leffler',
+        status: Shared\MarketingMemberStatus::Unsubscribed,
+        tags: [
+            'vinco',
+            'ceno',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2025-06-15T05:06:13.082Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -273,7 +301,7 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchMartechMember" method="patch" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```php
 declare(strict_types=1);
 
@@ -282,6 +310,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -290,7 +319,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchMartechMemberRequest(
-    marketingMember: new Shared\MarketingMember(),
+    marketingMember: new Shared\MarketingMember(
+        company: 'Miller - Franecki',
+        createdAt: Utils\Utils::parseDateTime('2022-04-15T15:32:38.496Z'),
+        emails: [
+            new Shared\MarketingEmail(
+                email: 'Thalia.Abernathy61@gmail.com',
+                type: Shared\MarketingEmailType::Home,
+            ),
+            new Shared\MarketingEmail(
+                email: 'Maymie59@hotmail.com',
+                type: Shared\MarketingEmailType::Home,
+            ),
+            new Shared\MarketingEmail(
+                email: 'Coty27@hotmail.com',
+                type: Shared\MarketingEmailType::Work,
+            ),
+        ],
+        firstName: 'Jude',
+        id: 'be5b1afb-7831-40f9-b3dd-7910b5c7b4a9',
+        lastName: 'Leffler',
+        name: 'Jude Leffler',
+        status: Shared\MarketingMemberStatus::Unsubscribed,
+        tags: [
+            'vinco',
+            'ceno',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2025-06-15T05:06:13.087Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -377,7 +433,7 @@ Update a member
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateMartechMember" method="put" path="/martech/{connection_id}/member/{id}" example="martech_member" -->
 ```php
 declare(strict_types=1);
 
@@ -386,6 +442,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -394,7 +451,34 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateMartechMemberRequest(
-    marketingMember: new Shared\MarketingMember(),
+    marketingMember: new Shared\MarketingMember(
+        company: 'Miller - Franecki',
+        createdAt: Utils\Utils::parseDateTime('2022-04-15T15:32:38.496Z'),
+        emails: [
+            new Shared\MarketingEmail(
+                email: 'Thalia.Abernathy61@gmail.com',
+                type: Shared\MarketingEmailType::Home,
+            ),
+            new Shared\MarketingEmail(
+                email: 'Maymie59@hotmail.com',
+                type: Shared\MarketingEmailType::Home,
+            ),
+            new Shared\MarketingEmail(
+                email: 'Coty27@hotmail.com',
+                type: Shared\MarketingEmailType::Work,
+            ),
+        ],
+        firstName: 'Jude',
+        id: 'be5b1afb-7831-40f9-b3dd-7910b5c7b4a9',
+        lastName: 'Leffler',
+        name: 'Jude Leffler',
+        status: Shared\MarketingMemberStatus::Unsubscribed,
+        tags: [
+            'vinco',
+            'ceno',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2025-06-15T05:06:13.087Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

@@ -14,7 +14,7 @@ Create an asset
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" -->
+<!-- UsageSnippet language="php" operationID="createAdsAsset" method="post" path="/ads/{connection_id}/asset" example="ads_asset" -->
 ```php
 declare(strict_types=1);
 
@@ -23,6 +23,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -31,7 +32,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsAssetRequest(
-    adsAsset: new Shared\AdsAsset(),
+    adsAsset: new Shared\AdsAsset(
+        createdAt: Utils\Utils::parseDateTime('2020-03-27T20:14:38.603Z'),
+        height: 400,
+        id: 'cf04b48a-1f16-45f9-9d24-a576906153e1',
+        mimeType: 'IMAGE_PNG',
+        name: 'Lockman - DuBuque',
+        type: Shared\AdsAssetType::Image,
+        updatedAt: Utils\Utils::parseDateTime('2022-03-15T04:24:55.196Z'),
+        url: 'https://informal-perfection.com/',
+        width: 600,
+    ),
     connectionId: '<id>',
 );
 

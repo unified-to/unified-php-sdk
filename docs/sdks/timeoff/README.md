@@ -17,7 +17,7 @@ Create a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" -->
+<!-- UsageSnippet language="php" operationID="createHrisTimeoff" method="post" path="/hris/{connection_id}/timeoff" example="hris_timeoff" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -35,6 +36,20 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
+        approvedAt: Utils\Utils::parseDateTime('2022-02-20T21:02:37.695Z'),
+        comments: 'Blandior ventus curiositas amplitudo.',
+        createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
+        duration: 4,
+        durationType: Shared\DurationType::Day,
+        endAt: Utils\Utils::parseDateTime('2024-12-07T13:50:55.449Z'),
+        id: 'efd938fb-bb4a-492d-b313-90f0578f3165',
+        isPaid: true,
+        originalType: 'acerbitas ut',
+        reason: 'verto',
+        startAt: Utils\Utils::parseDateTime('2023-08-23T06:56:44.757Z'),
+        status: Shared\HrisTimeoffStatus::Denied,
+        type: Shared\HrisTimeoffType::InLieu,
+        updatedAt: Utils\Utils::parseDateTime('2022-07-07T19:34:54.248Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -172,7 +187,7 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchHrisTimeoff" method="patch" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```php
 declare(strict_types=1);
 
@@ -181,6 +196,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -190,6 +206,20 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
+        approvedAt: Utils\Utils::parseDateTime('2022-02-20T21:02:37.696Z'),
+        comments: 'Blandior ventus curiositas amplitudo.',
+        createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
+        duration: 4,
+        durationType: Shared\DurationType::Day,
+        endAt: Utils\Utils::parseDateTime('2024-12-07T13:50:55.454Z'),
+        id: 'c38c4f38-07e2-4fb7-b3aa-93df41a86943',
+        isPaid: true,
+        originalType: 'acerbitas ut',
+        reason: 'verto',
+        startAt: Utils\Utils::parseDateTime('2023-08-23T06:56:44.760Z'),
+        status: Shared\HrisTimeoffStatus::Denied,
+        type: Shared\HrisTimeoffType::InLieu,
+        updatedAt: Utils\Utils::parseDateTime('2022-07-07T19:34:54.250Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -278,7 +308,7 @@ Update a timeoff
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateHrisTimeoff" method="put" path="/hris/{connection_id}/timeoff/{id}" example="hris_timeoff" -->
 ```php
 declare(strict_types=1);
 
@@ -287,6 +317,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -296,6 +327,20 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
+        approvedAt: Utils\Utils::parseDateTime('2022-02-20T21:02:37.696Z'),
+        comments: 'Blandior ventus curiositas amplitudo.',
+        createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
+        duration: 4,
+        durationType: Shared\DurationType::Day,
+        endAt: Utils\Utils::parseDateTime('2024-12-07T13:50:55.454Z'),
+        id: 'c38c4f38-07e2-4fb7-b3aa-93df41a86943',
+        isPaid: true,
+        originalType: 'acerbitas ut',
+        reason: 'verto',
+        startAt: Utils\Utils::parseDateTime('2023-08-23T06:56:44.760Z'),
+        status: Shared\HrisTimeoffStatus::Denied,
+        type: Shared\HrisTimeoffType::InLieu,
+        updatedAt: Utils\Utils::parseDateTime('2022-07-07T19:34:54.250Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',

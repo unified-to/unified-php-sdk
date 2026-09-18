@@ -17,7 +17,7 @@ Create a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" -->
+<!-- UsageSnippet language="php" operationID="createAccountingPaymentterm" method="post" path="/accounting/{connection_id}/paymentterm" example="accounting_paymentterm" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingPaymenttermRequest(
-    accountingPaymentterm: new Shared\AccountingPaymentterm(),
+    accountingPaymentterm: new Shared\AccountingPaymentterm(
+        category: Shared\Category::Standard,
+        createdAt: Utils\Utils::parseDateTime('2021-08-22T22:42:42.265Z'),
+        dayOfMonthDue: 4,
+        description: 'Cogito pecco eos cultura.',
+        discountDayOfMonth: 13,
+        discountDays: 4,
+        discountPercent: 5,
+        dueDays: 57,
+        dueNextMonthDays: 9,
+        id: '521c3b7f-1411-4cdd-b4d6-b720a17bedf2',
+        isActive: false,
+        metadata: [],
+        name: 'Net 30',
+        type: Shared\AccountingPaymenttermType::Net15,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-11T11:06:20.942Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +187,7 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingPaymentterm" method="patch" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +196,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +205,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingPaymenttermRequest(
-    accountingPaymentterm: new Shared\AccountingPaymentterm(),
+    accountingPaymentterm: new Shared\AccountingPaymentterm(
+        category: Shared\Category::Standard,
+        createdAt: Utils\Utils::parseDateTime('2021-08-22T22:42:42.265Z'),
+        dayOfMonthDue: 4,
+        description: 'Cogito pecco eos cultura.',
+        discountDayOfMonth: 13,
+        discountDays: 4,
+        discountPercent: 5,
+        dueDays: 57,
+        dueNextMonthDays: 9,
+        id: 'e5fb978b-ad68-4c8c-a957-b79b40fb97eb',
+        isActive: false,
+        metadata: [],
+        name: 'Net 30',
+        type: Shared\AccountingPaymenttermType::Net15,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-11T11:06:20.951Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +308,7 @@ Update a paymentterm
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingPaymentterm" method="put" path="/accounting/{connection_id}/paymentterm/{id}" example="accounting_paymentterm" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +317,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +326,23 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingPaymenttermRequest(
-    accountingPaymentterm: new Shared\AccountingPaymentterm(),
+    accountingPaymentterm: new Shared\AccountingPaymentterm(
+        category: Shared\Category::Standard,
+        createdAt: Utils\Utils::parseDateTime('2021-08-22T22:42:42.265Z'),
+        dayOfMonthDue: 4,
+        description: 'Cogito pecco eos cultura.',
+        discountDayOfMonth: 13,
+        discountDays: 4,
+        discountPercent: 5,
+        dueDays: 57,
+        dueNextMonthDays: 9,
+        id: 'e5fb978b-ad68-4c8c-a957-b79b40fb97eb',
+        isActive: false,
+        metadata: [],
+        name: 'Net 30',
+        type: Shared\AccountingPaymenttermType::Net15,
+        updatedAt: Utils\Utils::parseDateTime('2025-12-11T11:06:20.951Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

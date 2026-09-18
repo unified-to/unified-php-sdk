@@ -29,7 +29,7 @@ Create a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" -->
+<!-- UsageSnippet language="php" operationID="createKmsComment" method="post" path="/kms/{connection_id}/comment" example="kms_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -38,6 +38,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -46,7 +47,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(),
+    kmsComment: new Shared\KmsComment(
+        content: 'Decimus tolero viriliter usque.',
+        contentType: Shared\ContentType::Html,
+        createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
+        id: 'af2c4b2b-7330-482d-9b7a-0225f7113cde',
+        type: Shared\KmsCommentType::Page,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-16T08:15:05.546Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -81,7 +89,7 @@ Create a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" -->
+<!-- UsageSnippet language="php" operationID="createKmsPage" method="post" path="/kms/{connection_id}/page" example="kms_page" -->
 ```php
 declare(strict_types=1);
 
@@ -90,6 +98,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -99,7 +108,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        type: Shared\KmsPageType::Text,
+        createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
+        downloadUrl: 'https://agitated-validity.info',
+        hasChildren: true,
+        id: '428020b5-07f4-4b3b-bf4f-9dd1d68d49ea',
+        isActive: true,
+        metadata: [],
+        title: 'even minister extract',
+        type: Shared\KmsPageType::Html,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-10T18:25:11.303Z'),
+        webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
 );
@@ -135,7 +153,7 @@ Create a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" -->
+<!-- UsageSnippet language="php" operationID="createKmsSpace" method="post" path="/kms/{connection_id}/space" example="kms_space" -->
 ```php
 declare(strict_types=1);
 
@@ -144,6 +162,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -152,7 +171,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateKmsSpaceRequest(
-    kmsSpace: new Shared\KmsSpace(),
+    kmsSpace: new Shared\KmsSpace(
+        createdAt: Utils\Utils::parseDateTime('2022-10-31T00:56:54.246Z'),
+        description: 'Acer.',
+        id: '3b86edf4-7fb7-4cc4-b75e-6c667e0740d5',
+        isActive: false,
+        name: 'into nor afore',
+        updatedAt: Utils\Utils::parseDateTime('2025-12-03T15:51:21.481Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -490,7 +516,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchKmsComment" method="patch" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -499,6 +525,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -507,7 +534,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(),
+    kmsComment: new Shared\KmsComment(
+        content: 'Decimus tolero viriliter usque.',
+        contentType: Shared\ContentType::Html,
+        createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
+        id: 'a97bbd39-6b81-4780-a0d8-1bd6952df736',
+        type: Shared\KmsCommentType::Page,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-16T08:15:05.548Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -543,7 +577,7 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchKmsPage" method="patch" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```php
 declare(strict_types=1);
 
@@ -552,6 +586,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -561,7 +596,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        type: Shared\KmsPageType::Other,
+        createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
+        downloadUrl: 'https://agitated-validity.info',
+        hasChildren: true,
+        id: '26da09eb-a3d5-44be-928e-ae404415c517',
+        isActive: true,
+        metadata: [],
+        title: 'even minister extract',
+        type: Shared\KmsPageType::Html,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-10T18:25:11.325Z'),
+        webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -598,7 +642,7 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchKmsSpace" method="patch" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```php
 declare(strict_types=1);
 
@@ -607,6 +651,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -615,7 +660,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchKmsSpaceRequest(
-    kmsSpace: new Shared\KmsSpace(),
+    kmsSpace: new Shared\KmsSpace(
+        createdAt: Utils\Utils::parseDateTime('2022-10-31T00:56:54.246Z'),
+        description: 'Acer.',
+        id: 'c68ac251-79ca-4c1f-ae45-80b4ebb07759',
+        isActive: false,
+        name: 'into nor afore',
+        updatedAt: Utils\Utils::parseDateTime('2025-12-03T15:51:21.485Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -804,7 +856,7 @@ Update a comment
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateKmsComment" method="put" path="/kms/{connection_id}/comment/{id}" example="kms_comment" -->
 ```php
 declare(strict_types=1);
 
@@ -813,6 +865,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -821,7 +874,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsCommentRequest(
-    kmsComment: new Shared\KmsComment(),
+    kmsComment: new Shared\KmsComment(
+        content: 'Decimus tolero viriliter usque.',
+        contentType: Shared\ContentType::Html,
+        createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
+        id: 'a97bbd39-6b81-4780-a0d8-1bd6952df736',
+        type: Shared\KmsCommentType::Page,
+        updatedAt: Utils\Utils::parseDateTime('2023-11-16T08:15:05.548Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -857,7 +917,7 @@ Update a page
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateKmsPage" method="put" path="/kms/{connection_id}/page/{id}" example="kms_page" -->
 ```php
 declare(strict_types=1);
 
@@ -866,6 +926,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -875,7 +936,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateKmsPageRequest(
     kmsPage: new Shared\KmsPage(
-        type: Shared\KmsPageType::Other,
+        createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
+        downloadUrl: 'https://agitated-validity.info',
+        hasChildren: true,
+        id: '26da09eb-a3d5-44be-928e-ae404415c517',
+        isActive: true,
+        metadata: [],
+        title: 'even minister extract',
+        type: Shared\KmsPageType::Html,
+        updatedAt: Utils\Utils::parseDateTime('2025-09-10T18:25:11.325Z'),
+        webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -912,7 +982,7 @@ Update a space
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateKmsSpace" method="put" path="/kms/{connection_id}/space/{id}" example="kms_space" -->
 ```php
 declare(strict_types=1);
 
@@ -921,6 +991,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -929,7 +1000,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateKmsSpaceRequest(
-    kmsSpace: new Shared\KmsSpace(),
+    kmsSpace: new Shared\KmsSpace(
+        createdAt: Utils\Utils::parseDateTime('2022-10-31T00:56:54.246Z'),
+        description: 'Acer.',
+        id: 'c68ac251-79ca-4c1f-ae45-80b4ebb07759',
+        isActive: false,
+        name: 'into nor afore',
+        updatedAt: Utils\Utils::parseDateTime('2025-12-03T15:51:21.485Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

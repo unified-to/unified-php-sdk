@@ -17,7 +17,7 @@ Create a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" -->
+<!-- UsageSnippet language="php" operationID="createShippingLabel" method="post" path="/shipping/{connection_id}/label" example="shipping_label" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateShippingLabelRequest(
-    shippingLabel: new Shared\ShippingLabel(),
+    shippingLabel: new Shared\ShippingLabel(
+        createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
+        id: '8a9fdac6-1d21-4676-94e6-f599db0abbff',
+        isVoided: false,
+        labelCost: 40.83653403213248,
+        labelCostCurrency: 'USD',
+        labelFormat: Shared\LabelFormat::Png,
+        labelUrl: 'https://optimal-meadow.net',
+        serviceCode: 'GIz',
+        status: Shared\ShippingLabelStatus::Exception,
+        trackingNumber: 'zYv60FOIBUJ6',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-16T18:20:19.960Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +183,7 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchShippingLabel" method="patch" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +192,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +201,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchShippingLabelRequest(
-    shippingLabel: new Shared\ShippingLabel(),
+    shippingLabel: new Shared\ShippingLabel(
+        createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
+        id: '8f2aee4c-d719-4427-a982-e29285195abb',
+        isVoided: false,
+        labelCost: 40.83653403213248,
+        labelCostCurrency: 'USD',
+        labelFormat: Shared\LabelFormat::Png,
+        labelUrl: 'https://optimal-meadow.net',
+        serviceCode: 'GIz',
+        status: Shared\ShippingLabelStatus::Exception,
+        trackingNumber: 'zYv60FOIBUJ6',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-16T18:20:19.963Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +300,7 @@ Update a label
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateShippingLabel" method="put" path="/shipping/{connection_id}/label/{id}" example="shipping_label" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +309,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +318,19 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateShippingLabelRequest(
-    shippingLabel: new Shared\ShippingLabel(),
+    shippingLabel: new Shared\ShippingLabel(
+        createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
+        id: '8f2aee4c-d719-4427-a982-e29285195abb',
+        isVoided: false,
+        labelCost: 40.83653403213248,
+        labelCostCurrency: 'USD',
+        labelFormat: Shared\LabelFormat::Png,
+        labelUrl: 'https://optimal-meadow.net',
+        serviceCode: 'GIz',
+        status: Shared\ShippingLabelStatus::Exception,
+        trackingNumber: 'zYv60FOIBUJ6',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-16T18:20:19.963Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

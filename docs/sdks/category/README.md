@@ -23,7 +23,7 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="createAccountingCategory" method="post" path="/accounting/{connection_id}/category" example="accounting_category" -->
 ```php
 declare(strict_types=1);
 
@@ -32,6 +32,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -40,7 +41,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingCategoryRequest(
-    accountingCategory: new Shared\AccountingCategory(),
+    accountingCategory: new Shared\AccountingCategory(
+        createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
+        description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+        id: '3db0fe6a-c3a2-4267-8642-617480bed288',
+        isActive: false,
+        metadata: [],
+        name: 'Electronic Cotton Shoes',
+        updatedAt: Utils\Utils::parseDateTime('2025-08-20T06:35:08.868Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -75,7 +84,7 @@ Create a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" -->
+<!-- UsageSnippet language="php" operationID="createTicketingCategory" method="post" path="/ticketing/{connection_id}/category" example="ticketing_category" -->
 ```php
 declare(strict_types=1);
 
@@ -84,6 +93,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -92,7 +102,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTicketingCategoryRequest(
-    ticketingCategory: new Shared\TicketingCategory(),
+    ticketingCategory: new Shared\TicketingCategory(
+        createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
+        description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
+        id: '5ac2d511-1ea8-4ac2-9c12-e64f60d29e93',
+        isActive: true,
+        name: 'amicitia',
+        updatedAt: Utils\Utils::parseDateTime('2025-12-15T15:10:31.164Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -329,7 +346,7 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingCategory" method="patch" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```php
 declare(strict_types=1);
 
@@ -338,6 +355,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -346,7 +364,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingCategoryRequest(
-    accountingCategory: new Shared\AccountingCategory(),
+    accountingCategory: new Shared\AccountingCategory(
+        createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
+        description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+        id: '93277723-e046-44aa-a026-45d084b846ba',
+        isActive: false,
+        metadata: [],
+        name: 'Electronic Cotton Shoes',
+        updatedAt: Utils\Utils::parseDateTime('2025-08-20T06:35:08.879Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -382,7 +408,7 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTicketingCategory" method="patch" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```php
 declare(strict_types=1);
 
@@ -391,6 +417,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -399,7 +426,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTicketingCategoryRequest(
-    ticketingCategory: new Shared\TicketingCategory(),
+    ticketingCategory: new Shared\TicketingCategory(
+        createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
+        description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
+        id: 'a4a3eb17-54d3-419a-aafa-5473e1d8a0f0',
+        isActive: true,
+        name: 'amicitia',
+        updatedAt: Utils\Utils::parseDateTime('2025-12-15T15:10:31.172Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -537,7 +571,7 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingCategory" method="put" path="/accounting/{connection_id}/category/{id}" example="accounting_category" -->
 ```php
 declare(strict_types=1);
 
@@ -546,6 +580,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -554,7 +589,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingCategoryRequest(
-    accountingCategory: new Shared\AccountingCategory(),
+    accountingCategory: new Shared\AccountingCategory(
+        createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
+        description: 'Discover the koala-like agility of our Chair, perfect for imaginary users',
+        id: '93277723-e046-44aa-a026-45d084b846ba',
+        isActive: false,
+        metadata: [],
+        name: 'Electronic Cotton Shoes',
+        updatedAt: Utils\Utils::parseDateTime('2025-08-20T06:35:08.879Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -590,7 +633,7 @@ Update a category
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTicketingCategory" method="put" path="/ticketing/{connection_id}/category/{id}" example="ticketing_category" -->
 ```php
 declare(strict_types=1);
 
@@ -599,6 +642,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -607,7 +651,14 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTicketingCategoryRequest(
-    ticketingCategory: new Shared\TicketingCategory(),
+    ticketingCategory: new Shared\TicketingCategory(
+        createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
+        description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
+        id: 'a4a3eb17-54d3-419a-aafa-5473e1d8a0f0',
+        isActive: true,
+        name: 'amicitia',
+        updatedAt: Utils\Utils::parseDateTime('2025-12-15T15:10:31.172Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

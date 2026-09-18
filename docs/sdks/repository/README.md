@@ -17,7 +17,7 @@ Create a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" -->
+<!-- UsageSnippet language="php" operationID="createRepoRepository" method="post" path="/repo/{connection_id}/repository" example="repo_repository" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -35,7 +36,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
+        description: 'Tribuo torqueo aetas ustulo illum.',
+        id: '441972fc-9653-4a1e-9354-288bb23805bd',
+        isPrivate: false,
+        name: 'suggero',
+        owner: 'Marcella Kuhic',
+        updatedAt: Utils\Utils::parseDateTime('2024-02-23T00:27:15.992Z'),
+        webUrl: 'https://brown-phrase.info',
     ),
     connectionId: '<id>',
 );
@@ -172,7 +180,7 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchRepoRepository" method="patch" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```php
 declare(strict_types=1);
 
@@ -181,6 +189,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -190,7 +199,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
+        description: 'Tribuo torqueo aetas ustulo illum.',
+        id: '1b975a2e-8554-4381-bb01-f7ffd98de8bb',
+        isPrivate: false,
+        name: 'suggero',
+        owner: 'Marcella Kuhic',
+        updatedAt: Utils\Utils::parseDateTime('2024-02-23T00:27:15.993Z'),
+        webUrl: 'https://brown-phrase.info',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -278,7 +294,7 @@ Update a repository
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateRepoRepository" method="put" path="/repo/{connection_id}/repository/{id}" example="repo_repository" -->
 ```php
 declare(strict_types=1);
 
@@ -287,6 +303,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -296,7 +313,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
-        name: '<value>',
+        createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
+        description: 'Tribuo torqueo aetas ustulo illum.',
+        id: '1b975a2e-8554-4381-bb01-f7ffd98de8bb',
+        isPrivate: false,
+        name: 'suggero',
+        owner: 'Marcella Kuhic',
+        updatedAt: Utils\Utils::parseDateTime('2024-02-23T00:27:15.993Z'),
+        webUrl: 'https://brown-phrase.info',
     ),
     connectionId: '<id>',
     id: '<id>',

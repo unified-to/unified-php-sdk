@@ -17,7 +17,7 @@ Create an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" -->
+<!-- UsageSnippet language="php" operationID="createAdsInsertionorder" method="post" path="/ads/{connection_id}/insertionorder" example="ads_insertionorder" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAdsInsertionorderRequest(
-    adsInsertionorder: new Shared\AdsInsertionorder(),
+    adsInsertionorder: new Shared\AdsInsertionorder(
+        createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
+        id: '6e9538a8-c71d-4d5f-8ddd-5ffd1b58c243',
+        name: 'Kunde, Smith and Reinger',
+        status: Shared\AdsInsertionorderStatus::Unspecified,
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T12:31:21.679Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +177,7 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAdsInsertionorder" method="patch" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +186,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +195,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAdsInsertionorderRequest(
-    adsInsertionorder: new Shared\AdsInsertionorder(),
+    adsInsertionorder: new Shared\AdsInsertionorder(
+        createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
+        id: '02927d22-b29d-4410-b89d-84c6944e04b6',
+        name: 'Kunde, Smith and Reinger',
+        status: Shared\AdsInsertionorderStatus::Unspecified,
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T12:31:21.679Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +288,7 @@ Update an insertionorder
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAdsInsertionorder" method="put" path="/ads/{connection_id}/insertionorder/{id}" example="ads_insertionorder" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +297,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +306,13 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAdsInsertionorderRequest(
-    adsInsertionorder: new Shared\AdsInsertionorder(),
+    adsInsertionorder: new Shared\AdsInsertionorder(
+        createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
+        id: '02927d22-b29d-4410-b89d-84c6944e04b6',
+        name: 'Kunde, Smith and Reinger',
+        status: Shared\AdsInsertionorderStatus::Unspecified,
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T12:31:21.679Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

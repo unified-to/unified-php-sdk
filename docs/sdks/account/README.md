@@ -17,7 +17,7 @@ Create an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" -->
+<!-- UsageSnippet language="php" operationID="createAccountingAccount" method="post" path="/accounting/{connection_id}/account" example="accounting_account" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,31 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateAccountingAccountRequest(
-    accountingAccount: new Shared\AccountingAccount(),
+    accountingAccount: new Shared\AccountingAccount(
+        balance: 12092,
+        createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
+        currency: 'BOB',
+        customerDefinedCode: 'quo',
+        description: 'Spoliatio comedo vilitas harum cupiditate.',
+        id: 'd0de0893-6cd3-4f44-9f1b-0d2d89c37c03',
+        isPayable: true,
+        name: 'Electronic Aluminum Tuna',
+        status: Shared\Status::Archived,
+        taxonomy: [
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'vesper',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'iste',
+            ),
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'adamo',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'peccatus',
+            ),
+        ],
+        type: Shared\Type::Bank,
+        updatedAt: Utils\Utils::parseDateTime('2023-01-03T03:11:16.644Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +195,7 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchAccountingAccount" method="patch" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +204,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +213,31 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchAccountingAccountRequest(
-    accountingAccount: new Shared\AccountingAccount(),
+    accountingAccount: new Shared\AccountingAccount(
+        balance: 12092,
+        createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
+        currency: 'BOB',
+        customerDefinedCode: 'quo',
+        description: 'Spoliatio comedo vilitas harum cupiditate.',
+        id: 'f8647ab4-1089-471e-82b9-db710d4b4cd1',
+        isPayable: true,
+        name: 'Electronic Aluminum Tuna',
+        status: Shared\Status::Archived,
+        taxonomy: [
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'vesper',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'iste',
+            ),
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'adamo',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'peccatus',
+            ),
+        ],
+        type: Shared\Type::Bank,
+        updatedAt: Utils\Utils::parseDateTime('2023-01-03T03:11:16.645Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +324,7 @@ Update an account
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateAccountingAccount" method="put" path="/accounting/{connection_id}/account/{id}" example="accounting_account" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +333,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +342,31 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateAccountingAccountRequest(
-    accountingAccount: new Shared\AccountingAccount(),
+    accountingAccount: new Shared\AccountingAccount(
+        balance: 12092,
+        createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
+        currency: 'BOB',
+        customerDefinedCode: 'quo',
+        description: 'Spoliatio comedo vilitas harum cupiditate.',
+        id: 'f8647ab4-1089-471e-82b9-db710d4b4cd1',
+        isPayable: true,
+        name: 'Electronic Aluminum Tuna',
+        status: Shared\Status::Archived,
+        taxonomy: [
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'vesper',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'iste',
+            ),
+            new Shared\AccountingAccountTaxonomy(
+                originalType: 'adamo',
+                type: Shared\AccountingAccountTaxonomyType::Subgroup,
+                value: 'peccatus',
+            ),
+        ],
+        type: Shared\Type::Bank,
+        updatedAt: Utils\Utils::parseDateTime('2023-01-03T03:11:16.645Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

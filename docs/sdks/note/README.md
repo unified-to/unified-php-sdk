@@ -17,7 +17,7 @@ Create a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" -->
+<!-- UsageSnippet language="php" operationID="createTicketingNote" method="post" path="/ticketing/{connection_id}/note" example="ticketing_note" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateTicketingNoteRequest(
-    ticketingNote: new Shared\TicketingNote(),
+    ticketingNote: new Shared\TicketingNote(
+        createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
+        description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
+        id: '0a4a5e64-48a5-4fd9-b0c9-24cc704840a6',
+        updatedAt: Utils\Utils::parseDateTime('2024-09-05T15:38:07.962Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +176,7 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchTicketingNote" method="patch" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +185,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +194,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchTicketingNoteRequest(
-    ticketingNote: new Shared\TicketingNote(),
+    ticketingNote: new Shared\TicketingNote(
+        createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
+        description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
+        id: 'cf1b0373-6e5a-409c-a90c-214e826c7259',
+        updatedAt: Utils\Utils::parseDateTime('2024-09-05T15:38:07.966Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +286,7 @@ Update a note
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateTicketingNote" method="put" path="/ticketing/{connection_id}/note/{id}" example="ticketing_note" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +295,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +304,12 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateTicketingNoteRequest(
-    ticketingNote: new Shared\TicketingNote(),
+    ticketingNote: new Shared\TicketingNote(
+        createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
+        description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
+        id: 'cf1b0373-6e5a-409c-a90c-214e826c7259',
+        updatedAt: Utils\Utils::parseDateTime('2024-09-05T15:38:07.966Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

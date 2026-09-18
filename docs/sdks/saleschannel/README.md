@@ -17,7 +17,7 @@ Create a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" -->
+<!-- UsageSnippet language="php" operationID="createCommerceSaleschannel" method="post" path="/commerce/{connection_id}/saleschannel" example="commerce_saleschannel" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCommerceSaleschannelRequest(
-    commerceSaleschannel: new Shared\CommerceSaleschannel(),
+    commerceSaleschannel: new Shared\CommerceSaleschannel(
+        collections: [],
+        createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
+        description: 'Utroque denuncio solutio.',
+        id: '8d954fc2-7ffa-454a-bbb5-8d5e317f9e69',
+        isActive: false,
+        slug: 'amiculum-congregatio-suspendo',
+        updatedAt: Utils\Utils::parseDateTime('2025-01-06T17:43:36.088Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +179,7 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCommerceSaleschannel" method="patch" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +188,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +197,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCommerceSaleschannelRequest(
-    commerceSaleschannel: new Shared\CommerceSaleschannel(),
+    commerceSaleschannel: new Shared\CommerceSaleschannel(
+        collections: [],
+        createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
+        description: 'Utroque denuncio solutio.',
+        id: '2baeb707-36c4-4b92-873c-13d3d2d01ffd',
+        isActive: false,
+        slug: 'amiculum-congregatio-suspendo',
+        updatedAt: Utils\Utils::parseDateTime('2025-01-06T17:43:36.091Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +292,7 @@ Update a saleschannel
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCommerceSaleschannel" method="put" path="/commerce/{connection_id}/saleschannel/{id}" example="commerce_saleschannel" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +301,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +310,15 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCommerceSaleschannelRequest(
-    commerceSaleschannel: new Shared\CommerceSaleschannel(),
+    commerceSaleschannel: new Shared\CommerceSaleschannel(
+        collections: [],
+        createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
+        description: 'Utroque denuncio solutio.',
+        id: '2baeb707-36c4-4b92-873c-13d3d2d01ffd',
+        isActive: false,
+        slug: 'amiculum-congregatio-suspendo',
+        updatedAt: Utils\Utils::parseDateTime('2025-01-06T17:43:36.091Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

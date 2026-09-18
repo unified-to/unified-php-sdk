@@ -12,7 +12,7 @@ Create a rate
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" -->
+<!-- UsageSnippet language="php" operationID="createShippingRate" method="post" path="/shipping/{connection_id}/rate" example="shipping_rate" -->
 ```php
 declare(strict_types=1);
 
@@ -21,6 +21,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -29,7 +30,25 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateShippingRateRequest(
-    shippingRate: new Shared\ShippingRate(),
+    shippingRate: new Shared\ShippingRate(
+        currency: 'USD',
+        id: 'fd4d5e96-852b-4873-8e6e-43312813cbda',
+        rates: [
+            new Shared\ShippingRateRate(
+                amount: 54.679719475097954,
+                baseAmount: 76.45537888631225,
+                currency: 'USD',
+                deliveryDays: 8,
+                description: 'Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.',
+                estimatedDays: 10,
+                estimatedDeliveryEndAt: Utils\Utils::parseDateTime('2024-01-31T23:11:45.447Z'),
+                isGuaranteed: true,
+                isNegotiatedRate: true,
+                taxAmount: 2.2701712837442756,
+                title: 'Turcotte Inc',
+            ),
+        ],
+    ),
     connectionId: '<id>',
 );
 

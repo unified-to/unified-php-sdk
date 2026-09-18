@@ -48,7 +48,7 @@ Create a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" -->
+<!-- UsageSnippet language="php" operationID="createCrmCompany" method="post" path="/crm/{connection_id}/company" example="crm_company" -->
 ```php
 declare(strict_types=1);
 
@@ -57,6 +57,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -65,7 +66,83 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCrmCompanyRequest(
-    crmCompany: new Shared\CrmCompany(),
+    crmCompany: new Shared\CrmCompany(
+        address: new Shared\PropertyCrmCompanyAddress(
+            address1: '7261 Salisbury Road',
+            address2: 'Apt. 778',
+            city: 'Harrisburg',
+            countryCode: 'US',
+            postalCode: '56293-3678',
+            region: 'Pennsylvania',
+            regionCode: 'ID',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-05-11T18:26:32.925Z'),
+        description: 'Balbus crapula spiculum.',
+        domains: [
+            'fussy-nerve.info',
+            'sturdy-lobster.org',
+            'greedy-offset.name',
+        ],
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Sandrine_Jacobi@hotmail.com',
+                type: Shared\CrmEmailType::Work,
+            ),
+            new Shared\CrmEmail(
+                email: 'Sandrine_Jacobi@gmail.com',
+                type: Shared\CrmEmailType::Work,
+            ),
+            new Shared\CrmEmail(
+                email: 'Sandrine.Jacobi@yahoo.com',
+                type: Shared\CrmEmailType::Other,
+            ),
+        ],
+        employees: 967,
+        id: 'c3d87ef6-a153-4be2-9146-799249ea7602',
+        industry: 'Infrastructure',
+        isActive: true,
+        linkUrls: [
+            'https://blue-license.org',
+            'https://minor-formation.com',
+            'https://ecstatic-hammock.com',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '948c143e-6c56-4be0-a14d-eb68e77934a6',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'esse',
+            ),
+        ],
+        name: 'Goodwin and Sons',
+        tags: [
+            'quaerat',
+            'valeo',
+        ],
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(432) 849-2690',
+                type: Shared\CrmTelephoneType::Mobile,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(606) 871-2046',
+                type: Shared\CrmTelephoneType::Other,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(842) 258-9395',
+                type: Shared\CrmTelephoneType::Mobile,
+            ),
+        ],
+        timezone: 'Europe/San_Marino',
+        updatedAt: Utils\Utils::parseDateTime('2025-02-06T12:33:02.290Z'),
+        websites: [
+            'https://wise-possession.org',
+        ],
+    ),
     connectionId: '<id>',
 );
 
@@ -100,7 +177,7 @@ Create a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" -->
+<!-- UsageSnippet language="php" operationID="createCrmContact" method="post" path="/crm/{connection_id}/contact" example="crm_contact" -->
 ```php
 declare(strict_types=1);
 
@@ -109,6 +186,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -117,7 +195,71 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCrmContactRequest(
-    crmContact: new Shared\CrmContact(),
+    crmContact: new Shared\CrmContact(
+        address: new Shared\PropertyCrmContactAddress(
+            address1: '518 Brannon Burg',
+            city: 'East Helenebury',
+            countryCode: 'US',
+            postalCode: '92622-2406',
+            region: 'Vermont',
+            regionCode: 'AZ',
+        ),
+        company: 'Lowe - Jakubowski',
+        createdAt: Utils\Utils::parseDateTime('2021-01-02T00:41:38.885Z'),
+        department: 'systematic',
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Mohammad.Bartell45@hotmail.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+            new Shared\CrmEmail(
+                email: 'Mohammad.Bartell90@hotmail.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+            new Shared\CrmEmail(
+                email: 'Mohammad_Bartell@hotmail.com',
+                type: Shared\CrmEmailType::Work,
+            ),
+        ],
+        firstName: 'Mohammad',
+        id: '956e8c73-33ab-4531-a448-4e88c8aefa51',
+        imageUrl: 'https://picsum.photos/seed/zmbPeg/2905/378',
+        lastName: 'Bartell',
+        linkUrls: [
+            'https://limited-parade.info',
+            'https://faint-papa.com/',
+            'https://windy-accountability.name',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '6d65426c-aac0-41b8-bcd3-c063e02e7f3e',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'autem',
+            ),
+        ],
+        name: 'Mohammad Bartell',
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(975) 986-1658',
+                type: Shared\CrmTelephoneType::Work,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(489) 332-3509',
+                type: Shared\CrmTelephoneType::Home,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(205) 880-8886',
+                type: Shared\CrmTelephoneType::Home,
+            ),
+        ],
+        title: 'National Tactics Analyst',
+        updatedAt: Utils\Utils::parseDateTime('2021-02-23T09:13:08.673Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -152,7 +294,7 @@ Create a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" -->
+<!-- UsageSnippet language="php" operationID="createCrmDeal" method="post" path="/crm/{connection_id}/deal" example="crm_deal" -->
 ```php
 declare(strict_types=1);
 
@@ -161,6 +303,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -169,7 +312,52 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCrmDealRequest(
-    crmDeal: new Shared\CrmDeal(),
+    crmDeal: new Shared\CrmDeal(
+        amount: 98162,
+        closedAt: Utils\Utils::parseDateTime('2024-03-03T13:46:38.983Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-08-09T21:46:10.537Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
+        currency: 'IQD',
+        description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
+        id: 'e84c8ee3-2104-4a2d-95d7-bd6fd6647ddb',
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '4b27a79b-1dfb-4347-8a17-8bf73e5306f5',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'conatus',
+            ),
+        ],
+        name: 'Frozen Silk Chicken',
+        pipelines: [
+            new Shared\CrmReference(
+                id: 'aae9e562-9f31-44fa-a60f-e8049c76ea51',
+                name: 'trans',
+            ),
+        ],
+        probability: 65,
+        source: 'cubo',
+        stages: [
+            new Shared\CrmReference(
+                id: '7e071a51-2a39-4669-b8bc-5ab9c2f2ba3f',
+                name: 'tubineus',
+            ),
+            new Shared\CrmReference(
+                id: 'fb7e5354-97bb-46bf-9ac4-d4cfce5e3d37',
+                name: 'adfectus',
+            ),
+        ],
+        tags: [
+            'causa',
+            'suus',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2024-09-29T03:11:23.510Z'),
+        wonReason: 'Usque libero soleo.',
+    ),
     connectionId: '<id>',
 );
 
@@ -204,7 +392,7 @@ Create an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" -->
+<!-- UsageSnippet language="php" operationID="createCrmEvent" method="post" path="/crm/{connection_id}/event" example="crm_event" -->
 ```php
 declare(strict_types=1);
 
@@ -213,6 +401,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -221,7 +410,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCrmEventRequest(
-    crmEvent: new Shared\CrmEvent(),
+    crmEvent: new Shared\CrmEvent(
+        call: new Shared\PropertyCrmEventCall(
+            description: 'Arbitro aptus.',
+            duration: 64,
+            startAt: Utils\Utils::parseDateTime('2024-11-17T19:35:20.203Z'),
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-07-14T04:53:23.784Z'),
+        id: '1a27c602-d184-4ebe-8fef-49e460d83d29',
+        type: Shared\CrmEventType::Call,
+        updatedAt: Utils\Utils::parseDateTime('2026-09-08T16:07:03.749Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -256,7 +455,7 @@ Create a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" -->
+<!-- UsageSnippet language="php" operationID="createCrmLead" method="post" path="/crm/{connection_id}/lead" example="crm_lead" -->
 ```php
 declare(strict_types=1);
 
@@ -265,6 +464,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -273,7 +473,62 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCrmLeadRequest(
-    crmLead: new Shared\CrmLead(),
+    crmLead: new Shared\CrmLead(
+        address: new Shared\PropertyCrmLeadAddress(
+            address1: '528 Forest Road',
+            address2: 'Apt. 643',
+            city: 'Palm Springs',
+            countryCode: 'US',
+            postalCode: '55624-6499',
+            region: 'New Jersey',
+            regionCode: 'LA',
+        ),
+        companyName: 'Tillman - Wiegand',
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T11:27:59.003Z'),
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer16@yahoo.com',
+                type: Shared\CrmEmailType::Other,
+            ),
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer@yahoo.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+        ],
+        firstName: 'Velda',
+        id: '1f745f9b-4957-47fa-a75d-7eeb6ace9ec3',
+        isActive: true,
+        lastName: 'Sporer',
+        linkUrls: [
+            'https://classic-sightseeing.com/',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '3fcf48e0-292d-4a61-9a86-57c5c47d25d5',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'sublime',
+            ),
+        ],
+        name: 'Velda Sporer',
+        source: 'aetas',
+        status: 'vesco',
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(955) 643-9849',
+                type: Shared\CrmTelephoneType::Other,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(621) 811-8800',
+                type: Shared\CrmTelephoneType::Work,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2020-05-15T02:08:41.200Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -308,7 +563,7 @@ Create a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" -->
+<!-- UsageSnippet language="php" operationID="createCrmPipeline" method="post" path="/crm/{connection_id}/pipeline" example="crm_pipeline" -->
 ```php
 declare(strict_types=1);
 
@@ -317,6 +572,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -325,7 +581,27 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateCrmPipelineRequest(
-    crmPipeline: new Shared\CrmPipeline(),
+    crmPipeline: new Shared\CrmPipeline(
+        createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+        dealProbability: 99,
+        displayOrder: 8,
+        id: 'bee55908-6617-47b4-a130-51a7477bf893',
+        isActive: true,
+        name: 'Small Steel Bacon',
+        stages: [
+            new Shared\CrmStage(
+                active: false,
+                createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+                dealProbability: 84,
+                displayOrder: 72,
+                id: '2ef85783-686a-46d9-b947-6f69229f667f',
+                isClosed: true,
+                name: 'Veniam.',
+                updatedAt: Utils\Utils::parseDateTime('2025-09-16T09:58:54.230Z'),
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2025-10-07T15:03:40.498Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -1016,7 +1292,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmCompany" method="patch" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```php
 declare(strict_types=1);
 
@@ -1025,6 +1301,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1033,7 +1310,83 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCrmCompanyRequest(
-    crmCompany: new Shared\CrmCompany(),
+    crmCompany: new Shared\CrmCompany(
+        address: new Shared\PropertyCrmCompanyAddress(
+            address1: '7261 Salisbury Road',
+            address2: 'Apt. 778',
+            city: 'Harrisburg',
+            countryCode: 'US',
+            postalCode: '56293-3678',
+            region: 'Pennsylvania',
+            regionCode: 'ID',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-05-11T18:26:32.925Z'),
+        description: 'Balbus crapula spiculum.',
+        domains: [
+            'fussy-nerve.info',
+            'sturdy-lobster.org',
+            'greedy-offset.name',
+        ],
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Sandrine_Jacobi@hotmail.com',
+                type: Shared\CrmEmailType::Work,
+            ),
+            new Shared\CrmEmail(
+                email: 'Sandrine_Jacobi@gmail.com',
+                type: Shared\CrmEmailType::Work,
+            ),
+            new Shared\CrmEmail(
+                email: 'Sandrine.Jacobi@yahoo.com',
+                type: Shared\CrmEmailType::Other,
+            ),
+        ],
+        employees: 967,
+        id: '8e971de5-5467-4203-a88e-3b58bfad2c21',
+        industry: 'Infrastructure',
+        isActive: true,
+        linkUrls: [
+            'https://blue-license.org',
+            'https://minor-formation.com',
+            'https://ecstatic-hammock.com',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '7a08cf1c-5e31-4ef7-8e4b-eeb389beadc4',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'esse',
+            ),
+        ],
+        name: 'Goodwin and Sons',
+        tags: [
+            'quaerat',
+            'valeo',
+        ],
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(432) 849-2690',
+                type: Shared\CrmTelephoneType::Mobile,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(606) 871-2046',
+                type: Shared\CrmTelephoneType::Other,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(842) 258-9395',
+                type: Shared\CrmTelephoneType::Mobile,
+            ),
+        ],
+        timezone: 'Europe/San_Marino',
+        updatedAt: Utils\Utils::parseDateTime('2025-02-06T12:33:02.306Z'),
+        websites: [
+            'https://wise-possession.org',
+        ],
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1069,7 +1422,7 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmContact" method="patch" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```php
 declare(strict_types=1);
 
@@ -1078,6 +1431,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1086,7 +1440,71 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCrmContactRequest(
-    crmContact: new Shared\CrmContact(),
+    crmContact: new Shared\CrmContact(
+        address: new Shared\PropertyCrmContactAddress(
+            address1: '518 Brannon Burg',
+            city: 'East Helenebury',
+            countryCode: 'US',
+            postalCode: '92622-2406',
+            region: 'Vermont',
+            regionCode: 'AZ',
+        ),
+        company: 'Lowe - Jakubowski',
+        createdAt: Utils\Utils::parseDateTime('2021-01-02T00:41:38.885Z'),
+        department: 'systematic',
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Mohammad.Bartell45@hotmail.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+            new Shared\CrmEmail(
+                email: 'Mohammad.Bartell90@hotmail.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+            new Shared\CrmEmail(
+                email: 'Mohammad_Bartell@hotmail.com',
+                type: Shared\CrmEmailType::Work,
+            ),
+        ],
+        firstName: 'Mohammad',
+        id: 'bc1f9041-39e8-4ec6-b5b3-f07e2fd9ceb3',
+        imageUrl: 'https://picsum.photos/seed/zmbPeg/2905/378',
+        lastName: 'Bartell',
+        linkUrls: [
+            'https://limited-parade.info',
+            'https://faint-papa.com/',
+            'https://windy-accountability.name',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: 'b29adf9d-8a6d-4c37-8e8d-d3d864615a84',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'autem',
+            ),
+        ],
+        name: 'Mohammad Bartell',
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(975) 986-1658',
+                type: Shared\CrmTelephoneType::Work,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(489) 332-3509',
+                type: Shared\CrmTelephoneType::Home,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(205) 880-8886',
+                type: Shared\CrmTelephoneType::Home,
+            ),
+        ],
+        title: 'National Tactics Analyst',
+        updatedAt: Utils\Utils::parseDateTime('2021-02-23T09:13:08.674Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1122,7 +1540,7 @@ Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmDeal" method="patch" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```php
 declare(strict_types=1);
 
@@ -1131,6 +1549,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1139,7 +1558,52 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCrmDealRequest(
-    crmDeal: new Shared\CrmDeal(),
+    crmDeal: new Shared\CrmDeal(
+        amount: 98162,
+        closedAt: Utils\Utils::parseDateTime('2024-03-03T13:46:38.987Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-08-09T21:46:10.549Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
+        currency: 'IQD',
+        description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
+        id: 'fb04e8ab-59e1-4150-9d9d-d57d07769e9b',
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '9e027946-73b5-474b-a27b-5b3e6f814f31',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'conatus',
+            ),
+        ],
+        name: 'Frozen Silk Chicken',
+        pipelines: [
+            new Shared\CrmReference(
+                id: 'ce718ae4-3eee-4d6f-ae2b-9188d4c2504d',
+                name: 'trans',
+            ),
+        ],
+        probability: 65,
+        source: 'cubo',
+        stages: [
+            new Shared\CrmReference(
+                id: 'e44c8418-cd6e-433a-8db1-300540f8066b',
+                name: 'tubineus',
+            ),
+            new Shared\CrmReference(
+                id: '0b3bf925-ba3b-433c-a9c9-69a6ea70d875',
+                name: 'adfectus',
+            ),
+        ],
+        tags: [
+            'causa',
+            'suus',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2024-09-29T03:11:23.517Z'),
+        wonReason: 'Usque libero soleo.',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1175,7 +1639,7 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmEvent" method="patch" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```php
 declare(strict_types=1);
 
@@ -1184,6 +1648,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1192,7 +1657,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCrmEventRequest(
-    crmEvent: new Shared\CrmEvent(),
+    crmEvent: new Shared\CrmEvent(
+        call: new Shared\PropertyCrmEventCall(
+            description: 'Arbitro aptus.',
+            duration: 64,
+            startAt: Utils\Utils::parseDateTime('2024-11-17T19:35:20.225Z'),
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-07-14T04:53:23.784Z'),
+        id: 'b541c987-324e-42ff-a6dc-a7c378040c96',
+        type: Shared\CrmEventType::Call,
+        updatedAt: Utils\Utils::parseDateTime('2026-09-08T16:07:03.780Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1228,7 +1703,7 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmLead" method="patch" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```php
 declare(strict_types=1);
 
@@ -1237,6 +1712,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1245,7 +1721,62 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCrmLeadRequest(
-    crmLead: new Shared\CrmLead(),
+    crmLead: new Shared\CrmLead(
+        address: new Shared\PropertyCrmLeadAddress(
+            address1: '528 Forest Road',
+            address2: 'Apt. 643',
+            city: 'Palm Springs',
+            countryCode: 'US',
+            postalCode: '55624-6499',
+            region: 'New Jersey',
+            regionCode: 'LA',
+        ),
+        companyName: 'Tillman - Wiegand',
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T11:27:59.003Z'),
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer16@yahoo.com',
+                type: Shared\CrmEmailType::Other,
+            ),
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer@yahoo.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+        ],
+        firstName: 'Velda',
+        id: '69281a28-16bf-4876-bc6a-f051442edbfc',
+        isActive: true,
+        lastName: 'Sporer',
+        linkUrls: [
+            'https://classic-sightseeing.com/',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '21b57846-8e49-459f-b6e4-bd3ad1a38f76',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'sublime',
+            ),
+        ],
+        name: 'Velda Sporer',
+        source: 'aetas',
+        status: 'vesco',
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(955) 643-9849',
+                type: Shared\CrmTelephoneType::Other,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(621) 811-8800',
+                type: Shared\CrmTelephoneType::Work,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2020-05-15T02:08:41.202Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1281,7 +1812,7 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchCrmPipeline" method="patch" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```php
 declare(strict_types=1);
 
@@ -1290,6 +1821,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1298,7 +1830,27 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchCrmPipelineRequest(
-    crmPipeline: new Shared\CrmPipeline(),
+    crmPipeline: new Shared\CrmPipeline(
+        createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+        dealProbability: 99,
+        displayOrder: 8,
+        id: '3a3b12e3-59bd-41b2-9f81-a1befb36103a',
+        isActive: true,
+        name: 'Small Steel Bacon',
+        stages: [
+            new Shared\CrmStage(
+                active: false,
+                createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+                dealProbability: 84,
+                displayOrder: 72,
+                id: 'f4b82baf-d539-4647-80a7-0686e6f3bce5',
+                isClosed: true,
+                name: 'Veniam.',
+                updatedAt: Utils\Utils::parseDateTime('2025-09-16T09:58:54.235Z'),
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2025-10-07T15:03:40.503Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1640,7 +2192,7 @@ Update a company
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmCompany" method="put" path="/crm/{connection_id}/company/{id}" example="crm_company" -->
 ```php
 declare(strict_types=1);
 
@@ -1649,6 +2201,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1657,7 +2210,83 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCrmCompanyRequest(
-    crmCompany: new Shared\CrmCompany(),
+    crmCompany: new Shared\CrmCompany(
+        address: new Shared\PropertyCrmCompanyAddress(
+            address1: '7261 Salisbury Road',
+            address2: 'Apt. 778',
+            city: 'Harrisburg',
+            countryCode: 'US',
+            postalCode: '56293-3678',
+            region: 'Pennsylvania',
+            regionCode: 'ID',
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-05-11T18:26:32.925Z'),
+        description: 'Balbus crapula spiculum.',
+        domains: [
+            'fussy-nerve.info',
+            'sturdy-lobster.org',
+            'greedy-offset.name',
+        ],
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Sandrine_Jacobi@hotmail.com',
+                type: Shared\CrmEmailType::Work,
+            ),
+            new Shared\CrmEmail(
+                email: 'Sandrine_Jacobi@gmail.com',
+                type: Shared\CrmEmailType::Work,
+            ),
+            new Shared\CrmEmail(
+                email: 'Sandrine.Jacobi@yahoo.com',
+                type: Shared\CrmEmailType::Other,
+            ),
+        ],
+        employees: 967,
+        id: '8e971de5-5467-4203-a88e-3b58bfad2c21',
+        industry: 'Infrastructure',
+        isActive: true,
+        linkUrls: [
+            'https://blue-license.org',
+            'https://minor-formation.com',
+            'https://ecstatic-hammock.com',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '7a08cf1c-5e31-4ef7-8e4b-eeb389beadc4',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'esse',
+            ),
+        ],
+        name: 'Goodwin and Sons',
+        tags: [
+            'quaerat',
+            'valeo',
+        ],
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(432) 849-2690',
+                type: Shared\CrmTelephoneType::Mobile,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(606) 871-2046',
+                type: Shared\CrmTelephoneType::Other,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(842) 258-9395',
+                type: Shared\CrmTelephoneType::Mobile,
+            ),
+        ],
+        timezone: 'Europe/San_Marino',
+        updatedAt: Utils\Utils::parseDateTime('2025-02-06T12:33:02.306Z'),
+        websites: [
+            'https://wise-possession.org',
+        ],
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1693,7 +2322,7 @@ Update a contact
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmContact" method="put" path="/crm/{connection_id}/contact/{id}" example="crm_contact" -->
 ```php
 declare(strict_types=1);
 
@@ -1702,6 +2331,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1710,7 +2340,71 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCrmContactRequest(
-    crmContact: new Shared\CrmContact(),
+    crmContact: new Shared\CrmContact(
+        address: new Shared\PropertyCrmContactAddress(
+            address1: '518 Brannon Burg',
+            city: 'East Helenebury',
+            countryCode: 'US',
+            postalCode: '92622-2406',
+            region: 'Vermont',
+            regionCode: 'AZ',
+        ),
+        company: 'Lowe - Jakubowski',
+        createdAt: Utils\Utils::parseDateTime('2021-01-02T00:41:38.885Z'),
+        department: 'systematic',
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Mohammad.Bartell45@hotmail.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+            new Shared\CrmEmail(
+                email: 'Mohammad.Bartell90@hotmail.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+            new Shared\CrmEmail(
+                email: 'Mohammad_Bartell@hotmail.com',
+                type: Shared\CrmEmailType::Work,
+            ),
+        ],
+        firstName: 'Mohammad',
+        id: 'bc1f9041-39e8-4ec6-b5b3-f07e2fd9ceb3',
+        imageUrl: 'https://picsum.photos/seed/zmbPeg/2905/378',
+        lastName: 'Bartell',
+        linkUrls: [
+            'https://limited-parade.info',
+            'https://faint-papa.com/',
+            'https://windy-accountability.name',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: 'b29adf9d-8a6d-4c37-8e8d-d3d864615a84',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'autem',
+            ),
+        ],
+        name: 'Mohammad Bartell',
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(975) 986-1658',
+                type: Shared\CrmTelephoneType::Work,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(489) 332-3509',
+                type: Shared\CrmTelephoneType::Home,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(205) 880-8886',
+                type: Shared\CrmTelephoneType::Home,
+            ),
+        ],
+        title: 'National Tactics Analyst',
+        updatedAt: Utils\Utils::parseDateTime('2021-02-23T09:13:08.674Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1746,7 +2440,7 @@ Update a deal
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmDeal" method="put" path="/crm/{connection_id}/deal/{id}" example="crm_deal" -->
 ```php
 declare(strict_types=1);
 
@@ -1755,6 +2449,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1763,7 +2458,52 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCrmDealRequest(
-    crmDeal: new Shared\CrmDeal(),
+    crmDeal: new Shared\CrmDeal(
+        amount: 98162,
+        closedAt: Utils\Utils::parseDateTime('2024-03-03T13:46:38.987Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-08-09T21:46:10.549Z'),
+        createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
+        currency: 'IQD',
+        description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
+        id: 'fb04e8ab-59e1-4150-9d9d-d57d07769e9b',
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '9e027946-73b5-474b-a27b-5b3e6f814f31',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'conatus',
+            ),
+        ],
+        name: 'Frozen Silk Chicken',
+        pipelines: [
+            new Shared\CrmReference(
+                id: 'ce718ae4-3eee-4d6f-ae2b-9188d4c2504d',
+                name: 'trans',
+            ),
+        ],
+        probability: 65,
+        source: 'cubo',
+        stages: [
+            new Shared\CrmReference(
+                id: 'e44c8418-cd6e-433a-8db1-300540f8066b',
+                name: 'tubineus',
+            ),
+            new Shared\CrmReference(
+                id: '0b3bf925-ba3b-433c-a9c9-69a6ea70d875',
+                name: 'adfectus',
+            ),
+        ],
+        tags: [
+            'causa',
+            'suus',
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2024-09-29T03:11:23.517Z'),
+        wonReason: 'Usque libero soleo.',
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1799,7 +2539,7 @@ Update an event
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmEvent" method="put" path="/crm/{connection_id}/event/{id}" example="crm_event" -->
 ```php
 declare(strict_types=1);
 
@@ -1808,6 +2548,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1816,7 +2557,17 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCrmEventRequest(
-    crmEvent: new Shared\CrmEvent(),
+    crmEvent: new Shared\CrmEvent(
+        call: new Shared\PropertyCrmEventCall(
+            description: 'Arbitro aptus.',
+            duration: 64,
+            startAt: Utils\Utils::parseDateTime('2024-11-17T19:35:20.225Z'),
+        ),
+        createdAt: Utils\Utils::parseDateTime('2020-07-14T04:53:23.784Z'),
+        id: 'b541c987-324e-42ff-a6dc-a7c378040c96',
+        type: Shared\CrmEventType::Call,
+        updatedAt: Utils\Utils::parseDateTime('2026-09-08T16:07:03.780Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1852,7 +2603,7 @@ Update a lead
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmLead" method="put" path="/crm/{connection_id}/lead/{id}" example="crm_lead" -->
 ```php
 declare(strict_types=1);
 
@@ -1861,6 +2612,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1869,7 +2621,62 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCrmLeadRequest(
-    crmLead: new Shared\CrmLead(),
+    crmLead: new Shared\CrmLead(
+        address: new Shared\PropertyCrmLeadAddress(
+            address1: '528 Forest Road',
+            address2: 'Apt. 643',
+            city: 'Palm Springs',
+            countryCode: 'US',
+            postalCode: '55624-6499',
+            region: 'New Jersey',
+            regionCode: 'LA',
+        ),
+        companyName: 'Tillman - Wiegand',
+        createdAt: Utils\Utils::parseDateTime('2019-10-12T11:27:59.003Z'),
+        emails: [
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer16@yahoo.com',
+                type: Shared\CrmEmailType::Other,
+            ),
+            new Shared\CrmEmail(
+                email: 'Velda.Sporer@yahoo.com',
+                type: Shared\CrmEmailType::Home,
+            ),
+        ],
+        firstName: 'Velda',
+        id: '69281a28-16bf-4876-bc6a-f051442edbfc',
+        isActive: true,
+        lastName: 'Sporer',
+        linkUrls: [
+            'https://classic-sightseeing.com/',
+        ],
+        metadata: [
+            new Shared\CrmMetadata(
+                extraData: [
+                    'display_name' => 'Custom Property',
+                ],
+                format: Shared\CrmMetadataFormat::Text,
+                id: '21b57846-8e49-459f-b6e4-bd3ad1a38f76',
+                namespace: 'custom',
+                slug: 'custom_property',
+                value: 'sublime',
+            ),
+        ],
+        name: 'Velda Sporer',
+        source: 'aetas',
+        status: 'vesco',
+        telephones: [
+            new Shared\CrmTelephone(
+                telephone: '(955) 643-9849',
+                type: Shared\CrmTelephoneType::Other,
+            ),
+            new Shared\CrmTelephone(
+                telephone: '(621) 811-8800',
+                type: Shared\CrmTelephoneType::Work,
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2020-05-15T02:08:41.202Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -1905,7 +2712,7 @@ Update a pipeline
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateCrmPipeline" method="put" path="/crm/{connection_id}/pipeline/{id}" example="crm_pipeline" -->
 ```php
 declare(strict_types=1);
 
@@ -1914,6 +2721,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -1922,7 +2730,27 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateCrmPipelineRequest(
-    crmPipeline: new Shared\CrmPipeline(),
+    crmPipeline: new Shared\CrmPipeline(
+        createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+        dealProbability: 99,
+        displayOrder: 8,
+        id: '3a3b12e3-59bd-41b2-9f81-a1befb36103a',
+        isActive: true,
+        name: 'Small Steel Bacon',
+        stages: [
+            new Shared\CrmStage(
+                active: false,
+                createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
+                dealProbability: 84,
+                displayOrder: 72,
+                id: 'f4b82baf-d539-4647-80a7-0686e6f3bce5',
+                isClosed: true,
+                name: 'Veniam.',
+                updatedAt: Utils\Utils::parseDateTime('2025-09-16T09:58:54.235Z'),
+            ),
+        ],
+        updatedAt: Utils\Utils::parseDateTime('2025-10-07T15:03:40.503Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );

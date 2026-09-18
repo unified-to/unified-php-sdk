@@ -17,7 +17,7 @@ Create a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" -->
+<!-- UsageSnippet language="php" operationID="createFormsForm" method="post" path="/forms/{connection_id}/form" example="forms_form" -->
 ```php
 declare(strict_types=1);
 
@@ -26,6 +26,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -34,7 +35,72 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\CreateFormsFormRequest(
-    formsForm: new Shared\FormsForm(),
+    formsForm: new Shared\FormsForm(
+        confirmationMessage: 'Cultura temeritas aptus celebrer volo pecus culpa annus aurum.',
+        createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+        description: 'Sodalitas cupiditas terebro conduco.',
+        fields: [
+            new Shared\FormField(
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                id: '565f27cf-2cf7-4c30-ad97-4340d859b584',
+                isActive: true,
+                isRequired: true,
+                maxLength: 146,
+                name: 'vulgivagus audio accendo',
+                order: 0,
+                type: Shared\FormFieldType::Textarea,
+                updatedAt: Utils\Utils::parseDateTime('2025-04-11T17:16:52.780Z'),
+            ),
+            new Shared\FormField(
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                id: '82b263f9-2d16-4cdf-8e99-d05ba46ce817',
+                isActive: true,
+                isRequired: false,
+                name: 'alo crebro vado',
+                order: 1,
+                type: Shared\FormFieldType::Textarea,
+                updatedAt: Utils\Utils::parseDateTime('2024-08-23T07:09:51.273Z'),
+            ),
+            new Shared\FormField(
+                choices: [
+                    'vallum',
+                    'vae',
+                    'nesciunt',
+                    'commodi',
+                    'appositus',
+                ],
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                defaultValue: 'cattus',
+                id: 'd7c963e5-2d3d-4436-a57d-a6e337d9d170',
+                isActive: true,
+                isRequired: false,
+                name: 'casso tenus nesciunt',
+                order: 2,
+                type: Shared\FormFieldType::MultipleSelect,
+                updatedAt: Utils\Utils::parseDateTime('2024-02-22T02:14:22.278Z'),
+            ),
+            new Shared\FormField(
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                description: 'Sequi antea delectatio.',
+                id: 'e45efb8f-439b-40f6-8370-99c8ec66b065',
+                isActive: true,
+                isRequired: false,
+                name: 'comburo utique ipsa',
+                order: 3,
+                type: Shared\FormFieldType::Textarea,
+                updatedAt: Utils\Utils::parseDateTime('2024-11-14T23:43:02.792Z'),
+            ),
+        ],
+        hasMultipleSubmissions: false,
+        hasProgressBar: false,
+        hasShuffleQuestions: true,
+        id: '81c3ab46-46ce-4866-b77a-41608cd3c834',
+        isActive: false,
+        name: 'voluptatibus omnis audax Form',
+        publishedUrl: 'https://impartial-institute.org/',
+        responseCount: 423,
+        updatedAt: Utils\Utils::parseDateTime('2024-08-15T04:23:15.893Z'),
+    ),
     connectionId: '<id>',
 );
 
@@ -170,7 +236,7 @@ Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="php" operationID="patchFormsForm" method="patch" path="/forms/{connection_id}/form/{id}" example="forms_form" -->
 ```php
 declare(strict_types=1);
 
@@ -179,6 +245,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -187,7 +254,72 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\PatchFormsFormRequest(
-    formsForm: new Shared\FormsForm(),
+    formsForm: new Shared\FormsForm(
+        confirmationMessage: 'Cultura temeritas aptus celebrer volo pecus culpa annus aurum.',
+        createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+        description: 'Sodalitas cupiditas terebro conduco.',
+        fields: [
+            new Shared\FormField(
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                id: '565f27cf-2cf7-4c30-ad97-4340d859b584',
+                isActive: true,
+                isRequired: true,
+                maxLength: 146,
+                name: 'vulgivagus audio accendo',
+                order: 0,
+                type: Shared\FormFieldType::Textarea,
+                updatedAt: Utils\Utils::parseDateTime('2025-04-11T17:16:52.787Z'),
+            ),
+            new Shared\FormField(
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                id: '82b263f9-2d16-4cdf-8e99-d05ba46ce817',
+                isActive: true,
+                isRequired: false,
+                name: 'alo crebro vado',
+                order: 1,
+                type: Shared\FormFieldType::Textarea,
+                updatedAt: Utils\Utils::parseDateTime('2024-08-23T07:09:51.276Z'),
+            ),
+            new Shared\FormField(
+                choices: [
+                    'vallum',
+                    'vae',
+                    'nesciunt',
+                    'commodi',
+                    'appositus',
+                ],
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                defaultValue: 'cattus',
+                id: 'd7c963e5-2d3d-4436-a57d-a6e337d9d170',
+                isActive: true,
+                isRequired: false,
+                name: 'casso tenus nesciunt',
+                order: 2,
+                type: Shared\FormFieldType::MultipleSelect,
+                updatedAt: Utils\Utils::parseDateTime('2024-02-22T02:14:22.280Z'),
+            ),
+            new Shared\FormField(
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                description: 'Sequi antea delectatio.',
+                id: 'e45efb8f-439b-40f6-8370-99c8ec66b065',
+                isActive: true,
+                isRequired: false,
+                name: 'comburo utique ipsa',
+                order: 3,
+                type: Shared\FormFieldType::Textarea,
+                updatedAt: Utils\Utils::parseDateTime('2024-11-14T23:43:02.796Z'),
+            ),
+        ],
+        hasMultipleSubmissions: false,
+        hasProgressBar: false,
+        hasShuffleQuestions: true,
+        id: '4b17cf22-6cbc-4929-a470-4e0c39b6dfd6',
+        isActive: false,
+        name: 'voluptatibus omnis audax Form',
+        publishedUrl: 'https://impartial-institute.org/',
+        responseCount: 423,
+        updatedAt: Utils\Utils::parseDateTime('2024-08-15T04:23:15.897Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
@@ -274,7 +406,7 @@ Update a form
 
 ### Example Usage
 
-<!-- UsageSnippet language="php" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" -->
+<!-- UsageSnippet language="php" operationID="updateFormsForm" method="put" path="/forms/{connection_id}/form/{id}" example="forms_form" -->
 ```php
 declare(strict_types=1);
 
@@ -283,6 +415,7 @@ require 'vendor/autoload.php';
 use Unified\Unified_to;
 use Unified\Unified_to\Models\Operations;
 use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
 
 $sdk = Unified_to\UnifiedTo::builder()
     ->setSecurity(
@@ -291,7 +424,72 @@ $sdk = Unified_to\UnifiedTo::builder()
     ->build();
 
 $request = new Operations\UpdateFormsFormRequest(
-    formsForm: new Shared\FormsForm(),
+    formsForm: new Shared\FormsForm(
+        confirmationMessage: 'Cultura temeritas aptus celebrer volo pecus culpa annus aurum.',
+        createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+        description: 'Sodalitas cupiditas terebro conduco.',
+        fields: [
+            new Shared\FormField(
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                id: '565f27cf-2cf7-4c30-ad97-4340d859b584',
+                isActive: true,
+                isRequired: true,
+                maxLength: 146,
+                name: 'vulgivagus audio accendo',
+                order: 0,
+                type: Shared\FormFieldType::Textarea,
+                updatedAt: Utils\Utils::parseDateTime('2025-04-11T17:16:52.787Z'),
+            ),
+            new Shared\FormField(
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                id: '82b263f9-2d16-4cdf-8e99-d05ba46ce817',
+                isActive: true,
+                isRequired: false,
+                name: 'alo crebro vado',
+                order: 1,
+                type: Shared\FormFieldType::Textarea,
+                updatedAt: Utils\Utils::parseDateTime('2024-08-23T07:09:51.276Z'),
+            ),
+            new Shared\FormField(
+                choices: [
+                    'vallum',
+                    'vae',
+                    'nesciunt',
+                    'commodi',
+                    'appositus',
+                ],
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                defaultValue: 'cattus',
+                id: 'd7c963e5-2d3d-4436-a57d-a6e337d9d170',
+                isActive: true,
+                isRequired: false,
+                name: 'casso tenus nesciunt',
+                order: 2,
+                type: Shared\FormFieldType::MultipleSelect,
+                updatedAt: Utils\Utils::parseDateTime('2024-02-22T02:14:22.280Z'),
+            ),
+            new Shared\FormField(
+                createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
+                description: 'Sequi antea delectatio.',
+                id: 'e45efb8f-439b-40f6-8370-99c8ec66b065',
+                isActive: true,
+                isRequired: false,
+                name: 'comburo utique ipsa',
+                order: 3,
+                type: Shared\FormFieldType::Textarea,
+                updatedAt: Utils\Utils::parseDateTime('2024-11-14T23:43:02.796Z'),
+            ),
+        ],
+        hasMultipleSubmissions: false,
+        hasProgressBar: false,
+        hasShuffleQuestions: true,
+        id: '4b17cf22-6cbc-4929-a470-4e0c39b6dfd6',
+        isActive: false,
+        name: 'voluptatibus omnis audax Form',
+        publishedUrl: 'https://impartial-institute.org/',
+        responseCount: 423,
+        updatedAt: Utils\Utils::parseDateTime('2024-08-15T04:23:15.897Z'),
+    ),
     connectionId: '<id>',
     id: '<id>',
 );
