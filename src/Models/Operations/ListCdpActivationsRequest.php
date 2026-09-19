@@ -20,6 +20,7 @@ class ListCdpActivationsRequest
     public string $connectionId;
 
     /**
+     * The destination ID to filter by
      *
      * @var ?string $destinationId
      */

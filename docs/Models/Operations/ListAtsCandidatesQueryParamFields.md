@@ -32,4 +32,5 @@
 | `Skills`             | skills               |
 | `JobIds`             | job_ids              |
 | `Metadata`           | metadata             |
+| `Summary`            | summary              |
 | `Raw`                | raw                  |

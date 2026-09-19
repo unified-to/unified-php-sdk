@@ -39,5 +39,6 @@ enum ListAtsJobsQueryParamFields: string
     case Metadata = 'metadata';
     case UserId = 'user_id';
     case Industry = 'industry';
+    case Summary = 'summary';
     case Raw = 'raw';
 }

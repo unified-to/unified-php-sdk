@@ -200,6 +200,14 @@ class AtsCandidate
     public ?array $sources = null;
 
     /**
+     *
+     * @var ?string $summary
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('summary')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $summary = null;
+
+    /**
      * $tags
      *
      * @var ?array<string> $tags
@@ -283,6 +291,7 @@ class AtsCandidate
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $skills
      * @param  ?array<string>  $sources
+     * @param  ?string  $summary
      * @param  ?array<string>  $tags
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsTelephone>  $telephones
      * @param  ?string  $title
@@ -292,7 +301,7 @@ class AtsCandidate
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $education = null, ?array $emails = null, ?array $experiences = null, ?string $externalIdentifier = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?array $jobIds = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $skills = null, ?array $sources = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $userIds = null, ?string $webUrl = null)
+    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $education = null, ?array $emails = null, ?array $experiences = null, ?string $externalIdentifier = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?array $jobIds = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $skills = null, ?array $sources = null, ?string $summary = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $userIds = null, ?string $webUrl = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -315,6 +324,7 @@ class AtsCandidate
         $this->raw = $raw;
         $this->skills = $skills;
         $this->sources = $sources;
+        $this->summary = $summary;
         $this->tags = $tags;
         $this->telephones = $telephones;
         $this->title = $title;

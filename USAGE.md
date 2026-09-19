@@ -22,7 +22,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'BOB',
         customerDefinedCode: 'quo',
         description: 'Spoliatio comedo vilitas harum cupiditate.',
-        id: 'd0de0893-6cd3-4f44-9f1b-0d2d89c37c03',
+        id: '17197349-fb2b-49f6-9196-53d6fe02ce9d',
         isPayable: true,
         name: 'Electronic Aluminum Tuna',
         status: Shared\Status::Archived,
@@ -39,7 +39,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::Bank,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-03T03:11:16.644Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-03T06:08:54.340Z'),
     ),
     connectionId: '<id>',
 );

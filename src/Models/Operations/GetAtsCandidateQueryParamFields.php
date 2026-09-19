@@ -38,5 +38,6 @@ enum GetAtsCandidateQueryParamFields: string
     case Skills = 'skills';
     case JobIds = 'job_ids';
     case Metadata = 'metadata';
+    case Summary = 'summary';
     case Raw = 'raw';
 }

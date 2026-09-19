@@ -35,5 +35,8 @@ enum UpdateAccountingContactQueryParamFields: string
     case OrganizationId = 'organization_id';
     case PaymentTerms = 'payment_terms';
     case PaymenttermId = 'paymentterm_id';
+    case BalanceAmount = 'balance_amount';
+    case Website = 'website';
+    case Notes = 'notes';
     case Raw = 'raw';
 }

@@ -150,6 +150,14 @@ class AtsApplication
 
     /**
      *
+     * @var ?string $summary
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('summary')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $summary = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -181,11 +189,12 @@ class AtsApplication
      * @param  ?string  $rejectedReason
      * @param  ?string  $source
      * @param  ?\Unified\Unified_to\Models\Shared\AtsApplicationStatus  $status
+     * @param  ?string  $summary
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?array $offers = null, ?string $originalStatus = null, ?string $originalSubstatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?array $answers = null, ?\DateTime $appliedAt = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?array $offers = null, ?string $originalStatus = null, ?string $originalSubstatus = null, ?array $raw = null, ?\DateTime $rejectedAt = null, ?string $rejectedReason = null, ?string $source = null, ?AtsApplicationStatus $status = null, ?string $summary = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->answers = $answers;
         $this->appliedAt = $appliedAt;
@@ -203,6 +212,7 @@ class AtsApplication
         $this->rejectedReason = $rejectedReason;
         $this->source = $source;
         $this->status = $status;
+        $this->summary = $summary;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
     }

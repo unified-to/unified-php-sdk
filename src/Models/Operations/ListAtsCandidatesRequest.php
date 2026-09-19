@@ -36,6 +36,14 @@ class ListAtsCandidatesRequest
     public ?array $fields = null;
 
     /**
+     * The job ID to filter by
+     *
+     * @var ?string $jobId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
+    public ?string $jobId = null;
+
+    /**
      *
      * @var ?float $limit
      */
@@ -91,6 +99,7 @@ class ListAtsCandidatesRequest
      * @param  string  $connectionId
      * @param  ?string  $companyId
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListAtsCandidatesQueryParamFields>  $fields
+     * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -100,11 +109,12 @@ class ListAtsCandidatesRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?array $fields = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;
         $this->fields = $fields;
+        $this->jobId = $jobId;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;

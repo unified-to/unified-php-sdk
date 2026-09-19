@@ -23,6 +23,14 @@ class AccountingContact
 
     /**
      *
+     * @var ?float $balanceAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('balance_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $balanceAmount = null;
+
+    /**
+     *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress $billingAddress
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('billing_address')]
@@ -119,6 +127,14 @@ class AccountingContact
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
+
+    /**
+     *
+     * @var ?string $notes
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('notes')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $notes = null;
 
     /**
      *
@@ -219,6 +235,14 @@ class AccountingContact
 
     /**
      *
+     * @var ?string $website
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('website')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $website = null;
+
+    /**
+     *
      * @var ?string $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
@@ -227,6 +251,7 @@ class AccountingContact
 
     /**
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAssociatedContact>  $associatedContacts
+     * @param  ?float  $balanceAmount
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress  $billingAddress
      * @param  ?string  $companyName
      * @param  ?\DateTime  $createdAt
@@ -240,6 +265,7 @@ class AccountingContact
      * @param  ?bool  $isSupplier
      * @param  ?string  $lastName
      * @param  ?string  $name
+     * @param  ?string  $notes
      * @param  ?string  $organizationId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingContactPaymentMethod>  $paymentMethods
      * @param  ?\Unified\Unified_to\Models\Shared\AccountingContactPaymentTerms  $paymentTerms
@@ -251,11 +277,13 @@ class AccountingContact
      * @param  ?string  $taxNumber
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
+     * @param  ?string  $website
      * @phpstan-pure
      */
-    public function __construct(?array $associatedContacts = null, ?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $lastName = null, ?string $name = null, ?string $organizationId = null, ?array $paymentMethods = null, ?AccountingContactPaymentTerms $paymentTerms = null, ?string $paymenttermId = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
+    public function __construct(?array $associatedContacts = null, ?float $balanceAmount = null, ?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $lastName = null, ?string $name = null, ?string $notes = null, ?string $organizationId = null, ?array $paymentMethods = null, ?AccountingContactPaymentTerms $paymentTerms = null, ?string $paymenttermId = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $website = null, ?string $currency = 'USD')
     {
         $this->associatedContacts = $associatedContacts;
+        $this->balanceAmount = $balanceAmount;
         $this->billingAddress = $billingAddress;
         $this->companyName = $companyName;
         $this->createdAt = $createdAt;
@@ -268,6 +296,7 @@ class AccountingContact
         $this->isSupplier = $isSupplier;
         $this->lastName = $lastName;
         $this->name = $name;
+        $this->notes = $notes;
         $this->organizationId = $organizationId;
         $this->paymentMethods = $paymentMethods;
         $this->paymentTerms = $paymentTerms;
@@ -279,6 +308,7 @@ class AccountingContact
         $this->taxNumber = $taxNumber;
         $this->telephones = $telephones;
         $this->updatedAt = $updatedAt;
+        $this->website = $website;
         $this->currency = $currency;
     }
 }

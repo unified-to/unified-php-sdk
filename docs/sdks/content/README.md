@@ -44,7 +44,7 @@ $request = new Operations\CreateLmsContentRequest(
         difficulty: 'Beginner',
         durationMinutes: 19,
         externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-        id: '752eba73-40d0-4a58-bca3-4a1ef9b6e063',
+        id: '9257b619-e3d4-4b29-820f-bbc7e14ed43c',
         instructors: [
             new Shared\LmsReference(
                 id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
@@ -123,7 +123,7 @@ $request = new Operations\CreateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-09-23T11:13:24.667Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-23T19:17:12.019Z'),
     ),
     connectionId: '<id>',
 );
@@ -287,7 +287,7 @@ $request = new Operations\PatchLmsContentRequest(
         difficulty: 'Beginner',
         durationMinutes: 19,
         externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-        id: '93ebc3a9-fd1d-4164-a395-aec8aec0abe4',
+        id: 'b84930f2-e708-44c3-a55e-c22a26884b78',
         instructors: [
             new Shared\LmsReference(
                 id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
@@ -366,7 +366,7 @@ $request = new Operations\PatchLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-09-23T11:13:24.676Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-23T19:17:12.027Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -481,7 +481,7 @@ $request = new Operations\UpdateLmsContentRequest(
         difficulty: 'Beginner',
         durationMinutes: 19,
         externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-        id: '93ebc3a9-fd1d-4164-a395-aec8aec0abe4',
+        id: 'b84930f2-e708-44c3-a55e-c22a26884b78',
         instructors: [
             new Shared\LmsReference(
                 id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
@@ -560,7 +560,7 @@ $request = new Operations\UpdateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-09-23T11:13:24.676Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-23T19:17:12.027Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

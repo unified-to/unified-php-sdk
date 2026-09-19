@@ -22,4 +22,5 @@
 | `UserId`            | user_id             |
 | `Metadata`          | metadata            |
 | `OriginalSubstatus` | original_substatus  |
+| `Summary`           | summary             |
 | `Raw`               | raw                 |

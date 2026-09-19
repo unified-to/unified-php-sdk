@@ -28,5 +28,6 @@ enum PatchAtsApplicationQueryParamFields: string
     case UserId = 'user_id';
     case Metadata = 'metadata';
     case OriginalSubstatus = 'original_substatus';
+    case Summary = 'summary';
     case Raw = 'raw';
 }

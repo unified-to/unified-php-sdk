@@ -27,4 +27,5 @@ enum AdType: string
     case Native = 'NATIVE';
     case Ctv = 'CTV';
     case Dooh = 'DOOH';
+    case PerformanceMax = 'PERFORMANCE_MAX';
 }

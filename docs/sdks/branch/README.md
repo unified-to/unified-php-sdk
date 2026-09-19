@@ -37,10 +37,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: '910a7ea7-c8c6-4b98-be91-5079d6b41a9c',
+        id: '0efa7b9f-7745-4560-ae63-7bc10e507501',
         name: 'voluptas',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-03T14:15:01.616Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-03T17:03:49.964Z'),
     ),
     connectionId: '<id>',
 );
@@ -197,10 +197,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: 'bcbd7332-7112-4169-93f5-f369b354498a',
+        id: 'b82e1d94-8021-4382-9ee1-19498eefbdd0',
         name: 'voluptas',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-03T14:15:01.617Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-03T17:03:49.965Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -308,10 +308,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: 'bcbd7332-7112-4169-93f5-f369b354498a',
+        id: 'b82e1d94-8021-4382-9ee1-19498eefbdd0',
         name: 'voluptas',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-03T14:15:01.617Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-03T17:03:49.965Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
