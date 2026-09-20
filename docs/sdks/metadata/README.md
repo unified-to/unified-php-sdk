@@ -38,7 +38,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '657871a9-87a0-4e09-a1d7-34b729072eba',
+        id: '6893ab7e-3b89-4067-b088-cbc95db15da9',
         isRequired: false,
         name: 'autem',
         objectType: 'clubs_group',
@@ -48,7 +48,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-02-27T01:46:15.491Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-27T18:09:46.640Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,7 +206,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'dfcc097e-3ae9-4d66-9804-30106d580331',
+        id: 'debaf6c0-52d5-41cc-a4dd-167466fc68d6',
         isRequired: false,
         name: 'autem',
         objectType: 'clubs_group',
@@ -216,7 +216,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-02-27T01:46:15.496Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-27T18:09:46.651Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,7 +325,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'dfcc097e-3ae9-4d66-9804-30106d580331',
+        id: 'debaf6c0-52d5-41cc-a4dd-167466fc68d6',
         isRequired: false,
         name: 'autem',
         objectType: 'clubs_group',
@@ -335,7 +335,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-02-27T01:46:15.496Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-27T18:09:46.651Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

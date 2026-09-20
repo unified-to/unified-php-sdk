@@ -44,7 +44,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: '723eba55-7ff0-432b-911d-00fa10aa857e',
+        id: '72a37717-8c70-43c9-b8d7-7f9955688cc2',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -53,10 +53,10 @@ $request = new Operations\CreateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: '5cd176db-2596-489f-bb77-8ce92265f50e',
+                id: '6c975416-a9b7-41fc-afe0-a14809a901eb',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'a06df1c0-4229-4c84-8a94-bffe25a19cee',
+                        id: '2bccdef8-3b7d-4b55-8a69-429492e9f3a9',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -69,7 +69,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '868f8dc3-8e80-43b1-9b2a-c5a004d51bef',
+                id: '3b133df9-b2a6-407b-9cd2-0b4b83e8a2dc',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -83,7 +83,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-26T17:37:05.637Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-27T05:18:14.833Z'),
     ),
     connectionId: '<id>',
 );
@@ -140,7 +140,7 @@ $request = new Operations\CreateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: '98f328fd-9f41-4b9d-9b64-b71af8b1ce71',
+        id: '20f824d9-8e1c-45d3-b92e-05d3003d16e5',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -156,7 +156,7 @@ $request = new Operations\CreateLmsCollectionRequest(
             ),
         ],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-06-29T08:02:26.569Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-30T06:12:33.490Z'),
     ),
     connectionId: '<id>',
 );
@@ -415,7 +415,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: '7acace61-ce7b-4205-b804-d9b7c87a4663',
+        id: 'a4ddf295-b700-40d6-82b3-a4d60eea4115',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -424,10 +424,10 @@ $request = new Operations\PatchCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: '16cc12a4-746a-4f97-8b85-09bbf149b6af',
+                id: '056914b0-7385-4ed2-9fcc-fc7e88aa629e',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'abb34ab6-6ff0-4336-a716-230faf256e29',
+                        id: '0ba65fdb-522d-484f-8569-7d638ee44879',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -440,7 +440,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '5789d5f1-95a3-4a44-b071-c921c06e24dc',
+                id: '5f0e8285-fe83-417f-bcce-b357f7fe3d23',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -454,7 +454,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-26T17:37:05.648Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-27T05:18:14.853Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -512,7 +512,7 @@ $request = new Operations\PatchLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: 'f9fba4e0-d73c-4d3a-ad2a-9b7959583019',
+        id: 'fdad66a6-6522-4d4f-a514-6dbc4df37c63',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -528,7 +528,7 @@ $request = new Operations\PatchLmsCollectionRequest(
             ),
         ],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-06-29T08:02:26.599Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-30T06:12:33.506Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -688,7 +688,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: '7acace61-ce7b-4205-b804-d9b7c87a4663',
+        id: 'a4ddf295-b700-40d6-82b3-a4d60eea4115',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -697,10 +697,10 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: '16cc12a4-746a-4f97-8b85-09bbf149b6af',
+                id: '056914b0-7385-4ed2-9fcc-fc7e88aa629e',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'abb34ab6-6ff0-4336-a716-230faf256e29',
+                        id: '0ba65fdb-522d-484f-8569-7d638ee44879',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -713,7 +713,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '5789d5f1-95a3-4a44-b071-c921c06e24dc',
+                id: '5f0e8285-fe83-417f-bcce-b357f7fe3d23',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -727,7 +727,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-26T17:37:05.648Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-27T05:18:14.853Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -785,7 +785,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: 'f9fba4e0-d73c-4d3a-ad2a-9b7959583019',
+        id: 'fdad66a6-6522-4d4f-a514-6dbc4df37c63',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -801,7 +801,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
             ),
         ],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-06-29T08:02:26.599Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-30T06:12:33.506Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

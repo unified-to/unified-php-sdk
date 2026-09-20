@@ -38,8 +38,8 @@ $request = new Operations\CreateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
         description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '060683af-0f5e-4e45-adb3-7999bc681210',
-        updatedAt: Utils\Utils::parseDateTime('2024-09-06T09:24:09.660Z'),
+        id: '86bd1250-b6db-494d-a783-f0f1bab4c649',
+        updatedAt: Utils\Utils::parseDateTime('2024-09-07T01:47:29.020Z'),
     ),
     connectionId: '<id>',
 );
@@ -197,8 +197,8 @@ $request = new Operations\PatchTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
         description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '7da62b3b-6583-4483-8c7d-0262d628d2a3',
-        updatedAt: Utils\Utils::parseDateTime('2024-09-06T09:24:09.662Z'),
+        id: '8314028e-bec4-4c99-8e09-285e9aed9bb2',
+        updatedAt: Utils\Utils::parseDateTime('2024-09-07T01:47:29.025Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -307,8 +307,8 @@ $request = new Operations\UpdateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
         description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '7da62b3b-6583-4483-8c7d-0262d628d2a3',
-        updatedAt: Utils\Utils::parseDateTime('2024-09-06T09:24:09.662Z'),
+        id: '8314028e-bec4-4c99-8e09-285e9aed9bb2',
+        updatedAt: Utils\Utils::parseDateTime('2024-09-07T01:47:29.025Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
