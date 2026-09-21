@@ -38,17 +38,17 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '6893ab7e-3b89-4067-b088-cbc95db15da9',
+        id: 'a66e402b-9ccd-461c-9d94-1a40e872793e',
         isRequired: false,
         name: 'autem',
-        objectType: 'clubs_group',
+        objectType: 'signing_template',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-02-27T18:09:46.640Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-28T08:05:10.351Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,17 +206,17 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'debaf6c0-52d5-41cc-a4dd-167466fc68d6',
+        id: 'a0d83ad7-5bf9-4c3b-ae13-626991f33c1b',
         isRequired: false,
         name: 'autem',
-        objectType: 'clubs_group',
+        objectType: 'signing_template',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-02-27T18:09:46.651Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-28T08:05:10.358Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,17 +325,17 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'debaf6c0-52d5-41cc-a4dd-167466fc68d6',
+        id: 'a0d83ad7-5bf9-4c3b-ae13-626991f33c1b',
         isRequired: false,
         name: 'autem',
-        objectType: 'clubs_group',
+        objectType: 'signing_template',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-02-27T18:09:46.651Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-28T08:05:10.358Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

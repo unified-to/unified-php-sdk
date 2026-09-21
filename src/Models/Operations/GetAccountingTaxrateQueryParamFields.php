@@ -20,5 +20,12 @@ enum GetAccountingTaxrateQueryParamFields: string
     case IsActive = 'is_active';
     case OrganizationId = 'organization_id';
     case Metadata = 'metadata';
+    case EffectiveRate = 'effective_rate';
+    case TotalRate = 'total_rate';
+    case Components = 'components';
+    case Type = 'type';
+    case IsCompound = 'is_compound';
+    case Country = 'country';
+    case Region = 'region';
     case Raw = 'raw';
 }

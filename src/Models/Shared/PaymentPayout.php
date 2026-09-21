@@ -13,6 +13,22 @@ class PaymentPayout
 {
     /**
      *
+     * @var ?string $accountId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('account_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $accountId = null;
+
+    /**
+     *
+     * @var ?\DateTime $arrivalAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('arrival_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $arrivalAt = null;
+
+    /**
+     *
      * @var ?string $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -29,11 +45,37 @@ class PaymentPayout
 
     /**
      *
+     * @var ?float $feeAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fee_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $feeAmount = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     * The transactions included in this payout
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentPayoutLineitem> $lineitems
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('lineitems')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentPayoutLineitem>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $lineitems = null;
+
+    /**
+     *
+     * @var ?float $netAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('net_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $netAmount = null;
 
     /**
      *
@@ -79,9 +121,14 @@ class PaymentPayout
     public ?string $updatedAt = null;
 
     /**
+     * @param  ?string  $accountId
+     * @param  ?\DateTime  $arrivalAt
      * @param  ?string  $createdAt
      * @param  ?string  $currency
+     * @param  ?float  $feeAmount
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentPayoutLineitem>  $lineitems
+     * @param  ?float  $netAmount
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentPayoutStatus  $status
@@ -89,11 +136,16 @@ class PaymentPayout
      * @param  ?string  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?float $totalAmount = null, ?string $updatedAt = null)
+    public function __construct(?string $accountId = null, ?\DateTime $arrivalAt = null, ?string $createdAt = null, ?string $currency = null, ?float $feeAmount = null, ?string $id = null, ?array $lineitems = null, ?float $netAmount = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?float $totalAmount = null, ?string $updatedAt = null)
     {
+        $this->accountId = $accountId;
+        $this->arrivalAt = $arrivalAt;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
+        $this->feeAmount = $feeAmount;
         $this->id = $id;
+        $this->lineitems = $lineitems;
+        $this->netAmount = $netAmount;
         $this->notes = $notes;
         $this->raw = $raw;
         $this->status = $status;

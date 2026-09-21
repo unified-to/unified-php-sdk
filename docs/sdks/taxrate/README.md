@@ -36,14 +36,27 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAccountingTaxrateRequest(
     accountingTaxrate: new Shared\AccountingTaxrate(
+        components: [
+            new Shared\AccountingTaxrateComponent(
+                isCompound: false,
+                name: 'cogo',
+                rate: 53,
+            ),
+        ],
+        country: 'BY',
         createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
-        description: 'Nemo atrox tricesimus creator aranea.',
-        id: '24e9429d-e92f-44a5-853b-57855b305532',
+        description: 'Atrox tricesimus creator.',
+        effectiveRate: 53,
+        id: '9d45b1ab-9993-41c7-9148-b552b5883179',
         isActive: false,
+        isCompound: true,
         metadata: [],
-        name: 'cogo',
-        rate: 1,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-06T01:24:12.559Z'),
+        name: 'villa',
+        rate: 53,
+        region: 'TX',
+        totalRate: 53,
+        type: Shared\AccountingTaxrateType::Other,
+        updatedAt: Utils\Utils::parseDateTime('2022-04-13T08:15:29.223Z'),
     ),
     connectionId: '<id>',
 );
@@ -199,14 +212,27 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAccountingTaxrateRequest(
     accountingTaxrate: new Shared\AccountingTaxrate(
+        components: [
+            new Shared\AccountingTaxrateComponent(
+                isCompound: false,
+                name: 'cogo',
+                rate: 53,
+            ),
+        ],
+        country: 'BY',
         createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
-        description: 'Nemo atrox tricesimus creator aranea.',
-        id: '9ef4e6ea-760f-4303-aa85-4a283560db82',
+        description: 'Atrox tricesimus creator.',
+        effectiveRate: 53,
+        id: '6b146958-8711-4255-89a5-4e504a6d2a0f',
         isActive: false,
+        isCompound: true,
         metadata: [],
-        name: 'cogo',
-        rate: 1,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-06T01:24:12.567Z'),
+        name: 'villa',
+        rate: 53,
+        region: 'TX',
+        totalRate: 53,
+        type: Shared\AccountingTaxrateType::Other,
+        updatedAt: Utils\Utils::parseDateTime('2022-04-13T08:15:29.226Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -313,14 +339,27 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAccountingTaxrateRequest(
     accountingTaxrate: new Shared\AccountingTaxrate(
+        components: [
+            new Shared\AccountingTaxrateComponent(
+                isCompound: false,
+                name: 'cogo',
+                rate: 53,
+            ),
+        ],
+        country: 'BY',
         createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
-        description: 'Nemo atrox tricesimus creator aranea.',
-        id: '9ef4e6ea-760f-4303-aa85-4a283560db82',
+        description: 'Atrox tricesimus creator.',
+        effectiveRate: 53,
+        id: '6b146958-8711-4255-89a5-4e504a6d2a0f',
         isActive: false,
+        isCompound: true,
         metadata: [],
-        name: 'cogo',
-        rate: 1,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-06T01:24:12.567Z'),
+        name: 'villa',
+        rate: 53,
+        region: 'TX',
+        totalRate: 53,
+        type: Shared\AccountingTaxrateType::Other,
+        updatedAt: Utils\Utils::parseDateTime('2022-04-13T08:15:29.226Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

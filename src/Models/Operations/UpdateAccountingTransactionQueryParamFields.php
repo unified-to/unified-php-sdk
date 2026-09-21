@@ -31,5 +31,8 @@ enum UpdateAccountingTransactionQueryParamFields: string
     case OrganizationId = 'organization_id';
     case CategoryIds = 'category_ids';
     case ProjectId = 'project_id';
+    case TransactionAt = 'transaction_at';
+    case ExchangeRate = 'exchange_rate';
+    case Status = 'status';
     case Raw = 'raw';
 }

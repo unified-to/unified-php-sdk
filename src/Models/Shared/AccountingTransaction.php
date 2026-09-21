@@ -65,6 +65,14 @@ class AccountingTransaction
 
     /**
      *
+     * @var ?float $exchangeRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('exchange_rate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $exchangeRate = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -149,6 +157,15 @@ class AccountingTransaction
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingTransactionStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingTransactionStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AccountingTransactionStatus $status = null;
+
+    /**
+     *
      * @var ?float $subTotalAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('sub_total_amount')]
@@ -173,6 +190,14 @@ class AccountingTransaction
 
     /**
      *
+     * @var ?\DateTime $transactionAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('transaction_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $transactionAt = null;
+
+    /**
+     *
      * @var ?string $type
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
@@ -194,6 +219,7 @@ class AccountingTransaction
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $customerMessage
+     * @param  ?float  $exchangeRate
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem>  $lineitems
      * @param  ?string  $memo
@@ -204,14 +230,16 @@ class AccountingTransaction
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?string  $splitAccountId
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingTransactionStatus  $status
      * @param  ?float  $subTotalAmount
      * @param  ?float  $taxAmount
      * @param  ?float  $totalAmount
+     * @param  ?\DateTime  $transactionAt
      * @param  ?string  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $organizationId = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?float $exchangeRate = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $organizationId = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?AccountingTransactionStatus $status = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $transactionAt = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->categoryIds = $categoryIds;
@@ -219,6 +247,7 @@ class AccountingTransaction
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->customerMessage = $customerMessage;
+        $this->exchangeRate = $exchangeRate;
         $this->id = $id;
         $this->lineitems = $lineitems;
         $this->memo = $memo;
@@ -229,9 +258,11 @@ class AccountingTransaction
         $this->raw = $raw;
         $this->reference = $reference;
         $this->splitAccountId = $splitAccountId;
+        $this->status = $status;
         $this->subTotalAmount = $subTotalAmount;
         $this->taxAmount = $taxAmount;
         $this->totalAmount = $totalAmount;
+        $this->transactionAt = $transactionAt;
         $this->type = $type;
         $this->updatedAt = $updatedAt;
     }

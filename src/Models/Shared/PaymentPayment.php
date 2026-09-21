@@ -54,6 +54,16 @@ class PaymentPayment
     public ?string $cardLast4 = null;
 
     /**
+     * dimension refs -> AccountingCategory
+     *
+     * @var ?array<string> $categoryIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('category_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $categoryIds = null;
+
+    /**
      *
      * @var ?string $contactId
      */
@@ -76,6 +86,14 @@ class PaymentPayment
     #[\Speakeasy\Serializer\Annotation\SerializedName('device_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $deviceId = null;
+
+    /**
+     *
+     * @var ?float $exchangeRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('exchange_rate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $exchangeRate = null;
 
     /**
      *
@@ -119,6 +137,14 @@ class PaymentPayment
 
     /**
      *
+     * @var ?float $netAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('net_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $netAmount = null;
+
+    /**
+     *
      * @var ?string $notes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('notes')]
@@ -132,6 +158,14 @@ class PaymentPayment
     #[\Speakeasy\Serializer\Annotation\SerializedName('organization_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $organizationId = null;
+
+    /**
+     *
+     * @var ?\DateTime $paidAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('paid_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $paidAt = null;
 
     /**
      *
@@ -232,17 +266,21 @@ class PaymentPayment
      * @param  ?string  $billId
      * @param  ?string  $cardBrand
      * @param  ?string  $cardLast4
+     * @param  ?array<string>  $categoryIds
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $deviceId
+     * @param  ?float  $exchangeRate
      * @param  ?float  $feeAmount
      * @param  ?string  $id
      * @param  ?string  $invoiceId
      * @param  ?string  $linkId
      * @param  ?string  $locationId
+     * @param  ?float  $netAmount
      * @param  ?string  $notes
      * @param  ?string  $organizationId
+     * @param  ?\DateTime  $paidAt
      * @param  ?string  $paymentMethod
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
@@ -255,23 +293,27 @@ class PaymentPayment
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $allocations = null, ?string $billId = null, ?string $cardBrand = null, ?string $cardLast4 = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $deviceId = null, ?float $feeAmount = null, ?string $id = null, ?string $invoiceId = null, ?string $linkId = null, ?string $locationId = null, ?string $notes = null, ?string $organizationId = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?string $salesorderId = null, ?PaymentPaymentStatus $status = null, ?TenderType $tenderType = null, ?float $tipAmount = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
+    public function __construct(?string $accountId = null, ?array $allocations = null, ?string $billId = null, ?string $cardBrand = null, ?string $cardLast4 = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $deviceId = null, ?float $exchangeRate = null, ?float $feeAmount = null, ?string $id = null, ?string $invoiceId = null, ?string $linkId = null, ?string $locationId = null, ?float $netAmount = null, ?string $notes = null, ?string $organizationId = null, ?\DateTime $paidAt = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?string $salesorderId = null, ?PaymentPaymentStatus $status = null, ?TenderType $tenderType = null, ?float $tipAmount = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {
         $this->accountId = $accountId;
         $this->allocations = $allocations;
         $this->billId = $billId;
         $this->cardBrand = $cardBrand;
         $this->cardLast4 = $cardLast4;
+        $this->categoryIds = $categoryIds;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->deviceId = $deviceId;
+        $this->exchangeRate = $exchangeRate;
         $this->feeAmount = $feeAmount;
         $this->id = $id;
         $this->invoiceId = $invoiceId;
         $this->linkId = $linkId;
         $this->locationId = $locationId;
+        $this->netAmount = $netAmount;
         $this->notes = $notes;
         $this->organizationId = $organizationId;
+        $this->paidAt = $paidAt;
         $this->paymentMethod = $paymentMethod;
         $this->raw = $raw;
         $this->reference = $reference;

@@ -180,6 +180,12 @@ enum PropertyConnectionPermissions: string
     case GenaiPromptWrite = 'genai_prompt_write';
     case GenaiEmbeddingRead = 'genai_embedding_read';
     case GenaiEmbeddingWrite = 'genai_embedding_write';
+    case GenaiTaskRead = 'genai_task_read';
+    case GenaiTaskWrite = 'genai_task_write';
+    case GenaiAgentRead = 'genai_agent_read';
+    case GenaiAgentWrite = 'genai_agent_write';
+    case GenaiOrganizationRead = 'genai_organization_read';
+    case GenaiOrganizationWrite = 'genai_organization_write';
     case MessagingMessageRead = 'messaging_message_read';
     case MessagingMessageWrite = 'messaging_message_write';
     case MessagingChannelRead = 'messaging_channel_read';

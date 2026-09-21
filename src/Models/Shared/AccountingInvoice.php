@@ -88,6 +88,14 @@ class AccountingInvoice
     public ?\DateTime $dueAt = null;
 
     /**
+     *
+     * @var ?float $exchangeRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('exchange_rate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $exchangeRate = null;
+
+    /**
      * $extendedNotes
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingExtendedNote> $extendedNotes
@@ -112,6 +120,14 @@ class AccountingInvoice
     #[\Speakeasy\Serializer\Annotation\SerializedName('invoice_number')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $invoiceNumber = null;
+
+    /**
+     *
+     * @var ?bool $isInclusiveOfTax
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_inclusive_of_tax')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isInclusiveOfTax = null;
 
     /**
      * $lineitems
@@ -260,6 +276,16 @@ class AccountingInvoice
     public ?\DateTime $refundedAt = null;
 
     /**
+     * refs -> AccountingSalesorder; the sales orders this invoice was raised from
+     *
+     * @var ?array<string> $salesorderIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('salesorder_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $salesorderIds = null;
+
+    /**
      *
      * @var ?bool $send
      */
@@ -275,6 +301,14 @@ class AccountingInvoice
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingInvoiceStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?AccountingInvoiceStatus $status = null;
+
+    /**
+     *
+     * @var ?float $subTotalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('sub_total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $subTotalAmount = null;
 
     /**
      *
@@ -336,9 +370,11 @@ class AccountingInvoice
      * @param  ?string  $currency
      * @param  ?float  $discountAmount
      * @param  ?\DateTime  $dueAt
+     * @param  ?float  $exchangeRate
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingExtendedNote>  $extendedNotes
      * @param  ?string  $id
      * @param  ?string  $invoiceNumber
+     * @param  ?bool  $isInclusiveOfTax
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $notes
@@ -356,8 +392,10 @@ class AccountingInvoice
      * @param  ?float  $refundAmount
      * @param  ?string  $refundReason
      * @param  ?\DateTime  $refundedAt
+     * @param  ?array<string>  $salesorderIds
      * @param  ?bool  $send
      * @param  ?\Unified\Unified_to\Models\Shared\AccountingInvoiceStatus  $status
+     * @param  ?float  $subTotalAmount
      * @param  ?float  $taxAmount
      * @param  ?\Unified\Unified_to\Models\Shared\AccountingInvoiceTerm  $term
      * @param  ?float  $totalAmount
@@ -366,7 +404,7 @@ class AccountingInvoice
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?array $extendedNotes = null, ?string $id = null, ?string $invoiceNumber = null, ?array $lineitems = null, ?array $metadata = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingInvoicePaymentCollectionMethod $paymentCollectionMethod = null, ?AccountingInvoicePaymentTerms $paymentTerms = null, ?array $payments = null, ?string $paymenttermId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?bool $send = null, ?AccountingInvoiceStatus $status = null, ?float $taxAmount = null, ?AccountingInvoiceTerm $term = null, ?float $totalAmount = null, ?AccountingInvoiceType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $attachments = null, ?float $balanceAmount = null, ?\DateTime $cancelledAt = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $discountAmount = null, ?\DateTime $dueAt = null, ?float $exchangeRate = null, ?array $extendedNotes = null, ?string $id = null, ?string $invoiceNumber = null, ?bool $isInclusiveOfTax = null, ?array $lineitems = null, ?array $metadata = null, ?string $notes = null, ?string $organizationId = null, ?float $paidAmount = null, ?\DateTime $paidAt = null, ?AccountingInvoicePaymentCollectionMethod $paymentCollectionMethod = null, ?AccountingInvoicePaymentTerms $paymentTerms = null, ?array $payments = null, ?string $paymenttermId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?float $refundAmount = null, ?string $refundReason = null, ?\DateTime $refundedAt = null, ?array $salesorderIds = null, ?bool $send = null, ?AccountingInvoiceStatus $status = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?AccountingInvoiceTerm $term = null, ?float $totalAmount = null, ?AccountingInvoiceType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->attachments = $attachments;
         $this->balanceAmount = $balanceAmount;
@@ -377,9 +415,11 @@ class AccountingInvoice
         $this->currency = $currency;
         $this->discountAmount = $discountAmount;
         $this->dueAt = $dueAt;
+        $this->exchangeRate = $exchangeRate;
         $this->extendedNotes = $extendedNotes;
         $this->id = $id;
         $this->invoiceNumber = $invoiceNumber;
+        $this->isInclusiveOfTax = $isInclusiveOfTax;
         $this->lineitems = $lineitems;
         $this->metadata = $metadata;
         $this->notes = $notes;
@@ -397,8 +437,10 @@ class AccountingInvoice
         $this->refundAmount = $refundAmount;
         $this->refundReason = $refundReason;
         $this->refundedAt = $refundedAt;
+        $this->salesorderIds = $salesorderIds;
         $this->send = $send;
         $this->status = $status;
+        $this->subTotalAmount = $subTotalAmount;
         $this->taxAmount = $taxAmount;
         $this->term = $term;
         $this->totalAmount = $totalAmount;

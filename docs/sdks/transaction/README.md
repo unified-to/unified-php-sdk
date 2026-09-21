@@ -37,12 +37,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: 'be1a01ce-57bc-454c-9db7-649cbf9e35f6',
+        exchangeRate: 0.5674,
+        id: '17615f5e-0ebb-445a-b676-67eeac8b692b',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-                id: '222d9e63-6799-4547-b4fb-b98a12efe84b',
+                id: '211e7819-c286-480e-bcae-2c7237cdef02',
                 name: 'Salad',
                 objectType: 'delicate',
                 totalAmount: 58531,
@@ -51,9 +52,11 @@ $request = new Operations\CreateAccountingTransactionRequest(
             ),
         ],
         memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+        status: Shared\AccountingTransactionStatus::Void,
         taxAmount: 0,
         totalAmount: 94452,
-        updatedAt: Utils\Utils::parseDateTime('2021-09-10T15:59:53.872Z'),
+        transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-10T21:27:21.377Z'),
     ),
     connectionId: '<id>',
 );
@@ -210,12 +213,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '955e0f2f-3c32-4ab9-b579-c60c171bd5a7',
+        exchangeRate: 0.5674,
+        id: '81bf7ef2-8ff2-4ddc-b703-024288cc4b75',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-                id: '0694b18a-8cb3-42fd-84a4-f2a75398bdac',
+                id: '5dceaa79-1e95-4cee-928e-c57d24727437',
                 name: 'Salad',
                 objectType: 'delicate',
                 totalAmount: 58531,
@@ -224,9 +228,11 @@ $request = new Operations\PatchAccountingTransactionRequest(
             ),
         ],
         memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+        status: Shared\AccountingTransactionStatus::Void,
         taxAmount: 0,
         totalAmount: 94452,
-        updatedAt: Utils\Utils::parseDateTime('2021-09-10T15:59:53.878Z'),
+        transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-10T21:27:21.384Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -334,12 +340,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '955e0f2f-3c32-4ab9-b579-c60c171bd5a7',
+        exchangeRate: 0.5674,
+        id: '81bf7ef2-8ff2-4ddc-b703-024288cc4b75',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-                id: '0694b18a-8cb3-42fd-84a4-f2a75398bdac',
+                id: '5dceaa79-1e95-4cee-928e-c57d24727437',
                 name: 'Salad',
                 objectType: 'delicate',
                 totalAmount: 58531,
@@ -348,9 +355,11 @@ $request = new Operations\UpdateAccountingTransactionRequest(
             ),
         ],
         memo: 'withdrawal of USD 873.18 at Harber and Sons charged to account ending in 1804 using card ending in ****7022.',
+        status: Shared\AccountingTransactionStatus::Void,
         taxAmount: 0,
         totalAmount: 94452,
-        updatedAt: Utils\Utils::parseDateTime('2021-09-10T15:59:53.878Z'),
+        transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-10T21:27:21.384Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

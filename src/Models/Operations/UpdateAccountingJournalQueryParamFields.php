@@ -26,5 +26,9 @@ enum UpdateAccountingJournalQueryParamFields: string
     case CategoryIds = 'category_ids';
     case ProjectId = 'project_id';
     case Attachments = 'attachments';
+    case TotalAmount = 'total_amount';
+    case ExchangeRate = 'exchange_rate';
+    case Status = 'status';
+    case IsInclusiveOfTax = 'is_inclusive_of_tax';
     case Raw = 'raw';
 }

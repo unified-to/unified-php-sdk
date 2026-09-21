@@ -5,18 +5,24 @@
 ### Available Operations
 
 * [createAdsOrganization](#createadsorganization) - Create an organization
+* [createGenaiOrganization](#creategenaiorganization) - Create an organization
 * [createRepoOrganization](#createrepoorganization) - Create an organization
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [getAdsOrganization](#getadsorganization) - Retrieve an organization
+* [getGenaiOrganization](#getgenaiorganization) - Retrieve an organization
 * [getRepoOrganization](#getrepoorganization) - Retrieve an organization
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [listAdsOrganizations](#listadsorganizations) - List all organizations
+* [listGenaiOrganizations](#listgenaiorganizations) - List all organizations
 * [listRepoOrganizations](#listrepoorganizations) - List all organizations
 * [patchAdsOrganization](#patchadsorganization) - Update an organization
+* [patchGenaiOrganization](#patchgenaiorganization) - Update an organization
 * [patchRepoOrganization](#patchrepoorganization) - Update an organization
 * [removeAdsOrganization](#removeadsorganization) - Remove an organization
+* [removeGenaiOrganization](#removegenaiorganization) - Remove an organization
 * [removeRepoOrganization](#removerepoorganization) - Remove an organization
 * [updateAdsOrganization](#updateadsorganization) - Update an organization
+* [updateGenaiOrganization](#updategenaiorganization) - Update an organization
 * [updateRepoOrganization](#updaterepoorganization) - Update an organization
 
 ## createAdsOrganization
@@ -47,7 +53,7 @@ $request = new Operations\CreateAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: '1a65b1ae-7e27-4674-a504-8466fd2da6db',
+        id: '7aa99529-0bf9-46b7-8885-0326ecbc4707',
         managers: [
             new Shared\AdsManager(
                 id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -57,7 +63,7 @@ $request = new Operations\CreateAdsOrganizationRequest(
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-28T21:54:47.333Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-01T15:36:04.753Z'),
     ),
     connectionId: '<id>',
 );
@@ -80,6 +86,66 @@ if ($response->adsOrganization !== null) {
 ### Response
 
 **[?Operations\CreateAdsOrganizationResponse](../../Models/Operations/CreateAdsOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createGenaiOrganization
+
+Create an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createGenaiOrganization" method="post" path="/genai/{connection_id}/organization" example="genai_organization" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateGenaiOrganizationRequest(
+    genaiOrganization: new Shared\GenaiOrganization(
+        createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
+        description: 'Voluptates abeo subseco.',
+        id: 'c6b6737d-7782-41e3-a20e-674fb9c33d86',
+        isActive: false,
+        name: 'officially about',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-15T02:14:43.003Z'),
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->organization->createGenaiOrganization(
+    request: $request
+);
+
+if ($response->genaiOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\CreateGenaiOrganizationRequest](../../Models/Operations/CreateGenaiOrganizationRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\CreateGenaiOrganizationResponse](../../Models/Operations/CreateGenaiOrganizationResponse.md)**
 
 ### Errors
 
@@ -115,9 +181,9 @@ $request = new Operations\CreateRepoOrganizationRequest(
         avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
         createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
         description: 'Trepide defendo supra testimonium ager.',
-        id: '8677d586-3b0a-4fc0-86ae-a1fba892b7e2',
+        id: 'e5e80293-ffea-4c50-8f72-f34ace46e72d',
         name: 'Denesik - Lemke',
-        updatedAt: Utils\Utils::parseDateTime('2023-08-13T12:04:45.798Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T17:10:28.255Z'),
         webUrl: 'https://turbulent-overheard.biz',
     ),
     connectionId: '<id>',
@@ -243,6 +309,57 @@ if ($response->adsOrganization !== null) {
 ### Response
 
 **[?Operations\GetAdsOrganizationResponse](../../Models/Operations/GetAdsOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getGenaiOrganization
+
+Retrieve an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getGenaiOrganization" method="get" path="/genai/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetGenaiOrganizationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->organization->getGenaiOrganization(
+    request: $request
+);
+
+if ($response->genaiOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\GetGenaiOrganizationRequest](../../Models/Operations/GetGenaiOrganizationRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\GetGenaiOrganizationResponse](../../Models/Operations/GetGenaiOrganizationResponse.md)**
 
 ### Errors
 
@@ -401,6 +518,56 @@ if ($response->adsOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listGenaiOrganizations
+
+List all organizations
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listGenaiOrganizations" method="get" path="/genai/{connection_id}/organization" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListGenaiOrganizationsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->organization->listGenaiOrganizations(
+    request: $request
+);
+
+if ($response->genaiOrganizations !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\ListGenaiOrganizationsRequest](../../Models/Operations/ListGenaiOrganizationsRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\ListGenaiOrganizationsResponse](../../Models/Operations/ListGenaiOrganizationsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listRepoOrganizations
 
 List all organizations
@@ -479,7 +646,7 @@ $request = new Operations\PatchAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: '8672a91d-dadd-4018-920d-c12b36e7ef8f',
+        id: 'efbf089b-dc01-4dbe-bdc5-3d5f86e0b1c3',
         managers: [
             new Shared\AdsManager(
                 id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -489,7 +656,7 @@ $request = new Operations\PatchAdsOrganizationRequest(
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-28T21:54:47.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-01T15:36:04.765Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -513,6 +680,67 @@ if ($response->adsOrganization !== null) {
 ### Response
 
 **[?Operations\PatchAdsOrganizationResponse](../../Models/Operations/PatchAdsOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchGenaiOrganization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchGenaiOrganization" method="patch" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchGenaiOrganizationRequest(
+    genaiOrganization: new Shared\GenaiOrganization(
+        createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
+        description: 'Voluptates abeo subseco.',
+        id: 'e466e490-09c0-476e-9a38-d324960c1635',
+        isActive: false,
+        name: 'officially about',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-15T02:14:43.005Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->organization->patchGenaiOrganization(
+    request: $request
+);
+
+if ($response->genaiOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\PatchGenaiOrganizationRequest](../../Models/Operations/PatchGenaiOrganizationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\PatchGenaiOrganizationResponse](../../Models/Operations/PatchGenaiOrganizationResponse.md)**
 
 ### Errors
 
@@ -548,9 +776,9 @@ $request = new Operations\PatchRepoOrganizationRequest(
         avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
         createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
         description: 'Trepide defendo supra testimonium ager.',
-        id: 'ad2ee52c-7288-4b39-986f-d07b32acb0a9',
+        id: '2c0e48fb-7221-429b-aeed-0a403672f821',
         name: 'Denesik - Lemke',
-        updatedAt: Utils\Utils::parseDateTime('2023-08-13T12:04:45.800Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T17:10:28.257Z'),
         webUrl: 'https://turbulent-overheard.biz',
     ),
     connectionId: '<id>',
@@ -626,6 +854,57 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveAdsOrganizationResponse](../../Models/Operations/RemoveAdsOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeGenaiOrganization
+
+Remove an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeGenaiOrganization" method="delete" path="/genai/{connection_id}/organization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveGenaiOrganizationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->organization->removeGenaiOrganization(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\RemoveGenaiOrganizationRequest](../../Models/Operations/RemoveGenaiOrganizationRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\RemoveGenaiOrganizationResponse](../../Models/Operations/RemoveGenaiOrganizationResponse.md)**
 
 ### Errors
 
@@ -712,7 +991,7 @@ $request = new Operations\UpdateAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: '8672a91d-dadd-4018-920d-c12b36e7ef8f',
+        id: 'efbf089b-dc01-4dbe-bdc5-3d5f86e0b1c3',
         managers: [
             new Shared\AdsManager(
                 id: 'e4fd87df-9f8b-4fa0-a77b-b7d18669e350',
@@ -722,7 +1001,7 @@ $request = new Operations\UpdateAdsOrganizationRequest(
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-28T21:54:47.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-01T15:36:04.765Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -746,6 +1025,67 @@ if ($response->adsOrganization !== null) {
 ### Response
 
 **[?Operations\UpdateAdsOrganizationResponse](../../Models/Operations/UpdateAdsOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateGenaiOrganization
+
+Update an organization
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateGenaiOrganization" method="put" path="/genai/{connection_id}/organization/{id}" example="genai_organization" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateGenaiOrganizationRequest(
+    genaiOrganization: new Shared\GenaiOrganization(
+        createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
+        description: 'Voluptates abeo subseco.',
+        id: 'e466e490-09c0-476e-9a38-d324960c1635',
+        isActive: false,
+        name: 'officially about',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-15T02:14:43.005Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->organization->updateGenaiOrganization(
+    request: $request
+);
+
+if ($response->genaiOrganization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\UpdateGenaiOrganizationRequest](../../Models/Operations/UpdateGenaiOrganizationRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\UpdateGenaiOrganizationResponse](../../Models/Operations/UpdateGenaiOrganizationResponse.md)**
 
 ### Errors
 
@@ -781,9 +1121,9 @@ $request = new Operations\UpdateRepoOrganizationRequest(
         avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
         createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
         description: 'Trepide defendo supra testimonium ager.',
-        id: 'ad2ee52c-7288-4b39-986f-d07b32acb0a9',
+        id: '2c0e48fb-7221-429b-aeed-0a403672f821',
         name: 'Denesik - Lemke',
-        updatedAt: Utils\Utils::parseDateTime('2023-08-13T12:04:45.800Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T17:10:28.257Z'),
         webUrl: 'https://turbulent-overheard.biz',
     ),
     connectionId: '<id>',

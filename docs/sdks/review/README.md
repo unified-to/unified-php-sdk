@@ -50,7 +50,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 26,
-        id: '3aca4264-3de0-4c4e-bea0-4dacd0ed9355',
+        id: '940e8d0b-7ae9-4d38-becf-b17b169945f5',
         isFeatured: true,
         isPublic: true,
         isVerified: false,
@@ -58,10 +58,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adulescens.',
                 height: 519,
-                id: 'e882afa1-2cf6-45e9-aec3-21989c186bad',
+                id: '81cce4ae-461a-4280-9c34-ae3f3e64753a',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'a0c1e895-704b-4f6e-bf99-754aa81d231c',
+                        id: 'a6d71051-88a4-418a-b5a1-7e08c7e706ed',
                         slug: 'aggero',
                         value: 'tero',
                     ),
@@ -74,10 +74,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Pauci timidus sol comburo thema.',
                 height: 297,
-                id: '3109cf71-faf2-4182-b2a6-526e290f1910',
+                id: '90c1e0ff-1d98-4e54-8bec-03a97efa84e4',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '616617f4-548d-429b-ad37-f59f5ff3a0f7',
+                        id: '6e1f4208-b48c-450b-a955-d71d78a1fdd0',
                         slug: 'vito',
                         value: 'cuppedia',
                     ),
@@ -90,10 +90,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Cuppedia vestrum patruus.',
                 height: 6,
-                id: 'edacdbf2-03c8-4f20-bb68-6235d959b86a',
+                id: 'b054df2c-fbb5-4816-a262-c6ea240f6d03',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'dc1f4c83-f513-4d01-a871-2bf7cef11138',
+                        id: 'ef682c3a-dae4-4856-8fac-d2ccbad610dd',
                         slug: 'arbitro',
                         value: 'villa',
                     ),
@@ -109,7 +109,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 49,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-26T14:51:08.909Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-27T06:59:29.133Z'),
         url: 'https://excitable-underneath.com',
         verifiedPurchase: false,
     ),
@@ -477,7 +477,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 26,
-        id: '6ac5b75d-a519-4423-8d5d-d0d27bda156a',
+        id: 'b1d45795-fe2f-46f7-9e7c-390d395ecf85',
         isFeatured: true,
         isPublic: true,
         isVerified: false,
@@ -485,10 +485,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adulescens.',
                 height: 519,
-                id: '55cfb7c8-069c-4081-a908-57acdc2169d6',
+                id: '5617e59b-ab99-4b13-a194-f13fd6dd2b90',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '8d11aca2-fe6f-469d-8624-190eaaf330ba',
+                        id: 'f960acbb-774d-4882-8486-6345a42b6433',
                         slug: 'aggero',
                         value: 'tero',
                     ),
@@ -501,10 +501,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Pauci timidus sol comburo thema.',
                 height: 297,
-                id: '18e11399-1438-4440-83b9-6a8b6d9ea2e7',
+                id: '31e6dca8-923b-47a8-99cb-e8ad7bc93744',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'ea44ac5e-4ecb-4fd4-9108-5ea34d061e72',
+                        id: '179f1211-b40d-4d35-b2e8-6aff0066b86d',
                         slug: 'vito',
                         value: 'cuppedia',
                     ),
@@ -517,10 +517,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Cuppedia vestrum patruus.',
                 height: 6,
-                id: '8f8892fe-aba0-4f95-ade1-292a8adbe2d6',
+                id: 'aba3b1aa-2578-4a6d-9385-426c6c0e9a85',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'c19cc34a-0981-4e0b-b053-6b80ae9d52ba',
+                        id: '67178b1d-4d3f-430f-a80b-414714a21673',
                         slug: 'arbitro',
                         value: 'villa',
                     ),
@@ -536,7 +536,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 49,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-26T14:51:08.939Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-27T06:59:29.174Z'),
         url: 'https://excitable-underneath.com',
         verifiedPurchase: false,
     ),
@@ -706,7 +706,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 26,
-        id: '6ac5b75d-a519-4423-8d5d-d0d27bda156a',
+        id: 'b1d45795-fe2f-46f7-9e7c-390d395ecf85',
         isFeatured: true,
         isPublic: true,
         isVerified: false,
@@ -714,10 +714,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adulescens.',
                 height: 519,
-                id: '55cfb7c8-069c-4081-a908-57acdc2169d6',
+                id: '5617e59b-ab99-4b13-a194-f13fd6dd2b90',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '8d11aca2-fe6f-469d-8624-190eaaf330ba',
+                        id: 'f960acbb-774d-4882-8486-6345a42b6433',
                         slug: 'aggero',
                         value: 'tero',
                     ),
@@ -730,10 +730,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Pauci timidus sol comburo thema.',
                 height: 297,
-                id: '18e11399-1438-4440-83b9-6a8b6d9ea2e7',
+                id: '31e6dca8-923b-47a8-99cb-e8ad7bc93744',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'ea44ac5e-4ecb-4fd4-9108-5ea34d061e72',
+                        id: '179f1211-b40d-4d35-b2e8-6aff0066b86d',
                         slug: 'vito',
                         value: 'cuppedia',
                     ),
@@ -746,10 +746,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Cuppedia vestrum patruus.',
                 height: 6,
-                id: '8f8892fe-aba0-4f95-ade1-292a8adbe2d6',
+                id: 'aba3b1aa-2578-4a6d-9385-426c6c0e9a85',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'c19cc34a-0981-4e0b-b053-6b80ae9d52ba',
+                        id: '67178b1d-4d3f-430f-a80b-414714a21673',
                         slug: 'arbitro',
                         value: 'villa',
                     ),
@@ -765,7 +765,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 49,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-26T14:51:08.939Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-27T06:59:29.174Z'),
         url: 'https://excitable-underneath.com',
         verifiedPurchase: false,
     ),

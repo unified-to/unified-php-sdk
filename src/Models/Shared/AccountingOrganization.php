@@ -22,6 +22,14 @@ class AccountingOrganization
 
     /**
      *
+     * @var ?\DateTime $booksCloseAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('books_close_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $booksCloseAt = null;
+
+    /**
+     *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
@@ -145,6 +153,7 @@ class AccountingOrganization
 
     /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingOrganizationAddress  $address
+     * @param  ?\DateTime  $booksCloseAt
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?float  $fiscalYearEndMonth
@@ -162,9 +171,10 @@ class AccountingOrganization
      * @param  ?string  $website
      * @phpstan-pure
      */
-    public function __construct(?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?bool $isElimination = null, ?string $legalName = null, ?string $name = null, ?string $organizationCode = null, ?string $parentId = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?AccountingOrganizationType $type = null, ?\DateTime $updatedAt = null, ?string $website = null)
+    public function __construct(?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $booksCloseAt = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?bool $isElimination = null, ?string $legalName = null, ?string $name = null, ?string $organizationCode = null, ?string $parentId = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?AccountingOrganizationType $type = null, ?\DateTime $updatedAt = null, ?string $website = null)
     {
         $this->address = $address;
+        $this->booksCloseAt = $booksCloseAt;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->fiscalYearEndMonth = $fiscalYearEndMonth;

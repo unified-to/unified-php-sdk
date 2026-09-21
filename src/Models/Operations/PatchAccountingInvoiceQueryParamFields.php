@@ -47,5 +47,9 @@ enum PatchAccountingInvoiceQueryParamFields: string
     case CategoryIds = 'category_ids';
     case ProjectId = 'project_id';
     case Metadata = 'metadata';
+    case SubTotalAmount = 'sub_total_amount';
+    case ExchangeRate = 'exchange_rate';
+    case IsInclusiveOfTax = 'is_inclusive_of_tax';
+    case SalesorderIds = 'salesorder_ids';
     case Raw = 'raw';
 }

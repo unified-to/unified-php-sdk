@@ -20,4 +20,5 @@
 | `OrganizationCode`    | organization_code     |
 | `Type`                | type                  |
 | `IsElimination`       | is_elimination        |
+| `BooksCloseAt`        | books_close_at        |
 | `Raw`                 | raw                   |

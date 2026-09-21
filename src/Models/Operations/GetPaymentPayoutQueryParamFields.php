@@ -18,5 +18,10 @@ enum GetPaymentPayoutQueryParamFields: string
     case Currency = 'currency';
     case Notes = 'notes';
     case Status = 'status';
+    case ArrivalAt = 'arrival_at';
+    case FeeAmount = 'fee_amount';
+    case NetAmount = 'net_amount';
+    case AccountId = 'account_id';
+    case Lineitems = 'lineitems';
     case Raw = 'raw';
 }

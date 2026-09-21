@@ -4,13 +4,16 @@
 
 ### Available Operations
 
+* [createGenaiTask](#creategenaitask) - Create a task
 * [createTaskComment](#createtaskcomment) - Create a comment
 * [createTaskProject](#createtaskproject) - Create a project
 * [createTaskTask](#createtasktask) - Create a task
+* [getGenaiTask](#getgenaitask) - Retrieve a task
 * [getTaskChange](#gettaskchange) - Retrieve a change
 * [getTaskComment](#gettaskcomment) - Retrieve a comment
 * [getTaskProject](#gettaskproject) - Retrieve a project
 * [getTaskTask](#gettasktask) - Retrieve a task
+* [listGenaiTasks](#listgenaitasks) - List all tasks
 * [listTaskChanges](#listtaskchanges) - List all changes
 * [listTaskComments](#listtaskcomments) - List all comments
 * [listTaskProjects](#listtaskprojects) - List all projects
@@ -18,12 +21,91 @@
 * [patchTaskComment](#patchtaskcomment) - Update a comment
 * [patchTaskProject](#patchtaskproject) - Update a project
 * [patchTaskTask](#patchtasktask) - Update a task
+* [removeGenaiTask](#removegenaitask) - Remove a task
 * [removeTaskComment](#removetaskcomment) - Remove a comment
 * [removeTaskProject](#removetaskproject) - Remove a project
 * [removeTaskTask](#removetasktask) - Remove a task
 * [updateTaskComment](#updatetaskcomment) - Update a comment
 * [updateTaskProject](#updatetaskproject) - Update a project
 * [updateTaskTask](#updatetasktask) - Update a task
+
+## createGenaiTask
+
+Create a task
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createGenaiTask" method="post" path="/genai/{connection_id}/task" example="genai_task" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateGenaiTaskRequest(
+    genaiTask: new Shared\GenaiTask(
+        completedAt: Utils\Utils::parseDateTime('2025-09-06T09:18:49.674Z'),
+        createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
+        filesChanged: 19,
+        id: '586f6326-fe69-435c-8548-3150816342b0',
+        instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
+        linesAdded: 244,
+        linesDeleted: 118,
+        messages: [
+            new Shared\GenaiContent(
+                content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
+                role: Shared\Role::Assistant,
+            ),
+        ],
+        name: 'connect multi-byte port',
+        pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
+        repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
+        sourceBranchIdentifier: 'main',
+        startedAt: Utils\Utils::parseDateTime('2024-05-03T10:13:29.849Z'),
+        status: Shared\GenaiTaskStatus::Blocked,
+        summary: 'Cur aeternus cogito vesper.',
+        targetBranchIdentifier: 'agent/joshingly-ignorance',
+        tokensUsed: 2165,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-14T12:14:43.464Z'),
+        webUrl: 'https://inexperienced-adrenalin.biz/',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->task->createGenaiTask(
+    request: $request
+);
+
+if ($response->genaiTask !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\CreateGenaiTaskRequest](../../Models/Operations/CreateGenaiTaskRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\CreateGenaiTaskResponse](../../Models/Operations/CreateGenaiTaskResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createTaskComment
 
@@ -52,9 +134,9 @@ $request = new Operations\CreateTaskCommentRequest(
     taskComment: new Shared\TaskComment(
         createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
         hasChildren: true,
-        id: 'e4a71514-88b1-47a7-b63e-aa8f58a29ab9',
+        id: '0df5753a-ad90-4d22-bca0-59412dfde752',
         text: 'Colo ulciscor sublime tabernus.',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-24T14:37:43.092Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-24T20:05:50.704Z'),
         userName: 'Santina Abbott',
     ),
     connectionId: '<id>',
@@ -114,14 +196,14 @@ $request = new Operations\CreateTaskProjectRequest(
         description: 'Valetudo aggredior accommodo curiositas vox.',
         hasChildren: false,
         hasTasks: false,
-        id: 'f4a52049-ac72-4d83-a076-1521abe15f6f',
+        id: '19df8b1d-5ab7-42af-b402-22c0efd2b9cc',
         metadata: [
             new Shared\TaskMetadata(
                 extraData: [
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: '740b3aa1-b09f-455c-b2ca-b26e6d343e67',
+                id: '69b253d6-578b-4ee7-a0c8-82f2a3568e17',
                 namespace: 'custom',
                 slug: 'decens',
                 value: 'uterque',
@@ -131,14 +213,14 @@ $request = new Operations\CreateTaskProjectRequest(
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: 'c60d01fd-23a1-4ba9-8f33-1e129dce1180',
+                id: 'bac38dfa-2149-4334-b944-5ba4dff681d3',
                 namespace: 'custom',
                 slug: 'benevolentia',
                 value: 'pariatur',
             ),
         ],
         name: 'Garden',
-        updatedAt: Utils\Utils::parseDateTime('2023-10-08T19:11:18.829Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-08T20:56:49.330Z'),
     ),
     connectionId: '<id>',
 );
@@ -194,18 +276,18 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateTaskTaskRequest(
     taskTask: new Shared\TaskTask(
         attachmentIds: [],
-        completedAt: Utils\Utils::parseDateTime('2022-03-25T07:30:20.403Z'),
+        completedAt: Utils\Utils::parseDateTime('2022-03-25T15:31:00.389Z'),
         createdAt: Utils\Utils::parseDateTime('2019-01-31T08:34:55.626Z'),
-        dueAt: Utils\Utils::parseDateTime('2026-04-25T05:51:26.354Z'),
-        endAt: Utils\Utils::parseDateTime('2022-10-14T16:29:55.584Z'),
+        dueAt: Utils\Utils::parseDateTime('2026-04-26T00:16:15.392Z'),
+        endAt: Utils\Utils::parseDateTime('2022-10-15T01:55:40.491Z'),
         hasChildren: true,
-        id: 'a137c11c-a2eb-4377-a4f5-5c3f7b3f8b8f',
+        id: '8764a502-52ee-4c02-bded-d8e164ceba6e',
         metadata: [],
         name: 'Direct Markets Architect',
         notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
         priority: 'LOW',
         progress: 2,
-        startAt: Utils\Utils::parseDateTime('2022-01-20T05:56:55.830Z'),
+        startAt: Utils\Utils::parseDateTime('2022-01-20T13:30:47.721Z'),
         status: Shared\TaskTaskStatus::InProgress,
         storyPoints: 0,
         tags: [
@@ -215,7 +297,7 @@ $request = new Operations\CreateTaskTaskRequest(
         timeSpent: 957,
         timeSpentUnit: 'SECONDS',
         type: 'tubineus',
-        updatedAt: Utils\Utils::parseDateTime('2019-07-13T13:36:38.105Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-07-13T14:44:54.836Z'),
         url: 'https://dismal-silk.net/',
     ),
     connectionId: '<id>',
@@ -239,6 +321,57 @@ if ($response->taskTask !== null) {
 ### Response
 
 **[?Operations\CreateTaskTaskResponse](../../Models/Operations/CreateTaskTaskResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getGenaiTask
+
+Retrieve a task
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getGenaiTask" method="get" path="/genai/{connection_id}/task/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetGenaiTaskRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->task->getGenaiTask(
+    request: $request
+);
+
+if ($response->genaiTask !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\GetGenaiTaskRequest](../../Models/Operations/GetGenaiTaskRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\GetGenaiTaskResponse](../../Models/Operations/GetGenaiTaskResponse.md)**
 
 ### Errors
 
@@ -443,6 +576,56 @@ if ($response->taskTask !== null) {
 ### Response
 
 **[?Operations\GetTaskTaskResponse](../../Models/Operations/GetTaskTaskResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listGenaiTasks
+
+List all tasks
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listGenaiTasks" method="get" path="/genai/{connection_id}/task" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListGenaiTasksRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->task->listGenaiTasks(
+    request: $request
+);
+
+if ($response->genaiTasks !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\ListGenaiTasksRequest](../../Models/Operations/ListGenaiTasksRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\ListGenaiTasksResponse](../../Models/Operations/ListGenaiTasksResponse.md)**
 
 ### Errors
 
@@ -677,9 +860,9 @@ $request = new Operations\PatchTaskCommentRequest(
     taskComment: new Shared\TaskComment(
         createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
         hasChildren: true,
-        id: 'd3f6a7c4-b3d9-41f2-9799-d60631cdd219',
+        id: '381761fa-8766-492d-97d4-83c75cda22e0',
         text: 'Colo ulciscor sublime tabernus.',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-24T14:37:43.095Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-24T20:05:50.706Z'),
         userName: 'Santina Abbott',
     ),
     connectionId: '<id>',
@@ -740,14 +923,14 @@ $request = new Operations\PatchTaskProjectRequest(
         description: 'Valetudo aggredior accommodo curiositas vox.',
         hasChildren: false,
         hasTasks: false,
-        id: '9542cee6-4a7c-41de-b1af-459c56c6249b',
+        id: '15f47efb-fcb7-4b67-81e2-a0d26a9da494',
         metadata: [
             new Shared\TaskMetadata(
                 extraData: [
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: '1ef88907-73c2-47e9-9355-675761ce2cf0',
+                id: 'b5927698-96fc-4eac-bf28-dc286ccc3b89',
                 namespace: 'custom',
                 slug: 'decens',
                 value: 'uterque',
@@ -757,14 +940,14 @@ $request = new Operations\PatchTaskProjectRequest(
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: 'd5c9442a-7c46-42ee-8b0f-037463ec2890',
+                id: 'be30191d-043c-42e2-bb97-f5c110e47983',
                 namespace: 'custom',
                 slug: 'benevolentia',
                 value: 'pariatur',
             ),
         ],
         name: 'Garden',
-        updatedAt: Utils\Utils::parseDateTime('2023-10-08T19:11:18.830Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-08T20:56:49.332Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -821,18 +1004,18 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchTaskTaskRequest(
     taskTask: new Shared\TaskTask(
         attachmentIds: [],
-        completedAt: Utils\Utils::parseDateTime('2022-03-25T07:30:20.415Z'),
+        completedAt: Utils\Utils::parseDateTime('2022-03-25T15:31:00.401Z'),
         createdAt: Utils\Utils::parseDateTime('2019-01-31T08:34:55.626Z'),
-        dueAt: Utils\Utils::parseDateTime('2026-04-25T05:51:26.382Z'),
-        endAt: Utils\Utils::parseDateTime('2022-10-14T16:29:55.598Z'),
+        dueAt: Utils\Utils::parseDateTime('2026-04-26T00:16:15.419Z'),
+        endAt: Utils\Utils::parseDateTime('2022-10-15T01:55:40.505Z'),
         hasChildren: true,
-        id: '5d651a51-5038-48f0-9b86-1b96f41a2b03',
+        id: 'a9e4eaee-df24-473b-ac7f-b4f1605269c2',
         metadata: [],
         name: 'Direct Markets Architect',
         notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
         priority: 'LOW',
         progress: 2,
-        startAt: Utils\Utils::parseDateTime('2022-01-20T05:56:55.842Z'),
+        startAt: Utils\Utils::parseDateTime('2022-01-20T13:30:47.733Z'),
         status: Shared\TaskTaskStatus::InProgress,
         storyPoints: 0,
         tags: [
@@ -842,7 +1025,7 @@ $request = new Operations\PatchTaskTaskRequest(
         timeSpent: 957,
         timeSpentUnit: 'SECONDS',
         type: 'tubineus',
-        updatedAt: Utils\Utils::parseDateTime('2019-07-13T13:36:38.106Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-07-13T14:44:54.838Z'),
         url: 'https://dismal-silk.net/',
     ),
     connectionId: '<id>',
@@ -867,6 +1050,57 @@ if ($response->taskTask !== null) {
 ### Response
 
 **[?Operations\PatchTaskTaskResponse](../../Models/Operations/PatchTaskTaskResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeGenaiTask
+
+Remove a task
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeGenaiTask" method="delete" path="/genai/{connection_id}/task/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveGenaiTaskRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->task->removeGenaiTask(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\RemoveGenaiTaskRequest](../../Models/Operations/RemoveGenaiTaskRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\RemoveGenaiTaskResponse](../../Models/Operations/RemoveGenaiTaskResponse.md)**
 
 ### Errors
 
@@ -1054,9 +1288,9 @@ $request = new Operations\UpdateTaskCommentRequest(
     taskComment: new Shared\TaskComment(
         createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
         hasChildren: true,
-        id: 'd3f6a7c4-b3d9-41f2-9799-d60631cdd219',
+        id: '381761fa-8766-492d-97d4-83c75cda22e0',
         text: 'Colo ulciscor sublime tabernus.',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-24T14:37:43.095Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-24T20:05:50.706Z'),
         userName: 'Santina Abbott',
     ),
     connectionId: '<id>',
@@ -1117,14 +1351,14 @@ $request = new Operations\UpdateTaskProjectRequest(
         description: 'Valetudo aggredior accommodo curiositas vox.',
         hasChildren: false,
         hasTasks: false,
-        id: '9542cee6-4a7c-41de-b1af-459c56c6249b',
+        id: '15f47efb-fcb7-4b67-81e2-a0d26a9da494',
         metadata: [
             new Shared\TaskMetadata(
                 extraData: [
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: '1ef88907-73c2-47e9-9355-675761ce2cf0',
+                id: 'b5927698-96fc-4eac-bf28-dc286ccc3b89',
                 namespace: 'custom',
                 slug: 'decens',
                 value: 'uterque',
@@ -1134,14 +1368,14 @@ $request = new Operations\UpdateTaskProjectRequest(
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: 'd5c9442a-7c46-42ee-8b0f-037463ec2890',
+                id: 'be30191d-043c-42e2-bb97-f5c110e47983',
                 namespace: 'custom',
                 slug: 'benevolentia',
                 value: 'pariatur',
             ),
         ],
         name: 'Garden',
-        updatedAt: Utils\Utils::parseDateTime('2023-10-08T19:11:18.830Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-08T20:56:49.332Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1198,18 +1432,18 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateTaskTaskRequest(
     taskTask: new Shared\TaskTask(
         attachmentIds: [],
-        completedAt: Utils\Utils::parseDateTime('2022-03-25T07:30:20.415Z'),
+        completedAt: Utils\Utils::parseDateTime('2022-03-25T15:31:00.401Z'),
         createdAt: Utils\Utils::parseDateTime('2019-01-31T08:34:55.626Z'),
-        dueAt: Utils\Utils::parseDateTime('2026-04-25T05:51:26.382Z'),
-        endAt: Utils\Utils::parseDateTime('2022-10-14T16:29:55.598Z'),
+        dueAt: Utils\Utils::parseDateTime('2026-04-26T00:16:15.419Z'),
+        endAt: Utils\Utils::parseDateTime('2022-10-15T01:55:40.505Z'),
         hasChildren: true,
-        id: '5d651a51-5038-48f0-9b86-1b96f41a2b03',
+        id: 'a9e4eaee-df24-473b-ac7f-b4f1605269c2',
         metadata: [],
         name: 'Direct Markets Architect',
         notes: 'Calcar vilicus audacia ut cultura argentum ventosus. Talis neque thymbra titulus absconditus peccatus crustulum tollo. Volva vacuus eos cedo spero. Utpote coadunatio denuncio adopto autus sono atrocitas vulnero.',
         priority: 'LOW',
         progress: 2,
-        startAt: Utils\Utils::parseDateTime('2022-01-20T05:56:55.842Z'),
+        startAt: Utils\Utils::parseDateTime('2022-01-20T13:30:47.733Z'),
         status: Shared\TaskTaskStatus::InProgress,
         storyPoints: 0,
         tags: [
@@ -1219,7 +1453,7 @@ $request = new Operations\UpdateTaskTaskRequest(
         timeSpent: 957,
         timeSpentUnit: 'SECONDS',
         type: 'tubineus',
-        updatedAt: Utils\Utils::parseDateTime('2019-07-13T13:36:38.106Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-07-13T14:44:54.838Z'),
         url: 'https://dismal-silk.net/',
     ),
     connectionId: '<id>',

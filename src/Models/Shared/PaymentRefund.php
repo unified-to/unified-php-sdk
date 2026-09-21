@@ -63,11 +63,28 @@ class PaymentRefund
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\Reason $reason
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('reason')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Reason|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?Reason $reason = null;
+
+    /**
+     *
      * @var ?string $reference
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('reference')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $reference = null;
+
+    /**
+     *
+     * @var ?\DateTime $refundedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('refunded_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $refundedAt = null;
 
     /**
      *
@@ -77,6 +94,15 @@ class PaymentRefund
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentRefundStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PaymentRefundStatus $status = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PaymentRefundTenderType $tenderType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('tender_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PaymentRefundTenderType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PaymentRefundTenderType $tenderType = null;
 
     /**
      *
@@ -101,13 +127,16 @@ class PaymentRefund
      * @param  ?string  $notes
      * @param  ?string  $paymentId
      * @param  ?array<string, mixed>  $raw
+     * @param  ?\Unified\Unified_to\Models\Shared\Reason  $reason
      * @param  ?string  $reference
+     * @param  ?\DateTime  $refundedAt
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentRefundStatus  $status
+     * @param  ?\Unified\Unified_to\Models\Shared\PaymentRefundTenderType  $tenderType
      * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?string $paymentId = null, ?array $raw = null, ?string $reference = null, ?PaymentRefundStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?string $paymentId = null, ?array $raw = null, ?Reason $reason = null, ?string $reference = null, ?\DateTime $refundedAt = null, ?PaymentRefundStatus $status = null, ?PaymentRefundTenderType $tenderType = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
@@ -115,8 +144,11 @@ class PaymentRefund
         $this->notes = $notes;
         $this->paymentId = $paymentId;
         $this->raw = $raw;
+        $this->reason = $reason;
         $this->reference = $reference;
+        $this->refundedAt = $refundedAt;
         $this->status = $status;
+        $this->tenderType = $tenderType;
         $this->totalAmount = $totalAmount;
         $this->updatedAt = $updatedAt;
     }

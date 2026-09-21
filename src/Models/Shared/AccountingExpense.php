@@ -91,6 +91,14 @@ class AccountingExpense
 
     /**
      *
+     * @var ?float $exchangeRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('exchange_rate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $exchangeRate = null;
+
+    /**
+     *
      * @var ?string $externalNumber
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('external_number')]
@@ -210,6 +218,14 @@ class AccountingExpense
 
     /**
      *
+     * @var ?string $taxrateId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxrate_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $taxrateId = null;
+
+    /**
+     *
      * @var ?float $totalAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
@@ -252,6 +268,7 @@ class AccountingExpense
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
+     * @param  ?float  $exchangeRate
      * @param  ?string  $externalNumber
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem>  $lineitems
@@ -266,13 +283,14 @@ class AccountingExpense
      * @param  ?\DateTime  $reimbursedAt
      * @param  ?\Unified\Unified_to\Models\Shared\AccountingExpenseStatus  $status
      * @param  ?float  $taxAmount
+     * @param  ?string  $taxrateId
      * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $users
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
+    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $exchangeRate = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
     {
         $this->accountId = $accountId;
         $this->approvedAt = $approvedAt;
@@ -283,6 +301,7 @@ class AccountingExpense
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
+        $this->exchangeRate = $exchangeRate;
         $this->externalNumber = $externalNumber;
         $this->id = $id;
         $this->lineitems = $lineitems;
@@ -297,6 +316,7 @@ class AccountingExpense
         $this->reimbursedAt = $reimbursedAt;
         $this->status = $status;
         $this->taxAmount = $taxAmount;
+        $this->taxrateId = $taxrateId;
         $this->totalAmount = $totalAmount;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;

@@ -119,6 +119,14 @@ class AccountingJournalLineitem
 
     /**
      *
+     * @var ?string $taxrateId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxrate_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $taxrateId = null;
+
+    /**
+     *
      * @var ?float $totalAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
@@ -139,10 +147,11 @@ class AccountingJournalLineitem
      * @param  ?string  $paymentId
      * @param  ?string  $projectId
      * @param  ?float  $taxAmount
+     * @param  ?string  $taxrateId
      * @param  ?float  $totalAmount
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $contactId = null, ?float $creditAmount = null, ?float $debitAmount = null, ?string $description = null, ?string $groupId = null, ?string $id = null, ?string $invoiceId = null, ?string $organizationId = null, ?string $paymentId = null, ?string $projectId = null, ?float $taxAmount = null, ?float $totalAmount = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $contactId = null, ?float $creditAmount = null, ?float $debitAmount = null, ?string $description = null, ?string $groupId = null, ?string $id = null, ?string $invoiceId = null, ?string $organizationId = null, ?string $paymentId = null, ?string $projectId = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null)
     {
         $this->accountId = $accountId;
         $this->categoryIds = $categoryIds;
@@ -157,6 +166,7 @@ class AccountingJournalLineitem
         $this->paymentId = $paymentId;
         $this->projectId = $projectId;
         $this->taxAmount = $taxAmount;
+        $this->taxrateId = $taxrateId;
         $this->totalAmount = $totalAmount;
     }
 }

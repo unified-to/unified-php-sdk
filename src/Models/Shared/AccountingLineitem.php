@@ -54,6 +54,14 @@ class AccountingLineitem
     public ?float $discountAmount = null;
 
     /**
+     *
+     * @var ?float $exchangeRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('exchange_rate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $exchangeRate = null;
+
+    /**
      * $fees
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingFee> $fees
@@ -70,6 +78,14 @@ class AccountingLineitem
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?bool $isBillable
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_billable')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isBillable = null;
 
     /**
      *
@@ -130,6 +146,14 @@ class AccountingLineitem
     #[\Speakeasy\Serializer\Annotation\SerializedName('notes')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $notes = null;
+
+    /**
+     *
+     * @var ?string $projectId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('project_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $projectId = null;
 
     /**
      *
@@ -201,8 +225,10 @@ class AccountingLineitem
      * @param  ?string  $contactId
      * @param  ?\DateTime  $createdAt
      * @param  ?float  $discountAmount
+     * @param  ?float  $exchangeRate
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingFee>  $fees
      * @param  ?string  $id
+     * @param  ?bool  $isBillable
      * @param  ?string  $itemDescription
      * @param  ?string  $itemId
      * @param  ?string  $itemName
@@ -210,6 +236,7 @@ class AccountingLineitem
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $itemVariants
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $locations
      * @param  ?string  $notes
+     * @param  ?string  $projectId
      * @param  ?float  $refundAmount
      * @param  ?\DateTime  $refundedAt
      * @param  ?float  $taxAmount
@@ -220,15 +247,17 @@ class AccountingLineitem
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?float $discountAmount = null, ?array $fees = null, ?string $id = null, ?string $itemDescription = null, ?string $itemId = null, ?string $itemName = null, ?string $itemSku = null, ?array $itemVariants = null, ?array $locations = null, ?string $notes = null, ?float $refundAmount = null, ?\DateTime $refundedAt = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?float $discountAmount = null, ?float $exchangeRate = null, ?array $fees = null, ?string $id = null, ?bool $isBillable = null, ?string $itemDescription = null, ?string $itemId = null, ?string $itemName = null, ?string $itemSku = null, ?array $itemVariants = null, ?array $locations = null, ?string $notes = null, ?string $projectId = null, ?float $refundAmount = null, ?\DateTime $refundedAt = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->categoryIds = $categoryIds;
         $this->contactId = $contactId;
         $this->createdAt = $createdAt;
         $this->discountAmount = $discountAmount;
+        $this->exchangeRate = $exchangeRate;
         $this->fees = $fees;
         $this->id = $id;
+        $this->isBillable = $isBillable;
         $this->itemDescription = $itemDescription;
         $this->itemId = $itemId;
         $this->itemName = $itemName;
@@ -236,6 +265,7 @@ class AccountingLineitem
         $this->itemVariants = $itemVariants;
         $this->locations = $locations;
         $this->notes = $notes;
+        $this->projectId = $projectId;
         $this->refundAmount = $refundAmount;
         $this->refundedAt = $refundedAt;
         $this->taxAmount = $taxAmount;

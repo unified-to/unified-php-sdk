@@ -20,5 +20,8 @@ enum ListPaymentRefundsQueryParamFields: string
     case Notes = 'notes';
     case Status = 'status';
     case Reference = 'reference';
+    case RefundedAt = 'refunded_at';
+    case Reason = 'reason';
+    case TenderType = 'tender_type';
     case Raw = 'raw';
 }

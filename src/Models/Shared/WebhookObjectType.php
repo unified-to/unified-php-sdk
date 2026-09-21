@@ -104,6 +104,9 @@ enum WebhookObjectType: string
     case GenaiModel = 'genai_model';
     case GenaiPrompt = 'genai_prompt';
     case GenaiEmbedding = 'genai_embedding';
+    case GenaiTask = 'genai_task';
+    case GenaiAgent = 'genai_agent';
+    case GenaiOrganization = 'genai_organization';
     case MessagingMessage = 'messaging_message';
     case MessagingChannel = 'messaging_channel';
     case MessagingEvent = 'messaging_event';

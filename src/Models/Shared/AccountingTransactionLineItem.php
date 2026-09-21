@@ -63,6 +63,14 @@ class AccountingTransactionLineItem
 
     /**
      *
+     * @var ?string $taxrateId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('taxrate_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $taxrateId = null;
+
+    /**
+     *
      * @var ?float $totalAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
@@ -92,12 +100,13 @@ class AccountingTransactionLineItem
      * @param  ?string  $id
      * @param  ?string  $name
      * @param  ?string  $objectType
+     * @param  ?string  $taxrateId
      * @param  ?float  $totalAmount
      * @param  ?float  $unitAmount
      * @param  ?float  $unitQuantity
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $description = null, ?string $id = null, ?string $name = null, ?string $objectType = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?string $description = null, ?string $id = null, ?string $name = null, ?string $objectType = null, ?string $taxrateId = null, ?float $totalAmount = null, ?float $unitAmount = null, ?float $unitQuantity = null)
     {
         $this->accountId = $accountId;
         $this->categoryIds = $categoryIds;
@@ -105,6 +114,7 @@ class AccountingTransactionLineItem
         $this->id = $id;
         $this->name = $name;
         $this->objectType = $objectType;
+        $this->taxrateId = $taxrateId;
         $this->totalAmount = $totalAmount;
         $this->unitAmount = $unitAmount;
         $this->unitQuantity = $unitQuantity;

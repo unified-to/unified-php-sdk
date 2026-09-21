@@ -57,11 +57,27 @@ class AccountingJournal
 
     /**
      *
+     * @var ?float $exchangeRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('exchange_rate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $exchangeRate = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $id = null;
+
+    /**
+     *
+     * @var ?bool $isInclusiveOfTax
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_inclusive_of_tax')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isInclusiveOfTax = null;
 
     /**
      * new field name
@@ -125,6 +141,15 @@ class AccountingJournal
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingJournalStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingJournalStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AccountingJournalStatus $status = null;
+
+    /**
+     *
      * @var ?float $taxAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('tax_amount')]
@@ -141,6 +166,14 @@ class AccountingJournal
 
     /**
      *
+     * @var ?float $totalAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $totalAmount = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -153,7 +186,9 @@ class AccountingJournal
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $description
+     * @param  ?float  $exchangeRate
      * @param  ?string  $id
+     * @param  ?bool  $isInclusiveOfTax
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem>  $lineitems
      * @param  ?string  $organizationId
      * @param  ?\DateTime  $postedAt
@@ -161,19 +196,23 @@ class AccountingJournal
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reference
      * @param  ?string  $source
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingJournalStatus  $status
      * @param  ?float  $taxAmount
      * @param  ?string  $taxrateId
+     * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?float $taxAmount = null, ?string $taxrateId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $attachments = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $exchangeRate = null, ?string $id = null, ?bool $isInclusiveOfTax = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?AccountingJournalStatus $status = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->attachments = $attachments;
         $this->categoryIds = $categoryIds;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->description = $description;
+        $this->exchangeRate = $exchangeRate;
         $this->id = $id;
+        $this->isInclusiveOfTax = $isInclusiveOfTax;
         $this->lineitems = $lineitems;
         $this->organizationId = $organizationId;
         $this->postedAt = $postedAt;
@@ -181,8 +220,10 @@ class AccountingJournal
         $this->raw = $raw;
         $this->reference = $reference;
         $this->source = $source;
+        $this->status = $status;
         $this->taxAmount = $taxAmount;
         $this->taxrateId = $taxrateId;
+        $this->totalAmount = $totalAmount;
         $this->updatedAt = $updatedAt;
     }
 }

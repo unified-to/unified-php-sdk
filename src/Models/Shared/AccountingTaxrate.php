@@ -12,6 +12,24 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingTaxrate
 {
     /**
+     * Component parts of a compound or multi-component tax
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingTaxrateComponent> $components
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('components')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingTaxrateComponent>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $components = null;
+
+    /**
+     *
+     * @var ?string $country
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('country')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $country = null;
+
+    /**
      *
      * @var ?\DateTime $createdAt
      */
@@ -29,6 +47,14 @@ class AccountingTaxrate
 
     /**
      *
+     * @var ?float $effectiveRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('effective_rate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $effectiveRate = null;
+
+    /**
+     *
      * @var ?string $id
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
@@ -42,6 +68,14 @@ class AccountingTaxrate
     #[\Speakeasy\Serializer\Annotation\SerializedName('is_active')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $isActive = null;
+
+    /**
+     *
+     * @var ?bool $isCompound
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_compound')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isCompound = null;
 
     /**
      * $metadata
@@ -89,6 +123,31 @@ class AccountingTaxrate
 
     /**
      *
+     * @var ?string $region
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('region')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $region = null;
+
+    /**
+     *
+     * @var ?float $totalRate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('total_rate')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $totalRate = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingTaxrateType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingTaxrateType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AccountingTaxrateType $type = null;
+
+    /**
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -96,29 +155,43 @@ class AccountingTaxrate
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTaxrateComponent>  $components
+     * @param  ?string  $country
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
+     * @param  ?float  $effectiveRate
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?bool  $isCompound
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?float  $rate
      * @param  ?array<string, mixed>  $raw
+     * @param  ?string  $region
+     * @param  ?float  $totalRate
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingTaxrateType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?float $rate = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $components = null, ?string $country = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $effectiveRate = null, ?string $id = null, ?bool $isActive = null, ?bool $isCompound = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?float $rate = null, ?array $raw = null, ?string $region = null, ?float $totalRate = null, ?AccountingTaxrateType $type = null, ?\DateTime $updatedAt = null)
     {
+        $this->components = $components;
+        $this->country = $country;
         $this->createdAt = $createdAt;
         $this->description = $description;
+        $this->effectiveRate = $effectiveRate;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->isCompound = $isCompound;
         $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->rate = $rate;
         $this->raw = $raw;
+        $this->region = $region;
+        $this->totalRate = $totalRate;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
     }
 }

@@ -26,5 +26,6 @@ enum GetAccountingOrganizationQueryParamFields: string
     case OrganizationCode = 'organization_code';
     case Type = 'type';
     case IsElimination = 'is_elimination';
+    case BooksCloseAt = 'books_close_at';
     case Raw = 'raw';
 }

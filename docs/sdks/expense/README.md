@@ -36,11 +36,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(
-        approvedAt: Utils\Utils::parseDateTime('2026-05-11T15:21:08.506Z'),
+        approvedAt: Utils\Utils::parseDateTime('2026-05-12T09:40:54.236Z'),
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://ripe-napkin.biz/',
-                id: 'f4ea86c2-7fc6-455d-b6d1-e01fd1f0b146',
+                id: 'fef67b87-0957-42c3-adcf-43c0c46d6107',
                 mimeType: 'annus',
                 name: 'cohibeo',
             ),
@@ -49,10 +49,10 @@ $request = new Operations\CreateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'SSP',
         externalNumber: 'necessitatibus',
-        id: '85b9d72b-bd9b-4b73-87a0-d78971f7f736',
+        id: 'ffa6e9c7-9193-4696-85f6-b19d35be2a3b',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: 'c9a93d1c-722f-4380-a04a-59a33669da16',
+                id: '271f95a7-bbfc-403d-919c-785e59b3c427',
                 itemDescription: 'Innovative Table featuring left technology and Rubber construction',
                 itemName: 'Luxurious Cotton Pizza',
                 itemSku: '978-0-8324-6620-5',
@@ -66,12 +66,12 @@ $request = new Operations\CreateAccountingExpenseRequest(
         metadata: [],
         name: 'Refined Steel Shoes',
         paymentMethod: 'CASH',
-        postedAt: Utils\Utils::parseDateTime('2021-06-04T12:31:25.115Z'),
+        postedAt: Utils\Utils::parseDateTime('2021-06-04T15:33:50.453Z'),
         reimbursedAmount: 1833,
         status: Shared\AccountingExpenseStatus::Submitted,
         taxAmount: 2602,
         totalAmount: 3580,
-        updatedAt: Utils\Utils::parseDateTime('2026-05-11T15:21:08.506Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-12T09:40:54.236Z'),
     ),
     connectionId: '<id>',
 );
@@ -227,11 +227,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(
-        approvedAt: Utils\Utils::parseDateTime('2026-05-11T15:21:08.545Z'),
+        approvedAt: Utils\Utils::parseDateTime('2026-05-12T09:40:54.291Z'),
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://ripe-napkin.biz/',
-                id: 'a3c4a325-fc80-4ae1-a213-afdb165e2217',
+                id: '952638a5-c054-405a-9014-96aef0753c77',
                 mimeType: 'annus',
                 name: 'cohibeo',
             ),
@@ -240,10 +240,10 @@ $request = new Operations\PatchAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'SSP',
         externalNumber: 'necessitatibus',
-        id: '0de8d7e0-cc95-42e1-963b-332e43ef2c61',
+        id: 'fa30c86b-1dc7-447f-99a5-bb2137a4e4c2',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: 'c15ccf0e-7201-43fa-a34f-2f1cd10486b9',
+                id: '8b534c2b-fe41-4494-86df-02ef8117de50',
                 itemDescription: 'Innovative Table featuring left technology and Rubber construction',
                 itemName: 'Luxurious Cotton Pizza',
                 itemSku: '978-0-8324-6620-5',
@@ -257,12 +257,12 @@ $request = new Operations\PatchAccountingExpenseRequest(
         metadata: [],
         name: 'Refined Steel Shoes',
         paymentMethod: 'CASH',
-        postedAt: Utils\Utils::parseDateTime('2021-06-04T12:31:25.122Z'),
+        postedAt: Utils\Utils::parseDateTime('2021-06-04T15:33:50.462Z'),
         reimbursedAmount: 1833,
         status: Shared\AccountingExpenseStatus::Submitted,
         taxAmount: 2602,
         totalAmount: 3580,
-        updatedAt: Utils\Utils::parseDateTime('2026-05-11T15:21:08.545Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-12T09:40:54.291Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -369,11 +369,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(
-        approvedAt: Utils\Utils::parseDateTime('2026-05-11T15:21:08.545Z'),
+        approvedAt: Utils\Utils::parseDateTime('2026-05-12T09:40:54.291Z'),
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://ripe-napkin.biz/',
-                id: 'a3c4a325-fc80-4ae1-a213-afdb165e2217',
+                id: '952638a5-c054-405a-9014-96aef0753c77',
                 mimeType: 'annus',
                 name: 'cohibeo',
             ),
@@ -382,10 +382,10 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'SSP',
         externalNumber: 'necessitatibus',
-        id: '0de8d7e0-cc95-42e1-963b-332e43ef2c61',
+        id: 'fa30c86b-1dc7-447f-99a5-bb2137a4e4c2',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: 'c15ccf0e-7201-43fa-a34f-2f1cd10486b9',
+                id: '8b534c2b-fe41-4494-86df-02ef8117de50',
                 itemDescription: 'Innovative Table featuring left technology and Rubber construction',
                 itemName: 'Luxurious Cotton Pizza',
                 itemSku: '978-0-8324-6620-5',
@@ -399,12 +399,12 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         metadata: [],
         name: 'Refined Steel Shoes',
         paymentMethod: 'CASH',
-        postedAt: Utils\Utils::parseDateTime('2021-06-04T12:31:25.122Z'),
+        postedAt: Utils\Utils::parseDateTime('2021-06-04T15:33:50.462Z'),
         reimbursedAmount: 1833,
         status: Shared\AccountingExpenseStatus::Submitted,
         taxAmount: 2602,
         totalAmount: 3580,
-        updatedAt: Utils\Utils::parseDateTime('2026-05-11T15:21:08.545Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-12T09:40:54.291Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -214,11 +214,15 @@ class UnifiedTo
 
     public Genai $genai;
 
+    public Agent $agent;
+
     public Embedding $embedding;
 
     public Model $model;
 
     public Prompt $prompt;
+
+    public Task $task;
 
     public Hris $hris;
 
@@ -331,8 +335,6 @@ class UnifiedTo
     public Storage $storage;
 
     public File $file;
-
-    public Task $task;
 
     public Change $change;
 
@@ -485,9 +487,11 @@ class UnifiedTo
         $this->form = new Form($this->sdkConfiguration);
         $this->submission = new Submission($this->sdkConfiguration);
         $this->genai = new Genai($this->sdkConfiguration);
+        $this->agent = new Agent($this->sdkConfiguration);
         $this->embedding = new Embedding($this->sdkConfiguration);
         $this->model = new Model($this->sdkConfiguration);
         $this->prompt = new Prompt($this->sdkConfiguration);
+        $this->task = new Task($this->sdkConfiguration);
         $this->hris = new Hris($this->sdkConfiguration);
         $this->attendance = new Attendance($this->sdkConfiguration);
         $this->bankaccount = new Bankaccount($this->sdkConfiguration);
@@ -544,7 +548,6 @@ class UnifiedTo
         $this->post = new Post($this->sdkConfiguration);
         $this->storage = new Storage($this->sdkConfiguration);
         $this->file = new File($this->sdkConfiguration);
-        $this->task = new Task($this->sdkConfiguration);
         $this->change = new Change($this->sdkConfiguration);
         $this->ticketing = new Ticketing($this->sdkConfiguration);
         $this->customer = new Customer($this->sdkConfiguration);

@@ -45,5 +45,8 @@ enum ListAccountingBillsQueryParamFields: string
     case CategoryIds = 'category_ids';
     case ProjectId = 'project_id';
     case Metadata = 'metadata';
+    case SubTotalAmount = 'sub_total_amount';
+    case ExchangeRate = 'exchange_rate';
+    case PurchaseorderIds = 'purchaseorder_ids';
     case Raw = 'raw';
 }

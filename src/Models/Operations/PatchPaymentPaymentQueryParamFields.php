@@ -36,5 +36,9 @@ enum PatchPaymentPaymentQueryParamFields: string
     case DeviceId = 'device_id';
     case CardBrand = 'card_brand';
     case CardLast4 = 'card_last4';
+    case PaidAt = 'paid_at';
+    case ExchangeRate = 'exchange_rate';
+    case CategoryIds = 'category_ids';
+    case NetAmount = 'net_amount';
     case Raw = 'raw';
 }
