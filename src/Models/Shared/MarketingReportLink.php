@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class MarketingReportLink
 {
     /**
+     * Percentage of total clicks
      *
      * @var ?float $clickPercentage
      */
@@ -20,6 +21,7 @@ class MarketingReportLink
     public ?float $clickPercentage = null;
 
     /**
+     * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $lastClickAt
      */
@@ -28,6 +30,7 @@ class MarketingReportLink
     public ?\DateTime $lastClickAt = null;
 
     /**
+     * Total clicks on this link
      *
      * @var ?float $totalClicks
      */
@@ -36,6 +39,7 @@ class MarketingReportLink
     public ?float $totalClicks = null;
 
     /**
+     * Percentage of unique clicks
      *
      * @var ?float $uniqueClickPercentage
      */
@@ -44,6 +48,7 @@ class MarketingReportLink
     public ?float $uniqueClickPercentage = null;
 
     /**
+     * Unique clicks on this link
      *
      * @var ?float $uniqueClicks
      */
@@ -52,6 +57,7 @@ class MarketingReportLink
     public ?float $uniqueClicks = null;
 
     /**
+     * The URL
      *
      * @var ?string $url
      */

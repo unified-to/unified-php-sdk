@@ -19,6 +19,7 @@ enum CreateHrisEmployeeQueryParamFields: string
     case LastName = 'last_name';
     case Emails = 'emails';
     case Title = 'title';
+    case JobId = 'job_id';
     case ManagerId = 'manager_id';
     case EmploymentStatus = 'employment_status';
     case Gender = 'gender';
@@ -52,5 +53,7 @@ enum CreateHrisEmployeeQueryParamFields: string
     case HasMfa = 'has_mfa';
     case TimeoffDaysTotal = 'timeoff_days_total';
     case TimeoffDaysUsed = 'timeoff_days_used';
+    case FlsaStatus = 'flsa_status';
+    case PayFrequency = 'pay_frequency';
     case Raw = 'raw';
 }

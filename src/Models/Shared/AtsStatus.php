@@ -28,6 +28,7 @@ class AtsStatus
     public ?string $id = null;
 
     /**
+     * The ID of the job this status/stage belongs to, when the provider scopes statuses per job.
      *
      * @var ?string $jobId
      */

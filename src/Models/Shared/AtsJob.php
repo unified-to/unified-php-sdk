@@ -22,6 +22,7 @@ class AtsJob
     public ?array $addresses = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $closedAt
      */
@@ -30,6 +31,7 @@ class AtsJob
     public ?\DateTime $closedAt = null;
 
     /**
+     * id value of the company associated with the job in the ATS (reference to AtsCompany)
      *
      * @var ?string $companyId
      */
@@ -48,6 +50,7 @@ class AtsJob
     public ?array $compensation = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -119,6 +122,7 @@ class AtsJob
     public ?string $industry = null;
 
     /**
+     * Preferred language for the job, in ISO 639-1 format (e.g., U.S. English is en-us)
      *
      * @var ?string $languageLocale
      */
@@ -161,6 +165,7 @@ class AtsJob
     public ?string $name = null;
 
     /**
+     * Number of openings for the job
      *
      * @var ?float $numberOfOpenings
      */
@@ -256,6 +261,7 @@ class AtsJob
     public ?AtsJobStatus $status = null;
 
     /**
+     * Short job blurb (distinct from full description when both exist)
      *
      * @var ?string $summary
      */
@@ -264,6 +270,7 @@ class AtsJob
     public ?string $summary = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -272,6 +279,7 @@ class AtsJob
     public ?\DateTime $updatedAt = null;
 
     /**
+     * User id of the job owner in the ATS (references an HRIS employee) (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

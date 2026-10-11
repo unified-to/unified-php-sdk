@@ -70,6 +70,7 @@ class PropertyAdsGroupBidStrategy
     public ?bool $raiseBidForDeals = null;
 
     /**
+     * Target ROAS e.g. 2.5 = 250% (Google)
      *
      * @var ?float $targetRoas
      */

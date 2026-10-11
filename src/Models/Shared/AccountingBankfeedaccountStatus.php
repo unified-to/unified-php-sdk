@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** feed state: ACTIVE, INACTIVE */
 enum AccountingBankfeedaccountStatus: string
 {
     case Active = 'ACTIVE';

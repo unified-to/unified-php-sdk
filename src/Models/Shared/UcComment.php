@@ -28,6 +28,7 @@ class UcComment
     public ?string $content = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $createdAt
      */
@@ -54,6 +55,7 @@ class UcComment
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedAt
      */
@@ -62,6 +64,7 @@ class UcComment
     public ?string $updatedAt = null;
 
     /**
+     * reference to HrisEmployee (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

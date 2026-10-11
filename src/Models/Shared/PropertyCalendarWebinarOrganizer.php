@@ -53,6 +53,7 @@ class PropertyCalendarWebinarOrganizer
     public ?PropertyCalendarWebinarOrganizerStatus $status = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

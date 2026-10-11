@@ -22,6 +22,7 @@ class AtsApplication
     public ?array $answers = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $appliedAt
      */
@@ -38,6 +39,7 @@ class AtsApplication
     public ?string $candidateId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -46,6 +48,7 @@ class AtsApplication
     public ?\DateTime $createdAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $hiredAt
      */
@@ -90,6 +93,7 @@ class AtsApplication
     public ?array $offers = null;
 
     /**
+     * The integration's original status.  Mostly used to have your customers chose the application status/stage so that your software can trigger an event.
      *
      * @var ?string $originalStatus
      */
@@ -98,6 +102,7 @@ class AtsApplication
     public ?string $originalStatus = null;
 
     /**
+     * The provider's secondary/sub status, when distinct from original_status (e.g. UKG Ready hiring_stage)
      *
      * @var ?string $originalSubstatus
      */
@@ -116,6 +121,7 @@ class AtsApplication
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $rejectedAt
      */
@@ -149,6 +155,7 @@ class AtsApplication
     public ?AtsApplicationStatus $status = null;
 
     /**
+     * Application personal summary (e.g. Pinpoint Personal Summary)
      *
      * @var ?string $summary
      */
@@ -157,6 +164,7 @@ class AtsApplication
     public ?string $summary = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -165,6 +173,7 @@ class AtsApplication
     public ?\DateTime $updatedAt = null;
 
     /**
+     * HR user/employee ID (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

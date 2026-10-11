@@ -22,6 +22,7 @@ class AccountingTaxrate
     public ?array $components = null;
 
     /**
+     * Jurisdiction country
      *
      * @var ?string $country
      */
@@ -30,6 +31,7 @@ class AccountingTaxrate
     public ?string $country = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -46,6 +48,7 @@ class AccountingTaxrate
     public ?string $description = null;
 
     /**
+     * Net effective rate in %, where it differs from the nominal rate
      *
      * @var ?float $effectiveRate
      */
@@ -70,6 +73,7 @@ class AccountingTaxrate
     public ?bool $isActive = null;
 
     /**
+     * True when the rate stacks on top of other taxes
      *
      * @var ?bool $isCompound
      */
@@ -104,6 +108,7 @@ class AccountingTaxrate
     public ?string $organizationId = null;
 
     /**
+     * %
      *
      * @var ?float $rate
      */
@@ -122,6 +127,7 @@ class AccountingTaxrate
     public ?array $raw = null;
 
     /**
+     * Jurisdiction state / province
      *
      * @var ?string $region
      */
@@ -130,6 +136,7 @@ class AccountingTaxrate
     public ?string $region = null;
 
     /**
+     * Sum of all components, in %
      *
      * @var ?float $totalRate
      */
@@ -138,6 +145,7 @@ class AccountingTaxrate
     public ?float $totalRate = null;
 
     /**
+     * Whether the rate applies to sales, purchases, or both
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingTaxrateType $type
      */
@@ -147,6 +155,7 @@ class AccountingTaxrate
     public ?AccountingTaxrateType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

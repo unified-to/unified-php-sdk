@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** BILL removed (use AccountingBill); remaining values: INVOICE, CREDITMEMO */
 enum AccountingInvoiceType: string
 {
     case Invoice = 'INVOICE';

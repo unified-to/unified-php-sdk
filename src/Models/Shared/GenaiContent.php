@@ -19,6 +19,16 @@ class GenaiContent
     public string $content;
 
     /**
+     * Images for the model to evaluate with this message, as base64 data URLs (data:image/png;base64,...). Only for models with has_vision.
+     *
+     * @var ?array<string> $images
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('images')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $images = null;
+
+    /**
      *
      * @var ?\Unified\Unified_to\Models\Shared\Role $role
      */
@@ -29,12 +39,14 @@ class GenaiContent
 
     /**
      * @param  string  $content
+     * @param  ?array<string>  $images
      * @param  ?\Unified\Unified_to\Models\Shared\Role  $role
      * @phpstan-pure
      */
-    public function __construct(string $content, ?Role $role = null)
+    public function __construct(string $content, ?array $images = null, ?Role $role = null)
     {
         $this->content = $content;
+        $this->images = $images;
         $this->role = $role;
     }
 }

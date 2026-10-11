@@ -20,6 +20,7 @@ class CommerceCollection
     public string $name;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -151,6 +152,7 @@ class CommerceCollection
     public ?CommerceCollectionType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

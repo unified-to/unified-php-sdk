@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertySocialPostCallToAction
 {
     /**
+     * The call-to-action button type
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertySocialPostCallToActionType $type
      */
@@ -22,6 +23,7 @@ class PropertySocialPostCallToAction
     public ?PropertySocialPostCallToActionType $type = null;
 
     /**
+     * The URL the call-to-action points to
      *
      * @var ?string $url
      */

@@ -37,6 +37,7 @@ class FormAnswer
     public ?array $fileIds = null;
 
     /**
+     * Can be string, number, boolean, array, etc.
      *
      * @var ?string $value
      */

@@ -45,9 +45,9 @@ class Integration
     }
 
     /**
-     * Authorize new connection
+     * Authorize or re-authorize a connection
      *
-     * Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+     * Returns an authorization URL for the specified integration. After successful authorization, a new connection is created unless connection_id and reauth_token are provided, in which case the existing connection is updated in place.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUnifiedIntegrationAuthResponse

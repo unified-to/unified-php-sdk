@@ -21,6 +21,7 @@ class AtsCandidate
     public ?PropertyAtsCandidateAddress $address = null;
 
     /**
+     * (reference to AtsCompany)
      *
      * @var ?string $companyId
      */
@@ -29,6 +30,7 @@ class AtsCandidate
     public ?string $companyId = null;
 
     /**
+     * Name of company where candidate currently works
      *
      * @var ?string $companyName
      */
@@ -37,6 +39,7 @@ class AtsCandidate
     public ?string $companyName = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -200,6 +203,7 @@ class AtsCandidate
     public ?array $sources = null;
 
     /**
+     * Personal / professional bio
      *
      * @var ?string $summary
      */
@@ -228,6 +232,7 @@ class AtsCandidate
     public ?array $telephones = null;
 
     /**
+     * Candidate’s current job title
      *
      * @var ?string $title
      */
@@ -236,6 +241,7 @@ class AtsCandidate
     public ?string $title = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -244,6 +250,7 @@ class AtsCandidate
     public ?\DateTime $updatedAt = null;
 
     /**
+     * Employee ID that owns the relationship for this candidate (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** week start day, defaults to undefined (no week start day) */
 enum WeekStart: string
 {
     case Su = 'SU';

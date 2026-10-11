@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PerformanceReview
 {
     /**
+     * the HR Employee being reviewed (reference to HrisEmployee)
      *
      * @var string $userId
      */
@@ -19,6 +20,7 @@ class PerformanceReview
     public string $userId;
 
     /**
+     * the overall/summary comment of this review
      *
      * @var ?string $comment
      */
@@ -27,6 +29,7 @@ class PerformanceReview
     public ?string $comment = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $completedAt
      */
@@ -35,6 +38,7 @@ class PerformanceReview
     public ?\DateTime $completedAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -43,6 +47,7 @@ class PerformanceReview
     public ?\DateTime $createdAt = null;
 
     /**
+     * pointer to the Performance Cycle object
      *
      * @var ?string $cycleId
      */
@@ -59,6 +64,7 @@ class PerformanceReview
     public ?string $id = null;
 
     /**
+     * whether the reviewee acknowledged this review
      *
      * @var ?bool $isAcknowledged
      */
@@ -77,6 +83,7 @@ class PerformanceReview
     public ?array $questions = null;
 
     /**
+     * the overall rating/score of this review
      *
      * @var ?float $rating
      */
@@ -85,6 +92,7 @@ class PerformanceReview
     public ?float $rating = null;
 
     /**
+     * label of the rating on the provider's scale (e.g. "Exceeds expectations")
      *
      * @var ?string $ratingDescription
      */
@@ -93,6 +101,7 @@ class PerformanceReview
     public ?string $ratingDescription = null;
 
     /**
+     * the maximum possible rating/score on the provider's scale
      *
      * @var ?float $ratingMaximum
      */
@@ -111,6 +120,7 @@ class PerformanceReview
     public ?array $raw = null;
 
     /**
+     * the HR Employee that wrote this review (reference to HrisEmployee)
      *
      * @var ?string $reviewerUserId
      */
@@ -128,6 +138,7 @@ class PerformanceReview
     public ?PerformanceReviewStatus $status = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $submittedAt
      */
@@ -136,6 +147,7 @@ class PerformanceReview
     public ?\DateTime $submittedAt = null;
 
     /**
+     * id of the review template/form this review is based on
      *
      * @var ?string $templateIdentifier
      */
@@ -153,6 +165,7 @@ class PerformanceReview
     public ?PerformanceReviewType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

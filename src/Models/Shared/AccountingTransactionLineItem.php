@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingTransactionLineItem
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -62,6 +63,7 @@ class AccountingTransactionLineItem
     public ?string $objectType = null;
 
     /**
+     * ref -> AccountingTaxrate applied to the line
      *
      * @var ?string $taxrateId
      */
@@ -70,6 +72,7 @@ class AccountingTransactionLineItem
     public ?string $taxrateId = null;
 
     /**
+     * will be a positive value for a debit and negative for a credit
      *
      * @var ?float $totalAmount
      */

@@ -32,6 +32,7 @@ class CalendarEvent
     public ?array $attendees = null;
 
     /**
+     * (reference to CalendarCalendar)
      *
      * @var ?string $calendarId
      */
@@ -50,6 +51,7 @@ class CalendarEvent
     public ?array $conference = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $createdAt
      */
@@ -58,6 +60,7 @@ class CalendarEvent
     public ?string $createdAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $endAt
      */
@@ -151,6 +154,7 @@ class CalendarEvent
     public ?array $recurrence = null;
 
     /**
+     * (reference to CalendarEvent)
      *
      * @var ?string $recurringEventId
      */
@@ -167,6 +171,7 @@ class CalendarEvent
     public ?bool $sendNotifications = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $startAt
      */
@@ -200,6 +205,7 @@ class CalendarEvent
     public ?string $timezone = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedAt
      */

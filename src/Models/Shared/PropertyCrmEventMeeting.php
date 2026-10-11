@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyCrmEventMeeting
 {
     /**
+     * The event meeting's agendadescription
      *
      * @var ?string $description
      */
@@ -21,6 +22,7 @@ class PropertyCrmEventMeeting
     public ?string $description = null;
 
     /**
+     * The event meeting's end datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -29,6 +31,7 @@ class PropertyCrmEventMeeting
     public ?\DateTime $endAt = null;
 
     /**
+     * The event meeting's start datetime (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -37,6 +40,7 @@ class PropertyCrmEventMeeting
     public ?\DateTime $startAt = null;
 
     /**
+     * The event meeting's topicsubject
      *
      * @var ?string $title
      */

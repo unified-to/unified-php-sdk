@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** normalized tender category; the provider's original label stays in payment_method */
 enum TenderType: string
 {
     case Card = 'CARD';

@@ -21,6 +21,7 @@ class AccountingOrganization
     public ?PropertyAccountingOrganizationAddress $address = null;
 
     /**
+     * Company-wide books close / lock date; transactions on or before this date fall in a closed accounting period (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $booksCloseAt
      */
@@ -29,6 +30,7 @@ class AccountingOrganization
     public ?\DateTime $booksCloseAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -37,6 +39,7 @@ class AccountingOrganization
     public ?\DateTime $createdAt = null;
 
     /**
+     * Currency primarily used by the organization, in ISO 4217 format (e.g. U.S. dollars is USD).
      *
      * @var ?string $currency
      */
@@ -45,6 +48,7 @@ class AccountingOrganization
     public ?string $currency = null;
 
     /**
+     * Month of the year when the organization’s fiscal year ends (1 - 12, where January is 1)
      *
      * @var ?float $fiscalYearEndMonth
      */
@@ -61,6 +65,7 @@ class AccountingOrganization
     public ?string $id = null;
 
     /**
+     * True for consolidation/elimination entities
      *
      * @var ?bool $isElimination
      */
@@ -85,6 +90,7 @@ class AccountingOrganization
     public ?string $name = null;
 
     /**
+     * Identifier for tracking and categorizing organizations for reporting or analysis purposes that is defined by the end-customer
      *
      * @var ?string $organizationCode
      */
@@ -111,6 +117,7 @@ class AccountingOrganization
     public ?array $raw = null;
 
     /**
+     * Organization's tax number.  For example, in the U.S., this is an Employer Identification Number (EIN).
      *
      * @var ?string $taxNumber
      */
@@ -127,6 +134,7 @@ class AccountingOrganization
     public ?string $timezone = null;
 
     /**
+     * Entity type within a consolidation hierarchy
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingOrganizationType $type
      */
@@ -136,6 +144,7 @@ class AccountingOrganization
     public ?AccountingOrganizationType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

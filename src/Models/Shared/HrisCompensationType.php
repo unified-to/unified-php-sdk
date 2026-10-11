@@ -16,4 +16,6 @@ enum HrisCompensationType: string
     case StockOptions = 'STOCK_OPTIONS';
     case Equity = 'EQUITY';
     case Other = 'OTHER';
+    case Hourly = 'HOURLY';
+    case Commission = 'COMMISSION';
 }

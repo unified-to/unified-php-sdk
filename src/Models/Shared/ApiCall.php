@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ApiCall
 {
     /**
+     * The integration type
      *
      * @var string $integrationType
      */
@@ -26,6 +27,7 @@ class ApiCall
     public string $method;
 
     /**
+     * The called name of the API method
      *
      * @var string $name
      */
@@ -33,6 +35,7 @@ class ApiCall
     public string $name;
 
     /**
+     * The called API method's HTTP verb and route path (PUT /crm/{integration}/deak/{id})
      *
      * @var string $path
      */
@@ -40,6 +43,7 @@ class ApiCall
     public string $path;
 
     /**
+     * The resulting HTTP status code (200)
      *
      * @var string $status
      */
@@ -47,6 +51,7 @@ class ApiCall
     public string $status;
 
     /**
+     * The type of API Call being logged
      *
      * @var \Unified\Unified_to\Models\Shared\ApiCallType $type
      */
@@ -63,6 +68,7 @@ class ApiCall
     public ?string $connectionId = null;
 
     /**
+     * The date that this object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -79,6 +85,7 @@ class ApiCall
     public ?float $endapiResponseTime = null;
 
     /**
+     * The error description (if status code is >= 400)
      *
      * @var ?string $error
      */
@@ -87,6 +94,7 @@ class ApiCall
     public ?string $error = null;
 
     /**
+     * your customer's user ID
      *
      * @var ?string $externalXref
      */
@@ -95,6 +103,7 @@ class ApiCall
     public ?string $externalXref = null;
 
     /**
+     * Unique identifier for this API call
      *
      * @var ?string $id
      */
@@ -119,6 +128,7 @@ class ApiCall
     public ?bool $isBillable = null;
 
     /**
+     * The size of the response
      *
      * @var ?float $size
      */
@@ -151,6 +161,7 @@ class ApiCall
     public ?string $webhookId = null;
 
     /**
+     * (reference to KmsSpace)
      *
      * @var ?string $workspaceId
      */

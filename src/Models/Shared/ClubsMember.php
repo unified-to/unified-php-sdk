@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ClubsMember
 {
     /**
+     * The date that this member was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -21,6 +22,7 @@ class ClubsMember
     public ?\DateTime $createdAt = null;
 
     /**
+     * The member's first name
      *
      * @var ?string $firstName
      */
@@ -29,6 +31,7 @@ class ClubsMember
     public ?string $firstName = null;
 
     /**
+     * The group this member belongs to (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -37,6 +40,7 @@ class ClubsMember
     public ?string $groupId = null;
 
     /**
+     * Unique identifier for this member (not provided by Strava)
      *
      * @var ?string $id
      */
@@ -45,6 +49,7 @@ class ClubsMember
     public ?string $id = null;
 
     /**
+     * Whether the member is an admin of the group
      *
      * @var ?bool $isAdmin
      */
@@ -53,6 +58,7 @@ class ClubsMember
     public ?bool $isAdmin = null;
 
     /**
+     * Whether the member is the owner of the group
      *
      * @var ?bool $isOwner
      */
@@ -61,6 +67,7 @@ class ClubsMember
     public ?bool $isOwner = null;
 
     /**
+     * The member's last name (a single initial for Strava)
      *
      * @var ?string $lastName
      */
@@ -69,6 +76,7 @@ class ClubsMember
     public ?string $lastName = null;
 
     /**
+     * The member's membership status
      *
      * @var ?\Unified\Unified_to\Models\Shared\ClubsMemberMembershipStatus $membershipStatus
      */
@@ -78,6 +86,7 @@ class ClubsMember
     public ?ClubsMemberMembershipStatus $membershipStatus = null;
 
     /**
+     * The full name of the member (first name + last initial for Strava)
      *
      * @var ?string $name
      */
@@ -86,7 +95,7 @@ class ClubsMember
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this member
      *
      * @var ?array<string, mixed> $raw
      */
@@ -96,6 +105,7 @@ class ClubsMember
     public ?array $raw = null;
 
     /**
+     * The last date that this member was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

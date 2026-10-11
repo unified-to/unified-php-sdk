@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CalendarBusy
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var \DateTime $endAt
      */
@@ -19,6 +20,7 @@ class CalendarBusy
     public \DateTime $endAt;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var \DateTime $startAt
      */

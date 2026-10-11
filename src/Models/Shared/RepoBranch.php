@@ -19,6 +19,7 @@ class RepoBranch
     public string $name;
 
     /**
+     * (reference to RepoRepository)
      *
      * @var string $repoId
      */
@@ -26,6 +27,7 @@ class RepoBranch
     public string $repoId;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -52,6 +54,7 @@ class RepoBranch
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

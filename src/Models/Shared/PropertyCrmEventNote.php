@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyCrmEventNote
 {
     /**
+     * The event note's description
      *
      * @var ?string $description
      */

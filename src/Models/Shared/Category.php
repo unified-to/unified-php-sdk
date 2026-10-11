@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** STANDARD (days-based) or DATE_DRIVEN (month-based) */
 enum Category: string
 {
     case Standard = 'STANDARD';

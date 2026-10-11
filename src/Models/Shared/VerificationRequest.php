@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class VerificationRequest
 {
     /**
+     * points to ATS Candidate
      *
      * @var ?string $candidateId
      */
@@ -20,6 +21,7 @@ class VerificationRequest
     public ?string $candidateId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -64,6 +66,7 @@ class VerificationRequest
     public ?array $profileAddresses = null;
 
     /**
+     * YYYY-MM-DD
      *
      * @var ?string $profileDateOfBirth
      */
@@ -91,6 +94,7 @@ class VerificationRequest
     public ?VerificationRequestProfileGender $profileGender = null;
 
     /**
+     * XXX.XXX.XXX.XXX
      *
      * @var ?string $profileIpAddress
      */
@@ -135,6 +139,7 @@ class VerificationRequest
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $responseCompletedAt
      */
@@ -163,6 +168,7 @@ class VerificationRequest
     public ?array $responseDownloadUrls = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $responseExpiresAt
      */
@@ -171,6 +177,7 @@ class VerificationRequest
     public ?\DateTime $responseExpiresAt = null;
 
     /**
+     * datetime that identify was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $responseIssuedAt
      */
@@ -179,6 +186,7 @@ class VerificationRequest
     public ?\DateTime $responseIssuedAt = null;
 
     /**
+     * Most modern IDV providers (like Onfido, Veriff, Jumio, ID.me). Background Check Providers, such as Checkr, GoodHire, Sterling, and HireRight. Credit bureaus and services often require direct user consent and information. This allows them to properly handle disclosures required by regulations like FCRA. Employment and Education Verification need users to confirm previous employers and schools.
      *
      * @var ?string $responseRedirectUrl
      */
@@ -187,6 +195,7 @@ class VerificationRequest
     public ?string $responseRedirectUrl = null;
 
     /**
+     * Identity verification services provide confidence scores (e.g., 0-100), Credit checks return specific numeric scores (e.g., FICO score 300-850), Fraud prevention tools use risk scores (e.g., 1-999)
      *
      * @var ?float $responseScore
      */
@@ -203,6 +212,7 @@ class VerificationRequest
     public ?string $responseSource = null;
 
     /**
+     * Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO
      *
      * @var ?\Unified\Unified_to\Models\Shared\VerificationRequestResponseStatus $responseStatus
      */
@@ -220,6 +230,7 @@ class VerificationRequest
     public ?string $targetUrl = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

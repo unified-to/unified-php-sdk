@@ -20,6 +20,7 @@ class PerformanceGoal
     public ?string $companyId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $completedAt
      */
@@ -28,6 +29,7 @@ class PerformanceGoal
     public ?\DateTime $completedAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -36,6 +38,7 @@ class PerformanceGoal
     public ?\DateTime $createdAt = null;
 
     /**
+     * pointer to the Performance Cycle object (goal cycle or timeframe)
      *
      * @var ?string $cycleId
      */
@@ -52,6 +55,7 @@ class PerformanceGoal
     public ?string $description = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -86,6 +90,7 @@ class PerformanceGoal
     public ?string $name = null;
 
     /**
+     * id of the parent goal, for goal alignment / OKR trees
      *
      * @var ?string $parentId
      */
@@ -94,6 +99,7 @@ class PerformanceGoal
     public ?string $parentId = null;
 
     /**
+     * progress percentage from 0 to 100
      *
      * @var ?float $progress
      */
@@ -112,6 +118,7 @@ class PerformanceGoal
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -138,6 +145,7 @@ class PerformanceGoal
     public ?PerformanceGoalSchemasType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -156,6 +164,7 @@ class PerformanceGoal
     public ?array $userIds = null;
 
     /**
+     * the weight of this goal when the provider weighs goals in reviews
      *
      * @var ?float $weight
      */

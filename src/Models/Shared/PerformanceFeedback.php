@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PerformanceFeedback
 {
     /**
+     * the HR Employee that this feedback is about (reference to HrisEmployee)
      *
      * @var string $userId
      */
@@ -19,6 +20,7 @@ class PerformanceFeedback
     public string $userId;
 
     /**
+     * the HR Employee that gave this feedback (reference to HrisEmployee)
      *
      * @var ?string $authorUserId
      */
@@ -27,6 +29,7 @@ class PerformanceFeedback
     public ?string $authorUserId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -43,6 +46,7 @@ class PerformanceFeedback
     public ?string $id = null;
 
     /**
+     * true when publicly visible (e.g. praise wall); false when private or manager-only
      *
      * @var ?bool $isVisible
      */
@@ -79,6 +83,7 @@ class PerformanceFeedback
     public ?array $tags = null;
 
     /**
+     * praise/recognition, constructive feedback, or a response to a feedback request
      *
      * @var ?\Unified\Unified_to\Models\Shared\PerformanceFeedbackType $type
      */
@@ -88,6 +93,7 @@ class PerformanceFeedback
     public ?PerformanceFeedbackType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

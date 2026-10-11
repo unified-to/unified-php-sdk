@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingCashflow
 {
     /**
+     * Cash at beginning of period
      *
      * @var ?float $cashBeginningAmount
      */
@@ -21,6 +22,7 @@ class AccountingCashflow
     public ?float $cashBeginningAmount = null;
 
     /**
+     * Cash at end of period
      *
      * @var ?float $cashEndingAmount
      */
@@ -39,6 +41,7 @@ class AccountingCashflow
     public ?array $categoryIds = null;
 
     /**
+     * (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -47,6 +50,7 @@ class AccountingCashflow
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -55,6 +59,7 @@ class AccountingCashflow
     public ?\DateTime $createdAt = null;
 
     /**
+     * ISO 4217, e.g. "USD"
      *
      * @var ?string $currency
      */
@@ -63,6 +68,7 @@ class AccountingCashflow
     public ?string $currency = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -99,6 +105,7 @@ class AccountingCashflow
     public ?array $investingSections = null;
 
     /**
+     * e.g. "Cash Flow Statement Q1 2020"
      *
      * @var ?string $name
      */
@@ -107,6 +114,7 @@ class AccountingCashflow
     public ?string $name = null;
 
     /**
+     * Usually ending - beginning
      *
      * @var ?float $netChangeInCashAmount
      */
@@ -125,7 +133,7 @@ class AccountingCashflow
     public ?array $operatingSections = null;
 
     /**
-     * $raw
+     * Original data from the integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -135,6 +143,7 @@ class AccountingCashflow
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -143,6 +152,7 @@ class AccountingCashflow
     public ?\DateTime $startAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

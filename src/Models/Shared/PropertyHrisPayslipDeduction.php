@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyHrisPayslipDeduction
 {
     /**
+     * percentage or absolute amount (employee's portion)
      *
      * @var ?float $amount
      */
@@ -29,6 +30,7 @@ class PropertyHrisPayslipDeduction
     public ?string $benefitId = null;
 
     /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -37,6 +39,7 @@ class PropertyHrisPayslipDeduction
     public ?string $companyId = null;
 
     /**
+     * Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other)
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionCoverageLevel $coverageLevel
      */
@@ -46,6 +49,7 @@ class PropertyHrisPayslipDeduction
     public ?PropertyHrisPayslipDeductionCoverageLevel $coverageLevel = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -54,6 +58,25 @@ class PropertyHrisPayslipDeduction
     public ?\DateTime $createdAt = null;
 
     /**
+     * percentage or absolute amount (employer's portion/match)
+     *
+     * @var ?float $employerAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employer_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $employerAmount = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionEmployerType $employerType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employer_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionEmployerType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyHrisPayslipDeductionEmployerType $employerType = null;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -62,6 +85,7 @@ class PropertyHrisPayslipDeduction
     public ?\DateTime $endAt = null;
 
     /**
+     * Frequency for this deduction (should always be set, matches IHrisBenefit.frequency)
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionFrequency $frequency
      */
@@ -69,6 +93,16 @@ class PropertyHrisPayslipDeduction
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionFrequency|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyHrisPayslipDeductionFrequency $frequency = null;
+
+    /**
+     * set when this deduction is a court-ordered garnishment
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionGarnishmentType $garnishmentType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('garnishment_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionGarnishmentType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyHrisPayslipDeductionGarnishmentType $garnishmentType = null;
 
     /**
      *
@@ -87,12 +121,30 @@ class PropertyHrisPayslipDeduction
     public ?bool $isActive = null;
 
     /**
+     * annual maximum employee amount (always money)
+     *
+     * @var ?float $maxAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('max_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $maxAmount = null;
+
+    /**
      *
      * @var ?string $notes
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('notes')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $notes = null;
+
+    /**
+     * the hris_paycode (deduction code) this deduction uses
+     *
+     * @var ?string $paycodeId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('paycode_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $paycodeId = null;
 
     /**
      * $raw
@@ -105,6 +157,7 @@ class PropertyHrisPayslipDeduction
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -122,6 +175,7 @@ class PropertyHrisPayslipDeduction
     public ?PropertyHrisPayslipDeductionType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -130,6 +184,7 @@ class PropertyHrisPayslipDeduction
     public ?\DateTime $updatedAt = null;
 
     /**
+     * employee ID (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -143,11 +198,16 @@ class PropertyHrisPayslipDeduction
      * @param  ?string  $companyId
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionCoverageLevel  $coverageLevel
      * @param  ?\DateTime  $createdAt
+     * @param  ?float  $employerAmount
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionEmployerType  $employerType
      * @param  ?\DateTime  $endAt
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionFrequency  $frequency
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionGarnishmentType  $garnishmentType
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?float  $maxAmount
      * @param  ?string  $notes
+     * @param  ?string  $paycodeId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeductionType  $type
@@ -155,18 +215,23 @@ class PropertyHrisPayslipDeduction
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $benefitId = null, ?string $companyId = null, ?PropertyHrisPayslipDeductionCoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?PropertyHrisPayslipDeductionFrequency $frequency = null, ?string $id = null, ?bool $isActive = null, ?string $notes = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyHrisPayslipDeductionType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?float $amount = null, ?string $benefitId = null, ?string $companyId = null, ?PropertyHrisPayslipDeductionCoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?float $employerAmount = null, ?PropertyHrisPayslipDeductionEmployerType $employerType = null, ?\DateTime $endAt = null, ?PropertyHrisPayslipDeductionFrequency $frequency = null, ?PropertyHrisPayslipDeductionGarnishmentType $garnishmentType = null, ?string $id = null, ?bool $isActive = null, ?float $maxAmount = null, ?string $notes = null, ?string $paycodeId = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyHrisPayslipDeductionType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->amount = $amount;
         $this->benefitId = $benefitId;
         $this->companyId = $companyId;
         $this->coverageLevel = $coverageLevel;
         $this->createdAt = $createdAt;
+        $this->employerAmount = $employerAmount;
+        $this->employerType = $employerType;
         $this->endAt = $endAt;
         $this->frequency = $frequency;
+        $this->garnishmentType = $garnishmentType;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->maxAmount = $maxAmount;
         $this->notes = $notes;
+        $this->paycodeId = $paycodeId;
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->type = $type;

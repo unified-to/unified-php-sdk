@@ -44,6 +44,14 @@ class ListHrisEmployeesRequest
     public ?string $groupId = null;
 
     /**
+     * The job ID to filter by
+     *
+     * @var ?string $jobId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
+    public ?string $jobId = null;
+
+    /**
      *
      * @var ?float $limit
      */
@@ -108,6 +116,7 @@ class ListHrisEmployeesRequest
      * @param  ?string  $companyId
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisEmployeesQueryParamFields>  $fields
      * @param  ?string  $groupId
+     * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?string  $locationId
      * @param  ?float  $offset
@@ -118,12 +127,13 @@ class ListHrisEmployeesRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $companyId = null, ?array $fields = null, ?string $groupId = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $companyId = null, ?array $fields = null, ?string $groupId = null, ?string $jobId = null, ?float $limit = null, ?string $locationId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->companyId = $companyId;
         $this->fields = $fields;
         $this->groupId = $groupId;
+        $this->jobId = $jobId;
         $this->limit = $limit;
         $this->locationId = $locationId;
         $this->offset = $offset;

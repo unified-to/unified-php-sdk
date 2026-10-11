@@ -30,6 +30,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateGenaiPromptRequest(
     genaiPrompt: new Shared\GenaiPrompt(
+        answers: [
+            new Shared\GenaiAnswer(
+                confidence: 0.5384309098590165,
+                id: 'TeZpueFB',
+                probabilities: [
+                    new Shared\GenaiAnswerProbability(
+                        option: 'veniam',
+                        probability: 0.05683182482607663,
+                    ),
+                    new Shared\GenaiAnswerProbability(
+                        option: 'comes',
+                        probability: 0.1404057613108307,
+                    ),
+                ],
+                score: 0.05974147981032729,
+                type: Shared\GenaiAnswerType::Choice,
+                value: 'summisse',
+            ),
+        ],
         maxTokens: 0.4677782787475735,
         mcpAuthorizationToken: 'f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4',
         mcpDeferredTools: [],
@@ -37,11 +56,45 @@ $request = new Operations\CreateGenaiPromptRequest(
         messages: [
             new Shared\GenaiContent(
                 content: 'Aegre repudiandae verecundia facere statua.',
+                images: [],
                 role: Shared\Role::Assistant,
             ),
             new Shared\GenaiContent(
                 content: 'Speciosus xiphias soleo trepide crinis.',
+                images: [],
                 role: Shared\Role::System,
+            ),
+        ],
+        questions: [
+            new Shared\GenaiQuestion(
+                id: 'KtvbYiEq',
+                instructions: 'Admiratio cura contabesco subvenio venustas architecto vacuus summopere.',
+                options: [
+                    'vulnero',
+                    'quasi',
+                    'tolero',
+                ],
+                type: Shared\GenaiQuestionType::Boolean,
+            ),
+            new Shared\GenaiQuestion(
+                id: 'oV6IURtv',
+                instructions: 'Celer deleniti ventus ipsam tendo odit.',
+                options: [
+                    'nulla',
+                    'aspicio',
+                    'tero',
+                ],
+                type: Shared\GenaiQuestionType::Choice,
+            ),
+            new Shared\GenaiQuestion(
+                id: '60dBZk2K',
+                instructions: 'Decretum vesica amet repudiandae.',
+                options: [
+                    'ducimus',
+                    'civis',
+                    'alter',
+                ],
+                type: Shared\GenaiQuestionType::Boolean,
             ),
         ],
         responses: [

@@ -93,6 +93,7 @@ class PropertyDatastoreQueryQuery
     public ?SortOrder $sortOrder = null;
 
     /**
+     * Raw SQL – when set, executed directly (table_id optional)
      *
      * @var ?string $sql
      */

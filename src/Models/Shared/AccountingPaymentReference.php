@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingPaymentReference
 {
     /**
+     * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $allocatedAt
      */
@@ -20,6 +21,7 @@ class AccountingPaymentReference
     public ?\DateTime $allocatedAt = null;
 
     /**
+     * amount of the payment applied to this object
      *
      * @var ?float $amount
      */
@@ -28,6 +30,7 @@ class AccountingPaymentReference
     public ?float $amount = null;
 
     /**
+     * references a PaymentPayment that was applied to this object (reference to PaymentPayment)
      *
      * @var ?string $paymentId
      */

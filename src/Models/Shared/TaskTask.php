@@ -32,6 +32,7 @@ class TaskTask
     public ?array $attachmentIds = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $completedAt
      */
@@ -40,6 +41,7 @@ class TaskTask
     public ?\DateTime $completedAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -48,6 +50,7 @@ class TaskTask
     public ?\DateTime $createdAt = null;
 
     /**
+     * The user who created this task (reference to HrisEmployee)
      *
      * @var ?string $creatorUserId
      */
@@ -56,6 +59,7 @@ class TaskTask
     public ?string $creatorUserId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -64,6 +68,7 @@ class TaskTask
     public ?\DateTime $dueAt = null;
 
     /**
+     * Scheduled/planned end of the task (distinct from due_at and completed_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -150,6 +155,7 @@ class TaskTask
     public ?string $priority = null;
 
     /**
+     * 0-100
      *
      * @var ?float $progress
      */
@@ -158,6 +164,7 @@ class TaskTask
     public ?float $progress = null;
 
     /**
+     * (reference to TaskProject)
      *
      * @var ?string $projectId
      */
@@ -176,6 +183,7 @@ class TaskTask
     public ?array $raw = null;
 
     /**
+     * Scheduled/planned start of the task (distinct from created_at) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -227,6 +235,7 @@ class TaskTask
     public ?string $timeSpentUnit = null;
 
     /**
+     * The task/issue type name (e.g. Jira issue type).
      *
      * @var ?string $type
      */
@@ -235,6 +244,7 @@ class TaskTask
     public ?string $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

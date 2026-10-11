@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class TicketingCategory
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -70,6 +71,7 @@ class TicketingCategory
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

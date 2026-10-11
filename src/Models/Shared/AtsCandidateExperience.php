@@ -20,6 +20,7 @@ class AtsCandidateExperience
     public ?string $companyName = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -28,6 +29,7 @@ class AtsCandidateExperience
     public ?\DateTime $endAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

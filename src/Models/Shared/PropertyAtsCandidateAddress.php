@@ -44,6 +44,7 @@ class PropertyAtsCandidateAddress
     public ?string $country = null;
 
     /**
+     * Country code for the country, in ISO 3166 A-2 format
      *
      * @var ?string $countryCode
      */
@@ -60,6 +61,7 @@ class PropertyAtsCandidateAddress
     public ?string $postalCode = null;
 
     /**
+     * Regional area of the employee's address.  For example, in the U.S., the region is the employee's state; in Canada, the region is the employee’s province.
      *
      * @var ?string $region
      */
@@ -68,6 +70,7 @@ class PropertyAtsCandidateAddress
     public ?string $region = null;
 
     /**
+     * Short form for the regional area of the employee's address.   For example, in the U.S., the region code is the two-letter abbreviation for the employee’s state; in Canada, the region is the two-letter abbreviation for the employee's province.
      *
      * @var ?string $regionCode
      */

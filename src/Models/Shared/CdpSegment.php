@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CdpSegment
 {
     /**
+     * How the segment membership is computed (REALTIME or BATCH)
      *
      * @var ?\Unified\Unified_to\Models\Shared\ComputeMode $computeMode
      */
@@ -21,6 +22,7 @@ class CdpSegment
     public ?ComputeMode $computeMode = null;
 
     /**
+     * The date that this segment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -29,6 +31,7 @@ class CdpSegment
     public ?\DateTime $createdAt = null;
 
     /**
+     * The membership rule/query that defines the segment
      *
      * @var ?string $definition
      */
@@ -37,6 +40,7 @@ class CdpSegment
     public ?string $definition = null;
 
     /**
+     * The description of the segment/audience
      *
      * @var ?string $description
      */
@@ -45,6 +49,7 @@ class CdpSegment
     public ?string $description = null;
 
     /**
+     * Unique identifier for this segment object
      *
      * @var ?string $id
      */
@@ -53,6 +58,7 @@ class CdpSegment
     public ?string $id = null;
 
     /**
+     * Whether the segment is active/enabled
      *
      * @var ?bool $isActive
      */
@@ -61,6 +67,7 @@ class CdpSegment
     public ?bool $isActive = null;
 
     /**
+     * The name of the segment/audience
      *
      * @var ?string $name
      */
@@ -69,7 +76,7 @@ class CdpSegment
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this segment
      *
      * @var ?array<string, mixed> $raw
      */
@@ -79,6 +86,7 @@ class CdpSegment
     public ?array $raw = null;
 
     /**
+     * The number of profiles currently in the segment
      *
      * @var ?float $size
      */
@@ -87,6 +95,7 @@ class CdpSegment
     public ?float $size = null;
 
     /**
+     * The data-plane handle/key used to identify segment membership in profiles and destinations
      *
      * @var ?string $slug
      */
@@ -95,6 +104,7 @@ class CdpSegment
     public ?string $slug = null;
 
     /**
+     * The cdp_source this segment originated from; points to CdpSource
      *
      * @var ?string $sourceId
      */
@@ -103,6 +113,7 @@ class CdpSegment
     public ?string $sourceId = null;
 
     /**
+     * The type of entity the segment targets (USERS, ACCOUNTS, LINKED)
      *
      * @var ?\Unified\Unified_to\Models\Shared\CdpSegmentType $type
      */
@@ -112,6 +123,7 @@ class CdpSegment
     public ?CdpSegmentType $type = null;
 
     /**
+     * The last date that this segment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

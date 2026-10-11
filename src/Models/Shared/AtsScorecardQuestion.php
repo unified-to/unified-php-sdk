@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AtsScorecardQuestion
 {
     /**
+     * The question to ask the interviewer
      *
      * @var string $text
      */
@@ -19,6 +20,7 @@ class AtsScorecardQuestion
     public string $text;
 
     /**
+     * Candidate’s answer to the question
      *
      * @var ?string $answer
      */

@@ -39,6 +39,7 @@ class AccountingProject
     public ?array $categoryIds = null;
 
     /**
+     * provider-side project code/number (e.g. NetSuite entityId, Intacct PROJECTID, BC jobNumber)
      *
      * @var ?string $code
      */
@@ -47,6 +48,7 @@ class AccountingProject
     public ?string $code = null;
 
     /**
+     * the customer the project is for (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -55,6 +57,7 @@ class AccountingProject
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -103,6 +106,7 @@ class AccountingProject
     public ?string $description = null;
 
     /**
+     * planned/target end date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -111,6 +115,7 @@ class AccountingProject
     public ?\DateTime $dueAt = null;
 
     /**
+     * actual completion (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endedAt
      */
@@ -183,6 +188,7 @@ class AccountingProject
     public ?string $locationId = null;
 
     /**
+     * references a HRIS employee/user (reference to HrisEmployee)
      *
      * @var ?string $managerUserId
      */
@@ -201,6 +207,7 @@ class AccountingProject
     public ?array $metadata = null;
 
     /**
+     * integer minutes, not hours
      *
      * @var ?float $minutesLogged
      */
@@ -209,6 +216,7 @@ class AccountingProject
     public ?float $minutesLogged = null;
 
     /**
+     * integer minutes, not hours
      *
      * @var ?float $minutesToBeInvoiced
      */
@@ -233,6 +241,7 @@ class AccountingProject
     public ?string $organizationId = null;
 
     /**
+     * parent project / sub-project hierarchy
      *
      * @var ?string $parentId
      */
@@ -241,6 +250,7 @@ class AccountingProject
     public ?string $parentId = null;
 
     /**
+     * 0-100
      *
      * @var ?float $percentComplete
      */
@@ -259,6 +269,7 @@ class AccountingProject
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startedAt
      */
@@ -284,6 +295,7 @@ class AccountingProject
     public ?float $toBeInvoicedAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

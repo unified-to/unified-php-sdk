@@ -28,6 +28,7 @@ class FormsForm
     public ?string $confirmationRedirectUrl = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -128,6 +129,7 @@ class FormsForm
     public ?float $responseCount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

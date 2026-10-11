@@ -42,7 +42,7 @@ class MessagingMessage
     public ?array $buttons = null;
 
     /**
-     * Represents the names of all channels to which the message is sent. Identifies the channels where the message is posted.
+     * Represents all channels to which the message is sent. Identifies the channels where the message is posted.  To send to the "Draft" channel/folder, use a channel ID "DRAFT".
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\MessagingReference> $channels
      */
@@ -52,6 +52,7 @@ class MessagingMessage
     public ?array $channels = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -138,6 +139,7 @@ class MessagingMessage
     public ?string $messageMarkdown = null;
 
     /**
+     * the opaque identifier for the first message in a thread  
      *
      * @var ?string $messageThreadIdentifier
      */
@@ -146,6 +148,7 @@ class MessagingMessage
     public ?string $messageThreadIdentifier = null;
 
     /**
+     * Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies.
      *
      * @var ?string $parentId
      */
@@ -174,6 +177,7 @@ class MessagingMessage
     public ?array $reactions = null;
 
     /**
+     * eg. RFC822 MessageID
      *
      * @var ?string $reference
      */
@@ -190,6 +194,7 @@ class MessagingMessage
     public ?string $subject = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

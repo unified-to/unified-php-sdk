@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class GenaiAgent
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -36,6 +37,7 @@ class GenaiAgent
     public ?string $id = null;
 
     /**
+     * The system prompt or stored procedure that the agent follows.
      *
      * @var ?string $instructions
      */
@@ -52,6 +54,7 @@ class GenaiAgent
     public ?bool $isActive = null;
 
     /**
+     * The model that the agent runs on.
      *
      * @var ?string $modelId
      */
@@ -78,6 +81,7 @@ class GenaiAgent
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

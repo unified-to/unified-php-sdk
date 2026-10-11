@@ -39,5 +39,6 @@ enum CreateAccountingExpenseQueryParamFields: string
     case Metadata = 'metadata';
     case TaxrateId = 'taxrate_id';
     case ExchangeRate = 'exchange_rate';
+    case Type = 'type';
     case Raw = 'raw';
 }

@@ -11,8 +11,10 @@
 * [createHrisDeduction](#createhrisdeduction) - Create a deduction
 * [createHrisDevice](#createhrisdevice) - Create a device
 * [createHrisDocument](#createhrisdocument) - Create a document
+* [createHrisEarning](#createhrisearning) - Create an earning
 * [createHrisEmployee](#createhrisemployee) - Create an employee
 * [createHrisGroup](#createhrisgroup) - Create a group
+* [createHrisJob](#createhrisjob) - Create a job
 * [createHrisLocation](#createhrislocation) - Create a location
 * [createHrisTaxonomy](#createhristaxonomy) - Create a taxonomy
 * [createHrisTimeoff](#createhristimeoff) - Create a timeoff
@@ -24,9 +26,13 @@
 * [getHrisDeduction](#gethrisdeduction) - Retrieve a deduction
 * [getHrisDevice](#gethrisdevice) - Retrieve a device
 * [getHrisDocument](#gethrisdocument) - Retrieve a document
+* [getHrisEarning](#gethrisearning) - Retrieve an earning
 * [getHrisEmployee](#gethrisemployee) - Retrieve an employee
 * [getHrisGroup](#gethrisgroup) - Retrieve a group
+* [getHrisJob](#gethrisjob) - Retrieve a job
 * [getHrisLocation](#gethrislocation) - Retrieve a location
+* [getHrisPaycode](#gethrispaycode) - Retrieve a paycode
+* [getHrisPayroll](#gethrispayroll) - Retrieve a payroll
 * [getHrisPayslip](#gethrispayslip) - Retrieve a payslip
 * [getHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
 * [getHrisTimeoff](#gethristimeoff) - Retrieve a timeoff
@@ -38,9 +44,13 @@
 * [listHrisDeductions](#listhrisdeductions) - List all deductions
 * [listHrisDevices](#listhrisdevices) - List all devices
 * [listHrisDocuments](#listhrisdocuments) - List all documents
+* [listHrisEarnings](#listhrisearnings) - List all earnings
 * [listHrisEmployees](#listhrisemployees) - List all employees
 * [listHrisGroups](#listhrisgroups) - List all groups
+* [listHrisJobs](#listhrisjobs) - List all jobs
 * [listHrisLocations](#listhrislocations) - List all locations
+* [listHrisPaycodes](#listhrispaycodes) - List all paycodes
+* [listHrisPayrolls](#listhrispayrolls) - List all payrolls
 * [listHrisPayslips](#listhrispayslips) - List all payslips
 * [listHrisTaxonomies](#listhristaxonomies) - List all taxonomies
 * [listHrisTimeoffs](#listhristimeoffs) - List all timeoffs
@@ -52,8 +62,10 @@
 * [patchHrisDeduction](#patchhrisdeduction) - Update a deduction
 * [patchHrisDevice](#patchhrisdevice) - Update a device
 * [patchHrisDocument](#patchhrisdocument) - Update a document
+* [patchHrisEarning](#patchhrisearning) - Update an earning
 * [patchHrisEmployee](#patchhrisemployee) - Update an employee
 * [patchHrisGroup](#patchhrisgroup) - Update a group
+* [patchHrisJob](#patchhrisjob) - Update a job
 * [patchHrisLocation](#patchhrislocation) - Update a location
 * [patchHrisTimeoff](#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
@@ -64,8 +76,10 @@
 * [removeHrisDeduction](#removehrisdeduction) - Remove a deduction
 * [removeHrisDevice](#removehrisdevice) - Remove a device
 * [removeHrisDocument](#removehrisdocument) - Remove a document
+* [removeHrisEarning](#removehrisearning) - Remove an earning
 * [removeHrisEmployee](#removehrisemployee) - Remove an employee
 * [removeHrisGroup](#removehrisgroup) - Remove a group
+* [removeHrisJob](#removehrisjob) - Remove a job
 * [removeHrisLocation](#removehrislocation) - Remove a location
 * [removeHrisTimeoff](#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
@@ -76,8 +90,10 @@
 * [updateHrisDeduction](#updatehrisdeduction) - Update a deduction
 * [updateHrisDevice](#updatehrisdevice) - Update a device
 * [updateHrisDocument](#updatehrisdocument) - Update a document
+* [updateHrisEarning](#updatehrisearning) - Update an earning
 * [updateHrisEmployee](#updatehrisemployee) - Update an employee
 * [updateHrisGroup](#updatehrisgroup) - Update a group
+* [updateHrisJob](#updatehrisjob) - Update a job
 * [updateHrisLocation](#updatehrislocation) - Update a location
 * [updateHrisTimeoff](#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
@@ -115,31 +131,31 @@ $request = new Operations\CreateHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-08-13T10:41:42.336Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-08-13T11:22:36.334Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 12,
-                endAt: Utils\Utils::parseDateTime('2023-10-23T21:17:35.680Z'),
+                endAt: Utils\Utils::parseDateTime('2023-11-01T14:11:00.163Z'),
                 id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
                 isPaid: true,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-10-17T01:29:11.478Z'),
+                startAt: Utils\Utils::parseDateTime('2023-10-25T16:36:12.599Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'UGX',
         declaredTipsAmount: 161,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-04-07T14:50:55.145Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-18T03:03:15.706Z'),
         hourlyRate: 53,
         hours: 10,
-        id: '4dc42a25-5423-40c7-8e9f-7a6ee2825a9d',
+        id: 'e74e69eb-6766-4f84-94d3-88c4a2a8a630',
         jobName: 'Global Creative Supervisor',
         nonCashTipsAmount: 54,
-        startAt: Utils\Utils::parseDateTime('2021-11-09T13:41:47.651Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-10T13:16:20.859Z'),
         status: Shared\HrisAttendanceStatus::Closed,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-17T07:09:09.539Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-19T00:35:00.181Z'),
     ),
     connectionId: '<id>',
 );
@@ -198,12 +214,17 @@ $request = new Operations\CreateHrisBankaccountRequest(
         accountNumberLast4: '3777',
         accountType: Shared\HrisBankaccountAccountType::Checking,
         bankName: 'Huel Group',
+        countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
-        id: 'c82c9187-bf76-4b65-bf02-79054582a285',
+        currency: 'USD',
+        id: '7e815bf9-ec7a-4ee8-8911-f21a079cef3c',
         isPrimary: false,
         name: 'Checking Account',
+        priority: 3,
         routingNumber: '448650724',
-        updatedAt: Utils\Utils::parseDateTime('2025-06-06T18:00:27.146Z'),
+        splitAmount: 23,
+        splitType: Shared\SplitType::Fixed,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-23T03:38:54.315Z'),
     ),
     connectionId: '<id>',
 );
@@ -265,13 +286,13 @@ $request = new Operations\CreateHrisBenefitRequest(
         employerContributionAmount: 185006,
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
-        frequency: Shared\HrisBenefitFrequency::Hour,
-        id: 'b395db38-c261-454e-9bfe-9466e617f2ee',
+        frequency: Shared\HrisBenefitFrequency::Month,
+        id: '8fdc527a-4da8-453b-ac64-f5e6c64924cd',
         isActive: false,
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
-        type: Shared\HrisBenefitType::Garnishment,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-07T16:17:00.575Z'),
+        type: Shared\HrisBenefitType::Other,
+        updatedAt: Utils\Utils::parseDateTime('2023-03-16T11:45:05.623Z'),
     ),
     connectionId: '<id>',
 );
@@ -335,10 +356,10 @@ $request = new Operations\CreateHrisCompanyRequest(
             regionCode: 'PA',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: '06e7e4d7-17be-4700-8e1d-0a3f524df53c',
+        id: '42ce1d4c-f8bd-454a-b563-5591888df93e',
         legalName: 'Schultz LLC',
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-09-08T15:55:10.653Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-28T17:57:11.728Z'),
     ),
     connectionId: '<id>',
 );
@@ -396,14 +417,17 @@ $request = new Operations\CreateHrisDeductionRequest(
         amount: 139655,
         coverageLevel: Shared\HrisDeductionCoverageLevel::EmployeeOnly,
         createdAt: Utils\Utils::parseDateTime('2020-02-05T01:46:31.384Z'),
-        endAt: Utils\Utils::parseDateTime('2026-05-25T14:43:59.509Z'),
-        frequency: Shared\HrisDeductionFrequency::Month,
-        id: 'c829711a-715d-455b-bb4d-00ee88c2deb9',
+        employerAmount: 22611,
+        employerType: Shared\EmployerType::Fixed,
+        endAt: Utils\Utils::parseDateTime('2026-06-13T20:04:08.022Z'),
+        frequency: Shared\HrisDeductionFrequency::Biweekly,
+        garnishmentType: Shared\GarnishmentType::Other,
+        id: '05d38118-0f78-4663-824a-01818995c24c',
         isActive: false,
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-02-20T07:45:12.827Z'),
+        startAt: Utils\Utils::parseDateTime('2025-03-07T17:01:33.631Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-03T17:00:24.883Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-16T03:23:54.844Z'),
     ),
     connectionId: '<id>',
 );
@@ -466,14 +490,14 @@ $request = new Operations\CreateHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: true,
-        id: 'e592d58c-449d-47c3-b4f2-cc9f41866826',
+        id: 'd2057774-4f79-4124-be41-78903376fc22',
         isMissing: false,
         manufacturer: 'Sanford - Hamill',
         model: 'Refined',
         name: 'cross_contamination_if.rar',
         os: 'monitor',
         osVersion: '1.12.16',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-22T14:06:09.513Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-02T18:33:40.574Z'),
         version: '2.20.17',
     ),
     connectionId: '<id>',
@@ -532,9 +556,9 @@ $request = new Operations\CreateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: 'c36ce7b1-e96d-4546-8310-2b1cd2427e9f',
+        id: '54907c15-9207-4304-b1bd-58e1fe8fe4cb',
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-19T03:46:30.170Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-04T03:56:54.229Z'),
     ),
     connectionId: '<id>',
 );
@@ -557,6 +581,69 @@ if ($response->hrisDocument !== null) {
 ### Response
 
 **[?Operations\CreateHrisDocumentResponse](../../Models/Operations/CreateHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createHrisEarning
+
+Create an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createHrisEarning" method="post" path="/hris/{connection_id}/earning" example="hris_earning" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateHrisEarningRequest(
+    hrisEarning: new Shared\HrisEarning(
+        amount: 4026,
+        createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
+        currency: 'PKR',
+        frequency: Shared\HrisEarningFrequency::Biweekly,
+        id: '1368dfbd-9cf1-4ec1-819f-052f1603a7b3',
+        notes: 'Truculenter vinum beatae.',
+        startAt: Utils\Utils::parseDateTime('2022-07-20T23:26:03.276Z'),
+        status: Shared\HrisEarningStatus::Processed,
+        updatedAt: Utils\Utils::parseDateTime('2020-02-07T12:24:47.606Z'),
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->hris->createHrisEarning(
+    request: $request
+);
+
+if ($response->hrisEarning !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateHrisEarningRequest](../../Models/Operations/CreateHrisEarningRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\CreateHrisEarningResponse](../../Models/Operations/CreateHrisEarningResponse.md)**
 
 ### Errors
 
@@ -601,11 +688,11 @@ $request = new Operations\CreateHrisEmployeeRequest(
         bio: 'sushi devotee, singer',
         compensation: [
             new Shared\HrisCompensation(
-                amount: 69148,
+                amount: 60136,
                 currency: 'CRC',
                 frequency: Shared\HrisCompensationFrequency::Quarter,
                 notes: 'Tergeo laborum laboriosam tutis.',
-                type: Shared\HrisCompensationType::Equity,
+                type: Shared\HrisCompensationType::StockOptions,
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
@@ -621,10 +708,11 @@ $request = new Operations\CreateHrisEmployeeRequest(
         employmentStatus: Shared\EmploymentStatus::Active,
         employmentType: Shared\HrisEmployeeEmploymentType::Volunteer,
         firstName: 'Zetta',
+        flsaStatus: Shared\FlsaStatus::SalariedNonexempt,
         gender: Shared\HrisEmployeeGender::Intersex,
-        hasMfa: true,
-        hiredAt: Utils\Utils::parseDateTime('2023-05-12T03:12:11.486Z'),
-        id: '38a79fa8-80b1-4659-b0a6-327121c773f1',
+        hasMfa: false,
+        hiredAt: Utils\Utils::parseDateTime('2023-05-22T15:44:14.310Z'),
+        id: '17ed493b-6e5c-4453-bf9f-c4ae590fc095',
         imageUrl: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
         languageLocale: 'es',
         lastName: 'Prohaska',
@@ -636,13 +724,14 @@ $request = new Operations\CreateHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: 'f5bf964b-886a-4dd4-bc29-e4151986a960',
+                id: '26a1704a-8a68-4f61-b9cb-080b07a7d39b',
                 namespace: 'custom',
                 slug: 'custom_property',
-                value: 'tenetur',
+                value: 'appono',
             ),
         ],
         name: 'Zetta Prohaska',
+        payFrequency: Shared\PayFrequency::Biweekly,
         pronouns: 'she/her',
         relationships: [
             new Shared\HrisEmployeerelationship(
@@ -658,38 +747,35 @@ $request = new Operations\CreateHrisEmployeeRequest(
                     ),
                 ],
                 name: 'Automotive',
-                type: Shared\HrisEmployeerelationshipType::Emergency,
+                type: Shared\HrisEmployeerelationshipType::Friend,
             ),
             new Shared\HrisEmployeerelationship(
                 emails: [
                     new Shared\HrisEmail(
                         email: 'Benedict_Wisozk83@hotmail.com',
                     ),
-                    new Shared\HrisEmail(
-                        email: 'Princess_Rath43@gmail.com',
-                    ),
-                    new Shared\HrisEmail(
-                        email: 'Elmira92@yahoo.com',
-                    ),
                 ],
                 name: 'Music',
-                type: Shared\HrisEmployeerelationshipType::Friend,
+                type: Shared\HrisEmployeerelationshipType::Sibling,
             ),
             new Shared\HrisEmployeerelationship(
                 emails: [
                     new Shared\HrisEmail(
-                        email: 'Jane30@gmail.com',
+                        email: 'Margot11@yahoo.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Jaden_Miller@gmail.com',
                     ),
                 ],
-                name: 'Jewelry',
-                type: Shared\HrisEmployeerelationshipType::Sibling,
+                name: 'Electronics',
+                type: Shared\HrisEmployeerelationshipType::Other,
             ),
         ],
         salutation: 'Miss',
         ssnSin: 'yMRtj0Q3xO',
-        storageQuotaAllocated: 3674489,
-        storageQuotaAvailable: 7748057,
-        storageQuotaUsed: 301727,
+        storageQuotaAllocated: 7748057,
+        storageQuotaAvailable: 1590710,
+        storageQuotaUsed: 730343,
         telephones: [
             new Shared\HrisTelephone(
                 telephone: '(409) 801-3705',
@@ -701,7 +787,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
         timeoffDaysUsed: 6,
         timezone: 'Africa/Harare',
         title: 'Investor Paradigm Liaison',
-        updatedAt: Utils\Utils::parseDateTime('2022-02-20T06:18:08.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-27T06:23:56.438Z'),
     ),
     connectionId: '<id>',
 );
@@ -758,11 +844,11 @@ $request = new Operations\CreateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '5536364b-d302-4a73-96c0-7b59633aa9a4',
+        id: '8cc2b705-c0d0-4395-9505-75415822ceed',
         isActive: false,
         name: 'Games',
-        type: Shared\HrisGroupType::BusinessUnit,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-26T00:08:53.897Z'),
+        type: Shared\HrisGroupType::Branch,
+        updatedAt: Utils\Utils::parseDateTime('2026-05-13T09:10:59.146Z'),
     ),
     connectionId: '<id>',
 );
@@ -785,6 +871,68 @@ if ($response->hrisGroup !== null) {
 ### Response
 
 **[?Operations\CreateHrisGroupResponse](../../Models/Operations/CreateHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createHrisJob
+
+Create a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" example="hris_job" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateHrisJobRequest(
+    hrisJob: new Shared\HrisJob(
+        code: 'P-05547',
+        createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
+        description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
+        employmentType: Shared\HrisJobEmploymentType::Freelance,
+        id: '00e817dd-4168-4184-b834-7236d1199e80',
+        isActive: false,
+        name: 'Internal Integration Specialist',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T10:46:31.821Z'),
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->hris->createHrisJob(
+    request: $request
+);
+
+if ($response->hrisJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\CreateHrisJobRequest](../../Models/Operations/CreateHrisJobRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\CreateHrisJobResponse](../../Models/Operations/CreateHrisJobResponse.md)**
 
 ### Errors
 
@@ -829,8 +977,8 @@ $request = new Operations\CreateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MUR',
         description: 'Acervus caries.',
-        externalIdentifier: 'a4b2700b-1f32-461e-bdb2-b452e0c5c022',
-        id: 'babcc944-d428-43aa-902f-1d0ca3e00057',
+        externalIdentifier: 'cf90be07-bf08-4542-ae05-d6af5965c6f1',
+        id: '1e53dfa8-5595-4dc1-bcc5-10de4c8bdcba',
         isActive: true,
         isHq: false,
         languageLocale: 'fr',
@@ -850,7 +998,7 @@ $request = new Operations\CreateHrisLocationRequest(
             ),
         ],
         timezone: 'America/Guyana',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-10T01:13:57.534Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-17T10:41:08.849Z'),
     ),
     connectionId: '<id>',
 );
@@ -917,7 +1065,7 @@ $request = new Operations\CreateHrisTaxonomyRequest(
         ],
         subcategory: 'Bamboo',
         type: Shared\HrisTaxonomyType::Knowledge,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-22T19:24:30.042Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-27T03:47:17.200Z'),
         url: 'https://our-polarisation.name',
     ),
     connectionId: '<id>',
@@ -973,20 +1121,20 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-21T02:08:20.330Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-22T14:56:26.764Z'),
         comments: 'Blandior ventus curiositas amplitudo.',
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2024-12-09T08:52:11.281Z'),
-        id: '3766cf5c-9dcb-4419-9212-a74a979cf1ee',
+        endAt: Utils\Utils::parseDateTime('2024-12-22T07:36:18.995Z'),
+        id: '8b4b4675-624e-476c-96de-e8be644dc6f6',
         isPaid: true,
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-08-24T08:25:05.389Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-01T00:24:06.966Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-08T05:45:54.437Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-11T07:19:06.143Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -1042,24 +1190,24 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2023-06-07T03:05:14.680Z'),
+        approvedAt: Utils\Utils::parseDateTime('2023-06-18T03:09:21.270Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
                 currency: 'JPY',
-                frequency: Shared\HrisCompensationFrequency::Hour,
+                frequency: Shared\HrisCompensationFrequency::Week,
                 notes: 'Annus adficio suasoria architecto aggero.',
-                type: Shared\HrisCompensationType::Other,
+                type: Shared\HrisCompensationType::Commission,
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-08-28T03:01:07.094Z'),
+        endAt: Utils\Utils::parseDateTime('2026-09-17T03:41:27.361Z'),
         hours: 8,
-        id: '9f128688-46cc-481b-a41e-503d0c962370',
+        id: '019ea5ad-589d-41bc-bc20-1df4380434fb',
         isApproved: true,
-        startAt: Utils\Utils::parseDateTime('2023-06-26T08:32:27.006Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-06-23T15:17:01.677Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-07T12:08:41.034Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-29T04:09:33.284Z'),
     ),
     connectionId: '<id>',
 );
@@ -1446,6 +1594,57 @@ if ($response->hrisDocument !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getHrisEarning
+
+Retrieve an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHrisEarning" method="get" path="/hris/{connection_id}/earning/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHrisEarningRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->getHrisEarning(
+    request: $request
+);
+
+if ($response->hrisEarning !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetHrisEarningRequest](../../Models/Operations/GetHrisEarningRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetHrisEarningResponse](../../Models/Operations/GetHrisEarningResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getHrisEmployee
 
 Retrieve an employee
@@ -1548,6 +1747,57 @@ if ($response->hrisGroup !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getHrisJob
+
+Retrieve a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHrisJob" method="get" path="/hris/{connection_id}/job/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHrisJobRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->getHrisJob(
+    request: $request
+);
+
+if ($response->hrisJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `$request`                                                                   | [Operations\GetHrisJobRequest](../../Models/Operations/GetHrisJobRequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+
+### Response
+
+**[?Operations\GetHrisJobResponse](../../Models/Operations/GetHrisJobResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getHrisLocation
 
 Retrieve a location
@@ -1592,6 +1842,108 @@ if ($response->hrisLocation !== null) {
 ### Response
 
 **[?Operations\GetHrisLocationResponse](../../Models/Operations/GetHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getHrisPaycode
+
+Retrieve a paycode
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHrisPaycode" method="get" path="/hris/{connection_id}/paycode/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHrisPaycodeRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->getHrisPaycode(
+    request: $request
+);
+
+if ($response->hrisPaycode !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetHrisPaycodeRequest](../../Models/Operations/GetHrisPaycodeRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetHrisPaycodeResponse](../../Models/Operations/GetHrisPaycodeResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getHrisPayroll
+
+Retrieve a payroll
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHrisPayroll" method="get" path="/hris/{connection_id}/payroll/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHrisPayrollRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->getHrisPayroll(
+    request: $request
+);
+
+if ($response->hrisPayroll !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetHrisPayrollRequest](../../Models/Operations/GetHrisPayrollRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetHrisPayrollResponse](../../Models/Operations/GetHrisPayrollResponse.md)**
 
 ### Errors
 
@@ -2153,6 +2505,56 @@ if ($response->hrisDocuments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listHrisEarnings
+
+List all earnings
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHrisEarnings" method="get" path="/hris/{connection_id}/earning" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHrisEarningsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->hris->listHrisEarnings(
+    request: $request
+);
+
+if ($response->hrisEarnings !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListHrisEarningsRequest](../../Models/Operations/ListHrisEarningsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\ListHrisEarningsResponse](../../Models/Operations/ListHrisEarningsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listHrisEmployees
 
 List all employees
@@ -2253,6 +2655,56 @@ if ($response->hrisGroups !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listHrisJobs
+
+List all jobs
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHrisJobs" method="get" path="/hris/{connection_id}/job" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHrisJobsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->hris->listHrisJobs(
+    request: $request
+);
+
+if ($response->hrisJobs !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\ListHrisJobsRequest](../../Models/Operations/ListHrisJobsRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\ListHrisJobsResponse](../../Models/Operations/ListHrisJobsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listHrisLocations
 
 List all locations
@@ -2296,6 +2748,106 @@ if ($response->hrisLocations !== null) {
 ### Response
 
 **[?Operations\ListHrisLocationsResponse](../../Models/Operations/ListHrisLocationsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listHrisPaycodes
+
+List all paycodes
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHrisPaycodes" method="get" path="/hris/{connection_id}/paycode" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHrisPaycodesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->hris->listHrisPaycodes(
+    request: $request
+);
+
+if ($response->hrisPaycodes !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListHrisPaycodesRequest](../../Models/Operations/ListHrisPaycodesRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\ListHrisPaycodesResponse](../../Models/Operations/ListHrisPaycodesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listHrisPayrolls
+
+List all payrolls
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHrisPayrolls" method="get" path="/hris/{connection_id}/payroll" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHrisPayrollsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->hris->listHrisPayrolls(
+    request: $request
+);
+
+if ($response->hrisPayrolls !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListHrisPayrollsRequest](../../Models/Operations/ListHrisPayrollsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\ListHrisPayrollsResponse](../../Models/Operations/ListHrisPayrollsResponse.md)**
 
 ### Errors
 
@@ -2536,31 +3088,31 @@ $request = new Operations\PatchHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-08-13T10:41:42.336Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-08-13T11:22:36.334Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 12,
-                endAt: Utils\Utils::parseDateTime('2023-10-23T21:17:35.691Z'),
+                endAt: Utils\Utils::parseDateTime('2023-11-01T14:11:00.170Z'),
                 id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
                 isPaid: true,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-10-17T01:29:11.489Z'),
+                startAt: Utils\Utils::parseDateTime('2023-10-25T16:36:12.606Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'UGX',
         declaredTipsAmount: 161,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-04-07T14:50:55.159Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-18T03:03:15.715Z'),
         hourlyRate: 53,
         hours: 10,
-        id: '6a4550f7-d438-4b96-af25-c8104c25caf9',
+        id: '586b8503-23ff-4bd9-b402-8f95bc8a4a34',
         jobName: 'Global Creative Supervisor',
         nonCashTipsAmount: 54,
-        startAt: Utils\Utils::parseDateTime('2021-11-09T13:41:47.653Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-10T13:16:20.860Z'),
         status: Shared\HrisAttendanceStatus::Closed,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-17T07:09:09.542Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-19T00:35:00.183Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2620,12 +3172,17 @@ $request = new Operations\PatchHrisBankaccountRequest(
         accountNumberLast4: '3777',
         accountType: Shared\HrisBankaccountAccountType::Checking,
         bankName: 'Huel Group',
+        countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
-        id: '6005b494-a4b0-4602-8c37-94e7048e00e8',
+        currency: 'USD',
+        id: '5068078d-c2ce-4bc7-8594-995ea7c9bf7d',
         isPrimary: false,
         name: 'Checking Account',
+        priority: 3,
         routingNumber: '448650724',
-        updatedAt: Utils\Utils::parseDateTime('2025-06-06T18:00:27.158Z'),
+        splitAmount: 23,
+        splitType: Shared\SplitType::Fixed,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-23T03:38:54.324Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2688,13 +3245,13 @@ $request = new Operations\PatchHrisBenefitRequest(
         employerContributionAmount: 185006,
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
-        frequency: Shared\HrisBenefitFrequency::Hour,
-        id: '03fe3c3a-0a32-4f47-af0e-f9e4092754de',
+        frequency: Shared\HrisBenefitFrequency::Month,
+        id: '3d2c72ae-7c09-4c9f-ad7c-0fc18839d305',
         isActive: false,
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
-        type: Shared\HrisBenefitType::Garnishment,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-07T16:17:00.582Z'),
+        type: Shared\HrisBenefitType::Other,
+        updatedAt: Utils\Utils::parseDateTime('2023-03-16T11:45:05.630Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2759,10 +3316,10 @@ $request = new Operations\PatchHrisCompanyRequest(
             regionCode: 'PA',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: '85a95ea9-94dd-4928-a69f-aaef5373741a',
+        id: 'f9820fdd-0c4e-4cbf-9b93-dac1efb81aaf',
         legalName: 'Schultz LLC',
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-09-08T15:55:10.670Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-28T17:57:11.742Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2821,14 +3378,17 @@ $request = new Operations\PatchHrisDeductionRequest(
         amount: 139655,
         coverageLevel: Shared\HrisDeductionCoverageLevel::EmployeeOnly,
         createdAt: Utils\Utils::parseDateTime('2020-02-05T01:46:31.384Z'),
-        endAt: Utils\Utils::parseDateTime('2026-05-25T14:43:59.520Z'),
-        frequency: Shared\HrisDeductionFrequency::Month,
-        id: 'a126ff04-6413-411e-932d-9a25af613ff0',
+        employerAmount: 22611,
+        employerType: Shared\EmployerType::Fixed,
+        endAt: Utils\Utils::parseDateTime('2026-06-13T20:04:08.043Z'),
+        frequency: Shared\HrisDeductionFrequency::Biweekly,
+        garnishmentType: Shared\GarnishmentType::Other,
+        id: '694f5bac-c102-49b9-a80c-f01052d74fc7',
         isActive: false,
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-02-20T07:45:12.836Z'),
+        startAt: Utils\Utils::parseDateTime('2025-03-07T17:01:33.648Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-03T17:00:24.891Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-16T03:23:54.858Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2892,14 +3452,14 @@ $request = new Operations\PatchHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: true,
-        id: '52148932-32c0-49fe-bd1f-9a5c66b73d70',
+        id: '5174313e-a747-4f8f-b1f6-787292713f4a',
         isMissing: false,
         manufacturer: 'Sanford - Hamill',
         model: 'Refined',
         name: 'cross_contamination_if.rar',
         os: 'monitor',
         osVersion: '1.12.16',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-22T14:06:09.520Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-02T18:33:40.578Z'),
         version: '2.20.17',
     ),
     connectionId: '<id>',
@@ -2959,9 +3519,9 @@ $request = new Operations\PatchHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: '23391a53-5d85-4874-b27c-6cc01144df3c',
+        id: '86541b69-8e13-4e0a-ae7d-943b71e74b4c',
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-19T03:46:30.178Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-04T03:56:54.241Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2985,6 +3545,70 @@ if ($response->hrisDocument !== null) {
 ### Response
 
 **[?Operations\PatchHrisDocumentResponse](../../Models/Operations/PatchHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchHrisEarning
+
+Update an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchHrisEarning" method="patch" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchHrisEarningRequest(
+    hrisEarning: new Shared\HrisEarning(
+        amount: 4026,
+        createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
+        currency: 'PKR',
+        frequency: Shared\HrisEarningFrequency::Biweekly,
+        id: '59a0433c-3ed7-4583-85d3-4ba7f5f7e9d8',
+        notes: 'Truculenter vinum beatae.',
+        startAt: Utils\Utils::parseDateTime('2022-07-20T23:26:03.282Z'),
+        status: Shared\HrisEarningStatus::Processed,
+        updatedAt: Utils\Utils::parseDateTime('2020-02-07T12:24:47.607Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->patchHrisEarning(
+    request: $request
+);
+
+if ($response->hrisEarning !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchHrisEarningRequest](../../Models/Operations/PatchHrisEarningRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\PatchHrisEarningResponse](../../Models/Operations/PatchHrisEarningResponse.md)**
 
 ### Errors
 
@@ -3029,11 +3653,11 @@ $request = new Operations\PatchHrisEmployeeRequest(
         bio: 'sushi devotee, singer',
         compensation: [
             new Shared\HrisCompensation(
-                amount: 69148,
+                amount: 60136,
                 currency: 'CRC',
                 frequency: Shared\HrisCompensationFrequency::Quarter,
                 notes: 'Tergeo laborum laboriosam tutis.',
-                type: Shared\HrisCompensationType::Equity,
+                type: Shared\HrisCompensationType::StockOptions,
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
@@ -3049,10 +3673,11 @@ $request = new Operations\PatchHrisEmployeeRequest(
         employmentStatus: Shared\EmploymentStatus::Active,
         employmentType: Shared\HrisEmployeeEmploymentType::Volunteer,
         firstName: 'Zetta',
+        flsaStatus: Shared\FlsaStatus::SalariedNonexempt,
         gender: Shared\HrisEmployeeGender::Intersex,
-        hasMfa: true,
-        hiredAt: Utils\Utils::parseDateTime('2023-05-12T03:12:11.541Z'),
-        id: '58337faa-4e32-4102-b7c8-c1d452691dbf',
+        hasMfa: false,
+        hiredAt: Utils\Utils::parseDateTime('2023-05-22T15:44:14.369Z'),
+        id: 'f8e282cf-d934-44ec-a6e9-aa6ac2875cb7',
         imageUrl: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
         languageLocale: 'es',
         lastName: 'Prohaska',
@@ -3064,13 +3689,14 @@ $request = new Operations\PatchHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: 'dc9e304c-74a8-4e11-aa99-780c6ad1af40',
+                id: '1e5ed876-f4a7-4735-b4b6-66d2390b286b',
                 namespace: 'custom',
                 slug: 'custom_property',
-                value: 'tenetur',
+                value: 'appono',
             ),
         ],
         name: 'Zetta Prohaska',
+        payFrequency: Shared\PayFrequency::Biweekly,
         pronouns: 'she/her',
         relationships: [
             new Shared\HrisEmployeerelationship(
@@ -3086,38 +3712,35 @@ $request = new Operations\PatchHrisEmployeeRequest(
                     ),
                 ],
                 name: 'Automotive',
-                type: Shared\HrisEmployeerelationshipType::Emergency,
+                type: Shared\HrisEmployeerelationshipType::Friend,
             ),
             new Shared\HrisEmployeerelationship(
                 emails: [
                     new Shared\HrisEmail(
                         email: 'Benedict_Wisozk83@hotmail.com',
                     ),
-                    new Shared\HrisEmail(
-                        email: 'Princess_Rath43@gmail.com',
-                    ),
-                    new Shared\HrisEmail(
-                        email: 'Elmira92@yahoo.com',
-                    ),
                 ],
                 name: 'Music',
-                type: Shared\HrisEmployeerelationshipType::Friend,
+                type: Shared\HrisEmployeerelationshipType::Sibling,
             ),
             new Shared\HrisEmployeerelationship(
                 emails: [
                     new Shared\HrisEmail(
-                        email: 'Jane30@gmail.com',
+                        email: 'Margot11@yahoo.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Jaden_Miller@gmail.com',
                     ),
                 ],
-                name: 'Jewelry',
-                type: Shared\HrisEmployeerelationshipType::Sibling,
+                name: 'Electronics',
+                type: Shared\HrisEmployeerelationshipType::Other,
             ),
         ],
         salutation: 'Miss',
         ssnSin: 'yMRtj0Q3xO',
-        storageQuotaAllocated: 3674489,
-        storageQuotaAvailable: 7748057,
-        storageQuotaUsed: 301727,
+        storageQuotaAllocated: 7748057,
+        storageQuotaAvailable: 1590710,
+        storageQuotaUsed: 730343,
         telephones: [
             new Shared\HrisTelephone(
                 telephone: '(409) 801-3705',
@@ -3129,7 +3752,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
         timeoffDaysUsed: 6,
         timezone: 'Africa/Harare',
         title: 'Investor Paradigm Liaison',
-        updatedAt: Utils\Utils::parseDateTime('2022-02-20T06:18:08.666Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-27T06:23:56.477Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3187,11 +3810,11 @@ $request = new Operations\PatchHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '3d2f3a6f-a93f-4944-9979-441dfe433fe9',
+        id: 'f55bf44f-d748-4699-98be-3b63f29cb8b8',
         isActive: false,
         name: 'Games',
-        type: Shared\HrisGroupType::BusinessUnit,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-26T00:08:53.907Z'),
+        type: Shared\HrisGroupType::Branch,
+        updatedAt: Utils\Utils::parseDateTime('2026-05-13T09:10:59.153Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3215,6 +3838,69 @@ if ($response->hrisGroup !== null) {
 ### Response
 
 **[?Operations\PatchHrisGroupResponse](../../Models/Operations/PatchHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchHrisJobRequest(
+    hrisJob: new Shared\HrisJob(
+        code: 'P-05547',
+        createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
+        description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
+        employmentType: Shared\HrisJobEmploymentType::Freelance,
+        id: 'f6c68600-9698-4e15-bc64-586f729ee803',
+        isActive: false,
+        name: 'Internal Integration Specialist',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T10:46:31.859Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->patchHrisJob(
+    request: $request
+);
+
+if ($response->hrisJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\PatchHrisJobRequest](../../Models/Operations/PatchHrisJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\PatchHrisJobResponse](../../Models/Operations/PatchHrisJobResponse.md)**
 
 ### Errors
 
@@ -3259,8 +3945,8 @@ $request = new Operations\PatchHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MUR',
         description: 'Acervus caries.',
-        externalIdentifier: '996e7b27-7913-4e41-b567-67ebb6db77ef',
-        id: '8aada89e-1868-4e4d-9fcc-6e895a06d15d',
+        externalIdentifier: '514209de-9c29-4060-acaf-75af1d4884d7',
+        id: '710eed80-ff85-4b44-80c5-8b4d22e2ab36',
         isActive: true,
         isHq: false,
         languageLocale: 'fr',
@@ -3280,7 +3966,7 @@ $request = new Operations\PatchHrisLocationRequest(
             ),
         ],
         timezone: 'America/Guyana',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-10T01:13:57.540Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-17T10:41:08.855Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3336,20 +4022,20 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-21T02:08:20.331Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-22T14:56:26.765Z'),
         comments: 'Blandior ventus curiositas amplitudo.',
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2024-12-09T08:52:11.290Z'),
-        id: '1b90647f-5bb3-4551-b5f1-77cbcbbc655e',
+        endAt: Utils\Utils::parseDateTime('2024-12-22T07:36:19.005Z'),
+        id: '62c80396-58c6-4819-a48d-b6f68f9a1a71',
         isPaid: true,
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-08-24T08:25:05.395Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-01T00:24:06.972Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-08T05:45:54.439Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-11T07:19:06.145Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -3406,24 +4092,24 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2023-06-07T03:05:14.688Z'),
+        approvedAt: Utils\Utils::parseDateTime('2023-06-18T03:09:21.276Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
                 currency: 'JPY',
-                frequency: Shared\HrisCompensationFrequency::Hour,
+                frequency: Shared\HrisCompensationFrequency::Week,
                 notes: 'Annus adficio suasoria architecto aggero.',
-                type: Shared\HrisCompensationType::Other,
+                type: Shared\HrisCompensationType::Commission,
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-08-28T03:01:07.109Z'),
+        endAt: Utils\Utils::parseDateTime('2026-09-17T03:41:27.371Z'),
         hours: 8,
-        id: '2492c6df-e2c6-450f-af6d-7db5a8f448c0',
+        id: '2115c4ae-1887-4cad-b775-61a475b5af0f',
         isApproved: true,
-        startAt: Utils\Utils::parseDateTime('2023-06-26T08:32:27.015Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-06-23T15:17:01.681Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-07T12:08:41.040Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-29T04:09:33.287Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3811,6 +4497,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeHrisEarning
+
+Remove an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeHrisEarning" method="delete" path="/hris/{connection_id}/earning/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveHrisEarningRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->removeHrisEarning(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveHrisEarningRequest](../../Models/Operations/RemoveHrisEarningRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\RemoveHrisEarningResponse](../../Models/Operations/RemoveHrisEarningResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeHrisEmployee
 
 Remove an employee
@@ -3906,6 +4643,57 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveHrisGroupResponse](../../Models/Operations/RemoveHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeHrisJob
+
+Remove a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeHrisJob" method="delete" path="/hris/{connection_id}/job/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveHrisJobRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->removeHrisJob(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\RemoveHrisJobRequest](../../Models/Operations/RemoveHrisJobRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\RemoveHrisJobResponse](../../Models/Operations/RemoveHrisJobResponse.md)**
 
 ### Errors
 
@@ -4099,31 +4887,31 @@ $request = new Operations\UpdateHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-08-13T10:41:42.336Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-08-13T11:22:36.334Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 12,
-                endAt: Utils\Utils::parseDateTime('2023-10-23T21:17:35.691Z'),
+                endAt: Utils\Utils::parseDateTime('2023-11-01T14:11:00.170Z'),
                 id: 'd60a1001-5a8a-4991-8c21-f4da6036cc87',
                 isPaid: true,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-10-17T01:29:11.489Z'),
+                startAt: Utils\Utils::parseDateTime('2023-10-25T16:36:12.606Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'UGX',
         declaredTipsAmount: 161,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-04-07T14:50:55.159Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-18T03:03:15.715Z'),
         hourlyRate: 53,
         hours: 10,
-        id: '6a4550f7-d438-4b96-af25-c8104c25caf9',
+        id: '586b8503-23ff-4bd9-b402-8f95bc8a4a34',
         jobName: 'Global Creative Supervisor',
         nonCashTipsAmount: 54,
-        startAt: Utils\Utils::parseDateTime('2021-11-09T13:41:47.653Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-10T13:16:20.860Z'),
         status: Shared\HrisAttendanceStatus::Closed,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-17T07:09:09.542Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-19T00:35:00.183Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4183,12 +4971,17 @@ $request = new Operations\UpdateHrisBankaccountRequest(
         accountNumberLast4: '3777',
         accountType: Shared\HrisBankaccountAccountType::Checking,
         bankName: 'Huel Group',
+        countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
-        id: '6005b494-a4b0-4602-8c37-94e7048e00e8',
+        currency: 'USD',
+        id: '5068078d-c2ce-4bc7-8594-995ea7c9bf7d',
         isPrimary: false,
         name: 'Checking Account',
+        priority: 3,
         routingNumber: '448650724',
-        updatedAt: Utils\Utils::parseDateTime('2025-06-06T18:00:27.158Z'),
+        splitAmount: 23,
+        splitType: Shared\SplitType::Fixed,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-23T03:38:54.324Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4251,13 +5044,13 @@ $request = new Operations\UpdateHrisBenefitRequest(
         employerContributionAmount: 185006,
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
-        frequency: Shared\HrisBenefitFrequency::Hour,
-        id: '03fe3c3a-0a32-4f47-af0e-f9e4092754de',
+        frequency: Shared\HrisBenefitFrequency::Month,
+        id: '3d2c72ae-7c09-4c9f-ad7c-0fc18839d305',
         isActive: false,
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
-        type: Shared\HrisBenefitType::Garnishment,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-07T16:17:00.582Z'),
+        type: Shared\HrisBenefitType::Other,
+        updatedAt: Utils\Utils::parseDateTime('2023-03-16T11:45:05.630Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4322,10 +5115,10 @@ $request = new Operations\UpdateHrisCompanyRequest(
             regionCode: 'PA',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: '85a95ea9-94dd-4928-a69f-aaef5373741a',
+        id: 'f9820fdd-0c4e-4cbf-9b93-dac1efb81aaf',
         legalName: 'Schultz LLC',
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-09-08T15:55:10.670Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-28T17:57:11.742Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4384,14 +5177,17 @@ $request = new Operations\UpdateHrisDeductionRequest(
         amount: 139655,
         coverageLevel: Shared\HrisDeductionCoverageLevel::EmployeeOnly,
         createdAt: Utils\Utils::parseDateTime('2020-02-05T01:46:31.384Z'),
-        endAt: Utils\Utils::parseDateTime('2026-05-25T14:43:59.520Z'),
-        frequency: Shared\HrisDeductionFrequency::Month,
-        id: 'a126ff04-6413-411e-932d-9a25af613ff0',
+        employerAmount: 22611,
+        employerType: Shared\EmployerType::Fixed,
+        endAt: Utils\Utils::parseDateTime('2026-06-13T20:04:08.043Z'),
+        frequency: Shared\HrisDeductionFrequency::Biweekly,
+        garnishmentType: Shared\GarnishmentType::Other,
+        id: '694f5bac-c102-49b9-a80c-f01052d74fc7',
         isActive: false,
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-02-20T07:45:12.836Z'),
+        startAt: Utils\Utils::parseDateTime('2025-03-07T17:01:33.648Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-03T17:00:24.891Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-16T03:23:54.858Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4455,14 +5251,14 @@ $request = new Operations\UpdateHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: true,
-        id: '52148932-32c0-49fe-bd1f-9a5c66b73d70',
+        id: '5174313e-a747-4f8f-b1f6-787292713f4a',
         isMissing: false,
         manufacturer: 'Sanford - Hamill',
         model: 'Refined',
         name: 'cross_contamination_if.rar',
         os: 'monitor',
         osVersion: '1.12.16',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-22T14:06:09.520Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-02T18:33:40.578Z'),
         version: '2.20.17',
     ),
     connectionId: '<id>',
@@ -4522,9 +5318,9 @@ $request = new Operations\UpdateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: '23391a53-5d85-4874-b27c-6cc01144df3c',
+        id: '86541b69-8e13-4e0a-ae7d-943b71e74b4c',
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-19T03:46:30.178Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-04T03:56:54.241Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4548,6 +5344,70 @@ if ($response->hrisDocument !== null) {
 ### Response
 
 **[?Operations\UpdateHrisDocumentResponse](../../Models/Operations/UpdateHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateHrisEarning
+
+Update an earning
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateHrisEarning" method="put" path="/hris/{connection_id}/earning/{id}" example="hris_earning" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateHrisEarningRequest(
+    hrisEarning: new Shared\HrisEarning(
+        amount: 4026,
+        createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
+        currency: 'PKR',
+        frequency: Shared\HrisEarningFrequency::Biweekly,
+        id: '59a0433c-3ed7-4583-85d3-4ba7f5f7e9d8',
+        notes: 'Truculenter vinum beatae.',
+        startAt: Utils\Utils::parseDateTime('2022-07-20T23:26:03.282Z'),
+        status: Shared\HrisEarningStatus::Processed,
+        updatedAt: Utils\Utils::parseDateTime('2020-02-07T12:24:47.607Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->updateHrisEarning(
+    request: $request
+);
+
+if ($response->hrisEarning !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateHrisEarningRequest](../../Models/Operations/UpdateHrisEarningRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\UpdateHrisEarningResponse](../../Models/Operations/UpdateHrisEarningResponse.md)**
 
 ### Errors
 
@@ -4592,11 +5452,11 @@ $request = new Operations\UpdateHrisEmployeeRequest(
         bio: 'sushi devotee, singer',
         compensation: [
             new Shared\HrisCompensation(
-                amount: 69148,
+                amount: 60136,
                 currency: 'CRC',
                 frequency: Shared\HrisCompensationFrequency::Quarter,
                 notes: 'Tergeo laborum laboriosam tutis.',
-                type: Shared\HrisCompensationType::Equity,
+                type: Shared\HrisCompensationType::StockOptions,
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
@@ -4612,10 +5472,11 @@ $request = new Operations\UpdateHrisEmployeeRequest(
         employmentStatus: Shared\EmploymentStatus::Active,
         employmentType: Shared\HrisEmployeeEmploymentType::Volunteer,
         firstName: 'Zetta',
+        flsaStatus: Shared\FlsaStatus::SalariedNonexempt,
         gender: Shared\HrisEmployeeGender::Intersex,
-        hasMfa: true,
-        hiredAt: Utils\Utils::parseDateTime('2023-05-12T03:12:11.541Z'),
-        id: '58337faa-4e32-4102-b7c8-c1d452691dbf',
+        hasMfa: false,
+        hiredAt: Utils\Utils::parseDateTime('2023-05-22T15:44:14.369Z'),
+        id: 'f8e282cf-d934-44ec-a6e9-aa6ac2875cb7',
         imageUrl: 'https://loremflickr.com/3684/2116?lock=4686991638584456',
         languageLocale: 'es',
         lastName: 'Prohaska',
@@ -4627,13 +5488,14 @@ $request = new Operations\UpdateHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: 'dc9e304c-74a8-4e11-aa99-780c6ad1af40',
+                id: '1e5ed876-f4a7-4735-b4b6-66d2390b286b',
                 namespace: 'custom',
                 slug: 'custom_property',
-                value: 'tenetur',
+                value: 'appono',
             ),
         ],
         name: 'Zetta Prohaska',
+        payFrequency: Shared\PayFrequency::Biweekly,
         pronouns: 'she/her',
         relationships: [
             new Shared\HrisEmployeerelationship(
@@ -4649,38 +5511,35 @@ $request = new Operations\UpdateHrisEmployeeRequest(
                     ),
                 ],
                 name: 'Automotive',
-                type: Shared\HrisEmployeerelationshipType::Emergency,
+                type: Shared\HrisEmployeerelationshipType::Friend,
             ),
             new Shared\HrisEmployeerelationship(
                 emails: [
                     new Shared\HrisEmail(
                         email: 'Benedict_Wisozk83@hotmail.com',
                     ),
-                    new Shared\HrisEmail(
-                        email: 'Princess_Rath43@gmail.com',
-                    ),
-                    new Shared\HrisEmail(
-                        email: 'Elmira92@yahoo.com',
-                    ),
                 ],
                 name: 'Music',
-                type: Shared\HrisEmployeerelationshipType::Friend,
+                type: Shared\HrisEmployeerelationshipType::Sibling,
             ),
             new Shared\HrisEmployeerelationship(
                 emails: [
                     new Shared\HrisEmail(
-                        email: 'Jane30@gmail.com',
+                        email: 'Margot11@yahoo.com',
+                    ),
+                    new Shared\HrisEmail(
+                        email: 'Jaden_Miller@gmail.com',
                     ),
                 ],
-                name: 'Jewelry',
-                type: Shared\HrisEmployeerelationshipType::Sibling,
+                name: 'Electronics',
+                type: Shared\HrisEmployeerelationshipType::Other,
             ),
         ],
         salutation: 'Miss',
         ssnSin: 'yMRtj0Q3xO',
-        storageQuotaAllocated: 3674489,
-        storageQuotaAvailable: 7748057,
-        storageQuotaUsed: 301727,
+        storageQuotaAllocated: 7748057,
+        storageQuotaAvailable: 1590710,
+        storageQuotaUsed: 730343,
         telephones: [
             new Shared\HrisTelephone(
                 telephone: '(409) 801-3705',
@@ -4692,7 +5551,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
         timeoffDaysUsed: 6,
         timezone: 'Africa/Harare',
         title: 'Investor Paradigm Liaison',
-        updatedAt: Utils\Utils::parseDateTime('2022-02-20T06:18:08.666Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-27T06:23:56.477Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4750,11 +5609,11 @@ $request = new Operations\UpdateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '3d2f3a6f-a93f-4944-9979-441dfe433fe9',
+        id: 'f55bf44f-d748-4699-98be-3b63f29cb8b8',
         isActive: false,
         name: 'Games',
-        type: Shared\HrisGroupType::BusinessUnit,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-26T00:08:53.907Z'),
+        type: Shared\HrisGroupType::Branch,
+        updatedAt: Utils\Utils::parseDateTime('2026-05-13T09:10:59.153Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4778,6 +5637,69 @@ if ($response->hrisGroup !== null) {
 ### Response
 
 **[?Operations\UpdateHrisGroupResponse](../../Models/Operations/UpdateHrisGroupResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateHrisJobRequest(
+    hrisJob: new Shared\HrisJob(
+        code: 'P-05547',
+        createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
+        description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
+        employmentType: Shared\HrisJobEmploymentType::Freelance,
+        id: 'f6c68600-9698-4e15-bc64-586f729ee803',
+        isActive: false,
+        name: 'Internal Integration Specialist',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T10:46:31.859Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->updateHrisJob(
+    request: $request
+);
+
+if ($response->hrisJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\UpdateHrisJobRequest](../../Models/Operations/UpdateHrisJobRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\UpdateHrisJobResponse](../../Models/Operations/UpdateHrisJobResponse.md)**
 
 ### Errors
 
@@ -4822,8 +5744,8 @@ $request = new Operations\UpdateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MUR',
         description: 'Acervus caries.',
-        externalIdentifier: '996e7b27-7913-4e41-b567-67ebb6db77ef',
-        id: '8aada89e-1868-4e4d-9fcc-6e895a06d15d',
+        externalIdentifier: '514209de-9c29-4060-acaf-75af1d4884d7',
+        id: '710eed80-ff85-4b44-80c5-8b4d22e2ab36',
         isActive: true,
         isHq: false,
         languageLocale: 'fr',
@@ -4843,7 +5765,7 @@ $request = new Operations\UpdateHrisLocationRequest(
             ),
         ],
         timezone: 'America/Guyana',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-10T01:13:57.540Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-17T10:41:08.855Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4899,20 +5821,20 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-21T02:08:20.331Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-22T14:56:26.765Z'),
         comments: 'Blandior ventus curiositas amplitudo.',
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2024-12-09T08:52:11.290Z'),
-        id: '1b90647f-5bb3-4551-b5f1-77cbcbbc655e',
+        endAt: Utils\Utils::parseDateTime('2024-12-22T07:36:19.005Z'),
+        id: '62c80396-58c6-4819-a48d-b6f68f9a1a71',
         isPaid: true,
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-08-24T08:25:05.395Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-01T00:24:06.972Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-08T05:45:54.439Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-11T07:19:06.145Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -4969,24 +5891,24 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2023-06-07T03:05:14.688Z'),
+        approvedAt: Utils\Utils::parseDateTime('2023-06-18T03:09:21.276Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
                 currency: 'JPY',
-                frequency: Shared\HrisCompensationFrequency::Hour,
+                frequency: Shared\HrisCompensationFrequency::Week,
                 notes: 'Annus adficio suasoria architecto aggero.',
-                type: Shared\HrisCompensationType::Other,
+                type: Shared\HrisCompensationType::Commission,
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-08-28T03:01:07.109Z'),
+        endAt: Utils\Utils::parseDateTime('2026-09-17T03:41:27.371Z'),
         hours: 8,
-        id: '2492c6df-e2c6-450f-af6d-7db5a8f448c0',
+        id: '2115c4ae-1887-4cad-b775-61a475b5af0f',
         isApproved: true,
-        startAt: Utils\Utils::parseDateTime('2023-06-26T08:32:27.015Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-06-23T15:17:01.681Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-07T12:08:41.040Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-29T04:09:33.287Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

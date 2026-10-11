@@ -44,6 +44,7 @@ class AssessmentAddress
     public ?string $country = null;
 
     /**
+     * Country code in ISO 3166 A-2 format
      *
      * @var ?string $countryCode
      */
@@ -60,6 +61,7 @@ class AssessmentAddress
     public ?string $postalCode = null;
 
     /**
+     * Regional area (e.g., state in the U.S., province in Canada)
      *
      * @var ?string $region
      */
@@ -68,6 +70,7 @@ class AssessmentAddress
     public ?string $region = null;
 
     /**
+     * Short form for regional area (e.g., two-letter stateprovince abbreviation)
      *
      * @var ?string $regionCode
      */

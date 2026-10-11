@@ -35,6 +35,7 @@ class PerformanceGoalMilestone
     public ?string $description = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -67,6 +68,7 @@ class PerformanceGoalMilestone
     public ?float $targetValue = null;
 
     /**
+     * unit of the target/current values (e.g. %, USD, count)
      *
      * @var ?string $unit
      */

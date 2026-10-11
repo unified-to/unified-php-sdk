@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Tax describes the tax treatment of the benefit */
 enum Tax: string
 {
     case PreTax = 'PRE_TAX';

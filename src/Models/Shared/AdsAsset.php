@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AdsAsset
 {
     /**
+     * inbound create-only: base64-encoded image/media bytes to upload
      *
      * @var ?string $content
      */
@@ -20,6 +21,7 @@ class AdsAsset
     public ?string $content = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -44,6 +46,7 @@ class AdsAsset
     public ?float $height = null;
 
     /**
+     * provider asset resource name/id (e.g. Google Ads customers/{cid}/assets/{id}, TikTok image/video id, DV360 mediaId)
      *
      * @var ?string $id
      */
@@ -95,6 +98,7 @@ class AdsAsset
     public ?AdsAssetType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -103,6 +107,7 @@ class AdsAsset
     public ?\DateTime $updatedAt = null;
 
     /**
+     * outbound: public asset URL; inbound (create): source URL to fetch bytes from when content is not supplied
      *
      * @var ?string $url
      */

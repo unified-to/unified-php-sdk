@@ -36,6 +36,7 @@ class SecretsManager
     public SecretsManagerType $type;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -62,6 +63,7 @@ class SecretsManager
     public ?string $id = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -70,6 +72,7 @@ class SecretsManager
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to KmsSpace)
      *
      * @var ?string $workspaceId
      */

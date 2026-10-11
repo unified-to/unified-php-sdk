@@ -20,6 +20,7 @@ class CalendarConference
     public ?string $conferenceIdentifier = null;
 
     /**
+     * ISO 2-digit country code
      *
      * @var ?string $countryCode
      */
@@ -60,6 +61,7 @@ class CalendarConference
     public ?string $participantAccessCode = null;
 
     /**
+     * ISO 2-digit region code
      *
      * @var ?string $regionCode
      */

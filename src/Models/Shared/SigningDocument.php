@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class SigningDocument
 {
     /**
+     * When all signatures were collected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $completedAt
      */
@@ -20,6 +21,7 @@ class SigningDocument
     public ?\DateTime $completedAt = null;
 
     /**
+     * The date that this signing document was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -28,6 +30,7 @@ class SigningDocument
     public ?\DateTime $createdAt = null;
 
     /**
+     * User who created the signing document
      *
      * @var ?string $creatorId
      */
@@ -36,6 +39,7 @@ class SigningDocument
     public ?string $creatorId = null;
 
     /**
+     * Message to signers
      *
      * @var ?string $description
      */
@@ -44,6 +48,7 @@ class SigningDocument
     public ?string $description = null;
 
     /**
+     * URL to download the signed document
      *
      * @var ?string $downloadUrl
      */
@@ -52,6 +57,7 @@ class SigningDocument
     public ?string $downloadUrl = null;
 
     /**
+     * Signing deadline (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $expiresAt
      */
@@ -60,6 +66,7 @@ class SigningDocument
     public ?\DateTime $expiresAt = null;
 
     /**
+     * Unique identifier for this signing document
      *
      * @var ?string $id
      */
@@ -68,6 +75,7 @@ class SigningDocument
     public ?string $id = null;
 
     /**
+     * Document/envelope title
      *
      * @var ?string $name
      */
@@ -76,7 +84,7 @@ class SigningDocument
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -86,6 +94,7 @@ class SigningDocument
     public ?array $raw = null;
 
     /**
+     * When sent for signature (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $sentAt
      */
@@ -94,6 +103,7 @@ class SigningDocument
     public ?\DateTime $sentAt = null;
 
     /**
+     * Current status of the signing document
      *
      * @var ?\Unified\Unified_to\Models\Shared\SigningDocumentStatus $status
      */
@@ -103,6 +113,7 @@ class SigningDocument
     public ?SigningDocumentStatus $status = null;
 
     /**
+     * If created from a template; points to SigningTemplate
      *
      * @var ?string $templateId
      */
@@ -111,6 +122,7 @@ class SigningDocument
     public ?string $templateId = null;
 
     /**
+     * The last date that this signing document was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

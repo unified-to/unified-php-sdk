@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** new vs returning */
 enum AnalyticsReportMetricsDimension: string
 {
     case Date = 'DATE';

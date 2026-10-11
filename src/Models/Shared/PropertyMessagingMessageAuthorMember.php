@@ -37,6 +37,7 @@ class PropertyMessagingMessageAuthorMember
     public ?string $name = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

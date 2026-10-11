@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class SocialInsight
 {
     /**
+     * When the insight was recorded (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class SocialInsight
     public ?\DateTime $createdAt = null;
 
     /**
+     * The day/timestamp of the data point
      *
      * @var ?\DateTime $date
      */
@@ -28,6 +30,7 @@ class SocialInsight
     public ?\DateTime $date = null;
 
     /**
+     * Unique identifier for the insight data point
      *
      * @var ?string $id
      */
@@ -36,6 +39,7 @@ class SocialInsight
     public ?string $id = null;
 
     /**
+     * The metric being reported
      *
      * @var ?\Unified\Unified_to\Models\Shared\Metric $metric
      */
@@ -45,6 +49,7 @@ class SocialInsight
     public ?Metric $metric = null;
 
     /**
+     * The aggregation period of the value
      *
      * @var ?\Unified\Unified_to\Models\Shared\Period $period
      */
@@ -54,6 +59,7 @@ class SocialInsight
     public ?Period $period = null;
 
     /**
+     * Optional: the post these stats belong to
      *
      * @var ?string $postId
      */
@@ -62,6 +68,7 @@ class SocialInsight
     public ?string $postId = null;
 
     /**
+     * The social profile these stats belong to
      *
      * @var ?string $profileId
      */
@@ -70,7 +77,7 @@ class SocialInsight
     public ?string $profileId = null;
 
     /**
-     * $raw
+     * Raw data from integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -80,6 +87,7 @@ class SocialInsight
     public ?array $raw = null;
 
     /**
+     * The metric value
      *
      * @var ?float $value
      */

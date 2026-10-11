@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through) */
 enum OptimizationGoal: string
 {
     case Reach = 'REACH';

@@ -28,6 +28,7 @@ class ScimAddress
     public ?string $formatted = null;
 
     /**
+     * city
      *
      * @var ?string $locality
      */
@@ -44,6 +45,7 @@ class ScimAddress
     public ?string $postalCode = null;
 
     /**
+     * stateprovince
      *
      * @var ?string $region
      */
@@ -52,6 +54,7 @@ class ScimAddress
     public ?string $region = null;
 
     /**
+     * could be multi-line
      *
      * @var ?string $streetAddress
      */

@@ -21,6 +21,7 @@ class CdpMetadata
     public array|string|float|bool|null $extraData = null;
 
     /**
+     * The data type of the attribute value
      *
      * @var ?\Unified\Unified_to\Models\Shared\CdpMetadataFormat $format
      */
@@ -38,6 +39,7 @@ class CdpMetadata
     public ?string $id = null;
 
     /**
+     * The scope or origin of the attribute (eg. computed, event, visitor)
      *
      * @var ?string $namespace
      */
@@ -46,6 +48,7 @@ class CdpMetadata
     public ?string $namespace = null;
 
     /**
+     * The attribute/trait key (eg. lifetime_value)
      *
      * @var ?string $slug
      */
@@ -54,6 +57,7 @@ class CdpMetadata
     public ?string $slug = null;
 
     /**
+     * The attribute/trait value
      *
      * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\CdpMetadataSchemas1|string|float|bool>|null $value
      */

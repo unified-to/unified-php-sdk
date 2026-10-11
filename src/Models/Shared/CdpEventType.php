@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The unified structural category of the event */
 enum CdpEventType: string
 {
     case Track = 'TRACK';

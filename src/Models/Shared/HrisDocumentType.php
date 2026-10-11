@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** unified, normalized document type (OTHER when unmappable) */
 enum HrisDocumentType: string
 {
     case Contract = 'CONTRACT';

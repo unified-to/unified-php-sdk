@@ -28,6 +28,7 @@ class CalendarRecordingTranscript
     public ?PropertyCalendarRecordingTranscriptAttendee $attendee = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -36,6 +37,7 @@ class CalendarRecordingTranscript
     public ?\DateTime $endAt = null;
 
     /**
+     * two digit ISO code
      *
      * @var ?string $language
      */
@@ -44,6 +46,7 @@ class CalendarRecordingTranscript
     public ?string $language = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

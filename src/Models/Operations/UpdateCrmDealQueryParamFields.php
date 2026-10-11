@@ -29,7 +29,7 @@ enum UpdateCrmDealQueryParamFields: string
     case UserId = 'user_id';
     case ContactIds = 'contact_ids';
     case CompanyIds = 'company_ids';
-    case Metadata = 'metadata';
     case Description = 'description';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

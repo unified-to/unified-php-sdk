@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CdpProfileSegment
 {
     /**
+     * When the profile's membership expires (if applicable) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $expiresAt
      */
@@ -20,6 +21,7 @@ class CdpProfileSegment
     public ?\DateTime $expiresAt = null;
 
     /**
+     * When the profile joined the segment (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $joinedAt
      */
@@ -28,6 +30,7 @@ class CdpProfileSegment
     public ?\DateTime $joinedAt = null;
 
     /**
+     * The name of the segment/audience
      *
      * @var ?string $name
      */
@@ -36,6 +39,7 @@ class CdpProfileSegment
     public ?string $name = null;
 
     /**
+     * The segment/audience this profile belongs to; points to CdpSegment
      *
      * @var ?string $segmentId
      */

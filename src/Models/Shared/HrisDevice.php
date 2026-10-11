@@ -30,6 +30,7 @@ class HrisDevice
     public ?string $assetTag = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -94,6 +95,7 @@ class HrisDevice
     public ?bool $isMissing = null;
 
     /**
+     * pointer to HR Location object (reference to HrisLocation)
      *
      * @var ?string $locationId
      */
@@ -102,6 +104,7 @@ class HrisDevice
     public ?string $locationId = null;
 
     /**
+     * device manufacturer
      *
      * @var ?string $manufacturer
      */
@@ -110,6 +113,7 @@ class HrisDevice
     public ?string $manufacturer = null;
 
     /**
+     * device model
      *
      * @var ?string $model
      */
@@ -126,6 +130,7 @@ class HrisDevice
     public ?string $name = null;
 
     /**
+     * operating system name
      *
      * @var ?string $os
      */
@@ -152,6 +157,7 @@ class HrisDevice
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -170,6 +176,7 @@ class HrisDevice
     public ?array $userIds = null;
 
     /**
+     * device version
      *
      * @var ?string $version
      */

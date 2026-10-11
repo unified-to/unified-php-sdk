@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class MessagingAttachment
 {
     /**
+     * the inline attachment's content_id
      *
      * @var ?string $contentIdentifier
      */

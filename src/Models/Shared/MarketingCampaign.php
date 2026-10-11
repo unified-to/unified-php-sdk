@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class MarketingCampaign
 {
     /**
+     * When the campaign was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class MarketingCampaign
     public ?\DateTime $createdAt = null;
 
     /**
+     * Sender email address
      *
      * @var ?string $fromEmail
      */
@@ -28,6 +30,7 @@ class MarketingCampaign
     public ?string $fromEmail = null;
 
     /**
+     * Sender name
      *
      * @var ?string $fromName
      */
@@ -36,6 +39,7 @@ class MarketingCampaign
     public ?string $fromName = null;
 
     /**
+     * Unique identifier for the campaign
      *
      * @var ?string $id
      */
@@ -54,6 +58,7 @@ class MarketingCampaign
     public ?array $listIds = null;
 
     /**
+     * Campaign nametitle
      *
      * @var ?string $name
      */
@@ -62,6 +67,7 @@ class MarketingCampaign
     public ?string $name = null;
 
     /**
+     * Email preview text
      *
      * @var ?string $previewText
      */
@@ -70,7 +76,7 @@ class MarketingCampaign
     public ?string $previewText = null;
 
     /**
-     * $raw
+     * Raw data from integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -80,6 +86,7 @@ class MarketingCampaign
     public ?array $raw = null;
 
     /**
+     * Reply-to email address
      *
      * @var ?string $replyToEmail
      */
@@ -88,6 +95,7 @@ class MarketingCampaign
     public ?string $replyToEmail = null;
 
     /**
+     * Scheduled send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $sendAt
      */
@@ -96,6 +104,7 @@ class MarketingCampaign
     public ?\DateTime $sendAt = null;
 
     /**
+     * Campaign status
      *
      * @var ?\Unified\Unified_to\Models\Shared\MarketingCampaignStatus $status
      */
@@ -105,6 +114,7 @@ class MarketingCampaign
     public ?MarketingCampaignStatus $status = null;
 
     /**
+     * Email subject line
      *
      * @var ?string $subjectLine
      */
@@ -113,6 +123,7 @@ class MarketingCampaign
     public ?string $subjectLine = null;
 
     /**
+     * Campaign type (e.g., regular, automation, ab_test)
      *
      * @var ?string $type
      */
@@ -121,6 +132,7 @@ class MarketingCampaign
     public ?string $type = null;
 
     /**
+     * When the campaign was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

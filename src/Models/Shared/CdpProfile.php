@@ -22,6 +22,7 @@ class CdpProfile
     public ?PropertyCdpProfileAddress $address = null;
 
     /**
+     * The birth date of the profile
      *
      * @var ?string $birthdate
      */
@@ -30,6 +31,7 @@ class CdpProfile
     public ?string $birthdate = null;
 
     /**
+     * The company/organization name of the profile
      *
      * @var ?string $company
      */
@@ -48,6 +50,7 @@ class CdpProfile
     public ?array $consent = null;
 
     /**
+     * The date that this profile object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -56,6 +59,7 @@ class CdpProfile
     public ?\DateTime $createdAt = null;
 
     /**
+     * The primary email address of the profile
      *
      * @var ?string $email
      */
@@ -64,6 +68,7 @@ class CdpProfile
     public ?string $email = null;
 
     /**
+     * The first name of the profile
      *
      * @var ?string $firstName
      */
@@ -72,6 +77,7 @@ class CdpProfile
     public ?string $firstName = null;
 
     /**
+     * The gender of the profile
      *
      * @var ?\Unified\Unified_to\Models\Shared\CdpProfileGender $gender
      */
@@ -81,6 +87,7 @@ class CdpProfile
     public ?CdpProfileGender $gender = null;
 
     /**
+     * Unique identifier for this profile object
      *
      * @var ?string $id
      */
@@ -99,6 +106,7 @@ class CdpProfile
     public ?array $identifiers = null;
 
     /**
+     * Whether the profile is anonymous (no known identity)
      *
      * @var ?bool $isAnonymous
      */
@@ -107,6 +115,7 @@ class CdpProfile
     public ?bool $isAnonymous = null;
 
     /**
+     * The last name of the profile
      *
      * @var ?string $lastName
      */
@@ -125,6 +134,7 @@ class CdpProfile
     public ?array $metadata = null;
 
     /**
+     * The full name of the profile
      *
      * @var ?string $name
      */
@@ -133,7 +143,7 @@ class CdpProfile
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this profile
      *
      * @var ?array<string, mixed> $raw
      */
@@ -153,6 +163,7 @@ class CdpProfile
     public ?array $segments = null;
 
     /**
+     * The cdp_source this profile originated from; points to CdpSource
      *
      * @var ?string $sourceId
      */
@@ -161,6 +172,7 @@ class CdpProfile
     public ?string $sourceId = null;
 
     /**
+     * The primary telephone number of the profile
      *
      * @var ?string $telephone
      */
@@ -169,6 +181,7 @@ class CdpProfile
     public ?string $telephone = null;
 
     /**
+     * The job title of the profile
      *
      * @var ?string $title
      */
@@ -177,6 +190,7 @@ class CdpProfile
     public ?string $title = null;
 
     /**
+     * The last date that this profile object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

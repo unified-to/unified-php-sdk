@@ -28,4 +28,27 @@ enum HrisPayslipDetailType: string
     case PosttaxBenefit = 'POSTTAX_BENEFIT';
     case PosttaxGarnishment = 'POSTTAX_GARNISHMENT';
     case Reimbursement = 'REIMBURSEMENT';
+    case EarningRegular = 'EARNING_REGULAR';
+    case EarningDoubleOvertime = 'EARNING_DOUBLE_OVERTIME';
+    case EarningPto = 'EARNING_PTO';
+    case EarningSick = 'EARNING_SICK';
+    case EarningHoliday = 'EARNING_HOLIDAY';
+    case EarningSeverance = 'EARNING_SEVERANCE';
+    case EarningReimbursement = 'EARNING_REIMBURSEMENT';
+    case TaxSocialSecurity = 'TAX_SOCIAL_SECURITY';
+    case TaxMedicare = 'TAX_MEDICARE';
+    case TaxUnemployment = 'TAX_UNEMPLOYMENT';
+    case TaxEmployer = 'TAX_EMPLOYER';
+    case PretaxDeductionHsa = 'PRETAX_DEDUCTION_HSA';
+    case PretaxDeductionFsa = 'PRETAX_DEDUCTION_FSA';
+    case PretaxDeductionDependentCare = 'PRETAX_DEDUCTION_DEPENDENT_CARE';
+    case PretaxDeductionCommuter = 'PRETAX_DEDUCTION_COMMUTER';
+    case PretaxDeductionDental = 'PRETAX_DEDUCTION_DENTAL';
+    case PretaxDeductionVision = 'PRETAX_DEDUCTION_VISION';
+    case PosttaxDeduction = 'POSTTAX_DEDUCTION';
+    case PosttaxRetirementRoth = 'POSTTAX_RETIREMENT_ROTH';
+    case PosttaxLoanRepayment = 'POSTTAX_LOAN_REPAYMENT';
+    case EmployerContribution = 'EMPLOYER_CONTRIBUTION';
+    case Pension = 'PENSION';
+    case EarningCashInLieu = 'EARNING_CASH_IN_LIEU';
 }

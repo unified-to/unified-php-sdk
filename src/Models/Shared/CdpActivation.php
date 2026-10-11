@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CdpActivation
 {
     /**
+     * The date that this activation object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class CdpActivation
     public ?\DateTime $createdAt = null;
 
     /**
+     * The cdp_destination the data is sent to; points to CdpDestination
      *
      * @var ?string $destinationId
      */
@@ -28,6 +30,7 @@ class CdpActivation
     public ?string $destinationId = null;
 
     /**
+     * Unique identifier for this activation object
      *
      * @var ?string $id
      */
@@ -36,6 +39,7 @@ class CdpActivation
     public ?string $id = null;
 
     /**
+     * Whether the activation is active/enabled
      *
      * @var ?bool $isEnabled
      */
@@ -44,6 +48,7 @@ class CdpActivation
     public ?bool $isEnabled = null;
 
     /**
+     * When the activation last ran (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $lastRunAt
      */
@@ -52,6 +57,7 @@ class CdpActivation
     public ?\DateTime $lastRunAt = null;
 
     /**
+     * The name of the activation/sync job
      *
      * @var ?string $name
      */
@@ -60,7 +66,7 @@ class CdpActivation
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this activation
      *
      * @var ?array<string, mixed> $raw
      */
@@ -70,6 +76,7 @@ class CdpActivation
     public ?array $raw = null;
 
     /**
+     * The activation schedule or mode (eg. cron, interval, realtime, batch)
      *
      * @var ?string $schedule
      */
@@ -78,6 +85,7 @@ class CdpActivation
     public ?string $schedule = null;
 
     /**
+     * The cdp_segment being activated; points to CdpSegment
      *
      * @var ?string $segmentId
      */
@@ -86,6 +94,7 @@ class CdpActivation
     public ?string $segmentId = null;
 
     /**
+     * The cdp_source the data originates from; points to CdpSource
      *
      * @var ?string $sourceId
      */
@@ -94,6 +103,7 @@ class CdpActivation
     public ?string $sourceId = null;
 
     /**
+     * The current status of the activation
      *
      * @var ?\Unified\Unified_to\Models\Shared\CdpActivationStatus $status
      */
@@ -103,6 +113,7 @@ class CdpActivation
     public ?CdpActivationStatus $status = null;
 
     /**
+     * The last date that this activation object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

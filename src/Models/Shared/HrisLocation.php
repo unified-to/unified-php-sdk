@@ -21,6 +21,7 @@ class HrisLocation
     public ?PropertyHrisLocationAddress $address = null;
 
     /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -29,6 +30,7 @@ class HrisLocation
     public ?string $companyId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -77,6 +79,7 @@ class HrisLocation
     public ?bool $isActive = null;
 
     /**
+     * if this location is the headquarters of the company
      *
      * @var ?bool $isHq
      */
@@ -137,6 +140,7 @@ class HrisLocation
     public ?string $timezone = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

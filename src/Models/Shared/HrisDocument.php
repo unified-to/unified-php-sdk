@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisDocument
 {
     /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -20,6 +21,7 @@ class HrisDocument
     public ?string $companyId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -28,6 +30,7 @@ class HrisDocument
     public ?\DateTime $createdAt = null;
 
     /**
+     * base64 encoded file contents for create/update
      *
      * @var ?string $documentData
      */
@@ -36,6 +39,7 @@ class HrisDocument
     public ?string $documentData = null;
 
     /**
+     * download link, expires after 1 hour
      *
      * @var ?string $documentUrl
      */
@@ -70,6 +74,7 @@ class HrisDocument
     public ?array $raw = null;
 
     /**
+     * unified, normalized document type (OTHER when unmappable)
      *
      * @var ?\Unified\Unified_to\Models\Shared\HrisDocumentType $type
      */
@@ -79,6 +84,7 @@ class HrisDocument
     public ?HrisDocumentType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -87,6 +93,7 @@ class HrisDocument
     public ?\DateTime $updatedAt = null;
 
     /**
+     * pointer to the HR Employee object that owns this document (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

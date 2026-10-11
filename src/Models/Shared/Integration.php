@@ -22,6 +22,7 @@ class Integration
     public array $categories;
 
     /**
+     * The integration's name
      *
      * @var string $name
      */
@@ -29,6 +30,7 @@ class Integration
     public string $name;
 
     /**
+     * Identifier for this integration
      *
      * @var string $type
      */
@@ -53,6 +55,7 @@ class Integration
     public array|string|float|bool|null $api = null;
 
     /**
+     * The URL of the integration's API documentation
      *
      * @var ?string $apiDocsUrl
      */
@@ -61,6 +64,7 @@ class Integration
     public ?string $apiDocsUrl = null;
 
     /**
+     * This integration is new and is still considered "beta"
      *
      * @var ?bool $beta
      */
@@ -69,6 +73,7 @@ class Integration
     public ?bool $beta = null;
 
     /**
+     * button background color for AUTH
      *
      * @var ?string $color
      */
@@ -77,6 +82,7 @@ class Integration
     public ?string $color = null;
 
     /**
+     * Date that this integration was supported (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $createdAt
      */
@@ -93,6 +99,7 @@ class Integration
     public ?string $description = null;
 
     /**
+     * font-awesome icon
      *
      * @var ?string $faIcon
      */
@@ -109,6 +116,7 @@ class Integration
     public ?bool $featured = null;
 
     /**
+     * If this integration is not yet available as it is currently being built by unified.to
      *
      * @var ?bool $inProgress
      */
@@ -117,6 +125,7 @@ class Integration
     public ?bool $inProgress = null;
 
     /**
+     * Is this integration active in this workspace
      *
      * @var ?bool $isActive
      */
@@ -133,6 +142,7 @@ class Integration
     public ?bool $isHidden = null;
 
     /**
+     * The URL of the integration's logo
      *
      * @var ?string $logoUrl
      */
@@ -166,6 +176,7 @@ class Integration
     public ?string $rateLimitDescription = null;
 
     /**
+     * OAuth requires a custom API domain (CNAME) for provider verification
      *
      * @var ?bool $requiresCname
      */
@@ -202,6 +213,7 @@ class Integration
     public ?array $support = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $testedAt
      */
@@ -210,6 +222,7 @@ class Integration
     public ?\DateTime $testedAt = null;
 
     /**
+     * text color for AUTH
      *
      * @var ?string $textColor
      */
@@ -238,6 +251,7 @@ class Integration
     public ?array $tokenNames = null;
 
     /**
+     * YYYY-MM-DD (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedAt
      */
@@ -246,6 +260,7 @@ class Integration
     public ?string $updatedAt = null;
 
     /**
+     * URL for the software vendor
      *
      * @var ?string $webUrl
      */

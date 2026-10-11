@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CdpConsent
 {
     /**
+     * The consent purpose or objective (eg. marketing, analytics)
      *
      * @var ?string $purpose
      */
@@ -20,6 +21,7 @@ class CdpConsent
     public ?string $purpose = null;
 
     /**
+     * The consent status for this purpose
      *
      * @var ?\Unified\Unified_to\Models\Shared\CdpConsentStatus $status
      */
@@ -29,6 +31,7 @@ class CdpConsent
     public ?CdpConsentStatus $status = null;
 
     /**
+     * When the consent status was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The call-to-action button type */
 enum PropertySocialPostCallToActionType: string
 {
     case Book = 'BOOK';

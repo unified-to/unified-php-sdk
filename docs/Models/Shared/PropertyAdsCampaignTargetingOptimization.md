@@ -9,5 +9,5 @@ Optimization (Meta: targeting_automation; Google: observation vs targeting mode)
 | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
 | `advantageAudience`                         | *?bool*                                     | :heavy_minus_sign:                          | N/A                                         |
 | `advantagePlacements`                       | *?bool*                                     | :heavy_minus_sign:                          | N/A                                         |
-| `mode`                                      | [?Shared\Mode](../../Models/Shared/Mode.md) | :heavy_minus_sign:                          | N/A                                         |
+| `mode`                                      | [?Shared\Mode](../../Models/Shared/Mode.md) | :heavy_minus_sign:                          | Google: bid_only falsetrue                  |
 | `targetingOptimizationExpansionAll`         | *?bool*                                     | :heavy_minus_sign:                          | N/A                                         |

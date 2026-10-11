@@ -21,6 +21,7 @@ class CrmLead
     public ?PropertyCrmLeadAddress $address = null;
 
     /**
+     * (reference to CrmCompany)
      *
      * @var ?string $companyId
      */
@@ -37,6 +38,7 @@ class CrmLead
     public ?string $companyName = null;
 
     /**
+     * (reference to CrmContact)
      *
      * @var ?string $contactId
      */
@@ -45,6 +47,7 @@ class CrmLead
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -53,6 +56,7 @@ class CrmLead
     public ?\DateTime $createdAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $creatorUserId
      */
@@ -167,6 +171,16 @@ class CrmLead
     public ?array $telephones = null;
 
     /**
+     * The job title of the lead
+     *
+     * @var ?string $title
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('title')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $title = null;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -175,6 +189,7 @@ class CrmLead
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -201,11 +216,12 @@ class CrmLead
      * @param  ?string  $source
      * @param  ?string  $status
      * @param  ?array<\Unified\Unified_to\Models\Shared\CrmTelephone>  $telephones
+     * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?bool $isActive = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?bool $isActive = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -225,6 +241,7 @@ class CrmLead
         $this->source = $source;
         $this->status = $status;
         $this->telephones = $telephones;
+        $this->title = $title;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
     }

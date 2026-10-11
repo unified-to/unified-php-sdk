@@ -17,5 +17,7 @@ enum GetGenaiModelQueryParamFields: string
     case MaxTokens = 'max_tokens';
     case WebUrl = 'web_url';
     case HasTemperature = 'has_temperature';
+    case HasQuestions = 'has_questions';
+    case HasVision = 'has_vision';
     case Raw = 'raw';
 }

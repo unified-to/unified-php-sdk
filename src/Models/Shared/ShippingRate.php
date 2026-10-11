@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingRate
 {
     /**
+     * Reference to the carrier
      *
      * @var ?string $carrierId
      */
@@ -38,6 +39,7 @@ class ShippingRate
     public ?PropertyShippingRateFromAddress $fromAddress = null;
 
     /**
+     * Unique identifier for this rate object
      *
      * @var ?string $id
      */
@@ -76,6 +78,7 @@ class ShippingRate
     public ?array $raw = null;
 
     /**
+     * Latest date to ship (from order) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $shipByAt
      */
@@ -84,6 +87,7 @@ class ShippingRate
     public ?\DateTime $shipByAt = null;
 
     /**
+     * Reference to the shipping object (if rate is for existing shipment)
      *
      * @var ?string $shipmentId
      */

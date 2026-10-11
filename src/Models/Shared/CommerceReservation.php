@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CommerceReservation
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class CommerceReservation
     public ?\DateTime $createdAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -60,6 +62,7 @@ class CommerceReservation
     public ?string $id = null;
 
     /**
+     * (reference to CommerceItem)
      *
      * @var ?string $itemId
      */
@@ -76,6 +79,7 @@ class CommerceReservation
     public ?string $itemName = null;
 
     /**
+     * (reference to CommerceLocation)
      *
      * @var ?string $locationId
      */
@@ -118,6 +122,7 @@ class CommerceReservation
     public ?string $staffName = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $staffUserId
      */
@@ -126,6 +131,7 @@ class CommerceReservation
     public ?string $staffUserId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -143,6 +149,7 @@ class CommerceReservation
     public ?CommerceReservationStatus $status = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

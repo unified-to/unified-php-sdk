@@ -12,18 +12,23 @@
 * [getGenaiAgent](#getgenaiagent) - Retrieve an agent
 * [getGenaiModel](#getgenaimodel) - Retrieve a model
 * [getGenaiOrganization](#getgenaiorganization) - Retrieve an organization
+* [getGenaiSkill](#getgenaiskill) - Retrieve a skill
 * [getGenaiTask](#getgenaitask) - Retrieve a task
 * [listGenaiAgents](#listgenaiagents) - List all agents
 * [listGenaiModels](#listgenaimodels) - List all models
 * [listGenaiOrganizations](#listgenaiorganizations) - List all organizations
+* [listGenaiSkills](#listgenaiskills) - List all skills
 * [listGenaiTasks](#listgenaitasks) - List all tasks
 * [patchGenaiAgent](#patchgenaiagent) - Update an agent
 * [patchGenaiOrganization](#patchgenaiorganization) - Update an organization
+* [patchGenaiTask](#patchgenaitask) - Update a task
 * [removeGenaiAgent](#removegenaiagent) - Remove an agent
 * [removeGenaiOrganization](#removegenaiorganization) - Remove an organization
+* [removeGenaiSkill](#removegenaiskill) - Remove a skill
 * [removeGenaiTask](#removegenaitask) - Remove a task
 * [updateGenaiAgent](#updategenaiagent) - Update an agent
 * [updateGenaiOrganization](#updategenaiorganization) - Update an organization
+* [updateGenaiTask](#updategenaitask) - Update a task
 
 ## createGenaiAgent
 
@@ -52,11 +57,11 @@ $request = new Operations\CreateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: 'c104d9fa-c7f7-473a-9190-eb8d7db8fccd',
+        id: 'de841757-e48f-4b2b-b729-cad69f7fe827',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-20T11:48:23.168Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-07T04:34:03.506Z'),
     ),
     connectionId: '<id>',
 );
@@ -118,7 +123,7 @@ $request = new Operations\CreateGenaiEmbeddingRequest(
         dimension: 423,
         embeddings: 'Est.',
         encondingFormat: Shared\EncondingFormat::Float,
-        id: '62bbaf9c-5d32-4a2e-88ba-812b77de9ed1',
+        id: 'c8f3e5f9-2cdf-41da-ac5f-f365e72f1ad2',
         maxTokens: 223,
         tokensUsed: 836,
         type: 'classification',
@@ -178,10 +183,10 @@ $request = new Operations\CreateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: 'c6b6737d-7782-41e3-a20e-674fb9c33d86',
+        id: 'cc2ecfba-c52b-4288-98f0-6f723c21f2ca',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-15T02:14:43.003Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-22T16:29:45.582Z'),
     ),
     connectionId: '<id>',
 );
@@ -235,6 +240,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateGenaiPromptRequest(
     genaiPrompt: new Shared\GenaiPrompt(
+        answers: [
+            new Shared\GenaiAnswer(
+                confidence: 0.5384309098590165,
+                id: 'TeZpueFB',
+                probabilities: [
+                    new Shared\GenaiAnswerProbability(
+                        option: 'veniam',
+                        probability: 0.05683182482607663,
+                    ),
+                    new Shared\GenaiAnswerProbability(
+                        option: 'comes',
+                        probability: 0.1404057613108307,
+                    ),
+                ],
+                score: 0.05974147981032729,
+                type: Shared\GenaiAnswerType::Choice,
+                value: 'summisse',
+            ),
+        ],
         maxTokens: 0.4677782787475735,
         mcpAuthorizationToken: 'f45a6e93-7bed-49b4-a5c8-37a2ed2d58f4',
         mcpDeferredTools: [],
@@ -242,11 +266,45 @@ $request = new Operations\CreateGenaiPromptRequest(
         messages: [
             new Shared\GenaiContent(
                 content: 'Aegre repudiandae verecundia facere statua.',
+                images: [],
                 role: Shared\Role::Assistant,
             ),
             new Shared\GenaiContent(
                 content: 'Speciosus xiphias soleo trepide crinis.',
+                images: [],
                 role: Shared\Role::System,
+            ),
+        ],
+        questions: [
+            new Shared\GenaiQuestion(
+                id: 'KtvbYiEq',
+                instructions: 'Admiratio cura contabesco subvenio venustas architecto vacuus summopere.',
+                options: [
+                    'vulnero',
+                    'quasi',
+                    'tolero',
+                ],
+                type: Shared\GenaiQuestionType::Boolean,
+            ),
+            new Shared\GenaiQuestion(
+                id: 'oV6IURtv',
+                instructions: 'Celer deleniti ventus ipsam tendo odit.',
+                options: [
+                    'nulla',
+                    'aspicio',
+                    'tero',
+                ],
+                type: Shared\GenaiQuestionType::Choice,
+            ),
+            new Shared\GenaiQuestion(
+                id: '60dBZk2K',
+                instructions: 'Decretum vesica amet repudiandae.',
+                options: [
+                    'ducimus',
+                    'civis',
+                    'alter',
+                ],
+                type: Shared\GenaiQuestionType::Boolean,
             ),
         ],
         responses: [
@@ -308,16 +366,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-09-06T09:18:49.674Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-09-23T00:58:59.988Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: '586f6326-fe69-435c-8548-3150816342b0',
+        id: '6daef881-a5fd-464e-a22c-3c5bc1b30b5e',
         instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
         linesAdded: 244,
         linesDeleted: 118,
         messages: [
             new Shared\GenaiContent(
                 content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
+                images: [],
                 role: Shared\Role::Assistant,
             ),
         ],
@@ -325,12 +384,12 @@ $request = new Operations\CreateGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
         repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-05-03T10:13:29.849Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-05-15T11:26:32.878Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Cur aeternus cogito vesper.',
         targetBranchIdentifier: 'agent/joshingly-ignorance',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-14T12:14:43.464Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-22T09:35:41.667Z'),
         webUrl: 'https://inexperienced-adrenalin.biz/',
     ),
     connectionId: '<id>',
@@ -507,6 +566,57 @@ if ($response->genaiOrganization !== null) {
 ### Response
 
 **[?Operations\GetGenaiOrganizationResponse](../../Models/Operations/GetGenaiOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getGenaiSkill
+
+Retrieve a skill
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getGenaiSkill" method="get" path="/genai/{connection_id}/skill/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetGenaiSkillRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->genai->getGenaiSkill(
+    request: $request
+);
+
+if ($response->genaiSkill !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\GetGenaiSkillRequest](../../Models/Operations/GetGenaiSkillRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\GetGenaiSkillResponse](../../Models/Operations/GetGenaiSkillResponse.md)**
 
 ### Errors
 
@@ -715,6 +825,56 @@ if ($response->genaiOrganizations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listGenaiSkills
+
+List all skills
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listGenaiSkills" method="get" path="/genai/{connection_id}/skill" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListGenaiSkillsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->genai->listGenaiSkills(
+    request: $request
+);
+
+if ($response->genaiSkills !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\ListGenaiSkillsRequest](../../Models/Operations/ListGenaiSkillsRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\ListGenaiSkillsResponse](../../Models/Operations/ListGenaiSkillsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listGenaiTasks
 
 List all tasks
@@ -792,11 +952,11 @@ $request = new Operations\PatchGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '1c8b2286-947d-4e72-ab18-0b3a5b1e863d',
+        id: '748f6dfd-f228-435c-95dd-2cadccaf033e',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-20T11:48:23.176Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-07T04:34:03.513Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -854,10 +1014,10 @@ $request = new Operations\PatchGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: 'e466e490-09c0-476e-9a38-d324960c1635',
+        id: '479e33a3-5029-4a78-9917-8a26c82ee9ff',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-15T02:14:43.005Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-22T16:29:45.585Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -881,6 +1041,86 @@ if ($response->genaiOrganization !== null) {
 ### Response
 
 **[?Operations\PatchGenaiOrganizationResponse](../../Models/Operations/PatchGenaiOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchGenaiTask
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchGenaiTask" method="patch" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchGenaiTaskRequest(
+    genaiTask: new Shared\GenaiTask(
+        completedAt: Utils\Utils::parseDateTime('2025-09-23T00:59:00.006Z'),
+        createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
+        filesChanged: 19,
+        id: '9a632f24-8948-4e24-b29e-e648e72e1df0',
+        instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
+        linesAdded: 244,
+        linesDeleted: 118,
+        messages: [
+            new Shared\GenaiContent(
+                content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
+                images: [],
+                role: Shared\Role::Assistant,
+            ),
+        ],
+        name: 'connect multi-byte port',
+        pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
+        repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
+        sourceBranchIdentifier: 'main',
+        startedAt: Utils\Utils::parseDateTime('2024-05-15T11:26:32.891Z'),
+        status: Shared\GenaiTaskStatus::Blocked,
+        summary: 'Cur aeternus cogito vesper.',
+        targetBranchIdentifier: 'agent/joshingly-ignorance',
+        tokensUsed: 2165,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-22T09:35:41.675Z'),
+        webUrl: 'https://inexperienced-adrenalin.biz/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->genai->patchGenaiTask(
+    request: $request
+);
+
+if ($response->genaiTask !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\PatchGenaiTaskRequest](../../Models/Operations/PatchGenaiTaskRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\PatchGenaiTaskResponse](../../Models/Operations/PatchGenaiTaskResponse.md)**
 
 ### Errors
 
@@ -990,6 +1230,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeGenaiSkill
+
+Remove a skill
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeGenaiSkill" method="delete" path="/genai/{connection_id}/skill/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveGenaiSkillRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->genai->removeGenaiSkill(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\RemoveGenaiSkillRequest](../../Models/Operations/RemoveGenaiSkillRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\RemoveGenaiSkillResponse](../../Models/Operations/RemoveGenaiSkillResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeGenaiTask
 
 Remove a task
@@ -1068,11 +1359,11 @@ $request = new Operations\UpdateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '1c8b2286-947d-4e72-ab18-0b3a5b1e863d',
+        id: '748f6dfd-f228-435c-95dd-2cadccaf033e',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-20T11:48:23.176Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-07T04:34:03.513Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1130,10 +1421,10 @@ $request = new Operations\UpdateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: 'e466e490-09c0-476e-9a38-d324960c1635',
+        id: '479e33a3-5029-4a78-9917-8a26c82ee9ff',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-15T02:14:43.005Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-22T16:29:45.585Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1157,6 +1448,86 @@ if ($response->genaiOrganization !== null) {
 ### Response
 
 **[?Operations\UpdateGenaiOrganizationResponse](../../Models/Operations/UpdateGenaiOrganizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateGenaiTask
+
+Update a task
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateGenaiTask" method="put" path="/genai/{connection_id}/task/{id}" example="genai_task" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateGenaiTaskRequest(
+    genaiTask: new Shared\GenaiTask(
+        completedAt: Utils\Utils::parseDateTime('2025-09-23T00:59:00.006Z'),
+        createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
+        filesChanged: 19,
+        id: '9a632f24-8948-4e24-b29e-e648e72e1df0',
+        instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
+        linesAdded: 244,
+        linesDeleted: 118,
+        messages: [
+            new Shared\GenaiContent(
+                content: 'Stultus esse cursim stabilis tenetur amet contigo tristis.',
+                images: [],
+                role: Shared\Role::Assistant,
+            ),
+        ],
+        name: 'connect multi-byte port',
+        pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
+        repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
+        sourceBranchIdentifier: 'main',
+        startedAt: Utils\Utils::parseDateTime('2024-05-15T11:26:32.891Z'),
+        status: Shared\GenaiTaskStatus::Blocked,
+        summary: 'Cur aeternus cogito vesper.',
+        targetBranchIdentifier: 'agent/joshingly-ignorance',
+        tokensUsed: 2165,
+        updatedAt: Utils\Utils::parseDateTime('2023-02-22T09:35:41.675Z'),
+        webUrl: 'https://inexperienced-adrenalin.biz/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->genai->updateGenaiTask(
+    request: $request
+);
+
+if ($response->genaiTask !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\UpdateGenaiTaskRequest](../../Models/Operations/UpdateGenaiTaskRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\UpdateGenaiTaskResponse](../../Models/Operations/UpdateGenaiTaskResponse.md)**
 
 ### Errors
 

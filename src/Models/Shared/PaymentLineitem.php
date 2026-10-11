@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PaymentLineitem
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -20,6 +21,7 @@ class PaymentLineitem
     public ?string $accountId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -52,6 +54,7 @@ class PaymentLineitem
     public ?string $itemDescription = null;
 
     /**
+     * (reference to CommerceItem)
      *
      * @var ?string $itemId
      */
@@ -84,6 +87,7 @@ class PaymentLineitem
     public ?string $notes = null;
 
     /**
+     * new field
      *
      * @var ?float $refundAmount
      */
@@ -92,6 +96,7 @@ class PaymentLineitem
     public ?float $refundAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $refundedAt
      */
@@ -140,6 +145,7 @@ class PaymentLineitem
     public ?float $unitQuantity = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

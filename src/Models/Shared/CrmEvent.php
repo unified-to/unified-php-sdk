@@ -43,6 +43,7 @@ class CrmEvent
     public ?array $contactIds = null;
 
     /**
+     * The date that this event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -80,6 +81,7 @@ class CrmEvent
     public ?PropertyCrmEventForm $form = null;
 
     /**
+     * Unique identifier for this event object
      *
      * @var ?string $id
      */
@@ -136,7 +138,7 @@ class CrmEvent
     public ?PropertyCrmEventPageView $pageView = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this event.
      *
      * @var ?array<string, mixed> $raw
      */
@@ -156,6 +158,7 @@ class CrmEvent
     public ?PropertyCrmEventTask $task = null;
 
     /**
+     * The type of event
      *
      * @var ?\Unified\Unified_to\Models\Shared\CrmEventType $type
      */
@@ -165,6 +168,7 @@ class CrmEvent
     public ?CrmEventType $type = null;
 
     /**
+     * The last date that this event object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -173,6 +177,7 @@ class CrmEvent
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

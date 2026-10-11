@@ -62,6 +62,7 @@ class CommerceReview
     public ?string $content = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -110,6 +111,7 @@ class CommerceReview
     public ?bool $isVerified = null;
 
     /**
+     * Reference to the product being reviewed (reference to CommerceItem)
      *
      * @var ?string $itemId
      */
@@ -118,6 +120,7 @@ class CommerceReview
     public ?string $itemId = null;
 
     /**
+     * Optional reference to specific variant if applicable (reference to CommerceCommerceItemvariant)
      *
      * @var ?string $itemVariantId
      */
@@ -126,6 +129,7 @@ class CommerceReview
     public ?string $itemVariantId = null;
 
     /**
+     * (reference to CommerceLocation)
      *
      * @var ?string $locationId
      */
@@ -154,6 +158,7 @@ class CommerceReview
     public ?array $metadata = null;
 
     /**
+     * 1-5 rating
      *
      * @var ?float $rating
      */
@@ -162,7 +167,7 @@ class CommerceReview
     public ?float $rating = null;
 
     /**
-     * $raw
+     * Original review data from source platform
      *
      * @var ?array<string, mixed> $raw
      */
@@ -197,6 +202,7 @@ class CommerceReview
     public ?float $unhelpfulVotes = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

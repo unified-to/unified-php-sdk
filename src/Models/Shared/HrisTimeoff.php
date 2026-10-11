@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisTimeoff
 {
     /**
+     * employee ID (reference to HrisEmployee)
      *
      * @var string $userId
      */
@@ -19,6 +20,7 @@ class HrisTimeoff
     public string $userId;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $approvedAt
      */
@@ -27,6 +29,7 @@ class HrisTimeoff
     public ?\DateTime $approvedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $approverUserId
      */
@@ -43,6 +46,7 @@ class HrisTimeoff
     public ?string $comments = null;
 
     /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -51,6 +55,7 @@ class HrisTimeoff
     public ?string $companyId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -76,6 +81,7 @@ class HrisTimeoff
     public ?DurationType $durationType = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -100,6 +106,7 @@ class HrisTimeoff
     public ?bool $isPaid = null;
 
     /**
+     * integration leave-type label before normalization
      *
      * @var ?string $originalType
      */
@@ -126,6 +133,7 @@ class HrisTimeoff
     public ?string $reason = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -152,6 +160,7 @@ class HrisTimeoff
     public ?HrisTimeoffType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

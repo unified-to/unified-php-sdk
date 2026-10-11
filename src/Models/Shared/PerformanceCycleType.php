@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** whether this is a review cycle or a goal cycle/timeframe */
 enum PerformanceCycleType: string
 {
     case Review = 'REVIEW';

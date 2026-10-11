@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CdpIdentifier
 {
     /**
+     * The identifier value that resolves to the profile
      *
      * @var string $value
      */
@@ -19,6 +20,7 @@ class CdpIdentifier
     public string $value;
 
     /**
+     * The encoding of the identifier value (eg. raw, sha256)
      *
      * @var ?string $encoding
      */
@@ -27,6 +29,7 @@ class CdpIdentifier
     public ?string $encoding = null;
 
     /**
+     * Whether this is the primary identifier for the profile
      *
      * @var ?bool $isPrimary
      */
@@ -35,6 +38,7 @@ class CdpIdentifier
     public ?bool $isPrimary = null;
 
     /**
+     * The source that provided this identifier
      *
      * @var ?string $source
      */
@@ -43,6 +47,7 @@ class CdpIdentifier
     public ?string $source = null;
 
     /**
+     * The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID)
      *
      * @var ?\Unified\Unified_to\Models\Shared\CdpIdentifierType $type
      */

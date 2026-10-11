@@ -21,6 +21,7 @@ class LmsStudent
     public ?PropertyLmsStudentAddress $address = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -99,6 +100,7 @@ class LmsStudent
     public ?array $telephones = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

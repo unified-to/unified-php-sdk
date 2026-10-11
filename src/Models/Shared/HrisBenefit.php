@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisBenefit
 {
     /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -30,6 +31,7 @@ class HrisBenefit
     public ?CoverageLevel $coverageLevel = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -46,6 +48,7 @@ class HrisBenefit
     public ?string $currency = null;
 
     /**
+     * e.g. "Company 401(k) retirement plan"
      *
      * @var ?string $description
      */
@@ -54,6 +57,7 @@ class HrisBenefit
     public ?string $description = null;
 
     /**
+     * percentage or money
      *
      * @var ?float $employerContributionAmount
      */
@@ -62,6 +66,7 @@ class HrisBenefit
     public ?float $employerContributionAmount = null;
 
     /**
+     * always money
      *
      * @var ?float $employerContributionMaxAmount
      */
@@ -79,6 +84,7 @@ class HrisBenefit
     public ?EmployerContributionType $employerContributionType = null;
 
     /**
+     * Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc).
      *
      * @var ?\Unified\Unified_to\Models\Shared\HrisBenefitFrequency $frequency
      */
@@ -104,6 +110,7 @@ class HrisBenefit
     public ?bool $isActive = null;
 
     /**
+     * e.g. "401(k) Plan"
      *
      * @var ?string $name
      */
@@ -122,6 +129,7 @@ class HrisBenefit
     public ?array $raw = null;
 
     /**
+     * Tax describes the tax treatment of the benefit
      *
      * @var ?\Unified\Unified_to\Models\Shared\Tax $tax
      */
@@ -140,6 +148,7 @@ class HrisBenefit
     public ?HrisBenefitType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

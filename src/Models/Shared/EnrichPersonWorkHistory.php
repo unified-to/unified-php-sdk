@@ -27,6 +27,7 @@ class EnrichPersonWorkHistory
     public ?string $companyDomain = null;
 
     /**
+     * (reference to EnrichCompany)
      *
      * @var ?string $companyId
      */
@@ -43,6 +44,7 @@ class EnrichPersonWorkHistory
     public ?string $companyName = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -59,6 +61,7 @@ class EnrichPersonWorkHistory
     public ?string $location = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

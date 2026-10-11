@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingBankfeedaccount
 {
     /**
+     * ref -> AccountingAccount: the target GL account the feed posts into (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -20,6 +21,7 @@ class AccountingBankfeedaccount
     public ?string $accountId = null;
 
     /**
+     * full account number where available
      *
      * @var ?string $accountNumber
      */
@@ -28,6 +30,7 @@ class AccountingBankfeedaccount
     public ?string $accountNumber = null;
 
     /**
+     * last-4 when the full number isn't returned
      *
      * @var ?string $accountNumberLast4
      */
@@ -36,6 +39,7 @@ class AccountingBankfeedaccount
     public ?string $accountNumberLast4 = null;
 
     /**
+     * CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountType $accountType
      */
@@ -45,6 +49,7 @@ class AccountingBankfeedaccount
     public ?AccountType $accountType = null;
 
     /**
+     * current balance of the source account
      *
      * @var ?float $balance
      */
@@ -53,6 +58,7 @@ class AccountingBankfeedaccount
     public ?float $balance = null;
 
     /**
+     * bank / institution name
      *
      * @var ?string $bankName
      */
@@ -61,6 +67,7 @@ class AccountingBankfeedaccount
     public ?string $bankName = null;
 
     /**
+     * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -69,6 +76,7 @@ class AccountingBankfeedaccount
     public ?\DateTime $createdAt = null;
 
     /**
+     * ISO 4217 currency of the account
      *
      * @var ?string $currency
      */
@@ -77,6 +85,7 @@ class AccountingBankfeedaccount
     public ?string $currency = null;
 
     /**
+     * date the feed begins delivering transactions (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $feedStartAt
      */
@@ -93,6 +102,7 @@ class AccountingBankfeedaccount
     public ?string $id = null;
 
     /**
+     * account nickname / source name
      *
      * @var ?string $name
      */
@@ -101,6 +111,7 @@ class AccountingBankfeedaccount
     public ?string $name = null;
 
     /**
+     * ref -> accounting Organization this record belongs to
      *
      * @var ?string $organizationId
      */
@@ -109,7 +120,7 @@ class AccountingBankfeedaccount
     public ?string $organizationId = null;
 
     /**
-     * $raw
+     * The original data from the integration's API
      *
      * @var ?array<string, mixed> $raw
      */
@@ -119,6 +130,7 @@ class AccountingBankfeedaccount
     public ?array $raw = null;
 
     /**
+     * bank routing number
      *
      * @var ?string $routingNumber
      */
@@ -127,6 +139,7 @@ class AccountingBankfeedaccount
     public ?string $routingNumber = null;
 
     /**
+     * feed state: ACTIVE, INACTIVE
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingBankfeedaccountStatus $status
      */
@@ -136,6 +149,7 @@ class AccountingBankfeedaccount
     public ?AccountingBankfeedaccountStatus $status = null;
 
     /**
+     * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

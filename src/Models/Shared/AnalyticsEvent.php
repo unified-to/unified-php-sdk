@@ -44,6 +44,7 @@ class AnalyticsEvent
     public ?string $countryCode = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -135,6 +136,7 @@ class AnalyticsEvent
     public ?string $pageUrl = null;
 
     /**
+     * points to AnalyticsProperty
      *
      * @var ?string $propertyId
      */
@@ -161,6 +163,7 @@ class AnalyticsEvent
     public ?string $region = null;
 
     /**
+     * points to AnalyticsSession
      *
      * @var ?string $sessionId
      */
@@ -169,6 +172,7 @@ class AnalyticsEvent
     public ?string $sessionId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -225,6 +229,7 @@ class AnalyticsEvent
     public ?float $value = null;
 
     /**
+     * points to AnalyticsVisitor
      *
      * @var ?string $visitorId
      */

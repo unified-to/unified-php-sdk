@@ -20,6 +20,14 @@ class ListGenaiTasksRequest
     public string $connectionId;
 
     /**
+     * The agent ID to filter by
+     *
+     * @var ?string $agentId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=agent_id')]
+    public ?string $agentId = null;
+
+    /**
      * Fields to return
      *
      * @var ?array<\Unified\Unified_to\Models\Operations\ListGenaiTasksQueryParamFields> $fields
@@ -88,6 +96,7 @@ class ListGenaiTasksRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $agentId
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListGenaiTasksQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
@@ -99,9 +108,10 @@ class ListGenaiTasksRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $status = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $agentId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $status = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
+        $this->agentId = $agentId;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;

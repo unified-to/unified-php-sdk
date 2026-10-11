@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class MarketingReport
 {
     /**
+     * Number of abuse reports
      *
      * @var ?float $abuseReports
      */
@@ -20,6 +21,7 @@ class MarketingReport
     public ?float $abuseReports = null;
 
     /**
+     * Associated campaign ID
      *
      * @var ?string $campaignId
      */
@@ -28,6 +30,7 @@ class MarketingReport
     public ?string $campaignId = null;
 
     /**
+     * Click rate (decimal)
      *
      * @var ?float $clickRate
      */
@@ -36,6 +39,7 @@ class MarketingReport
     public ?float $clickRate = null;
 
     /**
+     * Total clicks
      *
      * @var ?float $clicksTotal
      */
@@ -44,6 +48,7 @@ class MarketingReport
     public ?float $clicksTotal = null;
 
     /**
+     * Total emails sent
      *
      * @var ?float $emailsSent
      */
@@ -52,6 +57,7 @@ class MarketingReport
     public ?float $emailsSent = null;
 
     /**
+     * End time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -60,6 +66,7 @@ class MarketingReport
     public ?\DateTime $endAt = null;
 
     /**
+     * Forward count
      *
      * @var ?float $forwardsCount
      */
@@ -68,6 +75,7 @@ class MarketingReport
     public ?float $forwardsCount = null;
 
     /**
+     * Forwards opened
      *
      * @var ?float $forwardsOpens
      */
@@ -76,6 +84,7 @@ class MarketingReport
     public ?float $forwardsOpens = null;
 
     /**
+     * Hard bounce count
      *
      * @var ?float $hardBounces
      */
@@ -84,6 +93,7 @@ class MarketingReport
     public ?float $hardBounces = null;
 
     /**
+     * Open rate (decimal) excluding automated/bot/proxy opens
      *
      * @var ?float $humanOpenRate
      */
@@ -92,6 +102,7 @@ class MarketingReport
     public ?float $humanOpenRate = null;
 
     /**
+     * Total opens excluding automated/bot/proxy (e.g. Apple Mail Privacy Protection) opens
      *
      * @var ?float $humanOpensTotal
      */
@@ -100,6 +111,7 @@ class MarketingReport
     public ?float $humanOpensTotal = null;
 
     /**
+     * Unique opens excluding automated/bot/proxy opens
      *
      * @var ?float $humanUniqueOpens
      */
@@ -108,6 +120,7 @@ class MarketingReport
     public ?float $humanUniqueOpens = null;
 
     /**
+     * Unique identifier for the campaign report
      *
      * @var ?string $id
      */
@@ -116,6 +129,7 @@ class MarketingReport
     public ?string $id = null;
 
     /**
+     * Last click timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $lastClickAt
      */
@@ -124,6 +138,7 @@ class MarketingReport
     public ?\DateTime $lastClickAt = null;
 
     /**
+     * Last open timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $lastOpenAt
      */
@@ -142,6 +157,7 @@ class MarketingReport
     public ?array $links = null;
 
     /**
+     * Associated list ID
      *
      * @var ?string $listId
      */
@@ -150,6 +166,7 @@ class MarketingReport
     public ?string $listId = null;
 
     /**
+     * Open rate (decimal)
      *
      * @var ?float $openRate
      */
@@ -158,6 +175,7 @@ class MarketingReport
     public ?float $openRate = null;
 
     /**
+     * Total opens
      *
      * @var ?float $opensTotal
      */
@@ -166,7 +184,7 @@ class MarketingReport
     public ?float $opensTotal = null;
 
     /**
-     * $raw
+     * Raw data from integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -176,6 +194,7 @@ class MarketingReport
     public ?array $raw = null;
 
     /**
+     * Send time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $sentAt
      */
@@ -184,6 +203,7 @@ class MarketingReport
     public ?\DateTime $sentAt = null;
 
     /**
+     * Soft bounce count
      *
      * @var ?float $softBounces
      */
@@ -192,6 +212,7 @@ class MarketingReport
     public ?float $softBounces = null;
 
     /**
+     * Start time (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -200,6 +221,7 @@ class MarketingReport
     public ?\DateTime $startAt = null;
 
     /**
+     * Syntax error count
      *
      * @var ?float $syntaxErrors
      */
@@ -208,6 +230,7 @@ class MarketingReport
     public ?float $syntaxErrors = null;
 
     /**
+     * Unique clicks
      *
      * @var ?float $uniqueClicks
      */
@@ -216,6 +239,7 @@ class MarketingReport
     public ?float $uniqueClicks = null;
 
     /**
+     * Unique opens
      *
      * @var ?float $uniqueOpens
      */
@@ -224,6 +248,7 @@ class MarketingReport
     public ?float $uniqueOpens = null;
 
     /**
+     * Unique subscriber clicks
      *
      * @var ?float $uniqueSubscriberClicks
      */
@@ -232,6 +257,7 @@ class MarketingReport
     public ?float $uniqueSubscriberClicks = null;
 
     /**
+     * Number of unsubscribes
      *
      * @var ?float $unsubscribed
      */

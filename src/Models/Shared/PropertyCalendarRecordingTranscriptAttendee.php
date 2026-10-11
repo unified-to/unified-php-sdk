@@ -53,6 +53,7 @@ class PropertyCalendarRecordingTranscriptAttendee
     public ?PropertyCalendarRecordingTranscriptAttendeeStatus $status = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

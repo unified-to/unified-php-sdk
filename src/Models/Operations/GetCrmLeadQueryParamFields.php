@@ -28,6 +28,7 @@ enum GetCrmLeadQueryParamFields: string
     case Telephones = 'telephones';
     case Source = 'source';
     case Status = 'status';
+    case Title = 'title';
     case LinkUrls = 'link_urls';
     case Metadata = 'metadata';
     case Raw = 'raw';

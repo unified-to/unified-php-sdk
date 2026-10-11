@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingCarrier
 {
     /**
+     * Carrier code (e.g., "usps", "fedex", "ups")
      *
      * @var ?string $code
      */
@@ -20,6 +21,7 @@ class ShippingCarrier
     public ?string $code = null;
 
     /**
+     * The date that this carrier object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -28,6 +30,7 @@ class ShippingCarrier
     public ?\DateTime $createdAt = null;
 
     /**
+     * Unique identifier for this carrier object
      *
      * @var ?string $id
      */
@@ -36,6 +39,7 @@ class ShippingCarrier
     public ?string $id = null;
 
     /**
+     * Whether the carrier is currently active
      *
      * @var ?bool $isActive
      */
@@ -44,6 +48,7 @@ class ShippingCarrier
     public ?bool $isActive = null;
 
     /**
+     * Carrier logo URL
      *
      * @var ?string $logoUrl
      */
@@ -52,6 +57,7 @@ class ShippingCarrier
     public ?string $logoUrl = null;
 
     /**
+     * The name of the carrier
      *
      * @var ?string $name
      */
@@ -60,7 +66,7 @@ class ShippingCarrier
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this carrier
      *
      * @var ?array<string, mixed> $raw
      */
@@ -70,6 +76,7 @@ class ShippingCarrier
     public ?array $raw = null;
 
     /**
+     * The last date that this carrier object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -78,6 +85,7 @@ class ShippingCarrier
     public ?\DateTime $updatedAt = null;
 
     /**
+     * Carrier website
      *
      * @var ?string $websiteUrl
      */

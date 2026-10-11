@@ -26,6 +26,7 @@ class DatastoreRelationship
     public string $name;
 
     /**
+     * target Database Table ID
      *
      * @var string $tableId
      */

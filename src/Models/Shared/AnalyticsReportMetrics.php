@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AnalyticsReportMetrics
 {
     /**
+     * new vs returning
      *
      * @var ?\Unified\Unified_to\Models\Shared\AnalyticsReportMetricsDimension $dimension
      */
@@ -29,6 +30,7 @@ class AnalyticsReportMetrics
     public ?string $dimensionValue = null;
 
     /**
+     * Traffic metrics
      *
      * @var ?\Unified\Unified_to\Models\Shared\AnalyticsReportMetricsType $type
      */

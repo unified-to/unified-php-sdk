@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingPaymentterm
 {
     /**
+     * STANDARD (days-based) or DATE_DRIVEN (month-based)
      *
      * @var ?\Unified\Unified_to\Models\Shared\Category $category
      */
@@ -21,6 +22,7 @@ class AccountingPaymentterm
     public ?Category $category = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -29,6 +31,7 @@ class AccountingPaymentterm
     public ?\DateTime $createdAt = null;
 
     /**
+     * (date-driven) day of month payment is due (1–31)
      *
      * @var ?float $dayOfMonthDue
      */
@@ -45,6 +48,7 @@ class AccountingPaymentterm
     public ?string $description = null;
 
     /**
+     * (date-driven) pay before this day of month for the discount
      *
      * @var ?float $discountDayOfMonth
      */
@@ -53,6 +57,7 @@ class AccountingPaymentterm
     public ?float $discountDayOfMonth = null;
 
     /**
+     * (standard) days within which an early-pay discount applies
      *
      * @var ?float $discountDays
      */
@@ -61,6 +66,7 @@ class AccountingPaymentterm
     public ?float $discountDays = null;
 
     /**
+     * (standard) early-pay discount rate
      *
      * @var ?float $discountPercent
      */
@@ -69,6 +75,7 @@ class AccountingPaymentterm
     public ?float $discountPercent = null;
 
     /**
+     * (standard) days until payment is due
      *
      * @var ?float $dueDays
      */
@@ -77,6 +84,7 @@ class AccountingPaymentterm
     public ?float $dueDays = null;
 
     /**
+     * (date-driven) if invoiced within N days of month-end, due next month
      *
      * @var ?float $dueNextMonthDays
      */
@@ -111,6 +119,7 @@ class AccountingPaymentterm
     public ?array $metadata = null;
 
     /**
+     * term label, e.g. "Net 30"
      *
      * @var ?string $name
      */
@@ -146,6 +155,7 @@ class AccountingPaymentterm
     public ?AccountingPaymenttermType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

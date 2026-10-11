@@ -12,12 +12,23 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingPurchaseorder
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('account_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $accountId = null;
+
+    /**
+     * $attachments
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment> $attachments
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('attachments')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingAttachment>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $attachments = null;
 
     /**
      *
@@ -39,6 +50,7 @@ class AccountingPurchaseorder
     public ?array $categoryIds = null;
 
     /**
+     * Customer, Supplier (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -47,6 +59,7 @@ class AccountingPurchaseorder
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -99,6 +112,7 @@ class AccountingPurchaseorder
     public ?string $organizationId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */
@@ -143,6 +157,7 @@ class AccountingPurchaseorder
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -152,6 +167,7 @@ class AccountingPurchaseorder
 
     /**
      * @param  ?string  $accountId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAttachment>  $attachments
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingPurchaseorderBillingAddress  $billingAddress
      * @param  ?array<string>  $categoryIds
      * @param  ?string  $contactId
@@ -169,9 +185,10 @@ class AccountingPurchaseorder
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingPurchaseorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?PropertyAccountingPurchaseorderShippingAddress $shippingAddress = null, ?AccountingPurchaseorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $attachments = null, ?PropertyAccountingPurchaseorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?PropertyAccountingPurchaseorderShippingAddress $shippingAddress = null, ?AccountingPurchaseorderStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
+        $this->attachments = $attachments;
         $this->billingAddress = $billingAddress;
         $this->categoryIds = $categoryIds;
         $this->contactId = $contactId;

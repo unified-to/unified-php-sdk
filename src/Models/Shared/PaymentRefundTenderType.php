@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type */
 enum PaymentRefundTenderType: string
 {
     case Card = 'CARD';

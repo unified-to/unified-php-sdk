@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingShipment
 {
     /**
+     * Reference to the carrier
      *
      * @var ?string $carrierId
      */
@@ -20,6 +21,7 @@ class ShippingShipment
     public ?string $carrierId = null;
 
     /**
+     * Human-readable carrier/provider name when there is no carrier record to reference (e.g. commerce-platform fulfillments)
      *
      * @var ?string $carrierName
      */
@@ -28,6 +30,7 @@ class ShippingShipment
     public ?string $carrierName = null;
 
     /**
+     * The date that this shipment object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -56,6 +59,7 @@ class ShippingShipment
     public ?PropertyShippingShipmentFromAddress $fromAddress = null;
 
     /**
+     * Unique identifier for this shipment object
      *
      * @var ?string $id
      */
@@ -74,6 +78,7 @@ class ShippingShipment
     public ?PropertyShippingShipmentInsurance $insurance = null;
 
     /**
+     * Adult signature required
      *
      * @var ?bool $isAdultSignatureRequired
      */
@@ -82,6 +87,7 @@ class ShippingShipment
     public ?bool $isAdultSignatureRequired = null;
 
     /**
+     * Whether shipment is international
      *
      * @var ?bool $isInternational
      */
@@ -90,6 +96,7 @@ class ShippingShipment
     public ?bool $isInternational = null;
 
     /**
+     * Whether delivery is guaranteed (from rate)
      *
      * @var ?bool $isRateGuaranteed
      */
@@ -98,6 +105,7 @@ class ShippingShipment
     public ?bool $isRateGuaranteed = null;
 
     /**
+     * Whether this is a return shipment
      *
      * @var ?bool $isReturn
      */
@@ -106,6 +114,7 @@ class ShippingShipment
     public ?bool $isReturn = null;
 
     /**
+     * Signature required on delivery
      *
      * @var ?bool $isSignatureRequired
      */
@@ -114,6 +123,7 @@ class ShippingShipment
     public ?bool $isSignatureRequired = null;
 
     /**
+     * Optional reference to the shipping label
      *
      * @var ?string $labelId
      */
@@ -132,6 +142,7 @@ class ShippingShipment
     public ?array $lineitems = null;
 
     /**
+     * Reference to commerce_order or accounting_order
      *
      * @var ?string $orderId
      */
@@ -140,6 +151,7 @@ class ShippingShipment
     public ?string $orderId = null;
 
     /**
+     * ref -> accounting Organization this shipment belongs to (multi-company ERPs)
      *
      * @var ?string $organizationId
      */
@@ -148,6 +160,7 @@ class ShippingShipment
     public ?string $organizationId = null;
 
     /**
+     * Reference to original shipment if return; points to ShippingShipment
      *
      * @var ?string $originalShipmentId
      */
@@ -166,6 +179,7 @@ class ShippingShipment
     public ?array $packages = null;
 
     /**
+     * The rate amount used (may differ from shipping_cost due to adjustments)
      *
      * @var ?float $rateAmount
      */
@@ -174,6 +188,7 @@ class ShippingShipment
     public ?float $rateAmount = null;
 
     /**
+     * Currency for rate_amount
      *
      * @var ?string $rateCurrency
      */
@@ -182,6 +197,7 @@ class ShippingShipment
     public ?string $rateCurrency = null;
 
     /**
+     * Estimated delivery days from the rate
      *
      * @var ?float $rateEstimatedDays
      */
@@ -190,6 +206,7 @@ class ShippingShipment
     public ?float $rateEstimatedDays = null;
 
     /**
+     * Estimated delivery date from the rate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $rateEstimatedDeliveryAt
      */
@@ -198,6 +215,7 @@ class ShippingShipment
     public ?\DateTime $rateEstimatedDeliveryAt = null;
 
     /**
+     * Optional reference to the selected rate (for traceability)
      *
      * @var ?string $rateId
      */
@@ -206,6 +224,7 @@ class ShippingShipment
     public ?string $rateId = null;
 
     /**
+     * Service name from the rate (e.g., "Priority Mail")
      *
      * @var ?string $rateServiceName
      */
@@ -214,7 +233,7 @@ class ShippingShipment
     public ?string $rateServiceName = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this shipment
      *
      * @var ?array<string, mixed> $raw
      */
@@ -224,6 +243,7 @@ class ShippingShipment
     public ?array $raw = null;
 
     /**
+     * Customer reference number
      *
      * @var ?string $referenceNumber
      */
@@ -242,6 +262,7 @@ class ShippingShipment
     public ?PropertyShippingShipmentReturnAddress $returnAddress = null;
 
     /**
+     * RMA number if return shipment
      *
      * @var ?string $returnAuthorizationNumber
      */
@@ -250,6 +271,7 @@ class ShippingShipment
     public ?string $returnAuthorizationNumber = null;
 
     /**
+     * Reason for return
      *
      * @var ?string $returnReason
      */
@@ -258,6 +280,7 @@ class ShippingShipment
     public ?string $returnReason = null;
 
     /**
+     * Type of return
      *
      * @var ?\Unified\Unified_to\Models\Shared\ReturnType $returnType
      */
@@ -267,6 +290,7 @@ class ShippingShipment
     public ?ReturnType $returnType = null;
 
     /**
+     * Code for the shipping service used
      *
      * @var ?string $serviceCode
      */
@@ -275,6 +299,7 @@ class ShippingShipment
     public ?string $serviceCode = null;
 
     /**
+     * When shipment was createddispatched (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $shippedAt
      */
@@ -293,6 +318,7 @@ class ShippingShipment
     public ?array $specialInstructions = null;
 
     /**
+     * Current status of the shipment
      *
      * @var ?\Unified\Unified_to\Models\Shared\ShippingShipmentStatus $status
      */
@@ -312,6 +338,7 @@ class ShippingShipment
     public ?PropertyShippingShipmentToAddress $toAddress = null;
 
     /**
+     * Optional reference to the tracking information
      *
      * @var ?string $trackingId
      */
@@ -320,6 +347,7 @@ class ShippingShipment
     public ?string $trackingId = null;
 
     /**
+     * Carrier tracking URL for this shipment
      *
      * @var ?string $trackingUrl
      */
@@ -328,6 +356,7 @@ class ShippingShipment
     public ?string $trackingUrl = null;
 
     /**
+     * The last date that this shipment object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -336,6 +365,7 @@ class ShippingShipment
     public ?\DateTime $updatedAt = null;
 
     /**
+     * Origin warehouselocation ID; points to CommerceLocation
      *
      * @var ?string $warehouseLocationId
      */
@@ -344,6 +374,7 @@ class ShippingShipment
     public ?string $warehouseLocationId = null;
 
     /**
+     * Origin warehouse location name
      *
      * @var ?string $warehouseLocationName
      */

@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class MarketingMember
 {
     /**
+     * The name of the company/organization the member belongs to
      *
      * @var ?string $company
      */
@@ -21,6 +22,7 @@ class MarketingMember
     public ?string $company = null;
 
     /**
+     * The date that this member object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -47,6 +49,7 @@ class MarketingMember
     public ?string $firstName = null;
 
     /**
+     * Unique identifier for this member object
      *
      * @var ?string $id
      */
@@ -73,6 +76,7 @@ class MarketingMember
     public ?array $listIds = null;
 
     /**
+     * The name of the member
      *
      * @var ?string $name
      */
@@ -81,7 +85,7 @@ class MarketingMember
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this member
      *
      * @var ?array<string, mixed> $raw
      */
@@ -110,6 +114,7 @@ class MarketingMember
     public ?array $tags = null;
 
     /**
+     * The last date that this member object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

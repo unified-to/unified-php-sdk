@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PaymentRefund
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -44,6 +45,7 @@ class PaymentRefund
     public ?string $notes = null;
 
     /**
+     * (reference to PaymentPayment)
      *
      * @var ?string $paymentId
      */
@@ -62,6 +64,7 @@ class PaymentRefund
     public ?array $raw = null;
 
     /**
+     * Why the refund was issued
      *
      * @var ?\Unified\Unified_to\Models\Shared\Reason $reason
      */
@@ -79,6 +82,7 @@ class PaymentRefund
     public ?string $reference = null;
 
     /**
+     * Date and time the refund occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $refundedAt
      */
@@ -96,6 +100,7 @@ class PaymentRefund
     public ?PaymentRefundStatus $status = null;
 
     /**
+     * Normalized tender category the refund was returned to; mirrors PaymentPayment.tender_type
      *
      * @var ?\Unified\Unified_to\Models\Shared\PaymentRefundTenderType $tenderType
      */
@@ -113,6 +118,7 @@ class PaymentRefund
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ClubsEvent
 {
     /**
+     * The away team's score
      *
      * @var ?float $awayScore
      */
@@ -21,6 +22,7 @@ class ClubsEvent
     public ?float $awayScore = null;
 
     /**
+     * The away team's name (homeaway providers)
      *
      * @var ?string $awayTeamName
      */
@@ -29,6 +31,7 @@ class ClubsEvent
     public ?string $awayTeamName = null;
 
     /**
+     * The date that this event was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -37,6 +40,7 @@ class ClubsEvent
     public ?\DateTime $createdAt = null;
 
     /**
+     * A description or notes for the event
      *
      * @var ?string $description
      */
@@ -45,6 +49,7 @@ class ClubsEvent
     public ?string $description = null;
 
     /**
+     * The scheduled duration, in minutes
      *
      * @var ?float $durationMinutes
      */
@@ -53,6 +58,7 @@ class ClubsEvent
     public ?float $durationMinutes = null;
 
     /**
+     * When the event ends (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -61,6 +67,7 @@ class ClubsEvent
     public ?\DateTime $endAt = null;
 
     /**
+     * The group this event belongs to (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -69,6 +76,7 @@ class ClubsEvent
     public ?string $groupId = null;
 
     /**
+     * The home team's score
      *
      * @var ?float $homeScore
      */
@@ -77,6 +85,7 @@ class ClubsEvent
     public ?float $homeScore = null;
 
     /**
+     * The home team's name (homeaway providers)
      *
      * @var ?string $homeTeamName
      */
@@ -85,6 +94,7 @@ class ClubsEvent
     public ?string $homeTeamName = null;
 
     /**
+     * Unique identifier for this event
      *
      * @var ?string $id
      */
@@ -93,6 +103,7 @@ class ClubsEvent
     public ?string $id = null;
 
     /**
+     * Whether the connected groupteam is the home side
      *
      * @var ?bool $isHome
      */
@@ -101,6 +112,7 @@ class ClubsEvent
     public ?bool $isHome = null;
 
     /**
+     * The id of the location for this event (reference to ClubsLocation)
      *
      * @var ?string $locationId
      */
@@ -109,6 +121,7 @@ class ClubsEvent
     public ?string $locationId = null;
 
     /**
+     * The name of the location for this event
      *
      * @var ?string $locationName
      */
@@ -117,6 +130,7 @@ class ClubsEvent
     public ?string $locationName = null;
 
     /**
+     * The event name (or a "Home vs Away" matchup label)
      *
      * @var ?string $name
      */
@@ -125,6 +139,7 @@ class ClubsEvent
     public ?string $name = null;
 
     /**
+     * The id of the opposing team (single-opponent providers)
      *
      * @var ?string $opponentId
      */
@@ -133,6 +148,7 @@ class ClubsEvent
     public ?string $opponentId = null;
 
     /**
+     * The name of the opposing team
      *
      * @var ?string $opponentName
      */
@@ -141,7 +157,7 @@ class ClubsEvent
     public ?string $opponentName = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this event
      *
      * @var ?array<string, mixed> $raw
      */
@@ -151,6 +167,7 @@ class ClubsEvent
     public ?array $raw = null;
 
     /**
+     * The opponent's score (team-vs-opponent providers)
      *
      * @var ?float $scoreAgainst
      */
@@ -159,6 +176,7 @@ class ClubsEvent
     public ?float $scoreAgainst = null;
 
     /**
+     * The connected groupteam's score (team-vs-opponent providers)
      *
      * @var ?float $scoreFor
      */
@@ -167,6 +185,7 @@ class ClubsEvent
     public ?float $scoreFor = null;
 
     /**
+     * When the event starts (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -175,6 +194,7 @@ class ClubsEvent
     public ?\DateTime $startAt = null;
 
     /**
+     * The event status
      *
      * @var ?\Unified\Unified_to\Models\Shared\ClubsEventStatus $status
      */
@@ -184,6 +204,7 @@ class ClubsEvent
     public ?ClubsEventStatus $status = null;
 
     /**
+     * The timezone of the event
      *
      * @var ?string $timezone
      */
@@ -192,6 +213,7 @@ class ClubsEvent
     public ?string $timezone = null;
 
     /**
+     * The event type
      *
      * @var ?\Unified\Unified_to\Models\Shared\ClubsEventType $type
      */
@@ -201,6 +223,7 @@ class ClubsEvent
     public ?ClubsEventType $type = null;
 
     /**
+     * The last date that this event was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -209,6 +232,7 @@ class ClubsEvent
     public ?\DateTime $updatedAt = null;
 
     /**
+     * A URL to the event
      *
      * @var ?string $url
      */

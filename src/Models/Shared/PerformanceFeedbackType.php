@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** praise/recognition, constructive feedback, or a response to a feedback request */
 enum PerformanceFeedbackType: string
 {
     case Praise = 'PRAISE';

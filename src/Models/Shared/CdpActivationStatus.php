@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The current status of the activation */
 enum CdpActivationStatus: string
 {
     case Active = 'ACTIVE';

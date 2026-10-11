@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingRateSurcharge
 {
     /**
+     * Surcharge amount
      *
      * @var ?float $amount
      */
@@ -20,6 +21,7 @@ class ShippingRateSurcharge
     public ?float $amount = null;
 
     /**
+     * Surcharge type (e.g., "RESIDENTIAL", "FUEL", "SIGNATURE")
      *
      * @var ?string $code
      */
@@ -28,6 +30,7 @@ class ShippingRateSurcharge
     public ?string $code = null;
 
     /**
+     * Description of surcharge
      *
      * @var ?string $description
      */
@@ -36,6 +39,7 @@ class ShippingRateSurcharge
     public ?string $description = null;
 
     /**
+     * Human-readable name
      *
      * @var ?string $name
      */

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Unified fee category */
 enum AccountingFeeType: string
 {
     case Tax = 'TAX';

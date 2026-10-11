@@ -53,6 +53,7 @@ class PropertyCalendarEventOrganizer
     public ?PropertyCalendarEventOrganizerStatus $status = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

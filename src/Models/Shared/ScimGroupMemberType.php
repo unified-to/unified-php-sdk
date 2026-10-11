@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** NOT STANDARD */
 enum ScimGroupMemberType: string
 {
     case User = 'User';

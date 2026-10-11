@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The gender of the profile */
 enum CdpProfileGender: string
 {
     case Male = 'MALE';

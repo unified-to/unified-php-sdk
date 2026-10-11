@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Current status of the signing document */
 enum SigningDocumentStatus: string
 {
     case Draft = 'DRAFT';

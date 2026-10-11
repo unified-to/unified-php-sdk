@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingShipmentLineitem
 {
     /**
+     * Unique identifier for this fulfillment line
      *
      * @var ?string $id
      */
@@ -20,6 +21,7 @@ class ShippingShipmentLineitem
     public ?string $id = null;
 
     /**
+     * Reference to the CommerceItem being fulfilled (reference to CommerceItem)
      *
      * @var ?string $itemId
      */
@@ -28,6 +30,7 @@ class ShippingShipmentLineitem
     public ?string $itemId = null;
 
     /**
+     * Item name (for display)
      *
      * @var ?string $itemName
      */
@@ -36,6 +39,7 @@ class ShippingShipmentLineitem
     public ?string $itemName = null;
 
     /**
+     * Reference to the CommerceItemvariant being fulfilled (reference to CommerceCommerceItemvariant)
      *
      * @var ?string $itemVariantId
      */
@@ -44,6 +48,7 @@ class ShippingShipmentLineitem
     public ?string $itemVariantId = null;
 
     /**
+     * The order line being fulfilled
      *
      * @var ?string $orderLineitemId
      */
@@ -52,6 +57,7 @@ class ShippingShipmentLineitem
     public ?string $orderLineitemId = null;
 
     /**
+     * Units fulfilled on this line
      *
      * @var ?float $quantity
      */
@@ -60,6 +66,7 @@ class ShippingShipmentLineitem
     public ?float $quantity = null;
 
     /**
+     * Item SKU
      *
      * @var ?string $sku
      */

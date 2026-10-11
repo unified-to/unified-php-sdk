@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CrmDeal
 {
     /**
+     * The potential amount that deal could be worth
      *
      * @var ?float $amount
      */
@@ -21,6 +22,7 @@ class CrmDeal
     public ?float $amount = null;
 
     /**
+     * The date that this deal closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $closedAt
      */
@@ -29,6 +31,7 @@ class CrmDeal
     public ?\DateTime $closedAt = null;
 
     /**
+     * expected closing date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $closingAt
      */
@@ -57,6 +60,7 @@ class CrmDeal
     public ?array $contactIds = null;
 
     /**
+     * The date that this deal object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -65,6 +69,7 @@ class CrmDeal
     public ?\DateTime $createdAt = null;
 
     /**
+     * The currency for the deal amount (3 letter ISO code; eg. USD)
      *
      * @var ?string $currency
      */
@@ -81,6 +86,7 @@ class CrmDeal
     public ?string $description = null;
 
     /**
+     * Unique identifier for this deal object
      *
      * @var ?string $id
      */
@@ -107,6 +113,7 @@ class CrmDeal
     public ?array $metadata = null;
 
     /**
+     * The name of this deal
      *
      * @var ?string $name
      */
@@ -133,7 +140,7 @@ class CrmDeal
     public ?float $probability = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this deal
      *
      * @var ?array<string, mixed> $raw
      */
@@ -143,6 +150,7 @@ class CrmDeal
     public ?array $raw = null;
 
     /**
+     * The source for this deal
      *
      * @var ?string $source
      */
@@ -171,6 +179,7 @@ class CrmDeal
     public ?array $tags = null;
 
     /**
+     * The last date that this deal object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -179,6 +188,7 @@ class CrmDeal
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

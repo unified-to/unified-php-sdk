@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyCrmEventTask
 {
     /**
+     * The event task's descriptionnote
      *
      * @var ?string $description
      */
@@ -21,6 +22,7 @@ class PropertyCrmEventTask
     public ?string $description = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -29,6 +31,7 @@ class PropertyCrmEventTask
     public ?\DateTime $dueAt = null;
 
     /**
+     * The event task's nametitle/subject
      *
      * @var ?string $name
      */
@@ -46,6 +49,7 @@ class PropertyCrmEventTask
     public ?Priority $priority = null;
 
     /**
+     * The event task's status
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventTaskStatus $status
      */

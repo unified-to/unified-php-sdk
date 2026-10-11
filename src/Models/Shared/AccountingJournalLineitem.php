@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingJournalLineitem
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -30,6 +31,7 @@ class AccountingJournalLineitem
     public ?array $categoryIds = null;
 
     /**
+     * (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -46,6 +48,7 @@ class AccountingJournalLineitem
     public ?float $creditAmount = null;
 
     /**
+     * will replace total_amount (absolute value)
      *
      * @var ?float $debitAmount
      */
@@ -62,6 +65,7 @@ class AccountingJournalLineitem
     public ?string $description = null;
 
     /**
+     * points to a HRIS Group (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -78,6 +82,7 @@ class AccountingJournalLineitem
     public ?string $id = null;
 
     /**
+     * (reference to AccountingInvoice)
      *
      * @var ?string $invoiceId
      */
@@ -86,6 +91,7 @@ class AccountingJournalLineitem
     public ?string $invoiceId = null;
 
     /**
+     * points to a AccountingOrganization
      *
      * @var ?string $organizationId
      */
@@ -94,6 +100,7 @@ class AccountingJournalLineitem
     public ?string $organizationId = null;
 
     /**
+     * link to PaymentPayment (reference to PaymentPayment)
      *
      * @var ?string $paymentId
      */
@@ -102,6 +109,7 @@ class AccountingJournalLineitem
     public ?string $paymentId = null;
 
     /**
+     * (reference to TaskProject)
      *
      * @var ?string $projectId
      */
@@ -118,6 +126,7 @@ class AccountingJournalLineitem
     public ?float $taxAmount = null;
 
     /**
+     * ref -> AccountingTaxrate applied to the line
      *
      * @var ?string $taxrateId
      */
@@ -126,6 +135,7 @@ class AccountingJournalLineitem
     public ?string $taxrateId = null;
 
     /**
+     * will be a positive value for a debit and negative for a credit
      *
      * @var ?float $totalAmount
      */

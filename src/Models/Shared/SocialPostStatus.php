@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Publication status of the post */
 enum SocialPostStatus: string
 {
     case Draft = 'DRAFT';

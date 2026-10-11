@@ -27,6 +27,7 @@ class ShippingRateRate
     public ?float $amount = null;
 
     /**
+     * Base shipping rate
      *
      * @var ?float $baseAmount
      */
@@ -43,6 +44,7 @@ class ShippingRateRate
     public ?string $currency = null;
 
     /**
+     * Delivery days (integer)
      *
      * @var ?float $deliveryDays
      */
@@ -51,6 +53,7 @@ class ShippingRateRate
     public ?float $deliveryDays = null;
 
     /**
+     * Delivery duration terms (e.g., "3-5 business days")
      *
      * @var ?string $deliveryTerms
      */
@@ -67,6 +70,7 @@ class ShippingRateRate
     public ?string $description = null;
 
     /**
+     * Applied discount
      *
      * @var ?float $discountAmount
      */
@@ -75,6 +79,7 @@ class ShippingRateRate
     public ?float $discountAmount = null;
 
     /**
+     * Estimated delivery time in days
      *
      * @var ?float $estimatedDays
      */
@@ -83,6 +88,7 @@ class ShippingRateRate
     public ?float $estimatedDays = null;
 
     /**
+     * Specific delivery date (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $estimatedDeliveryEndAt
      */
@@ -91,6 +97,7 @@ class ShippingRateRate
     public ?\DateTime $estimatedDeliveryEndAt = null;
 
     /**
+     * Time window (e.g., "10:00 AM - 2:00 PM") (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $estimatedDeliveryStartAt
      */
@@ -99,6 +106,7 @@ class ShippingRateRate
     public ?\DateTime $estimatedDeliveryStartAt = null;
 
     /**
+     * Whether rate is currently available
      *
      * @var ?bool $isActive
      */
@@ -107,6 +115,7 @@ class ShippingRateRate
     public ?bool $isActive = null;
 
     /**
+     * Whether delivery is guaranteed
      *
      * @var ?bool $isGuaranteed
      */
@@ -115,6 +124,7 @@ class ShippingRateRate
     public ?bool $isGuaranteed = null;
 
     /**
+     * Whether this is a negotiated rate
      *
      * @var ?bool $isNegotiatedRate
      */
@@ -123,6 +133,7 @@ class ShippingRateRate
     public ?bool $isNegotiatedRate = null;
 
     /**
+     * Whether shipment is trackable
      *
      * @var ?bool $isTrackable
      */
@@ -131,6 +142,7 @@ class ShippingRateRate
     public ?bool $isTrackable = null;
 
     /**
+     * Package type (e.g., "package", "envelope", "flat")
      *
      * @var ?string $packageType
      */
@@ -139,6 +151,7 @@ class ShippingRateRate
     public ?string $packageType = null;
 
     /**
+     * Source of rate (e.g., "carrier", "negotiated", "account")
      *
      * @var ?string $rateSource
      */
@@ -165,6 +178,7 @@ class ShippingRateRate
     public ?float $taxAmount = null;
 
     /**
+     * Transit time in hours
      *
      * @var ?float $transitHours
      */

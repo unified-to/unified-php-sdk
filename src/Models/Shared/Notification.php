@@ -21,6 +21,7 @@ class Notification
     public ?string $connectionId = null;
 
     /**
+     * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -29,6 +30,7 @@ class Notification
     public ?\DateTime $createdAt = null;
 
     /**
+     * Longer description of this notification
      *
      * @var ?string $description
      */
@@ -46,6 +48,7 @@ class Notification
     public ?Event $event = null;
 
     /**
+     * Unique identifier for this notification object
      *
      * @var ?string $id
      */
@@ -70,6 +73,7 @@ class Notification
     public ?string $integrationType = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $sentAt
      */
@@ -78,6 +82,7 @@ class Notification
     public ?\DateTime $sentAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -86,6 +91,7 @@ class Notification
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -110,6 +116,7 @@ class Notification
     public ?string $webhookId = null;
 
     /**
+     * (reference to KmsSpace)
      *
      * @var ?string $workspaceId
      */

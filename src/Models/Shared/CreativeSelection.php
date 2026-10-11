@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Creative rotation strategy (LinkedIn creativeSelection) */
 enum CreativeSelection: string
 {
     case Optimized = 'OPTIMIZED';

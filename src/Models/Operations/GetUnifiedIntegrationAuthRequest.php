@@ -28,6 +28,14 @@ class GetUnifiedIntegrationAuthRequest
     public string $workspaceId;
 
     /**
+     * Existing connection ID to re-authorize in place instead of creating a duplicate. Requires reauth_token.
+     *
+     * @var ?string $connectionId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=connection_id')]
+    public ?string $connectionId = null;
+
+    /**
      *
      * @var ?string $env
      */
@@ -57,6 +65,14 @@ class GetUnifiedIntegrationAuthRequest
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=lang')]
     public ?string $lang = null;
+
+    /**
+     * Single-use token from "Create a re-authorization token for a connection" (POST /unified/connection/{id}/reauth); required with connection_id.
+     *
+     * @var ?string $reauthToken
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=reauth_token')]
+    public ?string $reauthToken = null;
 
     /**
      *
@@ -108,10 +124,12 @@ class GetUnifiedIntegrationAuthRequest
     /**
      * @param  string  $integrationType
      * @param  string  $workspaceId
+     * @param  ?string  $connectionId
      * @param  ?string  $env
      * @param  ?string  $externalXref
      * @param  ?string  $failureRedirect
      * @param  ?string  $lang
+     * @param  ?string  $reauthToken
      * @param  ?bool  $redirect
      * @param  ?string  $region
      * @param  ?array<string>  $scopes
@@ -120,14 +138,16 @@ class GetUnifiedIntegrationAuthRequest
      * @param  ?string  $successRedirect
      * @phpstan-pure
      */
-    public function __construct(string $integrationType, string $workspaceId, ?string $env = null, ?string $externalXref = null, ?string $failureRedirect = null, ?string $lang = null, ?bool $redirect = null, ?string $region = null, ?array $scopes = null, ?string $state = null, ?string $subdomain = null, ?string $successRedirect = null)
+    public function __construct(string $integrationType, string $workspaceId, ?string $connectionId = null, ?string $env = null, ?string $externalXref = null, ?string $failureRedirect = null, ?string $lang = null, ?string $reauthToken = null, ?bool $redirect = null, ?string $region = null, ?array $scopes = null, ?string $state = null, ?string $subdomain = null, ?string $successRedirect = null)
     {
         $this->integrationType = $integrationType;
         $this->workspaceId = $workspaceId;
+        $this->connectionId = $connectionId;
         $this->env = $env;
         $this->externalXref = $externalXref;
         $this->failureRedirect = $failureRedirect;
         $this->lang = $lang;
+        $this->reauthToken = $reauthToken;
         $this->redirect = $redirect;
         $this->region = $region;
         $this->scopes = $scopes;

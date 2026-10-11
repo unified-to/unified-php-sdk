@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The type of event */
 enum CrmEventType: string
 {
     case Note = 'NOTE';

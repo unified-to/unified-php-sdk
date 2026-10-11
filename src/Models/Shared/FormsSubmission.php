@@ -28,6 +28,7 @@ class FormsSubmission
     public string $formId;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -70,6 +71,7 @@ class FormsSubmission
     public ?string $respondentName = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

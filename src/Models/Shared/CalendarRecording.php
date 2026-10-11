@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CalendarRecording
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class CalendarRecording
     public ?\DateTime $createdAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -28,6 +30,7 @@ class CalendarRecording
     public ?\DateTime $endAt = null;
 
     /**
+     * (reference to CalendarEvent)
      *
      * @var ?string $eventId
      */
@@ -36,6 +39,7 @@ class CalendarRecording
     public ?string $eventId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $expiresAt
      */
@@ -72,6 +76,7 @@ class CalendarRecording
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -80,6 +85,7 @@ class CalendarRecording
     public ?\DateTime $startAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

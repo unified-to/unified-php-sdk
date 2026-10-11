@@ -52,6 +52,7 @@ class CommerceReviewComment
     public ?string $content = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -102,7 +103,7 @@ class CommerceReviewComment
     public ?array $metadata = null;
 
     /**
-     * $raw
+     * Original review data from source platform
      *
      * @var ?array<string, mixed> $raw
      */
@@ -129,6 +130,7 @@ class CommerceReviewComment
     public ?float $unhelpfulVotes = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

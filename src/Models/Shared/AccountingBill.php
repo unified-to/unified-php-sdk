@@ -30,6 +30,7 @@ class AccountingBill
     public ?float $balanceAmount = null;
 
     /**
+     * External identifier for this invoice
      *
      * @var ?string $billNumber
      */
@@ -38,6 +39,7 @@ class AccountingBill
     public ?string $billNumber = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $cancelledAt
      */
@@ -56,6 +58,7 @@ class AccountingBill
     public ?array $categoryIds = null;
 
     /**
+     * (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -64,6 +67,7 @@ class AccountingBill
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -88,6 +92,7 @@ class AccountingBill
     public ?float $discountAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -96,6 +101,7 @@ class AccountingBill
     public ?\DateTime $dueAt = null;
 
     /**
+     * Exchange rate to the base/home currency at the document date
      *
      * @var ?float $exchangeRate
      */
@@ -166,6 +172,7 @@ class AccountingBill
     public ?float $paidAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $paidAt
      */
@@ -174,6 +181,7 @@ class AccountingBill
     public ?\DateTime $paidAt = null;
 
     /**
+     * When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions.
      *
      * @var ?\Unified\Unified_to\Models\Shared\PaymentCollectionMethod $paymentCollectionMethod
      */
@@ -210,6 +218,7 @@ class AccountingBill
     public ?string $paymenttermId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */
@@ -218,6 +227,7 @@ class AccountingBill
     public ?\DateTime $postedAt = null;
 
     /**
+     * (reference to TaskProject)
      *
      * @var ?string $projectId
      */
@@ -262,6 +272,7 @@ class AccountingBill
     public ?string $refundReason = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $refundedAt
      */
@@ -287,6 +298,7 @@ class AccountingBill
     public ?AccountingBillStatus $status = null;
 
     /**
+     * Total before tax
      *
      * @var ?float $subTotalAmount
      */
@@ -303,6 +315,7 @@ class AccountingBill
     public ?float $taxAmount = null;
 
     /**
+     * @deprecated use payment_terms instead
      *
      * @var ?\Unified\Unified_to\Models\Shared\Term $term
      */
@@ -320,6 +333,7 @@ class AccountingBill
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -328,6 +342,7 @@ class AccountingBill
     public ?\DateTime $updatedAt = null;
 
     /**
+     * The public URL for the invoice to send to a customer to view or pay.
      *
      * @var ?string $url
      */

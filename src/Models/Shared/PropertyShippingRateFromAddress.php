@@ -37,6 +37,7 @@ class PropertyShippingRateFromAddress
     public ?string $city = null;
 
     /**
+     * Company name (for commercial addresses)
      *
      * @var ?string $companyName
      */
@@ -53,6 +54,7 @@ class PropertyShippingRateFromAddress
     public ?string $country = null;
 
     /**
+     * ISO 2-digit country code
      *
      * @var ?string $countryCode
      */
@@ -61,6 +63,7 @@ class PropertyShippingRateFromAddress
     public ?string $countryCode = null;
 
     /**
+     * Special delivery notes
      *
      * @var ?string $deliveryInstructions
      */
@@ -69,6 +72,7 @@ class PropertyShippingRateFromAddress
     public ?string $deliveryInstructions = null;
 
     /**
+     * Email address (for delivery notifications)
      *
      * @var ?string $email
      */
@@ -77,6 +81,7 @@ class PropertyShippingRateFromAddress
     public ?string $email = null;
 
     /**
+     * Alias for address_type === 'RESIDENTIAL'
      *
      * @var ?bool $isResidential
      */
@@ -85,6 +90,7 @@ class PropertyShippingRateFromAddress
     public ?bool $isResidential = null;
 
     /**
+     * Whether address has been validated
      *
      * @var ?bool $isValidated
      */
@@ -93,6 +99,7 @@ class PropertyShippingRateFromAddress
     public ?bool $isValidated = null;
 
     /**
+     * Recipientsender name
      *
      * @var ?string $name
      */
@@ -125,6 +132,7 @@ class PropertyShippingRateFromAddress
     public ?string $regionCode = null;
 
     /**
+     * Phone number (required by FedEx, UPS, DHL)
      *
      * @var ?string $telephone
      */

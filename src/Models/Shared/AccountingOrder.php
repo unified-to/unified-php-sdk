@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingOrder
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -30,6 +31,7 @@ class AccountingOrder
     public ?PropertyAccountingOrderBillingAddress $billingAddress = null;
 
     /**
+     * Customer, Supplier (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -38,6 +40,7 @@ class AccountingOrder
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -90,6 +93,7 @@ class AccountingOrder
     public ?string $organizationId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */
@@ -143,6 +147,7 @@ class AccountingOrder
     public ?AccountingOrderType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

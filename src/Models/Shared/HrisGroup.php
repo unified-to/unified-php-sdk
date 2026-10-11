@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisGroup
 {
     /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -20,6 +21,7 @@ class HrisGroup
     public ?string $companyId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -70,12 +72,31 @@ class HrisGroup
     public ?string $name = null;
 
     /**
+     * next pay date when type is PAY_GROUP (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $nextPaidAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('next_paid_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $nextPaidAt = null;
+
+    /**
      *
      * @var ?string $parentId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $parentId = null;
+
+    /**
+     * pay cycle when type is PAY_GROUP
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\HrisGroupPayFrequency $payFrequency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('pay_frequency')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisGroupPayFrequency|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?HrisGroupPayFrequency $payFrequency = null;
 
     /**
      * $raw
@@ -97,6 +118,7 @@ class HrisGroup
     public ?HrisGroupType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -122,14 +144,16 @@ class HrisGroup
      * @param  ?bool  $isActive
      * @param  ?array<string>  $managerIds
      * @param  ?string  $name
+     * @param  ?\DateTime  $nextPaidAt
      * @param  ?string  $parentId
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisGroupPayFrequency  $payFrequency
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\HrisGroupType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $managerIds = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?HrisGroupType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $managerIds = null, ?string $name = null, ?\DateTime $nextPaidAt = null, ?string $parentId = null, ?HrisGroupPayFrequency $payFrequency = null, ?array $raw = null, ?HrisGroupType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;
@@ -138,7 +162,9 @@ class HrisGroup
         $this->isActive = $isActive;
         $this->managerIds = $managerIds;
         $this->name = $name;
+        $this->nextPaidAt = $nextPaidAt;
         $this->parentId = $parentId;
+        $this->payFrequency = $payFrequency;
         $this->raw = $raw;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

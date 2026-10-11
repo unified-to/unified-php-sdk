@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class KmsSpace
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -60,6 +61,7 @@ class KmsSpace
     public ?string $parentId = null;
 
     /**
+     * (reference to KmsPage)
      *
      * @var ?string $parentPageId
      */
@@ -78,6 +80,7 @@ class KmsSpace
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -86,6 +89,7 @@ class KmsSpace
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

@@ -3,9 +3,9 @@
 
 ## Fields
 
-| Field              | Type               | Required           | Description        |
-| ------------------ | ------------------ | ------------------ | ------------------ |
-| `downloadUrl`      | *?string*          | :heavy_minus_sign: | N/A                |
-| `id`               | *?string*          | :heavy_minus_sign: | N/A                |
-| `mimeType`         | *?string*          | :heavy_minus_sign: | N/A                |
-| `name`             | *?string*          | :heavy_minus_sign: | N/A                |
+| Field                               | Type                                | Required                            | Description                         |
+| ----------------------------------- | ----------------------------------- | ----------------------------------- | ----------------------------------- |
+| `downloadUrl`                       | *?string*                           | :heavy_minus_sign:                  | N/A                                 |
+| `id`                                | *?string*                           | :heavy_minus_sign:                  | ID for the storage_fileget endpoint |
+| `mimeType`                          | *?string*                           | :heavy_minus_sign:                  | N/A                                 |
+| `name`                              | *?string*                           | :heavy_minus_sign:                  | N/A                                 |

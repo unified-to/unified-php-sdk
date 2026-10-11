@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The event task's status */
 enum PropertyCrmEventTaskStatus: string
 {
     case Completed = 'COMPLETED';

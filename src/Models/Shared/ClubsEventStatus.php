@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The event status */
 enum ClubsEventStatus: string
 {
     case Scheduled = 'SCHEDULED';

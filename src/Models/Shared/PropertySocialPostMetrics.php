@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertySocialPostMetrics
 {
     /**
+     * Number of bookmarks/saves
      *
      * @var ?float $bookmarkCount
      */
@@ -21,6 +22,7 @@ class PropertySocialPostMetrics
     public ?float $bookmarkCount = null;
 
     /**
+     * Number of comments/replies
      *
      * @var ?float $commentCount
      */
@@ -29,6 +31,7 @@ class PropertySocialPostMetrics
     public ?float $commentCount = null;
 
     /**
+     * Number of likes/reactions
      *
      * @var ?float $likeCount
      */
@@ -37,6 +40,7 @@ class PropertySocialPostMetrics
     public ?float $likeCount = null;
 
     /**
+     * Number of quotes
      *
      * @var ?float $quoteCount
      */
@@ -45,6 +49,7 @@ class PropertySocialPostMetrics
     public ?float $quoteCount = null;
 
     /**
+     * Number of shares/reposts
      *
      * @var ?float $shareCount
      */
@@ -53,6 +58,7 @@ class PropertySocialPostMetrics
     public ?float $shareCount = null;
 
     /**
+     * Number of views/impressions
      *
      * @var ?float $viewCount
      */

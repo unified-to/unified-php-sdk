@@ -21,6 +21,7 @@ class AtsCompany
     public ?PropertyAtsCompanyAddress $address = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -91,6 +92,7 @@ class AtsCompany
     public ?array $recruiterIds = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

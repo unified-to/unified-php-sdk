@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Background checks and compliance checks return CLEARFLAGGED or PASS/FAIL or YES/NO */
 enum VerificationRequestResponseStatus: string
 {
     case Completed = 'COMPLETED';

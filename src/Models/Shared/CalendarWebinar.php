@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CalendarWebinar
 {
     /**
+     * (reference to CalendarCalendar)
      *
      * @var ?string $calendarId
      */
@@ -38,6 +39,7 @@ class CalendarWebinar
     public ?array $conference = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -46,6 +48,7 @@ class CalendarWebinar
     public ?\DateTime $createdAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -247,6 +250,7 @@ class CalendarWebinar
     public ?bool $requirePhone = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -280,6 +284,7 @@ class CalendarWebinar
     public ?string $timezone = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -288,6 +293,7 @@ class CalendarWebinar
     public ?\DateTime $updatedAt = null;
 
     /**
+     * information
      *
      * @var ?string $webUrl
      */

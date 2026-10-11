@@ -22,6 +22,7 @@ class AccountingCashflowSection
     public ?array $items = null;
 
     /**
+     * e.g. "Operating Activities"
      *
      * @var ?string $sectionName
      */
@@ -30,6 +31,7 @@ class AccountingCashflowSection
     public ?string $sectionName = null;
 
     /**
+     * Net cash providedused by this section
      *
      * @var ?float $totalAmount
      */

@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertySocialReviewReply
 {
     /**
+     * The reply text from the business
      *
      * @var ?string $content
      */
@@ -21,6 +22,7 @@ class PropertySocialReviewReply
     public ?string $content = null;
 
     /**
+     * When the reply was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -29,6 +31,7 @@ class PropertySocialReviewReply
     public ?\DateTime $createdAt = null;
 
     /**
+     * When the reply was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

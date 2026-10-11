@@ -34,6 +34,7 @@ class Issue
     public string $title;
 
     /**
+     * (reference to KmsSpace)
      *
      * @var string $workspaceId
      */
@@ -41,6 +42,7 @@ class Issue
     public string $workspaceId;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $createdAt
      */
@@ -65,6 +67,7 @@ class Issue
     public ?string $id = null;
 
     /**
+     * 1-5, 1 is lowest
      *
      * @var ?float $importance
      */
@@ -81,6 +84,7 @@ class Issue
     public ?float $resolutionTime = null;
 
     /**
+     * 1-5, 1 is lowest
      *
      * @var ?float $size
      */
@@ -99,6 +103,7 @@ class Issue
     public ?array $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedAt
      */

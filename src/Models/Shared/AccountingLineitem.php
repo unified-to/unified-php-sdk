@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingLineitem
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -30,6 +31,7 @@ class AccountingLineitem
     public ?array $categoryIds = null;
 
     /**
+     * (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -38,6 +40,7 @@ class AccountingLineitem
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -54,6 +57,7 @@ class AccountingLineitem
     public ?float $discountAmount = null;
 
     /**
+     * The exchange rate applied to this line, for multi-currency documents
      *
      * @var ?float $exchangeRate
      */
@@ -80,6 +84,7 @@ class AccountingLineitem
     public ?string $id = null;
 
     /**
+     * True when the line is rebillable to a customer
      *
      * @var ?bool $isBillable
      */
@@ -96,6 +101,7 @@ class AccountingLineitem
     public ?string $itemDescription = null;
 
     /**
+     * (reference to CommerceItem)
      *
      * @var ?string $itemId
      */
@@ -148,6 +154,7 @@ class AccountingLineitem
     public ?string $notes = null;
 
     /**
+     * ref -> AccountingProject; the project this line is coded to (reference to TaskProject)
      *
      * @var ?string $projectId
      */
@@ -164,6 +171,7 @@ class AccountingLineitem
     public ?float $refundAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $refundedAt
      */
@@ -188,6 +196,7 @@ class AccountingLineitem
     public ?string $taxrateId = null;
 
     /**
+     * unit_quantity * unit_amount + tax_amount
      *
      * @var ?float $totalAmount
      */
@@ -212,6 +221,7 @@ class AccountingLineitem
     public ?float $unitQuantity = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class SigningTemplate
 {
     /**
+     * The date that this template was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class SigningTemplate
     public ?\DateTime $createdAt = null;
 
     /**
+     * User who created the template
      *
      * @var ?string $creatorId
      */
@@ -28,6 +30,7 @@ class SigningTemplate
     public ?string $creatorId = null;
 
     /**
+     * Template description
      *
      * @var ?string $description
      */
@@ -36,6 +39,7 @@ class SigningTemplate
     public ?string $description = null;
 
     /**
+     * Unique identifier for this template
      *
      * @var ?string $id
      */
@@ -44,6 +48,7 @@ class SigningTemplate
     public ?string $id = null;
 
     /**
+     * Whether the template is active/available
      *
      * @var ?bool $isActive
      */
@@ -52,6 +57,7 @@ class SigningTemplate
     public ?bool $isActive = null;
 
     /**
+     * Template name
      *
      * @var ?string $name
      */
@@ -60,7 +66,7 @@ class SigningTemplate
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -70,6 +76,7 @@ class SigningTemplate
     public ?array $raw = null;
 
     /**
+     * The last date that this template was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

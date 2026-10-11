@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CdpSource
 {
     /**
+     * The date that this source object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class CdpSource
     public ?\DateTime $createdAt = null;
 
     /**
+     * SOURCE, or BIDIRECTIONAL for import+export connectors
      *
      * @var ?\Unified\Unified_to\Models\Shared\CdpSourceDirection $direction
      */
@@ -29,6 +31,7 @@ class CdpSource
     public ?CdpSourceDirection $direction = null;
 
     /**
+     * Unique identifier for this source object
      *
      * @var ?string $id
      */
@@ -37,6 +40,7 @@ class CdpSource
     public ?string $id = null;
 
     /**
+     * Whether the source is active/enabled
      *
      * @var ?bool $isEnabled
      */
@@ -45,6 +49,7 @@ class CdpSource
     public ?bool $isEnabled = null;
 
     /**
+     * The name of the inbound data source
      *
      * @var ?string $name
      */
@@ -53,7 +58,7 @@ class CdpSource
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this source
      *
      * @var ?array<string, mixed> $raw
      */
@@ -63,6 +68,7 @@ class CdpSource
     public ?array $raw = null;
 
     /**
+     * A stable handle/key for the source
      *
      * @var ?string $slug
      */
@@ -71,6 +77,7 @@ class CdpSource
     public ?string $slug = null;
 
     /**
+     * The connector/source type (eg. the provider's connector slug or plugin id)
      *
      * @var ?string $type
      */
@@ -79,6 +86,7 @@ class CdpSource
     public ?string $type = null;
 
     /**
+     * The last date that this source object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

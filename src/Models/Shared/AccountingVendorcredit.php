@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingVendorcredit
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -54,6 +55,7 @@ class AccountingVendorcredit
     public ?string $billId = null;
 
     /**
+     * (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -62,6 +64,7 @@ class AccountingVendorcredit
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -78,6 +81,7 @@ class AccountingVendorcredit
     public ?string $currency = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -130,6 +134,7 @@ class AccountingVendorcredit
     public ?string $organizationId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */
@@ -165,6 +170,7 @@ class AccountingVendorcredit
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

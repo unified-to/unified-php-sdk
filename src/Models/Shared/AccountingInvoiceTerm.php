@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** @deprecated use payment_terms instead */
 enum AccountingInvoiceTerm: string
 {
     case OnReceipt = 'ON_RECEIPT';

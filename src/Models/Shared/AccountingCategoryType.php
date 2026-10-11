@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The kind of dimension */
 enum AccountingCategoryType: string
 {
     case Class_ = 'CLASS';

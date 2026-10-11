@@ -20,6 +20,7 @@ class HrisAttendanceBreak
     public ?float $durationMinutes = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -44,6 +45,7 @@ class HrisAttendanceBreak
     public ?bool $isPaid = null;
 
     /**
+     * break type label, e.g. "Lunch"
      *
      * @var ?string $name
      */
@@ -52,6 +54,7 @@ class HrisAttendanceBreak
     public ?string $name = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

@@ -19,6 +19,7 @@ class CommerceItemPrice
     public float $price;
 
     /**
+     * The original price of the item before an adjustment or a sale.
      *
      * @var ?float $compareAtPrice
      */

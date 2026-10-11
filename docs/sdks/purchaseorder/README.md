@@ -36,6 +36,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAccountingPurchaseorderRequest(
     accountingPurchaseorder: new Shared\AccountingPurchaseorder(
+        attachments: [],
         billingAddress: new Shared\PropertyAccountingPurchaseorderBillingAddress(
             address1: '37214 Tanya Walks',
             city: 'South Annabelleton',
@@ -47,10 +48,10 @@ $request = new Operations\CreateAccountingPurchaseorderRequest(
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
         currency: 'ZMW',
-        id: '2c15629f-d92a-450f-9a90-c739019fa131',
+        id: 'fcb307fc-6c22-47df-b1ec-904ef8da0eb8',
         lineitems: [],
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2025-04-27T06:22:37.375Z'),
+        postedAt: Utils\Utils::parseDateTime('2025-05-12T13:43:58.288Z'),
         shippingAddress: new Shared\PropertyAccountingPurchaseorderShippingAddress(
             address1: '649 Maggio Overpass',
             city: 'Lake Jaylan',
@@ -61,7 +62,7 @@ $request = new Operations\CreateAccountingPurchaseorderRequest(
         ),
         status: Shared\AccountingPurchaseorderStatus::PartiallyRefunded,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2021-02-26T05:43:51.981Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-26T23:11:55.329Z'),
     ),
     connectionId: '<id>',
 );
@@ -217,6 +218,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAccountingPurchaseorderRequest(
     accountingPurchaseorder: new Shared\AccountingPurchaseorder(
+        attachments: [],
         billingAddress: new Shared\PropertyAccountingPurchaseorderBillingAddress(
             address1: '37214 Tanya Walks',
             city: 'South Annabelleton',
@@ -228,10 +230,10 @@ $request = new Operations\PatchAccountingPurchaseorderRequest(
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
         currency: 'ZMW',
-        id: 'ccae6f41-dac0-491f-9987-35fe17107580',
+        id: '3e6054cd-72c6-4446-84b8-e073aad5b11a',
         lineitems: [],
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2025-04-27T06:22:37.417Z'),
+        postedAt: Utils\Utils::parseDateTime('2025-05-12T13:43:58.316Z'),
         shippingAddress: new Shared\PropertyAccountingPurchaseorderShippingAddress(
             address1: '649 Maggio Overpass',
             city: 'Lake Jaylan',
@@ -242,7 +244,7 @@ $request = new Operations\PatchAccountingPurchaseorderRequest(
         ),
         status: Shared\AccountingPurchaseorderStatus::PartiallyRefunded,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2021-02-26T05:43:51.983Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-26T23:11:55.330Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -349,6 +351,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAccountingPurchaseorderRequest(
     accountingPurchaseorder: new Shared\AccountingPurchaseorder(
+        attachments: [],
         billingAddress: new Shared\PropertyAccountingPurchaseorderBillingAddress(
             address1: '37214 Tanya Walks',
             city: 'South Annabelleton',
@@ -360,10 +363,10 @@ $request = new Operations\UpdateAccountingPurchaseorderRequest(
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
         currency: 'ZMW',
-        id: 'ccae6f41-dac0-491f-9987-35fe17107580',
+        id: '3e6054cd-72c6-4446-84b8-e073aad5b11a',
         lineitems: [],
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2025-04-27T06:22:37.417Z'),
+        postedAt: Utils\Utils::parseDateTime('2025-05-12T13:43:58.316Z'),
         shippingAddress: new Shared\PropertyAccountingPurchaseorderShippingAddress(
             address1: '649 Maggio Overpass',
             city: 'Lake Jaylan',
@@ -374,7 +377,7 @@ $request = new Operations\UpdateAccountingPurchaseorderRequest(
         ),
         status: Shared\AccountingPurchaseorderStatus::PartiallyRefunded,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2021-02-26T05:43:51.983Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-26T23:11:55.330Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

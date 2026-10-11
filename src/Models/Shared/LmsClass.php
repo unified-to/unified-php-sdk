@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class LmsClass
 {
     /**
+     * (reference to Course)
      *
      * @var ?string $courseId
      */
@@ -20,6 +21,7 @@ class LmsClass
     public ?string $courseId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -102,6 +104,7 @@ class LmsClass
     public ?array $students = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -20,6 +20,7 @@ class LmsSubject
     public ?string $name = null;
 
     /**
+     * Depth of this subject in the provider's topic hierarchy (0 = top level)
      *
      * @var ?float $rank
      */

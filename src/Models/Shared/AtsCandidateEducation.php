@@ -20,6 +20,7 @@ class AtsCandidateEducation
     public ?string $degree = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -52,6 +53,7 @@ class AtsCandidateEducation
     public ?string $level = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

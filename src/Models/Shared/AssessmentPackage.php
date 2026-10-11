@@ -31,6 +31,7 @@ class AssessmentPackage
     public ?array $aliases = null;
 
     /**
+     * Connection ID that this package belongs to
      *
      * @var ?string $connectionId
      */
@@ -39,6 +40,7 @@ class AssessmentPackage
     public ?string $connectionId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -47,6 +49,7 @@ class AssessmentPackage
     public ?\DateTime $createdAt = null;
 
     /**
+     * Detailed description
      *
      * @var ?string $description
      */
@@ -55,6 +58,7 @@ class AssessmentPackage
     public ?string $description = null;
 
     /**
+     * Whether provider redirects user to complete assessment
      *
      * @var ?bool $hasRedirectUrl
      */
@@ -63,6 +67,7 @@ class AssessmentPackage
     public ?bool $hasRedirectUrl = null;
 
     /**
+     * Where provider redirects user after completion
      *
      * @var ?bool $hasTargetUrl
      */
@@ -71,6 +76,7 @@ class AssessmentPackage
     public ?bool $hasTargetUrl = null;
 
     /**
+     * Unique identifier for the assessment package
      *
      * @var ?string $id
      */
@@ -79,6 +85,7 @@ class AssessmentPackage
     public ?string $id = null;
 
     /**
+     * URL to find additional information about this package
      *
      * @var ?string $infoUrl
      */
@@ -97,6 +104,7 @@ class AssessmentPackage
     public ?array $integrationTypes = null;
 
     /**
+     * Maximum possible score if this assessment returns a score
      *
      * @var ?float $maxScore
      */
@@ -105,6 +113,7 @@ class AssessmentPackage
     public ?float $maxScore = null;
 
     /**
+     * Name of the assessment package
      *
      * @var ?string $name
      */
@@ -113,6 +122,7 @@ class AssessmentPackage
     public ?string $name = null;
 
     /**
+     * Whether IP address is required
      *
      * @var ?bool $needsIpAddress
      */
@@ -161,6 +171,7 @@ class AssessmentPackage
     public ?array $tags = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -169,6 +180,7 @@ class AssessmentPackage
     public ?\DateTime $updatedAt = null;
 
     /**
+     * Workspace ID that this package belongs to (reference to KmsSpace)
      *
      * @var ?string $workspaceId
      */

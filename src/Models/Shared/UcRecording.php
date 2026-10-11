@@ -30,6 +30,16 @@ class UcRecording
     public ?array $contacts = null;
 
     /**
+     * opaque identifier shared across legs of one interaction
+     *
+     * @var ?string $conversationIdentifier
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('conversation_identifier')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $conversationIdentifier = null;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -38,6 +48,7 @@ class UcRecording
     public ?\DateTime $createdAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -46,6 +57,7 @@ class UcRecording
     public ?\DateTime $endAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $expiresAt
      */
@@ -82,6 +94,7 @@ class UcRecording
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -99,6 +112,7 @@ class UcRecording
     public ?UcRecordingType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -107,6 +121,7 @@ class UcRecording
     public ?\DateTime $updatedAt = null;
 
     /**
+     * reference to HrisEmployee (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -141,6 +156,7 @@ class UcRecording
     /**
      * @param  ?string  $callId
      * @param  ?array<\Unified\Unified_to\Models\Shared\UcContact>  $contacts
+     * @param  ?string  $conversationIdentifier
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
      * @param  ?\DateTime  $expiresAt
@@ -156,10 +172,11 @@ class UcRecording
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?string $callId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcRecordingType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
+    public function __construct(?string $callId = null, ?array $contacts = null, ?string $conversationIdentifier = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcRecordingType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
     {
         $this->callId = $callId;
         $this->contacts = $contacts;
+        $this->conversationIdentifier = $conversationIdentifier;
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;
         $this->expiresAt = $expiresAt;

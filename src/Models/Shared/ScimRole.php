@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ScimRole
 {
     /**
+     * value of the role
      *
      * @var string $value
      */

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class RepoCommit
 {
     /**
+     * (reference to RepoRepository)
      *
      * @var string $repoId
      */
@@ -19,6 +20,7 @@ class RepoCommit
     public string $repoId;
 
     /**
+     * (reference to RepoBranch)
      *
      * @var ?string $branchId
      */
@@ -27,6 +29,7 @@ class RepoCommit
     public ?string $branchId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -95,6 +98,7 @@ class RepoCommit
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -103,6 +107,7 @@ class RepoCommit
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

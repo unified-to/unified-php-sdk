@@ -26,5 +26,15 @@ enum GetHrisPayslipQueryParamFields: string
     case NetAmount = 'net_amount';
     case Details = 'details';
     case Deduction = 'deduction';
+    case PayrollId = 'payroll_id';
+    case GroupId = 'group_id';
+    case Type = 'type';
+    case Hours = 'hours';
+    case EmployeeTaxAmount = 'employee_tax_amount';
+    case EmployerTaxAmount = 'employer_tax_amount';
+    case DeductionAmount = 'deduction_amount';
+    case EmployerContributionAmount = 'employer_contribution_amount';
+    case GrossYtdAmount = 'gross_ytd_amount';
+    case NetYtdAmount = 'net_ytd_amount';
     case Raw = 'raw';
 }

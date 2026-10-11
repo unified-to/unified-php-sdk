@@ -20,6 +20,7 @@ class AdsPromoted
     public string $id;
 
     /**
+     * Promoted entity types for ads_promoted list endpoint
      *
      * @var \Unified\Unified_to\Models\Shared\AdsPromotedType $type
      */

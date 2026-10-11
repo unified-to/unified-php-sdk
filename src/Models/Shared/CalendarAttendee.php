@@ -53,6 +53,7 @@ class CalendarAttendee
     public ?CalendarAttendeeStatus $status = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

@@ -46,6 +46,7 @@ class AtsMetadata
     public ?string $namespace = null;
 
     /**
+     * Actual textual value of the slug
      *
      * @var ?string $slug
      */

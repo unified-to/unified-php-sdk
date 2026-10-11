@@ -37,6 +37,7 @@ class ScimPhoto
     public ?ScimPhotoType $type = null;
 
     /**
+     * URL
      *
      * @var ?string $value
      */

@@ -22,6 +22,7 @@ class Connection
     public array $categories;
 
     /**
+     * The integration type
      *
      * @var string $integrationType
      */
@@ -48,6 +49,7 @@ class Connection
     public ?PropertyConnectionAuth $auth = null;
 
     /**
+     * The date that this integration object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -56,6 +58,7 @@ class Connection
     public ?\DateTime $createdAt = null;
 
     /**
+     * customer's user ID
      *
      * @var ?string $externalXref
      */
@@ -64,6 +67,7 @@ class Connection
     public ?string $externalXref = null;
 
     /**
+     * Unique identifier for this integration object
      *
      * @var ?string $id
      */
@@ -80,6 +84,7 @@ class Connection
     public ?string $integrationName = null;
 
     /**
+     * Whether this integration has exceed the monthly limit of the plan
      *
      * @var ?bool $isPaused
      */
@@ -88,6 +93,7 @@ class Connection
     public ?bool $isPaused = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $lastHealthyAt
      */
@@ -96,6 +102,7 @@ class Connection
     public ?\DateTime $lastHealthyAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $lastUnhealthyAt
      */
@@ -104,6 +111,7 @@ class Connection
     public ?\DateTime $lastUnhealthyAt = null;
 
     /**
+     * The HTTP status code that caused the last unhealthy status
      *
      * @var ?string $lastUnhealthyCode
      */
@@ -112,6 +120,7 @@ class Connection
     public ?string $lastUnhealthyCode = null;
 
     /**
+     * the ID of the SecretsManager object
      *
      * @var ?string $secretsmanagerId
      */
@@ -120,6 +129,7 @@ class Connection
     public ?string $secretsmanagerId = null;
 
     /**
+     * the key/path/name of the secret within the vault
      *
      * @var ?string $secretsmanagerKey
      */
@@ -128,6 +138,7 @@ class Connection
     public ?string $secretsmanagerKey = null;
 
     /**
+     * The last date that this integration object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -136,6 +147,7 @@ class Connection
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to KmsSpace)
      *
      * @var ?string $workspaceId
      */

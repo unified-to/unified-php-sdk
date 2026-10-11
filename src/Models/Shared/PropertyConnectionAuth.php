@@ -119,6 +119,7 @@ class PropertyConnectionAuth
     public ?\DateTime $expiryDate = null;
 
     /**
+     * the private KEY X.509 certificate in Base64 ASCII format
      *
      * @var ?string $key
      */
@@ -155,6 +156,7 @@ class PropertyConnectionAuth
     public ?array $otherAuthInfo = null;
 
     /**
+     * the PEM X.509 certificate in Base64 ASCII format
      *
      * @var ?string $pem
      */
@@ -219,6 +221,7 @@ class PropertyConnectionAuth
     public ?string $tokenUrl = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

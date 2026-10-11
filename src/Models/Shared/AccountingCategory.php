@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingCategory
 {
     /**
+     * platform-side tracking code
      *
      * @var ?string $code
      */
@@ -20,6 +21,7 @@ class AccountingCategory
     public ?string $code = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -96,6 +98,7 @@ class AccountingCategory
     public ?array $raw = null;
 
     /**
+     * The kind of dimension
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingCategoryType $type
      */
@@ -105,6 +108,7 @@ class AccountingCategory
     public ?AccountingCategoryType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

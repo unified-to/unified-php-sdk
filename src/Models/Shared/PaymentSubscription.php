@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PaymentSubscription
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $canceledAt
      */
@@ -20,6 +21,7 @@ class PaymentSubscription
     public ?\DateTime $canceledAt = null;
 
     /**
+     * a reference to an Accounting Contact (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -28,6 +30,7 @@ class PaymentSubscription
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -44,6 +47,7 @@ class PaymentSubscription
     public ?string $currency = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $currentPeriodEndAt
      */
@@ -52,6 +56,7 @@ class PaymentSubscription
     public ?\DateTime $currentPeriodEndAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $currentPeriodStartAt
      */
@@ -60,6 +65,7 @@ class PaymentSubscription
     public ?\DateTime $currentPeriodStartAt = null;
 
     /**
+     * The day of the month to charge customers on. 1-28 or -1 to indicate the last day of the month. Only applies when the interval_unit is MONTH.
      *
      * @var ?float $dayOfMonth
      */
@@ -68,6 +74,7 @@ class PaymentSubscription
     public ?float $dayOfMonth = null;
 
     /**
+     * The day of the week to charge customers on. 1-7 or -1 to indicate the last day of the week. Only applies when the interval_unit is WEEK.
      *
      * @var ?float $dayOfWeek
      */
@@ -84,6 +91,7 @@ class PaymentSubscription
     public ?string $description = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -100,6 +108,7 @@ class PaymentSubscription
     public ?string $id = null;
 
     /**
+     * The number of intervals between charges within the interval_unit. Defaults to 1.
      *
      * @var ?float $interval
      */
@@ -117,6 +126,7 @@ class PaymentSubscription
     public ?IntervalUnit $intervalUnit = null;
 
     /**
+     * a reference to an Accounting Invoice (reference to AccountingInvoice)
      *
      * @var ?string $invoiceId
      */
@@ -135,6 +145,7 @@ class PaymentSubscription
     public ?array $lineitems = null;
 
     /**
+     * the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
      *
      * @var ?float $month
      */
@@ -153,6 +164,7 @@ class PaymentSubscription
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -178,6 +190,7 @@ class PaymentSubscription
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -45,6 +45,7 @@ class PropertyAdsReportMetricsAd
     public ?string $campaignId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -103,6 +104,7 @@ class PropertyAdsReportMetricsAd
     public ?string $finalUrl = null;
 
     /**
+     * (reference to AdsGroup)
      *
      * @var ?string $groupId
      */
@@ -196,6 +198,7 @@ class PropertyAdsReportMetricsAd
     public ?PropertyAdsReportMetricsAdStatus $status = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

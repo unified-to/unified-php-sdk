@@ -5,11 +5,17 @@
 ### Available Operations
 
 * [createAtsJob](#createatsjob) - Create a job
+* [createHrisJob](#createhrisjob) - Create a job
 * [getAtsJob](#getatsjob) - Retrieve a job
+* [getHrisJob](#gethrisjob) - Retrieve a job
 * [listAtsJobs](#listatsjobs) - List all jobs
+* [listHrisJobs](#listhrisjobs) - List all jobs
 * [patchAtsJob](#patchatsjob) - Update a job
+* [patchHrisJob](#patchhrisjob) - Update a job
 * [removeAtsJob](#removeatsjob) - Remove a job
+* [removeHrisJob](#removehrisjob) - Remove a job
 * [updateAtsJob](#updateatsjob) - Update a job
+* [updateHrisJob](#updatehrisjob) - Update a job
 
 ## createAtsJob
 
@@ -67,12 +73,12 @@ $request = new Operations\CreateAtsJobRequest(
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [
             new Shared\AtsReference(
-                id: 'fd9852e3-9035-4f42-beb3-bbf4e4022122',
-                name: 'Eloise Mueller PhD',
+                id: 'eb3bbf4e-4022-4122-9d44-39fd5b501e80',
+                name: 'Troy Greenholt',
             ),
         ],
-        id: 'a4e564ca-17df-4b25-9e7c-4e8bd4b8c91e',
-        industry: 'Gorgeous Plastic Computer',
+        id: '0ee8f1dd-d2a4-4d3f-b110-115d71aceb41',
+        industry: 'Modern Granite Gloves',
         languageLocale: 'en',
         metadata: [
             new Shared\AtsMetadata(
@@ -80,10 +86,10 @@ $request = new Operations\CreateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '0922852e-0bdd-4572-8490-0c07e2162c8d',
+                id: '4bbebe6a-9dc3-4841-a1f9-fae0230b783c',
                 namespace: 'custom',
                 slug: 'custom_property',
-                value: 'acceptus',
+                value: 'vomica',
             ),
         ],
         minimumDegree: 'Bachelor',
@@ -93,28 +99,28 @@ $request = new Operations\CreateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-05-12T00:39:03.827Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-05-30T00:04:25.024Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
         postings: [
             new Shared\AtsJobPosting(
                 address: new Shared\PropertyAtsJobPostingAddress(
-                    address1: '8460 Nils Trace',
-                    city: 'West Mervinburgh',
+                    address1: '51372 Kshlerin Creek',
+                    city: 'Logancester',
                     countryCode: 'US',
-                    postalCode: '14162',
-                    region: 'Maine',
+                    postalCode: '85013-9865',
+                    region: 'Vermont',
                     regionCode: 'MO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-07-04T18:58:56.779Z'),
-                description: 'Deduco cultellus alii terebro depono thesaurus.',
-                id: 'f6101769-deb3-4721-978c-d205638870ee',
+                createdAt: Utils\Utils::parseDateTime('2026-07-23T16:16:36.686Z'),
+                description: 'Provident turbo cunabula spoliatio agnitio.',
+                id: '372178cd-2056-4388-870e-e7c199761c7c',
                 isActive: false,
-                location: '6788 Oxford Road',
-                name: 'Forward Security Orchestrator',
-                postingUrl: 'https://ajar-metabolite.net/',
-                updatedAt: Utils\Utils::parseDateTime('2026-07-30T10:45:53.530Z'),
+                location: '2925 Connie Green',
+                name: 'Lead Intranet Developer',
+                postingUrl: 'https://smart-summer.name/',
+                updatedAt: Utils\Utils::parseDateTime('2026-08-18T18:29:49.765Z'),
             ),
         ],
         publicJobUrls: [
@@ -125,6 +131,8 @@ $request = new Operations\CreateAtsJobRequest(
             new Shared\AtsJobQuestion(
                 description: 'Trepide provident taceo rem.',
                 id: '289f27c0-311c-41e5-ad9d-cbe2097332c2',
+                maxLength: 387,
+                minLength: 1,
                 options: [
                     'censura',
                     'tum',
@@ -135,34 +143,38 @@ $request = new Operations\CreateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: 'b3a0b53b-38f3-4e8d-84b9-f413a900d79b',
+                id: '3a0b53b3-8f3e-48d4-ab9f-413a900d79b0',
+                maxLength: 430,
+                minLength: 1,
                 options: [
-                    'odit',
+                    'aetas',
                 ],
-                prompt: 'Similique absque temeritas celebrer enim.',
-                question: 'Vinitor sodalitas desino sollers viduo volo.',
+                prompt: 'Contra damno desolo suadeo utrimque cresco.',
+                question: 'Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.',
                 required: false,
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                description: 'Abstergo possimus quibusdam deinde amoveo.',
-                id: '568be61d-060e-4d8c-a8ab-8a17cb25edf3',
+                description: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
+                id: '060ed8c8-ab8a-417c-8b25-edf38cb19b1c',
+                maxLength: 381,
+                minLength: 1,
                 options: [
-                    'vallum',
+                    'utroque',
                 ],
-                prompt: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
-                question: 'Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.',
+                prompt: 'Vir crepusculum ait adeptio ait defendo cotidie porro uterque.',
+                question: 'Vulticulus depono abstergo possimus quibusdam deinde amoveo.',
                 required: false,
                 type: Shared\AtsJobQuestionType::Text,
             ),
         ],
         skills: [
-            'amiculum',
-            'crux',
+            'coaegresco',
+            'appello',
         ],
         status: Shared\AtsJobStatus::Archived,
-        summary: 'Amicitia vergo hic.',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-03T00:33:37.747Z'),
+        summary: 'Iste sto communis.',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-19T08:06:49.474Z'),
     ),
     connectionId: '<id>',
 );
@@ -185,6 +197,68 @@ if ($response->atsJob !== null) {
 ### Response
 
 **[?Operations\CreateAtsJobResponse](../../Models/Operations/CreateAtsJobResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createHrisJob
+
+Create a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createHrisJob" method="post" path="/hris/{connection_id}/job" example="hris_job" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateHrisJobRequest(
+    hrisJob: new Shared\HrisJob(
+        code: 'P-05547',
+        createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
+        description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
+        employmentType: Shared\HrisJobEmploymentType::Freelance,
+        id: '00e817dd-4168-4184-b834-7236d1199e80',
+        isActive: false,
+        name: 'Internal Integration Specialist',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T10:46:31.821Z'),
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->job->createHrisJob(
+    request: $request
+);
+
+if ($response->hrisJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\CreateHrisJobRequest](../../Models/Operations/CreateHrisJobRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\CreateHrisJobResponse](../../Models/Operations/CreateHrisJobResponse.md)**
 
 ### Errors
 
@@ -243,6 +317,57 @@ if ($response->atsJob !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getHrisJob
+
+Retrieve a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHrisJob" method="get" path="/hris/{connection_id}/job/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHrisJobRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->job->getHrisJob(
+    request: $request
+);
+
+if ($response->hrisJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                    | Type                                                                         | Required                                                                     | Description                                                                  |
+| ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `$request`                                                                   | [Operations\GetHrisJobRequest](../../Models/Operations/GetHrisJobRequest.md) | :heavy_check_mark:                                                           | The request object to use for the request.                                   |
+
+### Response
+
+**[?Operations\GetHrisJobResponse](../../Models/Operations/GetHrisJobResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listAtsJobs
 
 List all jobs
@@ -286,6 +411,56 @@ if ($response->atsJobs !== null) {
 ### Response
 
 **[?Operations\ListAtsJobsResponse](../../Models/Operations/ListAtsJobsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listHrisJobs
+
+List all jobs
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHrisJobs" method="get" path="/hris/{connection_id}/job" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHrisJobsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->job->listHrisJobs(
+    request: $request
+);
+
+if ($response->hrisJobs !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\ListHrisJobsRequest](../../Models/Operations/ListHrisJobsRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\ListHrisJobsResponse](../../Models/Operations/ListHrisJobsResponse.md)**
 
 ### Errors
 
@@ -349,12 +524,12 @@ $request = new Operations\PatchAtsJobRequest(
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [
             new Shared\AtsReference(
-                id: 'fd9852e3-9035-4f42-beb3-bbf4e4022122',
-                name: 'Eloise Mueller PhD',
+                id: 'eb3bbf4e-4022-4122-9d44-39fd5b501e80',
+                name: 'Troy Greenholt',
             ),
         ],
-        id: '78c9bfcb-beac-4ae7-adf1-cb11fb046603',
-        industry: 'Gorgeous Plastic Computer',
+        id: 'af418507-1c9c-4c5b-920c-26766149192c',
+        industry: 'Modern Granite Gloves',
         languageLocale: 'en',
         metadata: [
             new Shared\AtsMetadata(
@@ -362,10 +537,10 @@ $request = new Operations\PatchAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'd7b24ca2-56c7-478f-96e3-9af999ae067d',
+                id: '62defe21-ae2b-42cb-9737-922337bda35c',
                 namespace: 'custom',
                 slug: 'custom_property',
-                value: 'acceptus',
+                value: 'vomica',
             ),
         ],
         minimumDegree: 'Bachelor',
@@ -375,28 +550,28 @@ $request = new Operations\PatchAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-05-12T00:39:03.877Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-05-30T00:04:25.089Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
         postings: [
             new Shared\AtsJobPosting(
                 address: new Shared\PropertyAtsJobPostingAddress(
-                    address1: '8460 Nils Trace',
-                    city: 'West Mervinburgh',
+                    address1: '51372 Kshlerin Creek',
+                    city: 'Logancester',
                     countryCode: 'US',
-                    postalCode: '14162',
-                    region: 'Maine',
+                    postalCode: '85013-9865',
+                    region: 'Vermont',
                     regionCode: 'MO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-07-04T18:58:56.831Z'),
-                description: 'Deduco cultellus alii terebro depono thesaurus.',
-                id: 'f6101769-deb3-4721-978c-d205638870ee',
+                createdAt: Utils\Utils::parseDateTime('2026-07-23T16:16:36.754Z'),
+                description: 'Provident turbo cunabula spoliatio agnitio.',
+                id: '372178cd-2056-4388-870e-e7c199761c7c',
                 isActive: false,
-                location: '6788 Oxford Road',
-                name: 'Forward Security Orchestrator',
-                postingUrl: 'https://ajar-metabolite.net/',
-                updatedAt: Utils\Utils::parseDateTime('2026-07-30T10:45:53.584Z'),
+                location: '2925 Connie Green',
+                name: 'Lead Intranet Developer',
+                postingUrl: 'https://smart-summer.name/',
+                updatedAt: Utils\Utils::parseDateTime('2026-08-18T18:29:49.834Z'),
             ),
         ],
         publicJobUrls: [
@@ -407,6 +582,8 @@ $request = new Operations\PatchAtsJobRequest(
             new Shared\AtsJobQuestion(
                 description: 'Trepide provident taceo rem.',
                 id: '289f27c0-311c-41e5-ad9d-cbe2097332c2',
+                maxLength: 387,
+                minLength: 1,
                 options: [
                     'censura',
                     'tum',
@@ -417,34 +594,38 @@ $request = new Operations\PatchAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: 'b3a0b53b-38f3-4e8d-84b9-f413a900d79b',
+                id: '3a0b53b3-8f3e-48d4-ab9f-413a900d79b0',
+                maxLength: 430,
+                minLength: 1,
                 options: [
-                    'odit',
+                    'aetas',
                 ],
-                prompt: 'Similique absque temeritas celebrer enim.',
-                question: 'Vinitor sodalitas desino sollers viduo volo.',
+                prompt: 'Contra damno desolo suadeo utrimque cresco.',
+                question: 'Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.',
                 required: false,
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                description: 'Abstergo possimus quibusdam deinde amoveo.',
-                id: '568be61d-060e-4d8c-a8ab-8a17cb25edf3',
+                description: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
+                id: '060ed8c8-ab8a-417c-8b25-edf38cb19b1c',
+                maxLength: 381,
+                minLength: 1,
                 options: [
-                    'vallum',
+                    'utroque',
                 ],
-                prompt: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
-                question: 'Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.',
+                prompt: 'Vir crepusculum ait adeptio ait defendo cotidie porro uterque.',
+                question: 'Vulticulus depono abstergo possimus quibusdam deinde amoveo.',
                 required: false,
                 type: Shared\AtsJobQuestionType::Text,
             ),
         ],
         skills: [
-            'amiculum',
-            'crux',
+            'coaegresco',
+            'appello',
         ],
         status: Shared\AtsJobStatus::Archived,
-        summary: 'Amicitia vergo hic.',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-03T00:33:37.792Z'),
+        summary: 'Iste sto communis.',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-19T08:06:49.533Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -468,6 +649,69 @@ if ($response->atsJob !== null) {
 ### Response
 
 **[?Operations\PatchAtsJobResponse](../../Models/Operations/PatchAtsJobResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchHrisJob" method="patch" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchHrisJobRequest(
+    hrisJob: new Shared\HrisJob(
+        code: 'P-05547',
+        createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
+        description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
+        employmentType: Shared\HrisJobEmploymentType::Freelance,
+        id: 'f6c68600-9698-4e15-bc64-586f729ee803',
+        isActive: false,
+        name: 'Internal Integration Specialist',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T10:46:31.859Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->job->patchHrisJob(
+    request: $request
+);
+
+if ($response->hrisJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\PatchHrisJobRequest](../../Models/Operations/PatchHrisJobRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\PatchHrisJobResponse](../../Models/Operations/PatchHrisJobResponse.md)**
 
 ### Errors
 
@@ -519,6 +763,57 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveAtsJobResponse](../../Models/Operations/RemoveAtsJobResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeHrisJob
+
+Remove a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeHrisJob" method="delete" path="/hris/{connection_id}/job/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveHrisJobRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->job->removeHrisJob(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\RemoveHrisJobRequest](../../Models/Operations/RemoveHrisJobRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\RemoveHrisJobResponse](../../Models/Operations/RemoveHrisJobResponse.md)**
 
 ### Errors
 
@@ -582,12 +877,12 @@ $request = new Operations\UpdateAtsJobRequest(
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [
             new Shared\AtsReference(
-                id: 'fd9852e3-9035-4f42-beb3-bbf4e4022122',
-                name: 'Eloise Mueller PhD',
+                id: 'eb3bbf4e-4022-4122-9d44-39fd5b501e80',
+                name: 'Troy Greenholt',
             ),
         ],
-        id: '78c9bfcb-beac-4ae7-adf1-cb11fb046603',
-        industry: 'Gorgeous Plastic Computer',
+        id: 'af418507-1c9c-4c5b-920c-26766149192c',
+        industry: 'Modern Granite Gloves',
         languageLocale: 'en',
         metadata: [
             new Shared\AtsMetadata(
@@ -595,10 +890,10 @@ $request = new Operations\UpdateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'd7b24ca2-56c7-478f-96e3-9af999ae067d',
+                id: '62defe21-ae2b-42cb-9737-922337bda35c',
                 namespace: 'custom',
                 slug: 'custom_property',
-                value: 'acceptus',
+                value: 'vomica',
             ),
         ],
         minimumDegree: 'Bachelor',
@@ -608,28 +903,28 @@ $request = new Operations\UpdateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-05-12T00:39:03.877Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-05-30T00:04:25.089Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
         postings: [
             new Shared\AtsJobPosting(
                 address: new Shared\PropertyAtsJobPostingAddress(
-                    address1: '8460 Nils Trace',
-                    city: 'West Mervinburgh',
+                    address1: '51372 Kshlerin Creek',
+                    city: 'Logancester',
                     countryCode: 'US',
-                    postalCode: '14162',
-                    region: 'Maine',
+                    postalCode: '85013-9865',
+                    region: 'Vermont',
                     regionCode: 'MO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-07-04T18:58:56.831Z'),
-                description: 'Deduco cultellus alii terebro depono thesaurus.',
-                id: 'f6101769-deb3-4721-978c-d205638870ee',
+                createdAt: Utils\Utils::parseDateTime('2026-07-23T16:16:36.754Z'),
+                description: 'Provident turbo cunabula spoliatio agnitio.',
+                id: '372178cd-2056-4388-870e-e7c199761c7c',
                 isActive: false,
-                location: '6788 Oxford Road',
-                name: 'Forward Security Orchestrator',
-                postingUrl: 'https://ajar-metabolite.net/',
-                updatedAt: Utils\Utils::parseDateTime('2026-07-30T10:45:53.584Z'),
+                location: '2925 Connie Green',
+                name: 'Lead Intranet Developer',
+                postingUrl: 'https://smart-summer.name/',
+                updatedAt: Utils\Utils::parseDateTime('2026-08-18T18:29:49.834Z'),
             ),
         ],
         publicJobUrls: [
@@ -640,6 +935,8 @@ $request = new Operations\UpdateAtsJobRequest(
             new Shared\AtsJobQuestion(
                 description: 'Trepide provident taceo rem.',
                 id: '289f27c0-311c-41e5-ad9d-cbe2097332c2',
+                maxLength: 387,
+                minLength: 1,
                 options: [
                     'censura',
                     'tum',
@@ -650,34 +947,38 @@ $request = new Operations\UpdateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: 'b3a0b53b-38f3-4e8d-84b9-f413a900d79b',
+                id: '3a0b53b3-8f3e-48d4-ab9f-413a900d79b0',
+                maxLength: 430,
+                minLength: 1,
                 options: [
-                    'odit',
+                    'aetas',
                 ],
-                prompt: 'Similique absque temeritas celebrer enim.',
-                question: 'Vinitor sodalitas desino sollers viduo volo.',
+                prompt: 'Contra damno desolo suadeo utrimque cresco.',
+                question: 'Sodalitas desino sollers viduo volo cresco ventus tui sufficio iusto.',
                 required: false,
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                description: 'Abstergo possimus quibusdam deinde amoveo.',
-                id: '568be61d-060e-4d8c-a8ab-8a17cb25edf3',
+                description: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
+                id: '060ed8c8-ab8a-417c-8b25-edf38cb19b1c',
+                maxLength: 381,
+                minLength: 1,
                 options: [
-                    'vallum',
+                    'utroque',
                 ],
-                prompt: 'Ara thermae aetas vivo constans victoria volo carbo vehemens praesentium.',
-                question: 'Subiungo ambitus neque talis amitto terreo alienus quae vulticulus.',
+                prompt: 'Vir crepusculum ait adeptio ait defendo cotidie porro uterque.',
+                question: 'Vulticulus depono abstergo possimus quibusdam deinde amoveo.',
                 required: false,
                 type: Shared\AtsJobQuestionType::Text,
             ),
         ],
         skills: [
-            'amiculum',
-            'crux',
+            'coaegresco',
+            'appello',
         ],
         status: Shared\AtsJobStatus::Archived,
-        summary: 'Amicitia vergo hic.',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-03T00:33:37.792Z'),
+        summary: 'Iste sto communis.',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-19T08:06:49.533Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -701,6 +1002,69 @@ if ($response->atsJob !== null) {
 ### Response
 
 **[?Operations\UpdateAtsJobResponse](../../Models/Operations/UpdateAtsJobResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateHrisJob
+
+Update a job
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateHrisJob" method="put" path="/hris/{connection_id}/job/{id}" example="hris_job" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateHrisJobRequest(
+    hrisJob: new Shared\HrisJob(
+        code: 'P-05547',
+        createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
+        description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
+        employmentType: Shared\HrisJobEmploymentType::Freelance,
+        id: 'f6c68600-9698-4e15-bc64-586f729ee803',
+        isActive: false,
+        name: 'Internal Integration Specialist',
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T10:46:31.859Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->job->updateHrisJob(
+    request: $request
+);
+
+if ($response->hrisJob !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\UpdateHrisJobRequest](../../Models/Operations/UpdateHrisJobRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\UpdateHrisJobResponse](../../Models/Operations/UpdateHrisJobResponse.md)**
 
 ### Errors
 

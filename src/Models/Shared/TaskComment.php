@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class TaskComment
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -54,6 +55,7 @@ class TaskComment
     public ?array $raw = null;
 
     /**
+     * (reference to TaskTask)
      *
      * @var ?string $taskId
      */
@@ -70,6 +72,7 @@ class TaskComment
     public ?string $text = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -78,6 +81,7 @@ class TaskComment
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The aggregation period of the value */
 enum Period: string
 {
     case Day = 'DAY';

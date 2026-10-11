@@ -18,4 +18,6 @@ enum HrisCompensationFrequency: string
     case Hour = 'HOUR';
     case Month = 'MONTH';
     case Week = 'WEEK';
+    case Biweekly = 'BIWEEKLY';
+    case Semimonthly = 'SEMIMONTHLY';
 }

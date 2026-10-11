@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** Webhook - A webhook is used to POST new/updated information to your server. */
+/** Webhook - A webhook is used to POST new, updated, or deleted records to your server. */
 class Webhook
 {
     /**
@@ -20,6 +20,7 @@ class Webhook
     public string $connectionId;
 
     /**
+     * The event to subscribe to. "deleted" is supported on native webhooks, and on virtual webhooks where the integration supports it. Check the integration's Feature Support tab.
      *
      * @var \Unified\Unified_to\Models\Shared\WebhookEvent $event
      */
@@ -28,6 +29,7 @@ class Webhook
     public WebhookEvent $event;
 
     /**
+     * The object to return (eg. CRM "contact")
      *
      * @var \Unified\Unified_to\Models\Shared\WebhookObjectType $objectType
      */
@@ -36,6 +38,7 @@ class Webhook
     public WebhookObjectType $objectType;
 
     /**
+     * Read-only. The time Unified.to last recorded a check on this webhook. Behaviour varies by webhook implementation, so don't use this field to tell whether a webhook is still running. Use is_healthy, and subscribe to WEBHOOK_UNHEALTHY on the notifications webhook, to monitor health. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $checkedAt
      */
@@ -44,6 +47,7 @@ class Webhook
     public ?\DateTime $checkedAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -93,7 +97,7 @@ class Webhook
     public ?string $fields = null;
 
     /**
-     * $filters
+     * Supported on virtual webhooks, and on native webhooks for many integrations. Check the integration's Feature Support tab for which filters apply. Filters the integration doesn't support are accepted but have no effect. Some integrations require a filter; if it's missing, create returns an error naming the integration and the filter.
      *
      * @var ?array<string, string> $filters
      */
@@ -103,6 +107,7 @@ class Webhook
     public ?array $filters = null;
 
     /**
+     * The URL of the webhook
      *
      * @var ?string $hookUrl
      */
@@ -127,6 +132,7 @@ class Webhook
     public ?string $integrationType = null;
 
     /**
+     * Virtual webhooks only. How often (in minutes) Unified.to checks for new or updated records. Minimum 1 on paid plans, 60 on free. Ignored for native webhooks.
      *
      * @var ?float $interval
      */
@@ -143,6 +149,7 @@ class Webhook
     public ?bool $isBeta = null;
 
     /**
+     * Read-only. True while the webhook can operate or recover; a transient failure may still be retrying. False after retries are exhausted or a non-retryable failure such as broken connection auth. Cannot be reset; recreate the webhook.
      *
      * @var ?bool $isHealthy
      */
@@ -167,7 +174,7 @@ class Webhook
     public ?float $pageMaxLimit = null;
 
     /**
-     * An array of the most revent virtual webhook runs
+     * An array of the most recent virtual webhook runs
      *
      * @var ?array<string> $runs
      */
@@ -177,6 +184,7 @@ class Webhook
     public ?array $runs = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -185,6 +193,7 @@ class Webhook
     public ?\DateTime $updatedAt = null;
 
     /**
+     * "native" registers with the integration, which sends events as they happen. "virtual" checks for changes on "interval". Optional on create; if omitted, Unified.to picks a supported type for the object. Requesting a type the integration doesn't support returns 400. Set on create only: changes sent on update are ignored without an error. Delete and recreate the webhook to change type.
      *
      * @var ?\Unified\Unified_to\Models\Shared\WebhookType $webhookType
      */
@@ -194,6 +203,7 @@ class Webhook
     public ?WebhookType $webhookType = null;
 
     /**
+     * (reference to KmsSpace)
      *
      * @var ?string $workspaceId
      */

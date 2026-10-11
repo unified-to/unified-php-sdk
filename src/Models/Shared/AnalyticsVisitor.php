@@ -44,6 +44,7 @@ class AnalyticsVisitor
     public ?string $countryCode = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -60,6 +61,7 @@ class AnalyticsVisitor
     public ?string $email = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $firstSeenAt
      */
@@ -93,6 +95,7 @@ class AnalyticsVisitor
     public ?string $language = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $lastSeenAt
      */
@@ -119,6 +122,7 @@ class AnalyticsVisitor
     public ?string $name = null;
 
     /**
+     * points to AnalyticsProperty
      *
      * @var ?string $propertyId
      */
@@ -169,6 +173,7 @@ class AnalyticsVisitor
     public ?float $totalSessions = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

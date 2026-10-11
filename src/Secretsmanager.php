@@ -49,13 +49,13 @@ class Secretsmanager
      * Create secrets manager
      *
      * @param  \Unified\Unified_to\Models\Shared\SecretsManager  $request
-     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedWorkspaceSecretsmanagerResponse
+     * @return \Unified\Unified_to\Models\Operations\CreateUnifiedSecretsmanagerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function createUnifiedWorkspaceSecretsmanager(Shared\SecretsManager $request, ?Options $options = null): Operations\CreateUnifiedWorkspaceSecretsmanagerResponse
+    public function createUnifiedSecretsmanager(Shared\SecretsManager $request, ?Options $options = null): Operations\CreateUnifiedSecretsmanagerResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/workspace/secretsmanager');
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/secretsmanager');
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $body = Utils\Utils::serializeRequestBody($request, 'request', 'json');
@@ -66,7 +66,7 @@ class Secretsmanager
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('POST', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUnifiedWorkspaceSecretsmanager', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'createUnifiedSecretsmanager', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -91,7 +91,7 @@ class Secretsmanager
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SecretsManager', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\CreateUnifiedWorkspaceSecretsmanagerResponse(
+                $response = new Operations\CreateUnifiedSecretsmanagerResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -113,20 +113,20 @@ class Secretsmanager
     /**
      * Retrieve secrets manager
      *
-     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedWorkspaceSecretsmanagerRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\GetUnifiedWorkspaceSecretsmanagerResponse
+     * @param  \Unified\Unified_to\Models\Operations\GetUnifiedSecretsmanagerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\GetUnifiedSecretsmanagerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function getUnifiedWorkspaceSecretsmanager(Operations\GetUnifiedWorkspaceSecretsmanagerRequest $request, ?Options $options = null): Operations\GetUnifiedWorkspaceSecretsmanagerResponse
+    public function getUnifiedSecretsmanager(Operations\GetUnifiedSecretsmanagerRequest $request, ?Options $options = null): Operations\GetUnifiedSecretsmanagerResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/workspace/secretsmanager/{id}', Operations\GetUnifiedWorkspaceSecretsmanagerRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/secretsmanager/{id}', Operations\GetUnifiedSecretsmanagerRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUnifiedWorkspaceSecretsmanager', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'getUnifiedSecretsmanager', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -151,7 +151,7 @@ class Secretsmanager
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\SecretsManager', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\GetUnifiedWorkspaceSecretsmanagerResponse(
+                $response = new Operations\GetUnifiedSecretsmanagerResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -171,24 +171,146 @@ class Secretsmanager
     }
 
     /**
-     * List secrets managers
+     * List secrets manager setup instructions
      *
-     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedWorkspaceSecretsmanagersRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\ListUnifiedWorkspaceSecretsmanagersResponse
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedSecretsmanagerInstructionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function listUnifiedWorkspaceSecretsmanagers(?Operations\ListUnifiedWorkspaceSecretsmanagersRequest $request = null, ?Options $options = null): Operations\ListUnifiedWorkspaceSecretsmanagersResponse
+    public function listUnifiedSecretsmanagerInstructions(?Options $options = null): Operations\ListUnifiedSecretsmanagerInstructionsResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/workspace/secretsmanager');
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/secretsmanager/instructions');
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
-
-        $qp = Utils\Utils::getQueryParams(Operations\ListUnifiedWorkspaceSecretsmanagersRequest::class, $request, $urlOverride);
         $httpOptions['headers']['Accept'] = 'application/json';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUnifiedWorkspaceSecretsmanagers', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUnifiedSecretsmanagerInstructions', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\SecretsManagerInstructions>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListUnifiedSecretsmanagerInstructionsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    secretsManagerInstructionsList: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * List secrets in a secrets manager
+     *
+     * @param  \Unified\Unified_to\Models\Operations\ListUnifiedSecretsmanagerSecretsRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedSecretsmanagerSecretsResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function listUnifiedSecretsmanagerSecrets(Operations\ListUnifiedSecretsmanagerSecretsRequest $request, ?Options $options = null): Operations\ListUnifiedSecretsmanagerSecretsResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/secretsmanager/secrets');
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+
+        $qp = Utils\Utils::getQueryParams(Operations\ListUnifiedSecretsmanagerSecretsRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUnifiedSecretsmanagerSecrets', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\SecretsManagerSecret>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\ListUnifiedSecretsmanagerSecretsResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    secretsManagerSecrets: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * List secrets managers
+     *
+     * @param  ?\Unified\Unified_to\Models\Operations\ListUnifiedSecretsmanagersRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\ListUnifiedSecretsmanagersResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function listUnifiedSecretsmanagers(?Operations\ListUnifiedSecretsmanagersRequest $request = null, ?Options $options = null): Operations\ListUnifiedSecretsmanagersResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/secretsmanager');
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+
+        $qp = Utils\Utils::getQueryParams(Operations\ListUnifiedSecretsmanagersRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('GET', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'listUnifiedSecretsmanagers', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
@@ -214,7 +336,7 @@ class Secretsmanager
                 $serializer = Utils\JSON::createSerializer();
                 $responseData = (string) $httpResponse->getBody();
                 $obj = $serializer->deserialize($responseData, 'array<\Unified\Unified_to\Models\Shared\SecretsManager>', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
-                $response = new Operations\ListUnifiedWorkspaceSecretsmanagersResponse(
+                $response = new Operations\ListUnifiedSecretsmanagersResponse(
                     statusCode: $statusCode,
                     contentType: $contentType,
                     rawResponse: $httpResponse,
@@ -236,20 +358,20 @@ class Secretsmanager
     /**
      * Remove secrets manager
      *
-     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedWorkspaceSecretsmanagerRequest  $request
-     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedWorkspaceSecretsmanagerResponse
+     * @param  \Unified\Unified_to\Models\Operations\RemoveUnifiedSecretsmanagerRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveUnifiedSecretsmanagerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
      */
-    public function removeUnifiedWorkspaceSecretsmanager(Operations\RemoveUnifiedWorkspaceSecretsmanagerRequest $request, ?Options $options = null): Operations\RemoveUnifiedWorkspaceSecretsmanagerResponse
+    public function removeUnifiedSecretsmanager(Operations\RemoveUnifiedSecretsmanagerRequest $request, ?Options $options = null): Operations\RemoveUnifiedSecretsmanagerResponse
     {
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
-        $url = Utils\Utils::generateUrl($baseUrl, '/unified/workspace/secretsmanager/{id}', Operations\RemoveUnifiedWorkspaceSecretsmanagerRequest::class, $request);
+        $url = Utils\Utils::generateUrl($baseUrl, '/unified/secretsmanager/{id}', Operations\RemoveUnifiedSecretsmanagerRequest::class, $request);
         $urlOverride = null;
         $httpOptions = ['http_errors' => false];
         $httpOptions['headers']['Accept'] = '*/*';
         $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
         $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
-        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUnifiedWorkspaceSecretsmanager', null, $this->sdkConfiguration->securitySource);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeUnifiedSecretsmanager', null, $this->sdkConfiguration->securitySource);
         $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
         $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
         $httpRequest = Utils\Utils::removeHeaders($httpRequest);
@@ -270,7 +392,7 @@ class Secretsmanager
         if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUnifiedWorkspaceSecretsmanagerResponse(
+            return new Operations\RemoveUnifiedSecretsmanagerResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse
@@ -282,7 +404,7 @@ class Secretsmanager
         } else {
             $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
 
-            return new Operations\RemoveUnifiedWorkspaceSecretsmanagerResponse(
+            return new Operations\RemoveUnifiedSecretsmanagerResponse(
                 statusCode: $statusCode,
                 contentType: $contentType,
                 rawResponse: $httpResponse

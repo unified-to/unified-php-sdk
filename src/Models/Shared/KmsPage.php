@@ -20,6 +20,7 @@ class KmsPage
     public KmsPageType $type;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -88,6 +89,7 @@ class KmsPage
     public ?array $raw = null;
 
     /**
+     * (reference to KmsSpace)
      *
      * @var ?string $spaceId
      */
@@ -104,6 +106,7 @@ class KmsPage
     public ?string $title = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -112,6 +115,7 @@ class KmsPage
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PaymentAllocation
 {
     /**
+     * Date and time when the payment was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $allocatedAt
      */
@@ -20,6 +21,7 @@ class PaymentAllocation
     public ?\DateTime $allocatedAt = null;
 
     /**
+     * The amount of the payment applied to this object
      *
      * @var ?float $amount
      */
@@ -28,6 +30,7 @@ class PaymentAllocation
     public ?float $amount = null;
 
     /**
+     * ISO 4217 currency code of the applied amount
      *
      * @var ?string $currency
      */
@@ -36,6 +39,7 @@ class PaymentAllocation
     public ?string $currency = null;
 
     /**
+     * The exchange rate at the time the payment was applied, for multi-currency
      *
      * @var ?float $exchangeRate
      */
@@ -44,6 +48,7 @@ class PaymentAllocation
     public ?float $exchangeRate = null;
 
     /**
+     * The id of the object this payment was applied to
      *
      * @var ?string $objectId
      */
@@ -52,6 +57,7 @@ class PaymentAllocation
     public ?string $objectId = null;
 
     /**
+     * The type of object this payment was applied to
      *
      * @var ?\Unified\Unified_to\Models\Shared\PaymentAllocationObjectType $objectType
      */

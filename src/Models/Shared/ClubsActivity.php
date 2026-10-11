@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ClubsActivity
 {
     /**
+     * The number of achievements gained during this activity
      *
      * @var ?float $achievementCount
      */
@@ -21,6 +22,7 @@ class ClubsActivity
     public ?float $achievementCount = null;
 
     /**
+     * The number of athletes that took part in this activity
      *
      * @var ?float $athleteCount
      */
@@ -29,6 +31,7 @@ class ClubsActivity
     public ?float $athleteCount = null;
 
     /**
+     * The id of the athlete who performed the activity (DetailedActivity only)
      *
      * @var ?string $athleteId
      */
@@ -37,6 +40,7 @@ class ClubsActivity
     public ?string $athleteId = null;
 
     /**
+     * The full name of the athlete
      *
      * @var ?string $athleteName
      */
@@ -45,6 +49,7 @@ class ClubsActivity
     public ?string $athleteName = null;
 
     /**
+     * The activity's average cadence
      *
      * @var ?float $averageCadence
      */
@@ -53,6 +58,7 @@ class ClubsActivity
     public ?float $averageCadence = null;
 
     /**
+     * The activity's average heart rate, in beats per minute
      *
      * @var ?float $averageHeartrate
      */
@@ -61,6 +67,7 @@ class ClubsActivity
     public ?float $averageHeartrate = null;
 
     /**
+     * The activity's average speed, in meters per second
      *
      * @var ?float $averageSpeed
      */
@@ -69,6 +76,7 @@ class ClubsActivity
     public ?float $averageSpeed = null;
 
     /**
+     * The activity's average power output, in watts
      *
      * @var ?float $averageWatts
      */
@@ -77,6 +85,7 @@ class ClubsActivity
     public ?float $averageWatts = null;
 
     /**
+     * The number of kilocalories consumed during this activity
      *
      * @var ?float $calories
      */
@@ -85,6 +94,7 @@ class ClubsActivity
     public ?float $calories = null;
 
     /**
+     * The number of comments for this activity
      *
      * @var ?float $commentCount
      */
@@ -93,6 +103,7 @@ class ClubsActivity
     public ?float $commentCount = null;
 
     /**
+     * The date that this activity was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -101,6 +112,7 @@ class ClubsActivity
     public ?\DateTime $createdAt = null;
 
     /**
+     * The description of the activity (DetailedActivity only)
      *
      * @var ?string $description
      */
@@ -109,6 +121,7 @@ class ClubsActivity
     public ?string $description = null;
 
     /**
+     * The activity's distance, in meters
      *
      * @var ?float $distance
      */
@@ -117,6 +130,7 @@ class ClubsActivity
     public ?float $distance = null;
 
     /**
+     * The activity's elapsed time, in seconds
      *
      * @var ?float $elapsedTime
      */
@@ -125,6 +139,7 @@ class ClubsActivity
     public ?float $elapsedTime = null;
 
     /**
+     * The activity's highest elevation, in meters (DetailedActivity only)
      *
      * @var ?float $elevationHigh
      */
@@ -133,6 +148,7 @@ class ClubsActivity
     public ?float $elevationHigh = null;
 
     /**
+     * The activity's lowest elevation, in meters (DetailedActivity only)
      *
      * @var ?float $elevationLow
      */
@@ -141,6 +157,7 @@ class ClubsActivity
     public ?float $elevationLow = null;
 
     /**
+     * The group this activity was listed under (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -149,6 +166,7 @@ class ClubsActivity
     public ?string $groupId = null;
 
     /**
+     * Whether the activity has heart rate data
      *
      * @var ?bool $hasHeartrate
      */
@@ -157,6 +175,7 @@ class ClubsActivity
     public ?bool $hasHeartrate = null;
 
     /**
+     * Unique identifier for this activity (not provided by ClubActivity)
      *
      * @var ?string $id
      */
@@ -165,6 +184,7 @@ class ClubsActivity
     public ?string $id = null;
 
     /**
+     * Whether this activity is a commute
      *
      * @var ?bool $isCommute
      */
@@ -173,6 +193,7 @@ class ClubsActivity
     public ?bool $isCommute = null;
 
     /**
+     * Whether this activity was created manually
      *
      * @var ?bool $isManual
      */
@@ -181,6 +202,7 @@ class ClubsActivity
     public ?bool $isManual = null;
 
     /**
+     * Whether this activity is private
      *
      * @var ?bool $isPrivate
      */
@@ -189,6 +211,7 @@ class ClubsActivity
     public ?bool $isPrivate = null;
 
     /**
+     * Whether this activity was recorded on a training machine
      *
      * @var ?bool $isTrainer
      */
@@ -197,6 +220,7 @@ class ClubsActivity
     public ?bool $isTrainer = null;
 
     /**
+     * The total work done, in kilojoules
      *
      * @var ?float $kilojoules
      */
@@ -205,6 +229,7 @@ class ClubsActivity
     public ?float $kilojoules = null;
 
     /**
+     * The number of kudos given for this activity
      *
      * @var ?float $kudosCount
      */
@@ -213,6 +238,7 @@ class ClubsActivity
     public ?float $kudosCount = null;
 
     /**
+     * The detailed polyline of the activity's map
      *
      * @var ?string $mapPolyline
      */
@@ -221,6 +247,7 @@ class ClubsActivity
     public ?string $mapPolyline = null;
 
     /**
+     * The summary polyline of the activity's map
      *
      * @var ?string $mapSummaryPolyline
      */
@@ -229,6 +256,7 @@ class ClubsActivity
     public ?string $mapSummaryPolyline = null;
 
     /**
+     * The activity's max heart rate, in beats per minute
      *
      * @var ?float $maxHeartrate
      */
@@ -237,6 +265,7 @@ class ClubsActivity
     public ?float $maxHeartrate = null;
 
     /**
+     * The activity's max speed, in meters per second
      *
      * @var ?float $maxSpeed
      */
@@ -245,6 +274,7 @@ class ClubsActivity
     public ?float $maxSpeed = null;
 
     /**
+     * The activity's max power output, in watts
      *
      * @var ?float $maxWatts
      */
@@ -253,6 +283,7 @@ class ClubsActivity
     public ?float $maxWatts = null;
 
     /**
+     * The activity's moving time, in seconds
      *
      * @var ?float $movingTime
      */
@@ -261,6 +292,7 @@ class ClubsActivity
     public ?float $movingTime = null;
 
     /**
+     * The name of the activity
      *
      * @var ?string $name
      */
@@ -269,6 +301,7 @@ class ClubsActivity
     public ?string $name = null;
 
     /**
+     * The number of Instagram photos for this activity
      *
      * @var ?float $photoCount
      */
@@ -277,6 +310,7 @@ class ClubsActivity
     public ?float $photoCount = null;
 
     /**
+     * The number of personal records set during this activity
      *
      * @var ?float $prCount
      */
@@ -285,7 +319,7 @@ class ClubsActivity
     public ?float $prCount = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this activity
      *
      * @var ?array<string, mixed> $raw
      */
@@ -295,6 +329,7 @@ class ClubsActivity
     public ?array $raw = null;
 
     /**
+     * When the activity started (UTC) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -303,6 +338,7 @@ class ClubsActivity
     public ?\DateTime $startAt = null;
 
     /**
+     * The activity's relative effort score
      *
      * @var ?float $sufferScore
      */
@@ -311,6 +347,7 @@ class ClubsActivity
     public ?float $sufferScore = null;
 
     /**
+     * The timezone of the activity
      *
      * @var ?string $timezone
      */
@@ -319,6 +356,7 @@ class ClubsActivity
     public ?string $timezone = null;
 
     /**
+     * The activity's total elevation gain, in meters
      *
      * @var ?float $totalElevationGain
      */
@@ -327,6 +365,7 @@ class ClubsActivity
     public ?float $totalElevationGain = null;
 
     /**
+     * The activity type
      *
      * @var ?\Unified\Unified_to\Models\Shared\ClubsActivityType $type
      */
@@ -336,6 +375,7 @@ class ClubsActivity
     public ?ClubsActivityType $type = null;
 
     /**
+     * The last date that this activity was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -344,6 +384,7 @@ class ClubsActivity
     public ?\DateTime $updatedAt = null;
 
     /**
+     * The activity's weighted average power output, in watts
      *
      * @var ?float $weightedAverageWatts
      */
@@ -352,6 +393,7 @@ class ClubsActivity
     public ?float $weightedAverageWatts = null;
 
     /**
+     * The activity's workout type
      *
      * @var ?float $workoutType
      */

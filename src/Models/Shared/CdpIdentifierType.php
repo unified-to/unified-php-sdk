@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The type of the identifier (eg. EMAIL, USER_ID, ANONYMOUS_ID) */
 enum CdpIdentifierType: string
 {
     case Email = 'EMAIL';

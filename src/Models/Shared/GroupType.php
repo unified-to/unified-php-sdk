@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The group type */
 enum GroupType: string
 {
     case CasualClub = 'CASUAL_CLUB';

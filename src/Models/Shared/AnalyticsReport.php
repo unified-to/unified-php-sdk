@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AnalyticsReport
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class AnalyticsReport
     public ?\DateTime $createdAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -46,6 +48,7 @@ class AnalyticsReport
     public ?array $metrics = null;
 
     /**
+     * points to AnalyticsProperty
      *
      * @var ?string $propertyId
      */
@@ -64,6 +67,7 @@ class AnalyticsReport
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -72,6 +76,7 @@ class AnalyticsReport
     public ?\DateTime $startAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

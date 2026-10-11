@@ -13,7 +13,7 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class CreateUnifiedWebhookRequest
 {
     /**
-     * A webhook is used to POST new/updated information to your server.
+     * A webhook is used to POST new, updated, or deleted records to your server.
      *
      * @var \Unified\Unified_to\Models\Shared\Webhook $webhook
      */

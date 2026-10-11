@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class SocialMedia
 {
     /**
+     * URL of the media asset
      *
      * @var string $url
      */
@@ -19,6 +20,7 @@ class SocialMedia
     public string $url;
 
     /**
+     * Accessibility caption / alt text
      *
      * @var ?string $alt
      */
@@ -27,6 +29,7 @@ class SocialMedia
     public ?string $alt = null;
 
     /**
+     * Media height in pixels
      *
      * @var ?float $height
      */
@@ -35,6 +38,7 @@ class SocialMedia
     public ?float $height = null;
 
     /**
+     * Provider media id, when the media is individually addressable
      *
      * @var ?string $id
      */
@@ -43,6 +47,7 @@ class SocialMedia
     public ?string $id = null;
 
     /**
+     * Ordering of the media within the post; 1 is the first
      *
      * @var ?float $position
      */
@@ -51,6 +56,7 @@ class SocialMedia
     public ?float $position = null;
 
     /**
+     * Type of media
      *
      * @var ?\Unified\Unified_to\Models\Shared\SocialMediaType $type
      */
@@ -60,6 +66,7 @@ class SocialMedia
     public ?SocialMediaType $type = null;
 
     /**
+     * Media width in pixels
      *
      * @var ?float $width
      */

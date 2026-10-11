@@ -36,6 +36,7 @@ class VerificationResponseDetail
     public ?bool $isPrivate = null;
 
     /**
+     * in reference to the parameter input
      *
      * @var ?string $parameterId
      */

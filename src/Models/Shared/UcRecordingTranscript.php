@@ -19,6 +19,7 @@ class UcRecordingTranscript
     public string $text;
 
     /**
+     * (reference to UcContact)
      *
      * @var ?string $contactId
      */
@@ -27,6 +28,7 @@ class UcRecordingTranscript
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -35,6 +37,7 @@ class UcRecordingTranscript
     public ?\DateTime $endAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -43,6 +46,7 @@ class UcRecordingTranscript
     public ?\DateTime $startAt = null;
 
     /**
+     * reference to HrisEmployee (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

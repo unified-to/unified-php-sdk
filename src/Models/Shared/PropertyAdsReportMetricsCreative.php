@@ -38,6 +38,7 @@ class PropertyAdsReportMetricsCreative
     public ?string $campaignId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -95,6 +96,7 @@ class PropertyAdsReportMetricsCreative
     public ?string $externalPlacementReference = null;
 
     /**
+     * (reference to AdsGroup)
      *
      * @var ?string $groupId
      */
@@ -128,6 +130,7 @@ class PropertyAdsReportMetricsCreative
     public ?string $id = null;
 
     /**
+     * references Commerce Item ID (reference to CommerceItem)
      *
      * @var ?string $itemId
      */
@@ -146,6 +149,7 @@ class PropertyAdsReportMetricsCreative
     public ?array $labels = null;
 
     /**
+     * Destination URL for creatives with links
      *
      * @var ?string $linkUrl
      */
@@ -170,6 +174,7 @@ class PropertyAdsReportMetricsCreative
     public ?string $organizationId = null;
 
     /**
+     * Display URL path 1 (Microsoft RSA Path1)
      *
      * @var ?string $path1
      */
@@ -178,6 +183,7 @@ class PropertyAdsReportMetricsCreative
     public ?string $path1 = null;
 
     /**
+     * Display URL path 2 (Microsoft RSA Path2)
      *
      * @var ?string $path2
      */
@@ -231,6 +237,7 @@ class PropertyAdsReportMetricsCreative
     public ?string $title = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -239,6 +246,7 @@ class PropertyAdsReportMetricsCreative
     public ?\DateTime $updatedAt = null;
 
     /**
+     * Appended URL tracking params (e.g. utm_source=..&utm_medium=..); Meta url_tags, Google tracking template
      *
      * @var ?string $urlTags
      */

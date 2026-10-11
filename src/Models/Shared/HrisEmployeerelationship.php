@@ -31,6 +31,7 @@ class HrisEmployeerelationship
     public ?array $emails = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -79,6 +80,7 @@ class HrisEmployeerelationship
     public ?string $name = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

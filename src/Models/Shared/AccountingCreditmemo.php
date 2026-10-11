@@ -48,6 +48,7 @@ class AccountingCreditmemo
     public ?float $balanceAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $cancelledAt
      */
@@ -56,6 +57,7 @@ class AccountingCreditmemo
     public ?\DateTime $cancelledAt = null;
 
     /**
+     * (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -64,6 +66,7 @@ class AccountingCreditmemo
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -72,6 +75,7 @@ class AccountingCreditmemo
     public ?\DateTime $createdAt = null;
 
     /**
+     * External identifier for this invoice
      *
      * @var ?string $creditmemoNumber
      */
@@ -96,6 +100,7 @@ class AccountingCreditmemo
     public ?float $discountAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -112,6 +117,7 @@ class AccountingCreditmemo
     public ?string $id = null;
 
     /**
+     * (reference to AccountingInvoice)
      *
      * @var ?string $invoiceId
      */
@@ -164,6 +170,7 @@ class AccountingCreditmemo
     public ?float $paidAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $paidAt
      */
@@ -172,6 +179,7 @@ class AccountingCreditmemo
     public ?\DateTime $paidAt = null;
 
     /**
+     * When set to charging_automatically, an automated attempt will occur to pay this invoice using the default payment source attached to the contactcustomer. When set to send_invoice, an will email will be sent with this invoice to the contact/customer with payment instructions.
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod
      */
@@ -181,6 +189,7 @@ class AccountingCreditmemo
     public ?AccountingCreditmemoPaymentCollectionMethod $paymentCollectionMethod = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */
@@ -215,6 +224,7 @@ class AccountingCreditmemo
     public ?string $refundReason = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $refundedAt
      */
@@ -256,6 +266,7 @@ class AccountingCreditmemo
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -264,6 +275,7 @@ class AccountingCreditmemo
     public ?\DateTime $updatedAt = null;
 
     /**
+     * The public URL for the invoice to send to a customer to view or pay.
      *
      * @var ?string $url
      */

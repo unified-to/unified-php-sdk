@@ -20,6 +20,7 @@ class AdSchedule
     public DayOfWeek $dayOfWeek;
 
     /**
+     * 0-24 (24 = end of day)
      *
      * @var float $endHour
      */
@@ -27,6 +28,7 @@ class AdSchedule
     public float $endHour;
 
     /**
+     * 0-23
      *
      * @var float $startHour
      */
@@ -34,6 +36,7 @@ class AdSchedule
     public float $startHour;
 
     /**
+     * 0.1-10.0
      *
      * @var ?float $bidModifier
      */
@@ -42,6 +45,7 @@ class AdSchedule
     public ?float $bidModifier = null;
 
     /**
+     * 0, 15, 30, 45
      *
      * @var ?float $endMinute
      */
@@ -50,6 +54,7 @@ class AdSchedule
     public ?float $endMinute = null;
 
     /**
+     * 0, 15, 30, 45
      *
      * @var ?float $startMinute
      */

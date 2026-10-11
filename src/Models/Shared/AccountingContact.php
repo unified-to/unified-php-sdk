@@ -22,6 +22,7 @@ class AccountingContact
     public ?array $associatedContacts = null;
 
     /**
+     * Outstanding AR/AP balance for this contact
      *
      * @var ?float $balanceAmount
      */
@@ -47,6 +48,7 @@ class AccountingContact
     public ?string $companyName = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -81,6 +83,7 @@ class AccountingContact
     public ?string $id = null;
 
     /**
+     * contact account numbers such as registration, A membership or identification reference to help to identify and search customers
      *
      * @var ?string $identification
      */
@@ -172,6 +175,7 @@ class AccountingContact
     public ?string $paymenttermId = null;
 
     /**
+     * URL for the contact’s portal
      *
      * @var ?string $portalUrl
      */
@@ -208,6 +212,7 @@ class AccountingContact
     public ?TaxExemption $taxExemption = null;
 
     /**
+     * The ID/number of the customer's tax number.  This is also known as the ABN (Australia), GST Number (New Zealand), VAT Number (UK) or Tax ID Number (US and global).
      *
      * @var ?string $taxNumber
      */
@@ -226,6 +231,7 @@ class AccountingContact
     public ?array $telephones = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

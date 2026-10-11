@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The type of object this credit was applied to */
 enum ObjectType: string
 {
     case Invoice = 'INVOICE';

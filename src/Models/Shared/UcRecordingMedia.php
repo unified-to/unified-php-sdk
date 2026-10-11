@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class UcRecordingMedia
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -20,6 +21,7 @@ class UcRecordingMedia
     public ?\DateTime $endAt = null;
 
     /**
+     * two digit ISO code
      *
      * @var ?string $language
      */
@@ -36,6 +38,7 @@ class UcRecordingMedia
     public ?string $recordingDownloadUrl = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

@@ -49,6 +49,7 @@ class AdsInsertionorder
     public ?string $campaignId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -118,6 +119,7 @@ class AdsInsertionorder
     public ?array $raw = null;
 
     /**
+     * client's reference ID for the insertion order
      *
      * @var ?string $reference
      */
@@ -135,6 +137,7 @@ class AdsInsertionorder
     public ?AdsInsertionorderStatus $status = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

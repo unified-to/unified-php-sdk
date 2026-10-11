@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingCreditApplication
 {
     /**
+     * The amount of credit applied to this object
      *
      * @var ?float $amount
      */
@@ -20,6 +21,7 @@ class AccountingCreditApplication
     public ?float $amount = null;
 
     /**
+     * Date and time when the credit was applied, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $appliedAt
      */
@@ -28,6 +30,7 @@ class AccountingCreditApplication
     public ?\DateTime $appliedAt = null;
 
     /**
+     * The id of the object this credit was applied to
      *
      * @var ?string $objectId
      */
@@ -36,6 +39,7 @@ class AccountingCreditApplication
     public ?string $objectId = null;
 
     /**
+     * The type of object this credit was applied to
      *
      * @var ?\Unified\Unified_to\Models\Shared\ObjectType $objectType
      */

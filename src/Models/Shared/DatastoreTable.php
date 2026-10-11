@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class DatastoreTable
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class DatastoreTable
     public ?\DateTime $createdAt = null;
 
     /**
+     * source Database ID
      *
      * @var ?string $databaseId
      */
@@ -90,6 +92,7 @@ class DatastoreTable
     public ?array $relationships = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

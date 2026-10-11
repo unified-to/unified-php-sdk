@@ -6,7 +6,9 @@
 
 * [createAtsScorecard](#createatsscorecard) - Create a scorecard
 * [getAtsScorecard](#getatsscorecard) - Retrieve a scorecard
+* [getUcScorecard](#getucscorecard) - Retrieve a scorecard
 * [listAtsScorecards](#listatsscorecards) - List all scorecards
+* [listUcScorecards](#listucscorecards) - List all scorecards
 * [patchAtsScorecard](#patchatsscorecard) - Update a scorecard
 * [removeAtsScorecard](#removeatsscorecard) - Remove a scorecard
 * [updateAtsScorecard](#updateatsscorecard) - Update a scorecard
@@ -38,7 +40,7 @@ $request = new Operations\CreateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: '091c9532-8ab4-4902-a520-acd54c4e76d1',
+        id: 'd677dd7b-1b96-4b5c-8a95-54ed320d2fa1',
         questions: [
             new Shared\AtsScorecardQuestion(
                 description: 'Sulum textor eveniet facere vita.',
@@ -51,7 +53,7 @@ $request = new Operations\CreateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-28T05:41:35.701Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-02T19:29:18.675Z'),
     ),
     connectionId: '<id>',
 );
@@ -132,6 +134,57 @@ if ($response->atsScorecard !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getUcScorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getUcScorecard" method="get" path="/uc/{connection_id}/scorecard/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetUcScorecardRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->scorecard->getUcScorecard(
+    request: $request
+);
+
+if ($response->ucScorecard !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetUcScorecardRequest](../../Models/Operations/GetUcScorecardRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetUcScorecardResponse](../../Models/Operations/GetUcScorecardResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listAtsScorecards
 
 List all scorecards
@@ -182,6 +235,56 @@ if ($response->atsScorecards !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listUcScorecards
+
+List all scorecards
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUcScorecards" method="get" path="/uc/{connection_id}/scorecard" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListUcScorecardsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->scorecard->listUcScorecards(
+    request: $request
+);
+
+if ($response->ucScorecards !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListUcScorecardsRequest](../../Models/Operations/ListUcScorecardsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\ListUcScorecardsResponse](../../Models/Operations/ListUcScorecardsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchAtsScorecard
 
 Update a scorecard
@@ -209,7 +312,7 @@ $request = new Operations\PatchAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'ad5a2091-694e-47c1-b863-8de6e0265017',
+        id: 'e2cfba84-25ef-4659-ad26-a8e579a445a5',
         questions: [
             new Shared\AtsScorecardQuestion(
                 description: 'Sulum textor eveniet facere vita.',
@@ -222,7 +325,7 @@ $request = new Operations\PatchAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-28T05:41:35.703Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-02T19:29:18.679Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -331,7 +434,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'ad5a2091-694e-47c1-b863-8de6e0265017',
+        id: 'e2cfba84-25ef-4659-ad26-a8e579a445a5',
         questions: [
             new Shared\AtsScorecardQuestion(
                 description: 'Sulum textor eveniet facere vita.',
@@ -344,7 +447,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-28T05:41:35.703Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-02T19:29:18.679Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -23,5 +23,12 @@ enum CreateHrisBankaccountQueryParamFields: string
     case AccountNumberLast4 = 'account_number_last4';
     case Name = 'name';
     case IsPrimary = 'is_primary';
+    case Iban = 'iban';
+    case Bic = 'bic';
+    case CountryCode = 'country_code';
+    case Currency = 'currency';
+    case SplitType = 'split_type';
+    case SplitAmount = 'split_amount';
+    case Priority = 'priority';
     case Raw = 'raw';
 }

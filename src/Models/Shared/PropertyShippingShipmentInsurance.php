@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyShippingShipmentInsurance
 {
     /**
+     * Coverage amount (may differ from insured_value)
      *
      * @var ?float $coverageAmount
      */
@@ -38,6 +39,7 @@ class PropertyShippingShipmentInsurance
     public ?string $currency = null;
 
     /**
+     * Cost of insurance
      *
      * @var ?float $insuranceCost
      */
@@ -54,6 +56,7 @@ class PropertyShippingShipmentInsurance
     public ?string $insuranceCostCurrency = null;
 
     /**
+     * Insurance provider name
      *
      * @var ?string $insuranceProvider
      */
@@ -62,6 +65,7 @@ class PropertyShippingShipmentInsurance
     public ?string $insuranceProvider = null;
 
     /**
+     * Provider code
      *
      * @var ?string $insuranceProviderCode
      */
@@ -70,6 +74,7 @@ class PropertyShippingShipmentInsurance
     public ?string $insuranceProviderCode = null;
 
     /**
+     * Insured value
      *
      * @var ?float $insuredValue
      */

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class DatastoreDatabase
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -78,6 +79,7 @@ class DatastoreDatabase
     public ?string $region = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -244,6 +244,7 @@ class ScimUser
     public ?string $userName = null;
 
     /**
+     * 'Employee','Super Admin', 'General Admin', 'Account Manager', 'User Manager', 'Workflow Manager', 'Experience Manager', 'Author','Reporter','Contractor,'Intern','Temp','External','Unknown']
      *
      * @var ?string $userType
      */

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Frequency for this deduction (should always be set, matches IHrisBenefit.frequency) */
 enum HrisDeductionFrequency: string
 {
     case OneTime = 'ONE_TIME';
@@ -18,4 +19,6 @@ enum HrisDeductionFrequency: string
     case Hour = 'HOUR';
     case Month = 'MONTH';
     case Week = 'WEEK';
+    case Biweekly = 'BIWEEKLY';
+    case Semimonthly = 'SEMIMONTHLY';
 }

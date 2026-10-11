@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
 {
     /**
+     * 'M3',
      *
      * @var ?string $jobLevel
      */
@@ -20,6 +21,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
     public ?string $jobLevel = null;
 
     /**
+     * 'People Manager',
      *
      * @var ?string $peopleManagerReviews
      */
@@ -28,6 +30,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
     public ?string $peopleManagerReviews = null;
 
     /**
+     * 'Ontario',
      *
      * @var ?string $remoteWorkLocation
      */
@@ -36,6 +39,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
     public ?string $remoteWorkLocation = null;
 
     /**
+     * '130000',
      *
      * @var ?string $salaryInformation
      */
@@ -52,6 +56,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
     public ?string $subDepartments = null;
 
     /**
+     * "1987-10-06",
      *
      * @var ?\DateTime $birthDate
      */
@@ -87,6 +92,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionLatticeAttributes10User
     public ?SexualOrientation $sexualOrientation = null;
 
     /**
+     * "2022-03-08",
      *
      * @var ?\DateTime $startDate
      */

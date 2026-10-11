@@ -12,6 +12,17 @@ namespace Unified\Unified_to\Models\Shared;
 class GenaiPrompt
 {
     /**
+     * One answer per question, matched by id.
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\GenaiAnswer> $answers
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('answers')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GenaiAnswer>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $answers = null;
+
+    /**
+     * a float between 0-1
      *
      * @var ?float $maxTokens
      */
@@ -20,6 +31,7 @@ class GenaiPrompt
     public ?float $maxTokens = null;
 
     /**
+     * OAuth Bearer token for MCP servers that require authentication.
      *
      * @var ?string $mcpAuthorizationToken
      */
@@ -38,6 +50,7 @@ class GenaiPrompt
     public ?array $mcpDeferredTools = null;
 
     /**
+     * Supply a remote MCP URL to send to the LLM API for it to call its tools.  Note: Some LLM APIs do not yet support remote MCP URLs. 
      *
      * @var ?string $mcpUrl
      */
@@ -64,6 +77,16 @@ class GenaiPrompt
     public ?string $modelId = null;
 
     /**
+     * Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\GenaiQuestion> $questions
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('questions')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\GenaiQuestion>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $questions = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -84,6 +107,17 @@ class GenaiPrompt
     public ?array $responses = null;
 
     /**
+     * ids of the genai_skill objects (Agent Skills) to make available to the LLM while it answers.
+     *
+     * @var ?array<string> $skillIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('skill_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $skillIds = null;
+
+    /**
+     * 0-1
      *
      * @var ?float $temperature
      */
@@ -100,28 +134,34 @@ class GenaiPrompt
     public ?float $tokensUsed = null;
 
     /**
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GenaiAnswer>  $answers
      * @param  ?float  $maxTokens
      * @param  ?string  $mcpAuthorizationToken
      * @param  ?array<string>  $mcpDeferredTools
      * @param  ?string  $mcpUrl
      * @param  ?array<\Unified\Unified_to\Models\Shared\GenaiContent>  $messages
      * @param  ?string  $modelId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\GenaiQuestion>  $questions
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $responses
+     * @param  ?array<string>  $skillIds
      * @param  ?float  $temperature
      * @param  ?float  $tokensUsed
      * @phpstan-pure
      */
-    public function __construct(?float $maxTokens = null, ?string $mcpAuthorizationToken = null, ?array $mcpDeferredTools = null, ?string $mcpUrl = null, ?array $messages = null, ?string $modelId = null, ?array $raw = null, ?array $responses = null, ?float $temperature = null, ?float $tokensUsed = null)
+    public function __construct(?array $answers = null, ?float $maxTokens = null, ?string $mcpAuthorizationToken = null, ?array $mcpDeferredTools = null, ?string $mcpUrl = null, ?array $messages = null, ?string $modelId = null, ?array $questions = null, ?array $raw = null, ?array $responses = null, ?array $skillIds = null, ?float $temperature = null, ?float $tokensUsed = null)
     {
+        $this->answers = $answers;
         $this->maxTokens = $maxTokens;
         $this->mcpAuthorizationToken = $mcpAuthorizationToken;
         $this->mcpDeferredTools = $mcpDeferredTools;
         $this->mcpUrl = $mcpUrl;
         $this->messages = $messages;
         $this->modelId = $modelId;
+        $this->questions = $questions;
         $this->raw = $raw;
         $this->responses = $responses;
+        $this->skillIds = $skillIds;
         $this->temperature = $temperature;
         $this->tokensUsed = $tokensUsed;
     }

@@ -22,6 +22,7 @@ class HrisTaxonomy
     public ?array $alternativeNames = null;
 
     /**
+     * 2nd-level grouping
      *
      * @var ?string $category
      */
@@ -30,6 +31,7 @@ class HrisTaxonomy
     public ?string $category = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -46,6 +48,7 @@ class HrisTaxonomy
     public ?string $description = null;
 
     /**
+     * 1st-level grouping (broadest)
      *
      * @var ?string $domain
      */
@@ -70,6 +73,7 @@ class HrisTaxonomy
     public ?bool $isActive = null;
 
     /**
+     * the preferred label of the skill/role
      *
      * @var ?string $name
      */
@@ -78,6 +82,7 @@ class HrisTaxonomy
     public ?string $name = null;
 
     /**
+     * id of the parent taxonomy item, for providers exposing arbitrary-depth trees
      *
      * @var ?string $parentId
      */
@@ -106,6 +111,7 @@ class HrisTaxonomy
     public ?array $roleIds = null;
 
     /**
+     * 3rd-level grouping
      *
      * @var ?string $subcategory
      */
@@ -114,6 +120,7 @@ class HrisTaxonomy
     public ?string $subcategory = null;
 
     /**
+     * the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation
      *
      * @var ?\Unified\Unified_to\Models\Shared\HrisTaxonomyType $type
      */
@@ -123,6 +130,7 @@ class HrisTaxonomy
     public ?HrisTaxonomyType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -131,6 +139,7 @@ class HrisTaxonomy
     public ?\DateTime $updatedAt = null;
 
     /**
+     * external reference URL for this item
      *
      * @var ?string $url
      */

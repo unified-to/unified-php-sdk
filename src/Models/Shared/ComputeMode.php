@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** How the segment membership is computed (REALTIME or BATCH) */
 enum ComputeMode: string
 {
     case Realtime = 'REALTIME';

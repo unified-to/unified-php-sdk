@@ -55,6 +55,7 @@ class VerificationParameter
     public ?array $options = null;
 
     /**
+     * question to ask the human
      *
      * @var ?string $publicQuestion
      */

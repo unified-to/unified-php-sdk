@@ -32,6 +32,7 @@ class CrmCompany
     public ?array $contactIds = null;
 
     /**
+     * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -86,6 +87,7 @@ class CrmCompany
     public ?float $employees = null;
 
     /**
+     * Unique identifier for this company object
      *
      * @var ?string $id
      */
@@ -130,6 +132,7 @@ class CrmCompany
     public ?array $metadata = null;
 
     /**
+     * The name of the company
      *
      * @var ?string $name
      */
@@ -138,7 +141,7 @@ class CrmCompany
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this company
      *
      * @var ?array<string, mixed> $raw
      */
@@ -176,6 +179,7 @@ class CrmCompany
     public ?string $timezone = null;
 
     /**
+     * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -184,6 +188,7 @@ class CrmCompany
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

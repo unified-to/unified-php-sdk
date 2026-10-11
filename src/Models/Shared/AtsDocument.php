@@ -28,6 +28,7 @@ class AtsDocument
     public ?string $candidateId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -36,6 +37,7 @@ class AtsDocument
     public ?\DateTime $createdAt = null;
 
     /**
+     * base64 encoded file contents used for create/update actions. Use this field to send an attachment e.g. a resume, a profile, or other text content
      *
      * @var ?string $documentData
      */
@@ -44,6 +46,7 @@ class AtsDocument
     public ?string $documentData = null;
 
     /**
+     * This link expires after 1 hour. 
      *
      * @var ?string $documentUrl
      */
@@ -95,6 +98,7 @@ class AtsDocument
     public ?AtsDocumentType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -103,6 +107,7 @@ class AtsDocument
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

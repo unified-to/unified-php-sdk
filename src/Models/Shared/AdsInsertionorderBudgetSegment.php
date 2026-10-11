@@ -28,6 +28,7 @@ class AdsInsertionorderBudgetSegment
     public ?string $description = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -36,6 +37,7 @@ class AdsInsertionorderBudgetSegment
     public ?\DateTime $endAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

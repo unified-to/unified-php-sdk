@@ -37,7 +37,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(
         createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
-        id: '358e8ad6-1118-4dce-af35-35006497ed07',
+        id: 'dae2155d-530f-4255-8e23-6d486b1df021',
         parameters: [],
         profileAddresses: [],
         profileEmails: [],
@@ -46,7 +46,7 @@ $request = new Operations\CreateVerificationRequestRequest(
         responseDownloadUrls: [],
         responseSource: 'Implemented regional protocol',
         responseStatus: Shared\VerificationRequestResponseStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-26T05:53:05.405Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-26T22:42:03.931Z'),
     ),
     connectionId: '<id>',
 );
@@ -203,7 +203,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(
         createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
-        id: '5392f81c-5033-4e2b-8fd1-1338e3389e0e',
+        id: 'a8704bfa-3c43-4341-baa0-5d7d505c4b2f',
         parameters: [],
         profileAddresses: [],
         profileEmails: [],
@@ -212,7 +212,7 @@ $request = new Operations\PatchVerificationRequestRequest(
         responseDownloadUrls: [],
         responseSource: 'Implemented regional protocol',
         responseStatus: Shared\VerificationRequestResponseStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-26T05:53:05.406Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-26T22:42:03.932Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -320,7 +320,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(
         createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
-        id: '5392f81c-5033-4e2b-8fd1-1338e3389e0e',
+        id: 'a8704bfa-3c43-4341-baa0-5d7d505c4b2f',
         parameters: [],
         profileAddresses: [],
         profileEmails: [],
@@ -329,7 +329,7 @@ $request = new Operations\UpdateVerificationRequestRequest(
         responseDownloadUrls: [],
         responseSource: 'Implemented regional protocol',
         responseStatus: Shared\VerificationRequestResponseStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-26T05:53:05.406Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-26T22:42:03.932Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

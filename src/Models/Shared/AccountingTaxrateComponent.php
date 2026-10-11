@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingTaxrateComponent
 {
     /**
+     * True when this component is charged on top of the other components
      *
      * @var ?bool $isCompound
      */
@@ -20,6 +21,7 @@ class AccountingTaxrateComponent
     public ?bool $isCompound = null;
 
     /**
+     * Name of the tax component, e.g. GST or PST
      *
      * @var ?string $name
      */
@@ -28,6 +30,7 @@ class AccountingTaxrateComponent
     public ?string $name = null;
 
     /**
+     * Rate of this component, in %
      *
      * @var ?float $rate
      */

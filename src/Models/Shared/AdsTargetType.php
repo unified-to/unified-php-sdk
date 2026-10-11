@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavior, adlocale, adgeolocation; Google: geoTargetConstants, user_interest, topic_constant, language_constant) */
 enum AdsTargetType: string
 {
     case Interest = 'INTEREST';

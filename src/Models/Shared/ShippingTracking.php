@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingTracking
 {
     /**
+     * Actual delivery timestamp (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $actualDeliveryAt
      */
@@ -20,6 +21,7 @@ class ShippingTracking
     public ?\DateTime $actualDeliveryAt = null;
 
     /**
+     * Reference to the carrier
      *
      * @var ?string $carrierId
      */
@@ -28,6 +30,7 @@ class ShippingTracking
     public ?string $carrierId = null;
 
     /**
+     * Carrier's status code
      *
      * @var ?string $carrierStatusCode
      */
@@ -36,6 +39,7 @@ class ShippingTracking
     public ?string $carrierStatusCode = null;
 
     /**
+     * Carrier's status description
      *
      * @var ?string $carrierStatusDescription
      */
@@ -44,6 +48,7 @@ class ShippingTracking
     public ?string $carrierStatusDescription = null;
 
     /**
+     * The date that this tracking object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -52,6 +57,7 @@ class ShippingTracking
     public ?\DateTime $createdAt = null;
 
     /**
+     * Estimated delivery date
      *
      * @var ?\DateTime $estimatedDelivery
      */
@@ -70,6 +76,7 @@ class ShippingTracking
     public ?array $events = null;
 
     /**
+     * Unique identifier for this tracking object
      *
      * @var ?string $id
      */
@@ -78,7 +85,7 @@ class ShippingTracking
     public ?string $id = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this tracking
      *
      * @var ?array<string, mixed> $raw
      */
@@ -88,6 +95,7 @@ class ShippingTracking
     public ?array $raw = null;
 
     /**
+     * Reference to the shipment
      *
      * @var ?string $shipmentId
      */
@@ -96,6 +104,7 @@ class ShippingTracking
     public ?string $shipmentId = null;
 
     /**
+     * Current status of the shipment
      *
      * @var ?\Unified\Unified_to\Models\Shared\ShippingTrackingStatus $status
      */
@@ -105,6 +114,7 @@ class ShippingTracking
     public ?ShippingTrackingStatus $status = null;
 
     /**
+     * Human-readable status
      *
      * @var ?string $statusDescription
      */
@@ -113,6 +123,7 @@ class ShippingTracking
     public ?string $statusDescription = null;
 
     /**
+     * Tracking number for the shipment
      *
      * @var ?string $trackingNumber
      */
@@ -121,6 +132,7 @@ class ShippingTracking
     public ?string $trackingNumber = null;
 
     /**
+     * The last date that this tracking object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

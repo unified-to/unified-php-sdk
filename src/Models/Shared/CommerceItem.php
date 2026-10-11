@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CommerceItem
 {
     /**
+     * Reference to Accounting Account (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -30,6 +31,7 @@ class CommerceItem
     public ?array $collections = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -46,6 +48,7 @@ class CommerceItem
     public ?string $description = null;
 
     /**
+     * minutes
      *
      * @var ?float $duration
      */
@@ -110,6 +113,7 @@ class CommerceItem
     public ?bool $isVisible = null;
 
     /**
+     * (reference to CommerceLocation)
      *
      * @var ?string $locationId
      */
@@ -208,6 +212,7 @@ class CommerceItem
     public ?array $tags = null;
 
     /**
+     * references AccountingTaxrate
      *
      * @var ?string $taxrateId
      */
@@ -224,6 +229,7 @@ class CommerceItem
     public ?float $totalStock = null;
 
     /**
+     * product, service, digital-download, ...
      *
      * @var ?string $type
      */
@@ -232,6 +238,7 @@ class CommerceItem
     public ?string $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

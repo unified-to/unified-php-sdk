@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Type of return */
 enum ReturnType: string
 {
     case Customer = 'CUSTOMER';

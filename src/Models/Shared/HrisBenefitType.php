@@ -27,4 +27,8 @@ enum HrisBenefitType: string
     case LoanRepayment = 'LOAN_REPAYMENT';
     case CharitableContribution = 'CHARITABLE_CONTRIBUTION';
     case Other = 'OTHER';
+    case RetirementRoth = 'RETIREMENT_ROTH';
+    case Commuter = 'COMMUTER';
+    case DependentCare = 'DEPENDENT_CARE';
+    case Pension = 'PENSION';
 }

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AdsOrganization
 {
     /**
+     * Integration-specific account number distinct from id (Microsoft AccountNumber)
      *
      * @var ?string $accountNumber
      */
@@ -20,6 +21,7 @@ class AdsOrganization
     public ?string $accountNumber = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -97,6 +99,7 @@ class AdsOrganization
     public ?string $timezone = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

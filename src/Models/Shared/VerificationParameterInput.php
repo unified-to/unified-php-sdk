@@ -30,6 +30,7 @@ class VerificationParameterInput
     public ?array $inputs = null;
 
     /**
+     * name of parameter
      *
      * @var ?string $name
      */

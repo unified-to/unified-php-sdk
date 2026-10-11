@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CdpEvent
 {
     /**
+     * The date that this event object was ingested (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class CdpEvent
     public ?\DateTime $createdAt = null;
 
     /**
+     * Unique identifier for this event object
      *
      * @var ?string $id
      */
@@ -48,6 +50,7 @@ class CdpEvent
     public ?array $metadata = null;
 
     /**
+     * The specific event name (eg. "Product Purchased")
      *
      * @var ?string $name
      */
@@ -56,6 +59,7 @@ class CdpEvent
     public ?string $name = null;
 
     /**
+     * When the event actually happened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $occurredAt
      */
@@ -64,6 +68,7 @@ class CdpEvent
     public ?\DateTime $occurredAt = null;
 
     /**
+     * The profile this event is associated with; points to CdpProfile
      *
      * @var ?string $profileId
      */
@@ -72,7 +77,7 @@ class CdpEvent
     public ?string $profileId = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this event
      *
      * @var ?array<string, mixed> $raw
      */
@@ -82,6 +87,7 @@ class CdpEvent
     public ?array $raw = null;
 
     /**
+     * The source that produced this event
      *
      * @var ?string $source
      */
@@ -90,6 +96,7 @@ class CdpEvent
     public ?string $source = null;
 
     /**
+     * The cdp_source this event originated from; points to CdpSource
      *
      * @var ?string $sourceId
      */
@@ -98,6 +105,7 @@ class CdpEvent
     public ?string $sourceId = null;
 
     /**
+     * The unified structural category of the event
      *
      * @var ?\Unified\Unified_to\Models\Shared\CdpEventType $type
      */

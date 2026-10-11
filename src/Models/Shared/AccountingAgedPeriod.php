@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingAgedPeriod
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -28,6 +29,7 @@ class AccountingAgedPeriod
     public ?string $name = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

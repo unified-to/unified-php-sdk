@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingTrackingEvent
 {
     /**
+     * Carrier's status code at this event
      *
      * @var ?string $carrierStatusCode
      */
@@ -20,6 +21,7 @@ class ShippingTrackingEvent
     public ?string $carrierStatusCode = null;
 
     /**
+     * The date that this tracking event object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -28,6 +30,7 @@ class ShippingTrackingEvent
     public ?\DateTime $createdAt = null;
 
     /**
+     * Description of the tracking event
      *
      * @var ?string $description
      */
@@ -36,6 +39,7 @@ class ShippingTrackingEvent
     public ?string $description = null;
 
     /**
+     * Carrier-specific event code
      *
      * @var ?string $eventCode
      */
@@ -53,6 +57,7 @@ class ShippingTrackingEvent
     public ?PropertyShippingTrackingEventLocationAddress $locationAddress = null;
 
     /**
+     * Location ID; points to CommerceLocation (reference to ShippingLocation)
      *
      * @var ?string $locationId
      */
@@ -61,6 +66,7 @@ class ShippingTrackingEvent
     public ?string $locationId = null;
 
     /**
+     * Location name
      *
      * @var ?string $locationName
      */
@@ -69,6 +75,7 @@ class ShippingTrackingEvent
     public ?string $locationName = null;
 
     /**
+     * Additional notes
      *
      * @var ?string $notes
      */
@@ -77,6 +84,7 @@ class ShippingTrackingEvent
     public ?string $notes = null;
 
     /**
+     * Who signed for delivery
      *
      * @var ?string $signedBy
      */
@@ -85,6 +93,7 @@ class ShippingTrackingEvent
     public ?string $signedBy = null;
 
     /**
+     * Status at the time of this event
      *
      * @var ?\Unified\Unified_to\Models\Shared\ShippingTrackingEventStatus $status
      */

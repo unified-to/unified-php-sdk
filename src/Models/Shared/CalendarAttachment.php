@@ -20,6 +20,7 @@ class CalendarAttachment
     public ?string $downloadUrl = null;
 
     /**
+     * ID for the storage_fileget endpoint
      *
      * @var ?string $id
      */

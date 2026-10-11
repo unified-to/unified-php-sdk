@@ -37,6 +37,7 @@ class HrisCompensation
     public ?HrisCompensationFrequency $frequency = null;
 
     /**
+     * (reference to HrisGroup)
      *
      * @var ?string $groupId
      */

@@ -11,10 +11,14 @@
 * [getUcComment](#getuccomment) - Retrieve a comment
 * [getUcContact](#getuccontact) - Retrieve a contact
 * [getUcRecording](#getucrecording) - Retrieve a recording
+* [getUcScorecard](#getucscorecard) - Retrieve a scorecard
+* [getUcScorecardtemplate](#getucscorecardtemplate) - Retrieve a scorecardtemplate
 * [listUcCalls](#listuccalls) - List all calls
 * [listUcComments](#listuccomments) - List all comments
 * [listUcContacts](#listuccontacts) - List all contacts
 * [listUcRecordings](#listucrecordings) - List all recordings
+* [listUcScorecards](#listucscorecards) - List all scorecards
+* [listUcScorecardtemplates](#listucscorecardtemplates) - List all scorecardtemplates
 * [patchUcComment](#patchuccomment) - Update a comment
 * [patchUcContact](#patchuccontact) - Update a contact
 * [patchUcRecording](#patchucrecording) - Update a recording
@@ -51,8 +55,8 @@ $request = new Operations\CreateUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: 'd421c4ff-cae4-4a9f-82dc-4b463f68c6e2',
-        updatedAt: '2024-02-02T11:40:40.170Z',
+        id: 'fc6270af-bd1b-498b-84a1-417a917e6b23',
+        updatedAt: '2024-02-07T08:38:42.961Z',
     ),
     connectionId: '<id>',
 );
@@ -116,7 +120,7 @@ $request = new Operations\CreateUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: 'a07b6979-089e-4649-be28-728229ad5c33',
+        id: '31fb04bf-aa72-4a3f-8368-1a735f9cbb23',
         lastName: 'Rogahn',
         name: 'Luther Rogahn',
         telephones: [
@@ -134,7 +138,7 @@ $request = new Operations\CreateUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-11-20T14:03:27.338Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-02T11:46:56.959Z'),
     ),
     connectionId: '<id>',
 );
@@ -190,34 +194,35 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateUcRecordingRequest(
     ucRecording: new Shared\UcRecording(
         contacts: [],
+        conversationIdentifier: '2e7a6215-9283-4485-97f2-7432efab202c',
         createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
-        endAt: Utils\Utils::parseDateTime('2024-04-22T23:09:58.257Z'),
-        expiresAt: Utils\Utils::parseDateTime('2026-03-31T03:31:56.772Z'),
-        id: '8b9b82d0-2e7d-4849-acf6-98a4606897db',
+        endAt: Utils\Utils::parseDateTime('2024-05-01T00:22:00.036Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-04-17T23:01:40.794Z'),
+        id: '2e7a6215-9283-4485-97f2-7432efab202c',
         media: [
             new Shared\UcRecordingMedia(
-                endAt: Utils\Utils::parseDateTime('2024-03-21T10:55:57.895Z'),
+                endAt: Utils\Utils::parseDateTime('2024-03-29T01:21:45.031Z'),
                 language: 'en',
                 recordingDownloadUrl: 'https://parched-wasabi.com/',
-                startAt: Utils\Utils::parseDateTime('2026-04-18T10:32:22.668Z'),
+                startAt: Utils\Utils::parseDateTime('2026-05-06T12:05:43.683Z'),
                 transcriptDownloadUrl: 'https://colossal-cuckoo.name',
                 transcripts: [
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2026-01-30T03:04:30.679Z'),
-                        startAt: Utils\Utils::parseDateTime('2024-05-20T15:35:59.030Z'),
+                        endAt: Utils\Utils::parseDateTime('2026-02-16T02:41:09.438Z'),
+                        startAt: Utils\Utils::parseDateTime('2024-05-29T01:58:20.637Z'),
                         text: 'Turpis maiores ducimus tero speculum.',
                     ),
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2024-09-27T06:32:59.084Z'),
-                        startAt: Utils\Utils::parseDateTime('2026-07-05T06:34:34.659Z'),
+                        endAt: Utils\Utils::parseDateTime('2024-10-07T11:52:03.109Z'),
+                        startAt: Utils\Utils::parseDateTime('2026-07-24T09:55:10.013Z'),
                         text: 'Magnam consuasor uxor tergiversatio subseco.',
                     ),
                 ],
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-04-23T06:23:46.157Z'),
+        startAt: Utils\Utils::parseDateTime('2023-04-26T06:26:15.747Z'),
         type: Shared\UcRecordingType::Outbound,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-26T01:19:09.006Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-10T08:55:24.859Z'),
         userName: 'Melyna Larson',
         userPhone: '1-915-327-0429 x509',
         webUrl: 'https://spherical-comparison.org',
@@ -454,6 +459,108 @@ if ($response->ucRecording !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getUcScorecard
+
+Retrieve a scorecard
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getUcScorecard" method="get" path="/uc/{connection_id}/scorecard/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetUcScorecardRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->uc->getUcScorecard(
+    request: $request
+);
+
+if ($response->ucScorecard !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetUcScorecardRequest](../../Models/Operations/GetUcScorecardRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetUcScorecardResponse](../../Models/Operations/GetUcScorecardResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getUcScorecardtemplate
+
+Retrieve a scorecardtemplate
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getUcScorecardtemplate" method="get" path="/uc/{connection_id}/scorecardtemplate/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetUcScorecardtemplateRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->uc->getUcScorecardtemplate(
+    request: $request
+);
+
+if ($response->ucScorecardtemplate !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetUcScorecardtemplateRequest](../../Models/Operations/GetUcScorecardtemplateRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\GetUcScorecardtemplateResponse](../../Models/Operations/GetUcScorecardtemplateResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listUcCalls
 
 List all calls
@@ -654,6 +761,106 @@ if ($response->ucRecordings !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listUcScorecards
+
+List all scorecards
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUcScorecards" method="get" path="/uc/{connection_id}/scorecard" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListUcScorecardsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->uc->listUcScorecards(
+    request: $request
+);
+
+if ($response->ucScorecards !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListUcScorecardsRequest](../../Models/Operations/ListUcScorecardsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\ListUcScorecardsResponse](../../Models/Operations/ListUcScorecardsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listUcScorecardtemplates
+
+List all scorecardtemplates
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUcScorecardtemplates" method="get" path="/uc/{connection_id}/scorecardtemplate" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListUcScorecardtemplatesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->uc->listUcScorecardtemplates(
+    request: $request
+);
+
+if ($response->ucScorecardtemplates !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListUcScorecardtemplatesRequest](../../Models/Operations/ListUcScorecardtemplatesRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\ListUcScorecardtemplatesResponse](../../Models/Operations/ListUcScorecardtemplatesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchUcComment
 
 Update a comment
@@ -680,8 +887,8 @@ $request = new Operations\PatchUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: 'a5ef67a9-9f23-4951-b5e0-dcbf92747aa9',
-        updatedAt: '2024-02-02T11:40:40.172Z',
+        id: '73d793f2-5f14-4302-8493-7d95a2346b41',
+        updatedAt: '2024-02-07T08:38:42.962Z',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -746,7 +953,7 @@ $request = new Operations\PatchUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: 'c2fb5726-94f5-4b43-94a5-49c7d7dd7be8',
+        id: '00486aef-8875-463a-8659-4aefd5642aa0',
         lastName: 'Rogahn',
         name: 'Luther Rogahn',
         telephones: [
@@ -764,7 +971,7 @@ $request = new Operations\PatchUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-11-20T14:03:27.344Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-02T11:46:56.965Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -821,34 +1028,35 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUcRecordingRequest(
     ucRecording: new Shared\UcRecording(
         contacts: [],
+        conversationIdentifier: '5bba1e37-d623-4332-bed9-2a60befe0081',
         createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
-        endAt: Utils\Utils::parseDateTime('2024-04-22T23:09:58.269Z'),
-        expiresAt: Utils\Utils::parseDateTime('2026-03-31T03:31:56.797Z'),
-        id: '76e6eeb7-e7fc-4942-a26e-c387b757090d',
+        endAt: Utils\Utils::parseDateTime('2024-05-01T00:22:00.045Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-04-17T23:01:40.814Z'),
+        id: '5bba1e37-d623-4332-bed9-2a60befe0081',
         media: [
             new Shared\UcRecordingMedia(
-                endAt: Utils\Utils::parseDateTime('2024-03-21T10:55:57.906Z'),
+                endAt: Utils\Utils::parseDateTime('2024-03-29T01:21:45.040Z'),
                 language: 'en',
                 recordingDownloadUrl: 'https://parched-wasabi.com/',
-                startAt: Utils\Utils::parseDateTime('2026-04-18T10:32:22.694Z'),
+                startAt: Utils\Utils::parseDateTime('2026-05-06T12:05:43.704Z'),
                 transcriptDownloadUrl: 'https://colossal-cuckoo.name',
                 transcripts: [
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2026-01-30T03:04:30.702Z'),
-                        startAt: Utils\Utils::parseDateTime('2024-05-20T15:35:59.042Z'),
+                        endAt: Utils\Utils::parseDateTime('2026-02-16T02:41:09.457Z'),
+                        startAt: Utils\Utils::parseDateTime('2024-05-29T01:58:20.646Z'),
                         text: 'Turpis maiores ducimus tero speculum.',
                     ),
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2024-09-27T06:32:59.098Z'),
-                        startAt: Utils\Utils::parseDateTime('2026-07-05T06:34:34.685Z'),
+                        endAt: Utils\Utils::parseDateTime('2024-10-07T11:52:03.120Z'),
+                        startAt: Utils\Utils::parseDateTime('2026-07-24T09:55:10.033Z'),
                         text: 'Magnam consuasor uxor tergiversatio subseco.',
                     ),
                 ],
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-04-23T06:23:46.161Z'),
+        startAt: Utils\Utils::parseDateTime('2023-04-26T06:26:15.750Z'),
         type: Shared\UcRecordingType::Outbound,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-26T01:19:09.024Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-10T08:55:24.873Z'),
         userName: 'Melyna Larson',
         userPhone: '1-915-327-0429 x509',
         webUrl: 'https://spherical-comparison.org',
@@ -1061,8 +1269,8 @@ $request = new Operations\UpdateUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: 'a5ef67a9-9f23-4951-b5e0-dcbf92747aa9',
-        updatedAt: '2024-02-02T11:40:40.172Z',
+        id: '73d793f2-5f14-4302-8493-7d95a2346b41',
+        updatedAt: '2024-02-07T08:38:42.962Z',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1127,7 +1335,7 @@ $request = new Operations\UpdateUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: 'c2fb5726-94f5-4b43-94a5-49c7d7dd7be8',
+        id: '00486aef-8875-463a-8659-4aefd5642aa0',
         lastName: 'Rogahn',
         name: 'Luther Rogahn',
         telephones: [
@@ -1145,7 +1353,7 @@ $request = new Operations\UpdateUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-11-20T14:03:27.344Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-02T11:46:56.965Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1202,34 +1410,35 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUcRecordingRequest(
     ucRecording: new Shared\UcRecording(
         contacts: [],
+        conversationIdentifier: '5bba1e37-d623-4332-bed9-2a60befe0081',
         createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
-        endAt: Utils\Utils::parseDateTime('2024-04-22T23:09:58.269Z'),
-        expiresAt: Utils\Utils::parseDateTime('2026-03-31T03:31:56.797Z'),
-        id: '76e6eeb7-e7fc-4942-a26e-c387b757090d',
+        endAt: Utils\Utils::parseDateTime('2024-05-01T00:22:00.045Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-04-17T23:01:40.814Z'),
+        id: '5bba1e37-d623-4332-bed9-2a60befe0081',
         media: [
             new Shared\UcRecordingMedia(
-                endAt: Utils\Utils::parseDateTime('2024-03-21T10:55:57.906Z'),
+                endAt: Utils\Utils::parseDateTime('2024-03-29T01:21:45.040Z'),
                 language: 'en',
                 recordingDownloadUrl: 'https://parched-wasabi.com/',
-                startAt: Utils\Utils::parseDateTime('2026-04-18T10:32:22.694Z'),
+                startAt: Utils\Utils::parseDateTime('2026-05-06T12:05:43.704Z'),
                 transcriptDownloadUrl: 'https://colossal-cuckoo.name',
                 transcripts: [
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2026-01-30T03:04:30.702Z'),
-                        startAt: Utils\Utils::parseDateTime('2024-05-20T15:35:59.042Z'),
+                        endAt: Utils\Utils::parseDateTime('2026-02-16T02:41:09.457Z'),
+                        startAt: Utils\Utils::parseDateTime('2024-05-29T01:58:20.646Z'),
                         text: 'Turpis maiores ducimus tero speculum.',
                     ),
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2024-09-27T06:32:59.098Z'),
-                        startAt: Utils\Utils::parseDateTime('2026-07-05T06:34:34.685Z'),
+                        endAt: Utils\Utils::parseDateTime('2024-10-07T11:52:03.120Z'),
+                        startAt: Utils\Utils::parseDateTime('2026-07-24T09:55:10.033Z'),
                         text: 'Magnam consuasor uxor tergiversatio subseco.',
                     ),
                 ],
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-04-23T06:23:46.161Z'),
+        startAt: Utils\Utils::parseDateTime('2023-04-26T06:26:15.750Z'),
         type: Shared\UcRecordingType::Outbound,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-26T01:19:09.024Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-10T08:55:24.873Z'),
         userName: 'Melyna Larson',
         userPhone: '1-915-327-0429 x509',
         webUrl: 'https://spherical-comparison.org',

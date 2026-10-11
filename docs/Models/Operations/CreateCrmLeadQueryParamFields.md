@@ -22,6 +22,7 @@
 | `Telephones`    | telephones      |
 | `Source`        | source          |
 | `Status`        | status          |
+| `Title`         | title           |
 | `LinkUrls`      | link_urls       |
 | `Metadata`      | metadata        |
 | `Raw`           | raw             |

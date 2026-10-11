@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AtsOffer
 {
     /**
+     * date the offer was accepted (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $acceptedAt
      */
@@ -30,6 +31,7 @@ class AtsOffer
     public ?array $compensation = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -38,6 +40,7 @@ class AtsOffer
     public ?\DateTime $createdAt = null;
 
     /**
+     * user id of the recruiter who created the offer (reference to HrisEmployee)
      *
      * @var ?string $creatorUserId
      */
@@ -46,6 +49,7 @@ class AtsOffer
     public ?string $creatorUserId = null;
 
     /**
+     * newly hired employee id (reference to HrisEmployee)
      *
      * @var ?string $employeeUserId
      */
@@ -62,6 +66,7 @@ class AtsOffer
     public ?string $id = null;
 
     /**
+     * date the offer was rejected (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $rejectedAt
      */
@@ -70,6 +75,7 @@ class AtsOffer
     public ?\DateTime $rejectedAt = null;
 
     /**
+     * date the offer was sent (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $sentAt
      */
@@ -78,6 +84,7 @@ class AtsOffer
     public ?\DateTime $sentAt = null;
 
     /**
+     * date the employee starts (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -95,6 +102,7 @@ class AtsOffer
     public ?AtsOfferStatus $status = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

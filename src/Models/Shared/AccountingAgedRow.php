@@ -29,6 +29,7 @@ class AccountingAgedRow
     public ?PropertyAccountingAgedRowContact $contact = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -37,6 +38,7 @@ class AccountingAgedRow
     public ?\DateTime $dueAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */

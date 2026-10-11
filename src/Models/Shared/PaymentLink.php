@@ -20,6 +20,7 @@ class PaymentLink
     public ?float $amount = null;
 
     /**
+     * ID of the AccountingContact (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -28,6 +29,7 @@ class PaymentLink
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -86,6 +88,7 @@ class PaymentLink
     public ?array $lineitems = null;
 
     /**
+     * (reference to PaymentPayment)
      *
      * @var ?string $paymentId
      */
@@ -112,6 +115,7 @@ class PaymentLink
     public ?string $successUrl = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -120,6 +124,7 @@ class PaymentLink
     public ?\DateTime $updatedAt = null;
 
     /**
+     * the payment link
      *
      * @var ?string $url
      */

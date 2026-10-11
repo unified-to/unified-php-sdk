@@ -22,6 +22,7 @@ class MarketingList
     public ?PropertyMarketingListAddress $address = null;
 
     /**
+     * Date that this list was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -38,6 +39,7 @@ class MarketingList
     public ?string $description = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -46,6 +48,7 @@ class MarketingList
     public ?\DateTime $endAt = null;
 
     /**
+     * Identifier for this list
      *
      * @var ?string $id
      */
@@ -70,6 +73,7 @@ class MarketingList
     public ?string $language = null;
 
     /**
+     * The list's name
      *
      * @var ?string $name
      */
@@ -78,7 +82,7 @@ class MarketingList
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this list
      *
      * @var ?array<string, mixed> $raw
      */
@@ -120,6 +124,7 @@ class MarketingList
     public ?string $senderPhone = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -136,6 +141,7 @@ class MarketingList
     public ?string $subject = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -144,6 +150,7 @@ class MarketingList
     public ?\DateTime $updatedAt = null;
 
     /**
+     * The user who created this list (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

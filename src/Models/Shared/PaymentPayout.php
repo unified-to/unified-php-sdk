@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PaymentPayout
 {
     /**
+     * ref -> AccountingAccount; the destination account (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -20,6 +21,7 @@ class PaymentPayout
     public ?string $accountId = null;
 
     /**
+     * Date the funds land in the destination account (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $arrivalAt
      */
@@ -28,6 +30,7 @@ class PaymentPayout
     public ?\DateTime $arrivalAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $createdAt
      */
@@ -44,6 +47,7 @@ class PaymentPayout
     public ?string $currency = null;
 
     /**
+     * Processor fee deducted from the payout
      *
      * @var ?float $feeAmount
      */
@@ -70,6 +74,7 @@ class PaymentPayout
     public ?array $lineitems = null;
 
     /**
+     * total_amount minus fee_amount
      *
      * @var ?float $netAmount
      */
@@ -113,6 +118,7 @@ class PaymentPayout
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedAt
      */

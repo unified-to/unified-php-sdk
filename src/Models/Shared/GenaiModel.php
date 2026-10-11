@@ -20,12 +20,31 @@ class GenaiModel
     public ?string $description = null;
 
     /**
+     * Whether the model is a decision model (such as TypeSafe Jev or Cloudflare Clef) that answers the typed questions of a prompt with answers instead of generating text responses.
+     *
+     * @var ?bool $hasQuestions
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_questions')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasQuestions = null;
+
+    /**
+     * Controls randomness of responses. A lower temperature leads to more predictable outputs while a higher temperature results in more varies and sometimes more creative outputs. 0-1
      *
      * @var ?bool $hasTemperature
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('has_temperature')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?bool $hasTemperature = null;
+
+    /**
+     * Whether the model accepts images as input (see the images on each prompt message).
+     *
+     * @var ?bool $hasVision
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_vision')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasVision = null;
 
     /**
      *
@@ -36,6 +55,7 @@ class GenaiModel
     public ?string $id = null;
 
     /**
+     * The maximum number of tokens that the model can process in a single response. This limits ensures computational efficiency and resource management.
      *
      * @var ?float $maxTokens
      */
@@ -71,7 +91,9 @@ class GenaiModel
 
     /**
      * @param  ?string  $description
+     * @param  ?bool  $hasQuestions
      * @param  ?bool  $hasTemperature
+     * @param  ?bool  $hasVision
      * @param  ?string  $id
      * @param  ?float  $maxTokens
      * @param  ?string  $name
@@ -79,10 +101,12 @@ class GenaiModel
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?string $description = null, ?bool $hasTemperature = null, ?string $id = null, ?float $maxTokens = null, ?string $name = null, ?array $raw = null, ?string $webUrl = null)
+    public function __construct(?string $description = null, ?bool $hasQuestions = null, ?bool $hasTemperature = null, ?bool $hasVision = null, ?string $id = null, ?float $maxTokens = null, ?string $name = null, ?array $raw = null, ?string $webUrl = null)
     {
         $this->description = $description;
+        $this->hasQuestions = $hasQuestions;
         $this->hasTemperature = $hasTemperature;
+        $this->hasVision = $hasVision;
         $this->id = $id;
         $this->maxTokens = $maxTokens;
         $this->name = $name;

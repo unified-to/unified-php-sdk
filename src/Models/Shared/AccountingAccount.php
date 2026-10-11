@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingAccount
 {
     /**
+     * Balance of the account.
      *
      * @var ?float $balance
      */
@@ -21,6 +22,7 @@ class AccountingAccount
     public ?float $balance = null;
 
     /**
+     * Date and time when the Account was created, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -29,6 +31,7 @@ class AccountingAccount
     public ?\DateTime $createdAt = null;
 
     /**
+     * Account’s currency, in ISO 4217 format (e.g. U.S. dollars is USD)
      *
      * @var ?string $currency
      */
@@ -37,6 +40,7 @@ class AccountingAccount
     public ?string $currency = null;
 
     /**
+     * Identifier for tracking and categorizing accounts for reporting or analysis purposes that is defined by the end-customer
      *
      * @var ?string $customerDefinedCode
      */
@@ -45,6 +49,7 @@ class AccountingAccount
     public ?string $customerDefinedCode = null;
 
     /**
+     * Account description
      *
      * @var ?string $description
      */
@@ -53,6 +58,7 @@ class AccountingAccount
     public ?string $description = null;
 
     /**
+     * Identifier used by the SaaS application to uniquely identify the Account
      *
      * @var ?string $id
      */
@@ -61,6 +67,7 @@ class AccountingAccount
     public ?string $id = null;
 
     /**
+     * True if the account is an “accounts payable” account
      *
      * @var ?bool $isPayable
      */
@@ -69,6 +76,7 @@ class AccountingAccount
     public ?bool $isPayable = null;
 
     /**
+     * Account name
      *
      * @var ?string $name
      */
@@ -85,6 +93,7 @@ class AccountingAccount
     public ?string $organizationId = null;
 
     /**
+     * The parent account ID for this account
      *
      * @var ?string $parentId
      */
@@ -93,7 +102,7 @@ class AccountingAccount
     public ?string $parentId = null;
 
     /**
-     * $raw
+     * The original data from the integration's API
      *
      * @var ?array<string, mixed> $raw
      */
@@ -103,6 +112,7 @@ class AccountingAccount
     public ?array $raw = null;
 
     /**
+     * Account status, such as ACTIVE or ARCHIVED
      *
      * @var ?\Unified\Unified_to\Models\Shared\Status $status
      */
@@ -122,6 +132,7 @@ class AccountingAccount
     public ?array $taxonomy = null;
 
     /**
+     * Account type, such as BANK. EQUITY, ASSET, ...
      *
      * @var ?\Unified\Unified_to\Models\Shared\Type $type
      */
@@ -131,6 +142,7 @@ class AccountingAccount
     public ?Type $type = null;
 
     /**
+     * Date and time when the Account was last updated, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

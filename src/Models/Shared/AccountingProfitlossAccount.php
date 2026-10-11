@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingProfitlossAccount
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */

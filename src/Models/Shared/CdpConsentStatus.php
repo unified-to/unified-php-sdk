@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The consent status for this purpose */
 enum CdpConsentStatus: string
 {
     case Granted = 'GRANTED';

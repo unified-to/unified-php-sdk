@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class GenaiTask
 {
     /**
+     * id of the genai_agent (the reusable agent/preset configuration) that runs this task.
      *
      * @var ?string $agentId
      */
@@ -20,6 +21,7 @@ class GenaiTask
     public ?string $agentId = null;
 
     /**
+     * When the coding agent stopped working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $completedAt
      */
@@ -28,6 +30,7 @@ class GenaiTask
     public ?\DateTime $completedAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -36,6 +39,7 @@ class GenaiTask
     public ?\DateTime $createdAt = null;
 
     /**
+     * The failure description (when the status is FAILED).
      *
      * @var ?string $error
      */
@@ -60,6 +64,7 @@ class GenaiTask
     public ?string $id = null;
 
     /**
+     * The natural-language instructions given to the coding agent.
      *
      * @var ?string $instructions
      */
@@ -102,6 +107,7 @@ class GenaiTask
     public ?string $modelId = null;
 
     /**
+     * A short human-readable title for the coding agent task.
      *
      * @var ?string $name
      */
@@ -110,6 +116,7 @@ class GenaiTask
     public ?string $name = null;
 
     /**
+     * id of the genai_organization (the organization or execution environment) that this task runs under.
      *
      * @var ?string $organizationId
      */
@@ -118,6 +125,7 @@ class GenaiTask
     public ?string $organizationId = null;
 
     /**
+     * The pull/merge request that the coding agent opened for its work.
      *
      * @var ?string $pullrequestUrl
      */
@@ -136,6 +144,7 @@ class GenaiTask
     public ?array $raw = null;
 
     /**
+     * The git repository that the coding agent works in.
      *
      * @var ?string $repoUrl
      */
@@ -144,6 +153,7 @@ class GenaiTask
     public ?string $repoUrl = null;
 
     /**
+     * The name of the branch that the coding agent starts its work from.
      *
      * @var ?string $sourceBranchIdentifier
      */
@@ -152,6 +162,7 @@ class GenaiTask
     public ?string $sourceBranchIdentifier = null;
 
     /**
+     * When the coding agent started working on the task. (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startedAt
      */
@@ -169,6 +180,7 @@ class GenaiTask
     public ?GenaiTaskStatus $status = null;
 
     /**
+     * The coding agent's summary of the work that it performed.
      *
      * @var ?string $summary
      */
@@ -177,6 +189,7 @@ class GenaiTask
     public ?string $summary = null;
 
     /**
+     * The name of the branch that the coding agent pushed its work to.
      *
      * @var ?string $targetBranchIdentifier
      */
@@ -193,6 +206,7 @@ class GenaiTask
     public ?float $tokensUsed = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -201,6 +215,7 @@ class GenaiTask
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -209,6 +224,7 @@ class GenaiTask
     public ?string $userId = null;
 
     /**
+     * The provider's own web page for this task.
      *
      * @var ?string $webUrl
      */

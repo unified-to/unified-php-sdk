@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class VerificationPackage
 {
     /**
+     * Name of the verification type
      *
      * @var string $name
      */
@@ -47,6 +48,7 @@ class VerificationPackage
     public ?array $averageProcessingTimes = null;
 
     /**
+     * Cost-related information
      *
      * @var ?float $costAmount
      */
@@ -55,6 +57,7 @@ class VerificationPackage
     public ?float $costAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -71,6 +74,7 @@ class VerificationPackage
     public ?string $currency = null;
 
     /**
+     * Detailed description
      *
      * @var ?string $description
      */
@@ -87,6 +91,7 @@ class VerificationPackage
     public ?bool $hasRedirectUrl = null;
 
     /**
+     * where the provider will redirect the user to after the verification
      *
      * @var ?bool $hasTargetUrl
      */
@@ -95,6 +100,7 @@ class VerificationPackage
     public ?bool $hasTargetUrl = null;
 
     /**
+     * Unique identifier for the verification type
      *
      * @var ?string $id
      */
@@ -103,6 +109,7 @@ class VerificationPackage
     public ?string $id = null;
 
     /**
+     * where to find additional information
      *
      * @var ?string $infoUrl
      */
@@ -111,6 +118,7 @@ class VerificationPackage
     public ?string $infoUrl = null;
 
     /**
+     * if this verification returns a score, what is the maximum?
      *
      * @var ?float $maxScore
      */
@@ -157,6 +165,7 @@ class VerificationPackage
     public ?array $tags = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

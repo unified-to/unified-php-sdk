@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The type of API Call being logged */
 enum ApiCallType: string
 {
     case Login = 'login';

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Entity type within a consolidation hierarchy */
 enum AccountingOrganizationType: string
 {
     case Company = 'COMPANY';

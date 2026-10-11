@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** the kind of taxonomy item: skill, knowledge, competence, ability, certification or role/occupation */
 enum HrisTaxonomyType: string
 {
     case Skill = 'SKILL';

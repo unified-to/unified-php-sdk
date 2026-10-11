@@ -23,6 +23,7 @@ class EnrichCompany
     public ?PropertyEnrichCompanyAddress $address = null;
 
     /**
+     * The Alexa rank of the company
      *
      * @var ?float $alexaRank
      */
@@ -31,6 +32,7 @@ class EnrichCompany
     public ?float $alexaRank = null;
 
     /**
+     * The date that this company object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -39,6 +41,7 @@ class EnrichCompany
     public ?\DateTime $createdAt = null;
 
     /**
+     * The Crunchbase URL of the company
      *
      * @var ?string $crunchbaseUrl
      */
@@ -47,6 +50,7 @@ class EnrichCompany
     public ?string $crunchbaseUrl = null;
 
     /**
+     * The description of the company
      *
      * @var ?string $description
      */
@@ -55,6 +59,7 @@ class EnrichCompany
     public ?string $description = null;
 
     /**
+     * The webmail domain of the company
      *
      * @var ?string $domain
      */
@@ -63,6 +68,7 @@ class EnrichCompany
     public ?string $domain = null;
 
     /**
+     * The number of employees at the company
      *
      * @var ?string $employees
      */
@@ -71,6 +77,7 @@ class EnrichCompany
     public ?string $employees = null;
 
     /**
+     * The public exchange of the company (eg. NASDAQ)
      *
      * @var ?string $exchange
      */
@@ -79,6 +86,7 @@ class EnrichCompany
     public ?string $exchange = null;
 
     /**
+     * The Facebook URL of the company
      *
      * @var ?string $facebookUrl
      */
@@ -87,6 +95,7 @@ class EnrichCompany
     public ?string $facebookUrl = null;
 
     /**
+     * Unique identifier for this company object
      *
      * @var ?string $id
      */
@@ -95,6 +104,7 @@ class EnrichCompany
     public ?string $id = null;
 
     /**
+     * The industry of the company
      *
      * @var ?string $industry
      */
@@ -103,6 +113,7 @@ class EnrichCompany
     public ?string $industry = null;
 
     /**
+     * The Crunchbase URL of the company
      *
      * @var ?string $instagramUrl
      */
@@ -111,6 +122,7 @@ class EnrichCompany
     public ?string $instagramUrl = null;
 
     /**
+     * The LinkedIn URL of the company
      *
      * @var ?string $linkedinUrl
      */
@@ -119,6 +131,7 @@ class EnrichCompany
     public ?string $linkedinUrl = null;
 
     /**
+     * The URL of the logo of the company
      *
      * @var ?string $logoUrl
      */
@@ -127,6 +140,7 @@ class EnrichCompany
     public ?string $logoUrl = null;
 
     /**
+     * The NAICS code of the company
      *
      * @var ?float $naicsCode
      */
@@ -135,6 +149,7 @@ class EnrichCompany
     public ?float $naicsCode = null;
 
     /**
+     * The name of the company
      *
      * @var ?string $name
      */
@@ -143,7 +158,7 @@ class EnrichCompany
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this company
      *
      * @var ?array<string, mixed> $raw
      */
@@ -153,6 +168,7 @@ class EnrichCompany
     public ?array $raw = null;
 
     /**
+     * The approximate revenue of the company
      *
      * @var ?string $revenue
      */
@@ -161,6 +177,7 @@ class EnrichCompany
     public ?string $revenue = null;
 
     /**
+     * The SIC code of the company
      *
      * @var ?float $sicCode
      */
@@ -169,6 +186,7 @@ class EnrichCompany
     public ?float $sicCode = null;
 
     /**
+     * The stock ticker of the company (eg. AMZN)
      *
      * @var ?string $stock
      */
@@ -187,6 +205,7 @@ class EnrichCompany
     public ?array $telephones = null;
 
     /**
+     * The twitter handle of the company
      *
      * @var ?string $twitterHandle
      */
@@ -195,6 +214,7 @@ class EnrichCompany
     public ?string $twitterHandle = null;
 
     /**
+     * The twitter URL of the company
      *
      * @var ?string $twitterUrl
      */
@@ -203,6 +223,7 @@ class EnrichCompany
     public ?string $twitterUrl = null;
 
     /**
+     * The last date that this company object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -211,6 +232,7 @@ class EnrichCompany
     public ?\DateTime $updatedAt = null;
 
     /**
+     * The year that the company was founded
      *
      * @var ?float $yearFounded
      */
@@ -219,6 +241,7 @@ class EnrichCompany
     public ?float $yearFounded = null;
 
     /**
+     * The Yelp URL of the company
      *
      * @var ?string $yelpUrl
      */
@@ -227,6 +250,7 @@ class EnrichCompany
     public ?string $yelpUrl = null;
 
     /**
+     * The Youtube URL of the company
      *
      * @var ?string $youtubeUrl
      */

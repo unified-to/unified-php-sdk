@@ -48,6 +48,7 @@ class AtsActivity
     public ?array $cc = null;
 
     /**
+     * (reference to AtsCompany)
      *
      * @var ?string $companyId
      */
@@ -56,6 +57,7 @@ class AtsActivity
     public ?string $companyId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -178,6 +180,7 @@ class AtsActivity
     public ?AtsActivityType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

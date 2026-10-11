@@ -36,6 +36,7 @@ class PropertyShippingTrackingEventLocationAddress
     public ?string $city = null;
 
     /**
+     * Company name (for commercial addresses)
      *
      * @var ?string $companyName
      */
@@ -52,6 +53,7 @@ class PropertyShippingTrackingEventLocationAddress
     public ?string $country = null;
 
     /**
+     * ISO 2-digit country code
      *
      * @var ?string $countryCode
      */
@@ -60,6 +62,7 @@ class PropertyShippingTrackingEventLocationAddress
     public ?string $countryCode = null;
 
     /**
+     * Special delivery notes
      *
      * @var ?string $deliveryInstructions
      */
@@ -68,6 +71,7 @@ class PropertyShippingTrackingEventLocationAddress
     public ?string $deliveryInstructions = null;
 
     /**
+     * Email address (for delivery notifications)
      *
      * @var ?string $email
      */
@@ -76,6 +80,7 @@ class PropertyShippingTrackingEventLocationAddress
     public ?string $email = null;
 
     /**
+     * Alias for address_type === 'RESIDENTIAL'
      *
      * @var ?bool $isResidential
      */
@@ -84,6 +89,7 @@ class PropertyShippingTrackingEventLocationAddress
     public ?bool $isResidential = null;
 
     /**
+     * Whether address has been validated
      *
      * @var ?bool $isValidated
      */
@@ -92,6 +98,7 @@ class PropertyShippingTrackingEventLocationAddress
     public ?bool $isValidated = null;
 
     /**
+     * Recipientsender name
      *
      * @var ?string $name
      */
@@ -124,6 +131,7 @@ class PropertyShippingTrackingEventLocationAddress
     public ?string $regionCode = null;
 
     /**
+     * Phone number (required by FedEx, UPS, DHL)
      *
      * @var ?string $telephone
      */

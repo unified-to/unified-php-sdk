@@ -22,6 +22,7 @@ class AtsJobPosting
     public ?PropertyAtsJobPostingAddress $address = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -30,6 +31,7 @@ class AtsJobPosting
     public ?\DateTime $createdAt = null;
 
     /**
+     * job-post-specific description
      *
      * @var ?string $description
      */
@@ -54,6 +56,7 @@ class AtsJobPosting
     public ?bool $isActive = null;
 
     /**
+     * job-post-specific location
      *
      * @var ?string $location
      */
@@ -62,6 +65,7 @@ class AtsJobPosting
     public ?string $location = null;
 
     /**
+     * job-post-specific name
      *
      * @var ?string $name
      */
@@ -78,6 +82,7 @@ class AtsJobPosting
     public ?string $postingUrl = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

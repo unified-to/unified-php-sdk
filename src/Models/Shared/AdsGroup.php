@@ -30,6 +30,7 @@ class AdsGroup
     public ?PropertyAdsGroupBidStrategy $bidStrategy = null;
 
     /**
+     * Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through)
      *
      * @var ?\Unified\Unified_to\Models\Shared\BillingEvent $billingEvent
      */
@@ -90,6 +91,7 @@ class AdsGroup
     public ?string $campaignId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -108,6 +110,7 @@ class AdsGroup
     public ?array $creativeIds = null;
 
     /**
+     * Creative rotation strategy (LinkedIn creativeSelection)
      *
      * @var ?\Unified\Unified_to\Models\Shared\CreativeSelection $creativeSelection
      */
@@ -134,6 +137,7 @@ class AdsGroup
     public ?AdsGroupEffectiveStatus $effectiveStatus = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -175,6 +179,7 @@ class AdsGroup
     public ?string $insertionorderId = null;
 
     /**
+     * Language + region, ISO 639-1 with region (e.g. en-US); LinkedIn locale
      *
      * @var ?string $languageLocale
      */
@@ -191,6 +196,7 @@ class AdsGroup
     public ?string $name = null;
 
     /**
+     * Optimization goals for ads_group (cross-platform; platform-specific values allowed as pass-through)
      *
      * @var ?\Unified\Unified_to\Models\Shared\OptimizationGoal $optimizationGoal
      */
@@ -245,6 +251,7 @@ class AdsGroup
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -280,6 +287,7 @@ class AdsGroup
     public ?AdsGroupType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

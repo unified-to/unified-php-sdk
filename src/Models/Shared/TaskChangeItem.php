@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class TaskChangeItem
 {
     /**
+     * unified field in ITaskTask
      *
      * @var string $field
      */

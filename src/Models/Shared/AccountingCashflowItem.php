@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingCashflowItem
 {
     /**
+     * If attributable to a specific GL account (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -20,6 +21,7 @@ class AccountingCashflowItem
     public ?string $accountId = null;
 
     /**
+     * Positive = inflow, Negative = outflow
      *
      * @var ?float $amount
      */
@@ -28,6 +30,7 @@ class AccountingCashflowItem
     public ?float $amount = null;
 
     /**
+     * e.g. "Net Income", "Depreciation", "Equipment"
      *
      * @var ?string $name
      */

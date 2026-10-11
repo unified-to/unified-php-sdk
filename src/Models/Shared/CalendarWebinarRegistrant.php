@@ -28,6 +28,7 @@ class CalendarWebinarRegistrant
     public ?string $name = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $registeredAt
      */

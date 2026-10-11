@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisPayslip
 {
     /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -20,6 +21,7 @@ class HrisPayslip
     public ?string $companyId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -46,6 +48,15 @@ class HrisPayslip
     public ?PropertyHrisPayslipDeduction $deduction = null;
 
     /**
+     * total employee deductions (pre and post-tax)
+     *
+     * @var ?float $deductionAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('deduction_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $deductionAmount = null;
+
+    /**
      * $details
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\HrisPayslipDetail> $details
@@ -56,6 +67,34 @@ class HrisPayslip
     public ?array $details = null;
 
     /**
+     * total taxes withheld from the employee
+     *
+     * @var ?float $employeeTaxAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employee_tax_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $employeeTaxAmount = null;
+
+    /**
+     * total employer benefit contributions
+     *
+     * @var ?float $employerContributionAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employer_contribution_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $employerContributionAmount = null;
+
+    /**
+     * total employer-paid taxes
+     *
+     * @var ?float $employerTaxAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employer_tax_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $employerTaxAmount = null;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -70,6 +109,33 @@ class HrisPayslip
     #[\Speakeasy\Serializer\Annotation\SerializedName('gross_amount')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $grossAmount = null;
+
+    /**
+     * year-to-date gross pay as of this payslip
+     *
+     * @var ?float $grossYtdAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('gross_ytd_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $grossYtdAmount = null;
+
+    /**
+     * the pay group (hris_group of type PAY_GROUP) (reference to HrisGroup)
+     *
+     * @var ?string $groupId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('group_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $groupId = null;
+
+    /**
+     * total hours paid on this payslip
+     *
+     * @var ?float $hours
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('hours')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $hours = null;
 
     /**
      *
@@ -88,6 +154,16 @@ class HrisPayslip
     public ?float $netAmount = null;
 
     /**
+     * year-to-date net pay as of this payslip
+     *
+     * @var ?float $netYtdAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('net_ytd_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $netYtdAmount = null;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $paidAt
      */
@@ -113,6 +189,15 @@ class HrisPayslip
     public ?PaymentType $paymentType = null;
 
     /**
+     * the hris_payroll (pay run) this payslip belongs to
+     *
+     * @var ?string $payrollId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('payroll_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $payrollId = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -123,6 +208,7 @@ class HrisPayslip
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -132,6 +218,16 @@ class HrisPayslip
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\HrisPayslipType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisPayslipType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?HrisPayslipType $type = null;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
      * @var ?\DateTime $updatedAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('updated_at')]
@@ -139,6 +235,7 @@ class HrisPayslip
     public ?\DateTime $updatedAt = null;
 
     /**
+     * the employee (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -151,36 +248,56 @@ class HrisPayslip
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisPayslipDeduction  $deduction
+     * @param  ?float  $deductionAmount
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisPayslipDetail>  $details
+     * @param  ?float  $employeeTaxAmount
+     * @param  ?float  $employerContributionAmount
+     * @param  ?float  $employerTaxAmount
      * @param  ?\DateTime  $endAt
      * @param  ?float  $grossAmount
+     * @param  ?float  $grossYtdAmount
+     * @param  ?string  $groupId
+     * @param  ?float  $hours
      * @param  ?string  $id
      * @param  ?float  $netAmount
+     * @param  ?float  $netYtdAmount
      * @param  ?\DateTime  $paidAt
      * @param  ?string  $paymentReference
      * @param  ?\Unified\Unified_to\Models\Shared\PaymentType  $paymentType
+     * @param  ?string  $payrollId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisPayslipType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyHrisPayslipDeduction $deduction = null, ?array $details = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?string $paymentReference = null, ?PaymentType $paymentType = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyHrisPayslipDeduction $deduction = null, ?float $deductionAmount = null, ?array $details = null, ?float $employeeTaxAmount = null, ?float $employerContributionAmount = null, ?float $employerTaxAmount = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?float $grossYtdAmount = null, ?string $groupId = null, ?float $hours = null, ?string $id = null, ?float $netAmount = null, ?float $netYtdAmount = null, ?\DateTime $paidAt = null, ?string $paymentReference = null, ?PaymentType $paymentType = null, ?string $payrollId = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisPayslipType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->deduction = $deduction;
+        $this->deductionAmount = $deductionAmount;
         $this->details = $details;
+        $this->employeeTaxAmount = $employeeTaxAmount;
+        $this->employerContributionAmount = $employerContributionAmount;
+        $this->employerTaxAmount = $employerTaxAmount;
         $this->endAt = $endAt;
         $this->grossAmount = $grossAmount;
+        $this->grossYtdAmount = $grossYtdAmount;
+        $this->groupId = $groupId;
+        $this->hours = $hours;
         $this->id = $id;
         $this->netAmount = $netAmount;
+        $this->netYtdAmount = $netYtdAmount;
         $this->paidAt = $paidAt;
         $this->paymentReference = $paymentReference;
         $this->paymentType = $paymentType;
+        $this->payrollId = $payrollId;
         $this->raw = $raw;
         $this->startAt = $startAt;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
     }

@@ -30,6 +30,7 @@ class MessagingEvent
     public ?PropertyMessagingEventChannel $channel = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -38,6 +39,7 @@ class MessagingEvent
     public ?\DateTime $createdAt = null;
 
     /**
+     * not used
      *
      * @var ?string $id
      */

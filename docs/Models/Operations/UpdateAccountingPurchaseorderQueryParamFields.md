@@ -20,4 +20,5 @@
 | `OrganizationId`  | organization_id   |
 | `CategoryIds`     | category_ids      |
 | `Metadata`        | metadata          |
+| `Attachments`     | attachments       |
 | `Raw`             | raw               |

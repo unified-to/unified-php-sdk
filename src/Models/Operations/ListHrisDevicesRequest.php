@@ -20,12 +20,28 @@ class ListHrisDevicesRequest
     public string $connectionId;
 
     /**
+     * The email address to filter by
+     *
+     * @var ?string $email
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=email')]
+    public ?string $email = null;
+
+    /**
      * Fields to return
      *
      * @var ?array<\Unified\Unified_to\Models\Operations\ListHrisDevicesQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
+
+    /**
+     * The group ID to filter by (reference to HrisGroup)
+     *
+     * @var ?string $groupId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=group_id')]
+    public ?string $groupId = null;
 
     /**
      *
@@ -89,7 +105,9 @@ class ListHrisDevicesRequest
 
     /**
      * @param  string  $connectionId
+     * @param  ?string  $email
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListHrisDevicesQueryParamFields>  $fields
+     * @param  ?string  $groupId
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -100,10 +118,12 @@ class ListHrisDevicesRequest
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $email = null, ?array $fields = null, ?string $groupId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
+        $this->email = $email;
         $this->fields = $fields;
+        $this->groupId = $groupId;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;

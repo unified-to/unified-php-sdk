@@ -21,6 +21,7 @@ class DatastoreRecord
     public array $fields;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -29,6 +30,7 @@ class DatastoreRecord
     public ?\DateTime $createdAt = null;
 
     /**
+     * source Database ID
      *
      * @var ?string $databaseId
      */
@@ -63,6 +65,7 @@ class DatastoreRecord
     public ?float $rowNumber = null;
 
     /**
+     * source Database Table ID
      *
      * @var ?string $tableId
      */
@@ -71,6 +74,7 @@ class DatastoreRecord
     public ?string $tableId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ScimGroupMember
 {
     /**
+     * ID of user
      *
      * @var string $value
      */
@@ -19,6 +20,7 @@ class ScimGroupMember
     public string $value;
 
     /**
+     * url to user
      *
      * @var ?string $dollarRef
      */
@@ -27,6 +29,7 @@ class ScimGroupMember
     public ?string $dollarRef = null;
 
     /**
+     * user name
      *
      * @var ?string $display
      */
@@ -35,6 +38,7 @@ class ScimGroupMember
     public ?string $display = null;
 
     /**
+     * ONLY USED ON UPDATES
      *
      * @var ?\Unified\Unified_to\Models\Shared\Operation $operation
      */
@@ -44,6 +48,7 @@ class ScimGroupMember
     public ?Operation $operation = null;
 
     /**
+     * NOT STANDARD
      *
      * @var ?\Unified\Unified_to\Models\Shared\ScimGroupMemberType $type
      */

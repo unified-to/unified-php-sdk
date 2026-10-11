@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The type of entity the segment targets (USERS, ACCOUNTS, LINKED) */
 enum CdpSegmentType: string
 {
     case Users = 'USERS';

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingTransaction
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -40,6 +41,7 @@ class AccountingTransaction
     public ?array $contacts = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -64,6 +66,7 @@ class AccountingTransaction
     public ?string $customerMessage = null;
 
     /**
+     * Exchange rate to the base/home currency at the transaction date
      *
      * @var ?float $exchangeRate
      */
@@ -122,6 +125,7 @@ class AccountingTransaction
     public ?string $paymentTerms = null;
 
     /**
+     * (reference to TaskProject)
      *
      * @var ?string $projectId
      */
@@ -156,6 +160,7 @@ class AccountingTransaction
     public ?string $splitAccountId = null;
 
     /**
+     * Posting state of the transaction
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingTransactionStatus $status
      */
@@ -173,6 +178,7 @@ class AccountingTransaction
     public ?float $subTotalAmount = null;
 
     /**
+     * negative for CREDIT, positive for DEBIT
      *
      * @var ?float $taxAmount
      */
@@ -181,6 +187,7 @@ class AccountingTransaction
     public ?float $taxAmount = null;
 
     /**
+     * negative for CREDIT, positive for DEBIT
      *
      * @var ?float $totalAmount
      */
@@ -189,6 +196,7 @@ class AccountingTransaction
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $transactionAt
      */
@@ -197,6 +205,7 @@ class AccountingTransaction
     public ?\DateTime $transactionAt = null;
 
     /**
+     * eg. CreditCardCharge, Check, Invoice, ReceivePayment, JournalEntry, Bill, CreditCardCredit, VendorCredit, Credit, BillPaymentCheck, BillPaymentCreditCard, Charge, Transfer, Deposit, BANK_DEPOSIT, BANK_TRANSFER, Statement, BillableCharge, TimeActivity, CashPurchase, SalesReceipt, CreditMemo, CreditRefund, Estimate, InventoryQuantityAdjustment, PurchaseOrder, GlobalTaxPayment, GlobalTaxAdjustment, Service Tax Refund, Service Tax Gross Adjustment, Service Tax Reversal, Service Tax Defer, Service Tax Partial Utilisation
      *
      * @var ?string $type
      */
@@ -205,6 +214,7 @@ class AccountingTransaction
     public ?string $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

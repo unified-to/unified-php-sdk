@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class TicketingCustomer
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -76,6 +77,7 @@ class TicketingCustomer
     public ?array $telephones = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -22,6 +22,7 @@ class CommerceSaleschannel
     public ?array $collections = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -64,6 +65,7 @@ class CommerceSaleschannel
     public ?array $raw = null;
 
     /**
+     * maps to code (name)  a stable identifier per channel
      *
      * @var ?string $slug
      */
@@ -72,6 +74,7 @@ class CommerceSaleschannel
     public ?string $slug = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

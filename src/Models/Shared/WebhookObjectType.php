@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The object to return (eg. CRM "contact") */
 enum WebhookObjectType: string
 {
     case AccountingAccount = 'accounting_account';
@@ -24,12 +25,15 @@ enum WebhookObjectType: string
     case AccountingOrganization = 'accounting_organization';
     case AccountingOrder = 'accounting_order';
     case AccountingSalesorder = 'accounting_salesorder';
+    case AccountingSalesreceipt = 'accounting_salesreceipt';
     case AccountingPurchaseorder = 'accounting_purchaseorder';
     case AccountingBalancesheet = 'accounting_balancesheet';
     case AccountingProfitloss = 'accounting_profitloss';
     case AccountingTrialbalance = 'accounting_trialbalance';
     case AccountingCategory = 'accounting_category';
     case AccountingExpense = 'accounting_expense';
+    case AccountingExpensereport = 'accounting_expensereport';
+    case AccountingPurchasereceipt = 'accounting_purchasereceipt';
     case AccountingCashflow = 'accounting_cashflow';
     case AccountingQuote = 'accounting_quote';
     case AccountingAgedreceivable = 'accounting_agedreceivable';
@@ -85,6 +89,10 @@ enum WebhookObjectType: string
     case HrisBankaccount = 'hris_bankaccount';
     case HrisDocument = 'hris_document';
     case HrisTaxonomy = 'hris_taxonomy';
+    case HrisJob = 'hris_job';
+    case HrisPayroll = 'hris_payroll';
+    case HrisPaycode = 'hris_paycode';
+    case HrisEarning = 'hris_earning';
     case MartechList = 'martech_list';
     case MartechMember = 'martech_member';
     case MartechCampaign = 'martech_campaign';
@@ -98,6 +106,8 @@ enum WebhookObjectType: string
     case UcCall = 'uc_call';
     case UcComment = 'uc_comment';
     case UcRecording = 'uc_recording';
+    case UcScorecard = 'uc_scorecard';
+    case UcScorecardtemplate = 'uc_scorecardtemplate';
     case EnrichPerson = 'enrich_person';
     case EnrichCompany = 'enrich_company';
     case StorageFile = 'storage_file';
@@ -107,6 +117,7 @@ enum WebhookObjectType: string
     case GenaiTask = 'genai_task';
     case GenaiAgent = 'genai_agent';
     case GenaiOrganization = 'genai_organization';
+    case GenaiSkill = 'genai_skill';
     case MessagingMessage = 'messaging_message';
     case MessagingChannel = 'messaging_channel';
     case MessagingEvent = 'messaging_event';

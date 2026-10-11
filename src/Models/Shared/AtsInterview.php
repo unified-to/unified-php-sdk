@@ -28,6 +28,7 @@ class AtsInterview
     public ?string $candidateId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -36,6 +37,7 @@ class AtsInterview
     public ?\DateTime $createdAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -44,6 +46,7 @@ class AtsInterview
     public ?\DateTime $endAt = null;
 
     /**
+     * the ID of the event in a calendar
      *
      * @var ?string $externalEventXref
      */
@@ -86,6 +89,7 @@ class AtsInterview
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -103,6 +107,7 @@ class AtsInterview
     public ?AtsInterviewStatus $status = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

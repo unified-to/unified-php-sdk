@@ -20,6 +20,7 @@ class AssessmentPackageRegion
     public ?float $costAmount = null;
 
     /**
+     * ISO 4217 format
      *
      * @var ?string $currency
      */
@@ -28,6 +29,7 @@ class AssessmentPackageRegion
     public ?string $currency = null;
 
     /**
+     * Processing time in milliseconds
      *
      * @var ?float $processingTime
      */

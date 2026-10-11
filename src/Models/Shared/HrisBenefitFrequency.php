@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Frequency that costs accrue for this benefit. For insurance/benefits, usually "MONTHLY". For compensation, matches pay cycle (WEEKLY, BIWEEKLY, etc). */
 enum HrisBenefitFrequency: string
 {
     case OneTime = 'ONE_TIME';
@@ -18,4 +19,6 @@ enum HrisBenefitFrequency: string
     case Hour = 'HOUR';
     case Month = 'MONTH';
     case Week = 'WEEK';
+    case Biweekly = 'BIWEEKLY';
+    case Semimonthly = 'SEMIMONTHLY';
 }

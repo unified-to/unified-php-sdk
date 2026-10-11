@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
 {
     /**
+     * The URI of the SCIM resource representing the User's manager.  RECOMMENDED.
      *
      * @var ?string $dollarRef
      */
@@ -21,6 +22,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
     public ?string $dollarRef = null;
 
     /**
+     * The displayName of the user's manager.  This attribute is OPTIONAL, and mutability is "readOnly".
      *
      * @var ?string $displayName
      */
@@ -29,6 +31,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
     public ?string $displayName = null;
 
     /**
+     * alias for value?
      *
      * @var ?string $managerId
      */
@@ -46,6 +49,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager
     public ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManagerType $type = null;
 
     /**
+     * The "id" of the SCIM resource representing the user's manager.  RECOMMENDED.
      *
      * @var ?string $value
      */

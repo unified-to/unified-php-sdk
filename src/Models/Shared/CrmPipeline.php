@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CrmPipeline
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -80,6 +81,7 @@ class CrmPipeline
     public ?array $stages = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

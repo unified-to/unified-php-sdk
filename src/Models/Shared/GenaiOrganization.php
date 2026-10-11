@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class GenaiOrganization
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -62,6 +63,7 @@ class GenaiOrganization
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

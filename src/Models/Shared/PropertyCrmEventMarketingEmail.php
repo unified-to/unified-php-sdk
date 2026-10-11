@@ -22,6 +22,7 @@ class PropertyCrmEventMarketingEmail
     public ?array $attachmentFileIds = null;
 
     /**
+     * The event email's body
      *
      * @var ?string $body
      */
@@ -40,6 +41,7 @@ class PropertyCrmEventMarketingEmail
     public ?array $cc = null;
 
     /**
+     * The event email's from name & email address (name <test@test.com>)
      *
      * @var ?string $from
      */
@@ -56,6 +58,7 @@ class PropertyCrmEventMarketingEmail
     public ?string $name = null;
 
     /**
+     * The event email's subject
      *
      * @var ?string $subject
      */

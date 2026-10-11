@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class TaskProject
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -38,6 +39,7 @@ class TaskProject
     public ?array $groupIds = null;
 
     /**
+     * If this project has children folders / lists
      *
      * @var ?bool $hasChildren
      */
@@ -46,6 +48,7 @@ class TaskProject
     public ?bool $hasChildren = null;
 
     /**
+     * If you can use this project ID to list tasks. Default is true.
      *
      * @var ?bool $hasTasks
      */
@@ -98,6 +101,7 @@ class TaskProject
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CommerceItemvariant
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $availableAt
      */
@@ -20,6 +21,7 @@ class CommerceItemvariant
     public ?\DateTime $availableAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -193,6 +195,7 @@ class CommerceItemvariant
     public ?SizeUnit $sizeUnit = null;
 
     /**
+     * barcode, UPC, isbn, etc
      *
      * @var ?string $sku
      */
@@ -219,6 +222,7 @@ class CommerceItemvariant
     public ?float $totalStock = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Format of the label (PDF, PNG, ZPL, EPL2) */
 enum LabelFormat: string
 {
     case Pdf = 'PDF';

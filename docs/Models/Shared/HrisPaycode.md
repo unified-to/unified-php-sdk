@@ -1,0 +1,20 @@
+# HrisPaycode
+
+
+## Fields
+
+| Field                                                             | Type                                                              | Required                                                          | Description                                                       |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `code`                                                            | *?string*                                                         | :heavy_minus_sign:                                                | the payroll system's code for this item                           |
+| `companyId`                                                       | *?string*                                                         | :heavy_minus_sign:                                                | (reference to HrisCompany)                                        |
+| `createdAt`                                                       | [\DateTime](https://www.php.net/manual/en/class.datetime.php)     | :heavy_minus_sign:                                                | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                          |
+| `description`                                                     | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               |
+| `detailType`                                                      | [?Shared\DetailType](../../Models/Shared/DetailType.md)           | :heavy_minus_sign:                                                | the normalized payslip-line type this code produces               |
+| `id`                                                              | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               |
+| `isActive`                                                        | *?bool*                                                           | :heavy_minus_sign:                                                | N/A                                                               |
+| `isEmployer`                                                      | *?bool*                                                           | :heavy_minus_sign:                                                | N/A                                                               |
+| `isPreTax`                                                        | *?bool*                                                           | :heavy_minus_sign:                                                | N/A                                                               |
+| `name`                                                            | *?string*                                                         | :heavy_minus_sign:                                                | N/A                                                               |
+| `raw`                                                             | array<string, *mixed*>                                            | :heavy_minus_sign:                                                | N/A                                                               |
+| `type`                                                            | [?Shared\HrisPaycodeType](../../Models/Shared/HrisPaycodeType.md) | :heavy_minus_sign:                                                | N/A                                                               |
+| `updatedAt`                                                       | [\DateTime](https://www.php.net/manual/en/class.datetime.php)     | :heavy_minus_sign:                                                | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                          |

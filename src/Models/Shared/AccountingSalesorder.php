@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingSalesorder
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -39,6 +40,7 @@ class AccountingSalesorder
     public ?array $categoryIds = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $closedAt
      */
@@ -47,6 +49,7 @@ class AccountingSalesorder
     public ?\DateTime $closedAt = null;
 
     /**
+     * Customer, Supplier (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -55,6 +58,7 @@ class AccountingSalesorder
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -71,6 +75,7 @@ class AccountingSalesorder
     public ?string $currency = null;
 
     /**
+     * POS register/terminal/device (HRIS Device)
      *
      * @var ?string $deviceId
      */
@@ -87,6 +92,7 @@ class AccountingSalesorder
     public ?float $discountAmount = null;
 
     /**
+     * selling/serving HR employee (server, cashier) (reference to HrisEmployee)
      *
      * @var ?string $employeeUserId
      */
@@ -140,6 +146,7 @@ class AccountingSalesorder
     public ?array $lineitems = null;
 
     /**
+     * store/site; reference to a commerce_location or hris_location
      *
      * @var ?string $locationId
      */
@@ -158,6 +165,7 @@ class AccountingSalesorder
     public ?array $metadata = null;
 
     /**
+     * human-facing receipt/ticket/check number, distinct from id
      *
      * @var ?string $orderNumber
      */
@@ -184,6 +192,7 @@ class AccountingSalesorder
     public ?array $payments = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */
@@ -244,6 +253,7 @@ class AccountingSalesorder
     public ?AccountingSalesorderStatus $status = null;
 
     /**
+     * payment_subscription that generated this order, if recurring
      *
      * @var ?string $subscriptionId
      */
@@ -252,6 +262,7 @@ class AccountingSalesorder
     public ?string $subscriptionId = null;
 
     /**
+     * pre-tax, pre-tip amount
      *
      * @var ?float $subtotalAmount
      */
@@ -284,6 +295,7 @@ class AccountingSalesorder
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

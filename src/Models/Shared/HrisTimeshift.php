@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisTimeshift
 {
     /**
+     * (reference to HrisEmployee)
      *
      * @var string $employeeUserId
      */
@@ -19,6 +20,7 @@ class HrisTimeshift
     public string $employeeUserId;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $approvedAt
      */
@@ -27,6 +29,7 @@ class HrisTimeshift
     public ?\DateTime $approvedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $approverUserId
      */
@@ -35,6 +38,7 @@ class HrisTimeshift
     public ?string $approverUserId = null;
 
     /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -53,6 +57,7 @@ class HrisTimeshift
     public ?array $compensation = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -61,6 +66,7 @@ class HrisTimeshift
     public ?\DateTime $createdAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -69,6 +75,7 @@ class HrisTimeshift
     public ?\DateTime $endAt = null;
 
     /**
+     * department, team, etc. (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -101,6 +108,7 @@ class HrisTimeshift
     public ?bool $isApproved = null;
 
     /**
+     * (reference to HrisLocation)
      *
      * @var ?string $locationId
      */
@@ -119,6 +127,7 @@ class HrisTimeshift
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -127,6 +136,7 @@ class HrisTimeshift
     public ?\DateTime $startAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

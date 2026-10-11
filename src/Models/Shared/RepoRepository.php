@@ -19,6 +19,7 @@ class RepoRepository
     public string $name;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -51,6 +52,7 @@ class RepoRepository
     public ?bool $isPrivate = null;
 
     /**
+     * (reference to RepoOrganization)
      *
      * @var ?string $orgId
      */
@@ -77,6 +79,7 @@ class RepoRepository
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

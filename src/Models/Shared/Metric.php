@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The metric being reported */
 enum Metric: string
 {
     case Followers = 'FOLLOWERS';

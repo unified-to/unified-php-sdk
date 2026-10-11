@@ -26,4 +26,5 @@ enum ListUcCallsQueryParamFields: string
     case Type = 'type';
     case Metadata = 'metadata';
     case Raw = 'raw';
+    case ConversationIdentifier = 'conversation_identifier';
 }

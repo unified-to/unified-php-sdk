@@ -23,6 +23,7 @@ class EnrichPerson
     public ?PropertyEnrichPersonAddress $address = null;
 
     /**
+     * The biography description of the person
      *
      * @var ?string $bio
      */
@@ -31,6 +32,7 @@ class EnrichPerson
     public ?string $bio = null;
 
     /**
+     * The birth date of the person
      *
      * @var ?string $birthdate
      */
@@ -39,6 +41,7 @@ class EnrichPerson
     public ?string $birthdate = null;
 
     /**
+     * The companyorganization name  of the person
      *
      * @var ?string $company
      */
@@ -47,6 +50,7 @@ class EnrichPerson
     public ?string $company = null;
 
     /**
+     * The company's domain
      *
      * @var ?string $companyDomain
      */
@@ -55,6 +59,7 @@ class EnrichPerson
     public ?string $companyDomain = null;
 
     /**
+     * The date that this person object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -73,6 +78,7 @@ class EnrichPerson
     public ?array $emails = null;
 
     /**
+     * The Facebook URL of the person
      *
      * @var ?string $facebookUrl
      */
@@ -89,6 +95,7 @@ class EnrichPerson
     public ?string $firstName = null;
 
     /**
+     * The gender of the person
      *
      * @var ?\Unified\Unified_to\Models\Shared\EnrichPersonGender $gender
      */
@@ -98,6 +105,7 @@ class EnrichPerson
     public ?EnrichPersonGender $gender = null;
 
     /**
+     * The GitHub URL of the person
      *
      * @var ?string $githubUrl
      */
@@ -106,6 +114,7 @@ class EnrichPerson
     public ?string $githubUrl = null;
 
     /**
+     * The GitHub username of the person
      *
      * @var ?string $githubUsername
      */
@@ -114,6 +123,7 @@ class EnrichPerson
     public ?string $githubUsername = null;
 
     /**
+     * Unique identifier for this person object
      *
      * @var ?string $id
      */
@@ -122,6 +132,7 @@ class EnrichPerson
     public ?string $id = null;
 
     /**
+     * The image URL of the person
      *
      * @var ?string $imageUrl
      */
@@ -138,6 +149,7 @@ class EnrichPerson
     public ?string $lastName = null;
 
     /**
+     * The LinkedIn URL of the person
      *
      * @var ?string $linkedinUrl
      */
@@ -146,6 +158,7 @@ class EnrichPerson
     public ?string $linkedinUrl = null;
 
     /**
+     * The name of the person
      *
      * @var ?string $name
      */
@@ -154,7 +167,7 @@ class EnrichPerson
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this person
      *
      * @var ?array<string, mixed> $raw
      */
@@ -174,6 +187,7 @@ class EnrichPerson
     public ?array $telephones = null;
 
     /**
+     * The timezone code of the person
      *
      * @var ?string $timezone
      */
@@ -182,6 +196,7 @@ class EnrichPerson
     public ?string $timezone = null;
 
     /**
+     * The job title of the person
      *
      * @var ?string $title
      */
@@ -190,6 +205,7 @@ class EnrichPerson
     public ?string $title = null;
 
     /**
+     * The twitter handle of the person
      *
      * @var ?string $twitterHandle
      */
@@ -198,6 +214,7 @@ class EnrichPerson
     public ?string $twitterHandle = null;
 
     /**
+     * The twitter URL of the person
      *
      * @var ?string $twitterUrl
      */
@@ -206,6 +223,7 @@ class EnrichPerson
     public ?string $twitterUrl = null;
 
     /**
+     * The last date that this person object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -214,6 +232,7 @@ class EnrichPerson
     public ?\DateTime $updatedAt = null;
 
     /**
+     * The timezone's hourly offset from UTC of the person
      *
      * @var ?float $utcOffset
      */

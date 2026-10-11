@@ -22,5 +22,7 @@ enum CreateHrisGroupQueryParamFields: string
     case ManagerIds = 'manager_ids';
     case IsActive = 'is_active';
     case CompanyId = 'company_id';
+    case PayFrequency = 'pay_frequency';
+    case NextPaidAt = 'next_paid_at';
     case Raw = 'raw';
 }

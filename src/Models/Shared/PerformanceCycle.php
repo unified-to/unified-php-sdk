@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PerformanceCycle
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -28,6 +29,7 @@ class PerformanceCycle
     public ?string $description = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -36,6 +38,7 @@ class PerformanceCycle
     public ?\DateTime $dueAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -70,6 +73,7 @@ class PerformanceCycle
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -87,6 +91,7 @@ class PerformanceCycle
     public ?PerformanceCycleStatus $status = null;
 
     /**
+     * whether this is a review cycle or a goal cycle/timeframe
      *
      * @var ?\Unified\Unified_to\Models\Shared\PerformanceCycleType $type
      */
@@ -96,6 +101,7 @@ class PerformanceCycle
     public ?PerformanceCycleType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -22,6 +22,7 @@ class AssessmentParameterInput
     public ?array $inputs = null;
 
     /**
+     * Name of parameter
      *
      * @var ?string $name
      */

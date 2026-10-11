@@ -22,6 +22,7 @@ class ClubsLocation
     public ?PropertyClubsLocationAddress $address = null;
 
     /**
+     * The date that this location was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -30,6 +31,7 @@ class ClubsLocation
     public ?\DateTime $createdAt = null;
 
     /**
+     * The group this location is associated with (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -38,6 +40,7 @@ class ClubsLocation
     public ?string $groupId = null;
 
     /**
+     * Unique identifier for this location
      *
      * @var ?string $id
      */
@@ -46,6 +49,7 @@ class ClubsLocation
     public ?string $id = null;
 
     /**
+     * The latitude
      *
      * @var ?float $latitude
      */
@@ -54,6 +58,7 @@ class ClubsLocation
     public ?float $latitude = null;
 
     /**
+     * The longitude
      *
      * @var ?float $longitude
      */
@@ -62,6 +67,7 @@ class ClubsLocation
     public ?float $longitude = null;
 
     /**
+     * The location name
      *
      * @var ?string $name
      */
@@ -70,7 +76,7 @@ class ClubsLocation
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this location
      *
      * @var ?array<string, mixed> $raw
      */
@@ -80,6 +86,7 @@ class ClubsLocation
     public ?array $raw = null;
 
     /**
+     * A contact phone number for the location
      *
      * @var ?string $telephone
      */
@@ -88,6 +95,7 @@ class ClubsLocation
     public ?string $telephone = null;
 
     /**
+     * The last date that this location was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -96,6 +104,7 @@ class ClubsLocation
     public ?\DateTime $updatedAt = null;
 
     /**
+     * A URL for the location
      *
      * @var ?string $url
      */

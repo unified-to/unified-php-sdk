@@ -20,6 +20,7 @@ class HrisBankaccount
     public ?string $accountNumber = null;
 
     /**
+     * when full number not returned
      *
      * @var ?string $accountNumberLast4
      */
@@ -45,6 +46,16 @@ class HrisBankaccount
     public ?string $bankName = null;
 
     /**
+     * BIC / SWIFT code
+     *
+     * @var ?string $bic
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('bic')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $bic = null;
+
+    /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -53,12 +64,39 @@ class HrisBankaccount
     public ?string $companyId = null;
 
     /**
+     * ISO 2-digit country code of the bank account
+     *
+     * @var ?string $countryCode
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('country_code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $countryCode = null;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
+
+    /**
+     *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     * International Bank Account Number (non-US accounts)
+     *
+     * @var ?string $iban
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('iban')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $iban = null;
 
     /**
      *
@@ -69,6 +107,7 @@ class HrisBankaccount
     public ?string $id = null;
 
     /**
+     * primary for direct deposit
      *
      * @var ?bool $isPrimary
      */
@@ -77,12 +116,22 @@ class HrisBankaccount
     public ?bool $isPrimary = null;
 
     /**
+     * account nickname (e.g. "BoA Checking")
      *
      * @var ?string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
+
+    /**
+     * order in which split accounts are funded (1 = first)
+     *
+     * @var ?float $priority
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('priority')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $priority = null;
 
     /**
      * $raw
@@ -95,6 +144,7 @@ class HrisBankaccount
     public ?array $raw = null;
 
     /**
+     * 9-digit US routing number
      *
      * @var ?string $routingNumber
      */
@@ -103,6 +153,26 @@ class HrisBankaccount
     public ?string $routingNumber = null;
 
     /**
+     * percentage (when split_type is PERCENTAGE) or money (when FIXED)
+     *
+     * @var ?float $splitAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('split_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $splitAmount = null;
+
+    /**
+     * how net pay is split into this account when an employee has several accounts
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\SplitType $splitType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('split_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\SplitType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?SplitType $splitType = null;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -111,6 +181,7 @@ class HrisBankaccount
     public ?\DateTime $updatedAt = null;
 
     /**
+     * employee ID (required for listcreate) (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -123,30 +194,44 @@ class HrisBankaccount
      * @param  ?string  $accountNumberLast4
      * @param  ?\Unified\Unified_to\Models\Shared\HrisBankaccountAccountType  $accountType
      * @param  ?string  $bankName
+     * @param  ?string  $bic
      * @param  ?string  $companyId
+     * @param  ?string  $countryCode
      * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?string  $iban
      * @param  ?string  $id
      * @param  ?bool  $isPrimary
      * @param  ?string  $name
+     * @param  ?float  $priority
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $routingNumber
+     * @param  ?float  $splitAmount
+     * @param  ?\Unified\Unified_to\Models\Shared\SplitType  $splitType
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $accountNumber = null, ?string $accountNumberLast4 = null, ?HrisBankaccountAccountType $accountType = null, ?string $bankName = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isPrimary = null, ?string $name = null, ?array $raw = null, ?string $routingNumber = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $accountNumber = null, ?string $accountNumberLast4 = null, ?HrisBankaccountAccountType $accountType = null, ?string $bankName = null, ?string $bic = null, ?string $companyId = null, ?string $countryCode = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $iban = null, ?string $id = null, ?bool $isPrimary = null, ?string $name = null, ?float $priority = null, ?array $raw = null, ?string $routingNumber = null, ?float $splitAmount = null, ?SplitType $splitType = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->accountNumber = $accountNumber;
         $this->accountNumberLast4 = $accountNumberLast4;
         $this->accountType = $accountType;
         $this->bankName = $bankName;
+        $this->bic = $bic;
         $this->companyId = $companyId;
+        $this->countryCode = $countryCode;
         $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->iban = $iban;
         $this->id = $id;
         $this->isPrimary = $isPrimary;
         $this->name = $name;
+        $this->priority = $priority;
         $this->raw = $raw;
         $this->routingNumber = $routingNumber;
+        $this->splitAmount = $splitAmount;
+        $this->splitType = $splitType;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
     }

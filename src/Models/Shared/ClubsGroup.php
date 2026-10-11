@@ -33,6 +33,7 @@ class ClubsGroup
     public ?PropertyClubsGroupAddress $address = null;
 
     /**
+     * URL to the group's cover photo
      *
      * @var ?string $coverImageUrl
      */
@@ -41,6 +42,7 @@ class ClubsGroup
     public ?string $coverImageUrl = null;
 
     /**
+     * The date that this group was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -49,6 +51,7 @@ class ClubsGroup
     public ?\DateTime $createdAt = null;
 
     /**
+     * The group's description
      *
      * @var ?string $description
      */
@@ -57,6 +60,7 @@ class ClubsGroup
     public ?string $description = null;
 
     /**
+     * The number of athletes the group follows
      *
      * @var ?float $followingCount
      */
@@ -65,6 +69,7 @@ class ClubsGroup
     public ?float $followingCount = null;
 
     /**
+     * The group type
      *
      * @var ?\Unified\Unified_to\Models\Shared\GroupType $groupType
      */
@@ -74,6 +79,7 @@ class ClubsGroup
     public ?GroupType $groupType = null;
 
     /**
+     * Unique identifier for this group
      *
      * @var ?string $id
      */
@@ -82,6 +88,7 @@ class ClubsGroup
     public ?string $id = null;
 
     /**
+     * Whether the authenticated user is an admin of the group
      *
      * @var ?bool $isAdmin
      */
@@ -90,6 +97,7 @@ class ClubsGroup
     public ?bool $isAdmin = null;
 
     /**
+     * Whether the group is featured
      *
      * @var ?bool $isFeatured
      */
@@ -98,6 +106,7 @@ class ClubsGroup
     public ?bool $isFeatured = null;
 
     /**
+     * Whether the authenticated user is the owner of the group
      *
      * @var ?bool $isOwner
      */
@@ -106,6 +115,7 @@ class ClubsGroup
     public ?bool $isOwner = null;
 
     /**
+     * Whether the group is private
      *
      * @var ?bool $isPrivate
      */
@@ -114,6 +124,7 @@ class ClubsGroup
     public ?bool $isPrivate = null;
 
     /**
+     * Whether the group is verified
      *
      * @var ?bool $isVerified
      */
@@ -122,6 +133,7 @@ class ClubsGroup
     public ?bool $isVerified = null;
 
     /**
+     * The number of members in the group
      *
      * @var ?float $memberCount
      */
@@ -130,6 +142,7 @@ class ClubsGroup
     public ?float $memberCount = null;
 
     /**
+     * The authenticated user's membership status
      *
      * @var ?\Unified\Unified_to\Models\Shared\MembershipStatus $membershipStatus
      */
@@ -139,6 +152,7 @@ class ClubsGroup
     public ?MembershipStatus $membershipStatus = null;
 
     /**
+     * The group's name
      *
      * @var ?string $name
      */
@@ -147,6 +161,7 @@ class ClubsGroup
     public ?string $name = null;
 
     /**
+     * The number of posts in the group
      *
      * @var ?float $postCount
      */
@@ -155,6 +170,7 @@ class ClubsGroup
     public ?float $postCount = null;
 
     /**
+     * URL to the group's profile picture
      *
      * @var ?string $profileImageUrl
      */
@@ -163,7 +179,7 @@ class ClubsGroup
     public ?string $profileImageUrl = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this group
      *
      * @var ?array<string, mixed> $raw
      */
@@ -173,6 +189,7 @@ class ClubsGroup
     public ?array $raw = null;
 
     /**
+     * The primary sport of the group
      *
      * @var ?\Unified\Unified_to\Models\Shared\SportType $sportType
      */
@@ -182,6 +199,7 @@ class ClubsGroup
     public ?SportType $sportType = null;
 
     /**
+     * The last date that this group was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -190,6 +208,7 @@ class ClubsGroup
     public ?\DateTime $updatedAt = null;
 
     /**
+     * The group's vanity URL
      *
      * @var ?string $url
      */

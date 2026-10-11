@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingLabel
 {
     /**
+     * The date that this label object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class ShippingLabel
     public ?\DateTime $createdAt = null;
 
     /**
+     * Unique identifier for this label object
      *
      * @var ?string $id
      */
@@ -28,6 +30,7 @@ class ShippingLabel
     public ?string $id = null;
 
     /**
+     * Whether label has been voided
      *
      * @var ?bool $isVoided
      */
@@ -36,6 +39,7 @@ class ShippingLabel
     public ?bool $isVoided = null;
 
     /**
+     * Cost to purchase label
      *
      * @var ?float $labelCost
      */
@@ -52,6 +56,7 @@ class ShippingLabel
     public ?string $labelCostCurrency = null;
 
     /**
+     * Format of the label (PDF, PNG, ZPL, EPL2)
      *
      * @var ?\Unified\Unified_to\Models\Shared\LabelFormat $labelFormat
      */
@@ -61,6 +66,7 @@ class ShippingLabel
     public ?LabelFormat $labelFormat = null;
 
     /**
+     * URL to download the label
      *
      * @var ?string $labelUrl
      */
@@ -69,6 +75,7 @@ class ShippingLabel
     public ?string $labelUrl = null;
 
     /**
+     * Rate used for this label; points to ShippingRate
      *
      * @var ?string $rateId
      */
@@ -77,7 +84,7 @@ class ShippingLabel
     public ?string $rateId = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this label
      *
      * @var ?array<string, mixed> $raw
      */
@@ -87,6 +94,7 @@ class ShippingLabel
     public ?array $raw = null;
 
     /**
+     * Service code used
      *
      * @var ?string $serviceCode
      */
@@ -95,6 +103,7 @@ class ShippingLabel
     public ?string $serviceCode = null;
 
     /**
+     * Reference to the shipment
      *
      * @var ?string $shipmentId
      */
@@ -103,6 +112,7 @@ class ShippingLabel
     public ?string $shipmentId = null;
 
     /**
+     * Status of the label
      *
      * @var ?\Unified\Unified_to\Models\Shared\ShippingLabelStatus $status
      */
@@ -112,6 +122,7 @@ class ShippingLabel
     public ?ShippingLabelStatus $status = null;
 
     /**
+     * Tracking number for the shipment
      *
      * @var ?string $trackingNumber
      */
@@ -120,6 +131,7 @@ class ShippingLabel
     public ?string $trackingNumber = null;
 
     /**
+     * The last date that this label object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -19,6 +19,7 @@ class CalendarLink
     public string $url;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $createdAt
      */
@@ -35,6 +36,7 @@ class CalendarLink
     public ?string $description = null;
 
     /**
+     * minutes
      *
      * @var ?float $duration
      */
@@ -93,6 +95,7 @@ class CalendarLink
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?string $updatedAt
      */

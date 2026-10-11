@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class LmsInstructor
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -98,6 +99,7 @@ class LmsInstructor
     public ?string $title = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

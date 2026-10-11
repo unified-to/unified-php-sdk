@@ -43,6 +43,60 @@ class AtsJobQuestion
     public ?string $id = null;
 
     /**
+     * latest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $maxAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('max_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $maxAt = null;
+
+    /**
+     * maximum answer length (TEXT)
+     *
+     * @var ?float $maxLength
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('max_length')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $maxLength = null;
+
+    /**
+     * maximum answer value (NUMBER)
+     *
+     * @var ?float $maxValue
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('max_value')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $maxValue = null;
+
+    /**
+     * earliest allowed answer (DATE) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $minAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('min_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $minAt = null;
+
+    /**
+     * minimum answer length (TEXT)
+     *
+     * @var ?float $minLength
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('min_length')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $minLength = null;
+
+    /**
+     * minimum answer value (NUMBER)
+     *
+     * @var ?float $minValue
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('min_value')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $minValue = null;
+
+    /**
      * $options
      *
      * @var ?array<string> $options
@@ -51,6 +105,25 @@ class AtsJobQuestion
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $options = null;
+
+    /**
+     * only ask this question when the parent question's answer is one of these
+     *
+     * @var ?array<string> $parentAnswerValues
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_answer_values')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $parentAnswerValues = null;
+
+    /**
+     * id of the question in this job's questions list that this question depends on
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
 
     /**
      *
@@ -73,18 +146,34 @@ class AtsJobQuestion
      * @param  \Unified\Unified_to\Models\Shared\AtsJobQuestionType  $type
      * @param  ?string  $description
      * @param  ?string  $id
+     * @param  ?\DateTime  $maxAt
+     * @param  ?float  $maxLength
+     * @param  ?float  $maxValue
+     * @param  ?\DateTime  $minAt
+     * @param  ?float  $minLength
+     * @param  ?float  $minValue
      * @param  ?array<string>  $options
+     * @param  ?array<string>  $parentAnswerValues
+     * @param  ?string  $parentId
      * @param  ?string  $prompt
      * @param  ?bool  $required
      * @phpstan-pure
      */
-    public function __construct(string $question, AtsJobQuestionType $type, ?string $description = null, ?string $id = null, ?array $options = null, ?string $prompt = null, ?bool $required = null)
+    public function __construct(string $question, AtsJobQuestionType $type, ?string $description = null, ?string $id = null, ?\DateTime $maxAt = null, ?float $maxLength = null, ?float $maxValue = null, ?\DateTime $minAt = null, ?float $minLength = null, ?float $minValue = null, ?array $options = null, ?array $parentAnswerValues = null, ?string $parentId = null, ?string $prompt = null, ?bool $required = null)
     {
         $this->question = $question;
         $this->type = $type;
         $this->description = $description;
         $this->id = $id;
+        $this->maxAt = $maxAt;
+        $this->maxLength = $maxLength;
+        $this->maxValue = $maxValue;
+        $this->minAt = $minAt;
+        $this->minLength = $minLength;
+        $this->minValue = $minValue;
         $this->options = $options;
+        $this->parentAnswerValues = $parentAnswerValues;
+        $this->parentId = $parentId;
         $this->prompt = $prompt;
         $this->required = $required;
     }

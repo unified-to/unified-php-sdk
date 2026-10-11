@@ -22,6 +22,7 @@ class CalendarRecordingMedia
     public ?array $attendees = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -30,6 +31,7 @@ class CalendarRecordingMedia
     public ?\DateTime $endAt = null;
 
     /**
+     * two digit ISO code
      *
      * @var ?string $language
      */
@@ -46,6 +48,7 @@ class CalendarRecordingMedia
     public ?string $recordingDownloadUrl = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -54,6 +57,7 @@ class CalendarRecordingMedia
     public ?\DateTime $startAt = null;
 
     /**
+     * provider AI-generated meeting summary
      *
      * @var ?string $summary
      */
@@ -62,6 +66,7 @@ class CalendarRecordingMedia
     public ?string $summary = null;
 
     /**
+     * download/export link for a provider AI summary document (e.g. Google Meet smart notes)
      *
      * @var ?string $summaryDownloadUrl
      */

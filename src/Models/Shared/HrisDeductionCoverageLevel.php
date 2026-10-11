@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Level selected by employee (e.g. "FAMILY", "EMPLOYEE_ONLY", or other) */
 enum HrisDeductionCoverageLevel: string
 {
     case EmployeeOnly = 'EMPLOYEE_ONLY';

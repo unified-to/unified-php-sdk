@@ -22,6 +22,7 @@ class SocialProfile
     public ?PropertySocialProfileAddress $address = null;
 
     /**
+     * Profile image URL
      *
      * @var ?string $avatarUrl
      */
@@ -30,6 +31,7 @@ class SocialProfile
     public ?string $avatarUrl = null;
 
     /**
+     * Primary category of the profile
      *
      * @var ?string $category
      */
@@ -38,6 +40,7 @@ class SocialProfile
     public ?string $category = null;
 
     /**
+     * When the profile was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -46,6 +49,7 @@ class SocialProfile
     public ?\DateTime $createdAt = null;
 
     /**
+     * Bio or description of the profile
      *
      * @var ?string $description
      */
@@ -54,6 +58,7 @@ class SocialProfile
     public ?string $description = null;
 
     /**
+     * Unique identifier for the profile
      *
      * @var ?string $id
      */
@@ -62,6 +67,7 @@ class SocialProfile
     public ?string $id = null;
 
     /**
+     * Whether the profile is private/protected
      *
      * @var ?bool $isPrivate
      */
@@ -70,6 +76,7 @@ class SocialProfile
     public ?bool $isPrivate = null;
 
     /**
+     * Whether the profile is verified
      *
      * @var ?bool $isVerified
      */
@@ -78,6 +85,7 @@ class SocialProfile
     public ?bool $isVerified = null;
 
     /**
+     * Free-text location/locale string
      *
      * @var ?string $location
      */
@@ -96,6 +104,7 @@ class SocialProfile
     public ?PropertySocialProfileMetrics $metrics = null;
 
     /**
+     * Display name of the profile
      *
      * @var ?string $name
      */
@@ -104,6 +113,7 @@ class SocialProfile
     public ?string $name = null;
 
     /**
+     * Parent profile id when profiles are nested (e.g. account → location)
      *
      * @var ?string $parentId
      */
@@ -112,6 +122,7 @@ class SocialProfile
     public ?string $parentId = null;
 
     /**
+     * Contact phone number
      *
      * @var ?string $phone
      */
@@ -120,7 +131,7 @@ class SocialProfile
     public ?string $phone = null;
 
     /**
-     * $raw
+     * Raw data from integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -130,6 +141,7 @@ class SocialProfile
     public ?array $raw = null;
 
     /**
+     * When the profile was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -138,6 +150,7 @@ class SocialProfile
     public ?\DateTime $updatedAt = null;
 
     /**
+     * Public URL of the profile
      *
      * @var ?string $url
      */
@@ -146,6 +159,7 @@ class SocialProfile
     public ?string $url = null;
 
     /**
+     * Handle/username/store code
      *
      * @var ?string $username
      */
@@ -154,6 +168,7 @@ class SocialProfile
     public ?string $username = null;
 
     /**
+     * External website linked from the profile
      *
      * @var ?string $websiteUrl
      */

@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [createUnifiedConnection](#createunifiedconnection) - Create connection
+* [createUnifiedConnectionReauth](#createunifiedconnectionreauth) - Create a re-authorization token for a connection
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
@@ -13,7 +14,7 @@
 
 ## createUnifiedConnection
 
-Used only to import existing customer credentials; use "Authorize new connection" instead
+Used only to import existing customer credentials. To connect a new account, use the "Authorize or re-authorize a connection" auth URL instead. To change credentials on an existing connection, use "Update connection".
 
 ### Example Usage
 
@@ -58,6 +59,56 @@ if ($response->connection !== null) {
 ### Response
 
 **[?Operations\CreateUnifiedConnectionResponse](../../Models/Operations/CreateUnifiedConnectionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createUnifiedConnectionReauth
+
+Returns a short-lived, single-use token that lets your end-user re-authorize this existing connection in place via the "Authorize or re-authorize a connection" URL with connection_id and reauth_token.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createUnifiedConnectionReauth" method="post" path="/unified/connection/{id}/reauth" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateUnifiedConnectionReauthRequest(
+    id: '<id>',
+);
+
+$response = $sdk->connection->createUnifiedConnectionReauth(
+    request: $request
+);
+
+if ($response->connectionReauth !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                         | [Operations\CreateUnifiedConnectionReauthRequest](../../Models/Operations/CreateUnifiedConnectionReauthRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+
+### Response
+
+**[?Operations\CreateUnifiedConnectionReauthResponse](../../Models/Operations/CreateUnifiedConnectionReauthResponse.md)**
 
 ### Errors
 

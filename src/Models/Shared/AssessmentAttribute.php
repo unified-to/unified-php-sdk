@@ -27,6 +27,7 @@ class AssessmentAttribute
     public AssessmentAttributeType $type;
 
     /**
+     * For SUB_RESULT type
      *
      * @var ?string $reference
      */
@@ -51,6 +52,7 @@ class AssessmentAttribute
     public ?float $scoreValue = null;
 
     /**
+     * For SUB_RESULT type
      *
      * @var ?\Unified\Unified_to\Models\Shared\AssessmentAttributeStatus $status
      */
@@ -60,6 +62,7 @@ class AssessmentAttribute
     public ?AssessmentAttributeStatus $status = null;
 
     /**
+     * For TEXT and NUMBER types
      *
      * @var ?string $value
      */

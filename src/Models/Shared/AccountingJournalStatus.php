@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Posting state of the journal entry */
 enum AccountingJournalStatus: string
 {
     case Draft = 'DRAFT';

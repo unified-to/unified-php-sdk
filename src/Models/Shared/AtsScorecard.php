@@ -36,6 +36,7 @@ class AtsScorecard
     public ?string $comment = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -105,6 +106,7 @@ class AtsScorecard
     public ?Recommendation $recommendation = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

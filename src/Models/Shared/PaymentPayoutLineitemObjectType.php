@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** What this payout line settles */
 enum PaymentPayoutLineitemObjectType: string
 {
     case Payment = 'PAYMENT';

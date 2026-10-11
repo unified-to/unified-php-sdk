@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** SOURCE, or BIDIRECTIONAL for import+export connectors */
 enum CdpSourceDirection: string
 {
     case Source = 'SOURCE';

@@ -47,6 +47,7 @@ class PropertyAdsReportMetricsCampaign
     public ?PropertyAdsReportMetricsCampaignBudgetUnit $budgetUnit = null;
 
     /**
+     * Resource name for existing/shared budget (Google)
      *
      * @var ?string $campaignBudgetIdentifier
      */
@@ -55,6 +56,7 @@ class PropertyAdsReportMetricsCampaign
     public ?string $campaignBudgetIdentifier = null;
 
     /**
+     * Housing, employment, credit, NONE (Meta)
      *
      * @var ?string $category
      */
@@ -63,6 +65,7 @@ class PropertyAdsReportMetricsCampaign
     public ?string $category = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -79,6 +82,7 @@ class PropertyAdsReportMetricsCampaign
     public ?string $currency = null;
 
     /**
+     * read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignEffectiveStatus $effectiveStatus
      */
@@ -88,6 +92,7 @@ class PropertyAdsReportMetricsCampaign
     public ?PropertyAdsReportMetricsCampaignEffectiveStatus $effectiveStatus = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -183,6 +188,7 @@ class PropertyAdsReportMetricsCampaign
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -217,6 +223,7 @@ class PropertyAdsReportMetricsCampaign
     public ?float $totalSpendAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

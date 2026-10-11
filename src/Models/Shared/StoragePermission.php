@@ -21,6 +21,7 @@ class StoragePermission
     public array $roles;
 
     /**
+     * (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -45,6 +46,7 @@ class StoragePermission
     public ?bool $isPublic = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

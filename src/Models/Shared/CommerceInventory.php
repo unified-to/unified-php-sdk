@@ -28,6 +28,7 @@ class CommerceInventory
     public ?string $id = null;
 
     /**
+     * (reference to CommerceItem)
      *
      * @var ?string $itemId
      */
@@ -44,6 +45,7 @@ class CommerceInventory
     public ?string $itemOptionId = null;
 
     /**
+     * (reference to CommerceCommerceItemvariant)
      *
      * @var ?string $itemVariantId
      */
@@ -52,6 +54,7 @@ class CommerceInventory
     public ?string $itemVariantId = null;
 
     /**
+     * (reference to CommerceLocation)
      *
      * @var ?string $locationId
      */
@@ -70,6 +73,7 @@ class CommerceInventory
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

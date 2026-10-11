@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** For SUB_RESULT type */
 enum AssessmentAttributeStatus: string
 {
     case Open = 'OPEN';

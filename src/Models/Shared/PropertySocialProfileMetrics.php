@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertySocialProfileMetrics
 {
     /**
+     * Number of followers
      *
      * @var ?float $followerCount
      */
@@ -21,6 +22,7 @@ class PropertySocialProfileMetrics
     public ?float $followerCount = null;
 
     /**
+     * Number of accounts this profile follows
      *
      * @var ?float $followingCount
      */
@@ -29,6 +31,7 @@ class PropertySocialProfileMetrics
     public ?float $followingCount = null;
 
     /**
+     * Total number of posts published by this profile
      *
      * @var ?float $postCount
      */

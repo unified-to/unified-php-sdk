@@ -22,6 +22,7 @@ class TicketingTicket
     public ?array $attachmentIds = null;
 
     /**
+     * (reference to AccountingCategory)
      *
      * @var ?string $categoryId
      */
@@ -30,6 +31,7 @@ class TicketingTicket
     public ?string $categoryId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $closedAt
      */
@@ -38,6 +40,7 @@ class TicketingTicket
     public ?\DateTime $closedAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -54,6 +57,7 @@ class TicketingTicket
     public ?string $customerId = null;
 
     /**
+     * Full description of ticket issue
      *
      * @var ?string $description
      */
@@ -62,6 +66,7 @@ class TicketingTicket
     public ?string $description = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $dueAt
      */
@@ -96,6 +101,7 @@ class TicketingTicket
     public ?array $raw = null;
 
     /**
+     * Channel where ticket was originally submitted
      *
      * @var ?string $source
      */
@@ -104,6 +110,7 @@ class TicketingTicket
     public ?string $source = null;
 
     /**
+     * Reference to source-specific object
      *
      * @var ?string $sourceRef
      */
@@ -121,6 +128,7 @@ class TicketingTicket
     public ?TicketingTicketStatus $status = null;
 
     /**
+     * short description of the ticket
      *
      * @var ?string $subject
      */
@@ -139,6 +147,7 @@ class TicketingTicket
     public ?array $tags = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -155,6 +164,7 @@ class TicketingTicket
     public ?string $url = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

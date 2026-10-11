@@ -29,6 +29,7 @@ class KmsComment
     public ?ContentType $contentType = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -45,6 +46,7 @@ class KmsComment
     public ?string $id = null;
 
     /**
+     * (reference to KmsPage)
      *
      * @var ?string $pageId
      */
@@ -80,6 +82,7 @@ class KmsComment
     public ?KmsCommentType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -88,6 +91,7 @@ class KmsComment
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

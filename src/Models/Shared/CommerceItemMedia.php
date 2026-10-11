@@ -53,6 +53,7 @@ class CommerceItemMedia
     public ?array $metadata = null;
 
     /**
+     * 1 is the first
      *
      * @var ?float $position
      */

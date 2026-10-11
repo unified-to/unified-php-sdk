@@ -9,9 +9,11 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** HrisAttendance - Also called timesheets */
 class HrisAttendance
 {
     /**
+     * (reference to HrisEmployee)
      *
      * @var string $employeeUserId
      */
@@ -19,6 +21,7 @@ class HrisAttendance
     public string $employeeUserId;
 
     /**
+     * clock-out (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var \DateTime $endAt
      */
@@ -26,6 +29,7 @@ class HrisAttendance
     public \DateTime $endAt;
 
     /**
+     * clock-in (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var \DateTime $startAt
      */
@@ -42,6 +46,7 @@ class HrisAttendance
     public ?PropertyHrisAttendanceAddress $address = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $approvedAt
      */
@@ -50,6 +55,7 @@ class HrisAttendance
     public ?\DateTime $approvedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $approverUserId
      */
@@ -68,6 +74,7 @@ class HrisAttendance
     public ?array $breaks = null;
 
     /**
+     * (reference to HrisCompany)
      *
      * @var ?string $companyId
      */
@@ -76,6 +83,7 @@ class HrisAttendance
     public ?string $companyId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -84,6 +92,7 @@ class HrisAttendance
     public ?\DateTime $createdAt = null;
 
     /**
+     * pairs with hourly_rate and tip amounts
      *
      * @var ?string $currency
      */
@@ -92,6 +101,7 @@ class HrisAttendance
     public ?string $currency = null;
 
     /**
+     * cash tips declared by the employee for this attendance record
      *
      * @var ?float $declaredTipsAmount
      */
@@ -100,6 +110,7 @@ class HrisAttendance
     public ?float $declaredTipsAmount = null;
 
     /**
+     * department, team, etc. (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -116,6 +127,7 @@ class HrisAttendance
     public ?float $hourlyRate = null;
 
     /**
+     * worked hours
      *
      * @var ?float $hours
      */
@@ -140,6 +152,7 @@ class HrisAttendance
     public ?string $jobName = null;
 
     /**
+     * (reference to HrisLocation)
      *
      * @var ?string $locationId
      */
@@ -148,6 +161,7 @@ class HrisAttendance
     public ?string $locationId = null;
 
     /**
+     * card/non-cash tips attributed to this attendance record
      *
      * @var ?float $nonCashTipsAmount
      */
@@ -175,6 +189,7 @@ class HrisAttendance
     public ?HrisAttendanceStatus $status = null;
 
     /**
+     * the scheduled hris_timeshift this attendance record fulfils
      *
      * @var ?string $timeshiftId
      */
@@ -191,6 +206,7 @@ class HrisAttendance
     public ?string $timezone = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -29,6 +29,7 @@ class PropertyAdsGroupTargetingOptimization
     public ?bool $advantagePlacements = null;
 
     /**
+     * Google: bid_only falsetrue
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingOptimizationMode $mode
      */

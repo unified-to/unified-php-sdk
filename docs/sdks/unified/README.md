@@ -5,15 +5,16 @@
 ### Available Operations
 
 * [createUnifiedConnection](#createunifiedconnection) - Create connection
+* [createUnifiedConnectionReauth](#createunifiedconnectionreauth) - Create a re-authorization token for a connection
 * [createUnifiedEnvironment](#createunifiedenvironment) - Create new environments
+* [createUnifiedSecretsmanager](#createunifiedsecretsmanager) - Create secrets manager
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
-* [createUnifiedWorkspaceSecretsmanager](#createunifiedworkspacesecretsmanager) - Create secrets manager
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
-* [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize new connection
+* [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](#getunifiedissue) - Retrieve support issue
+* [getUnifiedSecretsmanager](#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
-* [getUnifiedWorkspaceSecretsmanager](#getunifiedworkspacesecretsmanager) - Retrieve secrets manager
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
 * [listUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
@@ -21,22 +22,24 @@
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
 * [listUnifiedNotifications](#listunifiednotifications) - List event notifications
+* [listUnifiedSecretsmanagerInstructions](#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
+* [listUnifiedSecretsmanagerSecrets](#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
+* [listUnifiedSecretsmanagers](#listunifiedsecretsmanagers) - List secrets managers
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
-* [listUnifiedWorkspaceSecretsmanagers](#listunifiedworkspacesecretsmanagers) - List secrets managers
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
+* [removeUnifiedSecretsmanager](#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
-* [removeUnifiedWorkspaceSecretsmanager](#removeunifiedworkspacesecretsmanager) - Remove secrets manager
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
 
 ## createUnifiedConnection
 
-Used only to import existing customer credentials; use "Authorize new connection" instead
+Used only to import existing customer credentials. To connect a new account, use the "Authorize or re-authorize a connection" auth URL instead. To change credentials on an existing connection, use "Update connection".
 
 ### Example Usage
 
@@ -88,6 +91,56 @@ if ($response->connection !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## createUnifiedConnectionReauth
+
+Returns a short-lived, single-use token that lets your end-user re-authorize this existing connection in place via the "Authorize or re-authorize a connection" URL with connection_id and reauth_token.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createUnifiedConnectionReauth" method="post" path="/unified/connection/{id}/reauth" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateUnifiedConnectionReauthRequest(
+    id: '<id>',
+);
+
+$response = $sdk->unified->createUnifiedConnectionReauth(
+    request: $request
+);
+
+if ($response->connectionReauth !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                          | Type                                                                                                               | Required                                                                                                           | Description                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                         | [Operations\CreateUnifiedConnectionReauthRequest](../../Models/Operations/CreateUnifiedConnectionReauthRequest.md) | :heavy_check_mark:                                                                                                 | The request object to use for the request.                                                                         |
+
+### Response
+
+**[?Operations\CreateUnifiedConnectionReauthResponse](../../Models/Operations/CreateUnifiedConnectionReauthResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## createUnifiedEnvironment
 
 Create new environments
@@ -128,6 +181,61 @@ if ($response->environments !== null) {
 ### Response
 
 **[?Operations\CreateUnifiedEnvironmentResponse](../../Models/Operations/CreateUnifiedEnvironmentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createUnifiedSecretsmanager
+
+Create secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createUnifiedSecretsmanager" method="post" path="/unified/secretsmanager" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Shared\SecretsManager(
+    auth: [
+        'key' => '<value>',
+        'key1' => '<value>',
+    ],
+    name: '<value>',
+    type: Shared\SecretsManagerType::Akeyless,
+);
+
+$response = $sdk->unified->createUnifiedSecretsmanager(
+    request: $request
+);
+
+if ($response->secretsManager !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                      | Type                                                           | Required                                                       | Description                                                    |
+| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
+| `$request`                                                     | [Shared\SecretsManager](../../Models/Shared/SecretsManager.md) | :heavy_check_mark:                                             | The request object to use for the request.                     |
+
+### Response
+
+**[?Operations\CreateUnifiedSecretsmanagerResponse](../../Models/Operations/CreateUnifiedSecretsmanagerResponse.md)**
 
 ### Errors
 
@@ -183,60 +291,6 @@ if ($response->webhook !== null) {
 ### Response
 
 **[?Operations\CreateUnifiedWebhookResponse](../../Models/Operations/CreateUnifiedWebhookResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## createUnifiedWorkspaceSecretsmanager
-
-Create secrets manager
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="createUnifiedWorkspaceSecretsmanager" method="post" path="/unified/workspace/secretsmanager" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Shared;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Shared\SecretsManager(
-    auth: [
-
-    ],
-    name: '<value>',
-    type: Shared\SecretsManagerType::Hashicorp,
-);
-
-$response = $sdk->unified->createUnifiedWorkspaceSecretsmanager(
-    request: $request
-);
-
-if ($response->secretsManager !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                      | Type                                                           | Required                                                       | Description                                                    |
-| -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------- |
-| `$request`                                                     | [Shared\SecretsManager](../../Models/Shared/SecretsManager.md) | :heavy_check_mark:                                             | The request object to use for the request.                     |
-
-### Response
-
-**[?Operations\CreateUnifiedWorkspaceSecretsmanagerResponse](../../Models/Operations/CreateUnifiedWorkspaceSecretsmanagerResponse.md)**
 
 ### Errors
 
@@ -346,7 +400,7 @@ if ($response->connection !== null) {
 
 ## getUnifiedIntegrationAuth
 
-Returns an authorization URL for the specified integration.  Once a successful authorization occurs, a new connection is created.
+Returns an authorization URL for the specified integration. After successful authorization, a new connection is created unless connection_id and reauth_token are provided, in which case the existing connection is updated in place.
 
 ### Example Usage
 
@@ -445,6 +499,56 @@ if ($response->issue !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getUnifiedSecretsmanager
+
+Retrieve secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getUnifiedSecretsmanager" method="get" path="/unified/secretsmanager/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetUnifiedSecretsmanagerRequest(
+    id: '<id>',
+);
+
+$response = $sdk->unified->getUnifiedSecretsmanager(
+    request: $request
+);
+
+if ($response->secretsManager !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\GetUnifiedSecretsmanagerRequest](../../Models/Operations/GetUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\GetUnifiedSecretsmanagerResponse](../../Models/Operations/GetUnifiedSecretsmanagerResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getUnifiedWebhook
 
 Retrieve webhook by its ID
@@ -488,56 +592,6 @@ if ($response->webhook !== null) {
 ### Response
 
 **[?Operations\GetUnifiedWebhookResponse](../../Models/Operations/GetUnifiedWebhookResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## getUnifiedWorkspaceSecretsmanager
-
-Retrieve secrets manager
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="getUnifiedWorkspaceSecretsmanager" method="get" path="/unified/workspace/secretsmanager/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\GetUnifiedWorkspaceSecretsmanagerRequest(
-    id: '<id>',
-);
-
-$response = $sdk->unified->getUnifiedWorkspaceSecretsmanager(
-    request: $request
-);
-
-if ($response->secretsManager !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
-| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                 | [Operations\GetUnifiedWorkspaceSecretsmanagerRequest](../../Models/Operations/GetUnifiedWorkspaceSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
-
-### Response
-
-**[?Operations\GetUnifiedWorkspaceSecretsmanagerResponse](../../Models/Operations/GetUnifiedWorkspaceSecretsmanagerResponse.md)**
 
 ### Errors
 
@@ -871,6 +925,144 @@ if ($response->notifications !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listUnifiedSecretsmanagerInstructions
+
+List secrets manager setup instructions
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUnifiedSecretsmanagerInstructions" method="get" path="/unified/secretsmanager/instructions" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->unified->listUnifiedSecretsmanagerInstructions(
+
+);
+
+if ($response->secretsManagerInstructionsList !== null) {
+    // handle response
+}
+```
+
+### Response
+
+**[?Operations\ListUnifiedSecretsmanagerInstructionsResponse](../../Models/Operations/ListUnifiedSecretsmanagerInstructionsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listUnifiedSecretsmanagerSecrets
+
+List secrets in a secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUnifiedSecretsmanagerSecrets" method="get" path="/unified/secretsmanager/secrets" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListUnifiedSecretsmanagerSecretsRequest(
+    secretsmanagerId: '<id>',
+);
+
+$response = $sdk->unified->listUnifiedSecretsmanagerSecrets(
+    request: $request
+);
+
+if ($response->secretsManagerSecrets !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                               | [Operations\ListUnifiedSecretsmanagerSecretsRequest](../../Models/Operations/ListUnifiedSecretsmanagerSecretsRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+### Response
+
+**[?Operations\ListUnifiedSecretsmanagerSecretsResponse](../../Models/Operations/ListUnifiedSecretsmanagerSecretsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listUnifiedSecretsmanagers
+
+List secrets managers
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUnifiedSecretsmanagers" method="get" path="/unified/secretsmanager" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->unified->listUnifiedSecretsmanagers(
+    request: $request
+);
+
+if ($response->secretsManagers !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\ListUnifiedSecretsmanagersRequest](../../Models/Operations/ListUnifiedSecretsmanagersRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\ListUnifiedSecretsmanagersResponse](../../Models/Operations/ListUnifiedSecretsmanagersResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listUnifiedWebhooks
 
 Returns all registered webhooks
@@ -911,53 +1103,6 @@ if ($response->webhooks !== null) {
 ### Response
 
 **[?Operations\ListUnifiedWebhooksResponse](../../Models/Operations/ListUnifiedWebhooksResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## listUnifiedWorkspaceSecretsmanagers
-
-List secrets managers
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="listUnifiedWorkspaceSecretsmanagers" method="get" path="/unified/workspace/secretsmanager" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-
-
-$response = $sdk->unified->listUnifiedWorkspaceSecretsmanagers(
-    request: $request
-);
-
-if ($response->secretsManagers !== null) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                      | Type                                                                                                                           | Required                                                                                                                       | Description                                                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `$request`                                                                                                                     | [Operations\ListUnifiedWorkspaceSecretsmanagersRequest](../../Models/Operations/ListUnifiedWorkspaceSecretsmanagersRequest.md) | :heavy_check_mark:                                                                                                             | The request object to use for the request.                                                                                     |
-
-### Response
-
-**[?Operations\ListUnifiedWorkspaceSecretsmanagersResponse](../../Models/Operations/ListUnifiedWorkspaceSecretsmanagersResponse.md)**
 
 ### Errors
 
@@ -1231,6 +1376,56 @@ if ($response->environments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeUnifiedSecretsmanager
+
+Remove secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeUnifiedSecretsmanager" method="delete" path="/unified/secretsmanager/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveUnifiedSecretsmanagerRequest(
+    id: '<id>',
+);
+
+$response = $sdk->unified->removeUnifiedSecretsmanager(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\RemoveUnifiedSecretsmanagerRequest](../../Models/Operations/RemoveUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+### Response
+
+**[?Operations\RemoveUnifiedSecretsmanagerResponse](../../Models/Operations/RemoveUnifiedSecretsmanagerResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeUnifiedWebhook
 
 Remove webhook subscription
@@ -1274,56 +1469,6 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveUnifiedWebhookResponse](../../Models/Operations/RemoveUnifiedWebhookResponse.md)**
-
-### Errors
-
-| Error Type          | Status Code         | Content Type        |
-| ------------------- | ------------------- | ------------------- |
-| Errors\SDKException | 4XX, 5XX            | \*/\*               |
-
-## removeUnifiedWorkspaceSecretsmanager
-
-Remove secrets manager
-
-### Example Usage
-
-<!-- UsageSnippet language="php" operationID="removeUnifiedWorkspaceSecretsmanager" method="delete" path="/unified/workspace/secretsmanager/{id}" -->
-```php
-declare(strict_types=1);
-
-require 'vendor/autoload.php';
-
-use Unified\Unified_to;
-use Unified\Unified_to\Models\Operations;
-
-$sdk = Unified_to\UnifiedTo::builder()
-    ->setSecurity(
-        '<YOUR_API_KEY_HERE>'
-    )
-    ->build();
-
-$request = new Operations\RemoveUnifiedWorkspaceSecretsmanagerRequest(
-    id: '<id>',
-);
-
-$response = $sdk->unified->removeUnifiedWorkspaceSecretsmanager(
-    request: $request
-);
-
-if ($response->statusCode === 200) {
-    // handle response
-}
-```
-
-### Parameters
-
-| Parameter                                                                                                                        | Type                                                                                                                             | Required                                                                                                                         | Description                                                                                                                      |
-| -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| `$request`                                                                                                                       | [Operations\RemoveUnifiedWorkspaceSecretsmanagerRequest](../../Models/Operations/RemoveUnifiedWorkspaceSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                                               | The request object to use for the request.                                                                                       |
-
-### Response
-
-**[?Operations\RemoveUnifiedWorkspaceSecretsmanagerResponse](../../Models/Operations/RemoveUnifiedWorkspaceSecretsmanagerResponse.md)**
 
 ### Errors
 

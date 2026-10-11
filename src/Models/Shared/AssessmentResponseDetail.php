@@ -36,6 +36,7 @@ class AssessmentResponseDetail
     public ?bool $isPrivate = null;
 
     /**
+     * In reference to the parameter input
      *
      * @var ?string $parameterId
      */

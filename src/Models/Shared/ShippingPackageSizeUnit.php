@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Unit for dimensions (cm, inch) */
 enum ShippingPackageSizeUnit: string
 {
     case Cm = 'cm';

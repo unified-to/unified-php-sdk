@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Promoted entity types for ads_promoted list endpoint */
 enum AdsPromotedType: string
 {
     case PageId = 'PAGE_ID';

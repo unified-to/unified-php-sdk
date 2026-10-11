@@ -42,6 +42,7 @@ class LmsContent
     public ?array $courseIds = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -58,6 +59,7 @@ class LmsContent
     public ?string $description = null;
 
     /**
+     * Difficulty or level of the content (e.g. Beginner, Intermediate, Advanced)
      *
      * @var ?string $difficulty
      */
@@ -154,6 +156,7 @@ class LmsContent
     public ?string $providerName = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $publishedAt
      */
@@ -218,6 +221,7 @@ class LmsContent
     public ?array $tags = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

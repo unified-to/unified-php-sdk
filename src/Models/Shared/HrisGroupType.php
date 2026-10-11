@@ -18,4 +18,5 @@ enum HrisGroupType: string
     case BusinessUnit = 'BUSINESS_UNIT';
     case Branch = 'BRANCH';
     case SubDepartment = 'SUB_DEPARTMENT';
+    case PayGroup = 'PAY_GROUP';
 }

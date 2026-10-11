@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ScimGroup
 {
     /**
+     * The group's display name
      *
      * @var string $displayName
      */
@@ -19,6 +20,7 @@ class ScimGroup
     public string $displayName;
 
     /**
+     * A groups id in an external system
      *
      * @var ?string $externalId
      */
@@ -27,6 +29,7 @@ class ScimGroup
     public ?string $externalId = null;
 
     /**
+     * Organization [NOT STANDARD]
      *
      * @var ?string $groupType
      */
@@ -35,6 +38,7 @@ class ScimGroup
     public ?string $groupType = null;
 
     /**
+     * The group's unique id
      *
      * @var ?string $id
      */

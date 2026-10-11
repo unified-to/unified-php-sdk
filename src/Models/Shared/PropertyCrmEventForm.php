@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyCrmEventForm
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $archivedAt
      */

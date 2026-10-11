@@ -20,5 +20,8 @@ enum CreateGenaiPromptQueryParamFields: string
     case McpUrl = 'mcp_url';
     case McpDeferredTools = 'mcp_deferred_tools';
     case McpAuthorizationToken = 'mcp_authorization_token';
+    case Questions = 'questions';
+    case Answers = 'answers';
+    case SkillIds = 'skill_ids';
     case Raw = 'raw';
 }

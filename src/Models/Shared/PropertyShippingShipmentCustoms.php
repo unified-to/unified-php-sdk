@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyShippingShipmentCustoms
 {
     /**
+     * Customs declared value
      *
      * @var ?float $amount
      */
@@ -38,6 +39,7 @@ class PropertyShippingShipmentCustoms
     public ?string $currency = null;
 
     /**
+     * Explanation of contents
      *
      * @var ?string $description
      */
@@ -74,6 +76,7 @@ class PropertyShippingShipmentCustoms
     public ?NonDeliveryOption $nonDeliveryOption = null;
 
     /**
+     * Importer EORI number
      *
      * @var ?string $recipientEori
      */
@@ -82,6 +85,7 @@ class PropertyShippingShipmentCustoms
     public ?string $recipientEori = null;
 
     /**
+     * Importer tax ID
      *
      * @var ?string $recipientTaxNumber
      */
@@ -100,6 +104,7 @@ class PropertyShippingShipmentCustoms
     public ?array $restrictions = null;
 
     /**
+     * Exporter EORI number
      *
      * @var ?string $shipperEori
      */
@@ -108,6 +113,7 @@ class PropertyShippingShipmentCustoms
     public ?string $shipperEori = null;
 
     /**
+     * Exporter tax ID
      *
      * @var ?string $shipperTaxNumber
      */

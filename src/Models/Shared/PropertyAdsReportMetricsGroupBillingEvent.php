@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Billing events for ads_group (what you pay for; cross-platform; platform-specific values allowed as pass-through) */
 enum PropertyAdsReportMetricsGroupBillingEvent: string
 {
     case Impressions = 'IMPRESSIONS';

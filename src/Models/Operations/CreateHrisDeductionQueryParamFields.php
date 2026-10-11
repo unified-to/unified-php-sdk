@@ -25,5 +25,10 @@ enum CreateHrisDeductionQueryParamFields: string
     case EndAt = 'end_at';
     case IsActive = 'is_active';
     case Notes = 'notes';
+    case EmployerAmount = 'employer_amount';
+    case EmployerType = 'employer_type';
+    case MaxAmount = 'max_amount';
+    case PaycodeId = 'paycode_id';
+    case GarnishmentType = 'garnishment_type';
     case Raw = 'raw';
 }

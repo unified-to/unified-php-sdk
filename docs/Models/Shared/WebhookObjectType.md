@@ -1,5 +1,7 @@
 # WebhookObjectType
 
+The object to return (eg. CRM "contact")
+
 
 ## Values
 
@@ -18,12 +20,15 @@
 | `AccountingOrganization`        | accounting_organization         |
 | `AccountingOrder`               | accounting_order                |
 | `AccountingSalesorder`          | accounting_salesorder           |
+| `AccountingSalesreceipt`        | accounting_salesreceipt         |
 | `AccountingPurchaseorder`       | accounting_purchaseorder        |
 | `AccountingBalancesheet`        | accounting_balancesheet         |
 | `AccountingProfitloss`          | accounting_profitloss           |
 | `AccountingTrialbalance`        | accounting_trialbalance         |
 | `AccountingCategory`            | accounting_category             |
 | `AccountingExpense`             | accounting_expense              |
+| `AccountingExpensereport`       | accounting_expensereport        |
+| `AccountingPurchasereceipt`     | accounting_purchasereceipt      |
 | `AccountingCashflow`            | accounting_cashflow             |
 | `AccountingQuote`               | accounting_quote                |
 | `AccountingAgedreceivable`      | accounting_agedreceivable       |
@@ -79,6 +84,10 @@
 | `HrisBankaccount`               | hris_bankaccount                |
 | `HrisDocument`                  | hris_document                   |
 | `HrisTaxonomy`                  | hris_taxonomy                   |
+| `HrisJob`                       | hris_job                        |
+| `HrisPayroll`                   | hris_payroll                    |
+| `HrisPaycode`                   | hris_paycode                    |
+| `HrisEarning`                   | hris_earning                    |
 | `MartechList`                   | martech_list                    |
 | `MartechMember`                 | martech_member                  |
 | `MartechCampaign`               | martech_campaign                |
@@ -92,6 +101,8 @@
 | `UcCall`                        | uc_call                         |
 | `UcComment`                     | uc_comment                      |
 | `UcRecording`                   | uc_recording                    |
+| `UcScorecard`                   | uc_scorecard                    |
+| `UcScorecardtemplate`           | uc_scorecardtemplate            |
 | `EnrichPerson`                  | enrich_person                   |
 | `EnrichCompany`                 | enrich_company                  |
 | `StorageFile`                   | storage_file                    |
@@ -101,6 +112,7 @@
 | `GenaiTask`                     | genai_task                      |
 | `GenaiAgent`                    | genai_agent                     |
 | `GenaiOrganization`             | genai_organization              |
+| `GenaiSkill`                    | genai_skill                     |
 | `MessagingMessage`              | messaging_message               |
 | `MessagingChannel`              | messaging_channel               |
 | `MessagingEvent`                | messaging_event                 |

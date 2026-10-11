@@ -28,12 +28,28 @@ class ListAtsInterviewsRequest
     public ?string $applicationId = null;
 
     /**
+     * The candidate ID to filter by
+     *
+     * @var ?string $candidateId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=candidate_id')]
+    public ?string $candidateId = null;
+
+    /**
      * Fields to return
      *
      * @var ?array<\Unified\Unified_to\Models\Operations\ListAtsInterviewsQueryParamFields> $fields
      */
     #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
     public ?array $fields = null;
+
+    /**
+     * The job ID to filter by
+     *
+     * @var ?string $jobId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=job_id')]
+    public ?string $jobId = null;
 
     /**
      *
@@ -90,7 +106,9 @@ class ListAtsInterviewsRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $applicationId
+     * @param  ?string  $candidateId
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListAtsInterviewsQueryParamFields>  $fields
+     * @param  ?string  $jobId
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -100,11 +118,13 @@ class ListAtsInterviewsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $applicationId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $applicationId = null, ?string $candidateId = null, ?array $fields = null, ?string $jobId = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->applicationId = $applicationId;
+        $this->candidateId = $candidateId;
         $this->fields = $fields;
+        $this->jobId = $jobId;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class SocialReview
 {
     /**
+     * Profile image URL of the reviewer
      *
      * @var ?string $authorAvatarUrl
      */
@@ -20,6 +21,7 @@ class SocialReview
     public ?string $authorAvatarUrl = null;
 
     /**
+     * Free-text location of the reviewer
      *
      * @var ?string $authorLocation
      */
@@ -28,6 +30,7 @@ class SocialReview
     public ?string $authorLocation = null;
 
     /**
+     * Display name of the reviewer
      *
      * @var ?string $authorName
      */
@@ -36,6 +39,7 @@ class SocialReview
     public ?string $authorName = null;
 
     /**
+     * The review text
      *
      * @var ?string $content
      */
@@ -44,6 +48,7 @@ class SocialReview
     public ?string $content = null;
 
     /**
+     * When the review was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -52,6 +57,7 @@ class SocialReview
     public ?\DateTime $createdAt = null;
 
     /**
+     * Unique identifier for the review
      *
      * @var ?string $id
      */
@@ -60,6 +66,7 @@ class SocialReview
     public ?string $id = null;
 
     /**
+     * The social profile (page/handle/listing) being reviewed
      *
      * @var ?string $profileId
      */
@@ -68,6 +75,7 @@ class SocialReview
     public ?string $profileId = null;
 
     /**
+     * Star rating, typically 1-5
      *
      * @var ?float $rating
      */
@@ -76,7 +84,7 @@ class SocialReview
     public ?float $rating = null;
 
     /**
-     * $raw
+     * Raw data from integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -96,6 +104,7 @@ class SocialReview
     public ?PropertySocialReviewReply $reply = null;
 
     /**
+     * Optional review title/headline
      *
      * @var ?string $title
      */
@@ -104,6 +113,7 @@ class SocialReview
     public ?string $title = null;
 
     /**
+     * When the review was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -112,6 +122,7 @@ class SocialReview
     public ?\DateTime $updatedAt = null;
 
     /**
+     * Public permalink to the review
      *
      * @var ?string $url
      */

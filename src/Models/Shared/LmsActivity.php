@@ -20,6 +20,7 @@ class LmsActivity
     public ?string $assignedGrade = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $completedAt
      */
@@ -36,6 +37,7 @@ class LmsActivity
     public ?string $contentId = null;
 
     /**
+     * For providers that track at course level (e.g., Learnupon enrollments) (reference to Course)
      *
      * @var ?string $courseId
      */
@@ -44,6 +46,7 @@ class LmsActivity
     public ?string $courseId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -94,6 +97,7 @@ class LmsActivity
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startedAt
      */
@@ -102,6 +106,7 @@ class LmsActivity
     public ?\DateTime $startedAt = null;
 
     /**
+     * (reference to LmsStudent)
      *
      * @var ?string $studentId
      */
@@ -110,6 +115,7 @@ class LmsActivity
     public ?string $studentId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

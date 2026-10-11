@@ -26,5 +26,6 @@ enum UpdateAccountingPurchaseorderQueryParamFields: string
     case OrganizationId = 'organization_id';
     case CategoryIds = 'category_ids';
     case Metadata = 'metadata';
+    case Attachments = 'attachments';
     case Raw = 'raw';
 }

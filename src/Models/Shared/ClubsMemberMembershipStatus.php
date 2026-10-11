@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The member's membership status */
 enum ClubsMemberMembershipStatus: string
 {
     case Member = 'MEMBER';

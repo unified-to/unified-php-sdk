@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Account status, such as ACTIVE or ARCHIVED */
 enum Status: string
 {
     case Active = 'ACTIVE';

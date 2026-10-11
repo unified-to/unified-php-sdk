@@ -13,6 +13,7 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class PatchHrisAttendanceRequest
 {
     /**
+     * Also called timesheets
      *
      * @var \Unified\Unified_to\Models\Shared\HrisAttendance $hrisAttendance
      */

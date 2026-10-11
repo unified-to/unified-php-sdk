@@ -40,6 +40,7 @@ class AccountingProfitloss
     public ?float $costOfGoodsSoldTotalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -56,6 +57,7 @@ class AccountingProfitloss
     public ?string $currency = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -134,6 +136,7 @@ class AccountingProfitloss
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -142,6 +145,7 @@ class AccountingProfitloss
     public ?\DateTime $startAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

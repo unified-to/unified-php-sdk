@@ -56,6 +56,7 @@ class AssessmentParameter
     public ?array $options = null;
 
     /**
+     * Question to ask the candidateuser
      *
      * @var ?string $publicQuestion
      */

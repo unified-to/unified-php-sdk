@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingBankfeedtransaction
 {
     /**
+     * GL account once categorized (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -20,6 +21,7 @@ class AccountingBankfeedtransaction
     public ?string $accountId = null;
 
     /**
+     * transaction amount (positive; direction from type)
      *
      * @var ?float $amount
      */
@@ -28,6 +30,7 @@ class AccountingBankfeedtransaction
     public ?float $amount = null;
 
     /**
+     * the bank's own category label
      *
      * @var ?string $bankCategory
      */
@@ -36,6 +39,7 @@ class AccountingBankfeedtransaction
     public ?string $bankCategory = null;
 
     /**
+     * ref -> BankfeedAccount this transaction belongs to
      *
      * @var ?string $bankfeedaccountId
      */
@@ -54,6 +58,7 @@ class AccountingBankfeedtransaction
     public ?array $categoryIds = null;
 
     /**
+     * matched vendor/customer once reconciled (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -62,6 +67,7 @@ class AccountingBankfeedtransaction
     public ?string $contactId = null;
 
     /**
+     * creation timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -70,6 +76,7 @@ class AccountingBankfeedtransaction
     public ?\DateTime $createdAt = null;
 
     /**
+     * ISO 4217
      *
      * @var ?string $currency
      */
@@ -78,6 +85,7 @@ class AccountingBankfeedtransaction
     public ?string $currency = null;
 
     /**
+     * bank memo / statement text
      *
      * @var ?string $description
      */
@@ -94,6 +102,7 @@ class AccountingBankfeedtransaction
     public ?string $id = null;
 
     /**
+     * true if not yet cleared
      *
      * @var ?bool $isPending
      */
@@ -102,6 +111,7 @@ class AccountingBankfeedtransaction
     public ?bool $isPending = null;
 
     /**
+     * counterparty as reported by the bank
      *
      * @var ?string $merchantName
      */
@@ -110,6 +120,7 @@ class AccountingBankfeedtransaction
     public ?string $merchantName = null;
 
     /**
+     * ref -> accounting Organization this record belongs to
      *
      * @var ?string $organizationId
      */
@@ -118,6 +129,7 @@ class AccountingBankfeedtransaction
     public ?string $organizationId = null;
 
     /**
+     * when it posted / cleared (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */
@@ -126,7 +138,7 @@ class AccountingBankfeedtransaction
     public ?\DateTime $postedAt = null;
 
     /**
-     * $raw
+     * The original data from the integration's API
      *
      * @var ?array<string, mixed> $raw
      */
@@ -136,6 +148,7 @@ class AccountingBankfeedtransaction
     public ?array $raw = null;
 
     /**
+     * bank reference or check number
      *
      * @var ?string $reference
      */
@@ -144,6 +157,7 @@ class AccountingBankfeedtransaction
     public ?string $reference = null;
 
     /**
+     * when the transaction occurred (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $transactionAt
      */
@@ -152,6 +166,7 @@ class AccountingBankfeedtransaction
     public ?\DateTime $transactionAt = null;
 
     /**
+     * direction: DEBIT, CREDIT
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingBankfeedtransactionType $type
      */
@@ -161,6 +176,7 @@ class AccountingBankfeedtransaction
     public ?AccountingBankfeedtransactionType $type = null;
 
     /**
+     * last-update timestamp, in ISO 8601 format and UTC (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

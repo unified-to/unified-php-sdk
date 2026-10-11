@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Posting state of the transaction */
 enum AccountingTransactionStatus: string
 {
     case Pending = 'PENDING';

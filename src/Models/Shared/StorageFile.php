@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class StorageFile
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class StorageFile
     public ?\DateTime $createdAt = null;
 
     /**
+     * base64 encoded file contents used to create/update only
      *
      * @var ?string $data
      */
@@ -36,6 +38,7 @@ class StorageFile
     public ?string $description = null;
 
     /**
+     * This link expires after 1 hour. When you need to retrieve the contents of a file, call the "Retrieve a file" endpoint again to get a new download_url.
      *
      * @var ?string $downloadUrl
      */
@@ -141,6 +144,7 @@ class StorageFile
     public ?StorageFileType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -149,6 +153,7 @@ class StorageFile
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

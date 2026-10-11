@@ -19,6 +19,7 @@ class MetadataMetadata
     public string $name;
 
     /**
+     * This is the unified object type that this metadata is associated with. eg. crm_contact or coomerce_item
      *
      * @var string $objectType
      */
@@ -26,6 +27,7 @@ class MetadataMetadata
     public string $objectType;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -105,6 +107,7 @@ class MetadataMetadata
     public ?string $slug = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

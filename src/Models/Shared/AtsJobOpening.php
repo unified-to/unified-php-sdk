@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AtsJobOpening
 {
     /**
+     * points to an application
      *
      * @var ?string $applicationId
      */
@@ -28,6 +29,7 @@ class AtsJobOpening
     public ?string $closeReason = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $closedAt
      */
@@ -36,6 +38,7 @@ class AtsJobOpening
     public ?\DateTime $closedAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $openedAt
      */

@@ -47,6 +47,7 @@ class AdsCampaign
     public ?BudgetUnit $budgetUnit = null;
 
     /**
+     * Resource name for existing/shared budget (Google)
      *
      * @var ?string $campaignBudgetIdentifier
      */
@@ -55,6 +56,7 @@ class AdsCampaign
     public ?string $campaignBudgetIdentifier = null;
 
     /**
+     * Housing, employment, credit, NONE (Meta)
      *
      * @var ?string $category
      */
@@ -63,6 +65,7 @@ class AdsCampaign
     public ?string $category = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -79,6 +82,7 @@ class AdsCampaign
     public ?string $currency = null;
 
     /**
+     * read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status
      *
      * @var ?\Unified\Unified_to\Models\Shared\EffectiveStatus $effectiveStatus
      */
@@ -88,6 +92,7 @@ class AdsCampaign
     public ?EffectiveStatus $effectiveStatus = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -183,6 +188,7 @@ class AdsCampaign
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -217,6 +223,7 @@ class AdsCampaign
     public ?float $totalSpendAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

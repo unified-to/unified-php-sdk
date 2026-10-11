@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Status at the time of this event */
 enum ShippingTrackingEventStatus: string
 {
     case Pending = 'PENDING';

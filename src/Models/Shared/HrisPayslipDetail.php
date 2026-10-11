@@ -20,11 +20,27 @@ class HrisPayslipDetail
 
     /**
      *
+     * @var ?string $benefitId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('benefit_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $benefitId = null;
+
+    /**
+     *
      * @var ?float $companyAmount
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('company_amount')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $companyAmount = null;
+
+    /**
+     *
+     * @var ?string $deductionId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('deduction_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $deductionId = null;
 
     /**
      *
@@ -44,11 +60,63 @@ class HrisPayslipDetail
 
     /**
      *
+     * @var ?float $hours
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('hours')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $hours = null;
+
+    /**
+     * true when this line is paid by the employer (employer tax or contribution)
+     *
+     * @var ?bool $isEmployer
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_employer')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isEmployer = null;
+
+    /**
+     *
+     * @var ?bool $isPreTax
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_pre_tax')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isPreTax = null;
+
+    /**
+     *
      * @var ?string $name
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('name')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $name = null;
+
+    /**
+     * integration pay-code label before normalization
+     *
+     * @var ?string $originalType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('original_type')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $originalType = null;
+
+    /**
+     * the hris_paycode for this line
+     *
+     * @var ?string $paycodeId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('paycode_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $paycodeId = null;
+
+    /**
+     * pay rate for hourly/unit-based lines
+     *
+     * @var ?float $rateAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('rate_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $rateAmount = null;
 
     /**
      *
@@ -60,21 +128,48 @@ class HrisPayslipDetail
     public ?HrisPayslipDetailType $type = null;
 
     /**
+     * year-to-date amount for this line
+     *
+     * @var ?float $ytdAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('ytd_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $ytdAmount = null;
+
+    /**
      * @param  float  $amount
+     * @param  ?string  $benefitId
      * @param  ?float  $companyAmount
+     * @param  ?string  $deductionId
      * @param  ?string  $description
      * @param  ?float  $employeeAmount
+     * @param  ?float  $hours
+     * @param  ?bool  $isEmployer
+     * @param  ?bool  $isPreTax
      * @param  ?string  $name
+     * @param  ?string  $originalType
+     * @param  ?string  $paycodeId
+     * @param  ?float  $rateAmount
      * @param  ?\Unified\Unified_to\Models\Shared\HrisPayslipDetailType  $type
+     * @param  ?float  $ytdAmount
      * @phpstan-pure
      */
-    public function __construct(float $amount, ?float $companyAmount = null, ?string $description = null, ?float $employeeAmount = null, ?string $name = null, ?HrisPayslipDetailType $type = null)
+    public function __construct(float $amount, ?string $benefitId = null, ?float $companyAmount = null, ?string $deductionId = null, ?string $description = null, ?float $employeeAmount = null, ?float $hours = null, ?bool $isEmployer = null, ?bool $isPreTax = null, ?string $name = null, ?string $originalType = null, ?string $paycodeId = null, ?float $rateAmount = null, ?HrisPayslipDetailType $type = null, ?float $ytdAmount = null)
     {
         $this->amount = $amount;
+        $this->benefitId = $benefitId;
         $this->companyAmount = $companyAmount;
+        $this->deductionId = $deductionId;
         $this->description = $description;
         $this->employeeAmount = $employeeAmount;
+        $this->hours = $hours;
+        $this->isEmployer = $isEmployer;
+        $this->isPreTax = $isPreTax;
         $this->name = $name;
+        $this->originalType = $originalType;
+        $this->paycodeId = $paycodeId;
+        $this->rateAmount = $rateAmount;
         $this->type = $type;
+        $this->ytdAmount = $ytdAmount;
     }
 }

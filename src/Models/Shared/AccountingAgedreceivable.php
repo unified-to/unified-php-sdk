@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingAgedreceivable
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class AccountingAgedreceivable
     public ?\DateTime $createdAt = null;
 
     /**
+     * ISO 4217
      *
      * @var ?string $currency
      */
@@ -28,6 +30,7 @@ class AccountingAgedreceivable
     public ?string $currency = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -36,6 +39,7 @@ class AccountingAgedreceivable
     public ?\DateTime $endAt = null;
 
     /**
+     * synthetic, one row per currency / date window
      *
      * @var ?string $id
      */
@@ -72,6 +76,7 @@ class AccountingAgedreceivable
     public ?array $raw = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -88,6 +93,7 @@ class AccountingAgedreceivable
     public ?float $totalAmount = null;
 
     /**
+     * open balances not yet past due; distinct from the first past-due period
      *
      * @var ?float $totalCurrentAmount
      */
@@ -96,6 +102,7 @@ class AccountingAgedreceivable
     public ?float $totalCurrentAmount = null;
 
     /**
+     * sum of open balances across all past-due periods
      *
      * @var ?float $totalOverdueAmount
      */
@@ -104,6 +111,7 @@ class AccountingAgedreceivable
     public ?float $totalOverdueAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class SigningSignatory
 {
     /**
+     * The date that this signatory was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class SigningSignatory
     public ?\DateTime $createdAt = null;
 
     /**
+     * Reason for declining (if status is DECLINED)
      *
      * @var ?string $declineReason
      */
@@ -28,6 +30,7 @@ class SigningSignatory
     public ?string $declineReason = null;
 
     /**
+     * Parent signing document; points to SigningDocument
      *
      * @var ?string $documentId
      */
@@ -36,6 +39,7 @@ class SigningSignatory
     public ?string $documentId = null;
 
     /**
+     * Email address of the signatory
      *
      * @var ?string $email
      */
@@ -44,6 +48,7 @@ class SigningSignatory
     public ?string $email = null;
 
     /**
+     * Unique identifier for this signatory
      *
      * @var ?string $id
      */
@@ -52,6 +57,7 @@ class SigningSignatory
     public ?string $id = null;
 
     /**
+     * Full name of the signatory
      *
      * @var ?string $name
      */
@@ -60,6 +66,7 @@ class SigningSignatory
     public ?string $name = null;
 
     /**
+     * Signing order (1, 2, 3...)
      *
      * @var ?float $order
      */
@@ -68,7 +75,7 @@ class SigningSignatory
     public ?float $order = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -78,6 +85,7 @@ class SigningSignatory
     public ?array $raw = null;
 
     /**
+     * Role of the signatory
      *
      * @var ?\Unified\Unified_to\Models\Shared\SigningSignatoryRole $role
      */
@@ -87,6 +95,7 @@ class SigningSignatory
     public ?SigningSignatoryRole $role = null;
 
     /**
+     * When this signatory signed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $signedAt
      */
@@ -95,6 +104,7 @@ class SigningSignatory
     public ?\DateTime $signedAt = null;
 
     /**
+     * Current status of this signatory
      *
      * @var ?\Unified\Unified_to\Models\Shared\SigningSignatoryStatus $status
      */
@@ -104,6 +114,7 @@ class SigningSignatory
     public ?SigningSignatoryStatus $status = null;
 
     /**
+     * The last date that this signatory was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

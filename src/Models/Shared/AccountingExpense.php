@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingExpense
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -20,6 +21,7 @@ class AccountingExpense
     public ?string $accountId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $approvedAt
      */
@@ -28,6 +30,7 @@ class AccountingExpense
     public ?\DateTime $approvedAt = null;
 
     /**
+     * references HR employee/user (reference to HrisEmployee)
      *
      * @var ?string $approverUserId
      */
@@ -66,6 +69,7 @@ class AccountingExpense
     public ?array $categoryIds = null;
 
     /**
+     * (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -74,6 +78,7 @@ class AccountingExpense
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -90,6 +95,7 @@ class AccountingExpense
     public ?string $currency = null;
 
     /**
+     * Exchange rate to the base/home currency at the expense date
      *
      * @var ?float $exchangeRate
      */
@@ -158,6 +164,7 @@ class AccountingExpense
     public ?string $paymentMethod = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */
@@ -166,6 +173,7 @@ class AccountingExpense
     public ?\DateTime $postedAt = null;
 
     /**
+     * (reference to TaskProject)
      *
      * @var ?string $projectId
      */
@@ -192,6 +200,7 @@ class AccountingExpense
     public ?float $reimbursedAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $reimbursedAt
      */
@@ -217,6 +226,7 @@ class AccountingExpense
     public ?float $taxAmount = null;
 
     /**
+     * ref -> AccountingTaxrate applied to the expense
      *
      * @var ?string $taxrateId
      */
@@ -233,6 +243,17 @@ class AccountingExpense
     public ?float $totalAmount = null;
 
     /**
+     * USER = employee spend; COMPANY = books/purchase expense
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\AccountingExpenseType $type
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\AccountingExpenseType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?AccountingExpenseType $type = null;
+
+    /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -241,6 +262,7 @@ class AccountingExpense
     public ?\DateTime $updatedAt = null;
 
     /**
+     * references a HR employee/user (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -285,12 +307,13 @@ class AccountingExpense
      * @param  ?float  $taxAmount
      * @param  ?string  $taxrateId
      * @param  ?float  $totalAmount
+     * @param  ?\Unified\Unified_to\Models\Shared\AccountingExpenseType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingReference>  $users
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $exchangeRate = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
+    public function __construct(?string $accountId = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $approverUsers = null, ?array $attachments = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $exchangeRate = null, ?string $externalNumber = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $paymentMethod = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?float $reimbursedAmount = null, ?\DateTime $reimbursedAt = null, ?AccountingExpenseStatus $status = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?AccountingExpenseType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $users = null)
     {
         $this->accountId = $accountId;
         $this->approvedAt = $approvedAt;
@@ -318,6 +341,7 @@ class AccountingExpense
         $this->taxAmount = $taxAmount;
         $this->taxrateId = $taxrateId;
         $this->totalAmount = $totalAmount;
+        $this->type = $type;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
         $this->users = $users;

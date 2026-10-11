@@ -31,6 +31,7 @@ class CommerceLocation
     public ?array $categories = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -182,6 +183,7 @@ class CommerceLocation
     public ?array $telephones = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

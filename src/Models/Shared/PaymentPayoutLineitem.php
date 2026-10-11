@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PaymentPayoutLineitem
 {
     /**
+     * Gross amount of this line
      *
      * @var ?float $amount
      */
@@ -20,6 +21,7 @@ class PaymentPayoutLineitem
     public ?float $amount = null;
 
     /**
+     * ISO 4217 currency code of the line amount
      *
      * @var ?string $currency
      */
@@ -28,6 +30,7 @@ class PaymentPayoutLineitem
     public ?string $currency = null;
 
     /**
+     * Processor fee attributed to this line
      *
      * @var ?float $feeAmount
      */
@@ -36,6 +39,7 @@ class PaymentPayoutLineitem
     public ?float $feeAmount = null;
 
     /**
+     * amount minus fee_amount
      *
      * @var ?float $netAmount
      */
@@ -44,6 +48,7 @@ class PaymentPayoutLineitem
     public ?float $netAmount = null;
 
     /**
+     * id of the settled object -- a PaymentPayment or PaymentRefund for PAYMENT / REFUND lines
      *
      * @var ?string $objectId
      */
@@ -52,6 +57,7 @@ class PaymentPayoutLineitem
     public ?string $objectId = null;
 
     /**
+     * What this payout line settles
      *
      * @var ?\Unified\Unified_to\Models\Shared\PaymentPayoutLineitemObjectType $objectType
      */

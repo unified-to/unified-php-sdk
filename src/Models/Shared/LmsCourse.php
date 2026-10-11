@@ -32,6 +32,7 @@ class LmsCourse
     public ?array $contentIds = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -40,6 +41,7 @@ class LmsCourse
     public ?\DateTime $createdAt = null;
 
     /**
+     * The currency code (ISO) of the course price
      *
      * @var ?string $currency
      */
@@ -126,6 +128,7 @@ class LmsCourse
     public ?string $name = null;
 
     /**
+     * How much the course costs
      *
      * @var ?float $priceAmount
      */
@@ -142,6 +145,7 @@ class LmsCourse
     public ?string $providerName = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $publishedAt
      */
@@ -188,6 +192,7 @@ class LmsCourse
     public ?float $timeEstimateMinutes = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

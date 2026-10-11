@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class UcCall
 {
     /**
+     * The contact ID for call (reference to UcContact)
      *
      * @var ?string $contactId
      */
@@ -30,6 +31,16 @@ class UcCall
     public ?array $contacts = null;
 
     /**
+     * opaque identifier shared across legs of one interaction
+     *
+     * @var ?string $conversationIdentifier
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('conversation_identifier')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $conversationIdentifier = null;
+
+    /**
+     * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -38,6 +49,7 @@ class UcCall
     public ?\DateTime $createdAt = null;
 
     /**
+     * The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -46,6 +58,7 @@ class UcCall
     public ?\DateTime $endAt = null;
 
     /**
+     * Unique identifier for this call object
      *
      * @var ?string $id
      */
@@ -72,7 +85,7 @@ class UcCall
     public ?array $metadata = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this call
      *
      * @var ?array<string, mixed> $raw
      */
@@ -82,6 +95,7 @@ class UcCall
     public ?array $raw = null;
 
     /**
+     * The start time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -109,6 +123,7 @@ class UcCall
     public ?UcCallType $type = null;
 
     /**
+     * The last date that this call object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -117,6 +132,7 @@ class UcCall
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */
@@ -143,6 +159,7 @@ class UcCall
     /**
      * @param  ?string  $contactId
      * @param  ?array<\Unified\Unified_to\Models\Shared\UcContact>  $contacts
+     * @param  ?string  $conversationIdentifier
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
@@ -158,10 +175,11 @@ class UcCall
      * @param  ?string  $userPhone
      * @phpstan-pure
      */
-    public function __construct(?string $contactId = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPrivate = null, ?array $metadata = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyUcCallTelephone $telephone = null, ?UcCallType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null)
+    public function __construct(?string $contactId = null, ?array $contacts = null, ?string $conversationIdentifier = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPrivate = null, ?array $metadata = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyUcCallTelephone $telephone = null, ?UcCallType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null)
     {
         $this->contactId = $contactId;
         $this->contacts = $contacts;
+        $this->conversationIdentifier = $conversationIdentifier;
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;
         $this->id = $id;

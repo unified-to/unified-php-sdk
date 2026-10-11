@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Whether the rate applies to sales, purchases, or both */
 enum AccountingTaxrateType: string
 {
     case Sales = 'SALES';

@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The type of object this payment was applied to */
 enum PaymentAllocationObjectType: string
 {
     case Invoice = 'INVOICE';

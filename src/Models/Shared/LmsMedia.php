@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class LmsMedia
 {
     /**
+     * Inline text/HTML/markdown content (use when url is empty or for embedded content) 
      *
      * @var ?string $content
      */

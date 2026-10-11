@@ -32,6 +32,7 @@ class AccountingJournal
     public ?array $categoryIds = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -56,6 +57,7 @@ class AccountingJournal
     public ?string $description = null;
 
     /**
+     * Exchange rate to the base/home currency at the posting date
      *
      * @var ?float $exchangeRate
      */
@@ -72,6 +74,7 @@ class AccountingJournal
     public ?string $id = null;
 
     /**
+     * True when the line amounts already include tax
      *
      * @var ?bool $isInclusiveOfTax
      */
@@ -98,6 +101,7 @@ class AccountingJournal
     public ?string $organizationId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $postedAt
      */
@@ -106,6 +110,7 @@ class AccountingJournal
     public ?\DateTime $postedAt = null;
 
     /**
+     * (reference to TaskProject)
      *
      * @var ?string $projectId
      */
@@ -140,6 +145,7 @@ class AccountingJournal
     public ?string $source = null;
 
     /**
+     * Posting state of the journal entry
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingJournalStatus $status
      */
@@ -165,6 +171,7 @@ class AccountingJournal
     public ?string $taxrateId = null;
 
     /**
+     * Total of the debit lines; equals the total of the credit lines
      *
      * @var ?float $totalAmount
      */
@@ -173,6 +180,7 @@ class AccountingJournal
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -44,6 +44,7 @@ class AnalyticsSession
     public ?string $country = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -68,6 +69,7 @@ class AnalyticsSession
     public ?float $durationSeconds = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -76,6 +78,7 @@ class AnalyticsSession
     public ?\DateTime $endAt = null;
 
     /**
+     * Session attributes
      *
      * @var ?float $eventsCount
      */
@@ -84,6 +87,7 @@ class AnalyticsSession
     public ?float $eventsCount = null;
 
     /**
+     * Session attributes
      *
      * @var ?string $exitPage
      */
@@ -100,6 +104,7 @@ class AnalyticsSession
     public ?string $id = null;
 
     /**
+     * Engagement
      *
      * @var ?bool $isBounce
      */
@@ -108,6 +113,7 @@ class AnalyticsSession
     public ?bool $isBounce = null;
 
     /**
+     * Engagement
      *
      * @var ?bool $isConversion
      */
@@ -116,6 +122,7 @@ class AnalyticsSession
     public ?bool $isConversion = null;
 
     /**
+     * Session attributes
      *
      * @var ?string $landingPage
      */
@@ -140,6 +147,7 @@ class AnalyticsSession
     public ?string $os = null;
 
     /**
+     * Session attributes
      *
      * @var ?float $pageViews
      */
@@ -148,6 +156,7 @@ class AnalyticsSession
     public ?float $pageViews = null;
 
     /**
+     * points to AnalyticsProperty
      *
      * @var ?string $propertyId
      */
@@ -166,6 +175,7 @@ class AnalyticsSession
     public ?array $raw = null;
 
     /**
+     * Acquisition
      *
      * @var ?string $source
      */
@@ -174,6 +184,7 @@ class AnalyticsSession
     public ?string $source = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */
@@ -182,6 +193,7 @@ class AnalyticsSession
     public ?\DateTime $startAt = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

@@ -19,6 +19,7 @@ class AccountingFee
     public float $amount;
 
     /**
+     * Unified fee category
      *
      * @var \Unified\Unified_to\Models\Shared\AccountingFeeType $type
      */
@@ -27,6 +28,7 @@ class AccountingFee
     public AccountingFeeType $type;
 
     /**
+     * ISO 4217 currency code, e.g. USD
      *
      * @var ?string $currency
      */
@@ -35,6 +37,7 @@ class AccountingFee
     public ?string $currency = null;
 
     /**
+     * The provider's original fee label, e.g. "VAT" or a shipping carrier name
      *
      * @var ?string $originalType
      */

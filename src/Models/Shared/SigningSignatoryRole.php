@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Role of the signatory */
 enum SigningSignatoryRole: string
 {
     case Signer = 'SIGNER';

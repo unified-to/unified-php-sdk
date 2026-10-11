@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyCrmEventCall
 {
     /**
+     * The event call's descriptionnotes
      *
      * @var ?string $description
      */
@@ -21,6 +22,7 @@ class PropertyCrmEventCall
     public ?string $description = null;
 
     /**
+     * The event call's duration in minutes
      *
      * @var ?float $duration
      */
@@ -29,6 +31,7 @@ class PropertyCrmEventCall
     public ?float $duration = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

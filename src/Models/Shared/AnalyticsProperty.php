@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AnalyticsProperty
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -52,6 +53,7 @@ class AnalyticsProperty
     public ?string $name = null;
 
     /**
+     * points to AnalyticsProperty
      *
      * @var ?string $parentId
      */
@@ -78,6 +80,7 @@ class AnalyticsProperty
     public ?string $timezone = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

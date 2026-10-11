@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** where EXPIRED is derived (expires_at < now), the source status is preserved in raw */
 enum AccountingQuoteStatus: string
 {
     case Draft = 'DRAFT';

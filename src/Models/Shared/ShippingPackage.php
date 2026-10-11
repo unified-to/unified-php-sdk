@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingPackage
 {
     /**
+     * ISO 4217 currency code
      *
      * @var ?string $currency
      */
@@ -20,6 +21,7 @@ class ShippingPackage
     public ?string $currency = null;
 
     /**
+     * Description of the package contents
      *
      * @var ?string $description
      */
@@ -28,6 +30,7 @@ class ShippingPackage
     public ?string $description = null;
 
     /**
+     * Height of the package
      *
      * @var ?float $height
      */
@@ -36,6 +39,7 @@ class ShippingPackage
     public ?float $height = null;
 
     /**
+     * Insured value for this package
      *
      * @var ?float $insuredAmount
      */
@@ -44,6 +48,7 @@ class ShippingPackage
     public ?float $insuredAmount = null;
 
     /**
+     * Length of the package
      *
      * @var ?float $length
      */
@@ -52,6 +57,7 @@ class ShippingPackage
     public ?float $length = null;
 
     /**
+     * Unit for dimensions (cm, inch)
      *
      * @var ?\Unified\Unified_to\Models\Shared\ShippingPackageSizeUnit $sizeUnit
      */
@@ -61,6 +67,7 @@ class ShippingPackage
     public ?ShippingPackageSizeUnit $sizeUnit = null;
 
     /**
+     * Package-level tracking (for multi-package shipments)
      *
      * @var ?string $trackingNumber
      */
@@ -69,6 +76,7 @@ class ShippingPackage
     public ?string $trackingNumber = null;
 
     /**
+     * Declared value of the package
      *
      * @var ?float $value
      */
@@ -77,6 +85,7 @@ class ShippingPackage
     public ?float $value = null;
 
     /**
+     * Weight of the package
      *
      * @var ?float $weight
      */
@@ -85,6 +94,7 @@ class ShippingPackage
     public ?float $weight = null;
 
     /**
+     * Unit for weight (g, kg, oz, lb)
      *
      * @var ?\Unified\Unified_to\Models\Shared\ShippingPackageWeightUnit $weightUnit
      */
@@ -94,6 +104,7 @@ class ShippingPackage
     public ?ShippingPackageWeightUnit $weightUnit = null;
 
     /**
+     * Width of the package
      *
      * @var ?float $width
      */

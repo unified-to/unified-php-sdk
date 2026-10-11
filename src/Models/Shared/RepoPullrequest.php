@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class RepoPullrequest
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $closedAt
      */
@@ -30,6 +31,7 @@ class RepoPullrequest
     public ?array $commitIds = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -74,6 +76,7 @@ class RepoPullrequest
     public ?array $raw = null;
 
     /**
+     * (reference to RepoRepository)
      *
      * @var ?string $repoId
      */
@@ -115,6 +118,7 @@ class RepoPullrequest
     public ?string $title = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

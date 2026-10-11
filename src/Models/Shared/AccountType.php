@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** CHECKING, SAVINGS, CREDIT_CARD, LOAN, OTHER */
 enum AccountType: string
 {
     case Checking = 'CHECKING';

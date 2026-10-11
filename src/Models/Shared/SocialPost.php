@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class SocialPost
 {
     /**
+     * The main text content of the post
      *
      * @var ?string $body
      */
@@ -30,6 +31,7 @@ class SocialPost
     public ?PropertySocialPostCallToAction $callToAction = null;
 
     /**
+     * When the post was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -38,6 +40,7 @@ class SocialPost
     public ?\DateTime $createdAt = null;
 
     /**
+     * Unique identifier for the post
      *
      * @var ?string $id
      */
@@ -46,6 +49,7 @@ class SocialPost
     public ?string $id = null;
 
     /**
+     * Language code of the post content
      *
      * @var ?string $language
      */
@@ -74,6 +78,7 @@ class SocialPost
     public ?PropertySocialPostMetrics $metrics = null;
 
     /**
+     * The post this one replies to or references
      *
      * @var ?string $parentPostId
      */
@@ -82,6 +87,7 @@ class SocialPost
     public ?string $parentPostId = null;
 
     /**
+     * The social profile (page/handle/listing) that owns this post
      *
      * @var ?string $profileId
      */
@@ -90,7 +96,7 @@ class SocialPost
     public ?string $profileId = null;
 
     /**
-     * $raw
+     * Raw data from integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -100,6 +106,7 @@ class SocialPost
     public ?array $raw = null;
 
     /**
+     * When the post is scheduled to publish (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $scheduledAt
      */
@@ -108,6 +115,7 @@ class SocialPost
     public ?\DateTime $scheduledAt = null;
 
     /**
+     * Publication status of the post
      *
      * @var ?\Unified\Unified_to\Models\Shared\SocialPostStatus $status
      */
@@ -117,6 +125,7 @@ class SocialPost
     public ?SocialPostStatus $status = null;
 
     /**
+     * Optional post title/headline
      *
      * @var ?string $title
      */
@@ -125,6 +134,7 @@ class SocialPost
     public ?string $title = null;
 
     /**
+     * The kind of post
      *
      * @var ?\Unified\Unified_to\Models\Shared\SocialPostType $type
      */
@@ -134,6 +144,7 @@ class SocialPost
     public ?SocialPostType $type = null;
 
     /**
+     * When the post was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -142,6 +153,7 @@ class SocialPost
     public ?\DateTime $updatedAt = null;
 
     /**
+     * Public permalink to the post
      *
      * @var ?string $url
      */

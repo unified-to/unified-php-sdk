@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CommerceAvailability
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -20,6 +21,7 @@ class CommerceAvailability
     public ?\DateTime $endAt = null;
 
     /**
+     * (reference to CommerceItem)
      *
      * @var ?string $itemId
      */
@@ -28,6 +30,7 @@ class CommerceAvailability
     public ?string $itemId = null;
 
     /**
+     * (reference to CommerceLocation)
      *
      * @var ?string $locationId
      */
@@ -54,6 +57,7 @@ class CommerceAvailability
     public ?float $size = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $staffUserId
      */
@@ -62,6 +66,7 @@ class CommerceAvailability
     public ?string $staffUserId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
      */

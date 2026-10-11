@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class TicketingNote
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -62,6 +63,7 @@ class TicketingNote
     public ?string $ticketId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -70,6 +72,7 @@ class TicketingNote
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

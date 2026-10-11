@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ShippingCustomsItem
 {
     /**
+     * Value per unit
      *
      * @var ?float $amount
      */
@@ -20,6 +21,7 @@ class ShippingCustomsItem
     public ?float $amount = null;
 
     /**
+     * Country of origin (ISO code)
      *
      * @var ?string $countryOfOrigin
      */
@@ -36,6 +38,7 @@ class ShippingCustomsItem
     public ?string $currency = null;
 
     /**
+     * Item description
      *
      * @var ?string $description
      */
@@ -44,6 +47,7 @@ class ShippingCustomsItem
     public ?string $description = null;
 
     /**
+     * HS code
      *
      * @var ?string $harmonizedTariffCode
      */
@@ -52,6 +56,7 @@ class ShippingCustomsItem
     public ?string $harmonizedTariffCode = null;
 
     /**
+     * Quantity
      *
      * @var ?float $quantity
      */
@@ -60,6 +65,7 @@ class ShippingCustomsItem
     public ?float $quantity = null;
 
     /**
+     * SKU
      *
      * @var ?string $sku
      */
@@ -68,6 +74,7 @@ class ShippingCustomsItem
     public ?string $sku = null;
 
     /**
+     * Weight per unit
      *
      * @var ?float $weight
      */

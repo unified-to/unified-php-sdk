@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class TaskChange
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -48,6 +49,7 @@ class TaskChange
     public ?array $raw = null;
 
     /**
+     * (reference to TaskTask)
      *
      * @var ?string $taskId
      */
@@ -56,6 +58,7 @@ class TaskChange
     public ?string $taskId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -64,6 +67,7 @@ class TaskChange
     public ?\DateTime $updatedAt = null;
 
     /**
+     * (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

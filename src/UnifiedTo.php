@@ -54,6 +54,8 @@ class UnifiedTo
 
     public Expense $expense;
 
+    public Expensereport $expensereport;
+
     public Invoice $invoice;
 
     public Journal $journal;
@@ -70,9 +72,13 @@ class UnifiedTo
 
     public Purchaseorder $purchaseorder;
 
+    public Purchasereceipt $purchasereceipt;
+
     public Quote $quote;
 
     public Salesorder $salesorder;
+
+    public Salesreceipt $salesreceipt;
 
     public Taxrate $taxrate;
 
@@ -222,6 +228,8 @@ class UnifiedTo
 
     public Prompt $prompt;
 
+    public Skill $skill;
+
     public Task $task;
 
     public Hris $hris;
@@ -236,7 +244,13 @@ class UnifiedTo
 
     public Device $device;
 
+    public Earning $earning;
+
     public Employee $employee;
+
+    public Paycode $paycode;
+
+    public Payroll $payroll;
 
     public Payslip $payslip;
 
@@ -350,6 +364,8 @@ class UnifiedTo
 
     public Call $call;
 
+    public Scorecardtemplate $scorecardtemplate;
+
     public Unified $unified;
 
     public Apicall $apicall;
@@ -370,9 +386,9 @@ class UnifiedTo
 
     public Notification $notification;
 
-    public Webhook $webhook;
-
     public Secretsmanager $secretsmanager;
+
+    public Webhook $webhook;
 
     public Verification $verification;
 
@@ -407,6 +423,7 @@ class UnifiedTo
         $this->contact = new Contact($this->sdkConfiguration);
         $this->creditmemo = new Creditmemo($this->sdkConfiguration);
         $this->expense = new Expense($this->sdkConfiguration);
+        $this->expensereport = new Expensereport($this->sdkConfiguration);
         $this->invoice = new Invoice($this->sdkConfiguration);
         $this->journal = new Journal($this->sdkConfiguration);
         $this->order = new Order($this->sdkConfiguration);
@@ -415,8 +432,10 @@ class UnifiedTo
         $this->profitloss = new Profitloss($this->sdkConfiguration);
         $this->project = new Project($this->sdkConfiguration);
         $this->purchaseorder = new Purchaseorder($this->sdkConfiguration);
+        $this->purchasereceipt = new Purchasereceipt($this->sdkConfiguration);
         $this->quote = new Quote($this->sdkConfiguration);
         $this->salesorder = new Salesorder($this->sdkConfiguration);
+        $this->salesreceipt = new Salesreceipt($this->sdkConfiguration);
         $this->taxrate = new Taxrate($this->sdkConfiguration);
         $this->transaction = new Transaction($this->sdkConfiguration);
         $this->trialbalance = new Trialbalance($this->sdkConfiguration);
@@ -491,6 +510,7 @@ class UnifiedTo
         $this->embedding = new Embedding($this->sdkConfiguration);
         $this->model = new Model($this->sdkConfiguration);
         $this->prompt = new Prompt($this->sdkConfiguration);
+        $this->skill = new Skill($this->sdkConfiguration);
         $this->task = new Task($this->sdkConfiguration);
         $this->hris = new Hris($this->sdkConfiguration);
         $this->attendance = new Attendance($this->sdkConfiguration);
@@ -498,7 +518,10 @@ class UnifiedTo
         $this->benefit = new Benefit($this->sdkConfiguration);
         $this->deduction = new Deduction($this->sdkConfiguration);
         $this->device = new Device($this->sdkConfiguration);
+        $this->earning = new Earning($this->sdkConfiguration);
         $this->employee = new Employee($this->sdkConfiguration);
+        $this->paycode = new Paycode($this->sdkConfiguration);
+        $this->payroll = new Payroll($this->sdkConfiguration);
         $this->payslip = new Payslip($this->sdkConfiguration);
         $this->timeoff = new Timeoff($this->sdkConfiguration);
         $this->timeshift = new Timeshift($this->sdkConfiguration);
@@ -555,6 +578,7 @@ class UnifiedTo
         $this->ticket = new Ticket($this->sdkConfiguration);
         $this->uc = new Uc($this->sdkConfiguration);
         $this->call = new Call($this->sdkConfiguration);
+        $this->scorecardtemplate = new Scorecardtemplate($this->sdkConfiguration);
         $this->unified = new Unified($this->sdkConfiguration);
         $this->apicall = new Apicall($this->sdkConfiguration);
         $this->connection = new Connection($this->sdkConfiguration);
@@ -565,8 +589,8 @@ class UnifiedTo
         $this->saml = new Saml($this->sdkConfiguration);
         $this->issue = new Issue($this->sdkConfiguration);
         $this->notification = new Notification($this->sdkConfiguration);
-        $this->webhook = new Webhook($this->sdkConfiguration);
         $this->secretsmanager = new Secretsmanager($this->sdkConfiguration);
+        $this->webhook = new Webhook($this->sdkConfiguration);
         $this->verification = new Verification($this->sdkConfiguration);
         $this->request = new Request($this->sdkConfiguration);
         $this->initHooks();

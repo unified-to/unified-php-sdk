@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PaymentPayment
 {
     /**
+     * (reference to AccountingAccount)
      *
      * @var ?string $accountId
      */
@@ -30,6 +31,7 @@ class PaymentPayment
     public ?array $allocations = null;
 
     /**
+     * references AccountingBill
      *
      * @var ?string $billId
      */
@@ -64,6 +66,7 @@ class PaymentPayment
     public ?array $categoryIds = null;
 
     /**
+     * (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -72,6 +75,7 @@ class PaymentPayment
     public ?string $contactId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -80,6 +84,7 @@ class PaymentPayment
     public ?\DateTime $createdAt = null;
 
     /**
+     * POS terminal/register/device (hr device)
      *
      * @var ?string $deviceId
      */
@@ -88,6 +93,7 @@ class PaymentPayment
     public ?string $deviceId = null;
 
     /**
+     * Exchange rate to the base/home currency at the payment date
      *
      * @var ?float $exchangeRate
      */
@@ -96,6 +102,7 @@ class PaymentPayment
     public ?float $exchangeRate = null;
 
     /**
+     * processing/processor fee
      *
      * @var ?float $feeAmount
      */
@@ -112,6 +119,7 @@ class PaymentPayment
     public ?string $id = null;
 
     /**
+     * (reference to AccountingInvoice)
      *
      * @var ?string $invoiceId
      */
@@ -128,6 +136,7 @@ class PaymentPayment
     public ?string $linkId = null;
 
     /**
+     * store/site where the payment was taken (commerce_location)
      *
      * @var ?string $locationId
      */
@@ -136,6 +145,7 @@ class PaymentPayment
     public ?string $locationId = null;
 
     /**
+     * total_amount minus fee_amount
      *
      * @var ?float $netAmount
      */
@@ -152,6 +162,7 @@ class PaymentPayment
     public ?string $notes = null;
 
     /**
+     * reference to an AccountingOrganization
      *
      * @var ?string $organizationId
      */
@@ -160,6 +171,7 @@ class PaymentPayment
     public ?string $organizationId = null;
 
     /**
+     * Date and time the payment was made (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $paidAt
      */
@@ -194,6 +206,7 @@ class PaymentPayment
     public ?string $reference = null;
 
     /**
+     * reference to an AccountingSalesorder, e.g. the POS order this payment settled
      *
      * @var ?string $salesorderId
      */
@@ -211,6 +224,7 @@ class PaymentPayment
     public ?PaymentPaymentStatus $status = null;
 
     /**
+     * normalized tender category; the provider's original label stays in payment_method
      *
      * @var ?\Unified\Unified_to\Models\Shared\TenderType $tenderType
      */
@@ -245,6 +259,7 @@ class PaymentPayment
     public ?PaymentPaymentType $type = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

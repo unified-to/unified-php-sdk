@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class UcContact
 {
     /**
+     * The company/organization name  of the contact
      *
      * @var ?string $company
      */
@@ -21,6 +22,7 @@ class UcContact
     public ?string $company = null;
 
     /**
+     * The date that this contact object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -47,6 +49,7 @@ class UcContact
     public ?string $firstName = null;
 
     /**
+     * Unique identifier for this contact object
      *
      * @var ?string $id
      */
@@ -63,6 +66,7 @@ class UcContact
     public ?string $lastName = null;
 
     /**
+     * The name of the contact
      *
      * @var ?string $name
      */
@@ -71,7 +75,7 @@ class UcContact
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this contact
      *
      * @var ?array<string, mixed> $raw
      */
@@ -91,6 +95,7 @@ class UcContact
     public ?array $telephones = null;
 
     /**
+     * The job title of the contact
      *
      * @var ?string $title
      */
@@ -99,6 +104,7 @@ class UcContact
     public ?string $title = null;
 
     /**
+     * The last date that this contact object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

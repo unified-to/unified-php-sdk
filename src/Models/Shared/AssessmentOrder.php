@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AssessmentOrder
 {
     /**
+     * Connection ID that this order belongs to
      *
      * @var string $connectionId
      */
@@ -19,6 +20,7 @@ class AssessmentOrder
     public string $connectionId;
 
     /**
+     * Workspace ID that this order belongs to (reference to KmsSpace)
      *
      * @var string $workspaceId
      */
@@ -26,6 +28,7 @@ class AssessmentOrder
     public string $workspaceId;
 
     /**
+     * ATS application ID
      *
      * @var ?string $applicationId
      */
@@ -34,6 +37,7 @@ class AssessmentOrder
     public ?string $applicationId = null;
 
     /**
+     * ATS candidate ID
      *
      * @var ?string $candidateId
      */
@@ -42,6 +46,7 @@ class AssessmentOrder
     public ?string $candidateId = null;
 
     /**
+     * ATS company ID (reference to AtsCompany)
      *
      * @var ?string $companyId
      */
@@ -50,6 +55,7 @@ class AssessmentOrder
     public ?string $companyId = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -58,6 +64,7 @@ class AssessmentOrder
     public ?\DateTime $createdAt = null;
 
     /**
+     * ATS employee ID
      *
      * @var ?string $employeeId
      */
@@ -74,6 +81,7 @@ class AssessmentOrder
     public ?string $id = null;
 
     /**
+     * ATS job ID
      *
      * @var ?string $jobId
      */
@@ -82,6 +90,7 @@ class AssessmentOrder
     public ?string $jobId = null;
 
     /**
+     * Assessment package ID
      *
      * @var ?string $packageId
      */
@@ -110,6 +119,7 @@ class AssessmentOrder
     public ?array $profileAddresses = null;
 
     /**
+     * YYYY-MM-DD
      *
      * @var ?string $profileDateOfBirth
      */
@@ -145,6 +155,7 @@ class AssessmentOrder
     public ?ProfileGender $profileGender = null;
 
     /**
+     * XXX.XXX.XXX.XXX
      *
      * @var ?string $profileIpAddress
      */
@@ -215,6 +226,7 @@ class AssessmentOrder
     public ?array $raw = null;
 
     /**
+     * ATS-specific reference ID
      *
      * @var ?string $reference
      */
@@ -233,6 +245,7 @@ class AssessmentOrder
     public ?array $responseAttributes = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $responseCompletedAt
      */
@@ -261,6 +274,7 @@ class AssessmentOrder
     public ?array $responseDownloadUrls = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $responseExpiresAt
      */
@@ -269,6 +283,7 @@ class AssessmentOrder
     public ?\DateTime $responseExpiresAt = null;
 
     /**
+     * Datetime that assessment was issued (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $responseIssuedAt
      */
@@ -277,6 +292,7 @@ class AssessmentOrder
     public ?\DateTime $responseIssuedAt = null;
 
     /**
+     * Maximum possible score
      *
      * @var ?float $responseMaxScore
      */
@@ -285,6 +301,7 @@ class AssessmentOrder
     public ?float $responseMaxScore = null;
 
     /**
+     * URL to redirect the user to complete assessment
      *
      * @var ?string $responseRedirectUrl
      */
@@ -293,6 +310,7 @@ class AssessmentOrder
     public ?string $responseRedirectUrl = null;
 
     /**
+     * Assessment score (e.g., 0-100)
      *
      * @var ?float $responseScore
      */
@@ -318,6 +336,7 @@ class AssessmentOrder
     public ?ResponseStatus $responseStatus = null;
 
     /**
+     * URL to view detailed results
      *
      * @var ?string $responseUrl
      */
@@ -335,6 +354,7 @@ class AssessmentOrder
     public ?AssessmentOrderStatus $status = null;
 
     /**
+     * URL to redirect user to after assessment
      *
      * @var ?string $targetUrl
      */
@@ -343,6 +363,7 @@ class AssessmentOrder
     public ?string $targetUrl = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -351,6 +372,7 @@ class AssessmentOrder
     public ?\DateTime $updatedAt = null;
 
     /**
+     * Webhook ID that this order belongs to
      *
      * @var ?string $webhookId
      */

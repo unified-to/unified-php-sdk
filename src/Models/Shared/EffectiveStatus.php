@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** read-only; controlled by the provider (whether/why the campaign can serve), unlike the user-managed status */
 enum EffectiveStatus: string
 {
     case Unspecified = 'UNSPECIFIED';

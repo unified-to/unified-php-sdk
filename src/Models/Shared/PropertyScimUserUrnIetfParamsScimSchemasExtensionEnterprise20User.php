@@ -23,6 +23,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?array $additionalManagers = null;
 
     /**
+     * 1985-07-20
      *
      * @var ?\DateTime $birthday
      */
@@ -31,6 +32,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?\DateTime $birthday = null;
 
     /**
+     * Identifies the name of a cost center.
      *
      * @var ?string $costCenter
      */
@@ -39,6 +41,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?string $costCenter = null;
 
     /**
+     * User currency
      *
      * @var ?string $currency
      */
@@ -47,6 +50,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?string $currency = null;
 
     /**
+     * Identifies the name of a department.
      *
      * @var ?string $department
      */
@@ -55,6 +59,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?string $department = null;
 
     /**
+     * Identifies the name of a division.
      *
      * @var ?string $division
      */
@@ -71,6 +76,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?string $employeeNumber = null;
 
     /**
+     * 2022-02-25
      *
      * @var ?\DateTime $endDate
      */
@@ -96,6 +102,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?string $level = null;
 
     /**
+     * Berlin
      *
      * @var ?string $location
      */
@@ -114,6 +121,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20UserManager $manager = null;
 
     /**
+     * Identifies the name of an organization.
      *
      * @var ?string $organization
      */
@@ -122,6 +130,7 @@ class PropertyScimUserUrnIetfParamsScimSchemasExtensionEnterprise20User
     public ?string $organization = null;
 
     /**
+     * 2011-03-25
      *
      * @var ?\DateTime $startDate
      */

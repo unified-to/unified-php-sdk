@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingQuote
 {
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $acceptedAt
      */
@@ -30,6 +31,7 @@ class AccountingQuote
     public ?array $categoryIds = null;
 
     /**
+     * (reference to AccountingContact)
      *
      * @var ?string $contactId
      */
@@ -48,6 +50,7 @@ class AccountingQuote
     public ?array $contacts = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -64,6 +67,7 @@ class AccountingQuote
     public ?string $currency = null;
 
     /**
+     * exchange rate to the organization's base currency
      *
      * @var ?float $currencyRate
      */
@@ -72,6 +76,7 @@ class AccountingQuote
     public ?float $currencyRate = null;
 
     /**
+     * customer-visible message
      *
      * @var ?string $customerMessage
      */
@@ -80,6 +85,7 @@ class AccountingQuote
     public ?string $customerMessage = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $declinedAt
      */
@@ -96,6 +102,7 @@ class AccountingQuote
     public ?float $discountAmount = null;
 
     /**
+     * Xero ExpiryDate, QBO ExpirationDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $expiresAt
      */
@@ -104,6 +111,7 @@ class AccountingQuote
     public ?\DateTime $expiresAt = null;
 
     /**
+     * points to a HRIS Group (reference to HrisGroup)
      *
      * @var ?string $groupId
      */
@@ -120,6 +128,7 @@ class AccountingQuote
     public ?string $id = null;
 
     /**
+     * populated once the quote is converted to an invoice; left null when the source cannot supply it (reference to AccountingInvoice)
      *
      * @var ?string $invoiceId
      */
@@ -128,6 +137,7 @@ class AccountingQuote
     public ?string $invoiceId = null;
 
     /**
+     * Xero Date, QBO TxnDate (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $issuedAt
      */
@@ -146,6 +156,7 @@ class AccountingQuote
     public ?array $lineitems = null;
 
     /**
+     * internal note, not customer-visible
      *
      * @var ?string $memo
      */
@@ -172,6 +183,7 @@ class AccountingQuote
     public ?string $organizationId = null;
 
     /**
+     * unified payment terms enum, as on accounting_invoice / accounting_bill
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingQuotePaymentTerms $paymentTerms
      */
@@ -181,6 +193,7 @@ class AccountingQuote
     public ?AccountingQuotePaymentTerms $paymentTerms = null;
 
     /**
+     * points to an AccountingProject (accounting costing project) (reference to TaskProject)
      *
      * @var ?string $projectId
      */
@@ -189,6 +202,7 @@ class AccountingQuote
     public ?string $projectId = null;
 
     /**
+     * External identifier for this quote (Xero QuoteNumber, QBO DocNumber, NetSuite tranId)
      *
      * @var ?string $quoteNumber
      */
@@ -207,6 +221,7 @@ class AccountingQuote
     public ?array $raw = null;
 
     /**
+     * customer-side reference / PO number
      *
      * @var ?string $reference
      */
@@ -215,6 +230,7 @@ class AccountingQuote
     public ?string $reference = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $sentAt
      */
@@ -223,6 +239,7 @@ class AccountingQuote
     public ?\DateTime $sentAt = null;
 
     /**
+     * where EXPIRED is derived (expires_at < now), the source status is preserved in raw
      *
      * @var ?\Unified\Unified_to\Models\Shared\AccountingQuoteStatus $status
      */
@@ -240,6 +257,7 @@ class AccountingQuote
     public ?float $subTotalAmount = null;
 
     /**
+     * longer summary (Xero Summary, max 3000)
      *
      * @var ?string $summary
      */
@@ -256,6 +274,7 @@ class AccountingQuote
     public ?float $taxAmount = null;
 
     /**
+     * INCLUSIVE / EXCLUSIVE / NONE; maps Xero LineAmountTypes (a boolean cannot represent NoTax)
      *
      * @var ?\Unified\Unified_to\Models\Shared\TaxMode $taxMode
      */
@@ -265,6 +284,7 @@ class AccountingQuote
     public ?TaxMode $taxMode = null;
 
     /**
+     * short title (Xero Title, max 100)
      *
      * @var ?string $title
      */
@@ -281,6 +301,7 @@ class AccountingQuote
     public ?float $totalAmount = null;
 
     /**
+     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
@@ -289,6 +310,7 @@ class AccountingQuote
     public ?\DateTime $updatedAt = null;
 
     /**
+     * public online-quote link where exposed
      *
      * @var ?string $url
      */

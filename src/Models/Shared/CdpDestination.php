@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CdpDestination
 {
     /**
+     * The date that this destination object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -20,6 +21,7 @@ class CdpDestination
     public ?\DateTime $createdAt = null;
 
     /**
+     * DESTINATION, or BIDIRECTIONAL for import+export connectors
      *
      * @var ?\Unified\Unified_to\Models\Shared\Direction $direction
      */
@@ -29,6 +31,7 @@ class CdpDestination
     public ?Direction $direction = null;
 
     /**
+     * Unique identifier for this destination object
      *
      * @var ?string $id
      */
@@ -37,6 +40,7 @@ class CdpDestination
     public ?string $id = null;
 
     /**
+     * Whether the destination is active/enabled
      *
      * @var ?bool $isEnabled
      */
@@ -45,6 +49,7 @@ class CdpDestination
     public ?bool $isEnabled = null;
 
     /**
+     * The name of the outbound activation destination
      *
      * @var ?string $name
      */
@@ -53,7 +58,7 @@ class CdpDestination
     public ?string $name = null;
 
     /**
-     * $raw
+     * The raw data returned by the integration for this destination
      *
      * @var ?array<string, mixed> $raw
      */
@@ -63,6 +68,7 @@ class CdpDestination
     public ?array $raw = null;
 
     /**
+     * A stable handle/key for the destination
      *
      * @var ?string $slug
      */
@@ -71,6 +77,7 @@ class CdpDestination
     public ?string $slug = null;
 
     /**
+     * The connector/destination type (eg. the provider's connector slug or plugin id)
      *
      * @var ?string $type
      */
@@ -79,6 +86,7 @@ class CdpDestination
     public ?string $type = null;
 
     /**
+     * The last date that this destination object was updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

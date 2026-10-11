@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CalendarEventRecurrence
 {
     /**
+     * how many occurrences, defaults to undefined (no limit)
      *
      * @var ?float $count
      */
@@ -20,6 +21,7 @@ class CalendarEventRecurrence
     public ?float $count = null;
 
     /**
+     * until date, defaults to undefined (no end date) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endAt
      */
@@ -57,6 +59,7 @@ class CalendarEventRecurrence
     public ?array $includedDates = null;
 
     /**
+     * how many "units" between occurrences, defaults to 1
      *
      * @var ?float $interval
      */
@@ -115,6 +118,7 @@ class CalendarEventRecurrence
     public ?array $onYearDays = null;
 
     /**
+     * timezone, defaults to undefined (no timezone)
      *
      * @var ?string $timezone
      */
@@ -123,6 +127,7 @@ class CalendarEventRecurrence
     public ?string $timezone = null;
 
     /**
+     * week start day, defaults to undefined (no week start day)
      *
      * @var ?\Unified\Unified_to\Models\Shared\WeekStart $weekStart
      */

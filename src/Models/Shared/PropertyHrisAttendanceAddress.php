@@ -44,6 +44,7 @@ class PropertyHrisAttendanceAddress
     public ?string $country = null;
 
     /**
+     * ISO 2-digit country code
      *
      * @var ?string $countryCode
      */

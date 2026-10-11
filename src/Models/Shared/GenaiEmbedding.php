@@ -22,6 +22,7 @@ class GenaiEmbedding
     public ?array $content = null;
 
     /**
+     * 256, 512, 1024, and 1536
      *
      * @var ?float $dimension
      */
@@ -30,6 +31,7 @@ class GenaiEmbedding
     public ?float $dimension = null;
 
     /**
+     * JSON string based off of the format
      *
      * @var ?string $embeddings
      */
@@ -89,6 +91,7 @@ class GenaiEmbedding
     public ?float $tokensUsed = null;
 
     /**
+     * 'SEARCH_DOC' | 'SEARCH_QUERY' | 'CLUSTERING' | 'CLASSIFICATION';
      *
      * @var ?string $type
      */
