@@ -34,5 +34,6 @@ enum PatchCalendarEventQueryParamFields: string
     case Conference = 'conference';
     case Attachments = 'attachments';
     case SendNotifications = 'send_notifications';
+    case MatterId = 'matter_id';
     case Raw = 'raw';
 }

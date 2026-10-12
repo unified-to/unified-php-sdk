@@ -59,6 +59,14 @@ class ListCalendarEventsRequest
     public ?float $limit = null;
 
     /**
+     * The matter ID to filter by
+     *
+     * @var ?string $matterId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=matter_id')]
+    public ?string $matterId = null;
+
+    /**
      *
      * @var ?float $offset
      */
@@ -118,6 +126,7 @@ class ListCalendarEventsRequest
      * @param  ?bool  $expand
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListCalendarEventsQueryParamFields>  $fields
      * @param  ?float  $limit
+     * @param  ?string  $matterId
      * @param  ?float  $offset
      * @param  ?string  $order
      * @param  ?string  $query
@@ -127,7 +136,7 @@ class ListCalendarEventsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLt = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLt = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?string $matterId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->calendarId = $calendarId;
@@ -135,6 +144,7 @@ class ListCalendarEventsRequest
         $this->expand = $expand;
         $this->fields = $fields;
         $this->limit = $limit;
+        $this->matterId = $matterId;
         $this->offset = $offset;
         $this->order = $order;
         $this->query = $query;

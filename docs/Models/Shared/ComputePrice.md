@@ -1,0 +1,12 @@
+# ComputePrice
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `currency`                                                                    | *?string*                                                                     | :heavy_minus_sign:                                                            | Currency of price_amount (ISO 4217)                                           |
+| `market`                                                                      | [?Shared\ComputePriceMarket](../../Models/Shared/ComputePriceMarket.md)       | :heavy_minus_sign:                                                            | Pricing market                                                                |
+| `priceAmount`                                                                 | *?float*                                                                      | :heavy_minus_sign:                                                            | List price                                                                    |
+| `priceUnit`                                                                   | [?Shared\ComputePricePriceUnit](../../Models/Shared/ComputePricePriceUnit.md) | :heavy_minus_sign:                                                            | Unit that price_amount is quoted in                                           |
+| `regionId`                                                                    | *?string*                                                                     | :heavy_minus_sign:                                                            | Region the price applies to, when it varies by region                         |

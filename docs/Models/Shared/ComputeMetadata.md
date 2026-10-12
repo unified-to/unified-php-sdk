@@ -1,0 +1,13 @@
+# ComputeMetadata
+
+
+## Fields
+
+| Field                                                                           | Type                                                                            | Required                                                                        | Description                                                                     |
+| ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `extraData`                                                                     | [array\|string\|float\|bool\|null](../../Models/Shared/ComputeMetadataExtraData.md) | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `format`                                                                        | [?Shared\ComputeMetadataFormat](../../Models/Shared/ComputeMetadataFormat.md)   | :heavy_minus_sign:                                                              | The data type of the value                                                      |
+| `id`                                                                            | *?string*                                                                       | :heavy_minus_sign:                                                              | N/A                                                                             |
+| `namespace`                                                                     | *?string*                                                                       | :heavy_minus_sign:                                                              | The origin of the value (eg. labels, tags, metadata)                            |
+| `slug`                                                                          | *?string*                                                                       | :heavy_minus_sign:                                                              | The label, tag or metadata key                                                  |
+| `value`                                                                         | [array\|string\|float\|bool\|null](../../Models/Shared/ComputeMetadataValue.md) | :heavy_minus_sign:                                                              | The label, tag or metadata value                                                |

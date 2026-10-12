@@ -188,6 +188,32 @@ class UnifiedTo
 
     public Saleschannel $saleschannel;
 
+    public Compute $compute;
+
+    public Deployment $deployment;
+
+    public Domain $domain;
+
+    public Envvar $envvar;
+
+    public Gputype $gputype;
+
+    public Instance $instance;
+
+    public Key $key;
+
+    public Region $region;
+
+    public Service $service;
+
+    public Snapshot $snapshot;
+
+    public Template $template;
+
+    public Usage $usage;
+
+    public Volume $volume;
+
     public Crm $crm;
 
     public Deal $deal;
@@ -232,6 +258,28 @@ class UnifiedTo
 
     public Task $task;
 
+    public Healthcare $healthcare;
+
+    public Allergy $allergy;
+
+    public Appointment $appointment;
+
+    public Condition $condition;
+
+    public Encounter $encounter;
+
+    public Immunization $immunization;
+
+    public Medication $medication;
+
+    public Observation $observation;
+
+    public Patient $patient;
+
+    public Practitioner $practitioner;
+
+    public Slot $slot;
+
     public Hris $hris;
 
     public Attendance $attendance;
@@ -265,6 +313,14 @@ class UnifiedTo
     public Page $page;
 
     public Space $space;
+
+    public Legal $legal;
+
+    public Matter $matter;
+
+    public Practicearea $practicearea;
+
+    public Timeentry $timeentry;
 
     public Lms $lms;
 
@@ -337,8 +393,6 @@ class UnifiedTo
     public Signing $signing;
 
     public Signatory $signatory;
-
-    public Template $template;
 
     public Social $social;
 
@@ -490,6 +544,19 @@ class UnifiedTo
         $this->reservation = new Reservation($this->sdkConfiguration);
         $this->review = new Review($this->sdkConfiguration);
         $this->saleschannel = new Saleschannel($this->sdkConfiguration);
+        $this->compute = new Compute($this->sdkConfiguration);
+        $this->deployment = new Deployment($this->sdkConfiguration);
+        $this->domain = new Domain($this->sdkConfiguration);
+        $this->envvar = new Envvar($this->sdkConfiguration);
+        $this->gputype = new Gputype($this->sdkConfiguration);
+        $this->instance = new Instance($this->sdkConfiguration);
+        $this->key = new Key($this->sdkConfiguration);
+        $this->region = new Region($this->sdkConfiguration);
+        $this->service = new Service($this->sdkConfiguration);
+        $this->snapshot = new Snapshot($this->sdkConfiguration);
+        $this->template = new Template($this->sdkConfiguration);
+        $this->usage = new Usage($this->sdkConfiguration);
+        $this->volume = new Volume($this->sdkConfiguration);
         $this->crm = new Crm($this->sdkConfiguration);
         $this->deal = new Deal($this->sdkConfiguration);
         $this->lead = new Lead($this->sdkConfiguration);
@@ -512,6 +579,17 @@ class UnifiedTo
         $this->prompt = new Prompt($this->sdkConfiguration);
         $this->skill = new Skill($this->sdkConfiguration);
         $this->task = new Task($this->sdkConfiguration);
+        $this->healthcare = new Healthcare($this->sdkConfiguration);
+        $this->allergy = new Allergy($this->sdkConfiguration);
+        $this->appointment = new Appointment($this->sdkConfiguration);
+        $this->condition = new Condition($this->sdkConfiguration);
+        $this->encounter = new Encounter($this->sdkConfiguration);
+        $this->immunization = new Immunization($this->sdkConfiguration);
+        $this->medication = new Medication($this->sdkConfiguration);
+        $this->observation = new Observation($this->sdkConfiguration);
+        $this->patient = new Patient($this->sdkConfiguration);
+        $this->practitioner = new Practitioner($this->sdkConfiguration);
+        $this->slot = new Slot($this->sdkConfiguration);
         $this->hris = new Hris($this->sdkConfiguration);
         $this->attendance = new Attendance($this->sdkConfiguration);
         $this->bankaccount = new Bankaccount($this->sdkConfiguration);
@@ -529,6 +607,10 @@ class UnifiedTo
         $this->comment = new Comment($this->sdkConfiguration);
         $this->page = new Page($this->sdkConfiguration);
         $this->space = new Space($this->sdkConfiguration);
+        $this->legal = new Legal($this->sdkConfiguration);
+        $this->matter = new Matter($this->sdkConfiguration);
+        $this->practicearea = new Practicearea($this->sdkConfiguration);
+        $this->timeentry = new Timeentry($this->sdkConfiguration);
         $this->lms = new Lms($this->sdkConfiguration);
         $this->class = new ClassT($this->sdkConfiguration);
         $this->content = new Content($this->sdkConfiguration);
@@ -565,7 +647,6 @@ class UnifiedTo
         $this->tracking = new Tracking($this->sdkConfiguration);
         $this->signing = new Signing($this->sdkConfiguration);
         $this->signatory = new Signatory($this->sdkConfiguration);
-        $this->template = new Template($this->sdkConfiguration);
         $this->social = new Social($this->sdkConfiguration);
         $this->insight = new Insight($this->sdkConfiguration);
         $this->post = new Post($this->sdkConfiguration);

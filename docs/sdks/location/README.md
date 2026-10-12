@@ -8,9 +8,11 @@
 * [createHrisLocation](#createhrislocation) - Create a location
 * [getClubsLocation](#getclubslocation) - Retrieve a location
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
+* [getHealthcareLocation](#gethealthcarelocation) - Retrieve a location
 * [getHrisLocation](#gethrislocation) - Retrieve a location
 * [listClubsLocations](#listclubslocations) - List all locations
 * [listCommerceLocations](#listcommercelocations) - List all locations
+* [listHealthcareLocations](#listhealthcarelocations) - List all locations
 * [listHrisLocations](#listhrislocations) - List all locations
 * [patchCommerceLocation](#patchcommercelocation) - Update a location
 * [patchHrisLocation](#patchhrislocation) - Update a location
@@ -56,7 +58,7 @@ $request = new Operations\CreateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '5eb2c8d8-67d7-4993-93ba-0b9210a34d1e',
+        id: '03250068-96d9-47aa-a7e9-952292dce7a1',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -67,10 +69,10 @@ $request = new Operations\CreateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '0fd1a451-74a9-4366-b56e-1cab6cfed93d',
+                id: '75fd667a-c2fe-43fa-a5a6-1b07c8f57c4a',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '8ff94f86-ce83-4a5a-82d9-7cdca5e18fcd',
+                        id: 'c5327c9f-b99e-4038-acc8-87f860fd487f',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -95,7 +97,7 @@ $request = new Operations\CreateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-17T07:27:20.940Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-17T14:44:06.189Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -163,8 +165,8 @@ $request = new Operations\CreateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MUR',
         description: 'Acervus caries.',
-        externalIdentifier: 'cf90be07-bf08-4542-ae05-d6af5965c6f1',
-        id: '1e53dfa8-5595-4dc1-bcc5-10de4c8bdcba',
+        externalIdentifier: '285fcb30-0404-4733-a7e6-6afd97323f68',
+        id: 'ed53ddf1-1216-4a5a-bed8-7461c4da1dce',
         isActive: true,
         isHq: false,
         languageLocale: 'fr',
@@ -184,7 +186,7 @@ $request = new Operations\CreateHrisLocationRequest(
             ),
         ],
         timezone: 'America/Guyana',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-17T10:41:08.849Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-17T18:25:52.278Z'),
     ),
     connectionId: '<id>',
 );
@@ -309,6 +311,57 @@ if ($response->commerceLocation !== null) {
 ### Response
 
 **[?Operations\GetCommerceLocationResponse](../../Models/Operations/GetCommerceLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getHealthcareLocation
+
+Retrieve a location
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHealthcareLocation" method="get" path="/healthcare/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHealthcareLocationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->location->getHealthcareLocation(
+    request: $request
+);
+
+if ($response->healthcareLocation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetHealthcareLocationRequest](../../Models/Operations/GetHealthcareLocationRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\GetHealthcareLocationResponse](../../Models/Operations/GetHealthcareLocationResponse.md)**
 
 ### Errors
 
@@ -467,6 +520,56 @@ if ($response->commerceLocations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listHealthcareLocations
+
+List all locations
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHealthcareLocations" method="get" path="/healthcare/{connection_id}/location" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHealthcareLocationsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->location->listHealthcareLocations(
+    request: $request
+);
+
+if ($response->healthcareLocations !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListHealthcareLocationsRequest](../../Models/Operations/ListHealthcareLocationsRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\ListHealthcareLocationsResponse](../../Models/Operations/ListHealthcareLocationsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listHrisLocations
 
 List all locations
@@ -554,7 +657,7 @@ $request = new Operations\PatchCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '6a2af433-fc3f-4ff5-84e4-0c61128fafdd',
+        id: 'aeff0b79-07fd-4bfd-94d3-34f919a0928f',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -565,10 +668,10 @@ $request = new Operations\PatchCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '8e0e88b1-254c-4027-93a5-32d4b03fb5a2',
+                id: 'b986af92-8bff-428d-9899-d34f5da4c358',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '5be152a2-ea26-4af9-96ce-530d98842281',
+                        id: '12413905-8b10-4465-9897-d071dd768822',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -593,7 +696,7 @@ $request = new Operations\PatchCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-17T07:27:20.954Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-17T14:44:06.197Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -662,8 +765,8 @@ $request = new Operations\PatchHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MUR',
         description: 'Acervus caries.',
-        externalIdentifier: '514209de-9c29-4060-acaf-75af1d4884d7',
-        id: '710eed80-ff85-4b44-80c5-8b4d22e2ab36',
+        externalIdentifier: '658e681a-7bce-43bc-8a87-ca9b18e1e635',
+        id: '0b9cfd6b-4c38-452a-8950-37a0117315cd',
         isActive: true,
         isHq: false,
         languageLocale: 'fr',
@@ -683,7 +786,7 @@ $request = new Operations\PatchHrisLocationRequest(
             ),
         ],
         timezone: 'America/Guyana',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-17T10:41:08.855Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-17T18:25:52.284Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -853,7 +956,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '6a2af433-fc3f-4ff5-84e4-0c61128fafdd',
+        id: 'aeff0b79-07fd-4bfd-94d3-34f919a0928f',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -864,10 +967,10 @@ $request = new Operations\UpdateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '8e0e88b1-254c-4027-93a5-32d4b03fb5a2',
+                id: 'b986af92-8bff-428d-9899-d34f5da4c358',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '5be152a2-ea26-4af9-96ce-530d98842281',
+                        id: '12413905-8b10-4465-9897-d071dd768822',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -892,7 +995,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-17T07:27:20.954Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-17T14:44:06.197Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -961,8 +1064,8 @@ $request = new Operations\UpdateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MUR',
         description: 'Acervus caries.',
-        externalIdentifier: '514209de-9c29-4060-acaf-75af1d4884d7',
-        id: '710eed80-ff85-4b44-80c5-8b4d22e2ab36',
+        externalIdentifier: '658e681a-7bce-43bc-8a87-ca9b18e1e635',
+        id: '0b9cfd6b-4c38-452a-8950-37a0117315cd',
         isActive: true,
         isHq: false,
         languageLocale: 'fr',
@@ -982,7 +1085,7 @@ $request = new Operations\UpdateHrisLocationRequest(
             ),
         ],
         timezone: 'America/Guyana',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-17T10:41:08.855Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-17T18:25:52.284Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

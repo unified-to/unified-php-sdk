@@ -46,4 +46,7 @@ enum QueryParamCategories: string
     case Cdp = 'cdp';
     case Performance = 'performance';
     case Social = 'social';
+    case Legal = 'legal';
+    case Compute = 'compute';
+    case Healthcare = 'healthcare';
 }

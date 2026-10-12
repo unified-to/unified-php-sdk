@@ -38,10 +38,10 @@ $request = new Operations\CreateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: 'dc79eb2e-8ed6-4422-ba5f-a3d0af5393d4',
+        id: 'cfabc892-8f19-489b-85b6-9e65b6954722',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T19:16:38.202Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T19:22:47.060Z'),
     ),
     connectionId: '<id>',
 );
@@ -199,10 +199,10 @@ $request = new Operations\PatchAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '2d835550-50a8-455f-8358-21cab1790f43',
+        id: '5ab61f17-aed1-4cef-84bc-682d1e8f0d44',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T19:16:38.202Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T19:22:47.060Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -311,10 +311,10 @@ $request = new Operations\UpdateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '2d835550-50a8-455f-8358-21cab1790f43',
+        id: '5ab61f17-aed1-4cef-84bc-682d1e8f0d44',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T19:16:38.202Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T19:22:47.060Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

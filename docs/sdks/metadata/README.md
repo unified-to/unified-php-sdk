@@ -38,17 +38,17 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '0d50010f-fe15-4320-9085-e750d1f5c117',
+        id: 'ca203760-38b2-43d1-b624-e390b50e1826',
         isRequired: false,
         name: 'autem',
-        objectType: 'signing_signatory',
+        objectType: 'social_review',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-14T19:24:03.223Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-15T10:33:36.490Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,17 +206,17 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '77cd83fb-e2c5-447e-9767-0de767b4e59f',
+        id: '2c08b393-b08a-4517-aa4b-457967133beb',
         isRequired: false,
         name: 'autem',
-        objectType: 'signing_signatory',
+        objectType: 'social_review',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-14T19:24:03.228Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-15T10:33:36.500Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,17 +325,17 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '77cd83fb-e2c5-447e-9767-0de767b4e59f',
+        id: '2c08b393-b08a-4517-aa4b-457967133beb',
         isRequired: false,
         name: 'autem',
-        objectType: 'signing_signatory',
+        objectType: 'social_review',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-14T19:24:03.228Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-15T10:33:36.500Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
