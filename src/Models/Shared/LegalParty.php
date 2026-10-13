@@ -39,6 +39,7 @@ class LegalParty
     public ?string $description = null;
 
     /**
+     * the party role on the matter
      *
      * @var ?\Unified\Unified_to\Models\Shared\LegalPartyRole $role
      */

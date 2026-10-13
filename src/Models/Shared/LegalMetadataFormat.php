@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** the data type of the value */
 enum LegalMetadataFormat: string
 {
     case Text = 'TEXT';

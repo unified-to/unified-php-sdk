@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** the matter status */
 enum LegalMatterStatus: string
 {
     case Pending = 'PENDING';

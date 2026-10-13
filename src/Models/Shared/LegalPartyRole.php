@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** the party role on the matter */
 enum LegalPartyRole: string
 {
     case Client = 'CLIENT';

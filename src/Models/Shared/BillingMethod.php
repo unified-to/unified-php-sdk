@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** how the matter is billed */
 enum BillingMethod: string
 {
     case Hourly = 'HOURLY';

@@ -76,7 +76,7 @@ class HealthcareMedication
     public ?string $id = null;
 
     /**
-     * $metadata
+     * Custom field values
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\HealthcareMetadata> $metadata
      */

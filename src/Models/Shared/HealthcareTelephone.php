@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class HealthcareTelephone
 {
     /**
+     * The telephone number
      *
      * @var string $telephone
      */
@@ -19,6 +20,7 @@ class HealthcareTelephone
     public string $telephone;
 
     /**
+     * The kind of telephone number (work, home, mobile, fax or other)
      *
      * @var ?\Unified\Unified_to\Models\Shared\HealthcareTelephoneType $type
      */

@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class HealthcareEmail
 {
     /**
+     * The email address
      *
      * @var string $email
      */
@@ -19,6 +20,7 @@ class HealthcareEmail
     public string $email;
 
     /**
+     * The kind of email address (work, home or other)
      *
      * @var ?\Unified\Unified_to\Models\Shared\HealthcareEmailType $type
      */

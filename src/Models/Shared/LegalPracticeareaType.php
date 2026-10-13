@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** the normalized practice area type */
 enum LegalPracticeareaType: string
 {
     case Administrative = 'ADMINISTRATIVE';

@@ -35,13 +35,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: 'e4363f7a-7282-4141-a848-1eed7aa03e18',
+        id: 'cfe742ef-29b6-4d85-a6c5-fe4156d6b3e0',
         metadata: [],
         name: 'snap-alius',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-22T18:46:12.536Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-23T11:31:05.572Z'),
     ),
     connectionId: '<id>',
 );

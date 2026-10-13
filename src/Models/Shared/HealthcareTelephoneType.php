@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The kind of telephone number (work, home, mobile, fax or other) */
 enum HealthcareTelephoneType: string
 {
     case Work = 'WORK';

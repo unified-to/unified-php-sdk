@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class LegalPracticearea
 {
     /**
+     * the practice area code
      *
      * @var ?string $code
      */
@@ -20,7 +21,7 @@ class LegalPracticearea
     public ?string $code = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the practice area was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -29,6 +30,7 @@ class LegalPracticearea
     public ?\DateTime $createdAt = null;
 
     /**
+     * unique identifier for the practice area
      *
      * @var ?string $id
      */
@@ -37,6 +39,7 @@ class LegalPracticearea
     public ?string $id = null;
 
     /**
+     * whether the practice area is active
      *
      * @var ?bool $isActive
      */
@@ -55,6 +58,7 @@ class LegalPracticearea
     public ?array $metadata = null;
 
     /**
+     * the practice area name
      *
      * @var ?string $name
      */
@@ -63,7 +67,7 @@ class LegalPracticearea
     public ?string $name = null;
 
     /**
-     * $raw
+     * raw data from the integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -73,6 +77,7 @@ class LegalPracticearea
     public ?array $raw = null;
 
     /**
+     * the normalized practice area type
      *
      * @var ?\Unified\Unified_to\Models\Shared\LegalPracticeareaType $type
      */
@@ -82,7 +87,7 @@ class LegalPracticearea
     public ?LegalPracticeareaType $type = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the practice area was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

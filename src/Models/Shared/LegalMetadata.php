@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class LegalMetadata
 {
     /**
+     * additional data about the custom field
      *
      * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\LegalMetadata1|string|float|bool>|null $extraData
      */
@@ -21,6 +22,7 @@ class LegalMetadata
     public array|string|float|bool|null $extraData = null;
 
     /**
+     * the data type of the value
      *
      * @var ?\Unified\Unified_to\Models\Shared\LegalMetadataFormat $format
      */
@@ -30,6 +32,7 @@ class LegalMetadata
     public ?LegalMetadataFormat $format = null;
 
     /**
+     * the custom field identifier
      *
      * @var ?string $id
      */
@@ -38,6 +41,7 @@ class LegalMetadata
     public ?string $id = null;
 
     /**
+     * the scope or origin of the custom field
      *
      * @var ?string $namespace
      */
@@ -46,6 +50,7 @@ class LegalMetadata
     public ?string $namespace = null;
 
     /**
+     * the custom field key
      *
      * @var ?string $slug
      */
@@ -54,6 +59,7 @@ class LegalMetadata
     public ?string $slug = null;
 
     /**
+     * the custom field value
      *
      * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\LegalMetadataSchemas1|string|float|bool>|null $value
      */

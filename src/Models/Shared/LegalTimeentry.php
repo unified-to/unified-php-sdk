@@ -30,7 +30,7 @@ class LegalTimeentry
     public ?float $billableMinutes = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the time entry was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -39,6 +39,7 @@ class LegalTimeentry
     public ?\DateTime $createdAt = null;
 
     /**
+     * ISO 4217 currency code
      *
      * @var ?string $currency
      */
@@ -47,6 +48,7 @@ class LegalTimeentry
     public ?string $currency = null;
 
     /**
+     * description of the work performed
      *
      * @var ?string $description
      */
@@ -55,6 +57,7 @@ class LegalTimeentry
     public ?string $description = null;
 
     /**
+     * unique identifier for the time entry
      *
      * @var ?string $id
      */
@@ -72,6 +75,7 @@ class LegalTimeentry
     public ?string $invoiceId = null;
 
     /**
+     * whether the time entry is billable
      *
      * @var ?bool $isBillable
      */
@@ -80,6 +84,7 @@ class LegalTimeentry
     public ?bool $isBillable = null;
 
     /**
+     * whether the time entry has been billed
      *
      * @var ?bool $isBilled
      */
@@ -125,7 +130,7 @@ class LegalTimeentry
     public ?float $rateAmount = null;
 
     /**
-     * $raw
+     * raw data from the integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -144,6 +149,7 @@ class LegalTimeentry
     public ?string $taskCode = null;
 
     /**
+     * total amount of the time entry
      *
      * @var ?float $totalAmount
      */
@@ -152,7 +158,7 @@ class LegalTimeentry
     public ?float $totalAmount = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the time entry was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

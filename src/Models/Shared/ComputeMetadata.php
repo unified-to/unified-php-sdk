@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class ComputeMetadata
 {
     /**
+     * Additional data about the value
      *
      * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\ComputeMetadata1|string|float|bool>|null $extraData
      */
@@ -31,6 +32,7 @@ class ComputeMetadata
     public ?ComputeMetadataFormat $format = null;
 
     /**
+     * The label, tag or metadata identifier
      *
      * @var ?string $id
      */

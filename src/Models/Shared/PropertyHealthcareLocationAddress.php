@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyHealthcareLocationAddress
 {
     /**
+     * First line of the street address
      *
      * @var ?string $address1
      */
@@ -21,6 +22,7 @@ class PropertyHealthcareLocationAddress
     public ?string $address1 = null;
 
     /**
+     * Second line of the street address
      *
      * @var ?string $address2
      */
@@ -29,6 +31,7 @@ class PropertyHealthcareLocationAddress
     public ?string $address2 = null;
 
     /**
+     * City or locality
      *
      * @var ?string $city
      */
@@ -37,6 +40,7 @@ class PropertyHealthcareLocationAddress
     public ?string $city = null;
 
     /**
+     * Country
      *
      * @var ?string $country
      */
@@ -45,6 +49,7 @@ class PropertyHealthcareLocationAddress
     public ?string $country = null;
 
     /**
+     * Postal or ZIP code
      *
      * @var ?string $postalCode
      */
@@ -53,6 +58,7 @@ class PropertyHealthcareLocationAddress
     public ?string $postalCode = null;
 
     /**
+     * Regional area (e.g., state in the U.S., province in Canada)
      *
      * @var ?string $region
      */

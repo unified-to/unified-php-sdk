@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The data type of the value */
 enum HealthcareMetadataFormat: string
 {
     case Text = 'TEXT';

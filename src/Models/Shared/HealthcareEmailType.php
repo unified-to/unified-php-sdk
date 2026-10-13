@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The kind of email address (work, home or other) */
 enum HealthcareEmailType: string
 {
     case Work = 'WORK';

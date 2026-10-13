@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class HealthcareMetadata
 {
     /**
+     * Additional data about the custom field
      *
      * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\HealthcareMetadata1|string|float|bool>|null $extraData
      */
@@ -21,6 +22,7 @@ class HealthcareMetadata
     public array|string|float|bool|null $extraData = null;
 
     /**
+     * The data type of the value
      *
      * @var ?\Unified\Unified_to\Models\Shared\HealthcareMetadataFormat $format
      */
@@ -30,6 +32,7 @@ class HealthcareMetadata
     public ?HealthcareMetadataFormat $format = null;
 
     /**
+     * Identifier of the custom field
      *
      * @var ?string $id
      */
@@ -38,6 +41,7 @@ class HealthcareMetadata
     public ?string $id = null;
 
     /**
+     * The scope or origin of the custom field
      *
      * @var ?string $namespace
      */
@@ -46,6 +50,7 @@ class HealthcareMetadata
     public ?string $namespace = null;
 
     /**
+     * The custom field key
      *
      * @var ?string $slug
      */
@@ -54,6 +59,7 @@ class HealthcareMetadata
     public ?string $slug = null;
 
     /**
+     * The custom field value
      *
      * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\HealthcareMetadataSchemas1|string|float|bool>|null $value
      */

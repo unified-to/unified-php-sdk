@@ -38,7 +38,7 @@ $request = new Operations\CreateGenaiEmbeddingRequest(
         dimension: 423,
         embeddings: 'Est.',
         encondingFormat: Shared\EncondingFormat::Float,
-        id: '2b1a3d57-7bd8-4eb3-bc78-4fdd14bbcd38',
+        id: '739cc634-dd27-415b-b1aa-704d480f6dea',
         maxTokens: 223,
         tokensUsed: 836,
         type: 'classification',

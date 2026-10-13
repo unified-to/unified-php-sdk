@@ -21,7 +21,7 @@ class LegalExpense
     public ?string $category = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the expense was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -30,6 +30,7 @@ class LegalExpense
     public ?\DateTime $createdAt = null;
 
     /**
+     * ISO 4217 currency code
      *
      * @var ?string $currency
      */
@@ -38,6 +39,7 @@ class LegalExpense
     public ?string $currency = null;
 
     /**
+     * free-text description of the expense
      *
      * @var ?string $description
      */
@@ -55,6 +57,7 @@ class LegalExpense
     public ?string $expenseCode = null;
 
     /**
+     * unique identifier for the expense
      *
      * @var ?string $id
      */
@@ -81,6 +84,7 @@ class LegalExpense
     public ?string $invoiceId = null;
 
     /**
+     * whether the expense is billable
      *
      * @var ?bool $isBillable
      */
@@ -89,6 +93,7 @@ class LegalExpense
     public ?bool $isBillable = null;
 
     /**
+     * whether the expense has been billed
      *
      * @var ?bool $isBilled
      */
@@ -125,6 +130,7 @@ class LegalExpense
     public ?float $priceAmount = null;
 
     /**
+     * number of units
      *
      * @var ?float $quantity
      */
@@ -133,7 +139,7 @@ class LegalExpense
     public ?float $quantity = null;
 
     /**
-     * $raw
+     * raw data from the integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -143,6 +149,7 @@ class LegalExpense
     public ?array $raw = null;
 
     /**
+     * total amount of the expense
      *
      * @var ?float $totalAmount
      */
@@ -151,6 +158,7 @@ class LegalExpense
     public ?float $totalAmount = null;
 
     /**
+     * hard cost, soft cost or other
      *
      * @var ?\Unified\Unified_to\Models\Shared\LegalExpenseType $type
      */
@@ -160,7 +168,7 @@ class LegalExpense
     public ?LegalExpenseType $type = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the expense was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */

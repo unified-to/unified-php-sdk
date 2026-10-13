@@ -57,7 +57,7 @@ class HealthcareSlot
     public ?string $locationId = null;
 
     /**
-     * $metadata
+     * Custom field values
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\HealthcareMetadata> $metadata
      */

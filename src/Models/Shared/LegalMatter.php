@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class LegalMatter
 {
     /**
+     * how the matter is billed
      *
      * @var ?\Unified\Unified_to\Models\Shared\BillingMethod $billingMethod
      */
@@ -30,7 +31,7 @@ class LegalMatter
     public ?string $clientReference = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was closed (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $closedAt
      */
@@ -59,7 +60,7 @@ class LegalMatter
     public ?array $contactIds = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
      */
@@ -68,6 +69,7 @@ class LegalMatter
     public ?\DateTime $createdAt = null;
 
     /**
+     * ISO 4217 currency code
      *
      * @var ?string $currency
      */
@@ -76,6 +78,7 @@ class LegalMatter
     public ?string $currency = null;
 
     /**
+     * free-text description of the matter
      *
      * @var ?string $description
      */
@@ -84,6 +87,7 @@ class LegalMatter
     public ?string $description = null;
 
     /**
+     * unique identifier for the matter
      *
      * @var ?string $id
      */
@@ -92,6 +96,7 @@ class LegalMatter
     public ?string $id = null;
 
     /**
+     * whether the matter is billable
      *
      * @var ?bool $isBillable
      */
@@ -110,6 +115,7 @@ class LegalMatter
     public ?array $metadata = null;
 
     /**
+     * the matter name
      *
      * @var ?string $name
      */
@@ -127,7 +133,7 @@ class LegalMatter
     public ?string $number = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was opened (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $openedAt
      */
@@ -155,7 +161,7 @@ class LegalMatter
     public ?array $parties = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter became pending (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $pendingAt
      */
@@ -173,7 +179,7 @@ class LegalMatter
     public ?string $practiceareaId = null;
 
     /**
-     * $raw
+     * raw data from the integration
      *
      * @var ?array<string, mixed> $raw
      */
@@ -192,6 +198,7 @@ class LegalMatter
     public ?string $stage = null;
 
     /**
+     * the matter status
      *
      * @var ?\Unified\Unified_to\Models\Shared\LegalMatterStatus $status
      */
@@ -201,7 +208,7 @@ class LegalMatter
     public ?LegalMatterStatus $status = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * statute of limitations deadline for the matter (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $statuteOfLimitationsAt
      */
@@ -210,7 +217,7 @@ class LegalMatter
     public ?\DateTime $statuteOfLimitationsAt = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * when the matter was last updated (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $updatedAt
      */
