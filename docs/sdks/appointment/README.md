@@ -39,7 +39,7 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '319c02d2-9fec-41de-ac5a-6f95fb536ab1',
+        id: '6505d76b-6398-4c66-9979-47ca72b2a026',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -59,7 +59,7 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-13T06:49:40.328Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-14T07:03:04.743Z'),
     ),
     connectionId: '<id>',
 );
@@ -218,7 +218,7 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '6614f1b2-3579-43be-a26c-174f690276a4',
+        id: '2d24331b-1346-463c-9d19-fafdf5b7c030',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -238,7 +238,7 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-13T06:49:40.346Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-14T07:03:04.752Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -348,7 +348,7 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '6614f1b2-3579-43be-a26c-174f690276a4',
+        id: '2d24331b-1346-463c-9d19-fafdf5b7c030',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -368,7 +368,7 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-13T06:49:40.346Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-14T07:03:04.752Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

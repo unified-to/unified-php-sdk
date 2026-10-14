@@ -40,10 +40,10 @@ $request = new Operations\CreateComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '51a04ebd-e587-46a8-963e-144cff6bbbae',
+        id: '997c4209-5511-4ae8-9a5b-fdad7d59d54b',
         isSecret: true,
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-06-27T08:35:15.119Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-28T09:07:32.035Z'),
     ),
     connectionId: '<id>',
 );
@@ -203,10 +203,10 @@ $request = new Operations\PatchComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: 'd232e98a-2327-4db3-88ee-382dd475e36d',
+        id: '7370f103-3b5e-4320-b0b4-e6ded5eab947',
         isSecret: true,
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-06-27T08:35:15.126Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-28T09:07:32.039Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -317,10 +317,10 @@ $request = new Operations\UpdateComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: 'd232e98a-2327-4db3-88ee-382dd475e36d',
+        id: '7370f103-3b5e-4320-b0b4-e6ded5eab947',
         isSecret: true,
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-06-27T08:35:15.126Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-28T09:07:32.039Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

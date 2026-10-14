@@ -40,7 +40,7 @@ $request = new Operations\CreateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: '1aeb51ee-0f89-478b-9926-58e8d803ebb9',
+        id: '1a0d10bf-7516-4d4c-a38c-72c5b436b3ab',
         questions: [
             new Shared\AtsScorecardQuestion(
                 description: 'Sulum textor eveniet facere vita.',
@@ -53,7 +53,7 @@ $request = new Operations\CreateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-03T06:31:13.296Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-03T15:33:18.576Z'),
     ),
     connectionId: '<id>',
 );
@@ -312,7 +312,7 @@ $request = new Operations\PatchAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'ab17f298-b76a-4568-8ca6-3af7b1bbc22e',
+        id: '11ad4c9a-7424-4a97-9b65-7de4bc541855',
         questions: [
             new Shared\AtsScorecardQuestion(
                 description: 'Sulum textor eveniet facere vita.',
@@ -325,7 +325,7 @@ $request = new Operations\PatchAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-03T06:31:13.299Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-03T15:33:18.578Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -434,7 +434,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'ab17f298-b76a-4568-8ca6-3af7b1bbc22e',
+        id: '11ad4c9a-7424-4a97-9b65-7de4bc541855',
         questions: [
             new Shared\AtsScorecardQuestion(
                 description: 'Sulum textor eveniet facere vita.',
@@ -447,7 +447,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-03T06:31:13.299Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-03T15:33:18.578Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
