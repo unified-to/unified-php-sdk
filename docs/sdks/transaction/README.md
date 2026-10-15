@@ -38,12 +38,12 @@ $request = new Operations\CreateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
         exchangeRate: 0.5674,
-        id: '58b8e11f-c960-434f-b6cd-4d747bd4decd',
+        id: '51a83bbd-5ad4-476c-9b31-6e0c3ca39f57',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-                id: '0e5823c2-5d2e-4b22-adcc-06a25a8a492a',
+                id: 'e59149cb-06ea-4ed8-999e-66784860b022',
                 name: 'Salad',
                 objectType: 'delicate',
                 totalAmount: 58531,
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 94452,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-09-17T10:00:57.479Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-17T15:20:05.902Z'),
     ),
     connectionId: '<id>',
 );
@@ -214,12 +214,12 @@ $request = new Operations\PatchAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
         exchangeRate: 0.5674,
-        id: '116bc8d5-512c-4676-bd21-7ab269585cf3',
+        id: '3f1d1267-7359-46b6-ae6b-10f2efc3708c',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-                id: 'df5c2e2d-81a8-418b-b0d6-0c66d07a20cb',
+                id: '98f53862-c474-4bc8-a9d3-e0e87c4a8c3a',
                 name: 'Salad',
                 objectType: 'delicate',
                 totalAmount: 58531,
@@ -232,7 +232,7 @@ $request = new Operations\PatchAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 94452,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-09-17T10:00:57.482Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-17T15:20:05.909Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -341,12 +341,12 @@ $request = new Operations\UpdateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
         exchangeRate: 0.5674,
-        id: '116bc8d5-512c-4676-bd21-7ab269585cf3',
+        id: '3f1d1267-7359-46b6-ae6b-10f2efc3708c',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The Nikolas Table is the latest in a series of downright products from Beier and Sons',
-                id: 'df5c2e2d-81a8-418b-b0d6-0c66d07a20cb',
+                id: '98f53862-c474-4bc8-a9d3-e0e87c4a8c3a',
                 name: 'Salad',
                 objectType: 'delicate',
                 totalAmount: 58531,
@@ -359,7 +359,7 @@ $request = new Operations\UpdateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 94452,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-09-17T10:00:57.482Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-17T15:20:05.909Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -81,7 +81,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: 'b5536305-3119-448d-b620-d6b4c0e532f1',
+        id: 'f9e3c616-e815-43eb-9fd9-1cf1a0d99611',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -90,10 +90,10 @@ $request = new Operations\CreateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: 'ee910e06-a198-41a0-a7da-03abab3b25c9',
+                id: '896645e6-7f76-4693-97ef-ef0922654bd1',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'deba2f32-3d6b-41a3-b670-c70bda60be5a',
+                        id: 'c50d5932-8ac6-4fd5-84de-6a931d702b1f',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -106,7 +106,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '98dfd6ec-3440-4e86-b5c1-0b1fcc7daf58',
+                id: '93667f20-c0aa-42ad-aa84-cb6dda001310',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -120,7 +120,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-11T11:58:08.112Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-11T21:38:33.902Z'),
     ),
     connectionId: '<id>',
 );
@@ -176,7 +176,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-14T19:07:13.376Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-15T10:23:20.163Z'),
     ),
     connectionId: '<id>',
 );
@@ -236,7 +236,7 @@ $request = new Operations\CreateCommerceItemRequest(
         description: 'Vulnero ustulo abeo.',
         duration: 87,
         globalCode: 'calamitas',
-        id: 'c06dfbe8-83e2-4980-b1e9-4ff2f708ef52',
+        id: 'c594d2bf-4622-41fb-8397-af5d5b34944d',
         isActive: false,
         isFeatured: true,
         isTaxable: true,
@@ -245,10 +245,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 663,
-                id: '134725e5-c891-4b67-847b-3dc6b6650314',
+                id: 'bc6f061a-9426-49cb-91d0-67e9f636585a',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '68dcb6b3-6ae9-4713-b584-c84fd1a90efd',
+                        id: '5d2aead4-44fc-4928-a55c-da08f8abd202',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -261,10 +261,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 189,
-                id: '6e08125f-1431-4128-9c67-efb1723955c6',
+                id: '9ac3ed3b-2bdb-47a6-99fd-81b811ca361b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'b5c57e4f-172d-4f78-a194-0fb29cc40f91',
+                        id: 'd4ef35ca-7874-45ec-890a-31538681a429',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -281,7 +281,7 @@ $request = new Operations\CreateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: 'e6049561-445c-4443-9824-3a2ec00ffcf8',
+                id: '34f83928-ce97-446f-915b-153070426bec',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'terebro',
@@ -305,7 +305,7 @@ $request = new Operations\CreateCommerceItemRequest(
         ],
         totalStock: 579,
         type: 'beatae',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-16T19:34:10.874Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-17T02:52:35.246Z'),
         vendorName: 'Mayer - Flatley',
         weight: 22,
         weightUnit: Shared\WeightUnit::Kg,
@@ -367,7 +367,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
         height: 52,
-        id: '1eb237d3-ff4b-4058-9ebd-e0d4de27c28d',
+        id: '1a1c268a-eab8-4d74-9600-1960339393ef',
         isActive: false,
         isFeatured: false,
         isVisible: false,
@@ -376,10 +376,10 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Calcar delibero cursim summisse.',
                 height: 394,
-                id: '4f1edbb5-fc2d-49ba-b7b0-29f9940baea4',
+                id: '83903432-cbfe-4ef0-ac6c-0f62292e2f01',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '1057dc8a-6ab3-48dd-9c04-a9f09fe9c87d',
+                        id: 'e2f85ddb-62ce-48d1-9acc-72e2813d15cf',
                         slug: 'illo',
                         value: 'quia',
                     ),
@@ -392,10 +392,10 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Civitas acies substantia tergo.',
                 height: 351,
-                id: '1243fc59-9156-4fe5-9ef6-a4765a6d2257',
+                id: '335edc9a-0fbe-423a-841d-71bcc07b5578',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '03900f90-53d7-422b-a34b-92b866c8d13e',
+                        id: '77fd7387-bfbf-4abe-9dac-049fc52c2dad',
                         slug: 'libero',
                         value: 'capitulus',
                     ),
@@ -412,7 +412,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: 'a2e82021-5acd-4d47-8d0e-508dbb281e2c',
+                id: 'f22ac39a-cd8a-432a-8fd6-61c8626d9367',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'nihil',
@@ -421,7 +421,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         name: 'Keyboard',
         options: [
             new Shared\CommerceItemOption(
-                id: '3548b744-d09e-40aa-a20c-8010f1b81370',
+                id: 'e25927e8-ff68-4b5a-b844-348e9cbc7de1',
                 name: 'Steel',
                 position: 97,
                 values: [
@@ -457,7 +457,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             'custodia',
         ],
         totalStock: 929,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-12T01:45:53.218Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-12T15:21:03.146Z'),
         weight: 61,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 26,
@@ -527,7 +527,7 @@ $request = new Operations\CreateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '9f2d8429-175c-487c-bf6e-07db2813f66e',
+        id: 'd557bc07-b0a2-426e-b969-24205069c29b',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -538,10 +538,10 @@ $request = new Operations\CreateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '764f1f7c-3b28-4d12-9ed6-0710515f7d56',
+                id: 'd57c1935-6d5b-4cc2-bfd7-f5866356f541',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'a81d9d5e-3f3f-4082-ae41-63fc5f716d73',
+                        id: 'c00dd8d2-6c31-4032-9bd8-5c3c5b57c227',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -566,7 +566,7 @@ $request = new Operations\CreateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-18T08:28:06.572Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-18T14:59:03.549Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -627,14 +627,14 @@ $request = new Operations\CreateCommerceReservationRequest(
         guestEmail: 'Sunny.Strosin77@yahoo.com',
         guestName: 'Annette Franecki',
         guestPhone: '(990) 317-6213',
-        id: '739da790-3487-4aa4-adbb-efc148a7d837',
+        id: 'c4f219f0-50ba-4769-8a22-deafaf0c042d',
         itemName: 'Practical Ceramic Shoes',
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         staffName: 'Vickie Fahey',
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-02T09:03:16.001Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-02T13:10:27.404Z'),
         url: 'https://cluttered-pine.info/',
     ),
     connectionId: '<id>',
@@ -698,7 +698,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 26,
-        id: '9187ecf9-3290-4da2-8ed6-35407939aa5b',
+        id: 'ed4c9576-d818-4248-b390-031cc3c16c96',
         isFeatured: true,
         isPublic: true,
         isVerified: false,
@@ -706,10 +706,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adulescens.',
                 height: 519,
-                id: '6ad5cf32-0588-4779-8498-7337249db0ae',
+                id: '32c0de8e-576d-4377-bad0-97eaf0d14ec5',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'fac6012c-28fe-426d-a930-4b9d0fddcab5',
+                        id: '06e94684-5f2e-4d30-8fec-6cb4f9c94b80',
                         slug: 'aggero',
                         value: 'tero',
                     ),
@@ -722,10 +722,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Pauci timidus sol comburo thema.',
                 height: 297,
-                id: 'e92451ce-6435-41a4-8faa-104a15435f36',
+                id: '986daf8d-21c3-455d-9d4f-81d1d95b98aa',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'bfb391df-c1f1-426d-b4e2-750a5ff4a5f7',
+                        id: '6f06063e-a98d-4de5-a371-736dca4d7a4a',
                         slug: 'vito',
                         value: 'cuppedia',
                     ),
@@ -738,10 +738,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Cuppedia vestrum patruus.',
                 height: 6,
-                id: '1d9ecade-7115-4f52-b978-9f73bcca5cff',
+                id: '0a32e002-d50f-4114-9bfc-83de5fd31a41',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'fc2b339d-a9cc-4ea2-9544-2cd42b6a2482',
+                        id: 'daf8639a-042e-44a0-b567-4f20f25824fb',
                         slug: 'arbitro',
                         value: 'villa',
                     ),
@@ -757,7 +757,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 49,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-15T13:57:28.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-16T05:41:12.604Z'),
         url: 'https://excitable-underneath.com',
         verifiedPurchase: false,
     ),
@@ -817,10 +817,10 @@ $request = new Operations\CreateCommerceSaleschannelRequest(
         collections: [],
         createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
         description: 'Utroque denuncio solutio.',
-        id: '44975cd5-62de-4af7-a1fe-5ef3bd47c91c',
+        id: 'f78be3fe-85cf-4711-b5a4-672b01300ca3',
         isActive: false,
         slug: 'amiculum-congregatio-suspendo',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-23T12:20:05.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-24T00:32:36.535Z'),
     ),
     connectionId: '<id>',
 );
@@ -1735,7 +1735,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: '35e262cb-2857-4901-92be-d3e126264350',
+        id: 'd6013f5b-1c45-4239-ae11-d5b049d2a171',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -1744,10 +1744,10 @@ $request = new Operations\PatchCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: '7403fb92-309b-4e4b-b80e-2e3a3d0c5cf4',
+                id: 'b26208fb-fe94-42bd-92a9-c76437e5f358',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '59754f02-7889-4705-802f-01d5a504d6fc',
+                        id: 'e260a01c-f637-4d3d-97bc-1411fdb4c0c6',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -1760,7 +1760,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '8f70de80-cbd1-40a9-ba3c-7e48effc8f84',
+                id: 'c9e56995-c094-43a1-ae64-0f6b42cd9e50',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -1774,7 +1774,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-11T11:58:08.121Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-11T21:38:33.912Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1831,7 +1831,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-14T19:07:13.378Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-15T10:23:20.167Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1892,7 +1892,7 @@ $request = new Operations\PatchCommerceItemRequest(
         description: 'Vulnero ustulo abeo.',
         duration: 87,
         globalCode: 'calamitas',
-        id: 'cf13e770-de40-4d91-9ebd-86e0c9cdfa83',
+        id: '7a1b53e5-067e-456f-9ff9-c27b04bd19a4',
         isActive: false,
         isFeatured: true,
         isTaxable: true,
@@ -1901,10 +1901,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 663,
-                id: '52b0ee99-5462-4ea2-93c7-7184e7ef8407',
+                id: '9ef1607b-0abf-4662-86d1-2410b13c81a4',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'a72758fc-07fa-48c1-bbba-0ed7213732e1',
+                        id: '3d1b1475-1f8b-40f9-ad18-d33f68e325f0',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -1917,10 +1917,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 189,
-                id: 'f2786de2-7955-43f0-ba86-5c5b7bac3580',
+                id: '6896ead7-9754-4c24-97ba-074a832cd96d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '83e125de-7d98-448f-ac6b-304761770f0a',
+                        id: '58b5cb32-382a-4c67-b8a2-28a60de65520',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -1937,7 +1937,7 @@ $request = new Operations\PatchCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '41e16536-76b4-4fd5-bf0e-c54e5da68678',
+                id: '43929960-5e5a-4aba-910e-3bca4e036de7',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'terebro',
@@ -1961,7 +1961,7 @@ $request = new Operations\PatchCommerceItemRequest(
         ],
         totalStock: 579,
         type: 'beatae',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-16T19:34:10.884Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-17T02:52:35.258Z'),
         vendorName: 'Mayer - Flatley',
         weight: 22,
         weightUnit: Shared\WeightUnit::Kg,
@@ -2024,7 +2024,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
         height: 52,
-        id: '252edaa4-3029-4ce1-836d-1b16391116e8',
+        id: 'e1d27fbb-5c35-4859-8912-48de057102f3',
         isActive: false,
         isFeatured: false,
         isVisible: false,
@@ -2033,10 +2033,10 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Calcar delibero cursim summisse.',
                 height: 394,
-                id: '863325fb-ef4d-4cad-b17d-93e603acb0b7',
+                id: 'f4ab337f-1082-458f-a814-597da80697ab',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'e5b36839-9419-4905-abaa-a5d97f4c775d',
+                        id: '862e9966-cd1d-4ec8-82aa-af9a2f12fbfc',
                         slug: 'illo',
                         value: 'quia',
                     ),
@@ -2049,10 +2049,10 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Civitas acies substantia tergo.',
                 height: 351,
-                id: '9bb54d20-6a0f-4aa0-a376-3992f0b8086c',
+                id: 'f9d1502a-8732-4cad-99e1-3d228d4a60af',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'f52e5821-51e0-4981-9ef7-15d6dfb34612',
+                        id: 'c6a1c310-0906-42d0-8df0-2bc8a33c0c2e',
                         slug: 'libero',
                         value: 'capitulus',
                     ),
@@ -2069,7 +2069,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '338af471-ce90-4d2f-966f-af01a428eaf1',
+                id: '0150fb60-08b6-4a12-abe1-6fcc1f59375a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'nihil',
@@ -2078,7 +2078,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         name: 'Keyboard',
         options: [
             new Shared\CommerceItemOption(
-                id: '5bae426a-daf3-4078-9c13-626d8b5fdf4b',
+                id: 'e1cd41ae-76ef-4ff1-a0b5-41b73fea5ba6',
                 name: 'Steel',
                 position: 97,
                 values: [
@@ -2114,7 +2114,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             'custodia',
         ],
         totalStock: 929,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-12T01:45:53.234Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-12T15:21:03.166Z'),
         weight: 61,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 26,
@@ -2185,7 +2185,7 @@ $request = new Operations\PatchCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '429f2d69-c3ab-4eea-a25b-bf9f9375bf93',
+        id: '15c1e2ce-ceb0-49c1-80c3-6b180363a182',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -2196,10 +2196,10 @@ $request = new Operations\PatchCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '75b23f3b-c541-41bd-b260-889288c90f34',
+                id: 'd40ee7a1-2df3-4dd1-9a8b-4d9ccc4f8238',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '357e3784-eed3-4e6b-9655-9f6324b7f37b',
+                        id: '9eecbcce-0783-476d-8194-ce5c11b5c5f6',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -2224,7 +2224,7 @@ $request = new Operations\PatchCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-18T08:28:06.579Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-18T14:59:03.556Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -2286,14 +2286,14 @@ $request = new Operations\PatchCommerceReservationRequest(
         guestEmail: 'Sunny.Strosin77@yahoo.com',
         guestName: 'Annette Franecki',
         guestPhone: '(990) 317-6213',
-        id: '58834da7-9d4c-4f8e-b4e1-7608c7b68cb8',
+        id: '42d6299c-4630-4539-abd8-24c1e9c74c96',
         itemName: 'Practical Ceramic Shoes',
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         staffName: 'Vickie Fahey',
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-02T09:03:16.003Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-02T13:10:27.405Z'),
         url: 'https://cluttered-pine.info/',
     ),
     connectionId: '<id>',
@@ -2358,7 +2358,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 26,
-        id: '307ff44b-fbc3-4b23-8c37-c4cdd1464416',
+        id: 'b285ad3a-c24c-4e2d-8db1-536314d5da50',
         isFeatured: true,
         isPublic: true,
         isVerified: false,
@@ -2366,10 +2366,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adulescens.',
                 height: 519,
-                id: '3b26f456-415f-4805-8cf5-c7647969d27b',
+                id: 'bccd094b-655e-4811-9f37-eac5dbdc94e6',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '73016a0f-2cf3-460b-a811-cf6050660394',
+                        id: '025dfe21-dd8a-40ae-aa1d-f88173e3c40b',
                         slug: 'aggero',
                         value: 'tero',
                     ),
@@ -2382,10 +2382,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Pauci timidus sol comburo thema.',
                 height: 297,
-                id: '2d42caf5-822a-46bb-8260-213815b9d888',
+                id: 'b282b5b2-6bbb-41f2-8762-922025b61028',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '662054c0-cdb7-44d2-800e-7a1a63f5f974',
+                        id: '41ed1d86-530b-4e1e-9da9-8165c8120925',
                         slug: 'vito',
                         value: 'cuppedia',
                     ),
@@ -2398,10 +2398,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Cuppedia vestrum patruus.',
                 height: 6,
-                id: '056c791a-f9a8-494e-82e7-fa691373504d',
+                id: '44c75ace-1121-444f-9775-241f1243e96b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '168f30f9-c57a-4816-b4c1-516013478af5',
+                        id: 'cbcd3014-a38c-4039-b8f7-e95c53a36a51',
                         slug: 'arbitro',
                         value: 'villa',
                     ),
@@ -2417,7 +2417,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 49,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-15T13:57:28.186Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-16T05:41:12.645Z'),
         url: 'https://excitable-underneath.com',
         verifiedPurchase: false,
     ),
@@ -2478,10 +2478,10 @@ $request = new Operations\PatchCommerceSaleschannelRequest(
         collections: [],
         createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
         description: 'Utroque denuncio solutio.',
-        id: 'e00d0c3f-45af-464c-a949-f121f2f72340',
+        id: 'd29cca37-0ef0-4140-84cd-ecf7a4a6ede8',
         isActive: false,
         slug: 'amiculum-congregatio-suspendo',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-23T12:20:05.726Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-24T00:32:36.539Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2947,7 +2947,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: '35e262cb-2857-4901-92be-d3e126264350',
+        id: 'd6013f5b-1c45-4239-ae11-d5b049d2a171',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -2956,10 +2956,10 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: '7403fb92-309b-4e4b-b80e-2e3a3d0c5cf4',
+                id: 'b26208fb-fe94-42bd-92a9-c76437e5f358',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '59754f02-7889-4705-802f-01d5a504d6fc',
+                        id: 'e260a01c-f637-4d3d-97bc-1411fdb4c0c6',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -2972,7 +2972,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '8f70de80-cbd1-40a9-ba3c-7e48effc8f84',
+                id: 'c9e56995-c094-43a1-ae64-0f6b42cd9e50',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -2986,7 +2986,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-11T11:58:08.121Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-11T21:38:33.912Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3043,7 +3043,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-14T19:07:13.378Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-15T10:23:20.167Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3104,7 +3104,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         description: 'Vulnero ustulo abeo.',
         duration: 87,
         globalCode: 'calamitas',
-        id: 'cf13e770-de40-4d91-9ebd-86e0c9cdfa83',
+        id: '7a1b53e5-067e-456f-9ff9-c27b04bd19a4',
         isActive: false,
         isFeatured: true,
         isTaxable: true,
@@ -3113,10 +3113,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 663,
-                id: '52b0ee99-5462-4ea2-93c7-7184e7ef8407',
+                id: '9ef1607b-0abf-4662-86d1-2410b13c81a4',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'a72758fc-07fa-48c1-bbba-0ed7213732e1',
+                        id: '3d1b1475-1f8b-40f9-ad18-d33f68e325f0',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -3129,10 +3129,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 189,
-                id: 'f2786de2-7955-43f0-ba86-5c5b7bac3580',
+                id: '6896ead7-9754-4c24-97ba-074a832cd96d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '83e125de-7d98-448f-ac6b-304761770f0a',
+                        id: '58b5cb32-382a-4c67-b8a2-28a60de65520',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -3149,7 +3149,7 @@ $request = new Operations\UpdateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '41e16536-76b4-4fd5-bf0e-c54e5da68678',
+                id: '43929960-5e5a-4aba-910e-3bca4e036de7',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'terebro',
@@ -3173,7 +3173,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         ],
         totalStock: 579,
         type: 'beatae',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-16T19:34:10.884Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-17T02:52:35.258Z'),
         vendorName: 'Mayer - Flatley',
         weight: 22,
         weightUnit: Shared\WeightUnit::Kg,
@@ -3236,7 +3236,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
         height: 52,
-        id: '252edaa4-3029-4ce1-836d-1b16391116e8',
+        id: 'e1d27fbb-5c35-4859-8912-48de057102f3',
         isActive: false,
         isFeatured: false,
         isVisible: false,
@@ -3245,10 +3245,10 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Calcar delibero cursim summisse.',
                 height: 394,
-                id: '863325fb-ef4d-4cad-b17d-93e603acb0b7',
+                id: 'f4ab337f-1082-458f-a814-597da80697ab',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'e5b36839-9419-4905-abaa-a5d97f4c775d',
+                        id: '862e9966-cd1d-4ec8-82aa-af9a2f12fbfc',
                         slug: 'illo',
                         value: 'quia',
                     ),
@@ -3261,10 +3261,10 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Civitas acies substantia tergo.',
                 height: 351,
-                id: '9bb54d20-6a0f-4aa0-a376-3992f0b8086c',
+                id: 'f9d1502a-8732-4cad-99e1-3d228d4a60af',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'f52e5821-51e0-4981-9ef7-15d6dfb34612',
+                        id: 'c6a1c310-0906-42d0-8df0-2bc8a33c0c2e',
                         slug: 'libero',
                         value: 'capitulus',
                     ),
@@ -3281,7 +3281,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '338af471-ce90-4d2f-966f-af01a428eaf1',
+                id: '0150fb60-08b6-4a12-abe1-6fcc1f59375a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'nihil',
@@ -3290,7 +3290,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         name: 'Keyboard',
         options: [
             new Shared\CommerceItemOption(
-                id: '5bae426a-daf3-4078-9c13-626d8b5fdf4b',
+                id: 'e1cd41ae-76ef-4ff1-a0b5-41b73fea5ba6',
                 name: 'Steel',
                 position: 97,
                 values: [
@@ -3326,7 +3326,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             'custodia',
         ],
         totalStock: 929,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-12T01:45:53.234Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-12T15:21:03.166Z'),
         weight: 61,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 26,
@@ -3397,7 +3397,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '429f2d69-c3ab-4eea-a25b-bf9f9375bf93',
+        id: '15c1e2ce-ceb0-49c1-80c3-6b180363a182',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -3408,10 +3408,10 @@ $request = new Operations\UpdateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '75b23f3b-c541-41bd-b260-889288c90f34',
+                id: 'd40ee7a1-2df3-4dd1-9a8b-4d9ccc4f8238',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '357e3784-eed3-4e6b-9655-9f6324b7f37b',
+                        id: '9eecbcce-0783-476d-8194-ce5c11b5c5f6',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -3436,7 +3436,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-18T08:28:06.579Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-18T14:59:03.556Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -3498,14 +3498,14 @@ $request = new Operations\UpdateCommerceReservationRequest(
         guestEmail: 'Sunny.Strosin77@yahoo.com',
         guestName: 'Annette Franecki',
         guestPhone: '(990) 317-6213',
-        id: '58834da7-9d4c-4f8e-b4e1-7608c7b68cb8',
+        id: '42d6299c-4630-4539-abd8-24c1e9c74c96',
         itemName: 'Practical Ceramic Shoes',
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         staffName: 'Vickie Fahey',
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-02T09:03:16.003Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-02T13:10:27.405Z'),
         url: 'https://cluttered-pine.info/',
     ),
     connectionId: '<id>',
@@ -3570,7 +3570,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 26,
-        id: '307ff44b-fbc3-4b23-8c37-c4cdd1464416',
+        id: 'b285ad3a-c24c-4e2d-8db1-536314d5da50',
         isFeatured: true,
         isPublic: true,
         isVerified: false,
@@ -3578,10 +3578,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adulescens.',
                 height: 519,
-                id: '3b26f456-415f-4805-8cf5-c7647969d27b',
+                id: 'bccd094b-655e-4811-9f37-eac5dbdc94e6',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '73016a0f-2cf3-460b-a811-cf6050660394',
+                        id: '025dfe21-dd8a-40ae-aa1d-f88173e3c40b',
                         slug: 'aggero',
                         value: 'tero',
                     ),
@@ -3594,10 +3594,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Pauci timidus sol comburo thema.',
                 height: 297,
-                id: '2d42caf5-822a-46bb-8260-213815b9d888',
+                id: 'b282b5b2-6bbb-41f2-8762-922025b61028',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '662054c0-cdb7-44d2-800e-7a1a63f5f974',
+                        id: '41ed1d86-530b-4e1e-9da9-8165c8120925',
                         slug: 'vito',
                         value: 'cuppedia',
                     ),
@@ -3610,10 +3610,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Cuppedia vestrum patruus.',
                 height: 6,
-                id: '056c791a-f9a8-494e-82e7-fa691373504d',
+                id: '44c75ace-1121-444f-9775-241f1243e96b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '168f30f9-c57a-4816-b4c1-516013478af5',
+                        id: 'cbcd3014-a38c-4039-b8f7-e95c53a36a51',
                         slug: 'arbitro',
                         value: 'villa',
                     ),
@@ -3629,7 +3629,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 49,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-15T13:57:28.186Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-16T05:41:12.645Z'),
         url: 'https://excitable-underneath.com',
         verifiedPurchase: false,
     ),
@@ -3690,10 +3690,10 @@ $request = new Operations\UpdateCommerceSaleschannelRequest(
         collections: [],
         createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
         description: 'Utroque denuncio solutio.',
-        id: 'e00d0c3f-45af-464c-a949-f121f2f72340',
+        id: 'd29cca37-0ef0-4140-84cd-ecf7a4a6ede8',
         isActive: false,
         slug: 'amiculum-congregatio-suspendo',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-23T12:20:05.726Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-24T00:32:36.539Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

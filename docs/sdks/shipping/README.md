@@ -48,7 +48,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: 'c4837340-418b-4c93-9452-421f71cb5429',
+        id: '0f8dbc91-7148-42fb-97df-8aff1bf55ae9',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
@@ -57,7 +57,7 @@ $request = new Operations\CreateShippingLabelRequest(
         serviceCode: 'GIz',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'zYv60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-26T08:21:56.206Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-26T15:20:27.364Z'),
     ),
     connectionId: '<id>',
 );
@@ -113,7 +113,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingRateRequest(
     shippingRate: new Shared\ShippingRate(
         currency: 'USD',
-        id: 'b5535735-2e91-4861-bb28-641ac075ad45',
+        id: 'b2d29700-d53e-41ad-9238-ecf8fcac5de4',
         rates: [
             new Shared\ShippingRateRate(
                 amount: 54.679719475097954,
@@ -122,7 +122,7 @@ $request = new Operations\CreateShippingRateRequest(
                 deliveryDays: 8,
                 description: 'Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.',
                 estimatedDays: 10,
-                estimatedDeliveryEndAt: Utils\Utils::parseDateTime('2024-02-13T10:14:57.087Z'),
+                estimatedDeliveryEndAt: Utils\Utils::parseDateTime('2024-02-13T19:19:03.616Z'),
                 isGuaranteed: true,
                 isNegotiatedRate: true,
                 taxAmount: 2.2701712837442756,
@@ -185,16 +185,16 @@ $request = new Operations\CreateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         carrierName: 'Bogisich, Franey and Koelpin',
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: 'd93fa561-780e-4489-9f09-e59d150ceabd',
+        id: 'd7c0686a-67e4-46e6-baac-7fad9b3ce126',
         rateAmount: 8.86546263936907,
         rateCurrency: 'USD',
         rateEstimatedDays: 8,
         rateServiceName: 'Fisher - Kilback',
         serviceCode: 'F7U',
-        shippedAt: Utils\Utils::parseDateTime('2025-09-12T21:25:34.472Z'),
+        shippedAt: Utils\Utils::parseDateTime('2025-09-13T11:20:52.531Z'),
         status: Shared\ShippingShipmentStatus::Pending,
         trackingUrl: 'https://shallow-secrecy.info/',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-21T06:46:11.813Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-21T20:00:40.053Z'),
     ),
     connectionId: '<id>',
 );
@@ -654,7 +654,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: '7696cb59-3f63-48f1-92d4-1d45af0d4877',
+        id: '87ea9966-8e97-4024-b94b-07679b9e4851',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
@@ -663,7 +663,7 @@ $request = new Operations\PatchShippingLabelRequest(
         serviceCode: 'GIz',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'zYv60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-26T08:21:56.209Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-26T15:20:27.368Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -721,16 +721,16 @@ $request = new Operations\PatchShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         carrierName: 'Bogisich, Franey and Koelpin',
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: 'c5c93692-2b18-4348-acf2-a81d31c8b42d',
+        id: '344ba592-2a82-4300-a423-8cd44fe8acac',
         rateAmount: 8.86546263936907,
         rateCurrency: 'USD',
         rateEstimatedDays: 8,
         rateServiceName: 'Fisher - Kilback',
         serviceCode: 'F7U',
-        shippedAt: Utils\Utils::parseDateTime('2025-09-12T21:25:34.514Z'),
+        shippedAt: Utils\Utils::parseDateTime('2025-09-13T11:20:52.579Z'),
         status: Shared\ShippingShipmentStatus::Pending,
         trackingUrl: 'https://shallow-secrecy.info/',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-21T06:46:11.853Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-21T20:00:40.099Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -889,7 +889,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: '7696cb59-3f63-48f1-92d4-1d45af0d4877',
+        id: '87ea9966-8e97-4024-b94b-07679b9e4851',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
@@ -898,7 +898,7 @@ $request = new Operations\UpdateShippingLabelRequest(
         serviceCode: 'GIz',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'zYv60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-26T08:21:56.209Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-26T15:20:27.368Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -956,16 +956,16 @@ $request = new Operations\UpdateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         carrierName: 'Bogisich, Franey and Koelpin',
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: 'c5c93692-2b18-4348-acf2-a81d31c8b42d',
+        id: '344ba592-2a82-4300-a423-8cd44fe8acac',
         rateAmount: 8.86546263936907,
         rateCurrency: 'USD',
         rateEstimatedDays: 8,
         rateServiceName: 'Fisher - Kilback',
         serviceCode: 'F7U',
-        shippedAt: Utils\Utils::parseDateTime('2025-09-12T21:25:34.514Z'),
+        shippedAt: Utils\Utils::parseDateTime('2025-09-13T11:20:52.579Z'),
         status: Shared\ShippingShipmentStatus::Pending,
         trackingUrl: 'https://shallow-secrecy.info/',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-21T06:46:11.853Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-21T20:00:40.099Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

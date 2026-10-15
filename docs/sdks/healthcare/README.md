@@ -63,7 +63,7 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '6505d76b-6398-4c66-9979-47ca72b2a026',
+        id: 'cc631dfd-3d7b-4b1f-aaeb-4a3a82f9424d',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -83,7 +83,7 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-14T07:03:04.743Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-14T21:04:01.403Z'),
     ),
     connectionId: '<id>',
 );
@@ -170,15 +170,15 @@ $request = new Operations\CreateHealthcareObservationRequest(
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2022-12-06T21:34:04.293Z'),
-        id: '247dcfc1-711d-4ac8-b437-e1ffce3c5bbd',
+        id: 'e4078522-b068-404a-97d1-9c48dc5a6742',
         interpretation: Shared\Interpretation::CriticalHigh,
-        issuedAt: Utils\Utils::parseDateTime('2025-05-07T01:41:28.908Z'),
+        issuedAt: Utils\Utils::parseDateTime('2025-05-07T13:34:18.343Z'),
         metadata: [],
         name: 'Blood pressure panel',
-        observedAt: Utils\Utils::parseDateTime('2025-01-16T08:21:29.755Z'),
+        observedAt: Utils\Utils::parseDateTime('2025-01-16T18:44:51.158Z'),
         status: Shared\HealthcareObservationStatus::Corrected,
         type: Shared\HealthcareObservationType::VitalSigns,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-18T08:09:26.662Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-19T00:17:00.983Z'),
     ),
     connectionId: '<id>',
 );
@@ -251,7 +251,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '4c65ce0e-0ee0-49e8-8e6c-62c7b3017cee',
+        id: '5360215b-c0ee-4f72-9fc1-66bf7fa92696',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -271,7 +271,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-16T07:22:31.112Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-17T01:09:56.120Z'),
     ),
     connectionId: '<id>',
 );
@@ -1440,7 +1440,7 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '2d24331b-1346-463c-9d19-fafdf5b7c030',
+        id: 'd8481a58-3aac-4022-87b6-5f18dd13a883',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -1460,7 +1460,7 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-14T07:03:04.752Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-14T21:04:01.417Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1534,7 +1534,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '1dd6a625-131c-4f98-a1e6-5c7ea2812302',
+        id: '4f859c62-8556-4e8a-b73d-cd91f73eae2b',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -1554,7 +1554,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-16T07:22:31.127Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-17T01:09:56.143Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1664,7 +1664,7 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '2d24331b-1346-463c-9d19-fafdf5b7c030',
+        id: 'd8481a58-3aac-4022-87b6-5f18dd13a883',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -1684,7 +1684,7 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-14T07:03:04.752Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-14T21:04:01.417Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1758,7 +1758,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '1dd6a625-131c-4f98-a1e6-5c7ea2812302',
+        id: '4f859c62-8556-4e8a-b73d-cd91f73eae2b',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -1778,7 +1778,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-16T07:22:31.127Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-17T01:09:56.143Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

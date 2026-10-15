@@ -40,7 +40,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
         height: 52,
-        id: '1eb237d3-ff4b-4058-9ebd-e0d4de27c28d',
+        id: '1a1c268a-eab8-4d74-9600-1960339393ef',
         isActive: false,
         isFeatured: false,
         isVisible: false,
@@ -49,10 +49,10 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Calcar delibero cursim summisse.',
                 height: 394,
-                id: '4f1edbb5-fc2d-49ba-b7b0-29f9940baea4',
+                id: '83903432-cbfe-4ef0-ac6c-0f62292e2f01',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '1057dc8a-6ab3-48dd-9c04-a9f09fe9c87d',
+                        id: 'e2f85ddb-62ce-48d1-9acc-72e2813d15cf',
                         slug: 'illo',
                         value: 'quia',
                     ),
@@ -65,10 +65,10 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Civitas acies substantia tergo.',
                 height: 351,
-                id: '1243fc59-9156-4fe5-9ef6-a4765a6d2257',
+                id: '335edc9a-0fbe-423a-841d-71bcc07b5578',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '03900f90-53d7-422b-a34b-92b866c8d13e',
+                        id: '77fd7387-bfbf-4abe-9dac-049fc52c2dad',
                         slug: 'libero',
                         value: 'capitulus',
                     ),
@@ -85,7 +85,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: 'a2e82021-5acd-4d47-8d0e-508dbb281e2c',
+                id: 'f22ac39a-cd8a-432a-8fd6-61c8626d9367',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'nihil',
@@ -94,7 +94,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         name: 'Keyboard',
         options: [
             new Shared\CommerceItemOption(
-                id: '3548b744-d09e-40aa-a20c-8010f1b81370',
+                id: 'e25927e8-ff68-4b5a-b844-348e9cbc7de1',
                 name: 'Steel',
                 position: 97,
                 values: [
@@ -130,7 +130,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             'custodia',
         ],
         totalStock: 929,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-12T01:45:53.218Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-12T15:21:03.146Z'),
         weight: 61,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 26,
@@ -293,7 +293,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
         height: 52,
-        id: '252edaa4-3029-4ce1-836d-1b16391116e8',
+        id: 'e1d27fbb-5c35-4859-8912-48de057102f3',
         isActive: false,
         isFeatured: false,
         isVisible: false,
@@ -302,10 +302,10 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Calcar delibero cursim summisse.',
                 height: 394,
-                id: '863325fb-ef4d-4cad-b17d-93e603acb0b7',
+                id: 'f4ab337f-1082-458f-a814-597da80697ab',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'e5b36839-9419-4905-abaa-a5d97f4c775d',
+                        id: '862e9966-cd1d-4ec8-82aa-af9a2f12fbfc',
                         slug: 'illo',
                         value: 'quia',
                     ),
@@ -318,10 +318,10 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Civitas acies substantia tergo.',
                 height: 351,
-                id: '9bb54d20-6a0f-4aa0-a376-3992f0b8086c',
+                id: 'f9d1502a-8732-4cad-99e1-3d228d4a60af',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'f52e5821-51e0-4981-9ef7-15d6dfb34612',
+                        id: 'c6a1c310-0906-42d0-8df0-2bc8a33c0c2e',
                         slug: 'libero',
                         value: 'capitulus',
                     ),
@@ -338,7 +338,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '338af471-ce90-4d2f-966f-af01a428eaf1',
+                id: '0150fb60-08b6-4a12-abe1-6fcc1f59375a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'nihil',
@@ -347,7 +347,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         name: 'Keyboard',
         options: [
             new Shared\CommerceItemOption(
-                id: '5bae426a-daf3-4078-9c13-626d8b5fdf4b',
+                id: 'e1cd41ae-76ef-4ff1-a0b5-41b73fea5ba6',
                 name: 'Steel',
                 position: 97,
                 values: [
@@ -383,7 +383,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             'custodia',
         ],
         totalStock: 929,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-12T01:45:53.234Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-12T15:21:03.166Z'),
         weight: 61,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 26,
@@ -497,7 +497,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Featuring Helium-enhanced technology, our Chips offers unparalleled helpful performance',
         height: 52,
-        id: '252edaa4-3029-4ce1-836d-1b16391116e8',
+        id: 'e1d27fbb-5c35-4859-8912-48de057102f3',
         isActive: false,
         isFeatured: false,
         isVisible: false,
@@ -506,10 +506,10 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Calcar delibero cursim summisse.',
                 height: 394,
-                id: '863325fb-ef4d-4cad-b17d-93e603acb0b7',
+                id: 'f4ab337f-1082-458f-a814-597da80697ab',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'e5b36839-9419-4905-abaa-a5d97f4c775d',
+                        id: '862e9966-cd1d-4ec8-82aa-af9a2f12fbfc',
                         slug: 'illo',
                         value: 'quia',
                     ),
@@ -522,10 +522,10 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Civitas acies substantia tergo.',
                 height: 351,
-                id: '9bb54d20-6a0f-4aa0-a376-3992f0b8086c',
+                id: 'f9d1502a-8732-4cad-99e1-3d228d4a60af',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'f52e5821-51e0-4981-9ef7-15d6dfb34612',
+                        id: 'c6a1c310-0906-42d0-8df0-2bc8a33c0c2e',
                         slug: 'libero',
                         value: 'capitulus',
                     ),
@@ -542,7 +542,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '338af471-ce90-4d2f-966f-af01a428eaf1',
+                id: '0150fb60-08b6-4a12-abe1-6fcc1f59375a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'nihil',
@@ -551,7 +551,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         name: 'Keyboard',
         options: [
             new Shared\CommerceItemOption(
-                id: '5bae426a-daf3-4078-9c13-626d8b5fdf4b',
+                id: 'e1cd41ae-76ef-4ff1-a0b5-41b73fea5ba6',
                 name: 'Steel',
                 position: 97,
                 values: [
@@ -587,7 +587,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             'custodia',
         ],
         totalStock: 929,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-12T01:45:53.234Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-12T15:21:03.166Z'),
         weight: 61,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 26,

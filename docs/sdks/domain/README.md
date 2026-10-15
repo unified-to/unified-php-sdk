@@ -37,11 +37,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '70ae1bd3-a8c7-4a00-b110-ed33f56eec08',
+        id: '911b42e0-5bb6-4142-ac5b-fc09cdfffb18',
         isPrimary: false,
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-30T15:42:31.913Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-31T02:32:00.893Z'),
     ),
     connectionId: '<id>',
 );
@@ -198,11 +198,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '167636b6-e021-480a-8f86-1bf3b2ee84be',
+        id: '1a0938cc-4f68-4cd1-a44a-6863be49ec53',
         isPrimary: false,
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-30T15:42:31.915Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-31T02:32:00.897Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -310,11 +310,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '167636b6-e021-480a-8f86-1bf3b2ee84be',
+        id: '1a0938cc-4f68-4cd1-a44a-6863be49ec53',
         isPrimary: false,
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-30T15:42:31.915Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-31T02:32:00.897Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
