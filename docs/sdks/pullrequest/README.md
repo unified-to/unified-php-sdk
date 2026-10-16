@@ -36,9 +36,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-04-27T21:29:06.798Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-04-28T12:28:40.695Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: 'b61eb556-0283-48c9-bc56-ddd59cb487de',
+        id: '1e2de873-0c9d-479e-b3ad-315c24eee49d',
         labels: [
             'adhuc',
             'quaerat',
@@ -48,7 +48,7 @@ $request = new Operations\CreateRepoPullrequestRequest(
         status: Shared\RepoPullrequestStatus::Rejected,
         targetBranchId: 'feed-reboot',
         title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-13T21:11:34.415Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-14T10:12:46.499Z'),
     ),
     connectionId: '<id>',
 );
@@ -204,9 +204,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-04-27T21:29:06.802Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-04-28T12:28:40.703Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '063135e9-eaa1-48c6-9a7f-2032514275b8',
+        id: 'b39ebf57-8c1a-468f-8b0a-c340bcaed13e',
         labels: [
             'adhuc',
             'quaerat',
@@ -216,7 +216,7 @@ $request = new Operations\PatchRepoPullrequestRequest(
         status: Shared\RepoPullrequestStatus::Rejected,
         targetBranchId: 'feed-reboot',
         title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-13T21:11:34.418Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-14T10:12:46.506Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -323,9 +323,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-04-27T21:29:06.802Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-04-28T12:28:40.703Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '063135e9-eaa1-48c6-9a7f-2032514275b8',
+        id: 'b39ebf57-8c1a-468f-8b0a-c340bcaed13e',
         labels: [
             'adhuc',
             'quaerat',
@@ -335,7 +335,7 @@ $request = new Operations\UpdateRepoPullrequestRequest(
         status: Shared\RepoPullrequestStatus::Rejected,
         targetBranchId: 'feed-reboot',
         title: 'Cunae aegrus averto texo advoco bibo amet asporto.',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-13T21:11:34.418Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-14T10:12:46.506Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

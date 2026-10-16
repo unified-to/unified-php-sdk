@@ -37,7 +37,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: '0f8dbc91-7148-42fb-97df-8aff1bf55ae9',
+        id: 'ce5965a3-8a67-4686-982b-bd2b8e78b0e8',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
@@ -46,7 +46,7 @@ $request = new Operations\CreateShippingLabelRequest(
         serviceCode: 'GIz',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'zYv60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-26T15:20:27.364Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-27T00:35:38.771Z'),
     ),
     connectionId: '<id>',
 );
@@ -203,7 +203,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: '87ea9966-8e97-4024-b94b-07679b9e4851',
+        id: '7b983e60-4498-4fac-a58e-19fbb404e148',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
@@ -212,7 +212,7 @@ $request = new Operations\PatchShippingLabelRequest(
         serviceCode: 'GIz',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'zYv60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-26T15:20:27.368Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-27T00:35:38.777Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -320,7 +320,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: '87ea9966-8e97-4024-b94b-07679b9e4851',
+        id: '7b983e60-4498-4fac-a58e-19fbb404e148',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
@@ -329,7 +329,7 @@ $request = new Operations\UpdateShippingLabelRequest(
         serviceCode: 'GIz',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'zYv60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-26T15:20:27.368Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-27T00:35:38.777Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

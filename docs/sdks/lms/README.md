@@ -73,14 +73,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2025-04-25T15:46:46.389Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-04-26T03:45:06.389Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '255db256-ac15-4db6-b1eb-4e0dba13b126',
+        id: 'f6f907ed-fc33-4ad5-8213-b52547e203eb',
         isCompleted: true,
         progressPercentage: 100,
         startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-29T15:53:22.138Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-29T21:16:58.561Z'),
     ),
     connectionId: '<id>',
 );
@@ -137,7 +137,7 @@ $request = new Operations\CreateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: '9f871693-5972-431d-99f0-9f8fe0937137',
+        id: '87a503f0-2c76-47bc-9e00-e3a1fc882104',
         instructors: [],
         languages: [
             'in',
@@ -158,7 +158,7 @@ $request = new Operations\CreateLmsClassRequest(
         ],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-29T20:16:31.146Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-30T16:50:16.493Z'),
     ),
     connectionId: '<id>',
 );
@@ -215,7 +215,7 @@ $request = new Operations\CreateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: '5f6d3ed5-f627-4c07-81a2-e7e71509c15b',
+        id: '45351323-1edd-463a-981b-d0569f38b28e',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -231,7 +231,7 @@ $request = new Operations\CreateLmsCollectionRequest(
             ),
         ],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-07-24T07:32:51.420Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-25T07:53:31.669Z'),
     ),
     connectionId: '<id>',
 );
@@ -294,7 +294,7 @@ $request = new Operations\CreateLmsContentRequest(
         difficulty: 'Beginner',
         durationMinutes: 19,
         externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-        id: '2fd33dbf-ca92-40c5-8091-52a33d233230',
+        id: 'a1bdb6cf-ee74-42d9-97f4-2b4648696c89',
         instructors: [
             new Shared\LmsReference(
                 id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
@@ -373,7 +373,7 @@ $request = new Operations\CreateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-02T04:25:28.944Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-02T12:35:32.748Z'),
     ),
     connectionId: '<id>',
 );
@@ -436,7 +436,7 @@ $request = new Operations\CreateLmsCourseRequest(
         currency: 'FJD',
         description: 'Vinco alias aut capitulus.',
         durationMinutes: 148,
-        id: 'ba14820e-eb7b-499a-b9bd-254efb64dcc7',
+        id: 'b94e0785-b900-4ad6-918e-5bd75472954c',
         instructors: [],
         isActive: true,
         isPrivate: false,
@@ -469,7 +469,7 @@ $request = new Operations\CreateLmsCourseRequest(
         ],
         students: [],
         timeEstimateMinutes: 100,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T05:38:40.848Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T07:47:49.809Z'),
     ),
     connectionId: '<id>',
 );
@@ -530,7 +530,7 @@ $request = new Operations\CreateLmsInstructorRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Deangelo',
-        id: '0b66e55a-24f1-4979-8600-872846fa1227',
+        id: '76d35767-ac2e-4b49-ae2a-86e4f493d688',
         imageUrl: 'https://avatars.githubusercontent.com/u/20232618',
         lastName: 'Ritchie',
         name: 'Deangelo Ritchie',
@@ -541,7 +541,7 @@ $request = new Operations\CreateLmsInstructorRequest(
             ),
         ],
         title: 'Product Solutions Engineer',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-19T18:45:52.235Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-20T13:41:12.623Z'),
     ),
     connectionId: '<id>',
 );
@@ -611,7 +611,7 @@ $request = new Operations\CreateLmsStudentRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Marcella',
-        id: '4b5cdc0f-9d00-40a3-aed3-529bb43cdb46',
+        id: '1b22b7c5-44db-4804-8e73-54c5371dbe04',
         imageUrl: 'https://avatars.githubusercontent.com/u/36301374',
         lastName: 'Murazik',
         name: 'Marcella Murazik',
@@ -621,7 +621,7 @@ $request = new Operations\CreateLmsStudentRequest(
                 type: Shared\LmsTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-06-28T20:15:58.224Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-29T04:56:48.204Z'),
     ),
     connectionId: '<id>',
 );
@@ -1384,14 +1384,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2025-04-25T15:46:46.392Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-04-26T03:45:06.393Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '120d78c0-65ae-463e-92fd-2efebe2ad586',
+        id: '50ea57b0-adc1-4f3b-ae95-d71a3acc9660',
         isCompleted: true,
         progressPercentage: 100,
         startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-29T15:53:22.139Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-29T21:16:58.563Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1449,7 +1449,7 @@ $request = new Operations\PatchLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: 'ebeed9f2-0fc7-4be4-90d9-2134dc1128f9',
+        id: 'ee2d1a4e-b04a-4c67-964c-9e7e18f05236',
         instructors: [],
         languages: [
             'in',
@@ -1470,7 +1470,7 @@ $request = new Operations\PatchLmsClassRequest(
         ],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-29T20:16:31.156Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-30T16:50:16.514Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1528,7 +1528,7 @@ $request = new Operations\PatchLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: '853e86a9-b61b-4c9a-99a6-27987f4d0388',
+        id: '652efd8a-dab6-4bea-adb4-8b4980b8b897',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -1544,7 +1544,7 @@ $request = new Operations\PatchLmsCollectionRequest(
             ),
         ],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-07-24T07:32:51.429Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-25T07:53:31.682Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1608,7 +1608,7 @@ $request = new Operations\PatchLmsContentRequest(
         difficulty: 'Beginner',
         durationMinutes: 19,
         externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-        id: 'f046d101-99f8-4d73-adc0-635f12545d7f',
+        id: '3f1ea3ff-daf2-48ef-b6cd-948259e2d579',
         instructors: [
             new Shared\LmsReference(
                 id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
@@ -1687,7 +1687,7 @@ $request = new Operations\PatchLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-02T04:25:28.950Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-02T12:35:32.760Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1751,7 +1751,7 @@ $request = new Operations\PatchLmsCourseRequest(
         currency: 'FJD',
         description: 'Vinco alias aut capitulus.',
         durationMinutes: 148,
-        id: '11f81074-3db6-485f-844a-ed72dd342c2c',
+        id: '4c5c9263-9958-43d0-b509-86ff4acd443a',
         instructors: [],
         isActive: true,
         isPrivate: false,
@@ -1784,7 +1784,7 @@ $request = new Operations\PatchLmsCourseRequest(
         ],
         students: [],
         timeEstimateMinutes: 100,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T05:38:40.850Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T07:47:49.811Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1846,7 +1846,7 @@ $request = new Operations\PatchLmsInstructorRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Deangelo',
-        id: '033e8c65-920c-4194-aa30-5bf5b04ccfcd',
+        id: '2a9567bd-fe42-4ff7-96c4-526b62e106c2',
         imageUrl: 'https://avatars.githubusercontent.com/u/20232618',
         lastName: 'Ritchie',
         name: 'Deangelo Ritchie',
@@ -1857,7 +1857,7 @@ $request = new Operations\PatchLmsInstructorRequest(
             ),
         ],
         title: 'Product Solutions Engineer',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-19T18:45:52.243Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-20T13:41:12.631Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1928,7 +1928,7 @@ $request = new Operations\PatchLmsStudentRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Marcella',
-        id: 'd15e6c24-61b9-441e-91d7-6ce050108257',
+        id: '77a4755d-9c07-4989-b1d1-87038a487c57',
         imageUrl: 'https://avatars.githubusercontent.com/u/36301374',
         lastName: 'Murazik',
         name: 'Marcella Murazik',
@@ -1938,7 +1938,7 @@ $request = new Operations\PatchLmsStudentRequest(
                 type: Shared\LmsTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-06-28T20:15:58.230Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-29T04:56:48.210Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2352,14 +2352,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2025-04-25T15:46:46.392Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-04-26T03:45:06.393Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '120d78c0-65ae-463e-92fd-2efebe2ad586',
+        id: '50ea57b0-adc1-4f3b-ae95-d71a3acc9660',
         isCompleted: true,
         progressPercentage: 100,
         startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-29T15:53:22.139Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-29T21:16:58.563Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2417,7 +2417,7 @@ $request = new Operations\UpdateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: 'ebeed9f2-0fc7-4be4-90d9-2134dc1128f9',
+        id: 'ee2d1a4e-b04a-4c67-964c-9e7e18f05236',
         instructors: [],
         languages: [
             'in',
@@ -2438,7 +2438,7 @@ $request = new Operations\UpdateLmsClassRequest(
         ],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-29T20:16:31.156Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-30T16:50:16.514Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2496,7 +2496,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: '853e86a9-b61b-4c9a-99a6-27987f4d0388',
+        id: '652efd8a-dab6-4bea-adb4-8b4980b8b897',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -2512,7 +2512,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
             ),
         ],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-07-24T07:32:51.429Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-25T07:53:31.682Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2576,7 +2576,7 @@ $request = new Operations\UpdateLmsContentRequest(
         difficulty: 'Beginner',
         durationMinutes: 19,
         externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-        id: 'f046d101-99f8-4d73-adc0-635f12545d7f',
+        id: '3f1ea3ff-daf2-48ef-b6cd-948259e2d579',
         instructors: [
             new Shared\LmsReference(
                 id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
@@ -2655,7 +2655,7 @@ $request = new Operations\UpdateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-02T04:25:28.950Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-02T12:35:32.760Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2719,7 +2719,7 @@ $request = new Operations\UpdateLmsCourseRequest(
         currency: 'FJD',
         description: 'Vinco alias aut capitulus.',
         durationMinutes: 148,
-        id: '11f81074-3db6-485f-844a-ed72dd342c2c',
+        id: '4c5c9263-9958-43d0-b509-86ff4acd443a',
         instructors: [],
         isActive: true,
         isPrivate: false,
@@ -2752,7 +2752,7 @@ $request = new Operations\UpdateLmsCourseRequest(
         ],
         students: [],
         timeEstimateMinutes: 100,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T05:38:40.850Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T07:47:49.811Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2814,7 +2814,7 @@ $request = new Operations\UpdateLmsInstructorRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Deangelo',
-        id: '033e8c65-920c-4194-aa30-5bf5b04ccfcd',
+        id: '2a9567bd-fe42-4ff7-96c4-526b62e106c2',
         imageUrl: 'https://avatars.githubusercontent.com/u/20232618',
         lastName: 'Ritchie',
         name: 'Deangelo Ritchie',
@@ -2825,7 +2825,7 @@ $request = new Operations\UpdateLmsInstructorRequest(
             ),
         ],
         title: 'Product Solutions Engineer',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-19T18:45:52.243Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-20T13:41:12.631Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2896,7 +2896,7 @@ $request = new Operations\UpdateLmsStudentRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Marcella',
-        id: 'd15e6c24-61b9-441e-91d7-6ce050108257',
+        id: '77a4755d-9c07-4989-b1d1-87038a487c57',
         imageUrl: 'https://avatars.githubusercontent.com/u/36301374',
         lastName: 'Murazik',
         name: 'Marcella Murazik',
@@ -2906,7 +2906,7 @@ $request = new Operations\UpdateLmsStudentRequest(
                 type: Shared\LmsTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-06-28T20:15:58.230Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-29T04:56:48.210Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

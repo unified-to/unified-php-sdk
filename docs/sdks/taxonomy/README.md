@@ -46,7 +46,7 @@ $request = new Operations\CreateHrisTaxonomyRequest(
         ],
         subcategory: 'Bamboo',
         type: Shared\HrisTaxonomyType::Knowledge,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-27T23:31:15.838Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-28T04:55:51.303Z'),
         url: 'https://our-polarisation.name',
     ),
     connectionId: '<id>',

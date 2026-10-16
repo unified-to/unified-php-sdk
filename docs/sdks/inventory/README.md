@@ -37,7 +37,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-15T10:23:20.163Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-16T06:38:37.017Z'),
     ),
     connectionId: '<id>',
 );
@@ -194,7 +194,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-15T10:23:20.167Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-16T06:38:37.023Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -302,7 +302,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-15T10:23:20.167Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-16T06:38:37.023Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

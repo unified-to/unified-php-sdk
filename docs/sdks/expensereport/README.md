@@ -36,16 +36,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2025-04-09T07:40:37.698Z'),
+        approvedAt: Utils\Utils::parseDateTime('2025-04-10T02:50:34.449Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'BMD',
         externalNumber: 'asporto',
-        id: 'dcfeb1c4-4600-4afb-bd5a-5c3cbbcb4656',
+        id: 'f9633028-3e64-463f-a518-19c87fb925ec',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '09d19770-5e05-4d1a-a4c4-b0dd3446fb87',
+                id: '08a4c1d0-8742-4954-81ed-3d09136eac4e',
                 itemDescription: 'The Synchronised motivating software Car offers reliable performance and webbed design',
                 itemName: 'Intelligent Gold Cheese',
                 itemSku: '978-0-6550-0228-4',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '017dad49-9cb7-4360-8a14-cfd9cfe7d4d9',
+                id: '0c9366c8-e1c5-4c5e-b34e-1deba5ae6001',
                 itemDescription: 'Ergonomic Bike made with Marble for all-day coordinated support',
                 itemName: 'Practical Steel Pizza',
                 itemSku: '978-1-4129-9332-6',
@@ -69,12 +69,12 @@ $request = new Operations\CreateAccountingExpensereportRequest(
         ],
         metadata: [],
         name: 'Rustic Aluminum Car',
-        postedAt: Utils\Utils::parseDateTime('2022-10-31T17:31:04.349Z'),
+        postedAt: Utils\Utils::parseDateTime('2022-11-01T03:04:26.646Z'),
         reimbursedAmount: 6696,
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 983,
         totalAmount: 13931,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-09T07:40:37.698Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-10T02:50:34.449Z'),
     ),
     connectionId: '<id>',
 );
@@ -230,16 +230,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2025-04-09T07:40:37.726Z'),
+        approvedAt: Utils\Utils::parseDateTime('2025-04-10T02:50:34.469Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'BMD',
         externalNumber: 'asporto',
-        id: 'b3a5e05d-728d-4cf8-ae7c-acd705756760',
+        id: '08f414b1-625d-4125-9615-2b09a8a33411',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '52586008-7259-4aac-9ca5-5b1ccc809bcf',
+                id: 'bd731da1-ce69-4503-bc61-6b894fe0cc68',
                 itemDescription: 'The Synchronised motivating software Car offers reliable performance and webbed design',
                 itemName: 'Intelligent Gold Cheese',
                 itemSku: '978-0-6550-0228-4',
@@ -250,7 +250,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'a8c3068d-6af2-4b38-9f56-89aea0828134',
+                id: 'ee7f9f7b-bf7e-49e3-b578-b878abb0e2d0',
                 itemDescription: 'Ergonomic Bike made with Marble for all-day coordinated support',
                 itemName: 'Practical Steel Pizza',
                 itemSku: '978-1-4129-9332-6',
@@ -263,12 +263,12 @@ $request = new Operations\PatchAccountingExpensereportRequest(
         ],
         metadata: [],
         name: 'Rustic Aluminum Car',
-        postedAt: Utils\Utils::parseDateTime('2022-10-31T17:31:04.363Z'),
+        postedAt: Utils\Utils::parseDateTime('2022-11-01T03:04:26.656Z'),
         reimbursedAmount: 6696,
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 983,
         totalAmount: 13931,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-09T07:40:37.726Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-10T02:50:34.469Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -375,16 +375,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2025-04-09T07:40:37.726Z'),
+        approvedAt: Utils\Utils::parseDateTime('2025-04-10T02:50:34.469Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'BMD',
         externalNumber: 'asporto',
-        id: 'b3a5e05d-728d-4cf8-ae7c-acd705756760',
+        id: '08f414b1-625d-4125-9615-2b09a8a33411',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '52586008-7259-4aac-9ca5-5b1ccc809bcf',
+                id: 'bd731da1-ce69-4503-bc61-6b894fe0cc68',
                 itemDescription: 'The Synchronised motivating software Car offers reliable performance and webbed design',
                 itemName: 'Intelligent Gold Cheese',
                 itemSku: '978-0-6550-0228-4',
@@ -395,7 +395,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'a8c3068d-6af2-4b38-9f56-89aea0828134',
+                id: 'ee7f9f7b-bf7e-49e3-b578-b878abb0e2d0',
                 itemDescription: 'Ergonomic Bike made with Marble for all-day coordinated support',
                 itemName: 'Practical Steel Pizza',
                 itemSku: '978-1-4129-9332-6',
@@ -408,12 +408,12 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
         ],
         metadata: [],
         name: 'Rustic Aluminum Car',
-        postedAt: Utils\Utils::parseDateTime('2022-10-31T17:31:04.363Z'),
+        postedAt: Utils\Utils::parseDateTime('2022-11-01T03:04:26.656Z'),
         reimbursedAmount: 6696,
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 983,
         totalAmount: 13931,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-09T07:40:37.726Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-10T02:50:34.469Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
