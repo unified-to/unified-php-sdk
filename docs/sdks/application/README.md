@@ -37,10 +37,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-09-26T10:50:38.472Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-09-27T04:55:01.050Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-08T09:28:37.346Z'),
-        id: 'f6840296-af9b-4215-aa6e-82599bb55ce4',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-09T09:14:57.259Z'),
+        id: 'c562996f-24c4-4cba-9247-d78a94334599',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
@@ -56,12 +56,12 @@ $request = new Operations\CreateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-06T11:05:55.679Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-07T14:42:56.183Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-13T06:34:14.785Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-14T10:21:39.334Z'),
     ),
     connectionId: '<id>',
 );
@@ -218,10 +218,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-09-26T10:50:38.492Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-09-27T04:55:01.069Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-08T09:28:37.372Z'),
-        id: '3a621e5b-4b1f-4458-809d-3c0265d10cea',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-09T09:14:57.284Z'),
+        id: '85747e49-b04b-4742-b58d-b9f8e279a07d',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
@@ -237,12 +237,12 @@ $request = new Operations\PatchAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-06T11:05:55.710Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-07T14:42:56.212Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-13T06:34:14.816Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-14T10:21:39.363Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -350,10 +350,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-09-26T10:50:38.492Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-09-27T04:55:01.069Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-08T09:28:37.372Z'),
-        id: '3a621e5b-4b1f-4458-809d-3c0265d10cea',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-09T09:14:57.284Z'),
+        id: '85747e49-b04b-4742-b58d-b9f8e279a07d',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
@@ -369,12 +369,12 @@ $request = new Operations\UpdateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-06T11:05:55.710Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-07T14:42:56.212Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Comburo quidem vesica vulnus curatio. Appositus amita attonbitus conatus degenero charisma sordeo villa victoria varius. Cenaculum acsi officia.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-13T06:34:14.816Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-14T10:21:39.363Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

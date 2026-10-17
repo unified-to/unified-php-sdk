@@ -50,11 +50,11 @@ $request = new Operations\CreateAccountingContactRequest(
     accountingContact: new Shared\AccountingContact(
         associatedContacts: [
             new Shared\AccountingAssociatedContact(
-                id: '58f146b9-e071-4991-8f11-069bd6bf5c64',
+                id: 'b6805216-71e7-4707-aae8-d4d7e8b42d7b',
                 name: 'Delores Reynolds',
             ),
             new Shared\AccountingAssociatedContact(
-                id: 'a796429a-599c-4ca1-ad43-30e50e39f50a',
+                id: '86377354-e928-4c01-bfbe-45650d24df2c',
                 name: 'Delores Reynolds',
             ),
         ],
@@ -77,7 +77,7 @@ $request = new Operations\CreateAccountingContactRequest(
             ),
         ],
         firstName: 'Delores',
-        id: '59a5541c-67a2-49bf-b35b-5f6cc6eba698',
+        id: '003d7069-5e30-4dc5-a929-925d2e0d344c',
         identification: 'amicitia',
         isActive: true,
         isCustomer: true,
@@ -87,7 +87,7 @@ $request = new Operations\CreateAccountingContactRequest(
         paymentMethods: [
             new Shared\AccountingContactPaymentMethod(
                 default: true,
-                id: '500ff164-5aaf-4cd1-89c6-2086921dbe22',
+                id: '266a5607-358f-4726-8919-800827f83c9c',
                 name: 'Visa 1234',
                 type: Shared\AccountingContactPaymentMethodType::Card,
             ),
@@ -114,7 +114,7 @@ $request = new Operations\CreateAccountingContactRequest(
                 type: Shared\AccountingTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2023-12-17T13:10:05.795Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-18T01:46:20.581Z'),
         website: 'https://noxious-advertisement.org',
     ),
     connectionId: '<id>',
@@ -196,7 +196,7 @@ $request = new Operations\CreateCrmContactRequest(
             ),
         ],
         firstName: 'Mohammad',
-        id: 'dab52f0e-1def-4204-a117-5ac3fd948347',
+        id: '6898ab2a-bb4e-412d-aa19-e8453223f50a',
         imageUrl: 'https://picsum.photos/seed/zmbPeg/2905/378',
         lastName: 'Bartell',
         linkUrls: [
@@ -210,7 +210,7 @@ $request = new Operations\CreateCrmContactRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '7c8ea297-4c8e-4c75-a6bf-383a57257554',
+                id: '3f511567-28e9-4f99-b8b1-05b6c145e9c2',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'autem',
@@ -232,7 +232,7 @@ $request = new Operations\CreateCrmContactRequest(
             ),
         ],
         title: 'National Tactics Analyst',
-        updatedAt: Utils\Utils::parseDateTime('2021-02-24T02:01:06.262Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-24T02:43:04.419Z'),
     ),
     connectionId: '<id>',
 );
@@ -296,7 +296,7 @@ $request = new Operations\CreateUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: 'de1b1bd4-cc69-45d1-aab7-91864b846c8a',
+        id: 'd4fa9d45-f892-412b-b69d-bd760a73b4d1',
         lastName: 'Rogahn',
         name: 'Luther Rogahn',
         telephones: [
@@ -314,7 +314,7 @@ $request = new Operations\CreateUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-12-05T08:36:26.614Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-06T01:01:02.008Z'),
     ),
     connectionId: '<id>',
 );
@@ -674,11 +674,11 @@ $request = new Operations\PatchAccountingContactRequest(
     accountingContact: new Shared\AccountingContact(
         associatedContacts: [
             new Shared\AccountingAssociatedContact(
-                id: 'b31a900c-87d4-4f03-a7a1-c5a03882cfab',
+                id: 'b2212e67-7b5e-4199-9964-8ad4dc140ba6',
                 name: 'Delores Reynolds',
             ),
             new Shared\AccountingAssociatedContact(
-                id: 'efc216ad-c193-4556-ace1-4ee83af4e484',
+                id: 'a74e327a-9105-4b5d-92aa-1fcaad010f71',
                 name: 'Delores Reynolds',
             ),
         ],
@@ -701,7 +701,7 @@ $request = new Operations\PatchAccountingContactRequest(
             ),
         ],
         firstName: 'Delores',
-        id: 'e615b98f-39db-496d-a866-1f3e55dee199',
+        id: 'e0982173-64a7-413c-9ffb-cfb4067afcc4',
         identification: 'amicitia',
         isActive: true,
         isCustomer: true,
@@ -711,7 +711,7 @@ $request = new Operations\PatchAccountingContactRequest(
         paymentMethods: [
             new Shared\AccountingContactPaymentMethod(
                 default: true,
-                id: 'd01c28f5-1076-4ea0-a40c-22221ba86846',
+                id: '82f2e7d3-5500-4c49-bec8-53d2ebeba99f',
                 name: 'Visa 1234',
                 type: Shared\AccountingContactPaymentMethodType::Card,
             ),
@@ -738,7 +738,7 @@ $request = new Operations\PatchAccountingContactRequest(
                 type: Shared\AccountingTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2023-12-17T13:10:05.808Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-18T01:46:20.594Z'),
         website: 'https://noxious-advertisement.org',
     ),
     connectionId: '<id>',
@@ -821,7 +821,7 @@ $request = new Operations\PatchCrmContactRequest(
             ),
         ],
         firstName: 'Mohammad',
-        id: 'c20cb19e-95ab-4b71-b88e-53674e888910',
+        id: 'e95fb960-e10d-41b1-b259-eab0c75de0a5',
         imageUrl: 'https://picsum.photos/seed/zmbPeg/2905/378',
         lastName: 'Bartell',
         linkUrls: [
@@ -835,7 +835,7 @@ $request = new Operations\PatchCrmContactRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'a34b11e4-3163-43ea-a49d-98fc85959577',
+                id: '63ed8f7d-d6cb-408c-8f66-7f5a3976c884',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'autem',
@@ -857,7 +857,7 @@ $request = new Operations\PatchCrmContactRequest(
             ),
         ],
         title: 'National Tactics Analyst',
-        updatedAt: Utils\Utils::parseDateTime('2021-02-24T02:01:06.262Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-24T02:43:04.419Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -922,7 +922,7 @@ $request = new Operations\PatchUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: 'a68a0d0b-75b8-43ca-94cf-630cbc976888',
+        id: '42588d28-7623-4f2c-aedf-b053cbafffbe',
         lastName: 'Rogahn',
         name: 'Luther Rogahn',
         telephones: [
@@ -940,7 +940,7 @@ $request = new Operations\PatchUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-12-05T08:36:26.618Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-06T01:01:02.014Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1151,11 +1151,11 @@ $request = new Operations\UpdateAccountingContactRequest(
     accountingContact: new Shared\AccountingContact(
         associatedContacts: [
             new Shared\AccountingAssociatedContact(
-                id: 'b31a900c-87d4-4f03-a7a1-c5a03882cfab',
+                id: 'b2212e67-7b5e-4199-9964-8ad4dc140ba6',
                 name: 'Delores Reynolds',
             ),
             new Shared\AccountingAssociatedContact(
-                id: 'efc216ad-c193-4556-ace1-4ee83af4e484',
+                id: 'a74e327a-9105-4b5d-92aa-1fcaad010f71',
                 name: 'Delores Reynolds',
             ),
         ],
@@ -1178,7 +1178,7 @@ $request = new Operations\UpdateAccountingContactRequest(
             ),
         ],
         firstName: 'Delores',
-        id: 'e615b98f-39db-496d-a866-1f3e55dee199',
+        id: 'e0982173-64a7-413c-9ffb-cfb4067afcc4',
         identification: 'amicitia',
         isActive: true,
         isCustomer: true,
@@ -1188,7 +1188,7 @@ $request = new Operations\UpdateAccountingContactRequest(
         paymentMethods: [
             new Shared\AccountingContactPaymentMethod(
                 default: true,
-                id: 'd01c28f5-1076-4ea0-a40c-22221ba86846',
+                id: '82f2e7d3-5500-4c49-bec8-53d2ebeba99f',
                 name: 'Visa 1234',
                 type: Shared\AccountingContactPaymentMethodType::Card,
             ),
@@ -1215,7 +1215,7 @@ $request = new Operations\UpdateAccountingContactRequest(
                 type: Shared\AccountingTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2023-12-17T13:10:05.808Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-18T01:46:20.594Z'),
         website: 'https://noxious-advertisement.org',
     ),
     connectionId: '<id>',
@@ -1298,7 +1298,7 @@ $request = new Operations\UpdateCrmContactRequest(
             ),
         ],
         firstName: 'Mohammad',
-        id: 'c20cb19e-95ab-4b71-b88e-53674e888910',
+        id: 'e95fb960-e10d-41b1-b259-eab0c75de0a5',
         imageUrl: 'https://picsum.photos/seed/zmbPeg/2905/378',
         lastName: 'Bartell',
         linkUrls: [
@@ -1312,7 +1312,7 @@ $request = new Operations\UpdateCrmContactRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'a34b11e4-3163-43ea-a49d-98fc85959577',
+                id: '63ed8f7d-d6cb-408c-8f66-7f5a3976c884',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'autem',
@@ -1334,7 +1334,7 @@ $request = new Operations\UpdateCrmContactRequest(
             ),
         ],
         title: 'National Tactics Analyst',
-        updatedAt: Utils\Utils::parseDateTime('2021-02-24T02:01:06.262Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-24T02:43:04.419Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1399,7 +1399,7 @@ $request = new Operations\UpdateUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: 'a68a0d0b-75b8-43ca-94cf-630cbc976888',
+        id: '42588d28-7623-4f2c-aedf-b053cbafffbe',
         lastName: 'Rogahn',
         name: 'Luther Rogahn',
         telephones: [
@@ -1417,7 +1417,7 @@ $request = new Operations\UpdateUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-12-05T08:36:26.618Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-06T01:01:02.014Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

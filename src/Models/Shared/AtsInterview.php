@@ -79,6 +79,15 @@ class AtsInterview
     public ?string $location = null;
 
     /**
+     * the URL of the virtual/video meeting (eg. Zoom, Google Meet, Microsoft Teams)
+     *
+     * @var ?string $meetingUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('meeting_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $meetingUrl = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -134,6 +143,7 @@ class AtsInterview
      * @param  ?string  $id
      * @param  ?string  $jobId
      * @param  ?string  $location
+     * @param  ?string  $meetingUrl
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\AtsInterviewStatus  $status
@@ -141,7 +151,7 @@ class AtsInterview
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $externalEventXref = null, ?string $id = null, ?string $jobId = null, ?string $location = null, ?array $raw = null, ?\DateTime $startAt = null, ?AtsInterviewStatus $status = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $externalEventXref = null, ?string $id = null, ?string $jobId = null, ?string $location = null, ?string $meetingUrl = null, ?array $raw = null, ?\DateTime $startAt = null, ?AtsInterviewStatus $status = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->applicationId = $applicationId;
         $this->candidateId = $candidateId;
@@ -151,6 +161,7 @@ class AtsInterview
         $this->id = $id;
         $this->jobId = $jobId;
         $this->location = $location;
+        $this->meetingUrl = $meetingUrl;
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->status = $status;

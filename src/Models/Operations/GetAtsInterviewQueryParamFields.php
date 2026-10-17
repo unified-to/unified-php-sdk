@@ -22,6 +22,7 @@ enum GetAtsInterviewQueryParamFields: string
     case StartAt = 'start_at';
     case EndAt = 'end_at';
     case Location = 'location';
+    case MeetingUrl = 'meeting_url';
     case ExternalEventXref = 'external_event_xref';
     case Raw = 'raw';
 }
