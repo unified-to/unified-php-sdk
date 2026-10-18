@@ -37,19 +37,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-09T14:21:17.132Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-28T22:15:24.272Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-09T19:21:14.531Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-08-29T14:02:29.123Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'IQD',
         description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
-        id: '821cef89-9ffc-4c9a-9bb0-58f34e792046',
+        id: '60503b02-4bad-4e0e-86e9-cb522f651d6b',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'e1779c36-13e9-4bf9-836b-1e3e2e9c0f14',
+                id: '295775ab-e705-41ff-8f93-ddff2b61d9ec',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -58,7 +58,7 @@ $request = new Operations\CreateCrmDealRequest(
         name: 'Frozen Silk Chicken',
         pipelines: [
             new Shared\CrmReference(
-                id: '90f2602b-037b-4ebd-b9f8-67d008faa3c1',
+                id: '65918909-519a-4f05-9b40-7d27c78c8c00',
                 name: 'trans',
             ),
         ],
@@ -66,11 +66,11 @@ $request = new Operations\CreateCrmDealRequest(
         source: 'cubo',
         stages: [
             new Shared\CrmReference(
-                id: '6a87e55d-2d2e-4251-be0a-3892e86fdd7e',
+                id: '365363b2-6f9d-402e-84ec-40d5a4b77a51',
                 name: 'tubineus',
             ),
             new Shared\CrmReference(
-                id: '5654a116-2a4a-4538-b695-2330baa7eba5',
+                id: '7ff2022b-6797-4734-8aa0-3e2832a7f8f0',
                 name: 'adfectus',
             ),
         ],
@@ -78,7 +78,7 @@ $request = new Operations\CreateCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-10T08:25:38.511Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-10T17:44:13.980Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -236,19 +236,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-09T14:21:17.136Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-28T22:15:24.287Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-09T19:21:14.536Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-08-29T14:02:29.139Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'IQD',
         description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
-        id: '8f251fd5-9a74-45dc-a1b4-5babb7b6b61d',
+        id: 'a6790b90-d4d0-424f-be95-0a64f4f0f207',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '98cf4833-6bfa-421d-ab59-8bd3984b853e',
+                id: 'c2abddd9-a0f2-402d-86a2-b7a4a0d25fcb',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -257,7 +257,7 @@ $request = new Operations\PatchCrmDealRequest(
         name: 'Frozen Silk Chicken',
         pipelines: [
             new Shared\CrmReference(
-                id: '5cfc55b5-673f-41be-842e-317b0743bf01',
+                id: '9cf02af6-04aa-446f-95bb-63a34b9fdb0a',
                 name: 'trans',
             ),
         ],
@@ -265,11 +265,11 @@ $request = new Operations\PatchCrmDealRequest(
         source: 'cubo',
         stages: [
             new Shared\CrmReference(
-                id: 'da019771-60e0-4111-99ca-d892be6b1857',
+                id: 'f1568f2b-0328-439c-bbb1-5a501c63598b',
                 name: 'tubineus',
             ),
             new Shared\CrmReference(
-                id: '47b3d8f9-4986-4ee5-ab21-4f15b2e59a34',
+                id: '61de5d4f-7fcb-4ceb-ade6-cd6d9be5126f',
                 name: 'adfectus',
             ),
         ],
@@ -277,7 +277,7 @@ $request = new Operations\PatchCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-10T08:25:38.519Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-10T17:44:13.989Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -386,19 +386,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-09T14:21:17.136Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-28T22:15:24.287Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-09T19:21:14.536Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-08-29T14:02:29.139Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'IQD',
         description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
-        id: '8f251fd5-9a74-45dc-a1b4-5babb7b6b61d',
+        id: 'a6790b90-d4d0-424f-be95-0a64f4f0f207',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '98cf4833-6bfa-421d-ab59-8bd3984b853e',
+                id: 'c2abddd9-a0f2-402d-86a2-b7a4a0d25fcb',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -407,7 +407,7 @@ $request = new Operations\UpdateCrmDealRequest(
         name: 'Frozen Silk Chicken',
         pipelines: [
             new Shared\CrmReference(
-                id: '5cfc55b5-673f-41be-842e-317b0743bf01',
+                id: '9cf02af6-04aa-446f-95bb-63a34b9fdb0a',
                 name: 'trans',
             ),
         ],
@@ -415,11 +415,11 @@ $request = new Operations\UpdateCrmDealRequest(
         source: 'cubo',
         stages: [
             new Shared\CrmReference(
-                id: 'da019771-60e0-4111-99ca-d892be6b1857',
+                id: 'f1568f2b-0328-439c-bbb1-5a501c63598b',
                 name: 'tubineus',
             ),
             new Shared\CrmReference(
-                id: '47b3d8f9-4986-4ee5-ab21-4f15b2e59a34',
+                id: '61de5d4f-7fcb-4ceb-ade6-cd6d9be5126f',
                 name: 'adfectus',
             ),
         ],
@@ -427,7 +427,7 @@ $request = new Operations\UpdateCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-10T08:25:38.519Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-10T17:44:13.989Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
