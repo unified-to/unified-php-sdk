@@ -42,11 +42,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(
-        approvedAt: Utils\Utils::parseDateTime('2026-06-07T02:01:16.797Z'),
+        approvedAt: Utils\Utils::parseDateTime('2026-06-08T00:06:03.366Z'),
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://ripe-napkin.biz/',
-                id: 'b005b5ca-1674-490b-947e-47f58361a606',
+                id: 'f01fe09b-b2c8-4bb8-bcb5-0ffd6c0aec26',
                 mimeType: 'annus',
                 name: 'cohibeo',
             ),
@@ -55,10 +55,10 @@ $request = new Operations\CreateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'SSP',
         externalNumber: 'necessitatibus',
-        id: '6d1c9266-7031-41ed-8482-66a877fc4737',
+        id: '040eaf2f-0fdc-4c7c-a735-21b0b5e06683',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: 'e9e6097a-39bf-4533-a70b-e63a55b0c102',
+                id: '0f2cd246-70e2-41ae-828b-9ba639b108ba',
                 itemDescription: 'Innovative Table featuring left technology and Rubber construction',
                 itemName: 'Luxurious Cotton Pizza',
                 itemSku: '978-0-8324-6620-5',
@@ -72,13 +72,13 @@ $request = new Operations\CreateAccountingExpenseRequest(
         metadata: [],
         name: 'Refined Steel Shoes',
         paymentMethod: 'CASH',
-        postedAt: Utils\Utils::parseDateTime('2021-06-08T21:47:56.099Z'),
+        postedAt: Utils\Utils::parseDateTime('2021-06-09T01:27:40.878Z'),
         reimbursedAmount: 1833,
         status: Shared\AccountingExpenseStatus::Submitted,
         taxAmount: 2602,
         totalAmount: 3580,
         type: Shared\AccountingExpenseType::User,
-        updatedAt: Utils\Utils::parseDateTime('2026-06-07T02:01:16.797Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-08T00:06:03.366Z'),
     ),
     connectionId: '<id>',
 );
@@ -137,7 +137,7 @@ $request = new Operations\CreateLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: '9b4a90cc-e17c-4add-8ec4-89a83ecb92ec',
+        id: '57503f4b-6d88-4692-8107-b8fe7c0e2aca',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -145,7 +145,7 @@ $request = new Operations\CreateLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-29T06:48:04.821Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-29T20:09:20.850Z'),
     ),
     connectionId: '<id>',
 );
@@ -402,11 +402,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(
-        approvedAt: Utils\Utils::parseDateTime('2026-06-07T02:01:16.848Z'),
+        approvedAt: Utils\Utils::parseDateTime('2026-06-08T00:06:03.419Z'),
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://ripe-napkin.biz/',
-                id: 'cb4435b8-f05c-429b-bb1d-f957dad2a346',
+                id: '343f3aa0-32f4-46a6-8e70-466fc9803ac2',
                 mimeType: 'annus',
                 name: 'cohibeo',
             ),
@@ -415,10 +415,10 @@ $request = new Operations\PatchAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'SSP',
         externalNumber: 'necessitatibus',
-        id: '323ad750-3065-4d67-832d-933db5447d3d',
+        id: 'a01c359d-84eb-47f2-a182-177f57fe59c5',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '5efbde7d-6fa9-4b1b-b817-e65dc7b55148',
+                id: '56f8ed86-ae25-4a35-8a12-9921b75ee448',
                 itemDescription: 'Innovative Table featuring left technology and Rubber construction',
                 itemName: 'Luxurious Cotton Pizza',
                 itemSku: '978-0-8324-6620-5',
@@ -432,13 +432,13 @@ $request = new Operations\PatchAccountingExpenseRequest(
         metadata: [],
         name: 'Refined Steel Shoes',
         paymentMethod: 'CASH',
-        postedAt: Utils\Utils::parseDateTime('2021-06-08T21:47:56.107Z'),
+        postedAt: Utils\Utils::parseDateTime('2021-06-09T01:27:40.887Z'),
         reimbursedAmount: 1833,
         status: Shared\AccountingExpenseStatus::Submitted,
         taxAmount: 2602,
         totalAmount: 3580,
         type: Shared\AccountingExpenseType::User,
-        updatedAt: Utils\Utils::parseDateTime('2026-06-07T02:01:16.848Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-08T00:06:03.419Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -498,7 +498,7 @@ $request = new Operations\PatchLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: 'c34a2ce1-ff96-46f2-bcb3-584b581a9939',
+        id: '0d5ad1c8-9ba4-42d5-a553-2ec301bf6b6d',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -506,7 +506,7 @@ $request = new Operations\PatchLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-29T06:48:04.827Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-29T20:09:20.862Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -664,11 +664,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAccountingExpenseRequest(
     accountingExpense: new Shared\AccountingExpense(
-        approvedAt: Utils\Utils::parseDateTime('2026-06-07T02:01:16.848Z'),
+        approvedAt: Utils\Utils::parseDateTime('2026-06-08T00:06:03.419Z'),
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://ripe-napkin.biz/',
-                id: 'cb4435b8-f05c-429b-bb1d-f957dad2a346',
+                id: '343f3aa0-32f4-46a6-8e70-466fc9803ac2',
                 mimeType: 'annus',
                 name: 'cohibeo',
             ),
@@ -677,10 +677,10 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'SSP',
         externalNumber: 'necessitatibus',
-        id: '323ad750-3065-4d67-832d-933db5447d3d',
+        id: 'a01c359d-84eb-47f2-a182-177f57fe59c5',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '5efbde7d-6fa9-4b1b-b817-e65dc7b55148',
+                id: '56f8ed86-ae25-4a35-8a12-9921b75ee448',
                 itemDescription: 'Innovative Table featuring left technology and Rubber construction',
                 itemName: 'Luxurious Cotton Pizza',
                 itemSku: '978-0-8324-6620-5',
@@ -694,13 +694,13 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         metadata: [],
         name: 'Refined Steel Shoes',
         paymentMethod: 'CASH',
-        postedAt: Utils\Utils::parseDateTime('2021-06-08T21:47:56.107Z'),
+        postedAt: Utils\Utils::parseDateTime('2021-06-09T01:27:40.887Z'),
         reimbursedAmount: 1833,
         status: Shared\AccountingExpenseStatus::Submitted,
         taxAmount: 2602,
         totalAmount: 3580,
         type: Shared\AccountingExpenseType::User,
-        updatedAt: Utils\Utils::parseDateTime('2026-06-07T02:01:16.848Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-08T00:06:03.419Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -760,7 +760,7 @@ $request = new Operations\UpdateLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: 'c34a2ce1-ff96-46f2-bcb3-584b581a9939',
+        id: '0d5ad1c8-9ba4-42d5-a553-2ec301bf6b6d',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -768,7 +768,7 @@ $request = new Operations\UpdateLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-29T06:48:04.827Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-29T20:09:20.862Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

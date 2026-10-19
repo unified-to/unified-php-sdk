@@ -38,7 +38,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '7e74aa88-0630-43c0-9b27-93477f4ccbfd',
+        id: '17605bf1-90d8-4456-96af-1fb17d58fd1f',
         isRequired: false,
         name: 'autem',
         objectType: 'social_review',
@@ -48,7 +48,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-19T20:15:48.775Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-20T13:02:08.038Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,7 +206,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'f96c3b9f-e736-47ca-9b5b-bfa92ac49495',
+        id: '4b0e109b-91a7-4c0d-ab5b-0005bd8ec8b3',
         isRequired: false,
         name: 'autem',
         objectType: 'social_review',
@@ -216,7 +216,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-19T20:15:48.780Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-20T13:02:08.046Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,7 +325,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'f96c3b9f-e736-47ca-9b5b-bfa92ac49495',
+        id: '4b0e109b-91a7-4c0d-ab5b-0005bd8ec8b3',
         isRequired: false,
         name: 'autem',
         objectType: 'social_review',
@@ -335,7 +335,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-19T20:15:48.780Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-20T13:02:08.046Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

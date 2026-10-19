@@ -35,11 +35,11 @@ $request = new Operations\CreateAdsAssetRequest(
     adsAsset: new Shared\AdsAsset(
         createdAt: Utils\Utils::parseDateTime('2020-03-27T20:14:38.603Z'),
         height: 400,
-        id: 'a29ad994-a0ee-46c4-ae20-3856a8bc9270',
+        id: '3a14c858-f386-4858-83bb-b4f546333446',
         mimeType: 'IMAGE_PNG',
         name: 'Lockman - DuBuque',
         type: Shared\AdsAssetType::Image,
-        updatedAt: Utils\Utils::parseDateTime('2022-03-24T07:04:46.222Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-03-24T14:10:59.917Z'),
         url: 'https://informal-perfection.com/',
         width: 600,
     ),
