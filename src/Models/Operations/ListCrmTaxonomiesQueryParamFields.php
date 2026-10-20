@@ -15,5 +15,6 @@ enum ListCrmTaxonomiesQueryParamFields: string
     case Name = 'name';
     case Label = 'label';
     case Type = 'type';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

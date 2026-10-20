@@ -38,5 +38,6 @@ enum ListMartechReportsQueryParamFields: string
     case HumanOpensTotal = 'human_opens_total';
     case HumanUniqueOpens = 'human_unique_opens';
     case HumanOpenRate = 'human_open_rate';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

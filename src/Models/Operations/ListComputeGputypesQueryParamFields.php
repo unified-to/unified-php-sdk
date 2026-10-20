@@ -26,5 +26,6 @@ enum ListComputeGputypesQueryParamFields: string
     case Architecture = 'architecture';
     case Prices = 'prices';
     case Availability = 'availability';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

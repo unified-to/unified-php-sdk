@@ -34,5 +34,6 @@ enum PatchLmsContentQueryParamFields: string
     case CollectionIds = 'collection_ids';
     case Instructors = 'instructors';
     case PublishedAt = 'published_at';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

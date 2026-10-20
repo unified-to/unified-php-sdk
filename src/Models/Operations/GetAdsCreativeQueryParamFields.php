@@ -40,5 +40,6 @@ enum GetAdsCreativeQueryParamFields: string
     case Path2 = 'path2';
     case Data = 'data';
     case Labels = 'labels';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

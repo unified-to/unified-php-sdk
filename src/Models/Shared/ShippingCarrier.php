@@ -57,6 +57,16 @@ class ShippingCarrier
     public ?string $logoUrl = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The name of the carrier
      *
      * @var ?string $name
@@ -99,19 +109,21 @@ class ShippingCarrier
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $logoUrl
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $websiteUrl
      * @phpstan-pure
      */
-    public function __construct(?string $code = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isActive = null, ?string $logoUrl = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
+    public function __construct(?string $code = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isActive = null, ?string $logoUrl = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
     {
         $this->code = $code;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->isActive = $isActive;
         $this->logoUrl = $logoUrl;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

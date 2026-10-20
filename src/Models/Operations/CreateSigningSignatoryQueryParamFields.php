@@ -23,4 +23,5 @@ enum CreateSigningSignatoryQueryParamFields: string
     case SignedAt = 'signed_at';
     case DeclineReason = 'decline_reason';
     case Raw = 'raw';
+    case Metadata = 'metadata';
 }

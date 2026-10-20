@@ -18,5 +18,6 @@ enum ListCalendarCalendarsQueryParamFields: string
     case Description = 'description';
     case Timezone = 'timezone';
     case IsPrimary = 'is_primary';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

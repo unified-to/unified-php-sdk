@@ -18,5 +18,6 @@ enum ListTicketingNotesQueryParamFields: string
     case Description = 'description';
     case TicketId = 'ticket_id';
     case UserId = 'user_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

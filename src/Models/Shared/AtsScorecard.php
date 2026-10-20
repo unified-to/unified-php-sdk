@@ -77,6 +77,16 @@ class AtsScorecard
     public ?string $jobId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $questions
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AtsScorecardQuestion> $questions
@@ -123,13 +133,14 @@ class AtsScorecard
      * @param  ?string  $interviewId
      * @param  ?string  $interviewerId
      * @param  ?string  $jobId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsScorecardQuestion>  $questions
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\Recommendation  $recommendation
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?string $comment = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $interviewId = null, ?string $interviewerId = null, ?string $jobId = null, ?array $questions = null, ?array $raw = null, ?Recommendation $recommendation = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?string $comment = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $interviewId = null, ?string $interviewerId = null, ?string $jobId = null, ?array $metadata = null, ?array $questions = null, ?array $raw = null, ?Recommendation $recommendation = null, ?\DateTime $updatedAt = null)
     {
         $this->applicationId = $applicationId;
         $this->candidateId = $candidateId;
@@ -139,6 +150,7 @@ class AtsScorecard
         $this->interviewId = $interviewId;
         $this->interviewerId = $interviewerId;
         $this->jobId = $jobId;
+        $this->metadata = $metadata;
         $this->questions = $questions;
         $this->raw = $raw;
         $this->recommendation = $recommendation;

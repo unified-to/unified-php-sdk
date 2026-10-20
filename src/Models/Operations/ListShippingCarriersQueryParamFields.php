@@ -19,5 +19,6 @@ enum ListShippingCarriersQueryParamFields: string
     case IsActive = 'is_active';
     case LogoUrl = 'logo_url';
     case WebsiteUrl = 'website_url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

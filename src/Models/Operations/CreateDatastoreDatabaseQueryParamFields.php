@@ -20,5 +20,6 @@ enum CreateDatastoreDatabaseQueryParamFields: string
     case IsActive = 'is_active';
     case Password = 'password';
     case Region = 'region';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

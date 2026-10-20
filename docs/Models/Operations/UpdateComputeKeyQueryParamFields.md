@@ -18,4 +18,5 @@
 | `Secret`      | secret        |
 | `InstanceId`  | instance_id   |
 | `ExpiresAt`   | expires_at    |
+| `Metadata`    | metadata      |
 | `Raw`         | raw           |

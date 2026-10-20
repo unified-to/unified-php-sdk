@@ -33,5 +33,6 @@ enum ListAnalyticsSessionsQueryParamFields: string
     case City = 'city';
     case IsBounce = 'is_bounce';
     case IsConversion = 'is_conversion';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

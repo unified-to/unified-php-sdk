@@ -19,5 +19,6 @@ enum GetLmsCollectionQueryParamFields: string
     case Media = 'media';
     case IsActive = 'is_active';
     case ParentId = 'parent_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

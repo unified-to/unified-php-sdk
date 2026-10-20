@@ -79,6 +79,16 @@ class LmsActivity
     public ?bool $isCompleted = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?float $progressPercentage
      */
@@ -132,6 +142,7 @@ class LmsActivity
      * @param  ?float  $durationMinutes
      * @param  ?string  $id
      * @param  ?bool  $isCompleted
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMetadata>  $metadata
      * @param  ?float  $progressPercentage
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startedAt
@@ -139,7 +150,7 @@ class LmsActivity
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $assignedGrade = null, ?\DateTime $completedAt = null, ?string $contentId = null, ?string $courseId = null, ?\DateTime $createdAt = null, ?float $durationMinutes = null, ?string $id = null, ?bool $isCompleted = null, ?float $progressPercentage = null, ?array $raw = null, ?\DateTime $startedAt = null, ?string $studentId = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $assignedGrade = null, ?\DateTime $completedAt = null, ?string $contentId = null, ?string $courseId = null, ?\DateTime $createdAt = null, ?float $durationMinutes = null, ?string $id = null, ?bool $isCompleted = null, ?array $metadata = null, ?float $progressPercentage = null, ?array $raw = null, ?\DateTime $startedAt = null, ?string $studentId = null, ?\DateTime $updatedAt = null)
     {
         $this->assignedGrade = $assignedGrade;
         $this->completedAt = $completedAt;
@@ -149,6 +160,7 @@ class LmsActivity
         $this->durationMinutes = $durationMinutes;
         $this->id = $id;
         $this->isCompleted = $isCompleted;
+        $this->metadata = $metadata;
         $this->progressPercentage = $progressPercentage;
         $this->raw = $raw;
         $this->startedAt = $startedAt;

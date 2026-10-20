@@ -26,5 +26,6 @@ enum GetAccountingCashflowQueryParamFields: string
     case OperatingSections = 'operating_sections';
     case InvestingSections = 'investing_sections';
     case FinancingSections = 'financing_sections';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

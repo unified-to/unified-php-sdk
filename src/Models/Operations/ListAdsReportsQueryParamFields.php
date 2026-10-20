@@ -19,5 +19,6 @@ enum ListAdsReportsQueryParamFields: string
     case StartAt = 'start_at';
     case EndAt = 'end_at';
     case OrganizationId = 'organization_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

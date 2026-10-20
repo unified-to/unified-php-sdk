@@ -22,4 +22,5 @@
 | `IsVerified`  | is_verified   |
 | `IsPrivate`   | is_private    |
 | `Metrics`     | metrics       |
+| `Metadata`    | metadata      |
 | `Raw`         | raw           |

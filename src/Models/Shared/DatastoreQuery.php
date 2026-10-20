@@ -20,6 +20,16 @@ class DatastoreQuery
     public ?string $databaseId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\DatastoreMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DatastoreMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQuery $query
      */
@@ -57,15 +67,17 @@ class DatastoreQuery
 
     /**
      * @param  ?string  $databaseId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreMetadata>  $metadata
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQuery  $query
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryResponse  $response
      * @param  ?string  $tableId
      * @phpstan-pure
      */
-    public function __construct(?string $databaseId = null, ?PropertyDatastoreQueryQuery $query = null, ?array $raw = null, ?PropertyDatastoreQueryResponse $response = null, ?string $tableId = null)
+    public function __construct(?string $databaseId = null, ?array $metadata = null, ?PropertyDatastoreQueryQuery $query = null, ?array $raw = null, ?PropertyDatastoreQueryResponse $response = null, ?string $tableId = null)
     {
         $this->databaseId = $databaseId;
+        $this->metadata = $metadata;
         $this->query = $query;
         $this->raw = $raw;
         $this->response = $response;

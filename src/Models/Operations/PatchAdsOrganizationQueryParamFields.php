@@ -21,5 +21,6 @@ enum PatchAdsOrganizationQueryParamFields: string
     case Status = 'status';
     case AccountNumber = 'account_number';
     case Managers = 'managers';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

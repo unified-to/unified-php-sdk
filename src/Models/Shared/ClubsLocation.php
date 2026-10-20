@@ -67,6 +67,16 @@ class ClubsLocation
     public ?float $longitude = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ClubsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The location name
      *
      * @var ?string $name
@@ -119,6 +129,7 @@ class ClubsLocation
      * @param  ?string  $id
      * @param  ?float  $latitude
      * @param  ?float  $longitude
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $telephone
@@ -126,7 +137,7 @@ class ClubsLocation
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?PropertyClubsLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $groupId = null, ?string $id = null, ?float $latitude = null, ?float $longitude = null, ?string $name = null, ?array $raw = null, ?string $telephone = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?PropertyClubsLocationAddress $address = null, ?\DateTime $createdAt = null, ?string $groupId = null, ?string $id = null, ?float $latitude = null, ?float $longitude = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $telephone = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->address = $address;
         $this->createdAt = $createdAt;
@@ -134,6 +145,7 @@ class ClubsLocation
         $this->id = $id;
         $this->latitude = $latitude;
         $this->longitude = $longitude;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->telephone = $telephone;

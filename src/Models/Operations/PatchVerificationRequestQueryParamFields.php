@@ -35,5 +35,6 @@ enum PatchVerificationRequestQueryParamFields: string
     case ResponseDownloadUrls = 'response_download_urls';
     case ResponseDetails = 'response_details';
     case ResponseSource = 'response_source';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

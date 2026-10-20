@@ -117,6 +117,16 @@ class HrisTimeshift
     public ?string $locationId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -157,12 +167,13 @@ class HrisTimeshift
      * @param  ?string  $id
      * @param  ?bool  $isApproved
      * @param  ?string  $locationId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $employeeUserId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $groupId = null, ?float $hours = null, ?string $id = null, ?bool $isApproved = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $employeeUserId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $groupId = null, ?float $hours = null, ?string $id = null, ?bool $isApproved = null, ?string $locationId = null, ?array $metadata = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->employeeUserId = $employeeUserId;
         $this->approvedAt = $approvedAt;
@@ -176,6 +187,7 @@ class HrisTimeshift
         $this->id = $id;
         $this->isApproved = $isApproved;
         $this->locationId = $locationId;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->updatedAt = $updatedAt;

@@ -26,5 +26,6 @@ enum ListUcRecordingsQueryParamFields: string
     case UserPhone = 'user_phone';
     case Type = 'type';
     case ConversationIdentifier = 'conversation_identifier';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

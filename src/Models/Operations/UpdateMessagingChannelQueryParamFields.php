@@ -22,5 +22,6 @@ enum UpdateMessagingChannelQueryParamFields: string
     case IsActive = 'is_active';
     case IsPrivate = 'is_private';
     case WebUrl = 'web_url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

@@ -66,6 +66,16 @@ class SocialReview
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\SocialMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\SocialMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The social profile (page/handle/listing) being reviewed
      *
      * @var ?string $profileId
@@ -137,6 +147,7 @@ class SocialReview
      * @param  ?string  $content
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\SocialMetadata>  $metadata
      * @param  ?string  $profileId
      * @param  ?float  $rating
      * @param  ?array<string, mixed>  $raw
@@ -146,7 +157,7 @@ class SocialReview
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?string $authorAvatarUrl = null, ?string $authorLocation = null, ?string $authorName = null, ?string $content = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $profileId = null, ?float $rating = null, ?array $raw = null, ?PropertySocialReviewReply $reply = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?string $authorAvatarUrl = null, ?string $authorLocation = null, ?string $authorName = null, ?string $content = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?string $profileId = null, ?float $rating = null, ?array $raw = null, ?PropertySocialReviewReply $reply = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->authorAvatarUrl = $authorAvatarUrl;
         $this->authorLocation = $authorLocation;
@@ -154,6 +165,7 @@ class SocialReview
         $this->content = $content;
         $this->createdAt = $createdAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->profileId = $profileId;
         $this->rating = $rating;
         $this->raw = $raw;

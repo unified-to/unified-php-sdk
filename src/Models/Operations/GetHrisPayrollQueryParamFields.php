@@ -32,5 +32,6 @@ enum GetHrisPayrollQueryParamFields: string
     case TotalCostAmount = 'total_cost_amount';
     case UserIds = 'user_ids';
     case PayslipIds = 'payslip_ids';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

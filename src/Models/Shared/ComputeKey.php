@@ -57,6 +57,16 @@ class ComputeKey
     public ?string $instanceId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ComputeMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Display name of the key
      *
      * @var ?string $name
@@ -145,6 +155,7 @@ class ComputeKey
      * @param  ?string  $fingerprint
      * @param  ?string  $id
      * @param  ?string  $instanceId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $privateKey
      * @param  ?string  $publicKey
@@ -156,13 +167,14 @@ class ComputeKey
      * @param  ?string  $username
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?\DateTime $expiresAt = null, ?string $fingerprint = null, ?string $id = null, ?string $instanceId = null, ?string $name = null, ?string $privateKey = null, ?string $publicKey = null, ?array $raw = null, ?string $registryUrl = null, ?string $secret = null, ?ComputeKeyType $type = null, ?\DateTime $updatedAt = null, ?string $username = null)
+    public function __construct(?\DateTime $createdAt = null, ?\DateTime $expiresAt = null, ?string $fingerprint = null, ?string $id = null, ?string $instanceId = null, ?array $metadata = null, ?string $name = null, ?string $privateKey = null, ?string $publicKey = null, ?array $raw = null, ?string $registryUrl = null, ?string $secret = null, ?ComputeKeyType $type = null, ?\DateTime $updatedAt = null, ?string $username = null)
     {
         $this->createdAt = $createdAt;
         $this->expiresAt = $expiresAt;
         $this->fingerprint = $fingerprint;
         $this->id = $id;
         $this->instanceId = $instanceId;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->privateKey = $privateKey;
         $this->publicKey = $publicKey;

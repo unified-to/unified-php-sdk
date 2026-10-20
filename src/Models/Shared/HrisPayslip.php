@@ -146,6 +146,16 @@ class HrisPayslip
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?float $netAmount
      */
@@ -259,6 +269,7 @@ class HrisPayslip
      * @param  ?string  $groupId
      * @param  ?float  $hours
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?float  $netAmount
      * @param  ?float  $netYtdAmount
      * @param  ?\DateTime  $paidAt
@@ -272,7 +283,7 @@ class HrisPayslip
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyHrisPayslipDeduction $deduction = null, ?float $deductionAmount = null, ?array $details = null, ?float $employeeTaxAmount = null, ?float $employerContributionAmount = null, ?float $employerTaxAmount = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?float $grossYtdAmount = null, ?string $groupId = null, ?float $hours = null, ?string $id = null, ?float $netAmount = null, ?float $netYtdAmount = null, ?\DateTime $paidAt = null, ?string $paymentReference = null, ?PaymentType $paymentType = null, ?string $payrollId = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisPayslipType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?PropertyHrisPayslipDeduction $deduction = null, ?float $deductionAmount = null, ?array $details = null, ?float $employeeTaxAmount = null, ?float $employerContributionAmount = null, ?float $employerTaxAmount = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?float $grossYtdAmount = null, ?string $groupId = null, ?float $hours = null, ?string $id = null, ?array $metadata = null, ?float $netAmount = null, ?float $netYtdAmount = null, ?\DateTime $paidAt = null, ?string $paymentReference = null, ?PaymentType $paymentType = null, ?string $payrollId = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisPayslipType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;
@@ -289,6 +300,7 @@ class HrisPayslip
         $this->groupId = $groupId;
         $this->hours = $hours;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->netAmount = $netAmount;
         $this->netYtdAmount = $netYtdAmount;
         $this->paidAt = $paidAt;

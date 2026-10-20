@@ -44,43 +44,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
-        bcc: [
-            new Shared\AtsEmail(
-                email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
-                name: 'Rochelle Franey-Bechtelar',
-                type: Shared\AtsEmailType::Home,
-            ),
-        ],
-        cc: [
-            new Shared\AtsEmail(
-                email: 'Sasha24@hotmail.com',
-                name: 'Dr. Elbert Kuvalis',
-                type: Shared\AtsEmailType::Home,
-            ),
-            new Shared\AtsEmail(
-                email: 'Rosetta_Donnelly@gmail.com',
-                name: 'Ramon Daniel',
-                type: Shared\AtsEmailType::Other,
-            ),
-            new Shared\AtsEmail(
-                email: 'Kathryne_Jast@yahoo.com',
-                name: 'Christian Jacobson',
-                type: Shared\AtsEmailType::Other,
-            ),
-            new Shared\AtsEmail(
-                email: 'Eldred95@yahoo.com',
-                name: 'Edna Bogan',
-                type: Shared\AtsEmailType::Other,
-            ),
-        ],
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
-        description: 'Amplus.',
-        from: new Shared\PropertyAtsActivityFrom(
-            email: 'Norwood.Wiza47@yahoo.com',
-            name: 'Toby Grant',
-            type: Shared\PropertyAtsActivityFromType::Other,
-        ),
-        id: '43ddc59c-f5e3-44b9-862f-987bd443c2cd',
+        description: 'Sapiente.',
+        id: '181b47f8-7fee-4b4b-b19d-7c9702d3148d',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -88,33 +54,16 @@ $request = new Operations\CreateAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'c28147c8-1e9a-4f99-a481-dd50199b56c5',
+                id: '0fe169ce-ce87-437b-b828-3880b0b87c3d',
                 namespace: 'activity',
-                slug: 'acer',
-                value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
-            ),
-            new Shared\AtsMetadata(
-                extraData: [
-
-                ],
-                format: Shared\AtsMetadataFormat::Text,
-                id: '89a6be14-6901-48bb-a139-5a2bb008d5dd',
-                namespace: 'activity',
-                slug: 'tremo',
-                value: 'Amita delectus dicta temptatio utroque ex.',
+                slug: 'cimentarius',
+                value: 'Reprehenderit verto.',
             ),
         ],
         subType: 'TASK',
-        title: 'Senior Interactions Manager',
-        to: [
-            new Shared\AtsEmail(
-                email: 'Sister91@hotmail.com',
-                name: 'Eddie Nienow PhD',
-                type: Shared\AtsEmailType::Work,
-            ),
-        ],
+        title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-02T13:08:18.724Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-03T05:23:27.798Z'),
     ),
     connectionId: '<id>',
 );
@@ -170,14 +119,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2025-04-27T15:38:57.923Z'),
+        completedAt: Utils\Utils::parseDateTime('2023-12-05T08:32:25.567Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '0cba1660-f106-4d4b-be96-adff58ff0abe',
+        id: 'db383c48-7eed-432c-a050-73806344e093',
         isCompleted: true,
+        metadata: [],
         progressPercentage: 100,
-        startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-30T13:27:16.985Z'),
+        startedAt: Utils\Utils::parseDateTime('2021-04-25T01:52:43.462Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-30T17:27:46.521Z'),
     ),
     connectionId: '<id>',
 );
@@ -535,43 +485,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
-        bcc: [
-            new Shared\AtsEmail(
-                email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
-                name: 'Rochelle Franey-Bechtelar',
-                type: Shared\AtsEmailType::Home,
-            ),
-        ],
-        cc: [
-            new Shared\AtsEmail(
-                email: 'Sasha24@hotmail.com',
-                name: 'Dr. Elbert Kuvalis',
-                type: Shared\AtsEmailType::Home,
-            ),
-            new Shared\AtsEmail(
-                email: 'Rosetta_Donnelly@gmail.com',
-                name: 'Ramon Daniel',
-                type: Shared\AtsEmailType::Other,
-            ),
-            new Shared\AtsEmail(
-                email: 'Kathryne_Jast@yahoo.com',
-                name: 'Christian Jacobson',
-                type: Shared\AtsEmailType::Other,
-            ),
-            new Shared\AtsEmail(
-                email: 'Eldred95@yahoo.com',
-                name: 'Edna Bogan',
-                type: Shared\AtsEmailType::Other,
-            ),
-        ],
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
-        description: 'Amplus.',
-        from: new Shared\PropertyAtsActivityFrom(
-            email: 'Norwood.Wiza47@yahoo.com',
-            name: 'Toby Grant',
-            type: Shared\PropertyAtsActivityFromType::Other,
-        ),
-        id: '077a022f-410a-48ce-954b-a33599281869',
+        description: 'Sapiente.',
+        id: '4bf692bc-a5fd-4795-b457-1f4cd6e8d88e',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -579,33 +495,16 @@ $request = new Operations\PatchAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '2a686018-1aea-43f5-a6f5-7b0652a34213',
+                id: '05d37ef5-53a2-43bd-ac97-f5ba636e376d',
                 namespace: 'activity',
-                slug: 'acer',
-                value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
-            ),
-            new Shared\AtsMetadata(
-                extraData: [
-
-                ],
-                format: Shared\AtsMetadataFormat::Text,
-                id: '4c1b57fa-6bef-4ce9-bd49-5dc0f4605670',
-                namespace: 'activity',
-                slug: 'tremo',
-                value: 'Amita delectus dicta temptatio utroque ex.',
+                slug: 'cimentarius',
+                value: 'Reprehenderit verto.',
             ),
         ],
         subType: 'TASK',
-        title: 'Senior Interactions Manager',
-        to: [
-            new Shared\AtsEmail(
-                email: 'Sister91@hotmail.com',
-                name: 'Eddie Nienow PhD',
-                type: Shared\AtsEmailType::Work,
-            ),
-        ],
+        title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-02T13:08:18.755Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-03T05:23:27.833Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -662,14 +561,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2025-04-27T15:38:57.927Z'),
+        completedAt: Utils\Utils::parseDateTime('2023-12-05T08:32:25.574Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '36e4328f-a9ec-4edf-b879-cd42dcd724c5',
+        id: '34616479-7892-4b46-b5f4-93d93eb2baa1',
         isCompleted: true,
+        metadata: [],
         progressPercentage: 100,
-        startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-30T13:27:16.987Z'),
+        startedAt: Utils\Utils::parseDateTime('2021-04-25T01:52:43.463Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-30T17:27:46.523Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -827,43 +727,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
-        bcc: [
-            new Shared\AtsEmail(
-                email: 'Mabel_Schuppe-Schowalter42@hotmail.com',
-                name: 'Rochelle Franey-Bechtelar',
-                type: Shared\AtsEmailType::Home,
-            ),
-        ],
-        cc: [
-            new Shared\AtsEmail(
-                email: 'Sasha24@hotmail.com',
-                name: 'Dr. Elbert Kuvalis',
-                type: Shared\AtsEmailType::Home,
-            ),
-            new Shared\AtsEmail(
-                email: 'Rosetta_Donnelly@gmail.com',
-                name: 'Ramon Daniel',
-                type: Shared\AtsEmailType::Other,
-            ),
-            new Shared\AtsEmail(
-                email: 'Kathryne_Jast@yahoo.com',
-                name: 'Christian Jacobson',
-                type: Shared\AtsEmailType::Other,
-            ),
-            new Shared\AtsEmail(
-                email: 'Eldred95@yahoo.com',
-                name: 'Edna Bogan',
-                type: Shared\AtsEmailType::Other,
-            ),
-        ],
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
-        description: 'Amplus.',
-        from: new Shared\PropertyAtsActivityFrom(
-            email: 'Norwood.Wiza47@yahoo.com',
-            name: 'Toby Grant',
-            type: Shared\PropertyAtsActivityFromType::Other,
-        ),
-        id: '077a022f-410a-48ce-954b-a33599281869',
+        description: 'Sapiente.',
+        id: '4bf692bc-a5fd-4795-b457-1f4cd6e8d88e',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -871,33 +737,16 @@ $request = new Operations\UpdateAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '2a686018-1aea-43f5-a6f5-7b0652a34213',
+                id: '05d37ef5-53a2-43bd-ac97-f5ba636e376d',
                 namespace: 'activity',
-                slug: 'acer',
-                value: 'Pauci eius cena adamo summisse arguo pectus communis arcesso tergeo.',
-            ),
-            new Shared\AtsMetadata(
-                extraData: [
-
-                ],
-                format: Shared\AtsMetadataFormat::Text,
-                id: '4c1b57fa-6bef-4ce9-bd49-5dc0f4605670',
-                namespace: 'activity',
-                slug: 'tremo',
-                value: 'Amita delectus dicta temptatio utroque ex.',
+                slug: 'cimentarius',
+                value: 'Reprehenderit verto.',
             ),
         ],
         subType: 'TASK',
-        title: 'Senior Interactions Manager',
-        to: [
-            new Shared\AtsEmail(
-                email: 'Sister91@hotmail.com',
-                name: 'Eddie Nienow PhD',
-                type: Shared\AtsEmailType::Work,
-            ),
-        ],
+        title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-02T13:08:18.755Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-03T05:23:27.833Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -954,14 +803,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2025-04-27T15:38:57.927Z'),
+        completedAt: Utils\Utils::parseDateTime('2023-12-05T08:32:25.574Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '36e4328f-a9ec-4edf-b879-cd42dcd724c5',
+        id: '34616479-7892-4b46-b5f4-93d93eb2baa1',
         isCompleted: true,
+        metadata: [],
         progressPercentage: 100,
-        startedAt: Utils\Utils::parseDateTime('2023-12-24T04:54:05.825Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-30T13:27:16.987Z'),
+        startedAt: Utils\Utils::parseDateTime('2021-04-25T01:52:43.463Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-30T17:27:46.523Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

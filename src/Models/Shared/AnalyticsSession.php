@@ -139,6 +139,16 @@ class AnalyticsSession
     public ?string $medium = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AnalyticsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AnalyticsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $os
      */
@@ -225,6 +235,7 @@ class AnalyticsSession
      * @param  ?bool  $isConversion
      * @param  ?string  $landingPage
      * @param  ?string  $medium
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AnalyticsMetadata>  $metadata
      * @param  ?string  $os
      * @param  ?float  $pageViews
      * @param  ?string  $propertyId
@@ -235,7 +246,7 @@ class AnalyticsSession
      * @param  ?string  $visitorId
      * @phpstan-pure
      */
-    public function __construct(?string $browser = null, ?string $campaign = null, ?string $city = null, ?string $country = null, ?\DateTime $createdAt = null, ?string $device = null, ?float $durationSeconds = null, ?\DateTime $endAt = null, ?float $eventsCount = null, ?string $exitPage = null, ?string $id = null, ?bool $isBounce = null, ?bool $isConversion = null, ?string $landingPage = null, ?string $medium = null, ?string $os = null, ?float $pageViews = null, ?string $propertyId = null, ?array $raw = null, ?string $source = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $visitorId = null)
+    public function __construct(?string $browser = null, ?string $campaign = null, ?string $city = null, ?string $country = null, ?\DateTime $createdAt = null, ?string $device = null, ?float $durationSeconds = null, ?\DateTime $endAt = null, ?float $eventsCount = null, ?string $exitPage = null, ?string $id = null, ?bool $isBounce = null, ?bool $isConversion = null, ?string $landingPage = null, ?string $medium = null, ?array $metadata = null, ?string $os = null, ?float $pageViews = null, ?string $propertyId = null, ?array $raw = null, ?string $source = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null, ?string $visitorId = null)
     {
         $this->browser = $browser;
         $this->campaign = $campaign;
@@ -252,6 +263,7 @@ class AnalyticsSession
         $this->isConversion = $isConversion;
         $this->landingPage = $landingPage;
         $this->medium = $medium;
+        $this->metadata = $metadata;
         $this->os = $os;
         $this->pageViews = $pageViews;
         $this->propertyId = $propertyId;

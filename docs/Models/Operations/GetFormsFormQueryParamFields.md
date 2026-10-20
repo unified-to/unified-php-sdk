@@ -19,4 +19,5 @@
 | `HasShuffleQuestions`     | has_shuffle_questions     |
 | `ConfirmationMessage`     | confirmation_message      |
 | `ConfirmationRedirectUrl` | confirmation_redirect_url |
+| `Metadata`                | metadata                  |
 | `Raw`                     | raw                       |

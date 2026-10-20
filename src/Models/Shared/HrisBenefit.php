@@ -110,6 +110,16 @@ class HrisBenefit
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * e.g. "401(k) Plan"
      *
      * @var ?string $name
@@ -168,6 +178,7 @@ class HrisBenefit
      * @param  ?\Unified\Unified_to\Models\Shared\HrisBenefitFrequency  $frequency
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\Tax  $tax
@@ -175,7 +186,7 @@ class HrisBenefit
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?CoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $employerContributionAmount = null, ?float $employerContributionMaxAmount = null, ?EmployerContributionType $employerContributionType = null, ?HrisBenefitFrequency $frequency = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?Tax $tax = null, ?HrisBenefitType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $companyId = null, ?CoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $employerContributionAmount = null, ?float $employerContributionMaxAmount = null, ?EmployerContributionType $employerContributionType = null, ?HrisBenefitFrequency $frequency = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?Tax $tax = null, ?HrisBenefitType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->companyId = $companyId;
         $this->coverageLevel = $coverageLevel;
@@ -188,6 +199,7 @@ class HrisBenefit
         $this->frequency = $frequency;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->tax = $tax;

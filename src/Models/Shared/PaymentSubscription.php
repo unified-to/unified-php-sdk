@@ -145,6 +145,16 @@ class PaymentSubscription
     public ?array $lineitems = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * the month on which to charge a customer (1-12). Only applies when the interval_unit is YEAR.
      *
      * @var ?float $month
@@ -214,6 +224,7 @@ class PaymentSubscription
      * @param  ?\Unified\Unified_to\Models\Shared\IntervalUnit  $intervalUnit
      * @param  ?string  $invoiceId
      * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata>  $metadata
      * @param  ?float  $month
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
@@ -222,7 +233,7 @@ class PaymentSubscription
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $canceledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $currentPeriodEndAt = null, ?\DateTime $currentPeriodStartAt = null, ?float $dayOfMonth = null, ?float $dayOfWeek = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?float $interval = null, ?IntervalUnit $intervalUnit = null, ?string $invoiceId = null, ?array $lineitems = null, ?float $month = null, ?array $raw = null, ?\DateTime $startAt = null, ?PaymentSubscriptionStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $canceledAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $currentPeriodEndAt = null, ?\DateTime $currentPeriodStartAt = null, ?float $dayOfMonth = null, ?float $dayOfWeek = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?float $interval = null, ?IntervalUnit $intervalUnit = null, ?string $invoiceId = null, ?array $lineitems = null, ?array $metadata = null, ?float $month = null, ?array $raw = null, ?\DateTime $startAt = null, ?PaymentSubscriptionStatus $status = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->canceledAt = $canceledAt;
         $this->contactId = $contactId;
@@ -239,6 +250,7 @@ class PaymentSubscription
         $this->intervalUnit = $intervalUnit;
         $this->invoiceId = $invoiceId;
         $this->lineitems = $lineitems;
+        $this->metadata = $metadata;
         $this->month = $month;
         $this->raw = $raw;
         $this->startAt = $startAt;

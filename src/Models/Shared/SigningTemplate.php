@@ -57,6 +57,16 @@ class SigningTemplate
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\SigningMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\SigningMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Template name
      *
      * @var ?string $name
@@ -90,18 +100,20 @@ class SigningTemplate
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\SigningMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $creatorId = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $creatorId = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->creatorId = $creatorId;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

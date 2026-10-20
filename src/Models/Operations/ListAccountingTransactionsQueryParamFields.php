@@ -34,5 +34,6 @@ enum ListAccountingTransactionsQueryParamFields: string
     case TransactionAt = 'transaction_at';
     case ExchangeRate = 'exchange_rate';
     case Status = 'status';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

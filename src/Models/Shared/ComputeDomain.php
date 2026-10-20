@@ -39,6 +39,16 @@ class ComputeDomain
     public ?bool $isPrimary = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ComputeMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The hostname (eg. app.example.com)
      *
      * @var ?string $name
@@ -98,6 +108,7 @@ class ComputeDomain
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?bool  $isPrimary
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $redirectUrl
@@ -106,11 +117,12 @@ class ComputeDomain
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $id = null, ?bool $isPrimary = null, ?string $name = null, ?array $raw = null, ?string $redirectUrl = null, ?string $serviceId = null, ?ComputeDomainStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $id = null, ?bool $isPrimary = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $redirectUrl = null, ?string $serviceId = null, ?ComputeDomainStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->isPrimary = $isPrimary;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->redirectUrl = $redirectUrl;

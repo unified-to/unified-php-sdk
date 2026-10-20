@@ -24,4 +24,5 @@ enum PatchSigningDocumentQueryParamFields: string
     case DownloadUrl = 'download_url';
     case CreatorId = 'creator_id';
     case Raw = 'raw';
+    case Metadata = 'metadata';
 }

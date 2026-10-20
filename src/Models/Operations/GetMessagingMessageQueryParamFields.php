@@ -32,5 +32,6 @@ enum GetMessagingMessageQueryParamFields: string
     case HasChildren = 'has_children';
     case IsUnread = 'is_unread';
     case Buttons = 'buttons';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

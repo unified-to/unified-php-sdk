@@ -120,6 +120,16 @@ class AccountingBankfeedtransaction
     public ?string $merchantName = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * ref -> accounting Organization this record belongs to
      *
      * @var ?string $organizationId
@@ -197,6 +207,7 @@ class AccountingBankfeedtransaction
      * @param  ?string  $id
      * @param  ?bool  $isPending
      * @param  ?string  $merchantName
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $organizationId
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
@@ -206,7 +217,7 @@ class AccountingBankfeedtransaction
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?float $amount = null, ?string $bankCategory = null, ?string $bankfeedaccountId = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?bool $isPending = null, ?string $merchantName = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?\DateTime $transactionAt = null, ?AccountingBankfeedtransactionType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?float $amount = null, ?string $bankCategory = null, ?string $bankfeedaccountId = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?bool $isPending = null, ?string $merchantName = null, ?array $metadata = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?array $raw = null, ?string $reference = null, ?\DateTime $transactionAt = null, ?AccountingBankfeedtransactionType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->amount = $amount;
@@ -220,6 +231,7 @@ class AccountingBankfeedtransaction
         $this->id = $id;
         $this->isPending = $isPending;
         $this->merchantName = $merchantName;
+        $this->metadata = $metadata;
         $this->organizationId = $organizationId;
         $this->postedAt = $postedAt;
         $this->raw = $raw;

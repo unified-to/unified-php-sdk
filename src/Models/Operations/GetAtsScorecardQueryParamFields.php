@@ -22,5 +22,6 @@ enum GetAtsScorecardQueryParamFields: string
     case Recommendation = 'recommendation';
     case Comment = 'comment';
     case Questions = 'questions';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

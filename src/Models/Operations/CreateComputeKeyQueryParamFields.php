@@ -24,5 +24,6 @@ enum CreateComputeKeyQueryParamFields: string
     case Secret = 'secret';
     case InstanceId = 'instance_id';
     case ExpiresAt = 'expires_at';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

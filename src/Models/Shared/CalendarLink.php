@@ -61,6 +61,16 @@ class CalendarLink
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -110,6 +120,7 @@ class CalendarLink
      * @param  ?float  $duration
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?float  $priceAmount
      * @param  ?string  $priceCurrency
@@ -117,7 +128,7 @@ class CalendarLink
      * @param  ?string  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $url, ?string $createdAt = null, ?string $description = null, ?float $duration = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?float $priceAmount = null, ?string $priceCurrency = null, ?array $raw = null, ?string $updatedAt = null)
+    public function __construct(string $url, ?string $createdAt = null, ?string $description = null, ?float $duration = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?float $priceAmount = null, ?string $priceCurrency = null, ?array $raw = null, ?string $updatedAt = null)
     {
         $this->url = $url;
         $this->createdAt = $createdAt;
@@ -125,6 +136,7 @@ class CalendarLink
         $this->duration = $duration;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->priceAmount = $priceAmount;
         $this->priceCurrency = $priceCurrency;

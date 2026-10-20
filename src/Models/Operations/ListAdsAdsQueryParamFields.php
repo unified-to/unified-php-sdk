@@ -33,5 +33,6 @@ enum ListAdsAdsQueryParamFields: string
     case Path2 = 'path2';
     case Promoted = 'promoted';
     case LogoCreativeId = 'logo_creative_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

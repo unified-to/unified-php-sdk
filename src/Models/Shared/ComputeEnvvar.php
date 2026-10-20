@@ -49,6 +49,16 @@ class ComputeEnvvar
     public ?bool $isSecret = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ComputeMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Variable name
      *
      * @var ?string $name
@@ -99,6 +109,7 @@ class ComputeEnvvar
      * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyComputeEnvvarEnvironments>  $environments
      * @param  ?string  $id
      * @param  ?bool  $isSecret
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $serviceId
@@ -106,12 +117,13 @@ class ComputeEnvvar
      * @param  ?string  $value
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?array $environments = null, ?string $id = null, ?bool $isSecret = null, ?string $name = null, ?array $raw = null, ?string $serviceId = null, ?\DateTime $updatedAt = null, ?string $value = null)
+    public function __construct(?\DateTime $createdAt = null, ?array $environments = null, ?string $id = null, ?bool $isSecret = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $serviceId = null, ?\DateTime $updatedAt = null, ?string $value = null)
     {
         $this->createdAt = $createdAt;
         $this->environments = $environments;
         $this->id = $id;
         $this->isSecret = $isSecret;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->serviceId = $serviceId;

@@ -76,6 +76,16 @@ class MarketingMember
     public ?array $listIds = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\MarketingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MarketingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The name of the member
      *
      * @var ?string $name
@@ -130,6 +140,7 @@ class MarketingMember
      * @param  ?string  $id
      * @param  ?string  $lastName
      * @param  ?array<string>  $listIds
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MarketingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\MarketingMemberStatus  $status
@@ -137,7 +148,7 @@ class MarketingMember
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?array $listIds = null, ?string $name = null, ?array $raw = null, ?MarketingMemberStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?array $listIds = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?MarketingMemberStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null)
     {
         $this->company = $company;
         $this->createdAt = $createdAt;
@@ -146,6 +157,7 @@ class MarketingMember
         $this->id = $id;
         $this->lastName = $lastName;
         $this->listIds = $listIds;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->status = $status;

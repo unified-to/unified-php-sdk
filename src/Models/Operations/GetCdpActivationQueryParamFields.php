@@ -22,5 +22,6 @@ enum GetCdpActivationQueryParamFields: string
     case Status = 'status';
     case LastRunAt = 'last_run_at';
     case IsEnabled = 'is_enabled';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

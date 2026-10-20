@@ -120,6 +120,16 @@ class LmsCourse
     public ?array $media = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -213,6 +223,7 @@ class LmsCourse
      * @param  ?bool  $isPrivate
      * @param  ?array<string>  $languages
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?float  $priceAmount
      * @param  ?string  $providerName
@@ -224,7 +235,7 @@ class LmsCourse
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $categories = null, ?array $contentIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $durationMinutes = null, ?string $id = null, ?array $instructors = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $languages = null, ?array $media = null, ?string $name = null, ?float $priceAmount = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?array $skills = null, ?array $students = null, ?float $timeEstimateMinutes = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $categories = null, ?array $contentIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $durationMinutes = null, ?string $id = null, ?array $instructors = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $languages = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?float $priceAmount = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?array $skills = null, ?array $students = null, ?float $timeEstimateMinutes = null, ?\DateTime $updatedAt = null)
     {
         $this->categories = $categories;
         $this->contentIds = $contentIds;
@@ -238,6 +249,7 @@ class LmsCourse
         $this->isPrivate = $isPrivate;
         $this->languages = $languages;
         $this->media = $media;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->priceAmount = $priceAmount;
         $this->providerName = $providerName;

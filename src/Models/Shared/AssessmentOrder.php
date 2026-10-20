@@ -90,6 +90,16 @@ class AssessmentOrder
     public ?string $jobId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AssessmentMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AssessmentMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Assessment package ID
      *
      * @var ?string $packageId
@@ -390,6 +400,7 @@ class AssessmentOrder
      * @param  ?string  $employeeId
      * @param  ?string  $id
      * @param  ?string  $jobId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentMetadata>  $metadata
      * @param  ?string  $packageId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentParameterInput>  $parameters
      * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentAddress>  $profileAddresses
@@ -424,7 +435,7 @@ class AssessmentOrder
      * @param  ?string  $webhookId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, string $workspaceId, ?string $applicationId = null, ?string $candidateId = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $employeeId = null, ?string $id = null, ?string $jobId = null, ?string $packageId = null, ?array $parameters = null, ?array $profileAddresses = null, ?string $profileDateOfBirth = null, ?array $profileEmails = null, ?string $profileFirstName = null, ?ProfileGender $profileGender = null, ?string $profileIpAddress = null, ?string $profileLastName = null, ?string $profileName = null, ?string $profileNationalIdentifier = null, ?string $profileResumeUrl = null, ?array $profileSocialMediaUrls = null, ?array $profileTelephones = null, ?array $raw = null, ?string $reference = null, ?array $responseAttributes = null, ?\DateTime $responseCompletedAt = null, ?array $responseDetails = null, ?array $responseDownloadUrls = null, ?\DateTime $responseExpiresAt = null, ?\DateTime $responseIssuedAt = null, ?float $responseMaxScore = null, ?string $responseRedirectUrl = null, ?float $responseScore = null, ?string $responseSource = null, ?ResponseStatus $responseStatus = null, ?string $responseUrl = null, ?AssessmentOrderStatus $status = null, ?string $targetUrl = null, ?\DateTime $updatedAt = null, ?string $webhookId = null)
+    public function __construct(string $connectionId, string $workspaceId, ?string $applicationId = null, ?string $candidateId = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $employeeId = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?string $packageId = null, ?array $parameters = null, ?array $profileAddresses = null, ?string $profileDateOfBirth = null, ?array $profileEmails = null, ?string $profileFirstName = null, ?ProfileGender $profileGender = null, ?string $profileIpAddress = null, ?string $profileLastName = null, ?string $profileName = null, ?string $profileNationalIdentifier = null, ?string $profileResumeUrl = null, ?array $profileSocialMediaUrls = null, ?array $profileTelephones = null, ?array $raw = null, ?string $reference = null, ?array $responseAttributes = null, ?\DateTime $responseCompletedAt = null, ?array $responseDetails = null, ?array $responseDownloadUrls = null, ?\DateTime $responseExpiresAt = null, ?\DateTime $responseIssuedAt = null, ?float $responseMaxScore = null, ?string $responseRedirectUrl = null, ?float $responseScore = null, ?string $responseSource = null, ?ResponseStatus $responseStatus = null, ?string $responseUrl = null, ?AssessmentOrderStatus $status = null, ?string $targetUrl = null, ?\DateTime $updatedAt = null, ?string $webhookId = null)
     {
         $this->connectionId = $connectionId;
         $this->workspaceId = $workspaceId;
@@ -435,6 +446,7 @@ class AssessmentOrder
         $this->employeeId = $employeeId;
         $this->id = $id;
         $this->jobId = $jobId;
+        $this->metadata = $metadata;
         $this->packageId = $packageId;
         $this->parameters = $parameters;
         $this->profileAddresses = $profileAddresses;

@@ -115,6 +115,16 @@ class ComputeGputype
     public ?float $memoryMb = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ComputeMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Display name of the type
      *
      * @var ?string $name
@@ -173,6 +183,7 @@ class ComputeGputype
      * @param  ?\Unified\Unified_to\Models\Shared\GpuModel  $gpuModel
      * @param  ?string  $id
      * @param  ?float  $memoryMb
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<\Unified\Unified_to\Models\Shared\ComputePrice>  $prices
      * @param  ?array<string, mixed>  $raw
@@ -180,7 +191,7 @@ class ComputeGputype
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?Architecture $architecture = null, ?array $availability = null, ?float $cpuCount = null, ?\DateTime $createdAt = null, ?float $diskMb = null, ?float $gpuCount = null, ?GpuManufacturer $gpuManufacturer = null, ?float $gpuMemoryMb = null, ?GpuModel $gpuModel = null, ?string $id = null, ?float $memoryMb = null, ?string $name = null, ?array $prices = null, ?array $raw = null, ?string $sku = null, ?\DateTime $updatedAt = null)
+    public function __construct(?Architecture $architecture = null, ?array $availability = null, ?float $cpuCount = null, ?\DateTime $createdAt = null, ?float $diskMb = null, ?float $gpuCount = null, ?GpuManufacturer $gpuManufacturer = null, ?float $gpuMemoryMb = null, ?GpuModel $gpuModel = null, ?string $id = null, ?float $memoryMb = null, ?array $metadata = null, ?string $name = null, ?array $prices = null, ?array $raw = null, ?string $sku = null, ?\DateTime $updatedAt = null)
     {
         $this->architecture = $architecture;
         $this->availability = $availability;
@@ -193,6 +204,7 @@ class ComputeGputype
         $this->gpuModel = $gpuModel;
         $this->id = $id;
         $this->memoryMb = $memoryMb;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->prices = $prices;
         $this->raw = $raw;

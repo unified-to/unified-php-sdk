@@ -22,5 +22,6 @@ enum UpdateRepoCommitQueryParamFields: string
     case LinesAdded = 'lines_added';
     case LinesDeleted = 'lines_deleted';
     case LinesChanged = 'lines_changed';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

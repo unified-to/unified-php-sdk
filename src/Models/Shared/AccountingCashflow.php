@@ -105,6 +105,16 @@ class AccountingCashflow
     public ?array $investingSections = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * e.g. "Cash Flow Statement Q1 2020"
      *
      * @var ?string $name
@@ -171,6 +181,7 @@ class AccountingCashflow
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection>  $financingSections
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection>  $investingSections
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?float  $netChangeInCashAmount
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingCashflowSection>  $operatingSections
@@ -179,7 +190,7 @@ class AccountingCashflow
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $cashBeginningAmount = null, ?float $cashEndingAmount = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $financingSections = null, ?string $id = null, ?array $investingSections = null, ?string $name = null, ?float $netChangeInCashAmount = null, ?array $operatingSections = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $cashBeginningAmount = null, ?float $cashEndingAmount = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $financingSections = null, ?string $id = null, ?array $investingSections = null, ?array $metadata = null, ?string $name = null, ?float $netChangeInCashAmount = null, ?array $operatingSections = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->cashBeginningAmount = $cashBeginningAmount;
         $this->cashEndingAmount = $cashEndingAmount;
@@ -191,6 +202,7 @@ class AccountingCashflow
         $this->financingSections = $financingSections;
         $this->id = $id;
         $this->investingSections = $investingSections;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->netChangeInCashAmount = $netChangeInCashAmount;
         $this->operatingSections = $operatingSections;

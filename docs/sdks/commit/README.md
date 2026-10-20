@@ -37,13 +37,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
-        id: '0cfb9aa3-16ca-40e5-85b0-e413cf9e7ee2',
+        id: '4440c4b8-1113-4d82-80e4-7e10599a77e8',
         linesAdded: 313,
         linesChanged: 659,
         linesDeleted: 482,
-        message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
+        message: 'quantify bluetooth bandwidth',
+        metadata: [],
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-30T08:56:38.500Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-30T17:31:34.389Z'),
     ),
     connectionId: '<id>',
 );
@@ -200,13 +201,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
-        id: 'dd2bddf3-444a-47dd-b949-02f73deed3e9',
+        id: '8d8621aa-4dc9-4dd0-9d8a-8393ef783df7',
         linesAdded: 313,
         linesChanged: 659,
         linesDeleted: 482,
-        message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
+        message: 'quantify bluetooth bandwidth',
+        metadata: [],
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-30T08:56:38.504Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-30T17:31:34.395Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -314,13 +316,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
-        id: 'dd2bddf3-444a-47dd-b949-02f73deed3e9',
+        id: '8d8621aa-4dc9-4dd0-9d8a-8393ef783df7',
         linesAdded: 313,
         linesChanged: 659,
         linesDeleted: 482,
-        message: 'Auctus ascisco esse attollo clarus odio tum bis rerum.',
+        message: 'quantify bluetooth bandwidth',
+        metadata: [],
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-30T08:56:38.504Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-30T17:31:34.395Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -166,6 +166,16 @@ class MarketingReport
     public ?string $listId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\MarketingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MarketingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Open rate (decimal)
      *
      * @var ?float $openRate
@@ -283,6 +293,7 @@ class MarketingReport
      * @param  ?\DateTime  $lastOpenAt
      * @param  ?array<\Unified\Unified_to\Models\Shared\MarketingReportLink>  $links
      * @param  ?string  $listId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MarketingMetadata>  $metadata
      * @param  ?float  $openRate
      * @param  ?float  $opensTotal
      * @param  ?array<string, mixed>  $raw
@@ -296,7 +307,7 @@ class MarketingReport
      * @param  ?float  $unsubscribed
      * @phpstan-pure
      */
-    public function __construct(?float $abuseReports = null, ?string $campaignId = null, ?float $clickRate = null, ?float $clicksTotal = null, ?float $emailsSent = null, ?\DateTime $endAt = null, ?float $forwardsCount = null, ?float $forwardsOpens = null, ?float $hardBounces = null, ?float $humanOpenRate = null, ?float $humanOpensTotal = null, ?float $humanUniqueOpens = null, ?string $id = null, ?\DateTime $lastClickAt = null, ?\DateTime $lastOpenAt = null, ?array $links = null, ?string $listId = null, ?float $openRate = null, ?float $opensTotal = null, ?array $raw = null, ?\DateTime $sentAt = null, ?float $softBounces = null, ?\DateTime $startAt = null, ?float $syntaxErrors = null, ?float $uniqueClicks = null, ?float $uniqueOpens = null, ?float $uniqueSubscriberClicks = null, ?float $unsubscribed = null)
+    public function __construct(?float $abuseReports = null, ?string $campaignId = null, ?float $clickRate = null, ?float $clicksTotal = null, ?float $emailsSent = null, ?\DateTime $endAt = null, ?float $forwardsCount = null, ?float $forwardsOpens = null, ?float $hardBounces = null, ?float $humanOpenRate = null, ?float $humanOpensTotal = null, ?float $humanUniqueOpens = null, ?string $id = null, ?\DateTime $lastClickAt = null, ?\DateTime $lastOpenAt = null, ?array $links = null, ?string $listId = null, ?array $metadata = null, ?float $openRate = null, ?float $opensTotal = null, ?array $raw = null, ?\DateTime $sentAt = null, ?float $softBounces = null, ?\DateTime $startAt = null, ?float $syntaxErrors = null, ?float $uniqueClicks = null, ?float $uniqueOpens = null, ?float $uniqueSubscriberClicks = null, ?float $unsubscribed = null)
     {
         $this->abuseReports = $abuseReports;
         $this->campaignId = $campaignId;
@@ -315,6 +326,7 @@ class MarketingReport
         $this->lastOpenAt = $lastOpenAt;
         $this->links = $links;
         $this->listId = $listId;
+        $this->metadata = $metadata;
         $this->openRate = $openRate;
         $this->opensTotal = $opensTotal;
         $this->raw = $raw;

@@ -45,6 +45,16 @@ class UcComment
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -77,17 +87,19 @@ class UcComment
      * @param  ?string  $content
      * @param  ?string  $createdAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $callId = null, ?string $content = null, ?string $createdAt = null, ?string $id = null, ?array $raw = null, ?string $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $callId = null, ?string $content = null, ?string $createdAt = null, ?string $id = null, ?array $metadata = null, ?array $raw = null, ?string $updatedAt = null, ?string $userId = null)
     {
         $this->callId = $callId;
         $this->content = $content;
         $this->createdAt = $createdAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;

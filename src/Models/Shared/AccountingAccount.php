@@ -76,6 +76,16 @@ class AccountingAccount
     public ?bool $isPayable = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Account name
      *
      * @var ?string $name
@@ -158,6 +168,7 @@ class AccountingAccount
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isPayable
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?string  $parentId
@@ -168,7 +179,7 @@ class AccountingAccount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $id = null, ?bool $isPayable = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?array $raw = null, ?Status $status = null, ?array $taxonomy = null, ?Type $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $balance = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerDefinedCode = null, ?string $description = null, ?string $id = null, ?bool $isPayable = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $parentId = null, ?array $raw = null, ?Status $status = null, ?array $taxonomy = null, ?Type $type = null, ?\DateTime $updatedAt = null)
     {
         $this->balance = $balance;
         $this->createdAt = $createdAt;
@@ -177,6 +188,7 @@ class AccountingAccount
         $this->description = $description;
         $this->id = $id;
         $this->isPayable = $isPayable;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->parentId = $parentId;

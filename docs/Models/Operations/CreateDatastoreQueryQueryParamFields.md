@@ -9,4 +9,5 @@
 | `DatabaseId` | database_id  |
 | `Query`      | query        |
 | `Response`   | response     |
+| `Metadata`   | metadata     |
 | `Raw`        | raw          |

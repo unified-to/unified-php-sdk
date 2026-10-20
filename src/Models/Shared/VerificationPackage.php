@@ -127,6 +127,16 @@ class VerificationPackage
     public ?float $maxScore = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\VerificationMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\VerificationMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?bool $needsIpAddress
      */
@@ -197,6 +207,7 @@ class VerificationPackage
      * @param  ?string  $id
      * @param  ?string  $infoUrl
      * @param  ?float  $maxScore
+     * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationMetadata>  $metadata
      * @param  ?bool  $needsIpAddress
      * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationParameter>  $parameters
      * @param  ?array<string, mixed>  $raw
@@ -205,7 +216,7 @@ class VerificationPackage
      * @param  ?array<string>  $validRegions
      * @phpstan-pure
      */
-    public function __construct(string $name, VerificationPackageType $type, ?array $aliases = null, ?array $averageProcessingTimes = null, ?float $costAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $id = null, ?string $infoUrl = null, ?float $maxScore = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?array $validRegions = null)
+    public function __construct(string $name, VerificationPackageType $type, ?array $aliases = null, ?array $averageProcessingTimes = null, ?float $costAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $id = null, ?string $infoUrl = null, ?float $maxScore = null, ?array $metadata = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?array $validRegions = null)
     {
         $this->name = $name;
         $this->type = $type;
@@ -220,6 +231,7 @@ class VerificationPackage
         $this->id = $id;
         $this->infoUrl = $infoUrl;
         $this->maxScore = $maxScore;
+        $this->metadata = $metadata;
         $this->needsIpAddress = $needsIpAddress;
         $this->parameters = $parameters;
         $this->raw = $raw;

@@ -25,5 +25,6 @@ enum ListFormsFormsQueryParamFields: string
     case HasShuffleQuestions = 'has_shuffle_questions';
     case ConfirmationMessage = 'confirmation_message';
     case ConfirmationRedirectUrl = 'confirmation_redirect_url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

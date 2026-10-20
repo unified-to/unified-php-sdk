@@ -19,5 +19,6 @@ enum CreateComputeEnvvarQueryParamFields: string
     case Value = 'value';
     case Environments = 'environments';
     case IsSecret = 'is_secret';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

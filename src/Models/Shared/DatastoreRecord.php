@@ -47,6 +47,16 @@ class DatastoreRecord
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\DatastoreMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DatastoreMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -87,18 +97,20 @@ class DatastoreRecord
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $databaseId
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $rowNumber
      * @param  ?string  $tableId
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(array $fields, ?\DateTime $createdAt = null, ?string $databaseId = null, ?string $id = null, ?array $raw = null, ?float $rowNumber = null, ?string $tableId = null, ?\DateTime $updatedAt = null)
+    public function __construct(array $fields, ?\DateTime $createdAt = null, ?string $databaseId = null, ?string $id = null, ?array $metadata = null, ?array $raw = null, ?float $rowNumber = null, ?string $tableId = null, ?\DateTime $updatedAt = null)
     {
         $this->fields = $fields;
         $this->createdAt = $createdAt;
         $this->databaseId = $databaseId;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->rowNumber = $rowNumber;
         $this->tableId = $tableId;

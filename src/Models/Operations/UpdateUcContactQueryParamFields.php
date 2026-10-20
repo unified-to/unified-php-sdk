@@ -21,5 +21,6 @@ enum UpdateUcContactQueryParamFields: string
     case Company = 'company';
     case Emails = 'emails';
     case Telephones = 'telephones';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

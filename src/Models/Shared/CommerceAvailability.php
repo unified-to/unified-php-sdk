@@ -39,6 +39,16 @@ class CommerceAvailability
     public ?string $locationId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -78,17 +88,19 @@ class CommerceAvailability
      * @param  ?\DateTime  $endAt
      * @param  ?string  $itemId
      * @param  ?string  $locationId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $size
      * @param  ?string  $staffUserId
      * @param  ?\DateTime  $startAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $endAt = null, ?string $itemId = null, ?string $locationId = null, ?array $raw = null, ?float $size = null, ?string $staffUserId = null, ?\DateTime $startAt = null)
+    public function __construct(?\DateTime $endAt = null, ?string $itemId = null, ?string $locationId = null, ?array $metadata = null, ?array $raw = null, ?float $size = null, ?string $staffUserId = null, ?\DateTime $startAt = null)
     {
         $this->endAt = $endAt;
         $this->itemId = $itemId;
         $this->locationId = $locationId;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->size = $size;
         $this->staffUserId = $staffUserId;

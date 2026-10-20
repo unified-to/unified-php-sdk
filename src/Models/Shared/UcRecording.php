@@ -84,6 +84,16 @@ class UcRecording
     public ?array $media = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -162,6 +172,7 @@ class UcRecording
      * @param  ?\DateTime  $expiresAt
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\UcRecordingMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\UcRecordingType  $type
@@ -172,7 +183,7 @@ class UcRecording
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?string $callId = null, ?array $contacts = null, ?string $conversationIdentifier = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcRecordingType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
+    public function __construct(?string $callId = null, ?array $contacts = null, ?string $conversationIdentifier = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?\DateTime $expiresAt = null, ?string $id = null, ?array $media = null, ?array $metadata = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcRecordingType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null, ?string $webUrl = null)
     {
         $this->callId = $callId;
         $this->contacts = $contacts;
@@ -182,6 +193,7 @@ class UcRecording
         $this->expiresAt = $expiresAt;
         $this->id = $id;
         $this->media = $media;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->startAt = $startAt;
         $this->type = $type;

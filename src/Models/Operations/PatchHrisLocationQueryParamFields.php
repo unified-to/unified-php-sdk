@@ -26,5 +26,6 @@ enum PatchHrisLocationQueryParamFields: string
     case IsActive = 'is_active';
     case IsHq = 'is_hq';
     case CompanyId = 'company_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

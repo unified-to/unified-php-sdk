@@ -31,5 +31,6 @@ enum CreateLmsCourseQueryParamFields: string
     case ProviderName = 'provider_name';
     case PublishedAt = 'published_at';
     case TimeEstimateMinutes = 'time_estimate_minutes';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

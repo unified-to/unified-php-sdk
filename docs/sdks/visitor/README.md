@@ -37,16 +37,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAnalyticsVisitorRequest(
     analyticsVisitor: new Shared\AnalyticsVisitor(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        email: 'Dallas_Mitchell@yahoo.com',
+        email: 'desiree.o.hara@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: 'f95dee75-4f03-416c-a5af-3e017bf7e874',
-        lastSeenAt: Utils\Utils::parseDateTime('2021-12-12T15:37:05.302Z'),
+        id: '39fd37b9-e94a-4513-8f24-a25a8f8cbe53',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-01-10T10:24:54.420Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
-        name: 'Desiree O\'Hara',
-        totalEvents: 3639,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-28T03:08:22.236Z'),
+        totalEvents: 2916,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-28T18:03:50.738Z'),
     ),
     connectionId: '<id>',
 );
@@ -203,16 +202,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAnalyticsVisitorRequest(
     analyticsVisitor: new Shared\AnalyticsVisitor(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        email: 'Dallas_Mitchell@yahoo.com',
+        email: 'desiree.o.hara@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: '24272142-0412-432a-b423-a2b871fa2a91',
-        lastSeenAt: Utils\Utils::parseDateTime('2021-12-12T15:37:05.307Z'),
+        id: 'fc267bb0-921c-4a1b-ad76-4946bcc5b1b6',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-01-10T10:24:54.430Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
-        name: 'Desiree O\'Hara',
-        totalEvents: 3639,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-28T03:08:22.254Z'),
+        totalEvents: 2916,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-28T18:03:50.749Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -320,16 +318,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAnalyticsVisitorRequest(
     analyticsVisitor: new Shared\AnalyticsVisitor(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        email: 'Dallas_Mitchell@yahoo.com',
+        email: 'desiree.o.hara@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: '24272142-0412-432a-b423-a2b871fa2a91',
-        lastSeenAt: Utils\Utils::parseDateTime('2021-12-12T15:37:05.307Z'),
+        id: 'fc267bb0-921c-4a1b-ad76-4946bcc5b1b6',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-01-10T10:24:54.430Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
-        name: 'Desiree O\'Hara',
-        totalEvents: 3639,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-28T03:08:22.254Z'),
+        totalEvents: 2916,
+        updatedAt: Utils\Utils::parseDateTime('2025-06-28T18:03:50.749Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

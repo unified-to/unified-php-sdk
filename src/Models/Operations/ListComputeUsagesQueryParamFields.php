@@ -22,5 +22,6 @@ enum ListComputeUsagesQueryParamFields: string
     case Unit = 'unit';
     case CostAmount = 'cost_amount';
     case Currency = 'currency';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

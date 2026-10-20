@@ -106,6 +106,16 @@ class HrisTimeoff
     public ?bool $isPaid = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * integration leave-type label before normalization
      *
      * @var ?string $originalType
@@ -180,6 +190,7 @@ class HrisTimeoff
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
      * @param  ?bool  $isPaid
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $originalType
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $reason
@@ -189,7 +200,7 @@ class HrisTimeoff
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?float $duration = null, ?DurationType $durationType = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?string $originalType = null, ?array $raw = null, ?string $reason = null, ?\DateTime $startAt = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?float $duration = null, ?DurationType $durationType = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $metadata = null, ?string $originalType = null, ?array $raw = null, ?string $reason = null, ?\DateTime $startAt = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->userId = $userId;
         $this->approvedAt = $approvedAt;
@@ -202,6 +213,7 @@ class HrisTimeoff
         $this->endAt = $endAt;
         $this->id = $id;
         $this->isPaid = $isPaid;
+        $this->metadata = $metadata;
         $this->originalType = $originalType;
         $this->raw = $raw;
         $this->reason = $reason;

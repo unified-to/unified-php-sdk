@@ -20,5 +20,6 @@ enum CreateShippingRateQueryParamFields: string
     case CarrierId = 'carrier_id';
     case Id = 'id';
     case Rates = 'rates';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

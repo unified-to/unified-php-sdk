@@ -30,5 +30,6 @@ enum ListHrisBankaccountsQueryParamFields: string
     case SplitType = 'split_type';
     case SplitAmount = 'split_amount';
     case Priority = 'priority';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

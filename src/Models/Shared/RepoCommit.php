@@ -78,6 +78,16 @@ class RepoCommit
     public ?string $message = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\RepoMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\RepoMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $pullrequestIds
      *
      * @var ?array<string> $pullrequestIds
@@ -124,13 +134,14 @@ class RepoCommit
      * @param  ?float  $linesChanged
      * @param  ?float  $linesDeleted
      * @param  ?string  $message
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RepoMetadata>  $metadata
      * @param  ?array<string>  $pullrequestIds
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $repoId, ?string $branchId = null, ?\DateTime $createdAt = null, ?string $id = null, ?float $linesAdded = null, ?float $linesChanged = null, ?float $linesDeleted = null, ?string $message = null, ?array $pullrequestIds = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(string $repoId, ?string $branchId = null, ?\DateTime $createdAt = null, ?string $id = null, ?float $linesAdded = null, ?float $linesChanged = null, ?float $linesDeleted = null, ?string $message = null, ?array $metadata = null, ?array $pullrequestIds = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->repoId = $repoId;
         $this->branchId = $branchId;
@@ -140,6 +151,7 @@ class RepoCommit
         $this->linesChanged = $linesChanged;
         $this->linesDeleted = $linesDeleted;
         $this->message = $message;
+        $this->metadata = $metadata;
         $this->pullrequestIds = $pullrequestIds;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

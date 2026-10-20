@@ -20,5 +20,6 @@ enum PatchRepoRepositoryQueryParamFields: string
     case IsPrivate = 'is_private';
     case WebUrl = 'web_url';
     case OrgId = 'org_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

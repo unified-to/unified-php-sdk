@@ -64,6 +64,16 @@ class HrisGroup
     public ?array $managerIds = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -143,6 +153,7 @@ class HrisGroup
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?array<string>  $managerIds
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?\DateTime  $nextPaidAt
      * @param  ?string  $parentId
@@ -153,7 +164,7 @@ class HrisGroup
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $managerIds = null, ?string $name = null, ?\DateTime $nextPaidAt = null, ?string $parentId = null, ?HrisGroupPayFrequency $payFrequency = null, ?array $raw = null, ?HrisGroupType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $managerIds = null, ?array $metadata = null, ?string $name = null, ?\DateTime $nextPaidAt = null, ?string $parentId = null, ?HrisGroupPayFrequency $payFrequency = null, ?array $raw = null, ?HrisGroupType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;
@@ -161,6 +172,7 @@ class HrisGroup
         $this->id = $id;
         $this->isActive = $isActive;
         $this->managerIds = $managerIds;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->nextPaidAt = $nextPaidAt;
         $this->parentId = $parentId;

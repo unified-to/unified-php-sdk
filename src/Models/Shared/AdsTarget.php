@@ -44,6 +44,16 @@ class AdsTarget
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -84,18 +94,20 @@ class AdsTarget
      * @param  ?float  $audienceCountMax
      * @param  ?float  $audienceCountMin
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\AdsTargetType  $type
      * @phpstan-pure
      */
-    public function __construct(string $id, ?float $audienceCountMax = null, ?float $audienceCountMin = null, ?bool $isActive = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?AdsTargetType $type = null)
+    public function __construct(string $id, ?float $audienceCountMax = null, ?float $audienceCountMin = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?AdsTargetType $type = null)
     {
         $this->id = $id;
         $this->audienceCountMax = $audienceCountMax;
         $this->audienceCountMin = $audienceCountMin;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;

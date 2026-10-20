@@ -28,5 +28,6 @@ enum GetPerformanceGoalQueryParamFields: string
     case DueAt = 'due_at';
     case CompletedAt = 'completed_at';
     case Milestones = 'milestones';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

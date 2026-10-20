@@ -39,6 +39,16 @@ class SocialInsight
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\SocialMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\SocialMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The metric being reported
      *
      * @var ?\Unified\Unified_to\Models\Shared\Metric $metric
@@ -99,6 +109,7 @@ class SocialInsight
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $date
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\SocialMetadata>  $metadata
      * @param  ?\Unified\Unified_to\Models\Shared\Metric  $metric
      * @param  ?\Unified\Unified_to\Models\Shared\Period  $period
      * @param  ?string  $postId
@@ -107,11 +118,12 @@ class SocialInsight
      * @param  ?float  $value
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?\DateTime $date = null, ?string $id = null, ?Metric $metric = null, ?Period $period = null, ?string $postId = null, ?string $profileId = null, ?array $raw = null, ?float $value = null)
+    public function __construct(?\DateTime $createdAt = null, ?\DateTime $date = null, ?string $id = null, ?array $metadata = null, ?Metric $metric = null, ?Period $period = null, ?string $postId = null, ?string $profileId = null, ?array $raw = null, ?float $value = null)
     {
         $this->createdAt = $createdAt;
         $this->date = $date;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->metric = $metric;
         $this->period = $period;
         $this->postId = $postId;

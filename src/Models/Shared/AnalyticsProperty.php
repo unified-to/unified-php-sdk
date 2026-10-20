@@ -45,6 +45,16 @@ class AnalyticsProperty
     public ?string $industry = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AnalyticsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AnalyticsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -93,6 +103,7 @@ class AnalyticsProperty
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?string  $industry
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AnalyticsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
@@ -100,12 +111,13 @@ class AnalyticsProperty
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $industry = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $industry = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->id = $id;
         $this->industry = $industry;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;

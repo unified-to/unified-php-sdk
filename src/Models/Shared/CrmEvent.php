@@ -119,6 +119,16 @@ class CrmEvent
     public ?PropertyCrmEventMeeting $meeting = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The note object, when type = note
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmEventNote $note
@@ -197,6 +207,7 @@ class CrmEvent
      * @param  ?array<string>  $leadIds
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventMarketingEmail  $marketingEmail
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventMeeting  $meeting
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmMetadata>  $metadata
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventNote  $note
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmEventPageView  $pageView
      * @param  ?array<string, mixed>  $raw
@@ -206,7 +217,7 @@ class CrmEvent
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmEventCall $call = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?PropertyCrmEventEmail $email = null, ?PropertyCrmEventForm $form = null, ?string $id = null, ?array $leadIds = null, ?PropertyCrmEventMarketingEmail $marketingEmail = null, ?PropertyCrmEventMeeting $meeting = null, ?PropertyCrmEventNote $note = null, ?PropertyCrmEventPageView $pageView = null, ?array $raw = null, ?PropertyCrmEventTask $task = null, ?CrmEventType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmEventCall $call = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?PropertyCrmEventEmail $email = null, ?PropertyCrmEventForm $form = null, ?string $id = null, ?array $leadIds = null, ?PropertyCrmEventMarketingEmail $marketingEmail = null, ?PropertyCrmEventMeeting $meeting = null, ?array $metadata = null, ?PropertyCrmEventNote $note = null, ?PropertyCrmEventPageView $pageView = null, ?array $raw = null, ?PropertyCrmEventTask $task = null, ?CrmEventType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->call = $call;
         $this->companyIds = $companyIds;
@@ -219,6 +230,7 @@ class CrmEvent
         $this->leadIds = $leadIds;
         $this->marketingEmail = $marketingEmail;
         $this->meeting = $meeting;
+        $this->metadata = $metadata;
         $this->note = $note;
         $this->pageView = $pageView;
         $this->raw = $raw;

@@ -38,6 +38,16 @@ class AnalyticsReport
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AnalyticsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AnalyticsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $metrics
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AnalyticsReportMetrics> $metrics
@@ -88,6 +98,7 @@ class AnalyticsReport
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AnalyticsMetadata>  $metadata
      * @param  ?array<\Unified\Unified_to\Models\Shared\AnalyticsReportMetrics>  $metrics
      * @param  ?string  $propertyId
      * @param  ?array<string, mixed>  $raw
@@ -95,11 +106,12 @@ class AnalyticsReport
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $metrics = null, ?string $propertyId = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?array $metadata = null, ?array $metrics = null, ?string $propertyId = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->metrics = $metrics;
         $this->propertyId = $propertyId;
         $this->raw = $raw;

@@ -22,5 +22,6 @@ enum GetAtsDocumentQueryParamFields: string
     case ApplicationId = 'application_id';
     case JobId = 'job_id';
     case UserId = 'user_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

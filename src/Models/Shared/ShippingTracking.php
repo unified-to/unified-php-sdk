@@ -85,6 +85,16 @@ class ShippingTracking
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The raw data returned by the integration for this tracking
      *
      * @var ?array<string, mixed> $raw
@@ -149,6 +159,7 @@ class ShippingTracking
      * @param  ?\DateTime  $estimatedDelivery
      * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingTrackingEvent>  $events
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $shipmentId
      * @param  ?\Unified\Unified_to\Models\Shared\ShippingTrackingStatus  $status
@@ -157,7 +168,7 @@ class ShippingTracking
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $actualDeliveryAt = null, ?string $carrierId = null, ?string $carrierStatusCode = null, ?string $carrierStatusDescription = null, ?\DateTime $createdAt = null, ?\DateTime $estimatedDelivery = null, ?array $events = null, ?string $id = null, ?array $raw = null, ?string $shipmentId = null, ?ShippingTrackingStatus $status = null, ?string $statusDescription = null, ?string $trackingNumber = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $actualDeliveryAt = null, ?string $carrierId = null, ?string $carrierStatusCode = null, ?string $carrierStatusDescription = null, ?\DateTime $createdAt = null, ?\DateTime $estimatedDelivery = null, ?array $events = null, ?string $id = null, ?array $metadata = null, ?array $raw = null, ?string $shipmentId = null, ?ShippingTrackingStatus $status = null, ?string $statusDescription = null, ?string $trackingNumber = null, ?\DateTime $updatedAt = null)
     {
         $this->actualDeliveryAt = $actualDeliveryAt;
         $this->carrierId = $carrierId;
@@ -167,6 +178,7 @@ class ShippingTracking
         $this->estimatedDelivery = $estimatedDelivery;
         $this->events = $events;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->shipmentId = $shipmentId;
         $this->status = $status;

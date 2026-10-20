@@ -57,6 +57,16 @@ class SigningSignatory
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\SigningMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\SigningMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Full name of the signatory
      *
      * @var ?string $name
@@ -128,6 +138,7 @@ class SigningSignatory
      * @param  ?string  $documentId
      * @param  ?string  $email
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\SigningMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?float  $order
      * @param  ?array<string, mixed>  $raw
@@ -137,13 +148,14 @@ class SigningSignatory
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $declineReason = null, ?string $documentId = null, ?string $email = null, ?string $id = null, ?string $name = null, ?float $order = null, ?array $raw = null, ?SigningSignatoryRole $role = null, ?\DateTime $signedAt = null, ?SigningSignatoryStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $declineReason = null, ?string $documentId = null, ?string $email = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?float $order = null, ?array $raw = null, ?SigningSignatoryRole $role = null, ?\DateTime $signedAt = null, ?SigningSignatoryStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->declineReason = $declineReason;
         $this->documentId = $documentId;
         $this->email = $email;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->order = $order;
         $this->raw = $raw;

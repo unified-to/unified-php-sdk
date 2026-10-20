@@ -89,6 +89,16 @@ class HrisPaycode
     public ?bool $isPreTax = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -134,13 +144,14 @@ class HrisPaycode
      * @param  ?bool  $isActive
      * @param  ?bool  $isEmployer
      * @param  ?bool  $isPreTax
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\HrisPaycodeType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $code = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?DetailType $detailType = null, ?string $id = null, ?bool $isActive = null, ?bool $isEmployer = null, ?bool $isPreTax = null, ?string $name = null, ?array $raw = null, ?HrisPaycodeType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $code = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $description = null, ?DetailType $detailType = null, ?string $id = null, ?bool $isActive = null, ?bool $isEmployer = null, ?bool $isPreTax = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?HrisPaycodeType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->code = $code;
         $this->companyId = $companyId;
@@ -151,6 +162,7 @@ class HrisPaycode
         $this->isActive = $isActive;
         $this->isEmployer = $isEmployer;
         $this->isPreTax = $isPreTax;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->type = $type;

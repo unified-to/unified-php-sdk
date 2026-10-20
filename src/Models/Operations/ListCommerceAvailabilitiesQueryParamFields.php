@@ -17,5 +17,6 @@ enum ListCommerceAvailabilitiesQueryParamFields: string
     case Size = 'size';
     case ItemId = 'item_id';
     case StaffUserId = 'staff_user_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

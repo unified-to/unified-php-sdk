@@ -48,6 +48,16 @@ class AccountingAgedreceivable
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $organizationId
      */
@@ -124,6 +134,7 @@ class AccountingAgedreceivable
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $organizationId
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAgedPeriod>  $periods
      * @param  ?array<string, mixed>  $raw
@@ -134,12 +145,13 @@ class AccountingAgedreceivable
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?string $id = null, ?string $organizationId = null, ?array $periods = null, ?array $raw = null, ?\DateTime $startAt = null, ?float $totalAmount = null, ?float $totalCurrentAmount = null, ?float $totalOverdueAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?string $id = null, ?array $metadata = null, ?string $organizationId = null, ?array $periods = null, ?array $raw = null, ?\DateTime $startAt = null, ?float $totalAmount = null, ?float $totalCurrentAmount = null, ?float $totalOverdueAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->endAt = $endAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->organizationId = $organizationId;
         $this->periods = $periods;
         $this->raw = $raw;

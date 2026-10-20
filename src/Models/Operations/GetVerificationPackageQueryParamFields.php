@@ -29,5 +29,6 @@ enum GetVerificationPackageQueryParamFields: string
     case MaxScore = 'max_score';
     case InfoUrl = 'info_url';
     case ValidRegions = 'valid_regions';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

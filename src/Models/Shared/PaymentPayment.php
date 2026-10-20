@@ -145,6 +145,16 @@ class PaymentPayment
     public ?string $locationId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * total_amount minus fee_amount
      *
      * @var ?float $netAmount
@@ -292,6 +302,7 @@ class PaymentPayment
      * @param  ?string  $invoiceId
      * @param  ?string  $linkId
      * @param  ?string  $locationId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata>  $metadata
      * @param  ?float  $netAmount
      * @param  ?string  $notes
      * @param  ?string  $organizationId
@@ -308,7 +319,7 @@ class PaymentPayment
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $allocations = null, ?string $billId = null, ?string $cardBrand = null, ?string $cardLast4 = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $deviceId = null, ?float $exchangeRate = null, ?float $feeAmount = null, ?string $id = null, ?string $invoiceId = null, ?string $linkId = null, ?string $locationId = null, ?float $netAmount = null, ?string $notes = null, ?string $organizationId = null, ?\DateTime $paidAt = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?string $salesorderId = null, ?PaymentPaymentStatus $status = null, ?TenderType $tenderType = null, ?float $tipAmount = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
+    public function __construct(?string $accountId = null, ?array $allocations = null, ?string $billId = null, ?string $cardBrand = null, ?string $cardLast4 = null, ?array $categoryIds = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $deviceId = null, ?float $exchangeRate = null, ?float $feeAmount = null, ?string $id = null, ?string $invoiceId = null, ?string $linkId = null, ?string $locationId = null, ?array $metadata = null, ?float $netAmount = null, ?string $notes = null, ?string $organizationId = null, ?\DateTime $paidAt = null, ?string $paymentMethod = null, ?array $raw = null, ?string $reference = null, ?string $salesorderId = null, ?PaymentPaymentStatus $status = null, ?TenderType $tenderType = null, ?float $tipAmount = null, ?float $totalAmount = null, ?PaymentPaymentType $type = null, ?\DateTime $updatedAt = null, ?string $currency = 'USD')
     {
         $this->accountId = $accountId;
         $this->allocations = $allocations;
@@ -325,6 +336,7 @@ class PaymentPayment
         $this->invoiceId = $invoiceId;
         $this->linkId = $linkId;
         $this->locationId = $locationId;
+        $this->metadata = $metadata;
         $this->netAmount = $netAmount;
         $this->notes = $notes;
         $this->organizationId = $organizationId;

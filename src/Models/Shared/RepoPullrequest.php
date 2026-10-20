@@ -58,6 +58,16 @@ class RepoPullrequest
     public ?array $labels = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\RepoMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\RepoMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $notes
      */
@@ -142,6 +152,7 @@ class RepoPullrequest
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?array<string>  $labels
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RepoMetadata>  $metadata
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $repoId
@@ -153,13 +164,14 @@ class RepoPullrequest
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $closedAt = null, ?array $commitIds = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $labels = null, ?string $notes = null, ?array $raw = null, ?string $repoId = null, ?string $sourceBranchId = null, ?RepoPullrequestStatus $status = null, ?string $targetBranchId = null, ?string $title = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?\DateTime $closedAt = null, ?array $commitIds = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $labels = null, ?array $metadata = null, ?string $notes = null, ?array $raw = null, ?string $repoId = null, ?string $sourceBranchId = null, ?RepoPullrequestStatus $status = null, ?string $targetBranchId = null, ?string $title = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->closedAt = $closedAt;
         $this->commitIds = $commitIds;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->labels = $labels;
+        $this->metadata = $metadata;
         $this->notes = $notes;
         $this->raw = $raw;
         $this->repoId = $repoId;

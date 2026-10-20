@@ -58,6 +58,16 @@ class ComputeRegion
     public ?string $location = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ComputeMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Display name of the region
      *
      * @var ?string $name
@@ -91,18 +101,20 @@ class ComputeRegion
      * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyComputeRegionGpuModels>  $gpuModels
      * @param  ?string  $id
      * @param  ?string  $location
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $country = null, ?\DateTime $createdAt = null, ?array $gpuModels = null, ?string $id = null, ?string $location = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $country = null, ?\DateTime $createdAt = null, ?array $gpuModels = null, ?string $id = null, ?string $location = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->country = $country;
         $this->createdAt = $createdAt;
         $this->gpuModels = $gpuModels;
         $this->id = $id;
         $this->location = $location;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

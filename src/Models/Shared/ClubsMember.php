@@ -86,6 +86,16 @@ class ClubsMember
     public ?ClubsMemberMembershipStatus $membershipStatus = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ClubsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The full name of the member (first name + last initial for Strava)
      *
      * @var ?string $name
@@ -122,12 +132,13 @@ class ClubsMember
      * @param  ?bool  $isOwner
      * @param  ?string  $lastName
      * @param  ?\Unified\Unified_to\Models\Shared\ClubsMemberMembershipStatus  $membershipStatus
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $firstName = null, ?string $groupId = null, ?string $id = null, ?bool $isAdmin = null, ?bool $isOwner = null, ?string $lastName = null, ?ClubsMemberMembershipStatus $membershipStatus = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $firstName = null, ?string $groupId = null, ?string $id = null, ?bool $isAdmin = null, ?bool $isOwner = null, ?string $lastName = null, ?ClubsMemberMembershipStatus $membershipStatus = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->firstName = $firstName;
@@ -137,6 +148,7 @@ class ClubsMember
         $this->isOwner = $isOwner;
         $this->lastName = $lastName;
         $this->membershipStatus = $membershipStatus;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

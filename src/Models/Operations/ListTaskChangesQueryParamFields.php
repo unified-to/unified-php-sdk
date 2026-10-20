@@ -17,5 +17,6 @@ enum ListTaskChangesQueryParamFields: string
     case TaskId = 'task_id';
     case UserId = 'user_id';
     case Items = 'items';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

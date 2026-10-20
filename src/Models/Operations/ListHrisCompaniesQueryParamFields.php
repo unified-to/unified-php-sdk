@@ -17,5 +17,6 @@ enum ListHrisCompaniesQueryParamFields: string
     case Name = 'name';
     case LegalName = 'legal_name';
     case Address = 'address';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

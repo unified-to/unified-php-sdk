@@ -21,5 +21,6 @@ enum UpdateLmsClassQueryParamFields: string
     case Languages = 'languages';
     case Instructors = 'instructors';
     case Students = 'students';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

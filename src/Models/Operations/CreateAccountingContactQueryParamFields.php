@@ -38,5 +38,6 @@ enum CreateAccountingContactQueryParamFields: string
     case BalanceAmount = 'balance_amount';
     case Website = 'website';
     case Notes = 'notes';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

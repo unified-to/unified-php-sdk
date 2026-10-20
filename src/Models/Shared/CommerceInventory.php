@@ -63,6 +63,16 @@ class CommerceInventory
     public ?string $locationId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -88,11 +98,12 @@ class CommerceInventory
      * @param  ?string  $itemOptionId
      * @param  ?string  $itemVariantId
      * @param  ?string  $locationId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $available = null, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $available = null, ?string $id = null, ?string $itemId = null, ?string $itemOptionId = null, ?string $itemVariantId = null, ?string $locationId = null, ?array $metadata = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->available = $available;
         $this->id = $id;
@@ -100,6 +111,7 @@ class CommerceInventory
         $this->itemOptionId = $itemOptionId;
         $this->itemVariantId = $itemVariantId;
         $this->locationId = $locationId;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;
     }

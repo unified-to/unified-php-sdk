@@ -1,0 +1,13 @@
+# CalendarMetadata
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `extraData`                                                                      | [array\|string\|float\|bool\|null](../../Models/Shared/CalendarMetadataExtraData.md) | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `format`                                                                         | [?Shared\CalendarMetadataFormat](../../Models/Shared/CalendarMetadataFormat.md)  | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `id`                                                                             | *?string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `namespace`                                                                      | *?string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `slug`                                                                           | *?string*                                                                        | :heavy_minus_sign:                                                               | N/A                                                                              |
+| `value`                                                                          | [array\|string\|float\|bool\|null](../../Models/Shared/CalendarMetadataValue.md) | :heavy_minus_sign:                                                               | N/A                                                                              |

@@ -31,5 +31,6 @@ enum UpdatePaymentSubscriptionQueryParamFields: string
     case DayOfWeek = 'day_of_week';
     case Interval = 'interval';
     case Lineitems = 'lineitems';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

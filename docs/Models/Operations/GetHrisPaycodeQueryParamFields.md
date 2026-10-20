@@ -17,4 +17,5 @@
 | `IsPreTax`    | is_pre_tax    |
 | `IsEmployer`  | is_employer   |
 | `IsActive`    | is_active     |
+| `Metadata`    | metadata      |
 | `Raw`         | raw           |

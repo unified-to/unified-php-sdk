@@ -19,5 +19,6 @@ enum GetSocialInsightQueryParamFields: string
     case Period = 'period';
     case Metric = 'metric';
     case Value = 'value';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

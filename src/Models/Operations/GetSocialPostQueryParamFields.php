@@ -26,5 +26,6 @@ enum GetSocialPostQueryParamFields: string
     case ScheduledAt = 'scheduled_at';
     case CallToAction = 'call_to_action';
     case Metrics = 'metrics';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

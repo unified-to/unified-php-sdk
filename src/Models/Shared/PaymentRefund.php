@@ -37,6 +37,16 @@ class PaymentRefund
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $notes
      */
@@ -130,6 +140,7 @@ class PaymentRefund
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata>  $metadata
      * @param  ?string  $notes
      * @param  ?string  $paymentId
      * @param  ?array<string, mixed>  $raw
@@ -142,11 +153,12 @@ class PaymentRefund
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?string $notes = null, ?string $paymentId = null, ?array $raw = null, ?Reason $reason = null, ?string $reference = null, ?\DateTime $refundedAt = null, ?PaymentRefundStatus $status = null, ?PaymentRefundTenderType $tenderType = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $metadata = null, ?string $notes = null, ?string $paymentId = null, ?array $raw = null, ?Reason $reason = null, ?string $reference = null, ?\DateTime $refundedAt = null, ?PaymentRefundStatus $status = null, ?PaymentRefundTenderType $tenderType = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->notes = $notes;
         $this->paymentId = $paymentId;
         $this->raw = $raw;

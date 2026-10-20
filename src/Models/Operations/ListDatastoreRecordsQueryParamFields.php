@@ -18,5 +18,6 @@ enum ListDatastoreRecordsQueryParamFields: string
     case TableId = 'table_id';
     case Fields = 'fields';
     case RowNumber = 'row_number';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

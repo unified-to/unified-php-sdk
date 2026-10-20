@@ -23,5 +23,6 @@ enum UpdateCdpSegmentQueryParamFields: string
     case Size = 'size';
     case IsActive = 'is_active';
     case SourceId = 'source_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

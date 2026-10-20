@@ -53,6 +53,16 @@ class CrmPipeline
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -95,19 +105,21 @@ class CrmPipeline
      * @param  ?float  $displayOrder
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<\Unified\Unified_to\Models\Shared\CrmStage>  $stages
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?array $stages = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?float $dealProbability = null, ?float $displayOrder = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $stages = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->dealProbability = $dealProbability;
         $this->displayOrder = $displayOrder;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->stages = $stages;

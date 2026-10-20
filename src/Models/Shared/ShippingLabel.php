@@ -75,6 +75,16 @@ class ShippingLabel
     public ?string $labelUrl = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Rate used for this label; points to ShippingRate
      *
      * @var ?string $rateId
@@ -147,6 +157,7 @@ class ShippingLabel
      * @param  ?string  $labelCostCurrency
      * @param  ?\Unified\Unified_to\Models\Shared\LabelFormat  $labelFormat
      * @param  ?string  $labelUrl
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata>  $metadata
      * @param  ?string  $rateId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $serviceCode
@@ -156,7 +167,7 @@ class ShippingLabel
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $id = null, ?bool $isVoided = null, ?float $labelCost = null, ?string $labelCostCurrency = null, ?LabelFormat $labelFormat = null, ?string $labelUrl = null, ?string $rateId = null, ?array $raw = null, ?string $serviceCode = null, ?string $shipmentId = null, ?ShippingLabelStatus $status = null, ?string $trackingNumber = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $id = null, ?bool $isVoided = null, ?float $labelCost = null, ?string $labelCostCurrency = null, ?LabelFormat $labelFormat = null, ?string $labelUrl = null, ?array $metadata = null, ?string $rateId = null, ?array $raw = null, ?string $serviceCode = null, ?string $shipmentId = null, ?ShippingLabelStatus $status = null, ?string $trackingNumber = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->id = $id;
@@ -165,6 +176,7 @@ class ShippingLabel
         $this->labelCostCurrency = $labelCostCurrency;
         $this->labelFormat = $labelFormat;
         $this->labelUrl = $labelUrl;
+        $this->metadata = $metadata;
         $this->rateId = $rateId;
         $this->raw = $raw;
         $this->serviceCode = $serviceCode;

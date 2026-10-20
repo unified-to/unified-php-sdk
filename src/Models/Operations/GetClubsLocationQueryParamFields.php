@@ -21,5 +21,6 @@ enum GetClubsLocationQueryParamFields: string
     case Longitude = 'longitude';
     case Telephone = 'telephone';
     case Url = 'url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

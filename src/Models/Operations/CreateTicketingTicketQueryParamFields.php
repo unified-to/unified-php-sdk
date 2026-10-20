@@ -28,5 +28,6 @@ enum CreateTicketingTicketQueryParamFields: string
     case Url = 'url';
     case AttachmentIds = 'attachment_ids';
     case DueAt = 'due_at';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

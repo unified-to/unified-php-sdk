@@ -37,6 +37,16 @@ class AtsStatus
     public ?string $jobId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $originalStatus
      */
@@ -67,16 +77,18 @@ class AtsStatus
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?string  $jobId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
      * @param  ?string  $originalStatus
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\AtsStatusStatus  $status
      * @phpstan-pure
      */
-    public function __construct(?string $description = null, ?string $id = null, ?string $jobId = null, ?string $originalStatus = null, ?array $raw = null, ?AtsStatusStatus $status = null)
+    public function __construct(?string $description = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?string $originalStatus = null, ?array $raw = null, ?AtsStatusStatus $status = null)
     {
         $this->description = $description;
         $this->id = $id;
         $this->jobId = $jobId;
+        $this->metadata = $metadata;
         $this->originalStatus = $originalStatus;
         $this->raw = $raw;
         $this->status = $status;

@@ -18,5 +18,6 @@ enum GetCommerceSaleschannelQueryParamFields: string
     case Description = 'description';
     case IsActive = 'is_active';
     case Collections = 'collections';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

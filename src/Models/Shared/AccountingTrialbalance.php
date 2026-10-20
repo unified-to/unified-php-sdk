@@ -46,6 +46,16 @@ class AccountingTrialbalance
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -112,6 +122,7 @@ class AccountingTrialbalance
      * @param  ?string  $currency
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
@@ -121,12 +132,13 @@ class AccountingTrialbalance
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $startAt = null, ?array $subItems = null, ?float $totalCreditAmount = null, ?float $totalDebitAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?\DateTime $startAt = null, ?array $subItems = null, ?float $totalCreditAmount = null, ?float $totalDebitAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->endAt = $endAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->startAt = $startAt;

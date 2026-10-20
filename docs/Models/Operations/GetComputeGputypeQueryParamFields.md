@@ -20,4 +20,5 @@
 | `Architecture`    | architecture      |
 | `Prices`          | prices            |
 | `Availability`    | availability      |
+| `Metadata`        | metadata          |
 | `Raw`             | raw               |

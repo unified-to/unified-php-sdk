@@ -63,6 +63,16 @@ class PerformanceFeedback
     public ?string $message = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PerformanceMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PerformanceMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -108,13 +118,14 @@ class PerformanceFeedback
      * @param  ?string  $id
      * @param  ?bool  $isVisible
      * @param  ?string  $message
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PerformanceMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $tags
      * @param  ?\Unified\Unified_to\Models\Shared\PerformanceFeedbackType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $userId, ?string $authorUserId = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isVisible = null, ?string $message = null, ?array $raw = null, ?array $tags = null, ?PerformanceFeedbackType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $userId, ?string $authorUserId = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isVisible = null, ?string $message = null, ?array $metadata = null, ?array $raw = null, ?array $tags = null, ?PerformanceFeedbackType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->userId = $userId;
         $this->authorUserId = $authorUserId;
@@ -122,6 +133,7 @@ class PerformanceFeedback
         $this->id = $id;
         $this->isVisible = $isVisible;
         $this->message = $message;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->tags = $tags;
         $this->type = $type;

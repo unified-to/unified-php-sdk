@@ -20,5 +20,6 @@ enum PatchHrisDocumentQueryParamFields: string
     case Type = 'type';
     case UserId = 'user_id';
     case CompanyId = 'company_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

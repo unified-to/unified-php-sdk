@@ -142,6 +142,16 @@ class ShippingShipment
     public ?array $lineitems = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Reference to commerce_order or accounting_order
      *
      * @var ?string $orderId
@@ -397,6 +407,7 @@ class ShippingShipment
      * @param  ?bool  $isSignatureRequired
      * @param  ?string  $labelId
      * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingShipmentLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata>  $metadata
      * @param  ?string  $orderId
      * @param  ?string  $organizationId
      * @param  ?string  $originalShipmentId
@@ -425,7 +436,7 @@ class ShippingShipment
      * @param  ?string  $warehouseLocationName
      * @phpstan-pure
      */
-    public function __construct(?string $carrierId = null, ?string $carrierName = null, ?\DateTime $createdAt = null, ?PropertyShippingShipmentCustoms $customs = null, ?PropertyShippingShipmentFromAddress $fromAddress = null, ?string $id = null, ?PropertyShippingShipmentInsurance $insurance = null, ?bool $isAdultSignatureRequired = null, ?bool $isInternational = null, ?bool $isRateGuaranteed = null, ?bool $isReturn = null, ?bool $isSignatureRequired = null, ?string $labelId = null, ?array $lineitems = null, ?string $orderId = null, ?string $organizationId = null, ?string $originalShipmentId = null, ?array $packages = null, ?float $rateAmount = null, ?string $rateCurrency = null, ?float $rateEstimatedDays = null, ?\DateTime $rateEstimatedDeliveryAt = null, ?string $rateId = null, ?string $rateServiceName = null, ?array $raw = null, ?string $referenceNumber = null, ?PropertyShippingShipmentReturnAddress $returnAddress = null, ?string $returnAuthorizationNumber = null, ?string $returnReason = null, ?ReturnType $returnType = null, ?string $serviceCode = null, ?\DateTime $shippedAt = null, ?array $specialInstructions = null, ?ShippingShipmentStatus $status = null, ?PropertyShippingShipmentToAddress $toAddress = null, ?string $trackingId = null, ?string $trackingUrl = null, ?\DateTime $updatedAt = null, ?string $warehouseLocationId = null, ?string $warehouseLocationName = null)
+    public function __construct(?string $carrierId = null, ?string $carrierName = null, ?\DateTime $createdAt = null, ?PropertyShippingShipmentCustoms $customs = null, ?PropertyShippingShipmentFromAddress $fromAddress = null, ?string $id = null, ?PropertyShippingShipmentInsurance $insurance = null, ?bool $isAdultSignatureRequired = null, ?bool $isInternational = null, ?bool $isRateGuaranteed = null, ?bool $isReturn = null, ?bool $isSignatureRequired = null, ?string $labelId = null, ?array $lineitems = null, ?array $metadata = null, ?string $orderId = null, ?string $organizationId = null, ?string $originalShipmentId = null, ?array $packages = null, ?float $rateAmount = null, ?string $rateCurrency = null, ?float $rateEstimatedDays = null, ?\DateTime $rateEstimatedDeliveryAt = null, ?string $rateId = null, ?string $rateServiceName = null, ?array $raw = null, ?string $referenceNumber = null, ?PropertyShippingShipmentReturnAddress $returnAddress = null, ?string $returnAuthorizationNumber = null, ?string $returnReason = null, ?ReturnType $returnType = null, ?string $serviceCode = null, ?\DateTime $shippedAt = null, ?array $specialInstructions = null, ?ShippingShipmentStatus $status = null, ?PropertyShippingShipmentToAddress $toAddress = null, ?string $trackingId = null, ?string $trackingUrl = null, ?\DateTime $updatedAt = null, ?string $warehouseLocationId = null, ?string $warehouseLocationName = null)
     {
         $this->carrierId = $carrierId;
         $this->carrierName = $carrierName;
@@ -441,6 +452,7 @@ class ShippingShipment
         $this->isSignatureRequired = $isSignatureRequired;
         $this->labelId = $labelId;
         $this->lineitems = $lineitems;
+        $this->metadata = $metadata;
         $this->orderId = $orderId;
         $this->organizationId = $organizationId;
         $this->originalShipmentId = $originalShipmentId;

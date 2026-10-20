@@ -11,4 +11,5 @@
 | `Content`   | content     |
 | `UserId`    | user_id     |
 | `CallId`    | call_id     |
+| `Metadata`  | metadata    |
 | `Raw`       | raw         |

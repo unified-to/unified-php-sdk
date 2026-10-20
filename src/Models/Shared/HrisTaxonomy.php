@@ -73,6 +73,16 @@ class HrisTaxonomy
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * the preferred label of the skill/role
      *
      * @var ?string $name
@@ -155,6 +165,7 @@ class HrisTaxonomy
      * @param  ?string  $domain
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
@@ -165,7 +176,7 @@ class HrisTaxonomy
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $alternativeNames = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $domain = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?array $roleIds = null, ?string $subcategory = null, ?HrisTaxonomyType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $alternativeNames = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $domain = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?array $roleIds = null, ?string $subcategory = null, ?HrisTaxonomyType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->alternativeNames = $alternativeNames;
         $this->category = $category;
@@ -174,6 +185,7 @@ class HrisTaxonomy
         $this->domain = $domain;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;

@@ -45,6 +45,16 @@ class DatastoreDatabase
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\DatastoreMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DatastoreMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -100,6 +110,7 @@ class DatastoreDatabase
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $password
      * @param  ?array<string, mixed>  $raw
@@ -108,12 +119,13 @@ class DatastoreDatabase
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $password = null, ?array $raw = null, ?string $region = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?string $password = null, ?array $raw = null, ?string $region = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->password = $password;
         $this->raw = $raw;

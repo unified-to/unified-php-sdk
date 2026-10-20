@@ -13,4 +13,5 @@
 | `StartAt`        | start_at         |
 | `EndAt`          | end_at           |
 | `OrganizationId` | organization_id  |
+| `Metadata`       | metadata         |
 | `Raw`            | raw              |

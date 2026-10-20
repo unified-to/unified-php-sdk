@@ -18,5 +18,6 @@ enum ListTicketingCustomersQueryParamFields: string
     case Emails = 'emails';
     case Telephones = 'telephones';
     case Tags = 'tags';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

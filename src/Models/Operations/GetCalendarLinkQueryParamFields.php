@@ -21,5 +21,6 @@ enum GetCalendarLinkQueryParamFields: string
     case IsActive = 'is_active';
     case PriceAmount = 'price_amount';
     case PriceCurrency = 'price_currency';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

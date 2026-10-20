@@ -22,5 +22,6 @@ enum GetAccountingBalancesheetQueryParamFields: string
     case Assets = 'assets';
     case Liabilities = 'liabilities';
     case Equity = 'equity';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

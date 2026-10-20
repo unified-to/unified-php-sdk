@@ -18,4 +18,5 @@
 | `Labels`         | labels           |
 | `ClosedAt`       | closed_at        |
 | `CommitIds`      | commit_ids       |
+| `Metadata`       | metadata         |
 | `Raw`            | raw              |

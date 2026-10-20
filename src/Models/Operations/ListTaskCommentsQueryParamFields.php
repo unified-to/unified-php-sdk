@@ -20,5 +20,6 @@ enum ListTaskCommentsQueryParamFields: string
     case TaskId = 'task_id';
     case ParentId = 'parent_id';
     case HasChildren = 'has_children';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

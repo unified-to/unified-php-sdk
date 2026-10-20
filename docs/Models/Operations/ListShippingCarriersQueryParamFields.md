@@ -13,4 +13,5 @@
 | `IsActive`   | is_active    |
 | `LogoUrl`    | logo_url     |
 | `WebsiteUrl` | website_url  |
+| `Metadata`   | metadata     |
 | `Raw`        | raw          |

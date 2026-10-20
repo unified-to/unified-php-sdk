@@ -20,5 +20,6 @@ enum ListCalendarRecordingsQueryParamFields: string
     case EventId = 'event_id';
     case WebUrl = 'web_url';
     case Media = 'media';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

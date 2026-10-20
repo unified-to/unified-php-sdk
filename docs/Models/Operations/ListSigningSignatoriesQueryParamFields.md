@@ -17,3 +17,4 @@
 | `SignedAt`      | signed_at       |
 | `DeclineReason` | decline_reason  |
 | `Raw`           | raw             |
+| `Metadata`      | metadata        |

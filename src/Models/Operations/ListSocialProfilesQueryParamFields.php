@@ -28,5 +28,6 @@ enum ListSocialProfilesQueryParamFields: string
     case IsVerified = 'is_verified';
     case IsPrivate = 'is_private';
     case Metrics = 'metrics';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

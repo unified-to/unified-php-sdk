@@ -18,5 +18,6 @@ enum ListAnalyticsReportsQueryParamFields: string
     case StartAt = 'start_at';
     case EndAt = 'end_at';
     case Metrics = 'metrics';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

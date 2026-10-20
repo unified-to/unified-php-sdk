@@ -51,5 +51,6 @@ enum PatchAssessmentOrderQueryParamFields: string
     case ResponseDetails = 'response_details';
     case ResponseSource = 'response_source';
     case ResponseAttributes = 'response_attributes';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

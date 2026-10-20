@@ -13,4 +13,5 @@
 | `Period`    | period      |
 | `Metric`    | metric      |
 | `Value`     | value       |
+| `Metadata`  | metadata    |
 | `Raw`       | raw         |

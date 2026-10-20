@@ -73,6 +73,16 @@ class MarketingList
     public ?string $language = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\MarketingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MarketingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The list's name
      *
      * @var ?string $name
@@ -166,6 +176,7 @@ class MarketingList
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?string  $language
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MarketingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $senderCompany
@@ -178,7 +189,7 @@ class MarketingList
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyMarketingListAddress $address = null, ?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $language = null, ?string $name = null, ?array $raw = null, ?string $senderCompany = null, ?string $senderEmail = null, ?string $senderName = null, ?string $senderPhone = null, ?\DateTime $startAt = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyMarketingListAddress $address = null, ?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isActive = null, ?string $language = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $senderCompany = null, ?string $senderEmail = null, ?string $senderName = null, ?string $senderPhone = null, ?\DateTime $startAt = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->address = $address;
         $this->createdAt = $createdAt;
@@ -187,6 +198,7 @@ class MarketingList
         $this->id = $id;
         $this->isActive = $isActive;
         $this->language = $language;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->senderCompany = $senderCompany;

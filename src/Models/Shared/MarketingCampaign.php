@@ -58,6 +58,16 @@ class MarketingCampaign
     public ?array $listIds = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\MarketingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MarketingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Campaign nametitle
      *
      * @var ?string $name
@@ -146,6 +156,7 @@ class MarketingCampaign
      * @param  ?string  $fromName
      * @param  ?string  $id
      * @param  ?array<string>  $listIds
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MarketingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $previewText
      * @param  ?array<string, mixed>  $raw
@@ -157,13 +168,14 @@ class MarketingCampaign
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $fromEmail = null, ?string $fromName = null, ?string $id = null, ?array $listIds = null, ?string $name = null, ?string $previewText = null, ?array $raw = null, ?string $replyToEmail = null, ?\DateTime $sendAt = null, ?MarketingCampaignStatus $status = null, ?string $subjectLine = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $fromEmail = null, ?string $fromName = null, ?string $id = null, ?array $listIds = null, ?array $metadata = null, ?string $name = null, ?string $previewText = null, ?array $raw = null, ?string $replyToEmail = null, ?\DateTime $sendAt = null, ?MarketingCampaignStatus $status = null, ?string $subjectLine = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->fromEmail = $fromEmail;
         $this->fromName = $fromName;
         $this->id = $id;
         $this->listIds = $listIds;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->previewText = $previewText;
         $this->raw = $raw;

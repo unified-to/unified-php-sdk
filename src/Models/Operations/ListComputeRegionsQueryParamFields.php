@@ -18,5 +18,6 @@ enum ListComputeRegionsQueryParamFields: string
     case Location = 'location';
     case Country = 'country';
     case GpuModels = 'gpu_models';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

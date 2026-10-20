@@ -65,6 +65,16 @@ class MessagingEvent
     public ?PropertyMessagingEventMessage $message = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -99,12 +109,13 @@ class MessagingEvent
      * @param  ?string  $id
      * @param  ?bool  $isReplacingOriginal
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventMessage  $message
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\MessagingEventType  $type
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyMessagingEventUser  $user
      * @phpstan-pure
      */
-    public function __construct(?PropertyMessagingEventButton $button = null, ?PropertyMessagingEventChannel $channel = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isReplacingOriginal = null, ?PropertyMessagingEventMessage $message = null, ?array $raw = null, ?MessagingEventType $type = null, ?PropertyMessagingEventUser $user = null)
+    public function __construct(?PropertyMessagingEventButton $button = null, ?PropertyMessagingEventChannel $channel = null, ?\DateTime $createdAt = null, ?string $id = null, ?bool $isReplacingOriginal = null, ?PropertyMessagingEventMessage $message = null, ?array $metadata = null, ?array $raw = null, ?MessagingEventType $type = null, ?PropertyMessagingEventUser $user = null)
     {
         $this->button = $button;
         $this->channel = $channel;
@@ -112,6 +123,7 @@ class MessagingEvent
         $this->id = $id;
         $this->isReplacingOriginal = $isReplacingOriginal;
         $this->message = $message;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->type = $type;
         $this->user = $user;

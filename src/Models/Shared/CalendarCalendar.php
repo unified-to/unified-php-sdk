@@ -45,6 +45,16 @@ class CalendarCalendar
     public ?bool $isPrimary = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -84,18 +94,20 @@ class CalendarCalendar
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isPrimary
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $timezone
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isPrimary = null, ?string $name = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isPrimary = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isPrimary = $isPrimary;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->timezone = $timezone;

@@ -140,6 +140,16 @@ class LmsContent
     public ?array $media = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -244,6 +254,7 @@ class LmsContent
      * @param  ?array<string>  $languages
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsContentLocalization>  $localizations
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $providerName
      * @param  ?\DateTime  $publishedAt
@@ -256,7 +267,7 @@ class LmsContent
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $categories = null, ?array $collectionIds = null, ?array $courseIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $difficulty = null, ?float $durationMinutes = null, ?string $externalReference = null, ?string $id = null, ?array $instructors = null, ?bool $isActive = null, ?array $languages = null, ?array $localizations = null, ?array $media = null, ?string $name = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?string $shortDescription = null, ?array $skills = null, ?float $sortOrder = null, ?array $subjects = null, ?array $tags = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $categories = null, ?array $collectionIds = null, ?array $courseIds = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $difficulty = null, ?float $durationMinutes = null, ?string $externalReference = null, ?string $id = null, ?array $instructors = null, ?bool $isActive = null, ?array $languages = null, ?array $localizations = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $providerName = null, ?\DateTime $publishedAt = null, ?array $raw = null, ?string $shortDescription = null, ?array $skills = null, ?float $sortOrder = null, ?array $subjects = null, ?array $tags = null, ?\DateTime $updatedAt = null)
     {
         $this->categories = $categories;
         $this->collectionIds = $collectionIds;
@@ -272,6 +283,7 @@ class LmsContent
         $this->languages = $languages;
         $this->localizations = $localizations;
         $this->media = $media;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->providerName = $providerName;
         $this->publishedAt = $publishedAt;

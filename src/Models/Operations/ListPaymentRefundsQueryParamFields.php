@@ -23,5 +23,6 @@ enum ListPaymentRefundsQueryParamFields: string
     case RefundedAt = 'refunded_at';
     case Reason = 'reason';
     case TenderType = 'tender_type';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

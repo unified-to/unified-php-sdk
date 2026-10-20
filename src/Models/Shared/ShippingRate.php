@@ -48,6 +48,16 @@ class ShippingRate
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ShippingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Multiple packages (alternative to package)
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\ShippingPackage> $packages
@@ -110,6 +120,7 @@ class ShippingRate
      * @param  ?string  $currency
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingRateFromAddress  $fromAddress
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingMetadata>  $metadata
      * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingPackage>  $packages
      * @param  ?array<\Unified\Unified_to\Models\Shared\ShippingRateRate>  $rates
      * @param  ?array<string, mixed>  $raw
@@ -118,12 +129,13 @@ class ShippingRate
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyShippingRateToAddress  $toAddress
      * @phpstan-pure
      */
-    public function __construct(?string $carrierId = null, ?string $currency = null, ?PropertyShippingRateFromAddress $fromAddress = null, ?string $id = null, ?array $packages = null, ?array $rates = null, ?array $raw = null, ?\DateTime $shipByAt = null, ?string $shipmentId = null, ?PropertyShippingRateToAddress $toAddress = null)
+    public function __construct(?string $carrierId = null, ?string $currency = null, ?PropertyShippingRateFromAddress $fromAddress = null, ?string $id = null, ?array $metadata = null, ?array $packages = null, ?array $rates = null, ?array $raw = null, ?\DateTime $shipByAt = null, ?string $shipmentId = null, ?PropertyShippingRateToAddress $toAddress = null)
     {
         $this->carrierId = $carrierId;
         $this->currency = $currency;
         $this->fromAddress = $fromAddress;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->packages = $packages;
         $this->rates = $rates;
         $this->raw = $raw;

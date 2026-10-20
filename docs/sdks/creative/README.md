@@ -37,15 +37,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '0bd44d8f-7387-4244-a500-11c4661a1463',
+        id: '6e244bba-8e9d-4712-83a5-e647756dac5a',
         labels: [
             'coma',
             'accedo',
             'termes',
         ],
+        metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-27T08:34:48.369Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-27T12:23:01.549Z'),
     ),
     connectionId: '<id>',
 );
@@ -202,15 +203,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '73f04cf5-0b84-4d7b-b7bd-e44eb03a7c4a',
+        id: 'd3b608e0-44e2-4d2e-85f2-c1ad480ff726',
         labels: [
             'coma',
             'accedo',
             'termes',
         ],
+        metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-27T08:34:48.376Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-27T12:23:01.557Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -318,15 +320,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '73f04cf5-0b84-4d7b-b7bd-e44eb03a7c4a',
+        id: 'd3b608e0-44e2-4d2e-85f2-c1ad480ff726',
         labels: [
             'coma',
             'accedo',
             'termes',
         ],
+        metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-27T08:34:48.376Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-27T12:23:01.557Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

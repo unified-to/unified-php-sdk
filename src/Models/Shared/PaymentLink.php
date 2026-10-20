@@ -88,6 +88,16 @@ class PaymentLink
     public ?array $lineitems = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * (reference to PaymentPayment)
      *
      * @var ?string $paymentId
@@ -142,6 +152,7 @@ class PaymentLink
      * @param  ?bool  $isActive
      * @param  ?bool  $isChargeableNow
      * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata>  $metadata
      * @param  ?string  $paymentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $successUrl
@@ -149,7 +160,7 @@ class PaymentLink
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?string $paymentId = null, ?array $raw = null, ?string $successUrl = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?array $metadata = null, ?string $paymentId = null, ?array $raw = null, ?string $successUrl = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->amount = $amount;
         $this->contactId = $contactId;
@@ -160,6 +171,7 @@ class PaymentLink
         $this->isActive = $isActive;
         $this->isChargeableNow = $isChargeableNow;
         $this->lineitems = $lineitems;
+        $this->metadata = $metadata;
         $this->paymentId = $paymentId;
         $this->raw = $raw;
         $this->successUrl = $successUrl;

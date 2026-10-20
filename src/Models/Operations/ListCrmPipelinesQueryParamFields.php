@@ -19,5 +19,6 @@ enum ListCrmPipelinesQueryParamFields: string
     case DealProbability = 'deal_probability';
     case DisplayOrder = 'display_order';
     case Stages = 'stages';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

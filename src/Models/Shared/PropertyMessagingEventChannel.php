@@ -71,6 +71,16 @@ class PropertyMessagingEventChannel
     public ?array $members = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -121,6 +131,7 @@ class PropertyMessagingEventChannel
      * @param  ?bool  $isActive
      * @param  ?bool  $isPrivate
      * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMember>  $members
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
@@ -128,7 +139,7 @@ class PropertyMessagingEventChannel
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?bool $hasSubchannels = null, ?string $id = null, ?bool $isActive = null, ?bool $isPrivate = null, ?array $members = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->createdAt = $createdAt;
         $this->description = $description;
@@ -137,6 +148,7 @@ class PropertyMessagingEventChannel
         $this->isActive = $isActive;
         $this->isPrivate = $isPrivate;
         $this->members = $members;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;

@@ -283,6 +283,16 @@ class ClubsActivity
     public ?float $maxWatts = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ClubsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The activity's moving time, in seconds
      *
      * @var ?float $movingTime
@@ -432,6 +442,7 @@ class ClubsActivity
      * @param  ?float  $maxHeartrate
      * @param  ?float  $maxSpeed
      * @param  ?float  $maxWatts
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata>  $metadata
      * @param  ?float  $movingTime
      * @param  ?string  $name
      * @param  ?float  $photoCount
@@ -447,7 +458,7 @@ class ClubsActivity
      * @param  ?float  $workoutType
      * @phpstan-pure
      */
-    public function __construct(?float $achievementCount = null, ?float $athleteCount = null, ?string $athleteId = null, ?string $athleteName = null, ?float $averageCadence = null, ?float $averageHeartrate = null, ?float $averageSpeed = null, ?float $averageWatts = null, ?float $calories = null, ?float $commentCount = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $distance = null, ?float $elapsedTime = null, ?float $elevationHigh = null, ?float $elevationLow = null, ?string $groupId = null, ?bool $hasHeartrate = null, ?string $id = null, ?bool $isCommute = null, ?bool $isManual = null, ?bool $isPrivate = null, ?bool $isTrainer = null, ?float $kilojoules = null, ?float $kudosCount = null, ?string $mapPolyline = null, ?string $mapSummaryPolyline = null, ?float $maxHeartrate = null, ?float $maxSpeed = null, ?float $maxWatts = null, ?float $movingTime = null, ?string $name = null, ?float $photoCount = null, ?float $prCount = null, ?array $raw = null, ?\DateTime $startAt = null, ?float $sufferScore = null, ?string $timezone = null, ?float $totalElevationGain = null, ?ClubsActivityType $type = null, ?\DateTime $updatedAt = null, ?float $weightedAverageWatts = null, ?float $workoutType = null)
+    public function __construct(?float $achievementCount = null, ?float $athleteCount = null, ?string $athleteId = null, ?string $athleteName = null, ?float $averageCadence = null, ?float $averageHeartrate = null, ?float $averageSpeed = null, ?float $averageWatts = null, ?float $calories = null, ?float $commentCount = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $distance = null, ?float $elapsedTime = null, ?float $elevationHigh = null, ?float $elevationLow = null, ?string $groupId = null, ?bool $hasHeartrate = null, ?string $id = null, ?bool $isCommute = null, ?bool $isManual = null, ?bool $isPrivate = null, ?bool $isTrainer = null, ?float $kilojoules = null, ?float $kudosCount = null, ?string $mapPolyline = null, ?string $mapSummaryPolyline = null, ?float $maxHeartrate = null, ?float $maxSpeed = null, ?float $maxWatts = null, ?array $metadata = null, ?float $movingTime = null, ?string $name = null, ?float $photoCount = null, ?float $prCount = null, ?array $raw = null, ?\DateTime $startAt = null, ?float $sufferScore = null, ?string $timezone = null, ?float $totalElevationGain = null, ?ClubsActivityType $type = null, ?\DateTime $updatedAt = null, ?float $weightedAverageWatts = null, ?float $workoutType = null)
     {
         $this->achievementCount = $achievementCount;
         $this->athleteCount = $athleteCount;
@@ -479,6 +490,7 @@ class ClubsActivity
         $this->maxHeartrate = $maxHeartrate;
         $this->maxSpeed = $maxSpeed;
         $this->maxWatts = $maxWatts;
+        $this->metadata = $metadata;
         $this->movingTime = $movingTime;
         $this->name = $name;
         $this->photoCount = $photoCount;

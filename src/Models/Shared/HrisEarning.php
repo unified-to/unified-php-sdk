@@ -82,6 +82,16 @@ class HrisEarning
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $notes
      */
@@ -180,6 +190,7 @@ class HrisEarning
      * @param  ?\Unified\Unified_to\Models\Shared\HrisEarningFrequency  $frequency
      * @param  ?float  $hours
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $notes
      * @param  ?string  $paycodeId
      * @param  ?string  $payrollId
@@ -192,7 +203,7 @@ class HrisEarning
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?HrisEarningFrequency $frequency = null, ?float $hours = null, ?string $id = null, ?string $notes = null, ?string $paycodeId = null, ?string $payrollId = null, ?string $payslipId = null, ?float $rateAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisEarningStatus $status = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?float $amount = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?HrisEarningFrequency $frequency = null, ?float $hours = null, ?string $id = null, ?array $metadata = null, ?string $notes = null, ?string $paycodeId = null, ?string $payrollId = null, ?string $payslipId = null, ?float $rateAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisEarningStatus $status = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->amount = $amount;
         $this->companyId = $companyId;
@@ -202,6 +213,7 @@ class HrisEarning
         $this->frequency = $frequency;
         $this->hours = $hours;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->notes = $notes;
         $this->paycodeId = $paycodeId;
         $this->payrollId = $payrollId;

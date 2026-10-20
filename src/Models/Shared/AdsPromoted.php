@@ -29,6 +29,16 @@ class AdsPromoted
     public AdsPromotedType $type;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -49,14 +59,16 @@ class AdsPromoted
     /**
      * @param  string  $id
      * @param  \Unified\Unified_to\Models\Shared\AdsPromotedType  $type
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @phpstan-pure
      */
-    public function __construct(string $id, AdsPromotedType $type, ?string $name = null, ?array $raw = null)
+    public function __construct(string $id, AdsPromotedType $type, ?array $metadata = null, ?string $name = null, ?array $raw = null)
     {
         $this->id = $id;
         $this->type = $type;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
     }

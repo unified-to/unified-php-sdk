@@ -12,4 +12,5 @@
 | `Description` | description   |
 | `IsActive`    | is_active     |
 | `Collections` | collections   |
+| `Metadata`    | metadata      |
 | `Raw`         | raw           |

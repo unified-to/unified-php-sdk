@@ -29,5 +29,6 @@ enum UpdateAccountingBankfeedtransactionQueryParamFields: string
     case ContactId = 'contact_id';
     case AccountId = 'account_id';
     case CategoryIds = 'category_ids';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

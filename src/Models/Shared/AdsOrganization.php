@@ -56,6 +56,16 @@ class AdsOrganization
     public ?array $managers = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -113,6 +123,7 @@ class AdsOrganization
      * @param  ?string  $currency
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdsManager>  $managers
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
@@ -121,13 +132,14 @@ class AdsOrganization
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountNumber = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $managers = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?AdsOrganizationStatus $status = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountNumber = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $id = null, ?array $managers = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?AdsOrganizationStatus $status = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->accountNumber = $accountNumber;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->id = $id;
         $this->managers = $managers;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;

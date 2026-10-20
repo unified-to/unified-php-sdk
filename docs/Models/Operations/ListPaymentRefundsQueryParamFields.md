@@ -17,4 +17,5 @@
 | `RefundedAt`  | refunded_at   |
 | `Reason`      | reason        |
 | `TenderType`  | tender_type   |
+| `Metadata`    | metadata      |
 | `Raw`         | raw           |

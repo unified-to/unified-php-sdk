@@ -22,5 +22,6 @@ enum ListAccountingAgedpayablesQueryParamFields: string
     case TotalAmount = 'total_amount';
     case Periods = 'periods';
     case OrganizationId = 'organization_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

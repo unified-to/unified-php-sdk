@@ -23,5 +23,6 @@ enum ListSocialReviewsQueryParamFields: string
     case AuthorLocation = 'author_location';
     case Reply = 'reply';
     case Url = 'url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

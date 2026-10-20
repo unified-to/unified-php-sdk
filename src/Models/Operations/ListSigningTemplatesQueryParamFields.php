@@ -19,4 +19,5 @@ enum ListSigningTemplatesQueryParamFields: string
     case IsActive = 'is_active';
     case CreatorId = 'creator_id';
     case Raw = 'raw';
+    case Metadata = 'metadata';
 }

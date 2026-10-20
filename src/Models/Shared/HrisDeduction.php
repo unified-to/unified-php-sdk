@@ -130,6 +130,16 @@ class HrisDeduction
     public ?float $maxAmount = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $notes
      */
@@ -206,6 +216,7 @@ class HrisDeduction
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?float  $maxAmount
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $notes
      * @param  ?string  $paycodeId
      * @param  ?array<string, mixed>  $raw
@@ -215,7 +226,7 @@ class HrisDeduction
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $benefitId = null, ?string $companyId = null, ?HrisDeductionCoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?float $employerAmount = null, ?EmployerType $employerType = null, ?\DateTime $endAt = null, ?HrisDeductionFrequency $frequency = null, ?GarnishmentType $garnishmentType = null, ?string $id = null, ?bool $isActive = null, ?float $maxAmount = null, ?string $notes = null, ?string $paycodeId = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisDeductionType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?float $amount = null, ?string $benefitId = null, ?string $companyId = null, ?HrisDeductionCoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?float $employerAmount = null, ?EmployerType $employerType = null, ?\DateTime $endAt = null, ?HrisDeductionFrequency $frequency = null, ?GarnishmentType $garnishmentType = null, ?string $id = null, ?bool $isActive = null, ?float $maxAmount = null, ?array $metadata = null, ?string $notes = null, ?string $paycodeId = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisDeductionType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->amount = $amount;
         $this->benefitId = $benefitId;
@@ -230,6 +241,7 @@ class HrisDeduction
         $this->id = $id;
         $this->isActive = $isActive;
         $this->maxAmount = $maxAmount;
+        $this->metadata = $metadata;
         $this->notes = $notes;
         $this->paycodeId = $paycodeId;
         $this->raw = $raw;

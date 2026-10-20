@@ -33,5 +33,6 @@ enum PatchHrisAttendanceQueryParamFields: string
     case HourlyRate = 'hourly_rate';
     case ApproverUserId = 'approver_user_id';
     case ApprovedAt = 'approved_at';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

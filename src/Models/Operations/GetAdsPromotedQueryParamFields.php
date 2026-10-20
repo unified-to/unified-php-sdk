@@ -14,5 +14,6 @@ enum GetAdsPromotedQueryParamFields: string
     case Id = 'id';
     case Name = 'name';
     case Type = 'type';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

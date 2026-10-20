@@ -82,6 +82,16 @@ class AccountingOrganization
     public ?string $legalName = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -169,6 +179,7 @@ class AccountingOrganization
      * @param  ?string  $id
      * @param  ?bool  $isElimination
      * @param  ?string  $legalName
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationCode
      * @param  ?string  $parentId
@@ -180,7 +191,7 @@ class AccountingOrganization
      * @param  ?string  $website
      * @phpstan-pure
      */
-    public function __construct(?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $booksCloseAt = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?bool $isElimination = null, ?string $legalName = null, ?string $name = null, ?string $organizationCode = null, ?string $parentId = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?AccountingOrganizationType $type = null, ?\DateTime $updatedAt = null, ?string $website = null)
+    public function __construct(?PropertyAccountingOrganizationAddress $address = null, ?\DateTime $booksCloseAt = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $fiscalYearEndMonth = null, ?string $id = null, ?bool $isElimination = null, ?string $legalName = null, ?array $metadata = null, ?string $name = null, ?string $organizationCode = null, ?string $parentId = null, ?array $raw = null, ?string $taxNumber = null, ?string $timezone = null, ?AccountingOrganizationType $type = null, ?\DateTime $updatedAt = null, ?string $website = null)
     {
         $this->address = $address;
         $this->booksCloseAt = $booksCloseAt;
@@ -190,6 +201,7 @@ class AccountingOrganization
         $this->id = $id;
         $this->isElimination = $isElimination;
         $this->legalName = $legalName;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationCode = $organizationCode;
         $this->parentId = $parentId;

@@ -21,5 +21,6 @@ enum GetLmsInstructorQueryParamFields: string
     case Title = 'title';
     case Telephones = 'telephones';
     case ImageUrl = 'image_url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

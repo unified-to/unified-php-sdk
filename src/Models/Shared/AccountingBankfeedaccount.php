@@ -102,6 +102,16 @@ class AccountingBankfeedaccount
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * account nickname / source name
      *
      * @var ?string $name
@@ -168,6 +178,7 @@ class AccountingBankfeedaccount
      * @param  ?string  $currency
      * @param  ?\DateTime  $feedStartAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?array<string, mixed>  $raw
@@ -176,7 +187,7 @@ class AccountingBankfeedaccount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?string $accountNumber = null, ?string $accountNumberLast4 = null, ?AccountType $accountType = null, ?float $balance = null, ?string $bankName = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $feedStartAt = null, ?string $id = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?string $routingNumber = null, ?AccountingBankfeedaccountStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?string $accountNumber = null, ?string $accountNumberLast4 = null, ?AccountType $accountType = null, ?float $balance = null, ?string $bankName = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $feedStartAt = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?string $routingNumber = null, ?AccountingBankfeedaccountStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->accountNumber = $accountNumber;
@@ -188,6 +199,7 @@ class AccountingBankfeedaccount
         $this->currency = $currency;
         $this->feedStartAt = $feedStartAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->raw = $raw;

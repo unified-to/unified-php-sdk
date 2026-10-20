@@ -24,5 +24,6 @@ enum UpdateShippingLabelQueryParamFields: string
     case LabelCostCurrency = 'label_cost_currency';
     case RateId = 'rate_id';
     case ServiceCode = 'service_code';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

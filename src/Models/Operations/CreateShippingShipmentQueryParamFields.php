@@ -50,5 +50,6 @@ enum CreateShippingShipmentQueryParamFields: string
     case CarrierName = 'carrier_name';
     case TrackingUrl = 'tracking_url';
     case Lineitems = 'lineitems';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

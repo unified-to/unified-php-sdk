@@ -30,6 +30,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateDatastoreQueryRequest(
     datastoreQuery: new Shared\DatastoreQuery(
+        metadata: [],
         query: new Shared\PropertyDatastoreQueryQuery(
             filter: new Shared\PropertyDatastoreQueryQueryFilter(
                 type: Shared\PropertyDatastoreQueryQueryFilterType::Or,

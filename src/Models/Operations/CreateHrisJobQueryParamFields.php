@@ -25,5 +25,6 @@ enum CreateHrisJobQueryParamFields: string
     case ParentId = 'parent_id';
     case Users = 'users';
     case Compensation = 'compensation';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

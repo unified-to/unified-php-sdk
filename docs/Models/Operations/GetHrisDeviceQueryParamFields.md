@@ -24,4 +24,5 @@
 | `HasHdEncrypted`     | has_hd_encrypted     |
 | `HasScreenlock`      | has_screenlock       |
 | `IsMissing`          | is_missing           |
+| `Metadata`           | metadata             |
 | `Raw`                | raw                  |

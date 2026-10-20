@@ -13,4 +13,5 @@
 | `Currency`  | currency    |
 | `Industry`  | industry    |
 | `ParentId`  | parent_id   |
+| `Metadata`  | metadata    |
 | `Raw`       | raw         |

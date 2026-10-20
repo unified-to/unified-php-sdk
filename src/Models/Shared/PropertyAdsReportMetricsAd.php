@@ -137,6 +137,16 @@ class PropertyAdsReportMetricsAd
     public ?string $logoCreativeId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -222,6 +232,7 @@ class PropertyAdsReportMetricsAd
      * @param  ?string  $headline
      * @param  ?string  $id
      * @param  ?string  $logoCreativeId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?string  $path1
@@ -232,7 +243,7 @@ class PropertyAdsReportMetricsAd
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $adCopy = null, ?PropertyAdsReportMetricsAdAdType $adType = null, ?string $advertiserName = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?array $creativeIds = null, ?string $cta = null, ?string $description = null, ?string $displayUrl = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?string $logoCreativeId = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?PropertyAdsReportMetricsAdStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $adCopy = null, ?PropertyAdsReportMetricsAdAdType $adType = null, ?string $advertiserName = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?string $creativeAssetUrl = null, ?array $creativeIds = null, ?string $cta = null, ?string $description = null, ?string $displayUrl = null, ?string $finalUrl = null, ?string $groupId = null, ?string $headline = null, ?string $id = null, ?string $logoCreativeId = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?PropertyAdsReportMetricsAdStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->adCopy = $adCopy;
         $this->adType = $adType;
@@ -249,6 +260,7 @@ class PropertyAdsReportMetricsAd
         $this->headline = $headline;
         $this->id = $id;
         $this->logoCreativeId = $logoCreativeId;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->path1 = $path1;

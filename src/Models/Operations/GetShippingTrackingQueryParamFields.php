@@ -24,5 +24,6 @@ enum GetShippingTrackingQueryParamFields: string
     case CarrierId = 'carrier_id';
     case CarrierStatusCode = 'carrier_status_code';
     case CarrierStatusDescription = 'carrier_status_description';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

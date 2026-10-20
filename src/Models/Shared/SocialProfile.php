@@ -94,6 +94,16 @@ class SocialProfile
     public ?string $location = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\SocialMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\SocialMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Audience metrics for the profile
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertySocialProfileMetrics $metrics
@@ -186,6 +196,7 @@ class SocialProfile
      * @param  ?bool  $isPrivate
      * @param  ?bool  $isVerified
      * @param  ?string  $location
+     * @param  ?array<\Unified\Unified_to\Models\Shared\SocialMetadata>  $metadata
      * @param  ?\Unified\Unified_to\Models\Shared\PropertySocialProfileMetrics  $metrics
      * @param  ?string  $name
      * @param  ?string  $parentId
@@ -197,7 +208,7 @@ class SocialProfile
      * @param  ?string  $websiteUrl
      * @phpstan-pure
      */
-    public function __construct(?PropertySocialProfileAddress $address = null, ?string $avatarUrl = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isPrivate = null, ?bool $isVerified = null, ?string $location = null, ?PropertySocialProfileMetrics $metrics = null, ?string $name = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $username = null, ?string $websiteUrl = null)
+    public function __construct(?PropertySocialProfileAddress $address = null, ?string $avatarUrl = null, ?string $category = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isPrivate = null, ?bool $isVerified = null, ?string $location = null, ?array $metadata = null, ?PropertySocialProfileMetrics $metrics = null, ?string $name = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $username = null, ?string $websiteUrl = null)
     {
         $this->address = $address;
         $this->avatarUrl = $avatarUrl;
@@ -208,6 +219,7 @@ class SocialProfile
         $this->isPrivate = $isPrivate;
         $this->isVerified = $isVerified;
         $this->location = $location;
+        $this->metadata = $metadata;
         $this->metrics = $metrics;
         $this->name = $name;
         $this->parentId = $parentId;

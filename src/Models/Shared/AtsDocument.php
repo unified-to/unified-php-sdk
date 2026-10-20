@@ -79,6 +79,16 @@ class AtsDocument
     public ?string $jobId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -124,13 +134,14 @@ class AtsDocument
      * @param  ?string  $filename
      * @param  ?string  $id
      * @param  ?string  $jobId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\AtsDocumentType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?string $documentData = null, ?string $documentUrl = null, ?string $filename = null, ?string $id = null, ?string $jobId = null, ?array $raw = null, ?AtsDocumentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $applicationId = null, ?string $candidateId = null, ?\DateTime $createdAt = null, ?string $documentData = null, ?string $documentUrl = null, ?string $filename = null, ?string $id = null, ?string $jobId = null, ?array $metadata = null, ?array $raw = null, ?AtsDocumentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->applicationId = $applicationId;
         $this->candidateId = $candidateId;
@@ -140,6 +151,7 @@ class AtsDocument
         $this->filename = $filename;
         $this->id = $id;
         $this->jobId = $jobId;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

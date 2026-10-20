@@ -45,6 +45,16 @@ class KmsSpace
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\KmsPageMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\KmsPageMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -102,6 +112,7 @@ class KmsSpace
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\KmsPageMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?string  $parentPageId
@@ -110,12 +121,13 @@ class KmsSpace
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $parentId = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?string $parentPageId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->parentPageId = $parentPageId;

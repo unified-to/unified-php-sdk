@@ -23,5 +23,6 @@ enum GetPaymentPayoutQueryParamFields: string
     case NetAmount = 'net_amount';
     case AccountId = 'account_id';
     case Lineitems = 'lineitems';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

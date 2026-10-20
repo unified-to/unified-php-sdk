@@ -30,5 +30,6 @@ enum GetHrisDeviceQueryParamFields: string
     case HasHdEncrypted = 'has_hd_encrypted';
     case HasScreenlock = 'has_screenlock';
     case IsMissing = 'is_missing';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

@@ -12,4 +12,5 @@
 | `ItemOptionId`  | item_option_id  |
 | `LocationId`    | location_id     |
 | `Available`     | available       |
+| `Metadata`      | metadata        |
 | `Raw`           | raw             |

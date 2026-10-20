@@ -40,27 +40,23 @@ $request = new Operations\CreateAccountingAccountRequest(
     accountingAccount: new Shared\AccountingAccount(
         balance: 12092,
         createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
-        currency: 'BOB',
-        customerDefinedCode: 'quo',
-        description: 'Spoliatio comedo vilitas harum cupiditate.',
-        id: 'b8c7e8a0-b1f3-40b7-b1dd-8ae788853257',
-        isPayable: true,
-        name: 'Electronic Aluminum Tuna',
+        currency: 'CAD',
+        customerDefinedCode: '6170',
+        description: 'Voluptatibus valde spoliatio.',
+        id: '14ce1ea3-4081-4435-808e-073e20cc3a64',
+        isPayable: false,
+        metadata: [],
+        name: 'Auto Loan Account',
         status: Shared\Status::Archived,
         taxonomy: [
             new Shared\AccountingAccountTaxonomy(
-                originalType: 'vesper',
+                originalType: 'vilitas',
                 type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                value: 'iste',
-            ),
-            new Shared\AccountingAccountTaxonomy(
-                originalType: 'adamo',
-                type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                value: 'peccatus',
+                value: 'comedo',
             ),
         ],
-        type: Shared\Type::Bank,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-06T19:59:19.447Z'),
+        type: Shared\Type::AccountsReceivable,
+        updatedAt: Utils\Utils::parseDateTime('2023-08-06T14:18:17.172Z'),
     ),
     connectionId: '<id>',
 );
@@ -107,27 +103,23 @@ $request = new Operations\CreateAccountingAccountRequest(
     accountingAccount: new Shared\AccountingAccount(
         balance: 12092,
         createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
-        currency: 'BOB',
-        customerDefinedCode: 'quo',
-        description: 'Spoliatio comedo vilitas harum cupiditate.',
-        id: 'b8c7e8a0-b1f3-40b7-b1dd-8ae788853257',
-        isPayable: true,
-        name: 'Electronic Aluminum Tuna',
+        currency: 'CAD',
+        customerDefinedCode: '6170',
+        description: 'Voluptatibus valde spoliatio.',
+        id: '14ce1ea3-4081-4435-808e-073e20cc3a64',
+        isPayable: false,
+        metadata: [],
+        name: 'Auto Loan Account',
         status: Shared\Status::Archived,
         taxonomy: [
             new Shared\AccountingAccountTaxonomy(
-                originalType: 'vesper',
+                originalType: 'vilitas',
                 type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                value: 'iste',
-            ),
-            new Shared\AccountingAccountTaxonomy(
-                originalType: 'adamo',
-                type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                value: 'peccatus',
+                value: 'comedo',
             ),
         ],
-        type: Shared\Type::Bank,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-06T19:59:19.447Z'),
+        type: Shared\Type::AccountsReceivable,
+        updatedAt: Utils\Utils::parseDateTime('2023-08-06T14:18:17.172Z'),
     ),
     connectionId: '<id>',
 );
@@ -1315,27 +1307,33 @@ if ($response->accountingAccount !== null) {
 
 * [createGenaiAgent](docs/sdks/genai/README.md#creategenaiagent) - Create an agent
 * [createGenaiEmbedding](docs/sdks/genai/README.md#creategenaiembedding) - Create an embedding
+* [createGenaiMemory](docs/sdks/genai/README.md#creategenaimemory) - Create a memory
 * [createGenaiOrganization](docs/sdks/genai/README.md#creategenaiorganization) - Create an organization
 * [createGenaiPrompt](docs/sdks/genai/README.md#creategenaiprompt) - Create a prompt
 * [createGenaiTask](docs/sdks/genai/README.md#creategenaitask) - Create a task
 * [getGenaiAgent](docs/sdks/genai/README.md#getgenaiagent) - Retrieve an agent
+* [getGenaiMemory](docs/sdks/genai/README.md#getgenaimemory) - Retrieve a memory
 * [getGenaiModel](docs/sdks/genai/README.md#getgenaimodel) - Retrieve a model
 * [getGenaiOrganization](docs/sdks/genai/README.md#getgenaiorganization) - Retrieve an organization
 * [getGenaiSkill](docs/sdks/genai/README.md#getgenaiskill) - Retrieve a skill
 * [getGenaiTask](docs/sdks/genai/README.md#getgenaitask) - Retrieve a task
 * [listGenaiAgents](docs/sdks/genai/README.md#listgenaiagents) - List all agents
+* [listGenaiMemories](docs/sdks/genai/README.md#listgenaimemories) - List all memories
 * [listGenaiModels](docs/sdks/genai/README.md#listgenaimodels) - List all models
 * [listGenaiOrganizations](docs/sdks/genai/README.md#listgenaiorganizations) - List all organizations
 * [listGenaiSkills](docs/sdks/genai/README.md#listgenaiskills) - List all skills
 * [listGenaiTasks](docs/sdks/genai/README.md#listgenaitasks) - List all tasks
 * [patchGenaiAgent](docs/sdks/genai/README.md#patchgenaiagent) - Update an agent
+* [patchGenaiMemory](docs/sdks/genai/README.md#patchgenaimemory) - Update a memory
 * [patchGenaiOrganization](docs/sdks/genai/README.md#patchgenaiorganization) - Update an organization
 * [patchGenaiTask](docs/sdks/genai/README.md#patchgenaitask) - Update a task
 * [removeGenaiAgent](docs/sdks/genai/README.md#removegenaiagent) - Remove an agent
+* [removeGenaiMemory](docs/sdks/genai/README.md#removegenaimemory) - Remove a memory
 * [removeGenaiOrganization](docs/sdks/genai/README.md#removegenaiorganization) - Remove an organization
 * [removeGenaiSkill](docs/sdks/genai/README.md#removegenaiskill) - Remove a skill
 * [removeGenaiTask](docs/sdks/genai/README.md#removegenaitask) - Remove a task
 * [updateGenaiAgent](docs/sdks/genai/README.md#updategenaiagent) - Update an agent
+* [updateGenaiMemory](docs/sdks/genai/README.md#updategenaimemory) - Update a memory
 * [updateGenaiOrganization](docs/sdks/genai/README.md#updategenaiorganization) - Update an organization
 * [updateGenaiTask](docs/sdks/genai/README.md#updategenaitask) - Update a task
 
@@ -1835,6 +1833,15 @@ if ($response->accountingAccount !== null) {
 * [patchMartechMember](docs/sdks/member/README.md#patchmartechmember) - Update a member
 * [removeMartechMember](docs/sdks/member/README.md#removemartechmember) - Remove a member
 * [updateMartechMember](docs/sdks/member/README.md#updatemartechmember) - Update a member
+
+### [Memory](docs/sdks/memory/README.md)
+
+* [createGenaiMemory](docs/sdks/memory/README.md#creategenaimemory) - Create a memory
+* [getGenaiMemory](docs/sdks/memory/README.md#getgenaimemory) - Retrieve a memory
+* [listGenaiMemories](docs/sdks/memory/README.md#listgenaimemories) - List all memories
+* [patchGenaiMemory](docs/sdks/memory/README.md#patchgenaimemory) - Update a memory
+* [removeGenaiMemory](docs/sdks/memory/README.md#removegenaimemory) - Remove a memory
+* [updateGenaiMemory](docs/sdks/memory/README.md#updategenaimemory) - Update a memory
 
 ### [Message](docs/sdks/message/README.md)
 
@@ -2839,27 +2846,23 @@ try {
         accountingAccount: new Shared\AccountingAccount(
             balance: 12092,
             createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
-            currency: 'BOB',
-            customerDefinedCode: 'quo',
-            description: 'Spoliatio comedo vilitas harum cupiditate.',
-            id: 'b8c7e8a0-b1f3-40b7-b1dd-8ae788853257',
-            isPayable: true,
-            name: 'Electronic Aluminum Tuna',
+            currency: 'CAD',
+            customerDefinedCode: '6170',
+            description: 'Voluptatibus valde spoliatio.',
+            id: '14ce1ea3-4081-4435-808e-073e20cc3a64',
+            isPayable: false,
+            metadata: [],
+            name: 'Auto Loan Account',
             status: Shared\Status::Archived,
             taxonomy: [
                 new Shared\AccountingAccountTaxonomy(
-                    originalType: 'vesper',
+                    originalType: 'vilitas',
                     type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                    value: 'iste',
-                ),
-                new Shared\AccountingAccountTaxonomy(
-                    originalType: 'adamo',
-                    type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                    value: 'peccatus',
+                    value: 'comedo',
                 ),
             ],
-            type: Shared\Type::Bank,
-            updatedAt: Utils\Utils::parseDateTime('2023-01-06T19:59:19.447Z'),
+            type: Shared\Type::AccountsReceivable,
+            updatedAt: Utils\Utils::parseDateTime('2023-08-06T14:18:17.172Z'),
         ),
         connectionId: '<id>',
     );
@@ -2914,27 +2917,23 @@ $request = new Operations\CreateAccountingAccountRequest(
     accountingAccount: new Shared\AccountingAccount(
         balance: 12092,
         createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
-        currency: 'BOB',
-        customerDefinedCode: 'quo',
-        description: 'Spoliatio comedo vilitas harum cupiditate.',
-        id: 'b8c7e8a0-b1f3-40b7-b1dd-8ae788853257',
-        isPayable: true,
-        name: 'Electronic Aluminum Tuna',
+        currency: 'CAD',
+        customerDefinedCode: '6170',
+        description: 'Voluptatibus valde spoliatio.',
+        id: '14ce1ea3-4081-4435-808e-073e20cc3a64',
+        isPayable: false,
+        metadata: [],
+        name: 'Auto Loan Account',
         status: Shared\Status::Archived,
         taxonomy: [
             new Shared\AccountingAccountTaxonomy(
-                originalType: 'vesper',
+                originalType: 'vilitas',
                 type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                value: 'iste',
-            ),
-            new Shared\AccountingAccountTaxonomy(
-                originalType: 'adamo',
-                type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                value: 'peccatus',
+                value: 'comedo',
             ),
         ],
-        type: Shared\Type::Bank,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-06T19:59:19.447Z'),
+        type: Shared\Type::AccountsReceivable,
+        updatedAt: Utils\Utils::parseDateTime('2023-08-06T14:18:17.172Z'),
     ),
     connectionId: '<id>',
 );
@@ -2972,27 +2971,23 @@ $request = new Operations\CreateAccountingAccountRequest(
     accountingAccount: new Shared\AccountingAccount(
         balance: 12092,
         createdAt: Utils\Utils::parseDateTime('2022-07-03T17:57:07.391Z'),
-        currency: 'BOB',
-        customerDefinedCode: 'quo',
-        description: 'Spoliatio comedo vilitas harum cupiditate.',
-        id: 'b8c7e8a0-b1f3-40b7-b1dd-8ae788853257',
-        isPayable: true,
-        name: 'Electronic Aluminum Tuna',
+        currency: 'CAD',
+        customerDefinedCode: '6170',
+        description: 'Voluptatibus valde spoliatio.',
+        id: '14ce1ea3-4081-4435-808e-073e20cc3a64',
+        isPayable: false,
+        metadata: [],
+        name: 'Auto Loan Account',
         status: Shared\Status::Archived,
         taxonomy: [
             new Shared\AccountingAccountTaxonomy(
-                originalType: 'vesper',
+                originalType: 'vilitas',
                 type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                value: 'iste',
-            ),
-            new Shared\AccountingAccountTaxonomy(
-                originalType: 'adamo',
-                type: Shared\AccountingAccountTaxonomyType::Subgroup,
-                value: 'peccatus',
+                value: 'comedo',
             ),
         ],
-        type: Shared\Type::Bank,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-06T19:59:19.447Z'),
+        type: Shared\Type::AccountsReceivable,
+        updatedAt: Utils\Utils::parseDateTime('2023-08-06T14:18:17.172Z'),
     ),
     connectionId: '<id>',
 );

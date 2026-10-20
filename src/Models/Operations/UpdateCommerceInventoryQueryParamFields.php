@@ -18,5 +18,6 @@ enum UpdateCommerceInventoryQueryParamFields: string
     case ItemOptionId = 'item_option_id';
     case LocationId = 'location_id';
     case Available = 'available';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

@@ -161,6 +161,16 @@ class HrisAttendance
     public ?string $locationId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * card/non-cash tips attributed to this attendance record
      *
      * @var ?float $nonCashTipsAmount
@@ -232,6 +242,7 @@ class HrisAttendance
      * @param  ?string  $id
      * @param  ?string  $jobName
      * @param  ?string  $locationId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?float  $nonCashTipsAmount
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\HrisAttendanceStatus  $status
@@ -240,7 +251,7 @@ class HrisAttendance
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $employeeUserId, \DateTime $endAt, \DateTime $startAt, ?PropertyHrisAttendanceAddress $address = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $breaks = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $declaredTipsAmount = null, ?string $groupId = null, ?float $hourlyRate = null, ?float $hours = null, ?string $id = null, ?string $jobName = null, ?string $locationId = null, ?float $nonCashTipsAmount = null, ?array $raw = null, ?HrisAttendanceStatus $status = null, ?string $timeshiftId = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $employeeUserId, \DateTime $endAt, \DateTime $startAt, ?PropertyHrisAttendanceAddress $address = null, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $breaks = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $declaredTipsAmount = null, ?string $groupId = null, ?float $hourlyRate = null, ?float $hours = null, ?string $id = null, ?string $jobName = null, ?string $locationId = null, ?array $metadata = null, ?float $nonCashTipsAmount = null, ?array $raw = null, ?HrisAttendanceStatus $status = null, ?string $timeshiftId = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->employeeUserId = $employeeUserId;
         $this->endAt = $endAt;
@@ -259,6 +270,7 @@ class HrisAttendance
         $this->id = $id;
         $this->jobName = $jobName;
         $this->locationId = $locationId;
+        $this->metadata = $metadata;
         $this->nonCashTipsAmount = $nonCashTipsAmount;
         $this->raw = $raw;
         $this->status = $status;

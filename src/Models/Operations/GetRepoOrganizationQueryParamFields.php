@@ -19,5 +19,6 @@ enum GetRepoOrganizationQueryParamFields: string
     case AvatarUrl = 'avatar_url';
     case WebUrl = 'web_url';
     case UserIds = 'user_ids';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

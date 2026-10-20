@@ -53,5 +53,6 @@ enum ListClubsActivitiesQueryParamFields: string
     case WorkoutType = 'workout_type';
     case SufferScore = 'suffer_score';
     case PrCount = 'pr_count';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

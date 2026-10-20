@@ -40,5 +40,6 @@ enum UpdatePaymentPaymentQueryParamFields: string
     case ExchangeRate = 'exchange_rate';
     case CategoryIds = 'category_ids';
     case NetAmount = 'net_amount';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

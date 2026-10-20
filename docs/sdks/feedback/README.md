@@ -34,15 +34,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreatePerformanceFeedbackRequest(
     performanceFeedback: new Shared\PerformanceFeedback(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T16:21:53.862Z'),
-        id: 'db721aa5-3539-4990-b969-37159b2c423b',
+        id: '31a9c10d-57f5-4d6b-ae37-80cd1ecb5468',
         isVisible: true,
         message: 'Tabernus corpus voluptate aestus.',
+        metadata: [],
         tags: [
             'well-to-do',
             'hexagon',
         ],
         type: Shared\PerformanceFeedbackType::Praise,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-02T18:00:59.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-03T06:43:31.847Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',

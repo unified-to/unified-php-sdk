@@ -39,6 +39,16 @@ class TaskChange
     public ?array $items = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\TaskMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TaskMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -79,17 +89,19 @@ class TaskChange
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\TaskChangeItem>  $items
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TaskMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $taskId
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $id = null, ?array $items = null, ?array $raw = null, ?string $taskId = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $id = null, ?array $items = null, ?array $metadata = null, ?array $raw = null, ?string $taskId = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->items = $items;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->taskId = $taskId;
         $this->updatedAt = $updatedAt;

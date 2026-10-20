@@ -14,4 +14,5 @@
 | `CarrierId`   | carrier_id    |
 | `Id`          | id            |
 | `Rates`       | rates         |
+| `Metadata`    | metadata      |
 | `Raw`         | raw           |

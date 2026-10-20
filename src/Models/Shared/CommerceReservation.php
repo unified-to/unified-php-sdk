@@ -88,6 +88,16 @@ class CommerceReservation
     public ?string $locationId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $notes
      */
@@ -175,6 +185,7 @@ class CommerceReservation
      * @param  ?string  $itemId
      * @param  ?string  $itemName
      * @param  ?string  $locationId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $size
@@ -186,7 +197,7 @@ class CommerceReservation
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $guestEmail = null, ?string $guestName = null, ?string $guestPhone = null, ?string $id = null, ?string $itemId = null, ?string $itemName = null, ?string $locationId = null, ?string $notes = null, ?array $raw = null, ?float $size = null, ?string $staffName = null, ?string $staffUserId = null, ?\DateTime $startAt = null, ?CommerceReservationStatus $status = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $guestEmail = null, ?string $guestName = null, ?string $guestPhone = null, ?string $id = null, ?string $itemId = null, ?string $itemName = null, ?string $locationId = null, ?array $metadata = null, ?string $notes = null, ?array $raw = null, ?float $size = null, ?string $staffName = null, ?string $staffUserId = null, ?\DateTime $startAt = null, ?CommerceReservationStatus $status = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->createdAt = $createdAt;
         $this->endAt = $endAt;
@@ -197,6 +208,7 @@ class CommerceReservation
         $this->itemId = $itemId;
         $this->itemName = $itemName;
         $this->locationId = $locationId;
+        $this->metadata = $metadata;
         $this->notes = $notes;
         $this->raw = $raw;
         $this->size = $size;

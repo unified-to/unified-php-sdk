@@ -44,6 +44,16 @@ class RepoBranch
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\RepoMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\RepoMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -67,16 +77,18 @@ class RepoBranch
      * @param  string  $repoId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RepoMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $name, string $repoId, ?\DateTime $createdAt = null, ?string $id = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $name, string $repoId, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->name = $name;
         $this->repoId = $repoId;
         $this->createdAt = $createdAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;
     }

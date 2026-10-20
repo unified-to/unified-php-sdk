@@ -20,5 +20,6 @@ enum CreatePerformanceFeedbackQueryParamFields: string
     case Message = 'message';
     case Tags = 'tags';
     case IsVisible = 'is_visible';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

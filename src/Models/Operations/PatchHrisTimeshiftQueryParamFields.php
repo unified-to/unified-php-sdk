@@ -25,5 +25,6 @@ enum PatchHrisTimeshiftQueryParamFields: string
     case ApprovedAt = 'approved_at';
     case Hours = 'hours';
     case IsApproved = 'is_approved';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

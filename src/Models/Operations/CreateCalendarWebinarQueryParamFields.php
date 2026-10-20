@@ -44,5 +44,6 @@ enum CreateCalendarWebinarQueryParamFields: string
     case HasQa = 'has_qa';
     case HasPolls = 'has_polls';
     case HasRecording = 'has_recording';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

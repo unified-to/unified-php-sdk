@@ -115,6 +115,16 @@ class HrisPayroll
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?float $netAmount
      */
@@ -219,6 +229,7 @@ class HrisPayroll
      * @param  ?float  $grossAmount
      * @param  ?string  $groupId
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?float  $netAmount
      * @param  ?\DateTime  $paidAt
      * @param  ?array<string>  $payslipIds
@@ -231,7 +242,7 @@ class HrisPayroll
      * @param  ?array<string>  $userIds
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $approvedAt = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $deductionAmount = null, ?float $employeeTaxAmount = null, ?float $employerContributionAmount = null, ?float $employerTaxAmount = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $groupId = null, ?string $id = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?array $payslipIds = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisPayrollStatus $status = null, ?float $totalCostAmount = null, ?HrisPayrollType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
+    public function __construct(?\DateTime $approvedAt = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $deductionAmount = null, ?float $employeeTaxAmount = null, ?float $employerContributionAmount = null, ?float $employerTaxAmount = null, ?\DateTime $endAt = null, ?float $grossAmount = null, ?string $groupId = null, ?string $id = null, ?array $metadata = null, ?float $netAmount = null, ?\DateTime $paidAt = null, ?array $payslipIds = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisPayrollStatus $status = null, ?float $totalCostAmount = null, ?HrisPayrollType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null)
     {
         $this->approvedAt = $approvedAt;
         $this->companyId = $companyId;
@@ -245,6 +256,7 @@ class HrisPayroll
         $this->grossAmount = $grossAmount;
         $this->groupId = $groupId;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->netAmount = $netAmount;
         $this->paidAt = $paidAt;
         $this->payslipIds = $payslipIds;

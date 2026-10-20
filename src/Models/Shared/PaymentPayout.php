@@ -74,6 +74,16 @@ class PaymentPayout
     public ?array $lineitems = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PaymentMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * total_amount minus fee_amount
      *
      * @var ?float $netAmount
@@ -134,6 +144,7 @@ class PaymentPayout
      * @param  ?float  $feeAmount
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentPayoutLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PaymentMetadata>  $metadata
      * @param  ?float  $netAmount
      * @param  ?string  $notes
      * @param  ?array<string, mixed>  $raw
@@ -142,7 +153,7 @@ class PaymentPayout
      * @param  ?string  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?\DateTime $arrivalAt = null, ?string $createdAt = null, ?string $currency = null, ?float $feeAmount = null, ?string $id = null, ?array $lineitems = null, ?float $netAmount = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?float $totalAmount = null, ?string $updatedAt = null)
+    public function __construct(?string $accountId = null, ?\DateTime $arrivalAt = null, ?string $createdAt = null, ?string $currency = null, ?float $feeAmount = null, ?string $id = null, ?array $lineitems = null, ?array $metadata = null, ?float $netAmount = null, ?string $notes = null, ?array $raw = null, ?PaymentPayoutStatus $status = null, ?float $totalAmount = null, ?string $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->arrivalAt = $arrivalAt;
@@ -151,6 +162,7 @@ class PaymentPayout
         $this->feeAmount = $feeAmount;
         $this->id = $id;
         $this->lineitems = $lineitems;
+        $this->metadata = $metadata;
         $this->netAmount = $netAmount;
         $this->notes = $notes;
         $this->raw = $raw;

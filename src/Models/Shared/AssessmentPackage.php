@@ -113,6 +113,16 @@ class AssessmentPackage
     public ?float $maxScore = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AssessmentMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AssessmentMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Name of the assessment package
      *
      * @var ?string $name
@@ -200,6 +210,7 @@ class AssessmentPackage
      * @param  ?string  $infoUrl
      * @param  ?array<string>  $integrationTypes
      * @param  ?float  $maxScore
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?bool  $needsIpAddress
      * @param  ?array<\Unified\Unified_to\Models\Shared\AssessmentParameter>  $parameters
@@ -210,7 +221,7 @@ class AssessmentPackage
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(AssessmentPackageType $type, ?array $aliases = null, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $id = null, ?string $infoUrl = null, ?array $integrationTypes = null, ?float $maxScore = null, ?string $name = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $regions = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null)
+    public function __construct(AssessmentPackageType $type, ?array $aliases = null, ?string $connectionId = null, ?\DateTime $createdAt = null, ?string $description = null, ?bool $hasRedirectUrl = null, ?bool $hasTargetUrl = null, ?string $id = null, ?string $infoUrl = null, ?array $integrationTypes = null, ?float $maxScore = null, ?array $metadata = null, ?string $name = null, ?bool $needsIpAddress = null, ?array $parameters = null, ?array $raw = null, ?array $regions = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $workspaceId = null)
     {
         $this->type = $type;
         $this->aliases = $aliases;
@@ -223,6 +234,7 @@ class AssessmentPackage
         $this->infoUrl = $infoUrl;
         $this->integrationTypes = $integrationTypes;
         $this->maxScore = $maxScore;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->needsIpAddress = $needsIpAddress;
         $this->parameters = $parameters;

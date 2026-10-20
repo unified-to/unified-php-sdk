@@ -44,6 +44,16 @@ class CalendarBusy
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -66,16 +76,18 @@ class CalendarBusy
      * @param  \DateTime  $startAt
      * @param  ?string  $description
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $timezone
      * @phpstan-pure
      */
-    public function __construct(\DateTime $endAt, \DateTime $startAt, ?string $description = null, ?string $id = null, ?array $raw = null, ?string $timezone = null)
+    public function __construct(\DateTime $endAt, \DateTime $startAt, ?string $description = null, ?string $id = null, ?array $metadata = null, ?array $raw = null, ?string $timezone = null)
     {
         $this->endAt = $endAt;
         $this->startAt = $startAt;
         $this->description = $description;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->timezone = $timezone;
     }

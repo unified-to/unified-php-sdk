@@ -21,5 +21,6 @@ enum PatchLmsStudentQueryParamFields: string
     case Telephones = 'telephones';
     case Address = 'address';
     case ImageUrl = 'image_url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

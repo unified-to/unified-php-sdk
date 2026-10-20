@@ -26,5 +26,6 @@ enum GetAccountingProfitlossQueryParamFields: string
     case IncomeSections = 'income_sections';
     case ExpensesSections = 'expenses_sections';
     case CostOfGoodsSoldSections = 'cost_of_goods_sold_sections';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

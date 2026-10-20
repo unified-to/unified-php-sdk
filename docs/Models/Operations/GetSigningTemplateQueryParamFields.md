@@ -13,3 +13,4 @@
 | `IsActive`    | is_active     |
 | `CreatorId`   | creator_id    |
 | `Raw`         | raw           |
+| `Metadata`    | metadata      |

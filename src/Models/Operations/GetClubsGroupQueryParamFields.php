@@ -32,5 +32,6 @@ enum GetClubsGroupQueryParamFields: string
     case ProfileImageUrl = 'profile_image_url';
     case CoverImageUrl = 'cover_image_url';
     case ActivityTypes = 'activity_types';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

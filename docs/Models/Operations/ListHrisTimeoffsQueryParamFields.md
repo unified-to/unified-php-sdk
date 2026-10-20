@@ -22,4 +22,5 @@
 | `Type`           | type             |
 | `Duration`       | duration         |
 | `DurationType`   | duration_type    |
+| `Metadata`       | metadata         |
 | `Raw`            | raw              |

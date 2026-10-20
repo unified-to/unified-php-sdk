@@ -44,4 +44,5 @@
 | `CarrierName`               | carrier_name                |
 | `TrackingUrl`               | tracking_url                |
 | `Lineitems`                 | lineitems                   |
+| `Metadata`                  | metadata                    |
 | `Raw`                       | raw                         |

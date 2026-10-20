@@ -30,5 +30,6 @@ enum GetAccountingJournalQueryParamFields: string
     case ExchangeRate = 'exchange_rate';
     case Status = 'status';
     case IsInclusiveOfTax = 'is_inclusive_of_tax';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

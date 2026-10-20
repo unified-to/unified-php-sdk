@@ -25,5 +25,6 @@ enum CreateHrisTaxonomyQueryParamFields: string
     case Url = 'url';
     case RoleIds = 'role_ids';
     case IsActive = 'is_active';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

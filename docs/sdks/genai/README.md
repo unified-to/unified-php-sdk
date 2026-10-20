@@ -6,27 +6,33 @@
 
 * [createGenaiAgent](#creategenaiagent) - Create an agent
 * [createGenaiEmbedding](#creategenaiembedding) - Create an embedding
+* [createGenaiMemory](#creategenaimemory) - Create a memory
 * [createGenaiOrganization](#creategenaiorganization) - Create an organization
 * [createGenaiPrompt](#creategenaiprompt) - Create a prompt
 * [createGenaiTask](#creategenaitask) - Create a task
 * [getGenaiAgent](#getgenaiagent) - Retrieve an agent
+* [getGenaiMemory](#getgenaimemory) - Retrieve a memory
 * [getGenaiModel](#getgenaimodel) - Retrieve a model
 * [getGenaiOrganization](#getgenaiorganization) - Retrieve an organization
 * [getGenaiSkill](#getgenaiskill) - Retrieve a skill
 * [getGenaiTask](#getgenaitask) - Retrieve a task
 * [listGenaiAgents](#listgenaiagents) - List all agents
+* [listGenaiMemories](#listgenaimemories) - List all memories
 * [listGenaiModels](#listgenaimodels) - List all models
 * [listGenaiOrganizations](#listgenaiorganizations) - List all organizations
 * [listGenaiSkills](#listgenaiskills) - List all skills
 * [listGenaiTasks](#listgenaitasks) - List all tasks
 * [patchGenaiAgent](#patchgenaiagent) - Update an agent
+* [patchGenaiMemory](#patchgenaimemory) - Update a memory
 * [patchGenaiOrganization](#patchgenaiorganization) - Update an organization
 * [patchGenaiTask](#patchgenaitask) - Update a task
 * [removeGenaiAgent](#removegenaiagent) - Remove an agent
+* [removeGenaiMemory](#removegenaimemory) - Remove a memory
 * [removeGenaiOrganization](#removegenaiorganization) - Remove an organization
 * [removeGenaiSkill](#removegenaiskill) - Remove a skill
 * [removeGenaiTask](#removegenaitask) - Remove a task
 * [updateGenaiAgent](#updategenaiagent) - Update an agent
+* [updateGenaiMemory](#updategenaimemory) - Update a memory
 * [updateGenaiOrganization](#updategenaiorganization) - Update an organization
 * [updateGenaiTask](#updategenaitask) - Update a task
 
@@ -57,11 +63,11 @@ $request = new Operations\CreateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '47241356-4257-4103-83df-097d8758fb48',
+        id: '4ee42ddc-c1d9-4346-a771-a7a087f6d0c8',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-13T19:22:55.894Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-14T10:49:06.239Z'),
     ),
     connectionId: '<id>',
 );
@@ -123,7 +129,7 @@ $request = new Operations\CreateGenaiEmbeddingRequest(
         dimension: 423,
         embeddings: 'Est.',
         encondingFormat: Shared\EncondingFormat::Float,
-        id: 'd443c77f-1536-425a-9910-ddc170e091aa',
+        id: 'afd3ced3-d8f9-47a5-9a88-f333637e3c63',
         maxTokens: 223,
         tokensUsed: 836,
         type: 'classification',
@@ -149,6 +155,79 @@ if ($response->genaiEmbedding !== null) {
 ### Response
 
 **[?Operations\CreateGenaiEmbeddingResponse](../../Models/Operations/CreateGenaiEmbeddingResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createGenaiMemory
+
+Create a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createGenaiMemory" method="post" path="/genai/{connection_id}/memory" example="genai_memory" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateGenaiMemoryRequest(
+    genaiMemory: new Shared\GenaiMemory(
+        content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
+        createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
+        id: 'b8d72d2d-4793-417e-9295-3a912f831b9d',
+        metadata: [
+            new Shared\GenaiMetadata(
+                extraData: [
+
+                ],
+                format: Shared\GenaiMetadataFormat::Text,
+                id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
+                namespace: 'memory',
+                slug: 'cribro',
+                value: 'aiunt',
+            ),
+        ],
+        name: 'sponte.md',
+        type: Shared\GenaiMemoryType::Memory,
+        updatedAt: Utils\Utils::parseDateTime('2023-04-25T12:43:28.198Z'),
+        userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->genai->createGenaiMemory(
+    request: $request
+);
+
+if ($response->genaiMemory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreateGenaiMemoryRequest](../../Models/Operations/CreateGenaiMemoryRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\CreateGenaiMemoryResponse](../../Models/Operations/CreateGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -183,10 +262,10 @@ $request = new Operations\CreateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: '725e7a62-f3d1-4946-b41b-aa4a2b5ca848',
+        id: '25f875b9-9bf5-4b27-812b-47cd0f3e53ac',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-25T16:43:07.387Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-25T23:44:18.636Z'),
     ),
     connectionId: '<id>',
 );
@@ -366,10 +445,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-09-29T15:21:54.985Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-09-30T06:45:33.960Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: 'fbffcf80-d52c-4a35-8d44-9b70ed3882b2',
+        id: '6599ee62-f68d-4af4-9401-9a20fa767411',
         instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
         linesAdded: 244,
         linesDeleted: 118,
@@ -384,12 +463,12 @@ $request = new Operations\CreateGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
         repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-05-20T06:03:15.237Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-05-20T17:11:38.714Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Cur aeternus cogito vesper.',
         targetBranchIdentifier: 'agent/joshingly-ignorance',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-25T12:37:50.717Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-25T19:55:26.296Z'),
         webUrl: 'https://inexperienced-adrenalin.biz/',
     ),
     connectionId: '<id>',
@@ -464,6 +543,57 @@ if ($response->genaiAgent !== null) {
 ### Response
 
 **[?Operations\GetGenaiAgentResponse](../../Models/Operations/GetGenaiAgentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getGenaiMemory
+
+Retrieve a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getGenaiMemory" method="get" path="/genai/{connection_id}/memory/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetGenaiMemoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->genai->getGenaiMemory(
+    request: $request
+);
+
+if ($response->genaiMemory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetGenaiMemoryRequest](../../Models/Operations/GetGenaiMemoryRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetGenaiMemoryResponse](../../Models/Operations/GetGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -725,6 +855,56 @@ if ($response->genaiAgents !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listGenaiMemories
+
+List all memories
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listGenaiMemories" method="get" path="/genai/{connection_id}/memory" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListGenaiMemoriesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->genai->listGenaiMemories(
+    request: $request
+);
+
+if ($response->genaiMemories !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListGenaiMemoriesRequest](../../Models/Operations/ListGenaiMemoriesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\ListGenaiMemoriesResponse](../../Models/Operations/ListGenaiMemoriesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listGenaiModels
 
 List all models
@@ -952,11 +1132,11 @@ $request = new Operations\PatchGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '63ca3a46-de6b-4d72-8f8f-f86340b67b5c',
+        id: '2a4b8b4d-0646-4c1f-aba0-b02af0aaad4f',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-13T19:22:55.901Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-14T10:49:06.254Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -980,6 +1160,80 @@ if ($response->genaiAgent !== null) {
 ### Response
 
 **[?Operations\PatchGenaiAgentResponse](../../Models/Operations/PatchGenaiAgentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchGenaiMemory
+
+Update a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchGenaiMemory" method="patch" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchGenaiMemoryRequest(
+    genaiMemory: new Shared\GenaiMemory(
+        content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
+        createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
+        id: 'd619e504-17db-4cb6-a6b3-72ffea06738b',
+        metadata: [
+            new Shared\GenaiMetadata(
+                extraData: [
+
+                ],
+                format: Shared\GenaiMetadataFormat::Text,
+                id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
+                namespace: 'memory',
+                slug: 'cribro',
+                value: 'aiunt',
+            ),
+        ],
+        name: 'sponte.md',
+        type: Shared\GenaiMemoryType::Memory,
+        updatedAt: Utils\Utils::parseDateTime('2023-04-25T12:43:28.202Z'),
+        userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->genai->patchGenaiMemory(
+    request: $request
+);
+
+if ($response->genaiMemory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchGenaiMemoryRequest](../../Models/Operations/PatchGenaiMemoryRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\PatchGenaiMemoryResponse](../../Models/Operations/PatchGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -1014,10 +1268,10 @@ $request = new Operations\PatchGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: '5a6cc747-1e91-476d-b9bd-f351380b970a',
+        id: 'c82cf3bb-8fe3-46f6-b106-5852bc70beb5',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-25T16:43:07.390Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-25T23:44:18.640Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1073,10 +1327,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-09-29T15:21:55.001Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-09-30T06:45:33.974Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: 'fbace21d-0228-44bd-8bc4-4c74a5cfb5f2',
+        id: 'cebad502-b835-4187-9429-67df7a8dfee7',
         instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
         linesAdded: 244,
         linesDeleted: 118,
@@ -1091,12 +1345,12 @@ $request = new Operations\PatchGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
         repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-05-20T06:03:15.248Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-05-20T17:11:38.722Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Cur aeternus cogito vesper.',
         targetBranchIdentifier: 'agent/joshingly-ignorance',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-25T12:37:50.724Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-25T19:55:26.303Z'),
         webUrl: 'https://inexperienced-adrenalin.biz/',
     ),
     connectionId: '<id>',
@@ -1172,6 +1426,57 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveGenaiAgentResponse](../../Models/Operations/RemoveGenaiAgentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeGenaiMemory
+
+Remove a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeGenaiMemory" method="delete" path="/genai/{connection_id}/memory/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveGenaiMemoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->genai->removeGenaiMemory(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\RemoveGenaiMemoryRequest](../../Models/Operations/RemoveGenaiMemoryRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\RemoveGenaiMemoryResponse](../../Models/Operations/RemoveGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -1359,11 +1664,11 @@ $request = new Operations\UpdateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '63ca3a46-de6b-4d72-8f8f-f86340b67b5c',
+        id: '2a4b8b4d-0646-4c1f-aba0-b02af0aaad4f',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-13T19:22:55.901Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-14T10:49:06.254Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1387,6 +1692,80 @@ if ($response->genaiAgent !== null) {
 ### Response
 
 **[?Operations\UpdateGenaiAgentResponse](../../Models/Operations/UpdateGenaiAgentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateGenaiMemory
+
+Update a memory
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateGenaiMemory" method="put" path="/genai/{connection_id}/memory/{id}" example="genai_memory" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateGenaiMemoryRequest(
+    genaiMemory: new Shared\GenaiMemory(
+        content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
+        createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
+        id: 'd619e504-17db-4cb6-a6b3-72ffea06738b',
+        metadata: [
+            new Shared\GenaiMetadata(
+                extraData: [
+
+                ],
+                format: Shared\GenaiMetadataFormat::Text,
+                id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
+                namespace: 'memory',
+                slug: 'cribro',
+                value: 'aiunt',
+            ),
+        ],
+        name: 'sponte.md',
+        type: Shared\GenaiMemoryType::Memory,
+        updatedAt: Utils\Utils::parseDateTime('2023-04-25T12:43:28.202Z'),
+        userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->genai->updateGenaiMemory(
+    request: $request
+);
+
+if ($response->genaiMemory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdateGenaiMemoryRequest](../../Models/Operations/UpdateGenaiMemoryRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\UpdateGenaiMemoryResponse](../../Models/Operations/UpdateGenaiMemoryResponse.md)**
 
 ### Errors
 
@@ -1421,10 +1800,10 @@ $request = new Operations\UpdateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: '5a6cc747-1e91-476d-b9bd-f351380b970a',
+        id: 'c82cf3bb-8fe3-46f6-b106-5852bc70beb5',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-25T16:43:07.390Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-25T23:44:18.640Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1480,10 +1859,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-09-29T15:21:55.001Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-09-30T06:45:33.974Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: 'fbace21d-0228-44bd-8bc4-4c74a5cfb5f2',
+        id: 'cebad502-b835-4187-9429-67df7a8dfee7',
         instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
         linesAdded: 244,
         linesDeleted: 118,
@@ -1498,12 +1877,12 @@ $request = new Operations\UpdateGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
         repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-05-20T06:03:15.248Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-05-20T17:11:38.722Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Cur aeternus cogito vesper.',
         targetBranchIdentifier: 'agent/joshingly-ignorance',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-25T12:37:50.724Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-25T19:55:26.303Z'),
         webUrl: 'https://inexperienced-adrenalin.biz/',
     ),
     connectionId: '<id>',

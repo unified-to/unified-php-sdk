@@ -56,6 +56,16 @@ class DatastoreTable
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\DatastoreMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DatastoreMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -114,6 +124,7 @@ class DatastoreTable
      * @param  ?string  $description
      * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreField>  $fields
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
@@ -122,13 +133,14 @@ class DatastoreTable
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $databaseId = null, ?string $description = null, ?array $fields = null, ?string $id = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?array $relationships = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $databaseId = null, ?string $description = null, ?array $fields = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?array $relationships = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->createdAt = $createdAt;
         $this->databaseId = $databaseId;
         $this->description = $description;
         $this->fields = $fields;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;

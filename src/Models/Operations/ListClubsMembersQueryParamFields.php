@@ -21,5 +21,6 @@ enum ListClubsMembersQueryParamFields: string
     case IsAdmin = 'is_admin';
     case IsOwner = 'is_owner';
     case MembershipStatus = 'membership_status';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

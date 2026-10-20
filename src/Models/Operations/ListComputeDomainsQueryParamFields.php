@@ -19,5 +19,6 @@ enum ListComputeDomainsQueryParamFields: string
     case Status = 'status';
     case IsPrimary = 'is_primary';
     case RedirectUrl = 'redirect_url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

@@ -20,5 +20,6 @@ enum PatchKmsSpaceQueryParamFields: string
     case IsActive = 'is_active';
     case UserId = 'user_id';
     case ParentPageId = 'parent_page_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

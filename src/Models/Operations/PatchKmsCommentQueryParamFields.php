@@ -20,5 +20,6 @@ enum PatchKmsCommentQueryParamFields: string
     case UserId = 'user_id';
     case PageId = 'page_id';
     case ParentId = 'parent_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

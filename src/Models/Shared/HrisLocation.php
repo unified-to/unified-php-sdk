@@ -96,6 +96,16 @@ class HrisLocation
     public ?string $languageLocale = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -159,6 +169,7 @@ class HrisLocation
      * @param  ?bool  $isActive
      * @param  ?bool  $isHq
      * @param  ?string  $languageLocale
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
@@ -167,7 +178,7 @@ class HrisLocation
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisLocationAddress $address = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $externalIdentifier = null, ?string $id = null, ?bool $isActive = null, ?bool $isHq = null, ?string $languageLocale = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisLocationAddress $address = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $externalIdentifier = null, ?string $id = null, ?bool $isActive = null, ?bool $isHq = null, ?string $languageLocale = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -179,6 +190,7 @@ class HrisLocation
         $this->isActive = $isActive;
         $this->isHq = $isHq;
         $this->languageLocale = $languageLocale;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;

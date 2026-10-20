@@ -66,6 +66,16 @@ class UcContact
     public ?string $lastName = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The name of the contact
      *
      * @var ?string $name
@@ -119,6 +129,7 @@ class UcContact
      * @param  ?string  $firstName
      * @param  ?string  $id
      * @param  ?string  $lastName
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<\Unified\Unified_to\Models\Shared\UcTelephone>  $telephones
@@ -126,7 +137,7 @@ class UcContact
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->company = $company;
         $this->createdAt = $createdAt;
@@ -134,6 +145,7 @@ class UcContact
         $this->firstName = $firstName;
         $this->id = $id;
         $this->lastName = $lastName;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->telephones = $telephones;

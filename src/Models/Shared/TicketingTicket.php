@@ -83,6 +83,16 @@ class TicketingTicket
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\TicketingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $priority
      */
@@ -181,6 +191,7 @@ class TicketingTicket
      * @param  ?string  $description
      * @param  ?\DateTime  $dueAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TicketingMetadata>  $metadata
      * @param  ?string  $priority
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $source
@@ -193,7 +204,7 @@ class TicketingTicket
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?array $attachmentIds = null, ?string $categoryId = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?\DateTime $dueAt = null, ?string $id = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
+    public function __construct(?array $attachmentIds = null, ?string $categoryId = null, ?\DateTime $closedAt = null, ?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $metadata = null, ?string $priority = null, ?array $raw = null, ?string $source = null, ?string $sourceRef = null, ?TicketingTicketStatus $status = null, ?string $subject = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $url = null, ?string $userId = null)
     {
         $this->attachmentIds = $attachmentIds;
         $this->categoryId = $categoryId;
@@ -203,6 +214,7 @@ class TicketingTicket
         $this->description = $description;
         $this->dueAt = $dueAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->priority = $priority;
         $this->raw = $raw;
         $this->source = $source;

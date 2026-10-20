@@ -28,5 +28,6 @@ enum UpdateCrmEventQueryParamFields: string
     case ContactIds = 'contact_ids';
     case LeadIds = 'lead_ids';
     case UserId = 'user_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

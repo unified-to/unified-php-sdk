@@ -37,48 +37,32 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-10T00:12:48.016Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-30T05:23:02.919Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-10T04:05:21.178Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-08-30T17:37:18.528Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
-        currency: 'IQD',
-        description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
-        id: 'b0eef7e5-2244-4e81-a90d-f373dc9bbdd3',
+        currency: 'USD',
+        description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
+        id: 'd46548b5-8bb6-4bdd-bb06-6783d8404f7f',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '0b2d3039-9820-4722-823a-7c7c5a891f30',
+                id: 'f26cb4a4-c57d-4a16-8684-ff63d3765543',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
             ),
         ],
-        name: 'Frozen Silk Chicken',
-        pipelines: [
-            new Shared\CrmReference(
-                id: '7c100cfb-874e-46e0-9369-3616b4221824',
-                name: 'trans',
-            ),
-        ],
-        probability: 65,
+        name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
+        probability: 42,
         source: 'cubo',
-        stages: [
-            new Shared\CrmReference(
-                id: '7801128d-28b0-42c6-b9c2-3e4ef608a4be',
-                name: 'tubineus',
-            ),
-            new Shared\CrmReference(
-                id: '7943a75e-c825-4f70-b01b-e56b13f15c45',
-                name: 'adfectus',
-            ),
-        ],
         tags: [
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-11T02:47:11.040Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-11T10:00:15.170Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -236,48 +220,32 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-10T00:12:48.021Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-30T05:23:02.937Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-10T04:05:21.183Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-08-30T17:37:18.542Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
-        currency: 'IQD',
-        description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
-        id: '40d73d41-9a68-4acb-aa09-dd52fd846d6e',
+        currency: 'USD',
+        description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
+        id: '4131863a-3852-4cbc-8f4e-de24af6c1497',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '2b02adc9-5da8-4508-ba2b-89a193c68d7c',
+                id: 'b7ecc6f4-e166-4068-9b21-bf504ec40239',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
             ),
         ],
-        name: 'Frozen Silk Chicken',
-        pipelines: [
-            new Shared\CrmReference(
-                id: '0113b547-aed1-42e0-b795-27d76b7e0ccc',
-                name: 'trans',
-            ),
-        ],
-        probability: 65,
+        name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
+        probability: 42,
         source: 'cubo',
-        stages: [
-            new Shared\CrmReference(
-                id: '011e727f-9b08-41a9-aa50-4de2d4de590c',
-                name: 'tubineus',
-            ),
-            new Shared\CrmReference(
-                id: 'dd699eca-0a64-4cb7-b194-e86f197b30a9',
-                name: 'adfectus',
-            ),
-        ],
         tags: [
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-11T02:47:11.050Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-11T10:00:15.179Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -386,48 +354,32 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-10T00:12:48.021Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-30T05:23:02.937Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-10T04:05:21.183Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-08-30T17:37:18.542Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
-        currency: 'IQD',
-        description: 'Tabula cicuta sophismata comis tepidus sit cavus.',
-        id: '40d73d41-9a68-4acb-aa09-dd52fd846d6e',
+        currency: 'USD',
+        description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
+        id: '4131863a-3852-4cbc-8f4e-de24af6c1497',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '2b02adc9-5da8-4508-ba2b-89a193c68d7c',
+                id: 'b7ecc6f4-e166-4068-9b21-bf504ec40239',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
             ),
         ],
-        name: 'Frozen Silk Chicken',
-        pipelines: [
-            new Shared\CrmReference(
-                id: '0113b547-aed1-42e0-b795-27d76b7e0ccc',
-                name: 'trans',
-            ),
-        ],
-        probability: 65,
+        name: 'Stoltenberg - Funk - Luxurious Rubber Chicken',
+        probability: 42,
         source: 'cubo',
-        stages: [
-            new Shared\CrmReference(
-                id: '011e727f-9b08-41a9-aa50-4de2d4de590c',
-                name: 'tubineus',
-            ),
-            new Shared\CrmReference(
-                id: 'dd699eca-0a64-4cb7-b194-e86f197b30a9',
-                name: 'adfectus',
-            ),
-        ],
         tags: [
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-11T02:47:11.050Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-11T10:00:15.179Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',

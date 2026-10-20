@@ -21,5 +21,6 @@ enum ListPerformanceCyclesQueryParamFields: string
     case StartAt = 'start_at';
     case EndAt = 'end_at';
     case DueAt = 'due_at';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

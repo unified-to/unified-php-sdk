@@ -95,6 +95,16 @@ class FormsForm
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\FormsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\FormsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -148,6 +158,7 @@ class FormsForm
      * @param  ?bool  $hasShuffleQuestions
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\FormsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $publishedUrl
      * @param  ?array<string, mixed>  $raw
@@ -155,7 +166,7 @@ class FormsForm
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $confirmationMessage = null, ?string $confirmationRedirectUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?array $fields = null, ?bool $hasMultipleSubmissions = null, ?bool $hasProgressBar = null, ?bool $hasShuffleQuestions = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?string $publishedUrl = null, ?array $raw = null, ?float $responseCount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $confirmationMessage = null, ?string $confirmationRedirectUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?array $fields = null, ?bool $hasMultipleSubmissions = null, ?bool $hasProgressBar = null, ?bool $hasShuffleQuestions = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?string $publishedUrl = null, ?array $raw = null, ?float $responseCount = null, ?\DateTime $updatedAt = null)
     {
         $this->confirmationMessage = $confirmationMessage;
         $this->confirmationRedirectUrl = $confirmationRedirectUrl;
@@ -167,6 +178,7 @@ class FormsForm
         $this->hasShuffleQuestions = $hasShuffleQuestions;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->publishedUrl = $publishedUrl;
         $this->raw = $raw;

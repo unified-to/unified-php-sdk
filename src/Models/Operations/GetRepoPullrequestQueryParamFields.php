@@ -24,5 +24,6 @@ enum GetRepoPullrequestQueryParamFields: string
     case Labels = 'labels';
     case ClosedAt = 'closed_at';
     case CommitIds = 'commit_ids';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

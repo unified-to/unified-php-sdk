@@ -37,6 +37,16 @@ class TaskComment
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\TaskMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TaskMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $parentId
      */
@@ -101,6 +111,7 @@ class TaskComment
      * @param  ?\DateTime  $createdAt
      * @param  ?bool  $hasChildren
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TaskMetadata>  $metadata
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $taskId
@@ -110,11 +121,12 @@ class TaskComment
      * @param  ?string  $userName
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?bool $hasChildren = null, ?string $id = null, ?string $parentId = null, ?array $raw = null, ?string $taskId = null, ?string $text = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null)
+    public function __construct(?\DateTime $createdAt = null, ?bool $hasChildren = null, ?string $id = null, ?array $metadata = null, ?string $parentId = null, ?array $raw = null, ?string $taskId = null, ?string $text = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null)
     {
         $this->createdAt = $createdAt;
         $this->hasChildren = $hasChildren;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->parentId = $parentId;
         $this->raw = $raw;
         $this->taskId = $taskId;

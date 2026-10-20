@@ -45,6 +45,16 @@ class RepoOrganization
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\RepoMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\RepoMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -94,6 +104,7 @@ class RepoOrganization
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RepoMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
@@ -101,12 +112,13 @@ class RepoOrganization
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?string $avatarUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?string $webUrl = null)
+    public function __construct(?string $avatarUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?string $webUrl = null)
     {
         $this->avatarUrl = $avatarUrl;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

@@ -68,6 +68,16 @@ class SocialPost
     public ?array $media = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\SocialMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\SocialMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Engagement metrics for the post
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertySocialPostMetrics $metrics
@@ -168,6 +178,7 @@ class SocialPost
      * @param  ?string  $id
      * @param  ?string  $language
      * @param  ?array<\Unified\Unified_to\Models\Shared\SocialMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\SocialMetadata>  $metadata
      * @param  ?\Unified\Unified_to\Models\Shared\PropertySocialPostMetrics  $metrics
      * @param  ?string  $parentPostId
      * @param  ?string  $profileId
@@ -180,7 +191,7 @@ class SocialPost
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?string $body = null, ?PropertySocialPostCallToAction $callToAction = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $language = null, ?array $media = null, ?PropertySocialPostMetrics $metrics = null, ?string $parentPostId = null, ?string $profileId = null, ?array $raw = null, ?\DateTime $scheduledAt = null, ?SocialPostStatus $status = null, ?string $title = null, ?SocialPostType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?string $body = null, ?PropertySocialPostCallToAction $callToAction = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $language = null, ?array $media = null, ?array $metadata = null, ?PropertySocialPostMetrics $metrics = null, ?string $parentPostId = null, ?string $profileId = null, ?array $raw = null, ?\DateTime $scheduledAt = null, ?SocialPostStatus $status = null, ?string $title = null, ?SocialPostType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->body = $body;
         $this->callToAction = $callToAction;
@@ -188,6 +199,7 @@ class SocialPost
         $this->id = $id;
         $this->language = $language;
         $this->media = $media;
+        $this->metadata = $metadata;
         $this->metrics = $metrics;
         $this->parentPostId = $parentPostId;
         $this->profileId = $profileId;

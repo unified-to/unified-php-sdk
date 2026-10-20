@@ -35,5 +35,6 @@ enum GetClubsEventQueryParamFields: string
     case ScoreAgainst = 'score_against';
     case IsHome = 'is_home';
     case Url = 'url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

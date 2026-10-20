@@ -16,4 +16,5 @@
 | `Recommendation` | recommendation   |
 | `Comment`        | comment          |
 | `Questions`      | questions        |
+| `Metadata`       | metadata         |
 | `Raw`            | raw              |

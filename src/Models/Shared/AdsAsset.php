@@ -55,6 +55,16 @@ class AdsAsset
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $mimeType
      */
@@ -129,6 +139,7 @@ class AdsAsset
      * @param  ?float  $fileSize
      * @param  ?float  $height
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsMetadata>  $metadata
      * @param  ?string  $mimeType
      * @param  ?string  $name
      * @param  ?string  $organizationId
@@ -139,13 +150,14 @@ class AdsAsset
      * @param  ?float  $width
      * @phpstan-pure
      */
-    public function __construct(?string $content = null, ?\DateTime $createdAt = null, ?float $fileSize = null, ?float $height = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?AdsAssetType $type = null, ?\DateTime $updatedAt = null, ?string $url = null, ?float $width = null)
+    public function __construct(?string $content = null, ?\DateTime $createdAt = null, ?float $fileSize = null, ?float $height = null, ?string $id = null, ?array $metadata = null, ?string $mimeType = null, ?string $name = null, ?string $organizationId = null, ?array $raw = null, ?AdsAssetType $type = null, ?\DateTime $updatedAt = null, ?string $url = null, ?float $width = null)
     {
         $this->content = $content;
         $this->createdAt = $createdAt;
         $this->fileSize = $fileSize;
         $this->height = $height;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->mimeType = $mimeType;
         $this->name = $name;
         $this->organizationId = $organizationId;

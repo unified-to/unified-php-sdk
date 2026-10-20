@@ -25,5 +25,6 @@ enum PatchAdsInsertionorderQueryParamFields: string
     case BudgetSegments = 'budget_segments';
     case BidStrategy = 'bid_strategy';
     case Reference = 'reference';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

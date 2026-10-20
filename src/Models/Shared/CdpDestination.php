@@ -49,6 +49,16 @@ class CdpDestination
     public ?bool $isEnabled = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CdpMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CdpMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The name of the outbound activation destination
      *
      * @var ?string $name
@@ -99,6 +109,7 @@ class CdpDestination
      * @param  ?\Unified\Unified_to\Models\Shared\Direction  $direction
      * @param  ?string  $id
      * @param  ?bool  $isEnabled
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CdpMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $slug
@@ -106,12 +117,13 @@ class CdpDestination
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?Direction $direction = null, ?string $id = null, ?bool $isEnabled = null, ?string $name = null, ?array $raw = null, ?string $slug = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?Direction $direction = null, ?string $id = null, ?bool $isEnabled = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $slug = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->direction = $direction;
         $this->id = $id;
         $this->isEnabled = $isEnabled;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->slug = $slug;

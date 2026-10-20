@@ -26,5 +26,6 @@ enum GetAccountingBankfeedaccountQueryParamFields: string
     case Balance = 'balance';
     case FeedStartAt = 'feed_start_at';
     case Status = 'status';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

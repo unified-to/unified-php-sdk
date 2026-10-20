@@ -124,6 +124,16 @@ class AccountingContact
     public ?string $lastName = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -270,6 +280,7 @@ class AccountingContact
      * @param  ?bool  $isCustomer
      * @param  ?bool  $isSupplier
      * @param  ?string  $lastName
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $notes
      * @param  ?string  $organizationId
@@ -286,7 +297,7 @@ class AccountingContact
      * @param  ?string  $website
      * @phpstan-pure
      */
-    public function __construct(?array $associatedContacts = null, ?float $balanceAmount = null, ?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $lastName = null, ?string $name = null, ?string $notes = null, ?string $organizationId = null, ?array $paymentMethods = null, ?AccountingContactPaymentTerms $paymentTerms = null, ?string $paymenttermId = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $website = null, ?string $currency = 'USD')
+    public function __construct(?array $associatedContacts = null, ?float $balanceAmount = null, ?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $lastName = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $organizationId = null, ?array $paymentMethods = null, ?AccountingContactPaymentTerms $paymentTerms = null, ?string $paymenttermId = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $website = null, ?string $currency = 'USD')
     {
         $this->associatedContacts = $associatedContacts;
         $this->balanceAmount = $balanceAmount;
@@ -301,6 +312,7 @@ class AccountingContact
         $this->isCustomer = $isCustomer;
         $this->isSupplier = $isSupplier;
         $this->lastName = $lastName;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->notes = $notes;
         $this->organizationId = $organizationId;

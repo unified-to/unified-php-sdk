@@ -130,6 +130,16 @@ class ClubsEvent
     public ?string $locationName = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ClubsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The event name (or a "Home vs Away" matchup label)
      *
      * @var ?string $name
@@ -254,6 +264,7 @@ class ClubsEvent
      * @param  ?bool  $isHome
      * @param  ?string  $locationId
      * @param  ?string  $locationName
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $opponentId
      * @param  ?string  $opponentName
@@ -268,7 +279,7 @@ class ClubsEvent
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?float $awayScore = null, ?string $awayTeamName = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $durationMinutes = null, ?\DateTime $endAt = null, ?string $groupId = null, ?float $homeScore = null, ?string $homeTeamName = null, ?string $id = null, ?bool $isHome = null, ?string $locationId = null, ?string $locationName = null, ?string $name = null, ?string $opponentId = null, ?string $opponentName = null, ?array $raw = null, ?float $scoreAgainst = null, ?float $scoreFor = null, ?\DateTime $startAt = null, ?ClubsEventStatus $status = null, ?string $timezone = null, ?ClubsEventType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?float $awayScore = null, ?string $awayTeamName = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $durationMinutes = null, ?\DateTime $endAt = null, ?string $groupId = null, ?float $homeScore = null, ?string $homeTeamName = null, ?string $id = null, ?bool $isHome = null, ?string $locationId = null, ?string $locationName = null, ?array $metadata = null, ?string $name = null, ?string $opponentId = null, ?string $opponentName = null, ?array $raw = null, ?float $scoreAgainst = null, ?float $scoreFor = null, ?\DateTime $startAt = null, ?ClubsEventStatus $status = null, ?string $timezone = null, ?ClubsEventType $type = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->awayScore = $awayScore;
         $this->awayTeamName = $awayTeamName;
@@ -283,6 +294,7 @@ class ClubsEvent
         $this->isHome = $isHome;
         $this->locationId = $locationId;
         $this->locationName = $locationName;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->opponentId = $opponentId;
         $this->opponentName = $opponentName;

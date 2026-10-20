@@ -28,5 +28,6 @@ enum CreateHrisEarningQueryParamFields: string
     case PayrollId = 'payroll_id';
     case PayslipId = 'payslip_id';
     case Notes = 'notes';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

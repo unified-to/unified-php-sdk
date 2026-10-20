@@ -10,4 +10,5 @@
 | `Status`         | status           |
 | `OriginalStatus` | original_status  |
 | `Description`    | description      |
+| `Metadata`       | metadata         |
 | `Raw`            | raw              |

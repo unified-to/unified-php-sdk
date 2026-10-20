@@ -38,6 +38,16 @@ class VerificationRequest
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\VerificationMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\VerificationMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $packageId
      */
@@ -242,6 +252,7 @@ class VerificationRequest
      * @param  ?string  $candidateId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationMetadata>  $metadata
      * @param  ?string  $packageId
      * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationParameterInput>  $parameters
      * @param  ?array<\Unified\Unified_to\Models\Shared\VerificationAddress>  $profileAddresses
@@ -266,11 +277,12 @@ class VerificationRequest
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $candidateId = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $packageId = null, ?array $parameters = null, ?array $profileAddresses = null, ?string $profileDateOfBirth = null, ?array $profileEmails = null, ?VerificationRequestProfileGender $profileGender = null, ?string $profileIpAddress = null, ?string $profileName = null, ?string $profileNationalIdentifier = null, ?array $profileTelephones = null, ?array $raw = null, ?\DateTime $responseCompletedAt = null, ?array $responseDetails = null, ?array $responseDownloadUrls = null, ?\DateTime $responseExpiresAt = null, ?\DateTime $responseIssuedAt = null, ?string $responseRedirectUrl = null, ?float $responseScore = null, ?string $responseSource = null, ?VerificationRequestResponseStatus $responseStatus = null, ?string $targetUrl = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $candidateId = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?string $packageId = null, ?array $parameters = null, ?array $profileAddresses = null, ?string $profileDateOfBirth = null, ?array $profileEmails = null, ?VerificationRequestProfileGender $profileGender = null, ?string $profileIpAddress = null, ?string $profileName = null, ?string $profileNationalIdentifier = null, ?array $profileTelephones = null, ?array $raw = null, ?\DateTime $responseCompletedAt = null, ?array $responseDetails = null, ?array $responseDownloadUrls = null, ?\DateTime $responseExpiresAt = null, ?\DateTime $responseIssuedAt = null, ?string $responseRedirectUrl = null, ?float $responseScore = null, ?string $responseSource = null, ?VerificationRequestResponseStatus $responseStatus = null, ?string $targetUrl = null, ?\DateTime $updatedAt = null)
     {
         $this->candidateId = $candidateId;
         $this->createdAt = $createdAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->packageId = $packageId;
         $this->parameters = $parameters;
         $this->profileAddresses = $profileAddresses;

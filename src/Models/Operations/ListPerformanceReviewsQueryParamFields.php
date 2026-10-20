@@ -28,5 +28,6 @@ enum ListPerformanceReviewsQueryParamFields: string
     case IsAcknowledged = 'is_acknowledged';
     case SubmittedAt = 'submitted_at';
     case CompletedAt = 'completed_at';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

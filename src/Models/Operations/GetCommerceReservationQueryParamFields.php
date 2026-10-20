@@ -28,5 +28,6 @@ enum GetCommerceReservationQueryParamFields: string
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
     case Url = 'url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

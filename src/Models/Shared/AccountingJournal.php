@@ -93,6 +93,16 @@ class AccountingJournal
     public ?array $lineitems = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $organizationId
      */
@@ -198,6 +208,7 @@ class AccountingJournal
      * @param  ?string  $id
      * @param  ?bool  $isInclusiveOfTax
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingJournalLineitem>  $lineitems
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $organizationId
      * @param  ?\DateTime  $postedAt
      * @param  ?string  $projectId
@@ -211,7 +222,7 @@ class AccountingJournal
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $exchangeRate = null, ?string $id = null, ?bool $isInclusiveOfTax = null, ?array $lineitems = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?AccountingJournalStatus $status = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $attachments = null, ?array $categoryIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $exchangeRate = null, ?string $id = null, ?bool $isInclusiveOfTax = null, ?array $lineitems = null, ?array $metadata = null, ?string $organizationId = null, ?\DateTime $postedAt = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $source = null, ?AccountingJournalStatus $status = null, ?float $taxAmount = null, ?string $taxrateId = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->attachments = $attachments;
         $this->categoryIds = $categoryIds;
@@ -222,6 +233,7 @@ class AccountingJournal
         $this->id = $id;
         $this->isInclusiveOfTax = $isInclusiveOfTax;
         $this->lineitems = $lineitems;
+        $this->metadata = $metadata;
         $this->organizationId = $organizationId;
         $this->postedAt = $postedAt;
         $this->projectId = $projectId;

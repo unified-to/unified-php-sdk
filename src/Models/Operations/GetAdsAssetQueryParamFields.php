@@ -23,5 +23,6 @@ enum GetAdsAssetQueryParamFields: string
     case Width = 'width';
     case Height = 'height';
     case FileSize = 'file_size';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

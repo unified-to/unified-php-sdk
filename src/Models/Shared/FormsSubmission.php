@@ -45,6 +45,16 @@ class FormsSubmission
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\FormsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\FormsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -84,18 +94,20 @@ class FormsSubmission
      * @param  string  $formId
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\FormsMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $respondentEmail
      * @param  ?string  $respondentName
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(array $answers, string $formId, ?\DateTime $createdAt = null, ?string $id = null, ?array $raw = null, ?string $respondentEmail = null, ?string $respondentName = null, ?\DateTime $updatedAt = null)
+    public function __construct(array $answers, string $formId, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?array $raw = null, ?string $respondentEmail = null, ?string $respondentName = null, ?\DateTime $updatedAt = null)
     {
         $this->answers = $answers;
         $this->formId = $formId;
         $this->createdAt = $createdAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->respondentEmail = $respondentEmail;
         $this->respondentName = $respondentName;

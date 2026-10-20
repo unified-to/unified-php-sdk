@@ -250,6 +250,8 @@ class UnifiedTo
 
     public Embedding $embedding;
 
+    public Memory $memory;
+
     public Model $model;
 
     public Prompt $prompt;
@@ -575,6 +577,7 @@ class UnifiedTo
         $this->genai = new Genai($this->sdkConfiguration);
         $this->agent = new Agent($this->sdkConfiguration);
         $this->embedding = new Embedding($this->sdkConfiguration);
+        $this->memory = new Memory($this->sdkConfiguration);
         $this->model = new Model($this->sdkConfiguration);
         $this->prompt = new Prompt($this->sdkConfiguration);
         $this->skill = new Skill($this->sdkConfiguration);

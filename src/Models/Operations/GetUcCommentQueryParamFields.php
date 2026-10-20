@@ -17,5 +17,6 @@ enum GetUcCommentQueryParamFields: string
     case Content = 'content';
     case UserId = 'user_id';
     case CallId = 'call_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

@@ -76,6 +76,16 @@ class LmsClass
     public ?array $media = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -120,13 +130,14 @@ class LmsClass
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsReference>  $instructors
      * @param  ?array<string>  $languages
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsReference>  $students
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $courseId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?array $instructors = null, ?array $languages = null, ?array $media = null, ?string $name = null, ?array $raw = null, ?array $students = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $courseId = null, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?array $instructors = null, ?array $languages = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $students = null, ?\DateTime $updatedAt = null)
     {
         $this->courseId = $courseId;
         $this->createdAt = $createdAt;
@@ -135,6 +146,7 @@ class LmsClass
         $this->instructors = $instructors;
         $this->languages = $languages;
         $this->media = $media;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->students = $students;

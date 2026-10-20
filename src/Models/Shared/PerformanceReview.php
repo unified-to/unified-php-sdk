@@ -73,6 +73,16 @@ class PerformanceReview
     public ?bool $isAcknowledged = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PerformanceMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PerformanceMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $questions
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\PerformanceReviewQuestion> $questions
@@ -181,6 +191,7 @@ class PerformanceReview
      * @param  ?string  $cycleId
      * @param  ?string  $id
      * @param  ?bool  $isAcknowledged
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PerformanceMetadata>  $metadata
      * @param  ?array<\Unified\Unified_to\Models\Shared\PerformanceReviewQuestion>  $questions
      * @param  ?float  $rating
      * @param  ?string  $ratingDescription
@@ -194,7 +205,7 @@ class PerformanceReview
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $userId, ?string $comment = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $cycleId = null, ?string $id = null, ?bool $isAcknowledged = null, ?array $questions = null, ?float $rating = null, ?string $ratingDescription = null, ?float $ratingMaximum = null, ?array $raw = null, ?string $reviewerUserId = null, ?PerformanceReviewStatus $status = null, ?\DateTime $submittedAt = null, ?string $templateIdentifier = null, ?PerformanceReviewType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $userId, ?string $comment = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $cycleId = null, ?string $id = null, ?bool $isAcknowledged = null, ?array $metadata = null, ?array $questions = null, ?float $rating = null, ?string $ratingDescription = null, ?float $ratingMaximum = null, ?array $raw = null, ?string $reviewerUserId = null, ?PerformanceReviewStatus $status = null, ?\DateTime $submittedAt = null, ?string $templateIdentifier = null, ?PerformanceReviewType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->userId = $userId;
         $this->comment = $comment;
@@ -203,6 +214,7 @@ class PerformanceReview
         $this->cycleId = $cycleId;
         $this->id = $id;
         $this->isAcknowledged = $isAcknowledged;
+        $this->metadata = $metadata;
         $this->questions = $questions;
         $this->rating = $rating;
         $this->ratingDescription = $ratingDescription;

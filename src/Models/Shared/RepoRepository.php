@@ -52,6 +52,16 @@ class RepoRepository
     public ?bool $isPrivate = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\RepoMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\RepoMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * (reference to RepoOrganization)
      *
      * @var ?string $orgId
@@ -101,6 +111,7 @@ class RepoRepository
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isPrivate
+     * @param  ?array<\Unified\Unified_to\Models\Shared\RepoMetadata>  $metadata
      * @param  ?string  $orgId
      * @param  ?string  $owner
      * @param  ?array<string, mixed>  $raw
@@ -108,13 +119,14 @@ class RepoRepository
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isPrivate = null, ?string $orgId = null, ?string $owner = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(string $name, ?\DateTime $createdAt = null, ?string $description = null, ?string $id = null, ?bool $isPrivate = null, ?array $metadata = null, ?string $orgId = null, ?string $owner = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->name = $name;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->id = $id;
         $this->isPrivate = $isPrivate;
+        $this->metadata = $metadata;
         $this->orgId = $orgId;
         $this->owner = $owner;
         $this->raw = $raw;

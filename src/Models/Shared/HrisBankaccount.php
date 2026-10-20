@@ -116,6 +116,16 @@ class HrisBankaccount
     public ?bool $isPrimary = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * account nickname (e.g. "BoA Checking")
      *
      * @var ?string $name
@@ -202,6 +212,7 @@ class HrisBankaccount
      * @param  ?string  $iban
      * @param  ?string  $id
      * @param  ?bool  $isPrimary
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?float  $priority
      * @param  ?array<string, mixed>  $raw
@@ -212,7 +223,7 @@ class HrisBankaccount
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $accountNumber = null, ?string $accountNumberLast4 = null, ?HrisBankaccountAccountType $accountType = null, ?string $bankName = null, ?string $bic = null, ?string $companyId = null, ?string $countryCode = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $iban = null, ?string $id = null, ?bool $isPrimary = null, ?string $name = null, ?float $priority = null, ?array $raw = null, ?string $routingNumber = null, ?float $splitAmount = null, ?SplitType $splitType = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $accountNumber = null, ?string $accountNumberLast4 = null, ?HrisBankaccountAccountType $accountType = null, ?string $bankName = null, ?string $bic = null, ?string $companyId = null, ?string $countryCode = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $iban = null, ?string $id = null, ?bool $isPrimary = null, ?array $metadata = null, ?string $name = null, ?float $priority = null, ?array $raw = null, ?string $routingNumber = null, ?float $splitAmount = null, ?SplitType $splitType = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->accountNumber = $accountNumber;
         $this->accountNumberLast4 = $accountNumberLast4;
@@ -226,6 +237,7 @@ class HrisBankaccount
         $this->iban = $iban;
         $this->id = $id;
         $this->isPrimary = $isPrimary;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->priority = $priority;
         $this->raw = $raw;

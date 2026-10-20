@@ -29,5 +29,6 @@ enum GetStorageFileQueryParamFields: string
     case WebUrl = 'web_url';
     case References = 'references';
     case Tags = 'tags';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

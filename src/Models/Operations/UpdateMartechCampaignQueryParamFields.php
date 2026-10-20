@@ -24,5 +24,6 @@ enum UpdateMartechCampaignQueryParamFields: string
     case FromEmail = 'from_email';
     case ReplyToEmail = 'reply_to_email';
     case SendAt = 'send_at';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

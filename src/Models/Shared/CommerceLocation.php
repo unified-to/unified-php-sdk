@@ -123,6 +123,16 @@ class CommerceLocation
     public ?array $media = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CommerceMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -213,6 +223,7 @@ class CommerceLocation
      * @param  ?\Unified\Unified_to\Models\Shared\LocationType  $locationType
      * @param  ?float  $longitude
      * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceItemMedia>  $media
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CommerceMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?string  $priceLevel
@@ -224,7 +235,7 @@ class CommerceLocation
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?PropertyCommerceLocationAddress $address = null, ?array $categories = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?string $imageUrl = null, ?bool $isActive = null, ?string $languageLocale = null, ?float $latitude = null, ?LocationType $locationType = null, ?float $longitude = null, ?array $media = null, ?string $name = null, ?string $parentId = null, ?string $priceLevel = null, ?float $rating = null, ?array $raw = null, ?float $reviewCount = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?PropertyCommerceLocationAddress $address = null, ?array $categories = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?string $imageUrl = null, ?bool $isActive = null, ?string $languageLocale = null, ?float $latitude = null, ?LocationType $locationType = null, ?float $longitude = null, ?array $media = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?string $priceLevel = null, ?float $rating = null, ?array $raw = null, ?float $reviewCount = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->address = $address;
         $this->categories = $categories;
@@ -239,6 +250,7 @@ class CommerceLocation
         $this->locationType = $locationType;
         $this->longitude = $longitude;
         $this->media = $media;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->priceLevel = $priceLevel;

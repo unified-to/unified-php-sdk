@@ -31,6 +31,7 @@ enum UpdateCommerceLocationQueryParamFields: string
     case ImageUrl = 'image_url';
     case WebUrl = 'web_url';
     case Media = 'media';
+    case Metadata = 'metadata';
     case Raw = 'raw';
     case Categories = 'categories';
 }

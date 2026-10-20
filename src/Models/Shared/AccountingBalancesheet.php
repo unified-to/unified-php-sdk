@@ -76,6 +76,16 @@ class AccountingBalancesheet
     public ?array $liabilities = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -127,6 +137,7 @@ class AccountingBalancesheet
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>  $equity
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingBalancesheetItem>  $liabilities
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?float  $netAssetsAmount
      * @param  ?array<string, mixed>  $raw
@@ -134,7 +145,7 @@ class AccountingBalancesheet
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $assets = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $equity = null, ?string $id = null, ?array $liabilities = null, ?string $name = null, ?float $netAssetsAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $assets = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $equity = null, ?string $id = null, ?array $liabilities = null, ?array $metadata = null, ?string $name = null, ?float $netAssetsAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->assets = $assets;
         $this->createdAt = $createdAt;
@@ -143,6 +154,7 @@ class AccountingBalancesheet
         $this->equity = $equity;
         $this->id = $id;
         $this->liabilities = $liabilities;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->netAssetsAmount = $netAssetsAmount;
         $this->raw = $raw;

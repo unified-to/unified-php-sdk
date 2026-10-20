@@ -19,5 +19,6 @@ enum UpdateCdpDestinationQueryParamFields: string
     case Type = 'type';
     case Direction = 'direction';
     case IsEnabled = 'is_enabled';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

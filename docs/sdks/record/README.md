@@ -40,9 +40,10 @@ $request = new Operations\CreateDatastoreRecordRequest(
         fields: [
 
         ],
-        id: '769bd64e-544c-4117-9b1d-002307bb86db',
+        id: '6e9ad9cd-7874-4abc-8ee4-555f7b0b8540',
+        metadata: [],
         rowNumber: 33,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-03T21:37:03.566Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T09:11:34.647Z'),
     ),
     connectionId: '<id>',
 );
@@ -202,9 +203,10 @@ $request = new Operations\PatchDatastoreRecordRequest(
         fields: [
 
         ],
-        id: '45ec4bcc-e989-4f0f-8eb0-2224e7516b0f',
+        id: '0612b8e9-4eaf-4b27-8222-8700570206a8',
+        metadata: [],
         rowNumber: 33,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-03T21:37:03.576Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T09:11:34.656Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -315,9 +317,10 @@ $request = new Operations\UpdateDatastoreRecordRequest(
         fields: [
 
         ],
-        id: '45ec4bcc-e989-4f0f-8eb0-2224e7516b0f',
+        id: '0612b8e9-4eaf-4b27-8222-8700570206a8',
+        metadata: [],
         rowNumber: 33,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-03T21:37:03.576Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T09:11:34.656Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

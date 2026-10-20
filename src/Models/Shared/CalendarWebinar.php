@@ -121,6 +121,16 @@ class CalendarWebinar
     public ?string $joinUrl = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CalendarMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CalendarMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $notes
      */
@@ -315,6 +325,7 @@ class CalendarWebinar
      * @param  ?bool  $isEnabled
      * @param  ?bool  $isWebcast
      * @param  ?string  $joinUrl
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarMetadata>  $metadata
      * @param  ?string  $notes
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyCalendarWebinarOrganizer  $organizer
      * @param  ?string  $panelistPassword
@@ -338,7 +349,7 @@ class CalendarWebinar
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?string $calendarId = null, ?float $capacity = null, ?array $conference = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?bool $hasPolls = null, ?bool $hasQa = null, ?bool $hasRecording = null, ?string $id = null, ?bool $isAutoApprove = null, ?bool $isEnabled = null, ?bool $isWebcast = null, ?string $joinUrl = null, ?string $notes = null, ?PropertyCalendarWebinarOrganizer $organizer = null, ?string $panelistPassword = null, ?array $panelists = null, ?array $raw = null, ?array $recurrence = null, ?string $registrantPassword = null, ?array $registrants = null, ?bool $requireAddress = null, ?bool $requireCompany = null, ?bool $requireEmail = null, ?bool $requireFirstName = null, ?bool $requireJobTitle = null, ?bool $requireLastName = null, ?bool $requirePhone = null, ?\DateTime $startAt = null, ?CalendarWebinarStatus $status = null, ?string $subject = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?string $calendarId = null, ?float $capacity = null, ?array $conference = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?bool $hasPolls = null, ?bool $hasQa = null, ?bool $hasRecording = null, ?string $id = null, ?bool $isAutoApprove = null, ?bool $isEnabled = null, ?bool $isWebcast = null, ?string $joinUrl = null, ?array $metadata = null, ?string $notes = null, ?PropertyCalendarWebinarOrganizer $organizer = null, ?string $panelistPassword = null, ?array $panelists = null, ?array $raw = null, ?array $recurrence = null, ?string $registrantPassword = null, ?array $registrants = null, ?bool $requireAddress = null, ?bool $requireCompany = null, ?bool $requireEmail = null, ?bool $requireFirstName = null, ?bool $requireJobTitle = null, ?bool $requireLastName = null, ?bool $requirePhone = null, ?\DateTime $startAt = null, ?CalendarWebinarStatus $status = null, ?string $subject = null, ?string $timezone = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->calendarId = $calendarId;
         $this->capacity = $capacity;
@@ -353,6 +364,7 @@ class CalendarWebinar
         $this->isEnabled = $isEnabled;
         $this->isWebcast = $isWebcast;
         $this->joinUrl = $joinUrl;
+        $this->metadata = $metadata;
         $this->notes = $notes;
         $this->organizer = $organizer;
         $this->panelistPassword = $panelistPassword;

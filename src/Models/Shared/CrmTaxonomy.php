@@ -27,6 +27,16 @@ class CrmTaxonomy
     public ?string $label = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CrmMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CrmMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -56,15 +66,17 @@ class CrmTaxonomy
     /**
      * @param  string  $id
      * @param  ?string  $label
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CrmMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\CrmTaxonomyType  $type
      * @phpstan-pure
      */
-    public function __construct(string $id, ?string $label = null, ?string $name = null, ?array $raw = null, ?CrmTaxonomyType $type = null)
+    public function __construct(string $id, ?string $label = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?CrmTaxonomyType $type = null)
     {
         $this->id = $id;
         $this->label = $label;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->type = $type;

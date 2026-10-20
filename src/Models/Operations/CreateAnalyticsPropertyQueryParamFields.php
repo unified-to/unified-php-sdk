@@ -19,5 +19,6 @@ enum CreateAnalyticsPropertyQueryParamFields: string
     case Currency = 'currency';
     case Industry = 'industry';
     case ParentId = 'parent_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

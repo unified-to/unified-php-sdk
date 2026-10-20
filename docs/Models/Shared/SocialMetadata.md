@@ -1,0 +1,13 @@
+# SocialMetadata
+
+
+## Fields
+
+| Field                                                                          | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `extraData`                                                                    | [array\|string\|float\|bool\|null](../../Models/Shared/SocialMetadataExtraData.md) | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `format`                                                                       | [?Shared\SocialMetadataFormat](../../Models/Shared/SocialMetadataFormat.md)    | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `id`                                                                           | *?string*                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `namespace`                                                                    | *?string*                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `slug`                                                                         | *?string*                                                                      | :heavy_minus_sign:                                                             | N/A                                                                            |
+| `value`                                                                        | [array\|string\|float\|bool\|null](../../Models/Shared/SocialMetadataValue.md) | :heavy_minus_sign:                                                             | N/A                                                                            |

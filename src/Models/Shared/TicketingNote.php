@@ -45,6 +45,16 @@ class TicketingNote
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\TicketingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\TicketingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -85,18 +95,20 @@ class TicketingNote
      * @param  ?string  $customerId
      * @param  ?string  $description
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\TicketingMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?string  $ticketId
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?array $raw = null, ?string $ticketId = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $customerId = null, ?string $description = null, ?string $id = null, ?array $metadata = null, ?array $raw = null, ?string $ticketId = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->createdAt = $createdAt;
         $this->customerId = $customerId;
         $this->description = $description;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->ticketId = $ticketId;
         $this->updatedAt = $updatedAt;

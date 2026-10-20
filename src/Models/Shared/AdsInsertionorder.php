@@ -84,6 +84,16 @@ class AdsInsertionorder
     public ?PropertyAdsInsertionorderKpi $kpi = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -154,6 +164,7 @@ class AdsInsertionorder
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderFrequencyCap  $frequencyCap
      * @param  ?string  $id
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderKpi  $kpi
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $organizationId
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsInsertionorderPacing  $pacing
@@ -163,7 +174,7 @@ class AdsInsertionorder
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsInsertionorderBidStrategy $bidStrategy = null, ?array $budgetSegments = null, ?AdsInsertionorderBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?PropertyAdsInsertionorderFrequencyCap $frequencyCap = null, ?string $id = null, ?PropertyAdsInsertionorderKpi $kpi = null, ?string $name = null, ?string $organizationId = null, ?PropertyAdsInsertionorderPacing $pacing = null, ?array $raw = null, ?string $reference = null, ?AdsInsertionorderStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyAdsInsertionorderBidStrategy $bidStrategy = null, ?array $budgetSegments = null, ?AdsInsertionorderBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?PropertyAdsInsertionorderFrequencyCap $frequencyCap = null, ?string $id = null, ?PropertyAdsInsertionorderKpi $kpi = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?PropertyAdsInsertionorderPacing $pacing = null, ?array $raw = null, ?string $reference = null, ?AdsInsertionorderStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->bidStrategy = $bidStrategy;
         $this->budgetSegments = $budgetSegments;
@@ -173,6 +184,7 @@ class AdsInsertionorder
         $this->frequencyCap = $frequencyCap;
         $this->id = $id;
         $this->kpi = $kpi;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->organizationId = $organizationId;
         $this->pacing = $pacing;

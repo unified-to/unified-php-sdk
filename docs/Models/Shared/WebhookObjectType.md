@@ -113,6 +113,7 @@ The object to return (eg. CRM "contact")
 | `GenaiAgent`                    | genai_agent                     |
 | `GenaiOrganization`             | genai_organization              |
 | `GenaiSkill`                    | genai_skill                     |
+| `GenaiMemory`                   | genai_memory                    |
 | `MessagingMessage`              | messaging_message               |
 | `MessagingChannel`              | messaging_channel               |
 | `MessagingEvent`                | messaging_event                 |

@@ -24,5 +24,6 @@ enum UpdateHrisGroupQueryParamFields: string
     case CompanyId = 'company_id';
     case PayFrequency = 'pay_frequency';
     case NextPaidAt = 'next_paid_at';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

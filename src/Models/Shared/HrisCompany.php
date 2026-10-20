@@ -46,6 +46,16 @@ class HrisCompany
     public ?string $legalName = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -77,17 +87,19 @@ class HrisCompany
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
      * @param  ?string  $legalName
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $legalName = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $legalName = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->createdAt = $createdAt;
         $this->id = $id;
         $this->legalName = $legalName;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->updatedAt = $updatedAt;

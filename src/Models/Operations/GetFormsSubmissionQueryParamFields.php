@@ -18,5 +18,6 @@ enum GetFormsSubmissionQueryParamFields: string
     case RespondentEmail = 'respondent_email';
     case RespondentName = 'respondent_name';
     case Answers = 'answers';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

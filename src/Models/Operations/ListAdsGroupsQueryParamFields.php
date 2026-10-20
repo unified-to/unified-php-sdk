@@ -42,5 +42,6 @@ enum ListAdsGroupsQueryParamFields: string
     case Promoted = 'promoted';
     case LanguageLocale = 'language_locale';
     case CreativeSelection = 'creative_selection';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

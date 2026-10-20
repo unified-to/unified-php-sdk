@@ -16,5 +16,6 @@ enum GetAtsApplicationstatusQueryParamFields: string
     case Status = 'status';
     case OriginalStatus = 'original_status';
     case Description = 'description';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

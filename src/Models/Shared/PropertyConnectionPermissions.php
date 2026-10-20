@@ -204,6 +204,8 @@ enum PropertyConnectionPermissions: string
     case GenaiOrganizationWrite = 'genai_organization_write';
     case GenaiSkillRead = 'genai_skill_read';
     case GenaiSkillWrite = 'genai_skill_write';
+    case GenaiMemoryRead = 'genai_memory_read';
+    case GenaiMemoryWrite = 'genai_memory_write';
     case MessagingMessageRead = 'messaging_message_read';
     case MessagingMessageWrite = 'messaging_message_write';
     case MessagingChannelRead = 'messaging_channel_read';

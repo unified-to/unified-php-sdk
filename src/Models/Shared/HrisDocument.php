@@ -64,6 +64,16 @@ class HrisDocument
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * $raw
      *
      * @var ?array<string, mixed> $raw
@@ -108,13 +118,14 @@ class HrisDocument
      * @param  ?string  $documentUrl
      * @param  ?string  $filename
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?array<string, mixed>  $raw
      * @param  ?\Unified\Unified_to\Models\Shared\HrisDocumentType  $type
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $documentData = null, ?string $documentUrl = null, ?string $filename = null, ?string $id = null, ?array $raw = null, ?HrisDocumentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $companyId = null, ?\DateTime $createdAt = null, ?string $documentData = null, ?string $documentUrl = null, ?string $filename = null, ?string $id = null, ?array $metadata = null, ?array $raw = null, ?HrisDocumentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;
@@ -122,6 +133,7 @@ class HrisDocument
         $this->documentUrl = $documentUrl;
         $this->filename = $filename;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->raw = $raw;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

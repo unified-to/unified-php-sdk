@@ -21,5 +21,6 @@ enum UpdateDatastoreTableQueryParamFields: string
     case Relationships = 'relationships';
     case WebUrl = 'web_url';
     case ParentId = 'parent_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

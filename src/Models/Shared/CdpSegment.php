@@ -67,6 +67,16 @@ class CdpSegment
     public ?bool $isActive = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CdpMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CdpMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The name of the segment/audience
      *
      * @var ?string $name
@@ -138,6 +148,7 @@ class CdpSegment
      * @param  ?string  $description
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CdpMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $size
@@ -147,7 +158,7 @@ class CdpSegment
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?ComputeMode $computeMode = null, ?\DateTime $createdAt = null, ?string $definition = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?string $name = null, ?array $raw = null, ?float $size = null, ?string $slug = null, ?string $sourceId = null, ?CdpSegmentType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?ComputeMode $computeMode = null, ?\DateTime $createdAt = null, ?string $definition = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?float $size = null, ?string $slug = null, ?string $sourceId = null, ?CdpSegmentType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->computeMode = $computeMode;
         $this->createdAt = $createdAt;
@@ -155,6 +166,7 @@ class CdpSegment
         $this->description = $description;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->size = $size;

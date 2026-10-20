@@ -101,6 +101,16 @@ class AccountingTransaction
     public ?string $memo = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $organizationId
      */
@@ -233,6 +243,7 @@ class AccountingTransaction
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingTransactionLineItem>  $lineitems
      * @param  ?string  $memo
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $organizationId
      * @param  ?string  $paymentMethod
      * @param  ?string  $paymentTerms
@@ -249,7 +260,7 @@ class AccountingTransaction
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?float $exchangeRate = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?string $organizationId = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?AccountingTransactionStatus $status = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $transactionAt = null, ?string $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?array $categoryIds = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $customerMessage = null, ?float $exchangeRate = null, ?string $id = null, ?array $lineitems = null, ?string $memo = null, ?array $metadata = null, ?string $organizationId = null, ?string $paymentMethod = null, ?string $paymentTerms = null, ?string $projectId = null, ?array $raw = null, ?string $reference = null, ?string $splitAccountId = null, ?AccountingTransactionStatus $status = null, ?float $subTotalAmount = null, ?float $taxAmount = null, ?float $totalAmount = null, ?\DateTime $transactionAt = null, ?string $type = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->categoryIds = $categoryIds;
@@ -261,6 +272,7 @@ class AccountingTransaction
         $this->id = $id;
         $this->lineitems = $lineitems;
         $this->memo = $memo;
+        $this->metadata = $metadata;
         $this->organizationId = $organizationId;
         $this->paymentMethod = $paymentMethod;
         $this->paymentTerms = $paymentTerms;

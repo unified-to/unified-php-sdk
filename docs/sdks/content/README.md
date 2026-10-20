@@ -43,14 +43,8 @@ $request = new Operations\CreateLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-        id: 'e9f9467d-58ff-4f11-8eac-18ab24441839',
-        instructors: [
-            new Shared\LmsReference(
-                id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
-                name: 'Winston Ferry',
-            ),
-        ],
+        id: '045d27ee-367e-4046-b2a4-d08f80e83e66',
+        instructors: [],
         isActive: true,
         languages: [
             'despecto',
@@ -58,14 +52,14 @@ $request = new Operations\CreateLmsContentRequest(
         ],
         localizations: [
             new Shared\LmsContentLocalization(
-                description: 'Numquam.',
+                description: 'Acervus.',
                 language: 'es',
-                name: 'validus',
+                name: 'talis',
             ),
             new Shared\LmsContentLocalization(
-                description: 'Callide.',
-                language: 'fr',
-                name: 'crux',
+                description: 'Ratione.',
+                language: 'es',
+                name: 'sint',
             ),
         ],
         media: [
@@ -106,10 +100,11 @@ $request = new Operations\CreateLmsContentRequest(
                 url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
             ),
         ],
+        metadata: [],
         name: 'ut',
-        providerName: 'Berge LLC',
-        publishedAt: Utils\Utils::parseDateTime('2023-11-08T11:32:09.080Z'),
-        shortDescription: 'Commemoro.',
+        providerName: 'Bins LLC',
+        publishedAt: Utils\Utils::parseDateTime('2022-09-02T21:17:26.168Z'),
+        shortDescription: 'Caritas.',
         skills: [
             'trucido',
         ],
@@ -123,7 +118,7 @@ $request = new Operations\CreateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-03T13:04:57.483Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-03T19:09:09.258Z'),
     ),
     connectionId: '<id>',
 );
@@ -286,14 +281,8 @@ $request = new Operations\PatchLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-        id: '75414d09-1ca8-4206-8e2c-58934d61da04',
-        instructors: [
-            new Shared\LmsReference(
-                id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
-                name: 'Winston Ferry',
-            ),
-        ],
+        id: 'dec36b0c-cd07-4daf-96a6-5eeea92243c2',
+        instructors: [],
         isActive: true,
         languages: [
             'despecto',
@@ -301,14 +290,14 @@ $request = new Operations\PatchLmsContentRequest(
         ],
         localizations: [
             new Shared\LmsContentLocalization(
-                description: 'Numquam.',
+                description: 'Acervus.',
                 language: 'es',
-                name: 'validus',
+                name: 'talis',
             ),
             new Shared\LmsContentLocalization(
-                description: 'Callide.',
-                language: 'fr',
-                name: 'crux',
+                description: 'Ratione.',
+                language: 'es',
+                name: 'sint',
             ),
         ],
         media: [
@@ -349,10 +338,11 @@ $request = new Operations\PatchLmsContentRequest(
                 url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
             ),
         ],
+        metadata: [],
         name: 'ut',
-        providerName: 'Berge LLC',
-        publishedAt: Utils\Utils::parseDateTime('2023-11-08T11:32:09.080Z'),
-        shortDescription: 'Commemoro.',
+        providerName: 'Bins LLC',
+        publishedAt: Utils\Utils::parseDateTime('2022-09-02T21:17:26.177Z'),
+        shortDescription: 'Caritas.',
         skills: [
             'trucido',
         ],
@@ -366,7 +356,7 @@ $request = new Operations\PatchLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-03T13:04:57.493Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-03T19:09:09.268Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -480,14 +470,8 @@ $request = new Operations\UpdateLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        externalReference: '0d230e31-a9c4-4a35-a5b9-9168e91ffff5',
-        id: '75414d09-1ca8-4206-8e2c-58934d61da04',
-        instructors: [
-            new Shared\LmsReference(
-                id: '91a23b20-a7a3-4323-9548-0897c09eb49e',
-                name: 'Winston Ferry',
-            ),
-        ],
+        id: 'dec36b0c-cd07-4daf-96a6-5eeea92243c2',
+        instructors: [],
         isActive: true,
         languages: [
             'despecto',
@@ -495,14 +479,14 @@ $request = new Operations\UpdateLmsContentRequest(
         ],
         localizations: [
             new Shared\LmsContentLocalization(
-                description: 'Numquam.',
+                description: 'Acervus.',
                 language: 'es',
-                name: 'validus',
+                name: 'talis',
             ),
             new Shared\LmsContentLocalization(
-                description: 'Callide.',
-                language: 'fr',
-                name: 'crux',
+                description: 'Ratione.',
+                language: 'es',
+                name: 'sint',
             ),
         ],
         media: [
@@ -543,10 +527,11 @@ $request = new Operations\UpdateLmsContentRequest(
                 url: 'https://loremflickr.com/3927/2086?lock=5199784913821481',
             ),
         ],
+        metadata: [],
         name: 'ut',
-        providerName: 'Berge LLC',
-        publishedAt: Utils\Utils::parseDateTime('2023-11-08T11:32:09.080Z'),
-        shortDescription: 'Commemoro.',
+        providerName: 'Bins LLC',
+        publishedAt: Utils\Utils::parseDateTime('2022-09-02T21:17:26.177Z'),
+        shortDescription: 'Caritas.',
         skills: [
             'trucido',
         ],
@@ -560,7 +545,7 @@ $request = new Operations\UpdateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-03T13:04:57.493Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-03T19:09:09.268Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

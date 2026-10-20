@@ -76,6 +76,16 @@ class ComputeUsage
     public ?string $instanceId = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ComputeMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Amount consumed, in unit
      *
      * @var ?float $quantity
@@ -130,6 +140,7 @@ class ComputeUsage
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
      * @param  ?string  $instanceId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ComputeMetadata>  $metadata
      * @param  ?float  $quantity
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
@@ -137,7 +148,7 @@ class ComputeUsage
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?ComputeUsageCategory $category = null, ?float $costAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?string $id = null, ?string $instanceId = null, ?float $quantity = null, ?array $raw = null, ?\DateTime $startAt = null, ?Unit $unit = null, ?\DateTime $updatedAt = null)
+    public function __construct(?ComputeUsageCategory $category = null, ?float $costAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?string $id = null, ?string $instanceId = null, ?array $metadata = null, ?float $quantity = null, ?array $raw = null, ?\DateTime $startAt = null, ?Unit $unit = null, ?\DateTime $updatedAt = null)
     {
         $this->category = $category;
         $this->costAmount = $costAmount;
@@ -146,6 +157,7 @@ class ComputeUsage
         $this->endAt = $endAt;
         $this->id = $id;
         $this->instanceId = $instanceId;
+        $this->metadata = $metadata;
         $this->quantity = $quantity;
         $this->raw = $raw;
         $this->startAt = $startAt;

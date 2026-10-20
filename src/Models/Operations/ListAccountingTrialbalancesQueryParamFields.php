@@ -21,5 +21,6 @@ enum ListAccountingTrialbalancesQueryParamFields: string
     case TotalDebitAmount = 'total_debit_amount';
     case TotalCreditAmount = 'total_credit_amount';
     case SubItems = 'sub_items';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

@@ -152,6 +152,16 @@ class ClubsGroup
     public ?MembershipStatus $membershipStatus = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\ClubsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * The group's name
      *
      * @var ?string $name
@@ -232,6 +242,7 @@ class ClubsGroup
      * @param  ?bool  $isVerified
      * @param  ?float  $memberCount
      * @param  ?\Unified\Unified_to\Models\Shared\MembershipStatus  $membershipStatus
+     * @param  ?array<\Unified\Unified_to\Models\Shared\ClubsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?float  $postCount
      * @param  ?string  $profileImageUrl
@@ -241,7 +252,7 @@ class ClubsGroup
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?array $activityTypes = null, ?PropertyClubsGroupAddress $address = null, ?string $coverImageUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $followingCount = null, ?GroupType $groupType = null, ?string $id = null, ?bool $isAdmin = null, ?bool $isFeatured = null, ?bool $isOwner = null, ?bool $isPrivate = null, ?bool $isVerified = null, ?float $memberCount = null, ?MembershipStatus $membershipStatus = null, ?string $name = null, ?float $postCount = null, ?string $profileImageUrl = null, ?array $raw = null, ?SportType $sportType = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?array $activityTypes = null, ?PropertyClubsGroupAddress $address = null, ?string $coverImageUrl = null, ?\DateTime $createdAt = null, ?string $description = null, ?float $followingCount = null, ?GroupType $groupType = null, ?string $id = null, ?bool $isAdmin = null, ?bool $isFeatured = null, ?bool $isOwner = null, ?bool $isPrivate = null, ?bool $isVerified = null, ?float $memberCount = null, ?MembershipStatus $membershipStatus = null, ?array $metadata = null, ?string $name = null, ?float $postCount = null, ?string $profileImageUrl = null, ?array $raw = null, ?SportType $sportType = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->activityTypes = $activityTypes;
         $this->address = $address;
@@ -258,6 +269,7 @@ class ClubsGroup
         $this->isVerified = $isVerified;
         $this->memberCount = $memberCount;
         $this->membershipStatus = $membershipStatus;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->postCount = $postCount;
         $this->profileImageUrl = $profileImageUrl;

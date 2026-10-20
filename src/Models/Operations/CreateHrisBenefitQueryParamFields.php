@@ -26,5 +26,6 @@ enum CreateHrisBenefitQueryParamFields: string
     case EmployerContributionMaxAmount = 'employer_contribution_max_amount';
     case CoverageLevel = 'coverage_level';
     case Currency = 'currency';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

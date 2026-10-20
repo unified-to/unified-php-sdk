@@ -113,6 +113,16 @@ class HrisDevice
     public ?string $manufacturer = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * device model
      *
      * @var ?string $model
@@ -197,6 +207,7 @@ class HrisDevice
      * @param  ?bool  $isMissing
      * @param  ?string  $locationId
      * @param  ?string  $manufacturer
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $model
      * @param  ?string  $name
      * @param  ?string  $os
@@ -207,7 +218,7 @@ class HrisDevice
      * @param  ?string  $version
      * @phpstan-pure
      */
-    public function __construct(?array $adminUserIds = null, ?string $assetTag = null, ?\DateTime $createdAt = null, ?bool $hasAntivirus = null, ?bool $hasFirewall = null, ?bool $hasHdEncrypted = null, ?bool $hasPasswordManager = null, ?bool $hasScreenlock = null, ?string $id = null, ?bool $isMissing = null, ?string $locationId = null, ?string $manufacturer = null, ?string $model = null, ?string $name = null, ?string $os = null, ?string $osVersion = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?string $version = null)
+    public function __construct(?array $adminUserIds = null, ?string $assetTag = null, ?\DateTime $createdAt = null, ?bool $hasAntivirus = null, ?bool $hasFirewall = null, ?bool $hasHdEncrypted = null, ?bool $hasPasswordManager = null, ?bool $hasScreenlock = null, ?string $id = null, ?bool $isMissing = null, ?string $locationId = null, ?string $manufacturer = null, ?array $metadata = null, ?string $model = null, ?string $name = null, ?string $os = null, ?string $osVersion = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?string $version = null)
     {
         $this->adminUserIds = $adminUserIds;
         $this->assetTag = $assetTag;
@@ -221,6 +232,7 @@ class HrisDevice
         $this->isMissing = $isMissing;
         $this->locationId = $locationId;
         $this->manufacturer = $manufacturer;
+        $this->metadata = $metadata;
         $this->model = $model;
         $this->name = $name;
         $this->os = $os;

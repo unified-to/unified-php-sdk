@@ -15,4 +15,5 @@
 | `Languages`   | languages     |
 | `Instructors` | instructors   |
 | `Students`    | students      |
+| `Metadata`    | metadata      |
 | `Raw`         | raw           |

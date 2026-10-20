@@ -63,6 +63,16 @@ class LmsInstructor
     public ?string $lastName = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\LmsMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\LmsMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -114,6 +124,7 @@ class LmsInstructor
      * @param  ?string  $id
      * @param  ?string  $imageUrl
      * @param  ?string  $lastName
+     * @param  ?array<\Unified\Unified_to\Models\Shared\LmsMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<\Unified\Unified_to\Models\Shared\LmsTelephone>  $telephones
@@ -121,7 +132,7 @@ class LmsInstructor
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->createdAt = $createdAt;
         $this->emails = $emails;
@@ -129,6 +140,7 @@ class LmsInstructor
         $this->id = $id;
         $this->imageUrl = $imageUrl;
         $this->lastName = $lastName;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
         $this->telephones = $telephones;

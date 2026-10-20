@@ -25,5 +25,6 @@ enum ListAccountingAccountsQueryParamFields: string
     case ParentId = 'parent_id';
     case Taxonomy = 'taxonomy';
     case OrganizationId = 'organization_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

@@ -38,7 +38,7 @@ $request = new Operations\CreateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: '3f12dc3e-6b4f-4f93-aea1-ddb7430170a3',
+        id: 'b407555e-028a-479b-aa8a-56b3dc0fa6b2',
         instructors: [],
         languages: [
             'in',
@@ -57,9 +57,10 @@ $request = new Operations\CreateLmsClassRequest(
                 url: 'https://loremflickr.com/487/921?lock=5127962071241632',
             ),
         ],
+        metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-02T06:29:35.084Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-02T21:46:27.892Z'),
     ),
     connectionId: '<id>',
 );
@@ -217,7 +218,7 @@ $request = new Operations\PatchLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: '3200b23a-5749-4f5b-9da5-55c3ea7487b2',
+        id: '9120c9fd-d152-43aa-b5ae-732078cef7b4',
         instructors: [],
         languages: [
             'in',
@@ -236,9 +237,10 @@ $request = new Operations\PatchLmsClassRequest(
                 url: 'https://loremflickr.com/487/921?lock=5127962071241632',
             ),
         ],
+        metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-02T06:29:35.101Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-02T21:46:27.904Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -347,7 +349,7 @@ $request = new Operations\UpdateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: '3200b23a-5749-4f5b-9da5-55c3ea7487b2',
+        id: '9120c9fd-d152-43aa-b5ae-732078cef7b4',
         instructors: [],
         languages: [
             'in',
@@ -366,9 +368,10 @@ $request = new Operations\UpdateLmsClassRequest(
                 url: 'https://loremflickr.com/487/921?lock=5127962071241632',
             ),
         ],
+        metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-02T06:29:35.101Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-02T21:46:27.904Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

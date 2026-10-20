@@ -16,5 +16,6 @@ enum PatchRepoBranchQueryParamFields: string
     case UpdatedAt = 'updated_at';
     case Name = 'name';
     case RepoId = 'repo_id';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

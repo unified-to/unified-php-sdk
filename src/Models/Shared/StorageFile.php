@@ -63,6 +63,16 @@ class StorageFile
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\StorageMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\StorageMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $mimeType
      */
@@ -184,6 +194,7 @@ class StorageFile
      * @param  ?string  $downloadUrl
      * @param  ?string  $hash
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\StorageMetadata>  $metadata
      * @param  ?string  $mimeType
      * @param  ?string  $name
      * @param  ?string  $parentId
@@ -199,7 +210,7 @@ class StorageFile
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?array $references = null, ?float $size = null, ?array $tags = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $version = null, ?string $webUrl = null)
+    public function __construct(?\DateTime $createdAt = null, ?string $data = null, ?string $description = null, ?string $downloadUrl = null, ?string $hash = null, ?string $id = null, ?array $metadata = null, ?string $mimeType = null, ?string $name = null, ?string $parentId = null, ?array $permissions = null, ?array $raw = null, ?array $references = null, ?float $size = null, ?array $tags = null, ?StorageFileType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $version = null, ?string $webUrl = null)
     {
         $this->createdAt = $createdAt;
         $this->data = $data;
@@ -207,6 +218,7 @@ class StorageFile
         $this->downloadUrl = $downloadUrl;
         $this->hash = $hash;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->mimeType = $mimeType;
         $this->name = $name;
         $this->parentId = $parentId;

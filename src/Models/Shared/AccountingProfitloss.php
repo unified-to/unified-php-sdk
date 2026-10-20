@@ -110,6 +110,16 @@ class AccountingProfitloss
     public ?float $incomeTotalAmount = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AccountingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -165,6 +175,7 @@ class AccountingProfitloss
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingProfitlossSection>  $incomeSections
      * @param  ?float  $incomeTotalAmount
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?float  $netIncomeAmount
      * @param  ?array<string, mixed>  $raw
@@ -172,7 +183,7 @@ class AccountingProfitloss
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $categoryIds = null, ?array $costOfGoodsSoldSections = null, ?float $costOfGoodsSoldTotalAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $expensesSections = null, ?float $expensesTotalAmount = null, ?string $id = null, ?array $incomeSections = null, ?float $incomeTotalAmount = null, ?string $name = null, ?float $netIncomeAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $categoryIds = null, ?array $costOfGoodsSoldSections = null, ?float $costOfGoodsSoldTotalAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $endAt = null, ?array $expensesSections = null, ?float $expensesTotalAmount = null, ?string $id = null, ?array $incomeSections = null, ?float $incomeTotalAmount = null, ?array $metadata = null, ?string $name = null, ?float $netIncomeAmount = null, ?array $raw = null, ?\DateTime $startAt = null, ?\DateTime $updatedAt = null)
     {
         $this->categoryIds = $categoryIds;
         $this->costOfGoodsSoldSections = $costOfGoodsSoldSections;
@@ -185,6 +196,7 @@ class AccountingProfitloss
         $this->id = $id;
         $this->incomeSections = $incomeSections;
         $this->incomeTotalAmount = $incomeTotalAmount;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->netIncomeAmount = $netIncomeAmount;
         $this->raw = $raw;

@@ -46,6 +46,16 @@ class KmsComment
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\KmsPageMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\KmsPageMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * (reference to KmsPage)
      *
      * @var ?string $pageId
@@ -104,6 +114,7 @@ class KmsComment
      * @param  ?\Unified\Unified_to\Models\Shared\ContentType  $contentType
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\KmsPageMetadata>  $metadata
      * @param  ?string  $pageId
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
@@ -112,12 +123,13 @@ class KmsComment
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?string $content = null, ?ContentType $contentType = null, ?\DateTime $createdAt = null, ?string $id = null, ?string $pageId = null, ?string $parentId = null, ?array $raw = null, ?KmsCommentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?string $content = null, ?ContentType $contentType = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?string $pageId = null, ?string $parentId = null, ?array $raw = null, ?KmsCommentType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->content = $content;
         $this->contentType = $contentType;
         $this->createdAt = $createdAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->pageId = $pageId;
         $this->parentId = $parentId;
         $this->raw = $raw;

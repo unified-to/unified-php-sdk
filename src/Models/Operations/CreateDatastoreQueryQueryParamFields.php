@@ -15,5 +15,6 @@ enum CreateDatastoreQueryQueryParamFields: string
     case DatabaseId = 'database_id';
     case Query = 'query';
     case Response = 'response';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

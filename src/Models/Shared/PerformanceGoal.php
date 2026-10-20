@@ -72,6 +72,16 @@ class PerformanceGoal
     public ?string $id = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\PerformanceMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PerformanceMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * milestones or key results for this goal
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\PerformanceGoalMilestone> $milestones
@@ -180,6 +190,7 @@ class PerformanceGoal
      * @param  ?string  $description
      * @param  ?\DateTime  $dueAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\PerformanceMetadata>  $metadata
      * @param  ?array<\Unified\Unified_to\Models\Shared\PerformanceGoalMilestone>  $milestones
      * @param  ?string  $name
      * @param  ?string  $parentId
@@ -193,7 +204,7 @@ class PerformanceGoal
      * @param  ?float  $weight
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $cycleId = null, ?string $description = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $milestones = null, ?string $name = null, ?string $parentId = null, ?float $progress = null, ?array $raw = null, ?\DateTime $startAt = null, ?PerformanceGoalStatus $status = null, ?PerformanceGoalSchemasType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?float $weight = null)
+    public function __construct(?string $companyId = null, ?\DateTime $completedAt = null, ?\DateTime $createdAt = null, ?string $cycleId = null, ?string $description = null, ?\DateTime $dueAt = null, ?string $id = null, ?array $metadata = null, ?array $milestones = null, ?string $name = null, ?string $parentId = null, ?float $progress = null, ?array $raw = null, ?\DateTime $startAt = null, ?PerformanceGoalStatus $status = null, ?PerformanceGoalSchemasType $type = null, ?\DateTime $updatedAt = null, ?array $userIds = null, ?float $weight = null)
     {
         $this->companyId = $companyId;
         $this->completedAt = $completedAt;
@@ -202,6 +213,7 @@ class PerformanceGoal
         $this->description = $description;
         $this->dueAt = $dueAt;
         $this->id = $id;
+        $this->metadata = $metadata;
         $this->milestones = $milestones;
         $this->name = $name;
         $this->parentId = $parentId;

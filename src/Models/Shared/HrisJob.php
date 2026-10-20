@@ -102,6 +102,16 @@ class HrisJob
     public ?array $locations = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * the job or position title
      *
      * @var ?string $name
@@ -159,6 +169,7 @@ class HrisJob
      * @param  ?string  $id
      * @param  ?bool  $isActive
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisLocation>  $locations
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
@@ -166,7 +177,7 @@ class HrisJob
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisEmployee>  $users
      * @phpstan-pure
      */
-    public function __construct(?string $code = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $description = null, ?HrisJobEmploymentType $employmentType = null, ?array $groups = null, ?string $id = null, ?bool $isActive = null, ?array $locations = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $users = null)
+    public function __construct(?string $code = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $description = null, ?HrisJobEmploymentType $employmentType = null, ?array $groups = null, ?string $id = null, ?bool $isActive = null, ?array $locations = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $updatedAt = null, ?array $users = null)
     {
         $this->code = $code;
         $this->companyId = $companyId;
@@ -178,6 +189,7 @@ class HrisJob
         $this->id = $id;
         $this->isActive = $isActive;
         $this->locations = $locations;
+        $this->metadata = $metadata;
         $this->name = $name;
         $this->parentId = $parentId;
         $this->raw = $raw;

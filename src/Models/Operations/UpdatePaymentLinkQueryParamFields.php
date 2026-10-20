@@ -24,5 +24,6 @@ enum UpdatePaymentLinkQueryParamFields: string
     case Description = 'description';
     case IsChargeableNow = 'is_chargeable_now';
     case SuccessUrl = 'success_url';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

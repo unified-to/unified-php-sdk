@@ -23,5 +23,6 @@ enum CreateLmsActivityQueryParamFields: string
     case ProgressPercentage = 'progress_percentage';
     case StartedAt = 'started_at';
     case CompletedAt = 'completed_at';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

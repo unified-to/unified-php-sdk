@@ -16,5 +16,6 @@ enum ListCalendarBusiesQueryParamFields: string
     case EndAt = 'end_at';
     case Timezone = 'timezone';
     case Description = 'description';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

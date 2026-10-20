@@ -22,5 +22,6 @@ enum PatchMartechMemberQueryParamFields: string
     case ListIds = 'list_ids';
     case Tags = 'tags';
     case Status = 'status';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

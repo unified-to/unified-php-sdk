@@ -27,5 +27,6 @@ enum UpdateMartechListQueryParamFields: string
     case Language = 'language';
     case SenderCompany = 'sender_company';
     case SenderPhone = 'sender_phone';
+    case Metadata = 'metadata';
     case Raw = 'raw';
 }

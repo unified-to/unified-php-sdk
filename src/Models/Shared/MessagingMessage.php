@@ -148,6 +148,16 @@ class MessagingMessage
     public ?string $messageThreadIdentifier = null;
 
     /**
+     * $metadata
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\MessagingMetadata> $metadata
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('metadata')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\MessagingMetadata>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $metadata = null;
+
+    /**
      * Represents the ID of the immediate predecessor message in the thread. Identifies a specific message to which the current message directly replies.
      *
      * @var ?string $parentId
@@ -226,6 +236,7 @@ class MessagingMessage
      * @param  ?string  $messageHtml
      * @param  ?string  $messageMarkdown
      * @param  ?string  $messageThreadIdentifier
+     * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingMetadata>  $metadata
      * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<\Unified\Unified_to\Models\Shared\MessagingReaction>  $reactions
@@ -235,7 +246,7 @@ class MessagingMessage
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?array $buttons = null, ?array $channels = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?bool $isUnread = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $messageThreadIdentifier = null, ?string $parentId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?PropertyMessagingMessageAuthorMember $authorMember = null, ?array $buttons = null, ?array $channels = null, ?\DateTime $createdAt = null, ?array $destinationMembers = null, ?bool $hasChildren = null, ?array $hiddenMembers = null, ?string $id = null, ?bool $isUnread = null, ?array $mentionedMembers = null, ?string $message = null, ?string $messageHtml = null, ?string $messageMarkdown = null, ?string $messageThreadIdentifier = null, ?array $metadata = null, ?string $parentId = null, ?array $raw = null, ?array $reactions = null, ?string $reference = null, ?string $subject = null, ?\DateTime $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->authorMember = $authorMember;
@@ -252,6 +263,7 @@ class MessagingMessage
         $this->messageHtml = $messageHtml;
         $this->messageMarkdown = $messageMarkdown;
         $this->messageThreadIdentifier = $messageThreadIdentifier;
+        $this->metadata = $metadata;
         $this->parentId = $parentId;
         $this->raw = $raw;
         $this->reactions = $reactions;
