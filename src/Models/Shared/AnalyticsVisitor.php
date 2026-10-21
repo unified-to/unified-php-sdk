@@ -61,6 +61,14 @@ class AnalyticsVisitor
     public ?string $email = null;
 
     /**
+     *
+     * @var ?string $firstName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('first_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $firstName = null;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $firstSeenAt
@@ -93,6 +101,14 @@ class AnalyticsVisitor
     #[\Speakeasy\Serializer\Annotation\SerializedName('language')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $language = null;
+
+    /**
+     *
+     * @var ?string $lastName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('last_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $lastName = null;
 
     /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -188,10 +204,12 @@ class AnalyticsVisitor
      * @param  ?string  $countryCode
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $email
+     * @param  ?string  $firstName
      * @param  ?\DateTime  $firstSeenAt
      * @param  ?\Unified\Unified_to\Models\Shared\Gender  $gender
      * @param  ?string  $id
      * @param  ?string  $language
+     * @param  ?string  $lastName
      * @param  ?\DateTime  $lastSeenAt
      * @param  ?array<string, \Unified\Unified_to\Models\Shared\PropertyAnalyticsVisitorMetadata>  $metadata
      * @param  ?string  $name
@@ -204,7 +222,7 @@ class AnalyticsVisitor
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $age = null, ?string $city = null, ?string $country = null, ?string $countryCode = null, ?\DateTime $createdAt = null, ?string $email = null, ?\DateTime $firstSeenAt = null, ?Gender $gender = null, ?string $id = null, ?string $language = null, ?\DateTime $lastSeenAt = null, ?array $metadata = null, ?string $name = null, ?string $propertyId = null, ?array $raw = null, ?string $timezone = null, ?float $totalEvents = null, ?float $totalPageViews = null, ?float $totalSessions = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $age = null, ?string $city = null, ?string $country = null, ?string $countryCode = null, ?\DateTime $createdAt = null, ?string $email = null, ?string $firstName = null, ?\DateTime $firstSeenAt = null, ?Gender $gender = null, ?string $id = null, ?string $language = null, ?string $lastName = null, ?\DateTime $lastSeenAt = null, ?array $metadata = null, ?string $name = null, ?string $propertyId = null, ?array $raw = null, ?string $timezone = null, ?float $totalEvents = null, ?float $totalPageViews = null, ?float $totalSessions = null, ?\DateTime $updatedAt = null)
     {
         $this->age = $age;
         $this->city = $city;
@@ -212,10 +230,12 @@ class AnalyticsVisitor
         $this->countryCode = $countryCode;
         $this->createdAt = $createdAt;
         $this->email = $email;
+        $this->firstName = $firstName;
         $this->firstSeenAt = $firstSeenAt;
         $this->gender = $gender;
         $this->id = $id;
         $this->language = $language;
+        $this->lastName = $lastName;
         $this->lastSeenAt = $lastSeenAt;
         $this->metadata = $metadata;
         $this->name = $name;

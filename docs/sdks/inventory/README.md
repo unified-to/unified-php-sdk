@@ -37,9 +37,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: 'd32eb598-f7dd-4844-8615-08f5503e2430',
+        id: 'b3ba51df-a271-4054-9b23-658b4ddf92d9',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-19T10:25:41.760Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-20T09:48:39.178Z'),
     ),
     connectionId: '<id>',
 );
@@ -196,9 +196,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: 'a8045ec7-428d-4426-88df-36f691d1eee6',
+        id: '505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-19T10:25:41.769Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-20T09:48:39.185Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -306,9 +306,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: 'a8045ec7-428d-4426-88df-36f691d1eee6',
+        id: '505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-19T10:25:41.769Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-20T09:48:39.185Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

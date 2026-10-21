@@ -32,7 +32,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingRateRequest(
     shippingRate: new Shared\ShippingRate(
         currency: 'USD',
-        id: '8229f47d-c3ae-421e-8ccb-f8dd38631ae1',
+        id: '01f6f2cf-1d29-4d5f-833e-d6d1dcfad6c9',
         metadata: [],
         rates: [
             new Shared\ShippingRateRate(

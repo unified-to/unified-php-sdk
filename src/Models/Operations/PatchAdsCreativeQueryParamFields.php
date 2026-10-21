@@ -25,6 +25,7 @@ enum PatchAdsCreativeQueryParamFields: string
     case Width = 'width';
     case Height = 'height';
     case AssetUrls = 'asset_urls';
+    case Cards = 'cards';
     case LinkUrl = 'link_url';
     case UrlTags = 'url_tags';
     case Body = 'body';

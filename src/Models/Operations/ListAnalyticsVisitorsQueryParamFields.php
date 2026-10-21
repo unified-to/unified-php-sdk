@@ -17,6 +17,8 @@ enum ListAnalyticsVisitorsQueryParamFields: string
     case PropertyId = 'property_id';
     case Email = 'email';
     case Name = 'name';
+    case FirstName = 'first_name';
+    case LastName = 'last_name';
     case Age = 'age';
     case Gender = 'gender';
     case Country = 'country';

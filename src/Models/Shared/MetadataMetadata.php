@@ -19,7 +19,7 @@ class MetadataMetadata
     public string $name;
 
     /**
-     * This is the unified object type that this metadata is associated with. eg. crm_contact or coomerce_item
+     * This is the unified object type that this metadata is associated with. eg. crm_contact or commerce_item
      *
      * @var string $objectType
      */
@@ -53,6 +53,7 @@ class MetadataMetadata
     public ?string $id = null;
 
     /**
+     * When true, this metadata slug is required for create for this integration.
      *
      * @var ?bool $isRequired
      */
@@ -63,10 +64,10 @@ class MetadataMetadata
     /**
      * $objects
      *
-     * @var ?array<string, mixed> $objects
+     * @var ?array<string, string> $objects
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('objects')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<string, mixed>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string, string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $objects = null;
 
@@ -122,7 +123,7 @@ class MetadataMetadata
      * @param  ?\Unified\Unified_to\Models\Shared\MetadataMetadataFormat  $format
      * @param  ?string  $id
      * @param  ?bool  $isRequired
-     * @param  ?array<string, mixed>  $objects
+     * @param  ?array<string, string>  $objects
      * @param  ?array<string>  $options
      * @param  ?string  $originalFormat
      * @param  ?array<string, mixed>  $raw

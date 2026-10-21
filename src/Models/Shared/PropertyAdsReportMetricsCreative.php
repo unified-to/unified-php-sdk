@@ -38,6 +38,16 @@ class PropertyAdsReportMetricsCreative
     public ?string $campaignId = null;
 
     /**
+     * Carousel cards, in display order
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsCreativeCard> $cards
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cards')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsCreativeCard>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $cards = null;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
@@ -284,6 +294,7 @@ class PropertyAdsReportMetricsCreative
      * @param  ?array<string>  $assetUrls
      * @param  ?string  $body
      * @param  ?string  $campaignId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsCreativeCard>  $cards
      * @param  ?\DateTime  $createdAt
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCreativeCreativeType  $creativeType
      * @param  ?string  $cta
@@ -314,11 +325,12 @@ class PropertyAdsReportMetricsCreative
      * @param  ?float  $width
      * @phpstan-pure
      */
-    public function __construct(?array $assetUrls = null, ?string $body = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?PropertyAdsReportMetricsCreativeCreativeType $creativeType = null, ?string $cta = null, ?string $data = null, ?string $externalAdReference = null, ?string $externalCreativeReference = null, ?string $externalPlacementReference = null, ?string $groupId = null, ?float $height = null, ?PropertyAdsReportMetricsCreativeHostingSource $hostingSource = null, ?string $id = null, ?string $itemId = null, ?array $labels = null, ?string $linkUrl = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?PropertyAdsReportMetricsCreativeStatus $status = null, ?string $thirdPartyTag = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $urlTags = null, ?string $vastTagUrl = null, ?float $width = null)
+    public function __construct(?array $assetUrls = null, ?string $body = null, ?string $campaignId = null, ?array $cards = null, ?\DateTime $createdAt = null, ?PropertyAdsReportMetricsCreativeCreativeType $creativeType = null, ?string $cta = null, ?string $data = null, ?string $externalAdReference = null, ?string $externalCreativeReference = null, ?string $externalPlacementReference = null, ?string $groupId = null, ?float $height = null, ?PropertyAdsReportMetricsCreativeHostingSource $hostingSource = null, ?string $id = null, ?string $itemId = null, ?array $labels = null, ?string $linkUrl = null, ?array $metadata = null, ?string $name = null, ?string $organizationId = null, ?string $path1 = null, ?string $path2 = null, ?array $promoted = null, ?array $raw = null, ?PropertyAdsReportMetricsCreativeStatus $status = null, ?string $thirdPartyTag = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $urlTags = null, ?string $vastTagUrl = null, ?float $width = null)
     {
         $this->assetUrls = $assetUrls;
         $this->body = $body;
         $this->campaignId = $campaignId;
+        $this->cards = $cards;
         $this->createdAt = $createdAt;
         $this->creativeType = $creativeType;
         $this->cta = $cta;
