@@ -15,7 +15,7 @@
 
 ## createComputeTemplate
 
-Create a template
+Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
 ### Example Usage
 
@@ -44,10 +44,10 @@ $request = new Operations\CreateComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: '87214967-c388-454a-b15b-d7ea77a70778',
+        id: 'b31729ed-306a-42ed-bd80-4fab29435c12',
         image: 'perfumed-molasses/cohibeo:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-03-23T20:27:16.056Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-03-25T12:35:39.751Z'),
         memoryMb: 8192,
         metadata: [],
         name: 'multi-byte-card',
@@ -55,7 +55,7 @@ $request = new Operations\CreateComputeTemplateRequest(
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-12T18:38:51.398Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-13T20:21:59.024Z'),
     ),
     connectionId: '<id>',
 );
@@ -87,7 +87,7 @@ if ($response->computeTemplate !== null) {
 
 ## getComputeTemplate
 
-Retrieve a template
+Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ if ($response->computeTemplate !== null) {
 
 ## getSigningTemplate
 
-Retrieve a template
+Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ if ($response->signingTemplate !== null) {
 
 ## listComputeTemplates
 
-List all templates
+Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -239,7 +239,7 @@ if ($response->computeTemplates !== null) {
 
 ## listSigningTemplates
 
-List all templates
+Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -289,7 +289,7 @@ if ($response->signingTemplates !== null) {
 
 ## patchComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -318,10 +318,10 @@ $request = new Operations\PatchComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: '9cb36833-667b-4fd1-a64c-9bad7d4d2a50',
+        id: '4987e5c9-5105-4ff1-9d64-b5e540d84fd4',
         image: 'perfumed-molasses/cohibeo:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-03-23T20:27:16.077Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-03-25T12:35:39.770Z'),
         memoryMb: 8192,
         metadata: [],
         name: 'multi-byte-card',
@@ -329,7 +329,7 @@ $request = new Operations\PatchComputeTemplateRequest(
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-12T18:38:51.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-13T20:21:59.037Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -362,7 +362,7 @@ if ($response->computeTemplate !== null) {
 
 ## removeComputeTemplate
 
-Remove a template
+Deletes the ComputeTemplate identified by `id`.
 
 ### Example Usage
 
@@ -413,7 +413,7 @@ if ($response->statusCode === 200) {
 
 ## updateComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -442,10 +442,10 @@ $request = new Operations\UpdateComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: '9cb36833-667b-4fd1-a64c-9bad7d4d2a50',
+        id: '4987e5c9-5105-4ff1-9d64-b5e540d84fd4',
         image: 'perfumed-molasses/cohibeo:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-03-23T20:27:16.077Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-03-25T12:35:39.770Z'),
         memoryMb: 8192,
         metadata: [],
         name: 'multi-byte-card',
@@ -453,7 +453,7 @@ $request = new Operations\UpdateComputeTemplateRequest(
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-12T18:38:51.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-13T20:21:59.037Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

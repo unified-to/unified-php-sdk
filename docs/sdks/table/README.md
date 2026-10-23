@@ -13,7 +13,7 @@
 
 ## createDatastoreTable
 
-Create a table
+Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are mapped to the provider's API. Returns the created DatastoreTable.
 
 ### Example Usage
 
@@ -41,7 +41,7 @@ $request = new Operations\CreateDatastoreTableRequest(
         fields: [
             new Shared\DatastoreField(
                 description: 'Antea soluta itaque clamo despecto basium accendo.',
-                id: 'e41910ed-ed43-4c34-bda9-4071be17d56c',
+                id: '44dec248-2430-457f-9c84-5ad986fb727d',
                 isIndexed: true,
                 isUnique: true,
                 name: 'Ferry LLC',
@@ -51,7 +51,7 @@ $request = new Operations\CreateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-                id: '74dab335-b523-47a9-8ffe-03763c303e30',
+                id: 'aff79ee0-c866-485c-a964-70a76a032b87',
                 isNullable: true,
                 isUnique: true,
                 name: 'Hand - Nader',
@@ -61,7 +61,7 @@ $request = new Operations\CreateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-                id: '2b34efa0-53b2-46fe-9c73-c7eb6609056e',
+                id: '82567af1-cb54-4e67-8707-191d995cec04',
                 isIndexed: true,
                 isNullable: true,
                 isUnique: true,
@@ -73,7 +73,7 @@ $request = new Operations\CreateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-                id: 'efbc5dd5-e1fc-4817-8596-a38c1ed2290c',
+                id: '6be2a493-63a7-4918-9bbb-57d48964960a',
                 name: 'Gislason, Gorczany and Hegmann',
                 originalType: 'tego',
                 precision: 94,
@@ -82,7 +82,7 @@ $request = new Operations\CreateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Communis coma cura audio aduro acer canis expedita.',
-                id: 'fc3075f8-d429-41b0-aa20-3e1e616f8c9c',
+                id: 'b3c24a40-3172-4fd9-90a8-825ff153c389',
                 isIndexed: true,
                 isPrimaryKey: true,
                 isRequired: true,
@@ -92,18 +92,18 @@ $request = new Operations\CreateDatastoreTableRequest(
                 type: Shared\DatastoreFieldType::Email,
             ),
         ],
-        id: '310ee049-3162-42f4-91f6-a39bf45c1b01',
+        id: 'c13ace91-d8eb-482b-a431-ee626e6a316d',
         metadata: [],
         name: 'Rogahn, Lowe and Heller',
         relationships: [
             new Shared\DatastoreRelationship(
                 field: 'Macejkovic - Shields',
                 name: 'Hyatt, Ryan and Nienow',
-                tableId: '310ee049-3162-42f4-91f6-a39bf45c1b01',
+                tableId: 'c13ace91-d8eb-482b-a431-ee626e6a316d',
                 type: Shared\DatastoreRelationshipType::Many,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-08-12T20:25:49.908Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-08-12T22:52:25.458Z'),
         webUrl: 'https://nervous-deck.com',
     ),
     connectionId: '<id>',
@@ -136,7 +136,7 @@ if ($response->datastoreTable !== null) {
 
 ## getDatastoreTable
 
-Retrieve a table
+Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ if ($response->datastoreTable !== null) {
 
 ## listDatastoreTables
 
-List all tables
+Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -237,7 +237,7 @@ if ($response->datastoreTables !== null) {
 
 ## patchDatastoreTable
 
-Update a table
+Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
 
 ### Example Usage
 
@@ -265,7 +265,7 @@ $request = new Operations\PatchDatastoreTableRequest(
         fields: [
             new Shared\DatastoreField(
                 description: 'Antea soluta itaque clamo despecto basium accendo.',
-                id: '3986a105-fa5d-4af2-b35e-a6a984854abe',
+                id: 'dc123bd2-2beb-42db-854a-26b9480d2c0b',
                 isIndexed: true,
                 isUnique: true,
                 name: 'Ferry LLC',
@@ -275,7 +275,7 @@ $request = new Operations\PatchDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-                id: 'c1cfc22e-2620-443d-bb5d-b66cb238887d',
+                id: '81bc86e4-f2e0-412e-b05a-14f7f4fd0c44',
                 isNullable: true,
                 isUnique: true,
                 name: 'Hand - Nader',
@@ -285,7 +285,7 @@ $request = new Operations\PatchDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-                id: 'ad625c28-b215-45cd-9955-69f043ab88bd',
+                id: '3dac8280-6a32-4f94-9585-83fc1c7db6f5',
                 isIndexed: true,
                 isNullable: true,
                 isUnique: true,
@@ -297,7 +297,7 @@ $request = new Operations\PatchDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-                id: 'cc5c5955-971b-4f5b-aea1-64bea13b7e58',
+                id: '507e8a77-5a12-4fa4-8a89-c7bddc5c914e',
                 name: 'Gislason, Gorczany and Hegmann',
                 originalType: 'tego',
                 precision: 94,
@@ -306,7 +306,7 @@ $request = new Operations\PatchDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Communis coma cura audio aduro acer canis expedita.',
-                id: '7dcd45f5-74b8-4489-a57d-e58695426dcf',
+                id: 'ab5cc39f-50dc-48ee-be47-9432920761e8',
                 isIndexed: true,
                 isPrimaryKey: true,
                 isRequired: true,
@@ -316,18 +316,18 @@ $request = new Operations\PatchDatastoreTableRequest(
                 type: Shared\DatastoreFieldType::Email,
             ),
         ],
-        id: '7e6a7f0b-1d5a-4c64-b587-898633022efd',
+        id: '45a73d7d-c3ee-479c-80d5-718c26aa5585',
         metadata: [],
         name: 'Rogahn, Lowe and Heller',
         relationships: [
             new Shared\DatastoreRelationship(
                 field: 'Macejkovic - Shields',
                 name: 'Hyatt, Ryan and Nienow',
-                tableId: '7e6a7f0b-1d5a-4c64-b587-898633022efd',
+                tableId: '45a73d7d-c3ee-479c-80d5-718c26aa5585',
                 type: Shared\DatastoreRelationshipType::Many,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-08-12T20:25:49.909Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-08-12T22:52:25.460Z'),
         webUrl: 'https://nervous-deck.com',
     ),
     connectionId: '<id>',
@@ -361,7 +361,7 @@ if ($response->datastoreTable !== null) {
 
 ## removeDatastoreTable
 
-Remove a table
+Deletes the DatastoreTable identified by `id`.
 
 ### Example Usage
 
@@ -412,7 +412,7 @@ if ($response->statusCode === 200) {
 
 ## updateDatastoreTable
 
-Update a table
+Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
 
 ### Example Usage
 
@@ -440,7 +440,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
         fields: [
             new Shared\DatastoreField(
                 description: 'Antea soluta itaque clamo despecto basium accendo.',
-                id: '3986a105-fa5d-4af2-b35e-a6a984854abe',
+                id: 'dc123bd2-2beb-42db-854a-26b9480d2c0b',
                 isIndexed: true,
                 isUnique: true,
                 name: 'Ferry LLC',
@@ -450,7 +450,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-                id: 'c1cfc22e-2620-443d-bb5d-b66cb238887d',
+                id: '81bc86e4-f2e0-412e-b05a-14f7f4fd0c44',
                 isNullable: true,
                 isUnique: true,
                 name: 'Hand - Nader',
@@ -460,7 +460,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-                id: 'ad625c28-b215-45cd-9955-69f043ab88bd',
+                id: '3dac8280-6a32-4f94-9585-83fc1c7db6f5',
                 isIndexed: true,
                 isNullable: true,
                 isUnique: true,
@@ -472,7 +472,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-                id: 'cc5c5955-971b-4f5b-aea1-64bea13b7e58',
+                id: '507e8a77-5a12-4fa4-8a89-c7bddc5c914e',
                 name: 'Gislason, Gorczany and Hegmann',
                 originalType: 'tego',
                 precision: 94,
@@ -481,7 +481,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Communis coma cura audio aduro acer canis expedita.',
-                id: '7dcd45f5-74b8-4489-a57d-e58695426dcf',
+                id: 'ab5cc39f-50dc-48ee-be47-9432920761e8',
                 isIndexed: true,
                 isPrimaryKey: true,
                 isRequired: true,
@@ -491,18 +491,18 @@ $request = new Operations\UpdateDatastoreTableRequest(
                 type: Shared\DatastoreFieldType::Email,
             ),
         ],
-        id: '7e6a7f0b-1d5a-4c64-b587-898633022efd',
+        id: '45a73d7d-c3ee-479c-80d5-718c26aa5585',
         metadata: [],
         name: 'Rogahn, Lowe and Heller',
         relationships: [
             new Shared\DatastoreRelationship(
                 field: 'Macejkovic - Shields',
                 name: 'Hyatt, Ryan and Nienow',
-                tableId: '7e6a7f0b-1d5a-4c64-b587-898633022efd',
+                tableId: '45a73d7d-c3ee-479c-80d5-718c26aa5585',
                 type: Shared\DatastoreRelationshipType::Many,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-08-12T20:25:49.909Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-08-12T22:52:25.460Z'),
         webUrl: 'https://nervous-deck.com',
     ),
     connectionId: '<id>',

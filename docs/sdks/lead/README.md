@@ -13,7 +13,7 @@
 
 ## createCrmLead
 
-Create a lead
+Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
 ### Example Usage
 
@@ -53,7 +53,7 @@ $request = new Operations\CreateCrmLeadRequest(
             ),
         ],
         firstName: 'Velda',
-        id: 'fdf5c447-a048-4324-91ea-918517eaf80b',
+        id: '9fe7c268-bd08-4ad3-ac2c-2727d15d4431',
         isActive: true,
         lastName: 'Sporer',
         linkUrls: [
@@ -65,7 +65,7 @@ $request = new Operations\CreateCrmLeadRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'f9248f76-97df-44eb-9efe-20e1c22d7ac4',
+                id: '54aeb03f-4ba1-4459-ba0c-46112f0a9f34',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'vitiosus',
@@ -89,7 +89,7 @@ $request = new Operations\CreateCrmLeadRequest(
             ),
         ],
         title: 'International Factors Administrator',
-        updatedAt: Utils\Utils::parseDateTime('2020-05-17T21:34:50.146Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-05-18T01:38:22.223Z'),
     ),
     connectionId: '<id>',
 );
@@ -121,7 +121,7 @@ if ($response->crmLead !== null) {
 
 ## getCrmLead
 
-Retrieve a lead
+Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -172,7 +172,7 @@ if ($response->crmLead !== null) {
 
 ## listCrmLeads
 
-List all leads
+Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -222,7 +222,7 @@ if ($response->crmLeads !== null) {
 
 ## patchCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ $request = new Operations\PatchCrmLeadRequest(
             ),
         ],
         firstName: 'Velda',
-        id: '6c8c585e-50d2-4a85-a7c8-7909fac94b4c',
+        id: 'ecf163f3-cd60-45c4-91be-4aa8e2a444bc',
         isActive: true,
         lastName: 'Sporer',
         linkUrls: [
@@ -274,7 +274,7 @@ $request = new Operations\PatchCrmLeadRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '8f740a58-690e-4ddc-9d90-630a91b6caa2',
+                id: '3aab5cee-ff6b-4cf7-b5f2-162847cd7a90',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'vitiosus',
@@ -298,7 +298,7 @@ $request = new Operations\PatchCrmLeadRequest(
             ),
         ],
         title: 'International Factors Administrator',
-        updatedAt: Utils\Utils::parseDateTime('2020-05-17T21:34:50.148Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-05-18T01:38:22.226Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -331,7 +331,7 @@ if ($response->crmLead !== null) {
 
 ## removeCrmLead
 
-Remove a lead
+Deletes the CrmLead identified by `id`.
 
 ### Example Usage
 
@@ -382,7 +382,7 @@ if ($response->statusCode === 200) {
 
 ## updateCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -422,7 +422,7 @@ $request = new Operations\UpdateCrmLeadRequest(
             ),
         ],
         firstName: 'Velda',
-        id: '6c8c585e-50d2-4a85-a7c8-7909fac94b4c',
+        id: 'ecf163f3-cd60-45c4-91be-4aa8e2a444bc',
         isActive: true,
         lastName: 'Sporer',
         linkUrls: [
@@ -434,7 +434,7 @@ $request = new Operations\UpdateCrmLeadRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '8f740a58-690e-4ddc-9d90-630a91b6caa2',
+                id: '3aab5cee-ff6b-4cf7-b5f2-162847cd7a90',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'vitiosus',
@@ -458,7 +458,7 @@ $request = new Operations\UpdateCrmLeadRequest(
             ),
         ],
         title: 'International Factors Administrator',
-        updatedAt: Utils\Utils::parseDateTime('2020-05-17T21:34:50.148Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-05-18T01:38:22.226Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

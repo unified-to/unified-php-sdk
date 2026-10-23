@@ -47,6 +47,8 @@ class Clubs
     /**
      * Retrieve an activity
      *
+     * Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -109,6 +111,8 @@ class Clubs
 
     /**
      * Retrieve an event
+     *
+     * Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsEventResponse
@@ -173,6 +177,8 @@ class Clubs
     /**
      * Retrieve a group
      *
+     * Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -235,6 +241,8 @@ class Clubs
 
     /**
      * Retrieve a location
+     *
+     * Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsLocationResponse
@@ -299,6 +307,8 @@ class Clubs
     /**
      * Retrieve a member
      *
+     * Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -361,6 +371,8 @@ class Clubs
 
     /**
      * List all activities
+     *
+     * Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsActivitiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsActivitiesResponse
@@ -425,6 +437,8 @@ class Clubs
     /**
      * List all events
      *
+     * Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -487,6 +501,8 @@ class Clubs
 
     /**
      * List all groups
+     *
+     * Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsGroupsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsGroupsResponse
@@ -551,6 +567,8 @@ class Clubs
     /**
      * List all locations
      *
+     * Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsLocationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -613,6 +631,8 @@ class Clubs
 
     /**
      * List all members
+     *
+     * Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsMembersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsMembersResponse

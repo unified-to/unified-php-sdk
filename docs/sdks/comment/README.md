@@ -25,7 +25,7 @@
 
 ## createKmsComment
 
-Create a comment
+Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
 ### Example Usage
 
@@ -51,10 +51,10 @@ $request = new Operations\CreateKmsCommentRequest(
         content: 'Decimus tolero viriliter usque.',
         contentType: Shared\ContentType::Html,
         createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
-        id: '7d48c048-f83a-497e-932d-ae75226e4a84',
+        id: '6e86b1a7-3b9b-4320-a925-7c73a796b9ae',
         metadata: [],
         type: Shared\KmsCommentType::Page,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-26T06:47:39.913Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T21:09:07.966Z'),
     ),
     connectionId: '<id>',
 );
@@ -86,7 +86,7 @@ if ($response->kmsComment !== null) {
 
 ## createTaskComment
 
-Create a comment
+Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
 
 ### Example Usage
 
@@ -111,10 +111,10 @@ $request = new Operations\CreateTaskCommentRequest(
     taskComment: new Shared\TaskComment(
         createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
         hasChildren: true,
-        id: '2260f628-1f2b-4c01-8b8d-8f3b6ed16fd4',
+        id: 'dc3b63d3-a6f9-48e7-a145-4c566e24fc34',
         metadata: [],
         text: 'Colo ulciscor sublime tabernus.',
-        updatedAt: Utils\Utils::parseDateTime('2021-10-03T07:59:35.582Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-10-03T21:24:08.746Z'),
     ),
     connectionId: '<id>',
 );
@@ -146,7 +146,7 @@ if ($response->taskComment !== null) {
 
 ## createUcComment
 
-Create a comment
+Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
 
 ### Example Usage
 
@@ -170,9 +170,9 @@ $request = new Operations\CreateUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: '121f972a-c2c1-475c-ba1e-5c6f63ee28fa',
+        id: '50773d7c-4630-49fb-961b-cba9fe034632',
         metadata: [],
-        updatedAt: '2024-02-09T18:30:03.825Z',
+        updatedAt: '2024-02-10T05:59:53.692Z',
     ),
     connectionId: '<id>',
 );
@@ -204,7 +204,7 @@ if ($response->ucComment !== null) {
 
 ## getKmsComment
 
-Retrieve a comment
+Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -255,7 +255,7 @@ if ($response->kmsComment !== null) {
 
 ## getTaskComment
 
-Retrieve a comment
+Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ if ($response->taskComment !== null) {
 
 ## getUcComment
 
-Retrieve a comment
+Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -357,7 +357,7 @@ if ($response->ucComment !== null) {
 
 ## listKmsComments
 
-List all comments
+Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -407,7 +407,7 @@ if ($response->kmsComments !== null) {
 
 ## listTaskComments
 
-List all comments
+Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -457,7 +457,7 @@ if ($response->taskComments !== null) {
 
 ## listUcComments
 
-List all comments
+Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -507,7 +507,7 @@ if ($response->ucComments !== null) {
 
 ## patchKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -533,10 +533,10 @@ $request = new Operations\PatchKmsCommentRequest(
         content: 'Decimus tolero viriliter usque.',
         contentType: Shared\ContentType::Html,
         createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
-        id: '481c0558-3e28-4883-a956-58b21d1bee75',
+        id: '326bb35a-355d-44f1-8aa6-bfb9de8f8773',
         metadata: [],
         type: Shared\KmsCommentType::Page,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-26T06:47:39.916Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T21:09:07.971Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -569,7 +569,7 @@ if ($response->kmsComment !== null) {
 
 ## patchTaskComment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -594,10 +594,10 @@ $request = new Operations\PatchTaskCommentRequest(
     taskComment: new Shared\TaskComment(
         createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
         hasChildren: true,
-        id: '395e2851-8f13-4a9b-b5af-b0ad7d2c8495',
+        id: '1fff7161-2500-40af-9743-fa2743781a91',
         metadata: [],
         text: 'Colo ulciscor sublime tabernus.',
-        updatedAt: Utils\Utils::parseDateTime('2021-10-03T07:59:35.584Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-10-03T21:24:08.750Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -630,7 +630,7 @@ if ($response->taskComment !== null) {
 
 ## patchUcComment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -654,9 +654,9 @@ $request = new Operations\PatchUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: '30263a06-2d22-4649-8857-dab9e9ac5b3a',
+        id: '395be5cd-ad5d-4d86-bb3a-5d79de78227d',
         metadata: [],
-        updatedAt: '2024-02-09T18:30:03.828Z',
+        updatedAt: '2024-02-10T05:59:53.696Z',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -689,7 +689,7 @@ if ($response->ucComment !== null) {
 
 ## removeKmsComment
 
-Remove a comment
+Deletes the KmsComment identified by `id`.
 
 ### Example Usage
 
@@ -740,7 +740,7 @@ if ($response->statusCode === 200) {
 
 ## removeTaskComment
 
-Remove a comment
+Deletes the TaskComment identified by `id`.
 
 ### Example Usage
 
@@ -791,7 +791,7 @@ if ($response->statusCode === 200) {
 
 ## removeUcComment
 
-Remove a comment
+Deletes the UcComment identified by `id`.
 
 ### Example Usage
 
@@ -842,7 +842,7 @@ if ($response->statusCode === 200) {
 
 ## updateKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -868,10 +868,10 @@ $request = new Operations\UpdateKmsCommentRequest(
         content: 'Decimus tolero viriliter usque.',
         contentType: Shared\ContentType::Html,
         createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
-        id: '481c0558-3e28-4883-a956-58b21d1bee75',
+        id: '326bb35a-355d-44f1-8aa6-bfb9de8f8773',
         metadata: [],
         type: Shared\KmsCommentType::Page,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-26T06:47:39.916Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T21:09:07.971Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -904,7 +904,7 @@ if ($response->kmsComment !== null) {
 
 ## updateTaskComment
 
-Update a comment
+Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
 
 ### Example Usage
 
@@ -929,10 +929,10 @@ $request = new Operations\UpdateTaskCommentRequest(
     taskComment: new Shared\TaskComment(
         createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
         hasChildren: true,
-        id: '395e2851-8f13-4a9b-b5af-b0ad7d2c8495',
+        id: '1fff7161-2500-40af-9743-fa2743781a91',
         metadata: [],
         text: 'Colo ulciscor sublime tabernus.',
-        updatedAt: Utils\Utils::parseDateTime('2021-10-03T07:59:35.584Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-10-03T21:24:08.750Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -965,7 +965,7 @@ if ($response->taskComment !== null) {
 
 ## updateUcComment
 
-Update a comment
+Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
 
 ### Example Usage
 
@@ -989,9 +989,9 @@ $request = new Operations\UpdateUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: '30263a06-2d22-4649-8857-dab9e9ac5b3a',
+        id: '395be5cd-ad5d-4d86-bb3a-5d79de78227d',
         metadata: [],
-        updatedAt: '2024-02-09T18:30:03.828Z',
+        updatedAt: '2024-02-10T05:59:53.696Z',
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -13,7 +13,7 @@
 
 ## createAccountingBill
 
-Create a bill
+Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
 ### Example Usage
 
@@ -39,13 +39,13 @@ $request = new Operations\CreateAccountingBillRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://puny-foodstuffs.name',
-                id: 'cebeee36-97bb-4330-9a85-5c69fc343f29',
+                id: '55e2ddb4-12ee-4738-acf5-9f35ad4fae0d',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://grimy-characterization.net',
-                id: '668457df-b516-4b78-9532-eb2cf6d62589',
+                id: '59a88258-e743-46c1-8155-1bda358b5387',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466-1.pdf',
             ),
@@ -58,7 +58,7 @@ $request = new Operations\CreateAccountingBillRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2019-09-07T23:03:14.104Z'),
         extendedNotes: [],
-        id: '7e27068a-669c-4caa-8506-8d9a42328ae2',
+        id: '033ba014-5082-45c2-856f-1d28639c1b99',
         lineitems: [],
         metadata: [],
         notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -74,7 +74,7 @@ $request = new Operations\CreateAccountingBillRequest(
         taxAmount: 0,
         term: Shared\Term::Net90,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2020-06-01T05:48:10.626Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-06-01T11:04:57.928Z'),
         url: 'https://cluttered-importance.org/bills/BILL-2466',
     ),
     connectionId: '<id>',
@@ -107,7 +107,7 @@ if ($response->accountingBill !== null) {
 
 ## getAccountingBill
 
-Retrieve a bill
+Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -158,7 +158,7 @@ if ($response->accountingBill !== null) {
 
 ## listAccountingBills
 
-List all bills
+Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -208,7 +208,7 @@ if ($response->accountingBills !== null) {
 
 ## patchAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -234,13 +234,13 @@ $request = new Operations\PatchAccountingBillRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://puny-foodstuffs.name',
-                id: '5f7b5dee-8c62-4964-bedd-56fd074ac361',
+                id: '47e28818-2f6e-41d9-9ef8-4f7a72a6c602',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://grimy-characterization.net',
-                id: '5095116b-b393-4afd-87bc-d967ca04b70f',
+                id: 'c367990e-fc87-453d-b207-e522909fbfde',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466-1.pdf',
             ),
@@ -253,7 +253,7 @@ $request = new Operations\PatchAccountingBillRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2019-09-07T23:03:14.104Z'),
         extendedNotes: [],
-        id: 'c1f11f76-1eff-43e7-8f44-6a829c9ec2c4',
+        id: '39341e04-0e59-4b05-81de-8bf65b0c1ee7',
         lineitems: [],
         metadata: [],
         notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -269,7 +269,7 @@ $request = new Operations\PatchAccountingBillRequest(
         taxAmount: 0,
         term: Shared\Term::Net90,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2020-06-01T05:48:10.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-06-01T11:04:57.934Z'),
         url: 'https://cluttered-importance.org/bills/BILL-2466',
     ),
     connectionId: '<id>',
@@ -303,7 +303,7 @@ if ($response->accountingBill !== null) {
 
 ## removeAccountingBill
 
-Remove a bill
+Deletes the AccountingBill identified by `id`.
 
 ### Example Usage
 
@@ -354,7 +354,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -380,13 +380,13 @@ $request = new Operations\UpdateAccountingBillRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://puny-foodstuffs.name',
-                id: '5f7b5dee-8c62-4964-bedd-56fd074ac361',
+                id: '47e28818-2f6e-41d9-9ef8-4f7a72a6c602',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://grimy-characterization.net',
-                id: '5095116b-b393-4afd-87bc-d967ca04b70f',
+                id: 'c367990e-fc87-453d-b207-e522909fbfde',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466-1.pdf',
             ),
@@ -399,7 +399,7 @@ $request = new Operations\UpdateAccountingBillRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2019-09-07T23:03:14.104Z'),
         extendedNotes: [],
-        id: 'c1f11f76-1eff-43e7-8f44-6a829c9ec2c4',
+        id: '39341e04-0e59-4b05-81de-8bf65b0c1ee7',
         lineitems: [],
         metadata: [],
         notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -415,7 +415,7 @@ $request = new Operations\UpdateAccountingBillRequest(
         taxAmount: 0,
         term: Shared\Term::Net90,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2020-06-01T05:48:10.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-06-01T11:04:57.934Z'),
         url: 'https://cluttered-importance.org/bills/BILL-2466',
     ),
     connectionId: '<id>',

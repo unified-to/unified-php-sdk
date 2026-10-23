@@ -13,7 +13,7 @@
 
 ## createAccountingSalesorder
 
-Create a salesorder
+Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
 ### Example Usage
 
@@ -46,13 +46,13 @@ $request = new Operations\CreateAccountingSalesorderRequest(
             regionCode: 'MO',
         ),
         categoryIds: [],
-        closedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.155Z'),
+        closedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.181Z'),
         createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
         currency: 'USD',
         discountAmount: 0,
         fees: [],
         fulfillmentType: Shared\FulfillmentType::Other,
-        id: '2ee1a550-d200-4b90-84de-64861a01cf0a',
+        id: '4637a288-911a-429a-bea4-7dcee1e32f51',
         lineitems: [],
         metadata: [],
         orderNumber: '832663',
@@ -74,7 +74,7 @@ $request = new Operations\CreateAccountingSalesorderRequest(
         taxAmount: 0,
         tipAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.155Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.181Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ if ($response->accountingSalesorder !== null) {
 
 ## getAccountingSalesorder
 
-Retrieve a salesorder
+Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -157,7 +157,7 @@ if ($response->accountingSalesorder !== null) {
 
 ## listAccountingSalesorders
 
-List all salesorders
+Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -207,7 +207,7 @@ if ($response->accountingSalesorders !== null) {
 
 ## patchAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -240,13 +240,13 @@ $request = new Operations\PatchAccountingSalesorderRequest(
             regionCode: 'MO',
         ),
         categoryIds: [],
-        closedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.174Z'),
+        closedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.199Z'),
         createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
         currency: 'USD',
         discountAmount: 0,
         fees: [],
         fulfillmentType: Shared\FulfillmentType::Other,
-        id: '81444e74-2438-4d48-a12a-446390d8c063',
+        id: '034dfeb1-d580-474c-8283-43e2e41f0d01',
         lineitems: [],
         metadata: [],
         orderNumber: '832663',
@@ -268,7 +268,7 @@ $request = new Operations\PatchAccountingSalesorderRequest(
         taxAmount: 0,
         tipAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.174Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.199Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -301,7 +301,7 @@ if ($response->accountingSalesorder !== null) {
 
 ## removeAccountingSalesorder
 
-Remove a salesorder
+Deletes the AccountingSalesorder identified by `id`.
 
 ### Example Usage
 
@@ -352,7 +352,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -385,13 +385,13 @@ $request = new Operations\UpdateAccountingSalesorderRequest(
             regionCode: 'MO',
         ),
         categoryIds: [],
-        closedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.174Z'),
+        closedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.199Z'),
         createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
         currency: 'USD',
         discountAmount: 0,
         fees: [],
         fulfillmentType: Shared\FulfillmentType::Other,
-        id: '81444e74-2438-4d48-a12a-446390d8c063',
+        id: '034dfeb1-d580-474c-8283-43e2e41f0d01',
         lineitems: [],
         metadata: [],
         orderNumber: '832663',
@@ -413,7 +413,7 @@ $request = new Operations\UpdateAccountingSalesorderRequest(
         taxAmount: 0,
         tipAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.174Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.199Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

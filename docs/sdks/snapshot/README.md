@@ -11,7 +11,7 @@
 
 ## createComputeSnapshot
 
-Create a snapshot
+Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 
 ### Example Usage
 
@@ -35,13 +35,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: 'abdaf705-cd8b-45f5-acb1-4ea71458961b',
+        id: '9df2327e-0f73-4287-a7df-4ac283baa06f',
         metadata: [],
         name: 'snap-alius',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-30T21:24:26.180Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-01T15:49:46.407Z'),
     ),
     connectionId: '<id>',
 );
@@ -73,7 +73,7 @@ if ($response->computeSnapshot !== null) {
 
 ## getComputeSnapshot
 
-Retrieve a snapshot
+Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ if ($response->computeSnapshot !== null) {
 
 ## listComputeSnapshots
 
-List all snapshots
+Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -174,7 +174,7 @@ if ($response->computeSnapshots !== null) {
 
 ## removeComputeSnapshot
 
-Remove a snapshot
+Deletes the ComputeSnapshot identified by `id`.
 
 ### Example Usage
 

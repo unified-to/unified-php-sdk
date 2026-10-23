@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The current state of the assessment order */
 enum AssessmentOrderStatus: string
 {
     case Open = 'OPEN';

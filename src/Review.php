@@ -47,6 +47,8 @@ class Review
     /**
      * Create a review
      *
+     * Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Review
     /**
      * Retrieve a review
      *
+     * Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Review
 
     /**
      * Retrieve a review
+     *
+     * Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetPerformanceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPerformanceReviewResponse
@@ -241,6 +247,8 @@ class Review
     /**
      * Retrieve a review
      *
+     * Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetSocialReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSocialReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -303,6 +311,8 @@ class Review
 
     /**
      * List all reviews
+     *
+     * Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceReviewsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceReviewsResponse
@@ -367,6 +377,8 @@ class Review
     /**
      * List all reviews
      *
+     * Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPerformanceReviewsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPerformanceReviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -430,6 +442,8 @@ class Review
     /**
      * List all reviews
      *
+     * Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSocialReviewsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSocialReviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -492,6 +506,8 @@ class Review
 
     /**
      * Update a review
+     *
+     * Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceReviewResponse
@@ -561,6 +577,8 @@ class Review
     /**
      * Update a review
      *
+     * Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchSocialReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchSocialReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -629,6 +647,8 @@ class Review
     /**
      * Remove a review
      *
+     * Deletes the CommerceReview identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -685,6 +705,8 @@ class Review
 
     /**
      * Update a review
+     *
+     * Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReviewResponse
@@ -753,6 +775,8 @@ class Review
 
     /**
      * Update a review
+     *
+     * Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateSocialReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateSocialReviewResponse

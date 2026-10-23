@@ -19,7 +19,7 @@
 
 ## createAtsJob
 
-Create a job
+Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 
 ### Example Usage
 
@@ -72,7 +72,7 @@ $request = new Operations\CreateAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: 'f1ed3a25-8406-4efd-afcf-0a385a1fadb2',
+        id: '5ab983d8-8aed-4220-b98c-20c535ec253c',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -81,7 +81,7 @@ $request = new Operations\CreateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '6413a6cc-6a8e-4306-8822-db3f3900f798',
+                id: '9d473ef5-2192-4185-8751-1629bb7a7f91',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -94,7 +94,7 @@ $request = new Operations\CreateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-07T21:28:07.896Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-09T15:52:30.296Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -108,14 +108,14 @@ $request = new Operations\CreateAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-02T00:29:26.215Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-03T21:02:48.153Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: 'b6f8c91a-7f05-4e3b-ac0a-c79968a8a9af',
+                id: '813890e3-27c5-40cf-babe-cb546dc9606f',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-08-28T07:52:25.733Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-08-30T05:27:21.197Z'),
             ),
         ],
         publicJobUrls: [
@@ -125,7 +125,7 @@ $request = new Operations\CreateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '81736c36-1b8a-4700-a981-c384da1e68f5',
+                id: 'edba0fef-6feb-480a-9450-8824ead84cca',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -138,7 +138,7 @@ $request = new Operations\CreateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: 'fcd02da9-266c-4de9-a918-9a98f813e617',
+                id: '776515df-d9a9-4e87-b636-b718fad3bd87',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -151,7 +151,7 @@ $request = new Operations\CreateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: 'e29c1433-3d51-4fa1-8492-3354e0f8e77d',
+                id: '77e31e82-0a16-42cb-bc9a-25058cef8acb',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -169,7 +169,7 @@ $request = new Operations\CreateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-27T09:47:18.130Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-01T00:16:32.454Z'),
     ),
     connectionId: '<id>',
 );
@@ -201,7 +201,7 @@ if ($response->atsJob !== null) {
 
 ## createHrisJob
 
-Create a job
+Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
 ### Example Usage
 
@@ -228,11 +228,11 @@ $request = new Operations\CreateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '9a3cb5cb-f487-4b03-8119-62f5eec3c16a',
+        id: '26519dc9-69ac-4059-ba4e-2ee0291a8c88',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-30T05:18:40.719Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-30T23:18:09.859Z'),
     ),
     connectionId: '<id>',
 );
@@ -264,7 +264,7 @@ if ($response->hrisJob !== null) {
 
 ## getAtsJob
 
-Retrieve a job
+Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -315,7 +315,7 @@ if ($response->atsJob !== null) {
 
 ## getHrisJob
 
-Retrieve a job
+Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -366,7 +366,7 @@ if ($response->hrisJob !== null) {
 
 ## listAtsJobs
 
-List all jobs
+Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -416,7 +416,7 @@ if ($response->atsJobs !== null) {
 
 ## listHrisJobs
 
-List all jobs
+Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -466,7 +466,7 @@ if ($response->hrisJobs !== null) {
 
 ## patchAtsJob
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -519,7 +519,7 @@ $request = new Operations\PatchAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: '0b07a34e-39f9-404a-af24-ab50ae45bbd3',
+        id: 'abdbabdb-e8ee-46ff-bec9-f76ec78092fc',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -528,7 +528,7 @@ $request = new Operations\PatchAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '5ae4056e-ffe0-4bd5-bc78-8b4c4dae688f',
+                id: 'a124042e-72e1-4570-816b-573467885d01',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -541,7 +541,7 @@ $request = new Operations\PatchAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-07T21:28:07.934Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-09T15:52:30.357Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -555,14 +555,14 @@ $request = new Operations\PatchAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-02T00:29:26.254Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-03T21:02:48.217Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: '0711f01a-d966-4692-856e-ebefe2c72287',
+                id: 'a2fdd133-2847-42ba-951c-cfdcb7ddcddd',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-08-28T07:52:25.774Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-08-30T05:27:21.263Z'),
             ),
         ],
         publicJobUrls: [
@@ -572,7 +572,7 @@ $request = new Operations\PatchAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '8a96c284-ea18-4779-bda9-ab1be23a235d',
+                id: '95a0c94b-fd09-4fd8-8623-5f0bfb849649',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -585,7 +585,7 @@ $request = new Operations\PatchAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '9ed04038-4f62-4955-ba05-9ccf7856a92c',
+                id: '49137bac-9997-4091-a0ce-0abbc7fe610f',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -598,7 +598,7 @@ $request = new Operations\PatchAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: '6306a3f2-d536-4273-9170-bad83ea4b5ae',
+                id: 'ad0b5769-3173-4d52-99b4-2c601b00c67d',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -616,7 +616,7 @@ $request = new Operations\PatchAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-27T09:47:18.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-01T00:16:32.509Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -649,7 +649,7 @@ if ($response->atsJob !== null) {
 
 ## patchHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -676,11 +676,11 @@ $request = new Operations\PatchHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '51987954-bfbe-4f6d-8e56-6f516c79198d',
+        id: 'b1e43179-fc71-4f8b-94a8-7d02f75d7ac1',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-30T05:18:40.762Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-30T23:18:09.925Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -713,7 +713,7 @@ if ($response->hrisJob !== null) {
 
 ## removeAtsJob
 
-Remove a job
+Deletes the AtsJob identified by `id`.
 
 ### Example Usage
 
@@ -764,7 +764,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisJob
 
-Remove a job
+Deletes the HrisJob identified by `id`.
 
 ### Example Usage
 
@@ -815,7 +815,7 @@ if ($response->statusCode === 200) {
 
 ## updateAtsJob
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -868,7 +868,7 @@ $request = new Operations\UpdateAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: '0b07a34e-39f9-404a-af24-ab50ae45bbd3',
+        id: 'abdbabdb-e8ee-46ff-bec9-f76ec78092fc',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -877,7 +877,7 @@ $request = new Operations\UpdateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '5ae4056e-ffe0-4bd5-bc78-8b4c4dae688f',
+                id: 'a124042e-72e1-4570-816b-573467885d01',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -890,7 +890,7 @@ $request = new Operations\UpdateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-07T21:28:07.934Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-09T15:52:30.357Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -904,14 +904,14 @@ $request = new Operations\UpdateAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-02T00:29:26.254Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-03T21:02:48.217Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: '0711f01a-d966-4692-856e-ebefe2c72287',
+                id: 'a2fdd133-2847-42ba-951c-cfdcb7ddcddd',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-08-28T07:52:25.774Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-08-30T05:27:21.263Z'),
             ),
         ],
         publicJobUrls: [
@@ -921,7 +921,7 @@ $request = new Operations\UpdateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '8a96c284-ea18-4779-bda9-ab1be23a235d',
+                id: '95a0c94b-fd09-4fd8-8623-5f0bfb849649',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -934,7 +934,7 @@ $request = new Operations\UpdateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '9ed04038-4f62-4955-ba05-9ccf7856a92c',
+                id: '49137bac-9997-4091-a0ce-0abbc7fe610f',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -947,7 +947,7 @@ $request = new Operations\UpdateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: '6306a3f2-d536-4273-9170-bad83ea4b5ae',
+                id: 'ad0b5769-3173-4d52-99b4-2c601b00c67d',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -965,7 +965,7 @@ $request = new Operations\UpdateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-27T09:47:18.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-01T00:16:32.509Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -998,7 +998,7 @@ if ($response->atsJob !== null) {
 
 ## updateHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -1025,11 +1025,11 @@ $request = new Operations\UpdateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '51987954-bfbe-4f6d-8e56-6f516c79198d',
+        id: 'b1e43179-fc71-4f8b-94a8-7d02f75d7ac1',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-30T05:18:40.762Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-30T23:18:09.925Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

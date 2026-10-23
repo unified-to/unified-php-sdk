@@ -74,7 +74,7 @@ class HrisEmployee
     public ?\DateTime $dateOfBirth = null;
 
     /**
-     * $emails
+     * The employee's email addresses
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\HrisEmail> $emails
      */
@@ -121,6 +121,7 @@ class HrisEmployee
     public ?HrisEmployeeEmploymentType $employmentType = null;
 
     /**
+     * The employee's first (given) name
      *
      * @var ?string $firstName
      */
@@ -210,6 +211,7 @@ class HrisEmployee
     public ?string $languageLocale = null;
 
     /**
+     * The employee's last (family) name
      *
      * @var ?string $lastName
      */
@@ -255,6 +257,7 @@ class HrisEmployee
     public ?array $metadata = null;
 
     /**
+     * The employee's full name
      *
      * @var ?string $name
      */

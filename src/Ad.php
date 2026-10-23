@@ -47,6 +47,8 @@ class Ad
     /**
      * Create an ad
      *
+     * Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Ad
     /**
      * Retrieve an ad
      *
+     * Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Ad
     /**
      * List all ads
      *
+     * Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsAdsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsAdsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Ad
 
     /**
      * Update an ad
+     *
+     * Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsAdResponse
@@ -309,6 +317,8 @@ class Ad
     /**
      * Remove an ad
      *
+     * Deletes the AdsAd identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Ad
 
     /**
      * Update an ad
+     *
+     * Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsAdResponse

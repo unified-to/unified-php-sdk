@@ -13,7 +13,7 @@
 
 ## createAccountingAccount
 
-Create an account
+Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
 ### Example Usage
 
@@ -41,7 +41,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'e1ef892f-3b71-470e-9366-7d11f6594355',
+        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -54,7 +54,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.101Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
     ),
     connectionId: '<id>',
 );
@@ -86,7 +86,7 @@ if ($response->accountingAccount !== null) {
 
 ## getAccountingAccount
 
-Retrieve an account
+Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ if ($response->accountingAccount !== null) {
 
 ## listAccountingAccounts
 
-List all accounts
+Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ if ($response->accountingAccounts !== null) {
 
 ## patchAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -215,7 +215,7 @@ $request = new Operations\PatchAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'b89164f4-16d4-421e-842f-56eca530ec45',
+        id: 'c0445f00-3fb5-4d79-92ed-8286fdb0f9f0',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -228,7 +228,7 @@ $request = new Operations\PatchAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.106Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.336Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -261,7 +261,7 @@ if ($response->accountingAccount !== null) {
 
 ## removeAccountingAccount
 
-Remove an account
+Deletes the AccountingAccount identified by `id`.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -340,7 +340,7 @@ $request = new Operations\UpdateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'b89164f4-16d4-421e-842f-56eca530ec45',
+        id: 'c0445f00-3fb5-4d79-92ed-8286fdb0f9f0',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -353,7 +353,7 @@ $request = new Operations\UpdateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.106Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.336Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

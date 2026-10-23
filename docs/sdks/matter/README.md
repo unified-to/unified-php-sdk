@@ -13,7 +13,7 @@
 
 ## createLegalMatter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -43,11 +43,11 @@ $request = new Operations\CreateLegalMatterRequest(
         createdAt: Utils\Utils::parseDateTime('2023-05-28T04:10:42.375Z'),
         currency: 'BOB',
         description: 'Speciosus cresco aut cotidie temeritas arma.',
-        id: '758a09bf-ac35-4ca0-9297-ac6c2c6e768e',
+        id: 'f85c5f3c-0ae8-4615-976c-a5a49a98003c',
         metadata: [],
         name: 'Walter v. Franecki - Spinka',
         number: '2023-3062',
-        openedAt: Utils\Utils::parseDateTime('2023-07-05T06:18:43.614Z'),
+        openedAt: Utils\Utils::parseDateTime('2023-07-05T07:46:27.868Z'),
         parties: [
             new Shared\LegalParty(
                 description: 'Urban Walter',
@@ -56,8 +56,8 @@ $request = new Operations\CreateLegalMatterRequest(
         ],
         stage: 'currus',
         status: Shared\LegalMatterStatus::Open,
-        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-28T21:12:06.224Z'),
-        updatedAt: Utils\Utils::parseDateTime('2023-07-17T10:05:24.278Z'),
+        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-30T20:52:36.666Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-17T12:01:08.804Z'),
     ),
     connectionId: '<id>',
 );
@@ -89,7 +89,7 @@ if ($response->legalMatter !== null) {
 
 ## getLegalMatter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ if ($response->legalMatter !== null) {
 
 ## listLegalMatters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ if ($response->legalMatters !== null) {
 
 ## patchLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -220,11 +220,11 @@ $request = new Operations\PatchLegalMatterRequest(
         createdAt: Utils\Utils::parseDateTime('2023-05-28T04:10:42.375Z'),
         currency: 'BOB',
         description: 'Speciosus cresco aut cotidie temeritas arma.',
-        id: 'a08b5258-b003-44e5-ad6e-92b4727c2be4',
+        id: '889de8d2-7e6e-4898-8d0f-5c517690c435',
         metadata: [],
         name: 'Walter v. Franecki - Spinka',
         number: '2023-3062',
-        openedAt: Utils\Utils::parseDateTime('2023-07-05T06:18:43.615Z'),
+        openedAt: Utils\Utils::parseDateTime('2023-07-05T07:46:27.869Z'),
         parties: [
             new Shared\LegalParty(
                 description: 'Urban Walter',
@@ -233,8 +233,8 @@ $request = new Operations\PatchLegalMatterRequest(
         ],
         stage: 'currus',
         status: Shared\LegalMatterStatus::Open,
-        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-28T21:12:06.253Z'),
-        updatedAt: Utils\Utils::parseDateTime('2023-07-17T10:05:24.279Z'),
+        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-30T20:52:36.691Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-17T12:01:08.805Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -267,7 +267,7 @@ if ($response->legalMatter !== null) {
 
 ## removeLegalMatter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ if ($response->statusCode === 200) {
 
 ## updateLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -348,11 +348,11 @@ $request = new Operations\UpdateLegalMatterRequest(
         createdAt: Utils\Utils::parseDateTime('2023-05-28T04:10:42.375Z'),
         currency: 'BOB',
         description: 'Speciosus cresco aut cotidie temeritas arma.',
-        id: 'a08b5258-b003-44e5-ad6e-92b4727c2be4',
+        id: '889de8d2-7e6e-4898-8d0f-5c517690c435',
         metadata: [],
         name: 'Walter v. Franecki - Spinka',
         number: '2023-3062',
-        openedAt: Utils\Utils::parseDateTime('2023-07-05T06:18:43.615Z'),
+        openedAt: Utils\Utils::parseDateTime('2023-07-05T07:46:27.869Z'),
         parties: [
             new Shared\LegalParty(
                 description: 'Urban Walter',
@@ -361,8 +361,8 @@ $request = new Operations\UpdateLegalMatterRequest(
         ],
         stage: 'currus',
         status: Shared\LegalMatterStatus::Open,
-        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-28T21:12:06.253Z'),
-        updatedAt: Utils\Utils::parseDateTime('2023-07-17T10:05:24.279Z'),
+        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-30T20:52:36.691Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-17T12:01:08.805Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -47,6 +47,8 @@ class Appointment
     /**
      * Create an appointment
      *
+     * Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHealthcareAppointmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Appointment
     /**
      * Retrieve an appointment
      *
+     * Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareAppointmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Appointment
     /**
      * List all appointments
      *
+     * Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareAppointmentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareAppointmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Appointment
 
     /**
      * Update an appointment
+     *
+     * Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHealthcareAppointmentResponse
@@ -309,6 +317,8 @@ class Appointment
     /**
      * Remove an appointment
      *
+     * Deletes the HealthcareAppointment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHealthcareAppointmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Appointment
 
     /**
      * Update an appointment
+     *
+     * Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHealthcareAppointmentResponse

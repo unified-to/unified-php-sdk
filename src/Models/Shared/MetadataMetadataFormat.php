@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The data type of the custom field's values */
 enum MetadataMetadataFormat: string
 {
     case Text = 'TEXT';

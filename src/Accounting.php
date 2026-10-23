@@ -47,6 +47,8 @@ class Accounting
     /**
      * Create an account
      *
+     * Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingAccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Accounting
 
     /**
      * Create a bankfeedaccount
+     *
+     * Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingBankfeedaccountResponse
@@ -183,6 +187,8 @@ class Accounting
     /**
      * Create a bankfeedtransaction
      *
+     * Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingBankfeedtransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Accounting
 
     /**
      * Create a bill
+     *
+     * Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingBillResponse
@@ -319,6 +327,8 @@ class Accounting
     /**
      * Create a category
      *
+     * Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Accounting
 
     /**
      * Create a contact
+     *
+     * Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingContactResponse
@@ -455,6 +467,8 @@ class Accounting
     /**
      * Create a creditmemo
      *
+     * Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -522,6 +536,8 @@ class Accounting
 
     /**
      * Create an expense
+     *
+     * Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingExpenseResponse
@@ -591,6 +607,8 @@ class Accounting
     /**
      * Create an expensereport
      *
+     * Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingExpensereportResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -658,6 +676,8 @@ class Accounting
 
     /**
      * Create an invoice
+     *
+     * Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse
@@ -727,6 +747,8 @@ class Accounting
     /**
      * Create a journal
      *
+     * Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -795,12 +817,16 @@ class Accounting
     /**
      * Create an order
      *
+     * Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function createAccountingOrder(Operations\CreateAccountingOrderRequest $request, ?Options $options = null): Operations\CreateAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order', Operations\CreateAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -862,6 +888,8 @@ class Accounting
 
     /**
      * Create a paymentterm
+     *
+     * Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingPaymenttermRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingPaymenttermResponse
@@ -931,6 +959,8 @@ class Accounting
     /**
      * Create a project
      *
+     * Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -998,6 +1028,8 @@ class Accounting
 
     /**
      * Create a purchaseorder
+     *
+     * Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingPurchaseorderResponse
@@ -1067,6 +1099,8 @@ class Accounting
     /**
      * Create a quote
      *
+     * Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingQuoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1134,6 +1168,8 @@ class Accounting
 
     /**
      * Create a salesorder
+     *
+     * Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingSalesorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingSalesorderResponse
@@ -1203,6 +1239,8 @@ class Accounting
     /**
      * Create a taxrate
      *
+     * Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1270,6 +1308,8 @@ class Accounting
 
     /**
      * Create a transaction
+     *
+     * Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse
@@ -1339,6 +1379,8 @@ class Accounting
     /**
      * Create a vendorcredit
      *
+     * Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingVendorcreditResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1407,6 +1449,8 @@ class Accounting
     /**
      * Retrieve an account
      *
+     * Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingAccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1469,6 +1513,8 @@ class Accounting
 
     /**
      * Retrieve an agedpayable
+     *
+     * Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingAgedpayableRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingAgedpayableResponse
@@ -1533,6 +1579,8 @@ class Accounting
     /**
      * Retrieve an agedreceivable
      *
+     * Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingAgedreceivableRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingAgedreceivableResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1595,6 +1643,8 @@ class Accounting
 
     /**
      * Retrieve a balancesheet
+     *
+     * Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingBalancesheetRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingBalancesheetResponse
@@ -1659,6 +1709,8 @@ class Accounting
     /**
      * Retrieve a bankfeedaccount
      *
+     * Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingBankfeedaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1721,6 +1773,8 @@ class Accounting
 
     /**
      * Retrieve a bankfeedtransaction
+     *
+     * Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingBankfeedtransactionResponse
@@ -1785,6 +1839,8 @@ class Accounting
     /**
      * Retrieve a bill
      *
+     * Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1847,6 +1903,8 @@ class Accounting
 
     /**
      * Retrieve a cashflow
+     *
+     * Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingCashflowRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingCashflowResponse
@@ -1911,6 +1969,8 @@ class Accounting
     /**
      * Retrieve a category
      *
+     * Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1973,6 +2033,8 @@ class Accounting
 
     /**
      * Retrieve a contact
+     *
+     * Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingContactResponse
@@ -2037,6 +2099,8 @@ class Accounting
     /**
      * Retrieve a creditmemo
      *
+     * Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2099,6 +2163,8 @@ class Accounting
 
     /**
      * Retrieve an expense
+     *
+     * Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingExpenseResponse
@@ -2163,6 +2229,8 @@ class Accounting
     /**
      * Retrieve an expensereport
      *
+     * Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingExpensereportResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2225,6 +2293,8 @@ class Accounting
 
     /**
      * Retrieve an invoice
+     *
+     * Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse
@@ -2289,6 +2359,8 @@ class Accounting
     /**
      * Retrieve a journal
      *
+     * Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2352,12 +2424,16 @@ class Accounting
     /**
      * Retrieve an order
      *
+     * Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function getAccountingOrder(Operations\GetAccountingOrderRequest $request, ?Options $options = null): Operations\GetAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order/{id}', Operations\GetAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -2414,6 +2490,8 @@ class Accounting
 
     /**
      * Retrieve an organization
+     *
+     * Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingOrganizationResponse
@@ -2478,6 +2556,8 @@ class Accounting
     /**
      * Retrieve a paymentterm
      *
+     * Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingPaymenttermRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingPaymenttermResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2540,6 +2620,8 @@ class Accounting
 
     /**
      * Retrieve a profitloss
+     *
+     * Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingProfitlossRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingProfitlossResponse
@@ -2604,6 +2686,8 @@ class Accounting
     /**
      * Retrieve a project
      *
+     * Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2666,6 +2750,8 @@ class Accounting
 
     /**
      * Retrieve a purchaseorder
+     *
+     * Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingPurchaseorderResponse
@@ -2730,6 +2816,8 @@ class Accounting
     /**
      * Retrieve a purchasereceipt
      *
+     * Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingPurchasereceiptRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingPurchasereceiptResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2792,6 +2880,8 @@ class Accounting
 
     /**
      * Retrieve a quote
+     *
+     * Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingQuoteResponse
@@ -2856,6 +2946,8 @@ class Accounting
     /**
      * Retrieve a salesorder
      *
+     * Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingSalesorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingSalesorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2918,6 +3010,8 @@ class Accounting
 
     /**
      * Retrieve a salesreceipt
+     *
+     * Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingSalesreceiptRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingSalesreceiptResponse
@@ -2982,6 +3076,8 @@ class Accounting
     /**
      * Retrieve a taxrate
      *
+     * Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3044,6 +3140,8 @@ class Accounting
 
     /**
      * Retrieve a transaction
+     *
+     * Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse
@@ -3108,6 +3206,8 @@ class Accounting
     /**
      * Retrieve a trialbalance
      *
+     * Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingTrialbalanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingTrialbalanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3170,6 +3270,8 @@ class Accounting
 
     /**
      * Retrieve a vendorcredit
+     *
+     * Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingVendorcreditResponse
@@ -3234,6 +3336,8 @@ class Accounting
     /**
      * List all accounts
      *
+     * Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingAccountsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingAccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3296,6 +3400,8 @@ class Accounting
 
     /**
      * List all agedpayables
+     *
+     * Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingAgedpayablesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingAgedpayablesResponse
@@ -3360,6 +3466,8 @@ class Accounting
     /**
      * List all agedreceivables
      *
+     * Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingAgedreceivablesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingAgedreceivablesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3422,6 +3530,8 @@ class Accounting
 
     /**
      * List all balancesheets
+     *
+     * Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingBalancesheetsResponse
@@ -3486,6 +3596,8 @@ class Accounting
     /**
      * List all bankfeedaccounts
      *
+     * Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingBankfeedaccountsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingBankfeedaccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3548,6 +3660,8 @@ class Accounting
 
     /**
      * List all bankfeedtransactions
+     *
+     * Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingBankfeedtransactionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingBankfeedtransactionsResponse
@@ -3612,6 +3726,8 @@ class Accounting
     /**
      * List all bills
      *
+     * Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingBillsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingBillsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3674,6 +3790,8 @@ class Accounting
 
     /**
      * List all cashflows
+     *
+     * Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingCashflowsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingCashflowsResponse
@@ -3738,6 +3856,8 @@ class Accounting
     /**
      * List all categories
      *
+     * Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingCategoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3800,6 +3920,8 @@ class Accounting
 
     /**
      * List all contacts
+     *
+     * Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingContactsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingContactsResponse
@@ -3864,6 +3986,8 @@ class Accounting
     /**
      * List all creditmemoes
      *
+     * Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3926,6 +4050,8 @@ class Accounting
 
     /**
      * List all expensereports
+     *
+     * Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingExpensereportsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingExpensereportsResponse
@@ -3990,6 +4116,8 @@ class Accounting
     /**
      * List all expenses
      *
+     * Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingExpensesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingExpensesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4052,6 +4180,8 @@ class Accounting
 
     /**
      * List all invoices
+     *
+     * Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingInvoicesResponse
@@ -4116,6 +4246,8 @@ class Accounting
     /**
      * List all journals
      *
+     * Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingJournalsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingJournalsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4179,12 +4311,16 @@ class Accounting
     /**
      * List all orders
      *
+     * Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrdersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingOrdersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function listAccountingOrders(Operations\ListAccountingOrdersRequest $request, ?Options $options = null): Operations\ListAccountingOrdersResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order', Operations\ListAccountingOrdersRequest::class, $request);
         $urlOverride = null;
@@ -4241,6 +4377,8 @@ class Accounting
 
     /**
      * List all organizations
+     *
+     * Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsResponse
@@ -4305,6 +4443,8 @@ class Accounting
     /**
      * List all paymentterms
      *
+     * Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingPaymenttermsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingPaymenttermsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4367,6 +4507,8 @@ class Accounting
 
     /**
      * List all profitlosses
+     *
+     * Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingProfitlossesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingProfitlossesResponse
@@ -4431,6 +4573,8 @@ class Accounting
     /**
      * List all projects
      *
+     * Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingProjectsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingProjectsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4493,6 +4637,8 @@ class Accounting
 
     /**
      * List all purchaseorders
+     *
+     * Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingPurchaseordersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingPurchaseordersResponse
@@ -4557,6 +4703,8 @@ class Accounting
     /**
      * List all purchasereceipts
      *
+     * Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingPurchasereceiptsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingPurchasereceiptsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4619,6 +4767,8 @@ class Accounting
 
     /**
      * List all quotes
+     *
+     * Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingQuotesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingQuotesResponse
@@ -4683,6 +4833,8 @@ class Accounting
     /**
      * List all salesorders
      *
+     * Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingSalesordersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingSalesordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4745,6 +4897,8 @@ class Accounting
 
     /**
      * List all salesreceipts
+     *
+     * Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingSalesreceiptsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingSalesreceiptsResponse
@@ -4809,6 +4963,8 @@ class Accounting
     /**
      * List all taxrates
      *
+     * Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingTaxratesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingTaxratesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4871,6 +5027,8 @@ class Accounting
 
     /**
      * List all transactions
+     *
+     * Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse
@@ -4935,6 +5093,8 @@ class Accounting
     /**
      * List all trialbalances
      *
+     * Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingTrialbalancesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4998,6 +5158,8 @@ class Accounting
     /**
      * List all vendorcredits
      *
+     * Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingVendorcreditsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingVendorcreditsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5060,6 +5222,8 @@ class Accounting
 
     /**
      * Update an account
+     *
+     * Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingAccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingAccountResponse
@@ -5129,6 +5293,8 @@ class Accounting
     /**
      * Update a bankfeedaccount
      *
+     * Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingBankfeedaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5196,6 +5362,8 @@ class Accounting
 
     /**
      * Update a bankfeedtransaction
+     *
+     * Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingBankfeedtransactionResponse
@@ -5265,6 +5433,8 @@ class Accounting
     /**
      * Update a bill
      *
+     * Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5332,6 +5502,8 @@ class Accounting
 
     /**
      * Update a category
+     *
+     * Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingCategoryResponse
@@ -5401,6 +5573,8 @@ class Accounting
     /**
      * Update a contact
      *
+     * Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5468,6 +5642,8 @@ class Accounting
 
     /**
      * Update a creditmemo
+     *
+     * Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoResponse
@@ -5537,6 +5713,8 @@ class Accounting
     /**
      * Update an expense
      *
+     * Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5604,6 +5782,8 @@ class Accounting
 
     /**
      * Update an expensereport
+     *
+     * Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingExpensereportResponse
@@ -5673,6 +5853,8 @@ class Accounting
     /**
      * Update an invoice
      *
+     * Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5740,6 +5922,8 @@ class Accounting
 
     /**
      * Update a journal
+     *
+     * Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingJournalResponse
@@ -5809,12 +5993,16 @@ class Accounting
     /**
      * Update an order
      *
+     * Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function patchAccountingOrder(Operations\PatchAccountingOrderRequest $request, ?Options $options = null): Operations\PatchAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order/{id}', Operations\PatchAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -5876,6 +6064,8 @@ class Accounting
 
     /**
      * Update a paymentterm
+     *
+     * Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingPaymenttermRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingPaymenttermResponse
@@ -5945,6 +6135,8 @@ class Accounting
     /**
      * Update a project
      *
+     * Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -6012,6 +6204,8 @@ class Accounting
 
     /**
      * Update a purchaseorder
+     *
+     * Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingPurchaseorderResponse
@@ -6081,6 +6275,8 @@ class Accounting
     /**
      * Update a quote
      *
+     * Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingQuoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -6148,6 +6344,8 @@ class Accounting
 
     /**
      * Update a salesorder
+     *
+     * Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingSalesorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingSalesorderResponse
@@ -6217,6 +6415,8 @@ class Accounting
     /**
      * Update a taxrate
      *
+     * Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -6284,6 +6484,8 @@ class Accounting
 
     /**
      * Update a transaction
+     *
+     * Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse
@@ -6353,6 +6555,8 @@ class Accounting
     /**
      * Update a vendorcredit
      *
+     * Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingVendorcreditResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -6421,6 +6625,8 @@ class Accounting
     /**
      * Remove an account
      *
+     * Deletes the AccountingAccount identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingAccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingAccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -6477,6 +6683,8 @@ class Accounting
 
     /**
      * Remove a bankfeedaccount
+     *
+     * Deletes the AccountingBankfeedaccount identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBankfeedaccountResponse
@@ -6535,6 +6743,8 @@ class Accounting
     /**
      * Remove a bankfeedtransaction
      *
+     * Deletes the AccountingBankfeedtransaction identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBankfeedtransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -6591,6 +6801,8 @@ class Accounting
 
     /**
      * Remove a bill
+     *
+     * Deletes the AccountingBill identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBillResponse
@@ -6649,6 +6861,8 @@ class Accounting
     /**
      * Remove a category
      *
+     * Deletes the AccountingCategory identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -6705,6 +6919,8 @@ class Accounting
 
     /**
      * Remove a contact
+     *
+     * Deletes the AccountingContact identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingContactResponse
@@ -6763,6 +6979,8 @@ class Accounting
     /**
      * Remove a creditmemo
      *
+     * Deletes the AccountingCreditmemo identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -6819,6 +7037,8 @@ class Accounting
 
     /**
      * Remove an expense
+     *
+     * Deletes the AccountingExpense identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingExpenseResponse
@@ -6877,6 +7097,8 @@ class Accounting
     /**
      * Remove an expensereport
      *
+     * Deletes the AccountingExpensereport identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingExpensereportResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -6933,6 +7155,8 @@ class Accounting
 
     /**
      * Remove an invoice
+     *
+     * Deletes the AccountingInvoice identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse
@@ -6991,6 +7215,8 @@ class Accounting
     /**
      * Remove a journal
      *
+     * Deletes the AccountingJournal identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -7048,12 +7274,16 @@ class Accounting
     /**
      * Remove an order
      *
+     * Deletes the AccountingOrder identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function removeAccountingOrder(Operations\RemoveAccountingOrderRequest $request, ?Options $options = null): Operations\RemoveAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order/{id}', Operations\RemoveAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -7104,6 +7334,8 @@ class Accounting
 
     /**
      * Remove a paymentterm
+     *
+     * Deletes the AccountingPaymentterm identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingPaymenttermRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingPaymenttermResponse
@@ -7162,6 +7394,8 @@ class Accounting
     /**
      * Remove a project
      *
+     * Deletes the AccountingProject identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -7218,6 +7452,8 @@ class Accounting
 
     /**
      * Remove a purchaseorder
+     *
+     * Deletes the AccountingPurchaseorder identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingPurchaseorderResponse
@@ -7276,6 +7512,8 @@ class Accounting
     /**
      * Remove a quote
      *
+     * Deletes the AccountingQuote identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingQuoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -7332,6 +7570,8 @@ class Accounting
 
     /**
      * Remove a salesorder
+     *
+     * Deletes the AccountingSalesorder identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingSalesorderResponse
@@ -7390,6 +7630,8 @@ class Accounting
     /**
      * Remove a taxrate
      *
+     * Deletes the AccountingTaxrate identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -7446,6 +7688,8 @@ class Accounting
 
     /**
      * Remove a transaction
+     *
+     * Deletes the AccountingTransaction identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse
@@ -7504,6 +7748,8 @@ class Accounting
     /**
      * Remove a vendorcredit
      *
+     * Deletes the AccountingVendorcredit identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingVendorcreditResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -7560,6 +7806,8 @@ class Accounting
 
     /**
      * Update an account
+     *
+     * Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingAccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingAccountResponse
@@ -7629,6 +7877,8 @@ class Accounting
     /**
      * Update a bankfeedaccount
      *
+     * Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBankfeedaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -7696,6 +7946,8 @@ class Accounting
 
     /**
      * Update a bankfeedtransaction
+     *
+     * Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBankfeedtransactionResponse
@@ -7765,6 +8017,8 @@ class Accounting
     /**
      * Update a bill
      *
+     * Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -7832,6 +8086,8 @@ class Accounting
 
     /**
      * Update a category
+     *
+     * Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryResponse
@@ -7901,6 +8157,8 @@ class Accounting
     /**
      * Update a contact
      *
+     * Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -7968,6 +8226,8 @@ class Accounting
 
     /**
      * Update a creditmemo
+     *
+     * Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoResponse
@@ -8037,6 +8297,8 @@ class Accounting
     /**
      * Update an expense
      *
+     * Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -8104,6 +8366,8 @@ class Accounting
 
     /**
      * Update an expensereport
+     *
+     * Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingExpensereportResponse
@@ -8173,6 +8437,8 @@ class Accounting
     /**
      * Update an invoice
      *
+     * Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -8240,6 +8506,8 @@ class Accounting
 
     /**
      * Update a journal
+     *
+     * Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingJournalResponse
@@ -8309,12 +8577,16 @@ class Accounting
     /**
      * Update an order
      *
+     * Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function updateAccountingOrder(Operations\UpdateAccountingOrderRequest $request, ?Options $options = null): Operations\UpdateAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order/{id}', Operations\UpdateAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -8376,6 +8648,8 @@ class Accounting
 
     /**
      * Update a paymentterm
+     *
+     * Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingPaymenttermRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingPaymenttermResponse
@@ -8445,6 +8719,8 @@ class Accounting
     /**
      * Update a project
      *
+     * Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -8512,6 +8788,8 @@ class Accounting
 
     /**
      * Update a purchaseorder
+     *
+     * Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingPurchaseorderResponse
@@ -8581,6 +8859,8 @@ class Accounting
     /**
      * Update a quote
      *
+     * Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingQuoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -8648,6 +8928,8 @@ class Accounting
 
     /**
      * Update a salesorder
+     *
+     * Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingSalesorderResponse
@@ -8717,6 +8999,8 @@ class Accounting
     /**
      * Update a taxrate
      *
+     * Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTaxrateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -8785,6 +9069,8 @@ class Accounting
     /**
      * Update a transaction
      *
+     * Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -8852,6 +9138,8 @@ class Accounting
 
     /**
      * Update a vendorcredit
+     *
+     * Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingVendorcreditResponse

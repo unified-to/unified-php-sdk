@@ -4,20 +4,22 @@
 
 ### Available Operations
 
-* [createAccountingOrder](#createaccountingorder) - Create an order
+* [~~createAccountingOrder~~](#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAssessmentOrder](#createassessmentorder) - Create an order
-* [getAccountingOrder](#getaccountingorder) - Retrieve an order
+* [~~getAccountingOrder~~](#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAssessmentOrder](#getassessmentorder) - Retrieve an order
-* [listAccountingOrders](#listaccountingorders) - List all orders
-* [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [~~listAccountingOrders~~](#listaccountingorders) - List all orders :warning: **Deprecated**
+* [~~patchAccountingOrder~~](#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAssessmentOrder](#patchassessmentorder) - Update an order
-* [removeAccountingOrder](#removeaccountingorder) - Remove an order
-* [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [~~removeAccountingOrder~~](#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [~~updateAccountingOrder~~](#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAssessmentOrder](#updateassessmentorder) - Update an order
 
-## createAccountingOrder
+## ~~createAccountingOrder~~
 
-Create an order
+Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -50,7 +52,7 @@ $request = new Operations\CreateAccountingOrderRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         currency: 'GBP',
-        id: 'f86dd8f6-a014-47f6-9134-f31f328acb2f',
+        id: '8c3cf509-050d-41a9-8ce6-6d17f6f33e31',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
@@ -65,7 +67,7 @@ $request = new Operations\CreateAccountingOrderRequest(
         status: Shared\AccountingOrderStatus::Authorized,
         totalAmount: 0,
         type: Shared\AccountingOrderType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2022-02-08T07:18:52.782Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-08T17:08:09.733Z'),
     ),
     connectionId: '<id>',
 );
@@ -97,7 +99,7 @@ if ($response->accountingOrder !== null) {
 
 ## createAssessmentOrder
 
-Create an order
+Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
 ### Example Usage
 
@@ -122,7 +124,7 @@ $request = new Operations\CreateAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
         createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
-        id: '46cb793e-1410-48a9-86d0-1a4baf1eeaa6',
+        id: 'e4deecb5-a978-419b-ab61-a80ca92420ed',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -149,7 +151,7 @@ $request = new Operations\CreateAssessmentOrderRequest(
         responseUrl: 'https://rowdy-fisherman.biz/',
         status: Shared\AssessmentOrderStatus::Rejected,
         targetUrl: 'https://cautious-turret.info',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-25T20:34:45.957Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T09:15:43.301Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -180,9 +182,11 @@ if ($response->assessmentOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingOrder
+## ~~getAccountingOrder~~
 
-Retrieve an order
+Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -233,7 +237,7 @@ if ($response->accountingOrder !== null) {
 
 ## getAssessmentOrder
 
-Retrieve an order
+Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -282,9 +286,11 @@ if ($response->assessmentOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingOrders
+## ~~listAccountingOrders~~
 
-List all orders
+Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -332,9 +338,11 @@ if ($response->accountingOrders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingOrder
+## ~~patchAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -367,7 +375,7 @@ $request = new Operations\PatchAccountingOrderRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         currency: 'GBP',
-        id: '4c2c437b-fa37-41d5-a10b-c8e726820b58',
+        id: '282ec9b9-dd69-4acf-922e-27d049792b63',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
@@ -382,7 +390,7 @@ $request = new Operations\PatchAccountingOrderRequest(
         status: Shared\AccountingOrderStatus::Authorized,
         totalAmount: 0,
         type: Shared\AccountingOrderType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2022-02-08T07:18:52.791Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-08T17:08:09.741Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -415,7 +423,7 @@ if ($response->accountingOrder !== null) {
 
 ## patchAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -440,7 +448,7 @@ $request = new Operations\PatchAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
         createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
-        id: '5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec',
+        id: '79bbd734-8e01-4ed4-93cb-acf9e73a268a',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -467,7 +475,7 @@ $request = new Operations\PatchAssessmentOrderRequest(
         responseUrl: 'https://rowdy-fisherman.biz/',
         status: Shared\AssessmentOrderStatus::Rejected,
         targetUrl: 'https://cautious-turret.info',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-25T20:34:45.967Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T09:15:43.311Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -499,9 +507,11 @@ if ($response->assessmentOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingOrder
+## ~~removeAccountingOrder~~
 
-Remove an order
+Deletes the AccountingOrder identified by `id`.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -550,9 +560,11 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingOrder
+## ~~updateAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -585,7 +597,7 @@ $request = new Operations\UpdateAccountingOrderRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         currency: 'GBP',
-        id: '4c2c437b-fa37-41d5-a10b-c8e726820b58',
+        id: '282ec9b9-dd69-4acf-922e-27d049792b63',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
@@ -600,7 +612,7 @@ $request = new Operations\UpdateAccountingOrderRequest(
         status: Shared\AccountingOrderStatus::Authorized,
         totalAmount: 0,
         type: Shared\AccountingOrderType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2022-02-08T07:18:52.791Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-08T17:08:09.741Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -633,7 +645,7 @@ if ($response->accountingOrder !== null) {
 
 ## updateAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -658,7 +670,7 @@ $request = new Operations\UpdateAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
         createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
-        id: '5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec',
+        id: '79bbd734-8e01-4ed4-93cb-acf9e73a268a',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -685,7 +697,7 @@ $request = new Operations\UpdateAssessmentOrderRequest(
         responseUrl: 'https://rowdy-fisherman.biz/',
         status: Shared\AssessmentOrderStatus::Rejected,
         targetUrl: 'https://cautious-turret.info',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-25T20:34:45.967Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T09:15:43.311Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',

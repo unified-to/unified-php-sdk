@@ -47,6 +47,8 @@ class Itemvariant
     /**
      * Create an itemvariant
      *
+     * Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Itemvariant
     /**
      * Retrieve an itemvariant
      *
+     * Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Itemvariant
     /**
      * List all itemvariants
      *
+     * Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Itemvariant
 
     /**
      * Update an itemvariant
+     *
+     * Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantResponse
@@ -309,6 +317,8 @@ class Itemvariant
     /**
      * Remove an itemvariant
      *
+     * Deletes the CommerceItemvariant identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Itemvariant
 
     /**
      * Update an itemvariant
+     *
+     * Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantResponse

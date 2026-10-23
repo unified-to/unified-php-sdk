@@ -13,7 +13,7 @@
 
 ## createHrisTimeoff
 
-Create a timeoff
+Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
 ### Example Usage
 
@@ -36,21 +36,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-23T09:08:38.740Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-23T12:45:41.369Z'),
         comments: 'Blandior ventus curiositas amplitudo.',
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2024-12-28T17:18:17.498Z'),
-        id: 'f0b66e32-63b5-4634-8ced-df6263f431d8',
+        endAt: Utils\Utils::parseDateTime('2024-12-29T23:50:53.916Z'),
+        id: 'e9166945-9121-45f2-8b46-f58c938170ce',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-04T19:24:22.037Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-05T13:29:26.276Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-12T19:42:00.487Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-13T02:55:47.937Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -83,7 +83,7 @@ if ($response->hrisTimeoff !== null) {
 
 ## getHrisTimeoff
 
-Retrieve a timeoff
+Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ if ($response->hrisTimeoff !== null) {
 
 ## listHrisTimeoffs
 
-List all timeoffs
+Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ if ($response->hrisTimeoffs !== null) {
 
 ## patchHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -207,21 +207,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-23T09:08:38.741Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-23T12:45:41.371Z'),
         comments: 'Blandior ventus curiositas amplitudo.',
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2024-12-28T17:18:17.511Z'),
-        id: 'd8855007-ff38-4e99-8643-55c97eb6ff18',
+        endAt: Utils\Utils::parseDateTime('2024-12-29T23:50:53.937Z'),
+        id: '2aba93e5-a27c-4550-ac9b-f0337f0f7383',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-04T19:24:22.045Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-05T13:29:26.288Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-12T19:42:00.490Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-13T02:55:47.942Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -255,7 +255,7 @@ if ($response->hrisTimeoff !== null) {
 
 ## removeHrisTimeoff
 
-Remove a timeoff
+Deletes the HrisTimeoff identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -329,21 +329,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-23T09:08:38.741Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-23T12:45:41.371Z'),
         comments: 'Blandior ventus curiositas amplitudo.',
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2024-12-28T17:18:17.511Z'),
-        id: 'd8855007-ff38-4e99-8643-55c97eb6ff18',
+        endAt: Utils\Utils::parseDateTime('2024-12-29T23:50:53.937Z'),
+        id: '2aba93e5-a27c-4550-ac9b-f0337f0f7383',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-04T19:24:22.045Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-05T13:29:26.288Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-12T19:42:00.490Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-13T02:55:47.942Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',

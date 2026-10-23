@@ -56,7 +56,7 @@
 
 ## createCommerceCollection
 
-Create a collection
+Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
 ### Example Usage
 
@@ -81,7 +81,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: '1991e4a2-1f34-47c0-8486-bcee77e5935d',
+        id: '3e54b1cf-8e90-48c3-aece-180ce04df367',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -90,10 +90,10 @@ $request = new Operations\CreateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: 'd299b709-a77d-4d3b-b544-ec9239c78317',
+                id: '0fce4930-3146-40a8-bcf6-4e5f6d9fc02e',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '6df6510d-b37f-41f1-8606-9f92778811de',
+                        id: '2f65bd01-8292-4ad4-91ea-791e5e43cf90',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -106,7 +106,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '25c38385-e463-4e8f-a923-ecef43f8e92b',
+                id: 'c12292ff-a232-4491-b2d3-4b9570a1a5d9',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -120,7 +120,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-15T01:18:21.480Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-16T01:38:38.253Z'),
     ),
     connectionId: '<id>',
 );
@@ -152,7 +152,7 @@ if ($response->commerceCollection !== null) {
 
 ## createCommerceInventory
 
-Create an inventory
+Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 
 ### Example Usage
 
@@ -176,9 +176,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: 'b3ba51df-a271-4054-9b23-658b4ddf92d9',
+        id: '926eae82-d80c-419c-9c20-87c424e622fa',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-20T09:48:39.178Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-22T00:13:27.869Z'),
     ),
     connectionId: '<id>',
 );
@@ -210,7 +210,7 @@ if ($response->commerceInventory !== null) {
 
 ## createCommerceItem
 
-Create an item
+Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
 
 ### Example Usage
 
@@ -238,7 +238,7 @@ $request = new Operations\CreateCommerceItemRequest(
         description: 'Decretum vulnero ustulo abeo.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: 'b932dc7d-d4ba-4c4f-9234-98804f973add',
+        id: '69888d2e-7ba9-417d-8e76-f06781383f3d',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -247,10 +247,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 876,
-                id: 'd49b8ce9-d4c0-4aca-9fa5-bd21a100e401',
+                id: '60f131ab-5d3f-4c5a-998d-2398b5b2cb0d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'a65c394d-c43b-4776-98e5-71eb1f9fdb41',
+                        id: 'b349f7f7-f117-4712-ae25-7c7dff25f551',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -263,10 +263,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: '8fff6f50-742f-453a-800c-20bda1039b3a',
+                id: '2577733c-d9d7-4ad9-aca7-2d9c2697e763',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '1552eab6-e15b-4322-9fea-dad4178a11e9',
+                        id: '59f50590-4bc2-44c7-b89e-28b478033704',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -283,7 +283,7 @@ $request = new Operations\CreateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '85f2a1e8-f760-443f-ac8b-c6a1c1831565',
+                id: 'b5d20319-3f55-4e47-b6ae-a4670d01f524',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -306,7 +306,7 @@ $request = new Operations\CreateCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-19T12:01:33.154Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-20T06:24:31.238Z'),
         vendorName: 'Mayer - Flatley',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,
@@ -341,7 +341,7 @@ if ($response->commerceItem !== null) {
 
 ## createCommerceItemvariant
 
-Create an itemvariant
+Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 
 ### Example Usage
 
@@ -368,7 +368,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Stylish Salad designed to make you stand out with little looks',
         height: 54,
-        id: '21db4bbc-5da8-4b7e-8542-9513b516847a',
+        id: '095325c8-f323-4f30-989c-c770f39fbe7d',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -377,10 +377,10 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Hic desipio thorax.',
                 height: 961,
-                id: 'ca51d48c-b6b2-4f76-b640-30f89cdc34cb',
+                id: '718f1a3a-48f8-40c0-87f3-3c8c7b28ea05',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'd1e9b8f7-eeff-45d5-9e9e-027461c63701',
+                        id: '5243fa2c-4cfc-422a-87f1-74dd513fe48f',
                         slug: 'ubi',
                         value: 'textus',
                     ),
@@ -397,7 +397,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: 'f1dc1de2-ad01-4062-ad1d-26fcbdb0f39a',
+                id: '73b992be-aa91-430f-b091-49092867cb6d',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'absens',
@@ -406,7 +406,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         name: 'Chair',
         options: [
             new Shared\CommerceItemOption(
-                id: 'de487d6a-518f-4143-832a-f0e5d623f17d',
+                id: '958148c8-2b5b-428e-8a5f-5cfa28aa1399',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -414,7 +414,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '2d0a0790-a7e6-430c-aa3e-d5168c991f3c',
+                id: 'f2a752d5-9a6d-4d00-87c9-4a65e82c26e4',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -437,7 +437,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             'deserunt',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-09T16:20:44.119Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-11T09:49:38.577Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,
@@ -472,7 +472,7 @@ if ($response->commerceItemvariant !== null) {
 
 ## createCommerceLocation
 
-Create a location
+Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 
 ### Example Usage
 
@@ -507,7 +507,7 @@ $request = new Operations\CreateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: 'cfb9fd29-22d5-44ed-9d15-7b8865a2d9d9',
+        id: '9269d190-f7e4-4ca0-9d9a-3b2cd258af77',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -518,10 +518,10 @@ $request = new Operations\CreateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '1bc20b62-1ed8-468f-a07a-1270eb5f886d',
+                id: 'a9b34ae1-d23f-4ae8-a407-12dc516fa948',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '2db7ffe1-096a-4d3b-ae95-79468699a9df',
+                        id: '51dd7bb8-9a09-4018-a8be-b30616cf72bd',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -547,7 +547,7 @@ $request = new Operations\CreateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-20T17:56:50.699Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-21T10:20:25.147Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -580,7 +580,7 @@ if ($response->commerceLocation !== null) {
 
 ## createCommerceReservation
 
-Create a reservation
+Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 
 ### Example Usage
 
@@ -608,13 +608,13 @@ $request = new Operations\CreateCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: '0ef71e6c-d9d9-4c9f-b62a-3f0f0f56fb0f',
+        id: '8fc9ed13-ae4e-4a15-bb40-bbb5b203a787',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-03T21:23:50.117Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-04T07:45:43.823Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -647,7 +647,7 @@ if ($response->commerceReservation !== null) {
 
 ## createCommerceReview
 
-Create a review
+Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 
 ### Example Usage
 
@@ -678,7 +678,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: 'a701a537-140d-43ca-82c9-18ce8f785886',
+        id: '33e41b27-10cf-4b96-a393-9efbcd3c1be0',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -686,10 +686,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '7d289800-5f77-4fbe-92b2-b1eb3fa9e31e',
+                id: '49585c8f-4972-4faa-8a1c-5b8efe96d149',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'fdc2101f-e2db-4cd0-be49-c031a306184a',
+                        id: 'ae1023b0-2eb4-4ea5-87ec-f1c5a0c73632',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -702,10 +702,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '6ee6be79-1ed9-45eb-a395-3bd13d182f01',
+                id: '5dcac3f4-0b89-4e09-b590-f097819a2c59',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '8b9b79fe-905f-496d-9674-d3111c203fe4',
+                        id: 'f42a8516-2b7d-45b4-b6dd-edb18d7195a3',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -721,7 +721,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-21T08:42:36.697Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-23T00:16:55.799Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -755,7 +755,7 @@ if ($response->commerceReview !== null) {
 
 ## createCommerceSaleschannel
 
-Create a saleschannel
+Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
 ### Example Usage
 
@@ -781,11 +781,11 @@ $request = new Operations\CreateCommerceSaleschannelRequest(
         collections: [],
         createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
         description: 'Utroque denuncio solutio.',
-        id: 'cc3de979-f65e-4409-9afc-44337c992d3c',
+        id: 'd26f95b7-a59e-43ab-93a5-5edab9b447e1',
         isActive: false,
         metadata: [],
         slug: 'amiculum-congregatio-suspendo',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-28T00:01:54.549Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T06:44:48.573Z'),
     ),
     connectionId: '<id>',
 );
@@ -817,7 +817,7 @@ if ($response->commerceSaleschannel !== null) {
 
 ## getCommerceCollection
 
-Retrieve a collection
+Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -868,7 +868,7 @@ if ($response->commerceCollection !== null) {
 
 ## getCommerceInventory
 
-Retrieve an inventory
+Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -919,7 +919,7 @@ if ($response->commerceInventory !== null) {
 
 ## getCommerceItem
 
-Retrieve an item
+Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -970,7 +970,7 @@ if ($response->commerceItem !== null) {
 
 ## getCommerceItemvariant
 
-Retrieve an itemvariant
+Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1021,7 +1021,7 @@ if ($response->commerceItemvariant !== null) {
 
 ## getCommerceLocation
 
-Retrieve a location
+Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1072,7 +1072,7 @@ if ($response->commerceLocation !== null) {
 
 ## getCommerceReservation
 
-Retrieve a reservation
+Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1123,7 +1123,7 @@ if ($response->commerceReservation !== null) {
 
 ## getCommerceReview
 
-Retrieve a review
+Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1174,7 +1174,7 @@ if ($response->commerceReview !== null) {
 
 ## getCommerceSaleschannel
 
-Retrieve a saleschannel
+Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1225,7 +1225,7 @@ if ($response->commerceSaleschannel !== null) {
 
 ## listCommerceAvailabilities
 
-List all availabilities
+Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1275,7 +1275,7 @@ if ($response->commerceAvailabilities !== null) {
 
 ## listCommerceCollections
 
-List all collections
+Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1325,7 +1325,7 @@ if ($response->commerceCollections !== null) {
 
 ## listCommerceInventories
 
-List all inventories
+Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1375,7 +1375,7 @@ if ($response->commerceInventories !== null) {
 
 ## listCommerceItems
 
-List all items
+Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1425,7 +1425,7 @@ if ($response->commerceItems !== null) {
 
 ## listCommerceItemvariants
 
-List all itemvariants
+Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1475,7 +1475,7 @@ if ($response->commerceItemvariants !== null) {
 
 ## listCommerceLocations
 
-List all locations
+Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1525,7 +1525,7 @@ if ($response->commerceLocations !== null) {
 
 ## listCommerceReservations
 
-List all reservations
+Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1575,7 +1575,7 @@ if ($response->commerceReservations !== null) {
 
 ## listCommerceReviews
 
-List all reviews
+Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1625,7 +1625,7 @@ if ($response->commerceReviews !== null) {
 
 ## listCommerceSaleschannels
 
-List all saleschannels
+Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1675,7 +1675,7 @@ if ($response->commerceSaleschannels !== null) {
 
 ## patchCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -1700,7 +1700,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: 'b9e54251-c92b-4782-b1bb-926437414e65',
+        id: 'a258c3aa-d818-4b8c-8c60-ba089e9a9b36',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -1709,10 +1709,10 @@ $request = new Operations\PatchCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: 'b5d8356e-a5c4-4e37-88f1-f0f6c4baf524',
+                id: '17088427-fefd-419b-822c-893b4842f844',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'be896d4e-ad51-4055-86be-b2da90d4641b',
+                        id: 'e5459c1f-cb38-462e-b902-ca9c5dfc16bf',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -1725,7 +1725,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: 'e6a20238-d170-498a-be5d-6832a5df7d28',
+                id: 'e84025f6-0d87-440d-9431-58363bfced85',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -1739,7 +1739,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-15T01:18:21.493Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-16T01:38:38.273Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1772,7 +1772,7 @@ if ($response->commerceCollection !== null) {
 
 ## patchCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -1796,9 +1796,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: '505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26',
+        id: 'd757bd8f-362e-4157-adcb-d38cecdbcaeb',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-20T09:48:39.185Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-22T00:13:27.880Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1831,7 +1831,7 @@ if ($response->commerceInventory !== null) {
 
 ## patchCommerceItem
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -1859,7 +1859,7 @@ $request = new Operations\PatchCommerceItemRequest(
         description: 'Decretum vulnero ustulo abeo.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: 'c13a38fe-fad4-4198-bf4a-7b5dc5f77b0d',
+        id: 'e16779fc-7762-4d3c-8e5b-d727309f0130',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -1868,10 +1868,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 876,
-                id: '9bda371f-7ce3-4f50-b725-587283bf4f2d',
+                id: 'b5af06a2-45bf-4019-9f88-72f8ca2bdd50',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '79b75953-de77-4893-9da0-5b030a19f949',
+                        id: '01dc9f6b-a04d-4b58-97cf-6d2292c64429',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -1884,10 +1884,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: '99807e35-840c-4c23-bb17-9c5b9c3fd475',
+                id: '97c47924-f468-4ac6-a746-d3ac5c08ec7d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '78ff5b2d-8ab5-4eab-a0d4-abb192ef8de7',
+                        id: '1b7c372a-3bf2-46ff-8c72-5fb0fd59d522',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -1904,7 +1904,7 @@ $request = new Operations\PatchCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '10b73839-3f28-45d3-b97e-b2c5fe46fa8f',
+                id: '8d5f9439-2089-429f-9300-69bc44a4ae54',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -1927,7 +1927,7 @@ $request = new Operations\PatchCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-19T12:01:33.164Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-20T06:24:31.255Z'),
         vendorName: 'Mayer - Flatley',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,
@@ -1963,7 +1963,7 @@ if ($response->commerceItem !== null) {
 
 ## patchCommerceItemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -1990,7 +1990,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Stylish Salad designed to make you stand out with little looks',
         height: 54,
-        id: 'e5b6c614-77df-4640-9851-1b017edac238',
+        id: 'b4e53342-2af5-4efa-a293-7ac75f25e68a',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -1999,10 +1999,10 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Hic desipio thorax.',
                 height: 961,
-                id: '193d724e-664a-4ff3-9e5e-f06a3a6d6bce',
+                id: 'a6b0552c-adbd-4142-bbbb-59187beb12b6',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'be94f989-1203-4816-9c17-6ec4a183fb8c',
+                        id: '2ebb0e9d-e614-4b19-9d8c-d0d2c9580081',
                         slug: 'ubi',
                         value: 'textus',
                     ),
@@ -2019,7 +2019,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '029b8520-9463-4356-9fca-a3b2058019a8',
+                id: 'ce1351ef-274f-4f0e-b3fe-844e61153c5a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'absens',
@@ -2028,7 +2028,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         name: 'Chair',
         options: [
             new Shared\CommerceItemOption(
-                id: 'e1ec43ce-9696-49ad-9233-4941ec412803',
+                id: '2911f5f1-0792-4b04-a81e-2dab72da752f',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -2036,7 +2036,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '9c026072-0592-40da-a00c-9556e7198eed',
+                id: '634ba452-f269-42b4-97bd-3169923350c2',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -2059,7 +2059,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             'deserunt',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-09T16:20:44.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-11T09:49:38.618Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,
@@ -2095,7 +2095,7 @@ if ($response->commerceItemvariant !== null) {
 
 ## patchCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -2130,7 +2130,7 @@ $request = new Operations\PatchCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '40a4434d-2376-4620-9003-349464d19ca7',
+        id: '6d84c5e1-4a04-4750-b446-7984c24185bf',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -2141,10 +2141,10 @@ $request = new Operations\PatchCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '3e6802f0-02a0-4d54-b944-d6a4b261d631',
+                id: '61a372b2-53b9-4882-b235-31278dee6b9f',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '0b3ca168-ec82-4454-aaac-eff637558b65',
+                        id: '36d1a9c2-1d24-4fb0-bc5c-a15ea787218a',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -2170,7 +2170,7 @@ $request = new Operations\PatchCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-20T17:56:50.709Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-21T10:20:25.162Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -2204,7 +2204,7 @@ if ($response->commerceLocation !== null) {
 
 ## patchCommerceReservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -2232,13 +2232,13 @@ $request = new Operations\PatchCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: '4c9dd695-6c67-4102-9022-4ea5300139ad',
+        id: 'a5c680e7-8a89-412e-9043-134d1481fef3',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-03T21:23:50.121Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-04T07:45:43.827Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -2272,7 +2272,7 @@ if ($response->commerceReservation !== null) {
 
 ## patchCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -2303,7 +2303,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '578fe127-194b-4d01-a25f-c54fc1709240',
+        id: 'a71c13aa-d416-43f6-8ad8-35258e7a6fe8',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -2311,10 +2311,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '65be1798-462d-44e5-84c9-515cac1619eb',
+                id: '71c01db3-0af8-4bc1-a421-12a5e570269b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '9f916c18-3b91-4219-8d26-0639d2363609',
+                        id: 'a87907e7-6777-432a-a079-cdaff033b9ec',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -2327,10 +2327,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: 'c1af0dea-75ef-4e0b-a7aa-d6d3b840ec10',
+                id: '6568d505-d413-41fd-b64d-3067705e05a3',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '9ad8d0f3-c8b8-4fd9-a4a7-53a7062bf74d',
+                        id: '864adde6-6719-41ea-8fc8-f1d7c8c545ae',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -2346,7 +2346,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-21T08:42:36.722Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-23T00:16:55.843Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -2381,7 +2381,7 @@ if ($response->commerceReview !== null) {
 
 ## patchCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -2407,11 +2407,11 @@ $request = new Operations\PatchCommerceSaleschannelRequest(
         collections: [],
         createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
         description: 'Utroque denuncio solutio.',
-        id: 'dcf669f2-72fe-4f86-bf18-a0776d1f5b30',
+        id: 'df964129-81d7-4efa-805d-b986fdc305ae',
         isActive: false,
         metadata: [],
         slug: 'amiculum-congregatio-suspendo',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-28T00:01:54.554Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T06:44:48.585Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2444,7 +2444,7 @@ if ($response->commerceSaleschannel !== null) {
 
 ## removeCommerceCollection
 
-Remove a collection
+Deletes the CommerceCollection identified by `id`.
 
 ### Example Usage
 
@@ -2495,7 +2495,7 @@ if ($response->statusCode === 200) {
 
 ## removeCommerceInventory
 
-Remove an inventory
+Deletes the CommerceInventory identified by `id`.
 
 ### Example Usage
 
@@ -2546,7 +2546,7 @@ if ($response->statusCode === 200) {
 
 ## removeCommerceItem
 
-Remove an item
+Deletes the CommerceItem identified by `id`.
 
 ### Example Usage
 
@@ -2597,7 +2597,7 @@ if ($response->statusCode === 200) {
 
 ## removeCommerceItemvariant
 
-Remove an itemvariant
+Deletes the CommerceItemvariant identified by `id`.
 
 ### Example Usage
 
@@ -2648,7 +2648,7 @@ if ($response->statusCode === 200) {
 
 ## removeCommerceLocation
 
-Remove a location
+Deletes the CommerceLocation identified by `id`.
 
 ### Example Usage
 
@@ -2699,7 +2699,7 @@ if ($response->statusCode === 200) {
 
 ## removeCommerceReservation
 
-Remove a reservation
+Deletes the CommerceReservation identified by `id`.
 
 ### Example Usage
 
@@ -2750,7 +2750,7 @@ if ($response->statusCode === 200) {
 
 ## removeCommerceReview
 
-Remove a review
+Deletes the CommerceReview identified by `id`.
 
 ### Example Usage
 
@@ -2801,7 +2801,7 @@ if ($response->statusCode === 200) {
 
 ## removeCommerceSaleschannel
 
-Remove a saleschannel
+Deletes the CommerceSaleschannel identified by `id`.
 
 ### Example Usage
 
@@ -2852,7 +2852,7 @@ if ($response->statusCode === 200) {
 
 ## updateCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -2877,7 +2877,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: 'b9e54251-c92b-4782-b1bb-926437414e65',
+        id: 'a258c3aa-d818-4b8c-8c60-ba089e9a9b36',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -2886,10 +2886,10 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: 'b5d8356e-a5c4-4e37-88f1-f0f6c4baf524',
+                id: '17088427-fefd-419b-822c-893b4842f844',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'be896d4e-ad51-4055-86be-b2da90d4641b',
+                        id: 'e5459c1f-cb38-462e-b902-ca9c5dfc16bf',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -2902,7 +2902,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: 'e6a20238-d170-498a-be5d-6832a5df7d28',
+                id: 'e84025f6-0d87-440d-9431-58363bfced85',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -2916,7 +2916,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-15T01:18:21.493Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-16T01:38:38.273Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2949,7 +2949,7 @@ if ($response->commerceCollection !== null) {
 
 ## updateCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -2973,9 +2973,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: '505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26',
+        id: 'd757bd8f-362e-4157-adcb-d38cecdbcaeb',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-20T09:48:39.185Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-22T00:13:27.880Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3008,7 +3008,7 @@ if ($response->commerceInventory !== null) {
 
 ## updateCommerceItem
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -3036,7 +3036,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         description: 'Decretum vulnero ustulo abeo.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: 'c13a38fe-fad4-4198-bf4a-7b5dc5f77b0d',
+        id: 'e16779fc-7762-4d3c-8e5b-d727309f0130',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -3045,10 +3045,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 876,
-                id: '9bda371f-7ce3-4f50-b725-587283bf4f2d',
+                id: 'b5af06a2-45bf-4019-9f88-72f8ca2bdd50',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '79b75953-de77-4893-9da0-5b030a19f949',
+                        id: '01dc9f6b-a04d-4b58-97cf-6d2292c64429',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -3061,10 +3061,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: '99807e35-840c-4c23-bb17-9c5b9c3fd475',
+                id: '97c47924-f468-4ac6-a746-d3ac5c08ec7d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '78ff5b2d-8ab5-4eab-a0d4-abb192ef8de7',
+                        id: '1b7c372a-3bf2-46ff-8c72-5fb0fd59d522',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -3081,7 +3081,7 @@ $request = new Operations\UpdateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '10b73839-3f28-45d3-b97e-b2c5fe46fa8f',
+                id: '8d5f9439-2089-429f-9300-69bc44a4ae54',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -3104,7 +3104,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-19T12:01:33.164Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-20T06:24:31.255Z'),
         vendorName: 'Mayer - Flatley',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,
@@ -3140,7 +3140,7 @@ if ($response->commerceItem !== null) {
 
 ## updateCommerceItemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -3167,7 +3167,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Stylish Salad designed to make you stand out with little looks',
         height: 54,
-        id: 'e5b6c614-77df-4640-9851-1b017edac238',
+        id: 'b4e53342-2af5-4efa-a293-7ac75f25e68a',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -3176,10 +3176,10 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Hic desipio thorax.',
                 height: 961,
-                id: '193d724e-664a-4ff3-9e5e-f06a3a6d6bce',
+                id: 'a6b0552c-adbd-4142-bbbb-59187beb12b6',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'be94f989-1203-4816-9c17-6ec4a183fb8c',
+                        id: '2ebb0e9d-e614-4b19-9d8c-d0d2c9580081',
                         slug: 'ubi',
                         value: 'textus',
                     ),
@@ -3196,7 +3196,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '029b8520-9463-4356-9fca-a3b2058019a8',
+                id: 'ce1351ef-274f-4f0e-b3fe-844e61153c5a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'absens',
@@ -3205,7 +3205,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         name: 'Chair',
         options: [
             new Shared\CommerceItemOption(
-                id: 'e1ec43ce-9696-49ad-9233-4941ec412803',
+                id: '2911f5f1-0792-4b04-a81e-2dab72da752f',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -3213,7 +3213,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '9c026072-0592-40da-a00c-9556e7198eed',
+                id: '634ba452-f269-42b4-97bd-3169923350c2',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -3236,7 +3236,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             'deserunt',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-09T16:20:44.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-11T09:49:38.618Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,
@@ -3272,7 +3272,7 @@ if ($response->commerceItemvariant !== null) {
 
 ## updateCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -3307,7 +3307,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '40a4434d-2376-4620-9003-349464d19ca7',
+        id: '6d84c5e1-4a04-4750-b446-7984c24185bf',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -3318,10 +3318,10 @@ $request = new Operations\UpdateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '3e6802f0-02a0-4d54-b944-d6a4b261d631',
+                id: '61a372b2-53b9-4882-b235-31278dee6b9f',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '0b3ca168-ec82-4454-aaac-eff637558b65',
+                        id: '36d1a9c2-1d24-4fb0-bc5c-a15ea787218a',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -3347,7 +3347,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-20T17:56:50.709Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-21T10:20:25.162Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -3381,7 +3381,7 @@ if ($response->commerceLocation !== null) {
 
 ## updateCommerceReservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -3409,13 +3409,13 @@ $request = new Operations\UpdateCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: '4c9dd695-6c67-4102-9022-4ea5300139ad',
+        id: 'a5c680e7-8a89-412e-9043-134d1481fef3',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-03T21:23:50.121Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-04T07:45:43.827Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -3449,7 +3449,7 @@ if ($response->commerceReservation !== null) {
 
 ## updateCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -3480,7 +3480,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '578fe127-194b-4d01-a25f-c54fc1709240',
+        id: 'a71c13aa-d416-43f6-8ad8-35258e7a6fe8',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -3488,10 +3488,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '65be1798-462d-44e5-84c9-515cac1619eb',
+                id: '71c01db3-0af8-4bc1-a421-12a5e570269b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '9f916c18-3b91-4219-8d26-0639d2363609',
+                        id: 'a87907e7-6777-432a-a079-cdaff033b9ec',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -3504,10 +3504,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: 'c1af0dea-75ef-4e0b-a7aa-d6d3b840ec10',
+                id: '6568d505-d413-41fd-b64d-3067705e05a3',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '9ad8d0f3-c8b8-4fd9-a4a7-53a7062bf74d',
+                        id: '864adde6-6719-41ea-8fc8-f1d7c8c545ae',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -3523,7 +3523,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-21T08:42:36.722Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-23T00:16:55.843Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -3558,7 +3558,7 @@ if ($response->commerceReview !== null) {
 
 ## updateCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -3584,11 +3584,11 @@ $request = new Operations\UpdateCommerceSaleschannelRequest(
         collections: [],
         createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
         description: 'Utroque denuncio solutio.',
-        id: 'dcf669f2-72fe-4f86-bf18-a0776d1f5b30',
+        id: 'df964129-81d7-4efa-805d-b986fdc305ae',
         isActive: false,
         metadata: [],
         slug: 'amiculum-congregatio-suspendo',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-28T00:01:54.554Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T06:44:48.585Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -47,6 +47,8 @@ class Creative
     /**
      * Create a creative
      *
+     * Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Creative
     /**
      * Retrieve a creative
      *
+     * Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Creative
     /**
      * List all creatives
      *
+     * Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsCreativesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsCreativesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Creative
 
     /**
      * Update a creative
+     *
+     * Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsCreativeResponse
@@ -309,6 +317,8 @@ class Creative
     /**
      * Remove a creative
      *
+     * Deletes the AdsCreative identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Creative
 
     /**
      * Update a creative
+     *
+     * Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsCreativeResponse

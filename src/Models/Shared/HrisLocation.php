@@ -106,6 +106,7 @@ class HrisLocation
     public ?array $metadata = null;
 
     /**
+     * The name of the location
      *
      * @var ?string $name
      */

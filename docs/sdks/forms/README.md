@@ -15,7 +15,7 @@
 
 ## createFormsForm
 
-Create a form
+Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
 
 ### Example Usage
 
@@ -44,24 +44,24 @@ $request = new Operations\CreateFormsFormRequest(
         fields: [
             new Shared\FormField(
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
-                id: '259e3054-2f56-4598-a481-594e42144463',
+                id: 'dc1e07d8-1b9c-4552-b10a-b1197a56461c',
                 isActive: true,
                 isRequired: true,
                 maxLength: 146,
                 name: 'cornu creta confugo',
                 order: 0,
                 type: Shared\FormFieldType::Textarea,
-                updatedAt: Utils\Utils::parseDateTime('2025-04-28T16:10:47.286Z'),
+                updatedAt: Utils\Utils::parseDateTime('2025-04-29T16:40:15.224Z'),
             ),
             new Shared\FormField(
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
-                id: '2ea6abf4-abd3-4231-bc19-e9ba60bb97da',
+                id: '0e199bf1-7c80-482d-9950-915d7c23b767',
                 isActive: true,
                 isRequired: false,
                 name: 'tracto nostrum desidero',
                 order: 1,
                 type: Shared\FormFieldType::Textarea,
-                updatedAt: Utils\Utils::parseDateTime('2024-09-02T04:02:05.119Z'),
+                updatedAt: Utils\Utils::parseDateTime('2024-09-02T18:17:30.907Z'),
             ),
             new Shared\FormField(
                 choices: [
@@ -73,36 +73,36 @@ $request = new Operations\CreateFormsFormRequest(
                 ],
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
                 defaultValue: 'somniculosus',
-                id: 'b8432254-8ecc-4dbe-bd02-e2c55c774453',
+                id: '6cf18692-b6ef-40dd-b47c-229668f74073',
                 isActive: true,
                 isRequired: false,
                 name: 'officia supra consequatur',
                 order: 2,
                 type: Shared\FormFieldType::MultipleSelect,
-                updatedAt: Utils\Utils::parseDateTime('2024-02-26T08:30:25.764Z'),
+                updatedAt: Utils\Utils::parseDateTime('2024-02-26T14:39:45.411Z'),
             ),
             new Shared\FormField(
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
                 description: 'Antepono cursim aurum voluptatum placeat audax tripudio amo.',
-                id: 'a4966f8b-d191-4b0c-8a62-d895c0df3b70',
+                id: '9c593867-3fbe-4d2b-8750-fb5424d3ca4a',
                 isActive: true,
                 isRequired: false,
                 name: 'curtus fugiat audentia',
                 order: 3,
                 type: Shared\FormFieldType::Textarea,
-                updatedAt: Utils\Utils::parseDateTime('2024-11-27T10:04:32.566Z'),
+                updatedAt: Utils\Utils::parseDateTime('2024-11-28T04:02:01.699Z'),
             ),
         ],
         hasMultipleSubmissions: false,
         hasProgressBar: false,
         hasShuffleQuestions: true,
-        id: 'f34aaf0b-3045-4a27-880e-a8a8c129035c',
+        id: 'c860aa31-60bd-4e6f-b065-7ab5ade28c0a',
         isActive: false,
         metadata: [],
         name: 'tandem tracto vivo Form',
         publishedUrl: 'https://massive-blowgun.info',
         responseCount: 423,
-        updatedAt: Utils\Utils::parseDateTime('2024-08-24T19:17:44.074Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-08-25T09:11:37.850Z'),
     ),
     connectionId: '<id>',
 );
@@ -134,7 +134,7 @@ if ($response->formsForm !== null) {
 
 ## getFormsForm
 
-Retrieve a form
+Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -185,7 +185,7 @@ if ($response->formsForm !== null) {
 
 ## getFormsSubmission
 
-Retrieve a submission
+Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -236,7 +236,7 @@ if ($response->formsSubmission !== null) {
 
 ## listFormsForms
 
-List all forms
+Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -286,7 +286,7 @@ if ($response->formsForms !== null) {
 
 ## listFormsSubmissions
 
-List all submissions
+Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ if ($response->formsSubmissions !== null) {
 
 ## patchFormsForm
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -365,24 +365,24 @@ $request = new Operations\PatchFormsFormRequest(
         fields: [
             new Shared\FormField(
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
-                id: '49f3b591-a412-4d9d-86c2-5946fb9b51fe',
+                id: 'bb19d84d-96b1-4e5d-b487-1db262deb6e2',
                 isActive: true,
                 isRequired: true,
                 maxLength: 146,
                 name: 'cornu creta confugo',
                 order: 0,
                 type: Shared\FormFieldType::Textarea,
-                updatedAt: Utils\Utils::parseDateTime('2025-04-28T16:10:47.299Z'),
+                updatedAt: Utils\Utils::parseDateTime('2025-04-29T16:40:15.237Z'),
             ),
             new Shared\FormField(
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
-                id: '5cc38b5d-9a1f-4602-8d8b-ef8bb2126477',
+                id: 'd6071491-c5c3-4ce9-885a-3859c113f051',
                 isActive: true,
                 isRequired: false,
                 name: 'tracto nostrum desidero',
                 order: 1,
                 type: Shared\FormFieldType::Textarea,
-                updatedAt: Utils\Utils::parseDateTime('2024-09-02T04:02:05.127Z'),
+                updatedAt: Utils\Utils::parseDateTime('2024-09-02T18:17:30.915Z'),
             ),
             new Shared\FormField(
                 choices: [
@@ -394,36 +394,36 @@ $request = new Operations\PatchFormsFormRequest(
                 ],
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
                 defaultValue: 'somniculosus',
-                id: '02ff61fe-3dac-4fcf-bc2f-79906828e4b5',
+                id: 'f264b76e-1a40-45da-b70b-c127c661fb56',
                 isActive: true,
                 isRequired: false,
                 name: 'officia supra consequatur',
                 order: 2,
                 type: Shared\FormFieldType::MultipleSelect,
-                updatedAt: Utils\Utils::parseDateTime('2024-02-26T08:30:25.768Z'),
+                updatedAt: Utils\Utils::parseDateTime('2024-02-26T14:39:45.415Z'),
             ),
             new Shared\FormField(
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
                 description: 'Antepono cursim aurum voluptatum placeat audax tripudio amo.',
-                id: '0765bee4-5f1c-4e3c-8393-6cc3a4ea84ec',
+                id: 'e2f75a55-4528-4383-9790-369d90a5bc75',
                 isActive: true,
                 isRequired: false,
                 name: 'curtus fugiat audentia',
                 order: 3,
                 type: Shared\FormFieldType::Textarea,
-                updatedAt: Utils\Utils::parseDateTime('2024-11-27T10:04:32.575Z'),
+                updatedAt: Utils\Utils::parseDateTime('2024-11-28T04:02:01.708Z'),
             ),
         ],
         hasMultipleSubmissions: false,
         hasProgressBar: false,
         hasShuffleQuestions: true,
-        id: 'ced3b9b1-be79-4af6-ab0c-c62a0c199374',
+        id: 'c9f415b5-cf47-4422-8405-44c9cb4a3bf0',
         isActive: false,
         metadata: [],
         name: 'tandem tracto vivo Form',
         publishedUrl: 'https://massive-blowgun.info',
         responseCount: 423,
-        updatedAt: Utils\Utils::parseDateTime('2024-08-24T19:17:44.082Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-08-25T09:11:37.858Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -456,7 +456,7 @@ if ($response->formsForm !== null) {
 
 ## removeFormsForm
 
-Remove a form
+Deletes the FormsForm identified by `id`.
 
 ### Example Usage
 
@@ -507,7 +507,7 @@ if ($response->statusCode === 200) {
 
 ## updateFormsForm
 
-Update a form
+Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
 
 ### Example Usage
 
@@ -536,24 +536,24 @@ $request = new Operations\UpdateFormsFormRequest(
         fields: [
             new Shared\FormField(
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
-                id: '49f3b591-a412-4d9d-86c2-5946fb9b51fe',
+                id: 'bb19d84d-96b1-4e5d-b487-1db262deb6e2',
                 isActive: true,
                 isRequired: true,
                 maxLength: 146,
                 name: 'cornu creta confugo',
                 order: 0,
                 type: Shared\FormFieldType::Textarea,
-                updatedAt: Utils\Utils::parseDateTime('2025-04-28T16:10:47.299Z'),
+                updatedAt: Utils\Utils::parseDateTime('2025-04-29T16:40:15.237Z'),
             ),
             new Shared\FormField(
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
-                id: '5cc38b5d-9a1f-4602-8d8b-ef8bb2126477',
+                id: 'd6071491-c5c3-4ce9-885a-3859c113f051',
                 isActive: true,
                 isRequired: false,
                 name: 'tracto nostrum desidero',
                 order: 1,
                 type: Shared\FormFieldType::Textarea,
-                updatedAt: Utils\Utils::parseDateTime('2024-09-02T04:02:05.127Z'),
+                updatedAt: Utils\Utils::parseDateTime('2024-09-02T18:17:30.915Z'),
             ),
             new Shared\FormField(
                 choices: [
@@ -565,36 +565,36 @@ $request = new Operations\UpdateFormsFormRequest(
                 ],
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
                 defaultValue: 'somniculosus',
-                id: '02ff61fe-3dac-4fcf-bc2f-79906828e4b5',
+                id: 'f264b76e-1a40-45da-b70b-c127c661fb56',
                 isActive: true,
                 isRequired: false,
                 name: 'officia supra consequatur',
                 order: 2,
                 type: Shared\FormFieldType::MultipleSelect,
-                updatedAt: Utils\Utils::parseDateTime('2024-02-26T08:30:25.768Z'),
+                updatedAt: Utils\Utils::parseDateTime('2024-02-26T14:39:45.415Z'),
             ),
             new Shared\FormField(
                 createdAt: Utils\Utils::parseDateTime('2023-10-05T21:34:29.094Z'),
                 description: 'Antepono cursim aurum voluptatum placeat audax tripudio amo.',
-                id: '0765bee4-5f1c-4e3c-8393-6cc3a4ea84ec',
+                id: 'e2f75a55-4528-4383-9790-369d90a5bc75',
                 isActive: true,
                 isRequired: false,
                 name: 'curtus fugiat audentia',
                 order: 3,
                 type: Shared\FormFieldType::Textarea,
-                updatedAt: Utils\Utils::parseDateTime('2024-11-27T10:04:32.575Z'),
+                updatedAt: Utils\Utils::parseDateTime('2024-11-28T04:02:01.708Z'),
             ),
         ],
         hasMultipleSubmissions: false,
         hasProgressBar: false,
         hasShuffleQuestions: true,
-        id: 'ced3b9b1-be79-4af6-ab0c-c62a0c199374',
+        id: 'c9f415b5-cf47-4422-8405-44c9cb4a3bf0',
         isActive: false,
         metadata: [],
         name: 'tandem tracto vivo Form',
         publishedUrl: 'https://massive-blowgun.info',
         responseCount: 423,
-        updatedAt: Utils\Utils::parseDateTime('2024-08-24T19:17:44.082Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-08-25T09:11:37.858Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

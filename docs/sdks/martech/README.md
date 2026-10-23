@@ -26,7 +26,7 @@
 
 ## createMartechCampaign
 
-Create a campaign
+Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
 
 ### Example Usage
 
@@ -52,7 +52,7 @@ $request = new Operations\CreateMartechCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-19T11:18:15.589Z'),
         fromEmail: 'graham.mertz@gmail.com',
         fromName: 'Graham Mertz',
-        id: '152b6a39-cc03-4bf3-820b-401d75975804',
+        id: '407a1645-beda-4d0b-b5f2-36d4cfb30e0f',
         metadata: [],
         name: 'Consequatur atqui sustineo.',
         previewText: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -61,7 +61,7 @@ $request = new Operations\CreateMartechCampaignRequest(
         status: Shared\MarketingCampaignStatus::Scheduled,
         subjectLine: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
         type: 'absplit',
-        updatedAt: Utils\Utils::parseDateTime('2022-06-22T02:50:23.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-22T22:42:06.196Z'),
     ),
     connectionId: '<id>',
 );
@@ -93,7 +93,7 @@ if ($response->marketingCampaign !== null) {
 
 ## createMartechList
 
-Create a list
+Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
 
 ### Example Usage
 
@@ -126,7 +126,7 @@ $request = new Operations\CreateMartechListRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2019-09-18T02:01:36.950Z'),
         description: 'Vilis.',
-        id: 'fa25e1e6-f0a8-45b9-b31f-6dfd003964d6',
+        id: '3b003412-2577-4c16-94cc-ff85e9f73d48',
         isActive: true,
         language: 'ru',
         metadata: [],
@@ -136,7 +136,7 @@ $request = new Operations\CreateMartechListRequest(
         senderName: 'Blake Kuhn',
         senderPhone: '359.305.7962 x28115',
         subject: 'Theca caecus copia crebro valeo ulciscor.',
-        updatedAt: Utils\Utils::parseDateTime('2022-09-13T10:08:43.347Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-14T06:14:04.658Z'),
     ),
     connectionId: '<id>',
 );
@@ -168,7 +168,7 @@ if ($response->marketingList !== null) {
 
 ## createMartechMember
 
-Create a member
+Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
 
 ### Example Usage
 
@@ -200,7 +200,7 @@ $request = new Operations\CreateMartechMemberRequest(
             ),
         ],
         firstName: 'Jude',
-        id: 'd7b88a89-ae37-4349-a4d9-8a4beafb4569',
+        id: '270da929-b988-4159-8918-38d7bdde4ce8',
         lastName: 'Leffler',
         metadata: [],
         name: 'Jude Leffler',
@@ -209,7 +209,7 @@ $request = new Operations\CreateMartechMemberRequest(
             'adnuo',
             'verumtamen',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-08T19:52:27.940Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-10T05:59:16.554Z'),
     ),
     connectionId: '<id>',
 );
@@ -241,7 +241,7 @@ if ($response->marketingMember !== null) {
 
 ## getMartechCampaign
 
-Retrieve a campaign
+Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -292,7 +292,7 @@ if ($response->marketingCampaign !== null) {
 
 ## getMartechList
 
-Retrieve a list
+Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ if ($response->marketingList !== null) {
 
 ## getMartechMember
 
-Retrieve a member
+Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -394,7 +394,7 @@ if ($response->marketingMember !== null) {
 
 ## listMartechCampaigns
 
-List all campaigns
+Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -444,7 +444,7 @@ if ($response->marketingCampaigns !== null) {
 
 ## listMartechLists
 
-List all lists
+Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -494,7 +494,7 @@ if ($response->marketingLists !== null) {
 
 ## listMartechMembers
 
-List all members
+Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -544,7 +544,7 @@ if ($response->marketingMembers !== null) {
 
 ## listMartechReports
 
-List all reports
+Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -594,7 +594,7 @@ if ($response->marketingReports !== null) {
 
 ## patchMartechCampaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -620,7 +620,7 @@ $request = new Operations\PatchMartechCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-19T11:18:15.589Z'),
         fromEmail: 'graham.mertz@gmail.com',
         fromName: 'Graham Mertz',
-        id: '8d59a242-5d0d-4977-9089-a8e78c0a7e7e',
+        id: '5a48f9a6-02f2-4b50-8a34-5bcc96b0d40a',
         metadata: [],
         name: 'Consequatur atqui sustineo.',
         previewText: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -629,7 +629,7 @@ $request = new Operations\PatchMartechCampaignRequest(
         status: Shared\MarketingCampaignStatus::Scheduled,
         subjectLine: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
         type: 'absplit',
-        updatedAt: Utils\Utils::parseDateTime('2022-06-22T02:50:23.732Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-22T22:42:06.204Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -662,7 +662,7 @@ if ($response->marketingCampaign !== null) {
 
 ## patchMartechList
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -695,7 +695,7 @@ $request = new Operations\PatchMartechListRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2019-09-18T02:01:36.950Z'),
         description: 'Vilis.',
-        id: 'fbf9dae2-4ca6-4dd6-8113-05be28e2eadc',
+        id: '0ebb97b3-1979-48db-9888-59d2a1abd6ea',
         isActive: true,
         language: 'ru',
         metadata: [],
@@ -705,7 +705,7 @@ $request = new Operations\PatchMartechListRequest(
         senderName: 'Blake Kuhn',
         senderPhone: '359.305.7962 x28115',
         subject: 'Theca caecus copia crebro valeo ulciscor.',
-        updatedAt: Utils\Utils::parseDateTime('2022-09-13T10:08:43.358Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-14T06:14:04.670Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -738,7 +738,7 @@ if ($response->marketingList !== null) {
 
 ## patchMartechMember
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -770,7 +770,7 @@ $request = new Operations\PatchMartechMemberRequest(
             ),
         ],
         firstName: 'Jude',
-        id: 'e1a7a651-8834-4eb6-b703-61cf8cec3e72',
+        id: '2e8f501b-b93b-4cbe-807d-29c89dba8c62',
         lastName: 'Leffler',
         metadata: [],
         name: 'Jude Leffler',
@@ -779,7 +779,7 @@ $request = new Operations\PatchMartechMemberRequest(
             'adnuo',
             'verumtamen',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-08T19:52:27.952Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-10T05:59:16.568Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -812,7 +812,7 @@ if ($response->marketingMember !== null) {
 
 ## removeMartechCampaign
 
-Remove a campaign
+Deletes the MarketingCampaign identified by `id`.
 
 ### Example Usage
 
@@ -863,7 +863,7 @@ if ($response->statusCode === 200) {
 
 ## removeMartechList
 
-Remove a list
+Deletes the MarketingList identified by `id`.
 
 ### Example Usage
 
@@ -914,7 +914,7 @@ if ($response->statusCode === 200) {
 
 ## removeMartechMember
 
-Remove a member
+Deletes the MarketingMember identified by `id`.
 
 ### Example Usage
 
@@ -965,7 +965,7 @@ if ($response->statusCode === 200) {
 
 ## updateMartechCampaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -991,7 +991,7 @@ $request = new Operations\UpdateMartechCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-19T11:18:15.589Z'),
         fromEmail: 'graham.mertz@gmail.com',
         fromName: 'Graham Mertz',
-        id: '8d59a242-5d0d-4977-9089-a8e78c0a7e7e',
+        id: '5a48f9a6-02f2-4b50-8a34-5bcc96b0d40a',
         metadata: [],
         name: 'Consequatur atqui sustineo.',
         previewText: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -1000,7 +1000,7 @@ $request = new Operations\UpdateMartechCampaignRequest(
         status: Shared\MarketingCampaignStatus::Scheduled,
         subjectLine: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
         type: 'absplit',
-        updatedAt: Utils\Utils::parseDateTime('2022-06-22T02:50:23.732Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-22T22:42:06.204Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1033,7 +1033,7 @@ if ($response->marketingCampaign !== null) {
 
 ## updateMartechList
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -1066,7 +1066,7 @@ $request = new Operations\UpdateMartechListRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2019-09-18T02:01:36.950Z'),
         description: 'Vilis.',
-        id: 'fbf9dae2-4ca6-4dd6-8113-05be28e2eadc',
+        id: '0ebb97b3-1979-48db-9888-59d2a1abd6ea',
         isActive: true,
         language: 'ru',
         metadata: [],
@@ -1076,7 +1076,7 @@ $request = new Operations\UpdateMartechListRequest(
         senderName: 'Blake Kuhn',
         senderPhone: '359.305.7962 x28115',
         subject: 'Theca caecus copia crebro valeo ulciscor.',
-        updatedAt: Utils\Utils::parseDateTime('2022-09-13T10:08:43.358Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-14T06:14:04.670Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1109,7 +1109,7 @@ if ($response->marketingList !== null) {
 
 ## updateMartechMember
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -1141,7 +1141,7 @@ $request = new Operations\UpdateMartechMemberRequest(
             ),
         ],
         firstName: 'Jude',
-        id: 'e1a7a651-8834-4eb6-b703-61cf8cec3e72',
+        id: '2e8f501b-b93b-4cbe-807d-29c89dba8c62',
         lastName: 'Leffler',
         metadata: [],
         name: 'Jude Leffler',
@@ -1150,7 +1150,7 @@ $request = new Operations\UpdateMartechMemberRequest(
             'adnuo',
             'verumtamen',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-08T19:52:27.952Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-10T05:59:16.568Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

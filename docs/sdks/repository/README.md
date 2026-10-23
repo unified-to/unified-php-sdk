@@ -13,7 +13,7 @@
 
 ## createRepoRepository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -38,11 +38,11 @@ $request = new Operations\CreateRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
         createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
         description: 'Sed somnus crastinus armarium.',
-        id: '1becda54-75c5-4934-8961-9ca4ffa219f1',
+        id: '0fbc916a-99b9-4067-ba05-7206e1cdce19',
         isPrivate: false,
         metadata: [],
         name: 'bah-bogus',
-        updatedAt: Utils\Utils::parseDateTime('2024-03-01T02:05:05.865Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-01T12:17:41.904Z'),
         webUrl: 'https://neat-birdbath.org',
     ),
     connectionId: '<id>',
@@ -75,7 +75,7 @@ if ($response->repoRepository !== null) {
 
 ## getRepoRepository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -126,7 +126,7 @@ if ($response->repoRepository !== null) {
 
 ## listRepoRepositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ if ($response->repoRepositories !== null) {
 
 ## patchRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -201,11 +201,11 @@ $request = new Operations\PatchRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
         createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
         description: 'Sed somnus crastinus armarium.',
-        id: '03073f42-04d8-46d4-8264-186828af3e72',
+        id: '5f0aab62-1abe-43d2-9a1f-c0df5d83c73b',
         isPrivate: false,
         metadata: [],
         name: 'bah-bogus',
-        updatedAt: Utils\Utils::parseDateTime('2024-03-01T02:05:05.868Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-01T12:17:41.906Z'),
         webUrl: 'https://neat-birdbath.org',
     ),
     connectionId: '<id>',
@@ -239,7 +239,7 @@ if ($response->repoRepository !== null) {
 
 ## removeRepoRepository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ if ($response->statusCode === 200) {
 
 ## updateRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -315,11 +315,11 @@ $request = new Operations\UpdateRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
         createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
         description: 'Sed somnus crastinus armarium.',
-        id: '03073f42-04d8-46d4-8264-186828af3e72',
+        id: '5f0aab62-1abe-43d2-9a1f-c0df5d83c73b',
         isPrivate: false,
         metadata: [],
         name: 'bah-bogus',
-        updatedAt: Utils\Utils::parseDateTime('2024-03-01T02:05:05.868Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-01T12:17:41.906Z'),
         webUrl: 'https://neat-birdbath.org',
     ),
     connectionId: '<id>',

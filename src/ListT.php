@@ -47,6 +47,8 @@ class ListT
     /**
      * Create a list
      *
+     * Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class ListT
     /**
      * Retrieve a list
      *
+     * Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class ListT
     /**
      * List all lists
      *
+     * Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListMartechListsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListMartechListsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class ListT
 
     /**
      * Update a list
+     *
+     * Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchMartechListResponse
@@ -309,6 +317,8 @@ class ListT
     /**
      * Remove a list
      *
+     * Deletes the MarketingList identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class ListT
 
     /**
      * Update a list
+     *
+     * Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMartechListResponse

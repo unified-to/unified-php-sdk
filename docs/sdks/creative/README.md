@@ -13,7 +13,7 @@
 
 ## createAdsCreative
 
-Create a creative
+Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '33196397-83ce-4cf2-8917-2ebd3417a486',
+        id: '7b494a4d-e1ed-4d02-bb74-46560b62deee',
         labels: [
             'coma',
             'accedo',
@@ -46,7 +46,7 @@ $request = new Operations\CreateAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-27T18:17:32.459Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-28T03:59:57.030Z'),
     ),
     connectionId: '<id>',
 );
@@ -78,7 +78,7 @@ if ($response->adsCreative !== null) {
 
 ## getAdsCreative
 
-Retrieve a creative
+Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -129,7 +129,7 @@ if ($response->adsCreative !== null) {
 
 ## listAdsCreatives
 
-List all creatives
+Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -179,7 +179,7 @@ if ($response->adsCreatives !== null) {
 
 ## patchAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -203,7 +203,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '4407d11b-7581-4e75-aed6-04f91230f880',
+        id: '214b3c56-c7cf-43e9-9af4-8c8d883b797f',
         labels: [
             'coma',
             'accedo',
@@ -212,7 +212,7 @@ $request = new Operations\PatchAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-27T18:17:32.465Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-28T03:59:57.039Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -245,7 +245,7 @@ if ($response->adsCreative !== null) {
 
 ## removeAdsCreative
 
-Remove a creative
+Deletes the AdsCreative identified by `id`.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ if ($response->statusCode === 200) {
 
 ## updateAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -320,7 +320,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '4407d11b-7581-4e75-aed6-04f91230f880',
+        id: '214b3c56-c7cf-43e9-9af4-8c8d883b797f',
         labels: [
             'coma',
             'accedo',
@@ -329,7 +329,7 @@ $request = new Operations\UpdateAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-27T18:17:32.465Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-28T03:59:57.039Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

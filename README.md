@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'e1ef892f-3b71-470e-9366-7d11f6594355',
+        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.101Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'e1ef892f-3b71-470e-9366-7d11f6594355',
+        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.101Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
     ),
     connectionId: '<id>',
 );
@@ -162,7 +162,7 @@ if ($response->accountingAccount !== null) {
 * [createAccountingExpensereport](docs/sdks/accounting/README.md#createaccountingexpensereport) - Create an expensereport
 * [createAccountingInvoice](docs/sdks/accounting/README.md#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](docs/sdks/accounting/README.md#createaccountingjournal) - Create a journal
-* [createAccountingOrder](docs/sdks/accounting/README.md#createaccountingorder) - Create an order
+* [~~createAccountingOrder~~](docs/sdks/accounting/README.md#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAccountingPaymentterm](docs/sdks/accounting/README.md#createaccountingpaymentterm) - Create a paymentterm
 * [createAccountingProject](docs/sdks/accounting/README.md#createaccountingproject) - Create a project
 * [createAccountingPurchaseorder](docs/sdks/accounting/README.md#createaccountingpurchaseorder) - Create a purchaseorder
@@ -186,7 +186,7 @@ if ($response->accountingAccount !== null) {
 * [getAccountingExpensereport](docs/sdks/accounting/README.md#getaccountingexpensereport) - Retrieve an expensereport
 * [getAccountingInvoice](docs/sdks/accounting/README.md#getaccountinginvoice) - Retrieve an invoice
 * [getAccountingJournal](docs/sdks/accounting/README.md#getaccountingjournal) - Retrieve a journal
-* [getAccountingOrder](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order
+* [~~getAccountingOrder~~](docs/sdks/accounting/README.md#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAccountingOrganization](docs/sdks/accounting/README.md#getaccountingorganization) - Retrieve an organization
 * [getAccountingPaymentterm](docs/sdks/accounting/README.md#getaccountingpaymentterm) - Retrieve a paymentterm
 * [getAccountingProfitloss](docs/sdks/accounting/README.md#getaccountingprofitloss) - Retrieve a profitloss
@@ -215,7 +215,7 @@ if ($response->accountingAccount !== null) {
 * [listAccountingExpenses](docs/sdks/accounting/README.md#listaccountingexpenses) - List all expenses
 * [listAccountingInvoices](docs/sdks/accounting/README.md#listaccountinginvoices) - List all invoices
 * [listAccountingJournals](docs/sdks/accounting/README.md#listaccountingjournals) - List all journals
-* [listAccountingOrders](docs/sdks/accounting/README.md#listaccountingorders) - List all orders
+* [~~listAccountingOrders~~](docs/sdks/accounting/README.md#listaccountingorders) - List all orders :warning: **Deprecated**
 * [listAccountingOrganizations](docs/sdks/accounting/README.md#listaccountingorganizations) - List all organizations
 * [listAccountingPaymentterms](docs/sdks/accounting/README.md#listaccountingpaymentterms) - List all paymentterms
 * [listAccountingProfitlosses](docs/sdks/accounting/README.md#listaccountingprofitlosses) - List all profitlosses
@@ -240,7 +240,7 @@ if ($response->accountingAccount !== null) {
 * [patchAccountingExpensereport](docs/sdks/accounting/README.md#patchaccountingexpensereport) - Update an expensereport
 * [patchAccountingInvoice](docs/sdks/accounting/README.md#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](docs/sdks/accounting/README.md#patchaccountingjournal) - Update a journal
-* [patchAccountingOrder](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order
+* [~~patchAccountingOrder~~](docs/sdks/accounting/README.md#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAccountingPaymentterm](docs/sdks/accounting/README.md#patchaccountingpaymentterm) - Update a paymentterm
 * [patchAccountingProject](docs/sdks/accounting/README.md#patchaccountingproject) - Update a project
 * [patchAccountingPurchaseorder](docs/sdks/accounting/README.md#patchaccountingpurchaseorder) - Update a purchaseorder
@@ -260,7 +260,7 @@ if ($response->accountingAccount !== null) {
 * [removeAccountingExpensereport](docs/sdks/accounting/README.md#removeaccountingexpensereport) - Remove an expensereport
 * [removeAccountingInvoice](docs/sdks/accounting/README.md#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](docs/sdks/accounting/README.md#removeaccountingjournal) - Remove a journal
-* [removeAccountingOrder](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order
+* [~~removeAccountingOrder~~](docs/sdks/accounting/README.md#removeaccountingorder) - Remove an order :warning: **Deprecated**
 * [removeAccountingPaymentterm](docs/sdks/accounting/README.md#removeaccountingpaymentterm) - Remove a paymentterm
 * [removeAccountingProject](docs/sdks/accounting/README.md#removeaccountingproject) - Remove a project
 * [removeAccountingPurchaseorder](docs/sdks/accounting/README.md#removeaccountingpurchaseorder) - Remove a purchaseorder
@@ -280,7 +280,7 @@ if ($response->accountingAccount !== null) {
 * [updateAccountingExpensereport](docs/sdks/accounting/README.md#updateaccountingexpensereport) - Update an expensereport
 * [updateAccountingInvoice](docs/sdks/accounting/README.md#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](docs/sdks/accounting/README.md#updateaccountingjournal) - Update a journal
-* [updateAccountingOrder](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order
+* [~~updateAccountingOrder~~](docs/sdks/accounting/README.md#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAccountingPaymentterm](docs/sdks/accounting/README.md#updateaccountingpaymentterm) - Update a paymentterm
 * [updateAccountingProject](docs/sdks/accounting/README.md#updateaccountingproject) - Update a project
 * [updateAccountingPurchaseorder](docs/sdks/accounting/README.md#updateaccountingpurchaseorder) - Update a purchaseorder
@@ -1904,15 +1904,15 @@ if ($response->accountingAccount !== null) {
 
 ### [Order](docs/sdks/order/README.md)
 
-* [createAccountingOrder](docs/sdks/order/README.md#createaccountingorder) - Create an order
+* [~~createAccountingOrder~~](docs/sdks/order/README.md#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAssessmentOrder](docs/sdks/order/README.md#createassessmentorder) - Create an order
-* [getAccountingOrder](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order
+* [~~getAccountingOrder~~](docs/sdks/order/README.md#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAssessmentOrder](docs/sdks/order/README.md#getassessmentorder) - Retrieve an order
-* [listAccountingOrders](docs/sdks/order/README.md#listaccountingorders) - List all orders
-* [patchAccountingOrder](docs/sdks/order/README.md#patchaccountingorder) - Update an order
+* [~~listAccountingOrders~~](docs/sdks/order/README.md#listaccountingorders) - List all orders :warning: **Deprecated**
+* [~~patchAccountingOrder~~](docs/sdks/order/README.md#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAssessmentOrder](docs/sdks/order/README.md#patchassessmentorder) - Update an order
-* [removeAccountingOrder](docs/sdks/order/README.md#removeaccountingorder) - Remove an order
-* [updateAccountingOrder](docs/sdks/order/README.md#updateaccountingorder) - Update an order
+* [~~removeAccountingOrder~~](docs/sdks/order/README.md#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [~~updateAccountingOrder~~](docs/sdks/order/README.md#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAssessmentOrder](docs/sdks/order/README.md#updateassessmentorder) - Update an order
 
 ### [Organization](docs/sdks/organization/README.md)
@@ -2849,7 +2849,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: 'e1ef892f-3b71-470e-9366-7d11f6594355',
+            id: '898bd106-40b2-43f3-9e8a-03eca401222f',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -2862,7 +2862,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.101Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
         ),
         connectionId: '<id>',
     );
@@ -2920,7 +2920,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'e1ef892f-3b71-470e-9366-7d11f6594355',
+        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -2933,7 +2933,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.101Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
     ),
     connectionId: '<id>',
 );
@@ -2974,7 +2974,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'e1ef892f-3b71-470e-9366-7d11f6594355',
+        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -2987,7 +2987,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.101Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
     ),
     connectionId: '<id>',
 );

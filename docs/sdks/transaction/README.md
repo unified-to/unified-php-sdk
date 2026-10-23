@@ -13,7 +13,7 @@
 
 ## createAccountingTransaction
 
-Create a transaction
+Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 
 ### Example Usage
 
@@ -37,12 +37,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '8c13a9ec-0a69-4abd-b610-a83a0fba33cf',
+        id: 'a2d82841-e929-4a25-b6e8-ac591f21a7a1',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-                id: '9c79732b-0fb8-4393-bed0-bfbd5b8e002e',
+                id: 'e3c882b2-0e50-400a-9ec9-e4d2e06f4942',
                 name: 'Shirt',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -54,7 +54,7 @@ $request = new Operations\CreateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:08:29.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:29:16.791Z'),
     ),
     connectionId: '<id>',
 );
@@ -86,7 +86,7 @@ if ($response->accountingTransaction !== null) {
 
 ## getAccountingTransaction
 
-Retrieve a transaction
+Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ if ($response->accountingTransaction !== null) {
 
 ## listAccountingTransactions
 
-List all transactions
+Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ if ($response->accountingTransactions !== null) {
 
 ## patchAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -211,12 +211,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '3fc62cc2-c890-432a-baa8-21b3a333e541',
+        id: 'edc4c799-9aa8-44e0-bfbf-7c2d70c68050',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-                id: 'b4303d20-48f1-49bc-9d58-f21e053cdbcc',
+                id: '15879e14-d6a1-4fc7-8311-04bd9f86ac66',
                 name: 'Shirt',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -228,7 +228,7 @@ $request = new Operations\PatchAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:08:29.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:29:16.791Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -261,7 +261,7 @@ if ($response->accountingTransaction !== null) {
 
 ## removeAccountingTransaction
 
-Remove a transaction
+Deletes the AccountingTransaction identified by `id`.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -336,12 +336,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '3fc62cc2-c890-432a-baa8-21b3a333e541',
+        id: 'edc4c799-9aa8-44e0-bfbf-7c2d70c68050',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-                id: 'b4303d20-48f1-49bc-9d58-f21e053cdbcc',
+                id: '15879e14-d6a1-4fc7-8311-04bd9f86ac66',
                 name: 'Shirt',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -353,7 +353,7 @@ $request = new Operations\UpdateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:08:29.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:29:16.791Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

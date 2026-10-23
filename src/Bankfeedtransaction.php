@@ -47,6 +47,8 @@ class Bankfeedtransaction
     /**
      * Create a bankfeedtransaction
      *
+     * Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingBankfeedtransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Bankfeedtransaction
     /**
      * Retrieve a bankfeedtransaction
      *
+     * Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingBankfeedtransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Bankfeedtransaction
     /**
      * List all bankfeedtransactions
      *
+     * Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingBankfeedtransactionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingBankfeedtransactionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Bankfeedtransaction
 
     /**
      * Update a bankfeedtransaction
+     *
+     * Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingBankfeedtransactionResponse
@@ -309,6 +317,8 @@ class Bankfeedtransaction
     /**
      * Remove a bankfeedtransaction
      *
+     * Deletes the AccountingBankfeedtransaction identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBankfeedtransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Bankfeedtransaction
 
     /**
      * Update a bankfeedtransaction
+     *
+     * Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBankfeedtransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBankfeedtransactionResponse

@@ -47,6 +47,8 @@ class Property
     /**
      * Create a property
      *
+     * Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsPropertyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Property
     /**
      * Retrieve a property
      *
+     * Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAnalyticsPropertyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Property
     /**
      * List all properties
      *
+     * Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsPropertiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAnalyticsPropertiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Property
 
     /**
      * Update a property
+     *
+     * Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAnalyticsPropertyResponse
@@ -309,6 +317,8 @@ class Property
     /**
      * Remove a property
      *
+     * Deletes the AnalyticsProperty identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAnalyticsPropertyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Property
 
     /**
      * Update a property
+     *
+     * Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAnalyticsPropertyResponse

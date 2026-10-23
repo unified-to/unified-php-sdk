@@ -13,7 +13,7 @@
 
 ## createAccountingBankfeedtransaction
 
-Create a bankfeedtransaction
+Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
 ### Example Usage
 
@@ -42,15 +42,15 @@ $request = new Operations\CreateAccountingBankfeedtransactionRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
         currency: 'CAD',
         description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-        id: 'e0f4b5f3-8bf9-44f4-b365-f37524184310',
+        id: 'f080d207-3e88-44a8-8116-d612351e64bb',
         isPending: true,
         merchantName: 'Buckridge - Feest',
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2025-04-14T19:58:00.131Z'),
+        postedAt: Utils\Utils::parseDateTime('2025-04-16T03:49:52.041Z'),
         reference: '79574105',
-        transactionAt: Utils\Utils::parseDateTime('2022-07-30T08:10:12.137Z'),
+        transactionAt: Utils\Utils::parseDateTime('2022-07-30T11:48:12.702Z'),
         type: Shared\AccountingBankfeedtransactionType::Credit,
-        updatedAt: Utils\Utils::parseDateTime('2022-05-25T01:44:39.014Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-05-25T03:29:13.175Z'),
     ),
     connectionId: '<id>',
 );
@@ -82,7 +82,7 @@ if ($response->accountingBankfeedtransaction !== null) {
 
 ## getAccountingBankfeedtransaction
 
-Retrieve a bankfeedtransaction
+Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ if ($response->accountingBankfeedtransaction !== null) {
 
 ## listAccountingBankfeedtransactions
 
-List all bankfeedtransactions
+Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -183,7 +183,7 @@ if ($response->accountingBankfeedtransactions !== null) {
 
 ## patchAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -212,15 +212,15 @@ $request = new Operations\PatchAccountingBankfeedtransactionRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
         currency: 'CAD',
         description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-        id: '37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423',
+        id: '0ccd919c-7f10-48a9-8909-d562d7d5291a',
         isPending: true,
         merchantName: 'Buckridge - Feest',
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2025-04-14T19:58:00.144Z'),
+        postedAt: Utils\Utils::parseDateTime('2025-04-16T03:49:52.053Z'),
         reference: '79574105',
-        transactionAt: Utils\Utils::parseDateTime('2022-07-30T08:10:12.138Z'),
+        transactionAt: Utils\Utils::parseDateTime('2022-07-30T11:48:12.704Z'),
         type: Shared\AccountingBankfeedtransactionType::Credit,
-        updatedAt: Utils\Utils::parseDateTime('2022-05-25T01:44:39.015Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-05-25T03:29:13.176Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -253,7 +253,7 @@ if ($response->accountingBankfeedtransaction !== null) {
 
 ## removeAccountingBankfeedtransaction
 
-Remove a bankfeedtransaction
+Deletes the AccountingBankfeedtransaction identified by `id`.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -333,15 +333,15 @@ $request = new Operations\UpdateAccountingBankfeedtransactionRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
         currency: 'CAD',
         description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-        id: '37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423',
+        id: '0ccd919c-7f10-48a9-8909-d562d7d5291a',
         isPending: true,
         merchantName: 'Buckridge - Feest',
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2025-04-14T19:58:00.144Z'),
+        postedAt: Utils\Utils::parseDateTime('2025-04-16T03:49:52.053Z'),
         reference: '79574105',
-        transactionAt: Utils\Utils::parseDateTime('2022-07-30T08:10:12.138Z'),
+        transactionAt: Utils\Utils::parseDateTime('2022-07-30T11:48:12.704Z'),
         type: Shared\AccountingBankfeedtransactionType::Credit,
-        updatedAt: Utils\Utils::parseDateTime('2022-05-25T01:44:39.015Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-05-25T03:29:13.176Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

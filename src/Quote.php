@@ -47,6 +47,8 @@ class Quote
     /**
      * Create a quote
      *
+     * Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingQuoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Quote
     /**
      * Retrieve a quote
      *
+     * Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingQuoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Quote
     /**
      * List all quotes
      *
+     * Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingQuotesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingQuotesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Quote
 
     /**
      * Update a quote
+     *
+     * Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingQuoteResponse
@@ -309,6 +317,8 @@ class Quote
     /**
      * Remove a quote
      *
+     * Deletes the AccountingQuote identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingQuoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Quote
 
     /**
      * Update a quote
+     *
+     * Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingQuoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingQuoteResponse

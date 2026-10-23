@@ -47,6 +47,8 @@ class Page
     /**
      * Create a page
      *
+     * Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Page
     /**
      * Retrieve a page
      *
+     * Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Page
     /**
      * List all pages
      *
+     * Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListKmsPagesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListKmsPagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Page
 
     /**
      * Update a page
+     *
+     * Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchKmsPageResponse
@@ -309,6 +317,8 @@ class Page
     /**
      * Remove a page
      *
+     * Deletes the KmsPage identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Page
 
     /**
      * Update a page
+     *
+     * Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateKmsPageResponse

@@ -13,7 +13,7 @@
 
 ## createAnalyticsProperty
 
-Create a property
+Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
 
 ### Example Usage
 
@@ -38,10 +38,10 @@ $request = new Operations\CreateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '8e5d696a-a1b8-4bc8-a358-72945257ff51',
+        id: '66a7cadb-6c99-404e-8583-7a81b923d57f',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:26:18.306Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:40:08.989Z'),
     ),
     connectionId: '<id>',
 );
@@ -73,7 +73,7 @@ if ($response->analyticsProperty !== null) {
 
 ## getAnalyticsProperty
 
-Retrieve a property
+Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ if ($response->analyticsProperty !== null) {
 
 ## listAnalyticsProperties
 
-List all properties
+Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -174,7 +174,7 @@ if ($response->analyticsProperties !== null) {
 
 ## patchAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -199,10 +199,10 @@ $request = new Operations\PatchAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '88eebe3b-1dfe-4b0d-afcf-dc721adea84d',
+        id: '56fec81b-ebae-4419-aba9-f151f63f6764',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:26:18.306Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:40:08.990Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -235,7 +235,7 @@ if ($response->analyticsProperty !== null) {
 
 ## removeAnalyticsProperty
 
-Remove a property
+Deletes the AnalyticsProperty identified by `id`.
 
 ### Example Usage
 
@@ -286,7 +286,7 @@ if ($response->statusCode === 200) {
 
 ## updateAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -311,10 +311,10 @@ $request = new Operations\UpdateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '88eebe3b-1dfe-4b0d-afcf-dc721adea84d',
+        id: '56fec81b-ebae-4419-aba9-f151f63f6764',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:26:18.306Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:40:08.990Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

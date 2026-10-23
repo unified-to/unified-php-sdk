@@ -75,6 +75,7 @@ class TaskProject
     public ?array $metadata = null;
 
     /**
+     * The project's name
      *
      * @var ?string $name
      */

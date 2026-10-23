@@ -51,7 +51,7 @@
 
 ## createAdsAd
 
-Create an ad
+Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
 ### Example Usage
 
@@ -81,11 +81,11 @@ $request = new Operations\CreateAdsAdRequest(
         creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
         description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
         finalUrl: 'https://improbable-sanity.com',
-        id: '1607f143-283d-4a82-ace1-3ebc68008f8f',
+        id: '12a559b2-074c-49d5-8f7a-75cb170bce8f',
         metadata: [],
         name: 'Hermiston Group',
         status: Shared\AdsAdStatus::Archived,
-        updatedAt: Utils\Utils::parseDateTime('2024-06-18T13:39:37.415Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-19T09:06:11.794Z'),
     ),
     connectionId: '<id>',
 );
@@ -117,7 +117,7 @@ if ($response->adsAd !== null) {
 
 ## createAdsAsset
 
-Create an asset
+Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
 
 ### Example Usage
 
@@ -142,12 +142,12 @@ $request = new Operations\CreateAdsAssetRequest(
     adsAsset: new Shared\AdsAsset(
         createdAt: Utils\Utils::parseDateTime('2020-03-27T20:14:38.603Z'),
         height: 400,
-        id: 'b9d2a5ac-0942-44da-aeb7-c1bc675f2148',
+        id: '695af8bf-8c69-475e-ba14-5a05cc1a6016',
         metadata: [],
         mimeType: 'IMAGE_PNG',
         name: 'Lockman - DuBuque',
         type: Shared\AdsAssetType::Image,
-        updatedAt: Utils\Utils::parseDateTime('2022-03-25T04:39:03.974Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-03-25T19:06:38.960Z'),
         url: 'https://informal-perfection.com/',
         width: 600,
     ),
@@ -181,7 +181,7 @@ if ($response->adsAsset !== null) {
 
 ## createAdsCampaign
 
-Create a campaign
+Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 
 ### Example Usage
 
@@ -210,18 +210,18 @@ $request = new Operations\CreateAdsCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
         currency: 'USD',
         effectiveStatus: Shared\EffectiveStatus::NotEligible,
-        endAt: Utils\Utils::parseDateTime('2025-05-31T23:30:23.660Z'),
-        id: '2a3e23ca-f2d4-472e-a1df-9bf34b6d51b8',
+        endAt: Utils\Utils::parseDateTime('2025-06-02T08:12:06.694Z'),
+        id: '7734a920-8b81-4528-ad2c-7f85f1886802',
         labels: [
             'comedo',
         ],
         metadata: [],
         name: 'Emard Inc',
-        startAt: Utils\Utils::parseDateTime('2022-07-21T10:50:21.338Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-21T12:38:38.281Z'),
         status: Shared\AdsCampaignStatus::ProcessingFailed,
         targeting: new Shared\PropertyAdsCampaignTargeting(),
         totalSpendAmount: 2349.8642875347286,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-01T14:07:49.917Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-03T05:09:59.570Z'),
     ),
     connectionId: '<id>',
 );
@@ -253,7 +253,7 @@ if ($response->adsCampaign !== null) {
 
 ## createAdsCreative
 
-Create a creative
+Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
 
 ### Example Usage
 
@@ -277,7 +277,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '33196397-83ce-4cf2-8917-2ebd3417a486',
+        id: '7b494a4d-e1ed-4d02-bb74-46560b62deee',
         labels: [
             'coma',
             'accedo',
@@ -286,7 +286,7 @@ $request = new Operations\CreateAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-27T18:17:32.459Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-28T03:59:57.030Z'),
     ),
     connectionId: '<id>',
 );
@@ -318,7 +318,7 @@ if ($response->adsCreative !== null) {
 
 ## createAdsGroup
 
-Create a group
+Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
 ### Example Usage
 
@@ -347,15 +347,15 @@ $request = new Operations\CreateAdsGroupRequest(
         createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
         currency: 'USD',
         effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
-        endAt: Utils\Utils::parseDateTime('2026-06-25T01:34:52.041Z'),
-        id: 'a2c68603-1f08-42c7-bf47-91462bbd8ae3',
+        endAt: Utils\Utils::parseDateTime('2026-06-26T23:06:05.743Z'),
+        id: '1da91fc0-7434-448a-a919-f0b108796366',
         languageLocale: 'fr-FR',
         metadata: [],
         name: 'Stark - Baumbach',
-        startAt: Utils\Utils::parseDateTime('2026-01-09T06:49:11.398Z'),
+        startAt: Utils\Utils::parseDateTime('2026-01-11T01:17:34.538Z'),
         status: Shared\AdsGroupStatus::Processing,
         targeting: new Shared\PropertyAdsGroupTargeting(),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-13T16:14:01.125Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-14T08:05:31.572Z'),
     ),
     connectionId: '<id>',
 );
@@ -387,7 +387,7 @@ if ($response->adsGroup !== null) {
 
 ## createAdsInsertionorder
 
-Create an insertionorder
+Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
 ### Example Usage
 
@@ -411,11 +411,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: '29e470ca-1a4f-4c5c-91fc-6a28fa9d22d7',
+        id: '09ee7e7a-562c-4409-b688-8dd41a1b2946',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-28T19:47:29.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T20:13:44.671Z'),
     ),
     connectionId: '<id>',
 );
@@ -447,7 +447,7 @@ if ($response->adsInsertionorder !== null) {
 
 ## createAdsOrganization
 
-Create an organization
+Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 
 ### Example Usage
 
@@ -473,13 +473,13 @@ $request = new Operations\CreateAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: '37fa02a7-2485-4c88-a329-c38febfa1be4',
+        id: '0022ef1b-7963-403f-a55a-e49b6a97ce92',
         managers: [],
         metadata: [],
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-29T03:04:47.129Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-30T22:27:01.491Z'),
     ),
     connectionId: '<id>',
 );
@@ -511,7 +511,7 @@ if ($response->adsOrganization !== null) {
 
 ## getAdsAd
 
-Retrieve an ad
+Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -562,7 +562,7 @@ if ($response->adsAd !== null) {
 
 ## getAdsAsset
 
-Retrieve an asset
+Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -613,7 +613,7 @@ if ($response->adsAsset !== null) {
 
 ## getAdsCampaign
 
-Retrieve a campaign
+Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -664,7 +664,7 @@ if ($response->adsCampaign !== null) {
 
 ## getAdsCreative
 
-Retrieve a creative
+Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -715,7 +715,7 @@ if ($response->adsCreative !== null) {
 
 ## getAdsGroup
 
-Retrieve a group
+Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -766,7 +766,7 @@ if ($response->adsGroup !== null) {
 
 ## getAdsInsertionorder
 
-Retrieve an insertionorder
+Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -817,7 +817,7 @@ if ($response->adsInsertionorder !== null) {
 
 ## getAdsOrganization
 
-Retrieve an organization
+Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -868,7 +868,7 @@ if ($response->adsOrganization !== null) {
 
 ## getAdsPromoted
 
-Retrieve a promoted
+Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -919,7 +919,7 @@ if ($response->adsPromoted !== null) {
 
 ## getAdsTarget
 
-Retrieve a target
+Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -970,7 +970,7 @@ if ($response->adsTarget !== null) {
 
 ## listAdsAds
 
-List all ads
+Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1020,7 +1020,7 @@ if ($response->adsAds !== null) {
 
 ## listAdsAssets
 
-List all assets
+Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1070,7 +1070,7 @@ if ($response->adsAssets !== null) {
 
 ## listAdsCampaigns
 
-List all campaigns
+Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1120,7 +1120,7 @@ if ($response->adsCampaigns !== null) {
 
 ## listAdsCreatives
 
-List all creatives
+Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1170,7 +1170,7 @@ if ($response->adsCreatives !== null) {
 
 ## listAdsGroups
 
-List all groups
+Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1220,7 +1220,7 @@ if ($response->adsGroups !== null) {
 
 ## listAdsInsertionorders
 
-List all insertionorders
+Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1270,7 +1270,7 @@ if ($response->adsInsertionorders !== null) {
 
 ## listAdsOrganizations
 
-List all organizations
+Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1320,7 +1320,7 @@ if ($response->adsOrganizations !== null) {
 
 ## listAdsPromoteds
 
-List all promoteds
+Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1370,7 +1370,7 @@ if ($response->adsPromoteds !== null) {
 
 ## listAdsReports
 
-List all reports
+Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1420,7 +1420,7 @@ if ($response->adsReports !== null) {
 
 ## listAdsTargets
 
-List all targets
+Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1470,7 +1470,7 @@ if ($response->adsTargets !== null) {
 
 ## patchAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -1500,11 +1500,11 @@ $request = new Operations\PatchAdsAdRequest(
         creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
         description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
         finalUrl: 'https://improbable-sanity.com',
-        id: '95185ea9-82a3-415a-b9ce-ae773a1ace06',
+        id: 'b0b0524c-8867-4742-8522-90e7adb683a9',
         metadata: [],
         name: 'Hermiston Group',
         status: Shared\AdsAdStatus::Archived,
-        updatedAt: Utils\Utils::parseDateTime('2024-06-18T13:39:37.425Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-19T09:06:11.812Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1537,7 +1537,7 @@ if ($response->adsAd !== null) {
 
 ## patchAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -1566,18 +1566,18 @@ $request = new Operations\PatchAdsCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
         currency: 'USD',
         effectiveStatus: Shared\EffectiveStatus::NotEligible,
-        endAt: Utils\Utils::parseDateTime('2025-05-31T23:30:23.735Z'),
-        id: '58a93fe5-d8d1-4977-b7f1-db6c66108cf2',
+        endAt: Utils\Utils::parseDateTime('2025-06-02T08:12:06.805Z'),
+        id: 'a9072f26-4981-4c59-a064-9f4778c74f87',
         labels: [
             'comedo',
         ],
         metadata: [],
         name: 'Emard Inc',
-        startAt: Utils\Utils::parseDateTime('2022-07-21T10:50:21.342Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-21T12:38:38.287Z'),
         status: Shared\AdsCampaignStatus::ProcessingFailed,
         targeting: new Shared\PropertyAdsCampaignTargeting(),
         totalSpendAmount: 2349.8642875347286,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-01T14:07:50.007Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-03T05:09:59.702Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1610,7 +1610,7 @@ if ($response->adsCampaign !== null) {
 
 ## patchAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -1634,7 +1634,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '4407d11b-7581-4e75-aed6-04f91230f880',
+        id: '214b3c56-c7cf-43e9-9af4-8c8d883b797f',
         labels: [
             'coma',
             'accedo',
@@ -1643,7 +1643,7 @@ $request = new Operations\PatchAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-27T18:17:32.465Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-28T03:59:57.039Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1676,7 +1676,7 @@ if ($response->adsCreative !== null) {
 
 ## patchAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -1705,15 +1705,15 @@ $request = new Operations\PatchAdsGroupRequest(
         createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
         currency: 'USD',
         effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
-        endAt: Utils\Utils::parseDateTime('2026-06-25T01:34:52.194Z'),
-        id: '7881867d-720e-4bd6-9ea7-1347033a25c3',
+        endAt: Utils\Utils::parseDateTime('2026-06-26T23:06:05.936Z'),
+        id: '0eeec5cc-3170-4279-acfa-ca35313357a2',
         languageLocale: 'fr-FR',
         metadata: [],
         name: 'Stark - Baumbach',
-        startAt: Utils\Utils::parseDateTime('2026-01-09T06:49:11.540Z'),
+        startAt: Utils\Utils::parseDateTime('2026-01-11T01:17:34.718Z'),
         status: Shared\AdsGroupStatus::Processing,
         targeting: new Shared\PropertyAdsGroupTargeting(),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-13T16:14:01.179Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-14T08:05:31.639Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1746,7 +1746,7 @@ if ($response->adsGroup !== null) {
 
 ## patchAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -1770,11 +1770,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: 'e53f2bec-eced-427d-9568-4b613573b749',
+        id: '572472e0-6ed5-4e80-a835-aea09e94ff04',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-28T19:47:29.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T20:13:44.672Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1807,7 +1807,7 @@ if ($response->adsInsertionorder !== null) {
 
 ## patchAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1833,13 +1833,13 @@ $request = new Operations\PatchAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: 'dc95b21f-c5ad-4cb6-b1db-4c172e0343f0',
+        id: '6c36c6c1-1193-4e54-920e-b70dd990ec69',
         managers: [],
         metadata: [],
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-29T03:04:47.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-30T22:27:01.507Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1872,7 +1872,7 @@ if ($response->adsOrganization !== null) {
 
 ## removeAdsAd
 
-Remove an ad
+Deletes the AdsAd identified by `id`.
 
 ### Example Usage
 
@@ -1923,7 +1923,7 @@ if ($response->statusCode === 200) {
 
 ## removeAdsCampaign
 
-Remove a campaign
+Deletes the AdsCampaign identified by `id`.
 
 ### Example Usage
 
@@ -1974,7 +1974,7 @@ if ($response->statusCode === 200) {
 
 ## removeAdsCreative
 
-Remove a creative
+Deletes the AdsCreative identified by `id`.
 
 ### Example Usage
 
@@ -2025,7 +2025,7 @@ if ($response->statusCode === 200) {
 
 ## removeAdsGroup
 
-Remove a group
+Deletes the AdsGroup identified by `id`.
 
 ### Example Usage
 
@@ -2076,7 +2076,7 @@ if ($response->statusCode === 200) {
 
 ## removeAdsInsertionorder
 
-Remove an insertionorder
+Deletes the AdsInsertionorder identified by `id`.
 
 ### Example Usage
 
@@ -2127,7 +2127,7 @@ if ($response->statusCode === 200) {
 
 ## removeAdsOrganization
 
-Remove an organization
+Deletes the AdsOrganization identified by `id`.
 
 ### Example Usage
 
@@ -2178,7 +2178,7 @@ if ($response->statusCode === 200) {
 
 ## updateAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -2208,11 +2208,11 @@ $request = new Operations\UpdateAdsAdRequest(
         creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
         description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
         finalUrl: 'https://improbable-sanity.com',
-        id: '95185ea9-82a3-415a-b9ce-ae773a1ace06',
+        id: 'b0b0524c-8867-4742-8522-90e7adb683a9',
         metadata: [],
         name: 'Hermiston Group',
         status: Shared\AdsAdStatus::Archived,
-        updatedAt: Utils\Utils::parseDateTime('2024-06-18T13:39:37.425Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-19T09:06:11.812Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2245,7 +2245,7 @@ if ($response->adsAd !== null) {
 
 ## updateAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -2274,18 +2274,18 @@ $request = new Operations\UpdateAdsCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
         currency: 'USD',
         effectiveStatus: Shared\EffectiveStatus::NotEligible,
-        endAt: Utils\Utils::parseDateTime('2025-05-31T23:30:23.735Z'),
-        id: '58a93fe5-d8d1-4977-b7f1-db6c66108cf2',
+        endAt: Utils\Utils::parseDateTime('2025-06-02T08:12:06.805Z'),
+        id: 'a9072f26-4981-4c59-a064-9f4778c74f87',
         labels: [
             'comedo',
         ],
         metadata: [],
         name: 'Emard Inc',
-        startAt: Utils\Utils::parseDateTime('2022-07-21T10:50:21.342Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-21T12:38:38.287Z'),
         status: Shared\AdsCampaignStatus::ProcessingFailed,
         targeting: new Shared\PropertyAdsCampaignTargeting(),
         totalSpendAmount: 2349.8642875347286,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-01T14:07:50.007Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-03T05:09:59.702Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2318,7 +2318,7 @@ if ($response->adsCampaign !== null) {
 
 ## updateAdsCreative
 
-Update a creative
+Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
 
 ### Example Usage
 
@@ -2342,7 +2342,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '4407d11b-7581-4e75-aed6-04f91230f880',
+        id: '214b3c56-c7cf-43e9-9af4-8c8d883b797f',
         labels: [
             'coma',
             'accedo',
@@ -2351,7 +2351,7 @@ $request = new Operations\UpdateAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-27T18:17:32.465Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-28T03:59:57.039Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2384,7 +2384,7 @@ if ($response->adsCreative !== null) {
 
 ## updateAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -2413,15 +2413,15 @@ $request = new Operations\UpdateAdsGroupRequest(
         createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
         currency: 'USD',
         effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
-        endAt: Utils\Utils::parseDateTime('2026-06-25T01:34:52.194Z'),
-        id: '7881867d-720e-4bd6-9ea7-1347033a25c3',
+        endAt: Utils\Utils::parseDateTime('2026-06-26T23:06:05.936Z'),
+        id: '0eeec5cc-3170-4279-acfa-ca35313357a2',
         languageLocale: 'fr-FR',
         metadata: [],
         name: 'Stark - Baumbach',
-        startAt: Utils\Utils::parseDateTime('2026-01-09T06:49:11.540Z'),
+        startAt: Utils\Utils::parseDateTime('2026-01-11T01:17:34.718Z'),
         status: Shared\AdsGroupStatus::Processing,
         targeting: new Shared\PropertyAdsGroupTargeting(),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-13T16:14:01.179Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-14T08:05:31.639Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2454,7 +2454,7 @@ if ($response->adsGroup !== null) {
 
 ## updateAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -2478,11 +2478,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: 'e53f2bec-eced-427d-9568-4b613573b749',
+        id: '572472e0-6ed5-4e80-a835-aea09e94ff04',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-28T19:47:29.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T20:13:44.672Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2515,7 +2515,7 @@ if ($response->adsInsertionorder !== null) {
 
 ## updateAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -2541,13 +2541,13 @@ $request = new Operations\UpdateAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: 'dc95b21f-c5ad-4cb6-b1db-4c172e0343f0',
+        id: '6c36c6c1-1193-4e54-920e-b70dd990ec69',
         managers: [],
         metadata: [],
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-29T03:04:47.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-30T22:27:01.507Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

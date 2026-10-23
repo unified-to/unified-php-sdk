@@ -47,6 +47,8 @@ class Metadata
     /**
      * Create a metadata
      *
+     * Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they are mapped to the provider's API. Returns the created MetadataMetadata.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateMetadataMetadataRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateMetadataMetadataResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Metadata
     /**
      * Retrieve a metadata
      *
+     * Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetMetadataMetadataRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetMetadataMetadataResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Metadata
     /**
      * List all metadatas
      *
+     * Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListMetadataMetadatasRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListMetadataMetadatasResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Metadata
 
     /**
      * Update a metadata
+     *
+     * Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchMetadataMetadataRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchMetadataMetadataResponse
@@ -309,6 +317,8 @@ class Metadata
     /**
      * Remove a metadata
      *
+     * Deletes the MetadataMetadata identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveMetadataMetadataRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMetadataMetadataResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Metadata
 
     /**
      * Update a metadata
+     *
+     * Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateMetadataMetadataRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMetadataMetadataResponse

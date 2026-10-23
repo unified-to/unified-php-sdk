@@ -13,7 +13,7 @@
 
 ## createSigningSignatory
 
-Create a signatory
+Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
 
 ### Example Usage
 
@@ -38,12 +38,12 @@ $request = new Operations\CreateSigningSignatoryRequest(
     signingSignatory: new Shared\SigningSignatory(
         createdAt: Utils\Utils::parseDateTime('2022-04-16T19:25:01.966Z'),
         email: 'anais.lakin@icloud.com',
-        id: 'a8d15dcb-4bb9-4c04-a1bf-19d786617b09',
+        id: '1b0864c8-aab6-4b49-8b81-52e06c540451',
         metadata: [],
         name: 'Anais Lakin',
         role: Shared\SigningSignatoryRole::Signer,
         status: Shared\SigningSignatoryStatus::Error,
-        updatedAt: Utils\Utils::parseDateTime('2024-05-17T19:57:49.083Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-05-18T18:00:21.130Z'),
     ),
     connectionId: '<id>',
 );
@@ -75,7 +75,7 @@ if ($response->signingSignatory !== null) {
 
 ## getSigningSignatory
 
-Retrieve a signatory
+Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -126,7 +126,7 @@ if ($response->signingSignatory !== null) {
 
 ## listSigningSignatories
 
-List all signatories
+Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ if ($response->signingSignatories !== null) {
 
 ## patchSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -201,12 +201,12 @@ $request = new Operations\PatchSigningSignatoryRequest(
     signingSignatory: new Shared\SigningSignatory(
         createdAt: Utils\Utils::parseDateTime('2022-04-16T19:25:01.966Z'),
         email: 'anais.lakin@icloud.com',
-        id: 'b0c1cf50-f19c-478f-8ee0-6beabeda5c3d',
+        id: 'af436cd4-a6f7-40cb-afab-fa3841e76bbc',
         metadata: [],
         name: 'Anais Lakin',
         role: Shared\SigningSignatoryRole::Signer,
         status: Shared\SigningSignatoryStatus::Error,
-        updatedAt: Utils\Utils::parseDateTime('2024-05-17T19:57:49.091Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-05-18T18:00:21.138Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -239,7 +239,7 @@ if ($response->signingSignatory !== null) {
 
 ## removeSigningSignatory
 
-Remove a signatory
+Deletes the SigningSignatory identified by `id`.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ if ($response->statusCode === 200) {
 
 ## updateSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -315,12 +315,12 @@ $request = new Operations\UpdateSigningSignatoryRequest(
     signingSignatory: new Shared\SigningSignatory(
         createdAt: Utils\Utils::parseDateTime('2022-04-16T19:25:01.966Z'),
         email: 'anais.lakin@icloud.com',
-        id: 'b0c1cf50-f19c-478f-8ee0-6beabeda5c3d',
+        id: 'af436cd4-a6f7-40cb-afab-fa3841e76bbc',
         metadata: [],
         name: 'Anais Lakin',
         role: Shared\SigningSignatoryRole::Signer,
         status: Shared\SigningSignatoryStatus::Error,
-        updatedAt: Utils\Utils::parseDateTime('2024-05-17T19:57:49.091Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-05-18T18:00:21.138Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

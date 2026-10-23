@@ -47,6 +47,8 @@ class Commerce
     /**
      * Create a collection
      *
+     * Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Commerce
 
     /**
      * Create an inventory
+     *
+     * Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceInventoryResponse
@@ -183,6 +187,8 @@ class Commerce
     /**
      * Create an item
      *
+     * Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Commerce
 
     /**
      * Create an itemvariant
+     *
+     * Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemvariantResponse
@@ -319,6 +327,8 @@ class Commerce
     /**
      * Create a location
      *
+     * Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Commerce
 
     /**
      * Create a reservation
+     *
+     * Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReservationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceReservationResponse
@@ -455,6 +467,8 @@ class Commerce
     /**
      * Create a review
      *
+     * Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -522,6 +536,8 @@ class Commerce
 
     /**
      * Create a saleschannel
+     *
+     * Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelResponse
@@ -591,6 +607,8 @@ class Commerce
     /**
      * Retrieve a collection
      *
+     * Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -653,6 +671,8 @@ class Commerce
 
     /**
      * Retrieve an inventory
+     *
+     * Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceInventoryResponse
@@ -717,6 +737,8 @@ class Commerce
     /**
      * Retrieve an item
      *
+     * Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -779,6 +801,8 @@ class Commerce
 
     /**
      * Retrieve an itemvariant
+     *
+     * Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceItemvariantResponse
@@ -843,6 +867,8 @@ class Commerce
     /**
      * Retrieve a location
      *
+     * Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -905,6 +931,8 @@ class Commerce
 
     /**
      * Retrieve a reservation
+     *
+     * Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceReservationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceReservationResponse
@@ -969,6 +997,8 @@ class Commerce
     /**
      * Retrieve a review
      *
+     * Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1031,6 +1061,8 @@ class Commerce
 
     /**
      * Retrieve a saleschannel
+     *
+     * Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelResponse
@@ -1095,6 +1127,8 @@ class Commerce
     /**
      * List all availabilities
      *
+     * Returns a list of CommerceAvailabilities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceAvailabilitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1157,6 +1191,8 @@ class Commerce
 
     /**
      * List all collections
+     *
+     * Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
@@ -1221,6 +1257,8 @@ class Commerce
     /**
      * List all inventories
      *
+     * Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceInventoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceInventoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1283,6 +1321,8 @@ class Commerce
 
     /**
      * List all items
+     *
+     * Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
@@ -1347,6 +1387,8 @@ class Commerce
     /**
      * List all itemvariants
      *
+     * Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceItemvariantsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1409,6 +1451,8 @@ class Commerce
 
     /**
      * List all locations
+     *
+     * Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
@@ -1473,6 +1517,8 @@ class Commerce
     /**
      * List all reservations
      *
+     * Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceReservationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceReservationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1535,6 +1581,8 @@ class Commerce
 
     /**
      * List all reviews
+     *
+     * Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceReviewsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceReviewsResponse
@@ -1599,6 +1647,8 @@ class Commerce
     /**
      * List all saleschannels
      *
+     * Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1661,6 +1711,8 @@ class Commerce
 
     /**
      * Update a collection
+     *
+     * Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
@@ -1730,6 +1782,8 @@ class Commerce
     /**
      * Update an inventory
      *
+     * Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1797,6 +1851,8 @@ class Commerce
 
     /**
      * Update an item
+     *
+     * Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
@@ -1866,6 +1922,8 @@ class Commerce
     /**
      * Update an itemvariant
      *
+     * Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1933,6 +1991,8 @@ class Commerce
 
     /**
      * Update a location
+     *
+     * Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
@@ -2002,6 +2062,8 @@ class Commerce
     /**
      * Update a reservation
      *
+     * Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReservationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2069,6 +2131,8 @@ class Commerce
 
     /**
      * Update a review
+     *
+     * Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceReviewResponse
@@ -2138,6 +2202,8 @@ class Commerce
     /**
      * Update a saleschannel
      *
+     * Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2206,6 +2272,8 @@ class Commerce
     /**
      * Remove a collection
      *
+     * Deletes the CommerceCollection identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2262,6 +2330,8 @@ class Commerce
 
     /**
      * Remove an inventory
+     *
+     * Deletes the CommerceInventory identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceInventoryResponse
@@ -2320,6 +2390,8 @@ class Commerce
     /**
      * Remove an item
      *
+     * Deletes the CommerceItem identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2376,6 +2448,8 @@ class Commerce
 
     /**
      * Remove an itemvariant
+     *
+     * Deletes the CommerceItemvariant identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemvariantResponse
@@ -2434,6 +2508,8 @@ class Commerce
     /**
      * Remove a location
      *
+     * Deletes the CommerceLocation identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2490,6 +2566,8 @@ class Commerce
 
     /**
      * Remove a reservation
+     *
+     * Deletes the CommerceReservation identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReservationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReservationResponse
@@ -2548,6 +2626,8 @@ class Commerce
     /**
      * Remove a review
      *
+     * Deletes the CommerceReview identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2605,6 +2685,8 @@ class Commerce
     /**
      * Remove a saleschannel
      *
+     * Deletes the CommerceSaleschannel identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2661,6 +2743,8 @@ class Commerce
 
     /**
      * Update a collection
+     *
+     * Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
@@ -2730,6 +2814,8 @@ class Commerce
     /**
      * Update an inventory
      *
+     * Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceInventoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2797,6 +2883,8 @@ class Commerce
 
     /**
      * Update an item
+     *
+     * Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse
@@ -2866,6 +2954,8 @@ class Commerce
     /**
      * Update an itemvariant
      *
+     * Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemvariantResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2933,6 +3023,8 @@ class Commerce
 
     /**
      * Update a location
+     *
+     * Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
@@ -3002,6 +3094,8 @@ class Commerce
     /**
      * Update a reservation
      *
+     * Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReservationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReservationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3070,6 +3164,8 @@ class Commerce
     /**
      * Update a review
      *
+     * Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3137,6 +3233,8 @@ class Commerce
 
     /**
      * Update a saleschannel
+     *
+     * Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelResponse

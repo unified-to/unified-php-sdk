@@ -47,6 +47,8 @@ class Content
     /**
      * Create a content
      *
+     * Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Content
     /**
      * Retrieve a content
      *
+     * Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Content
     /**
      * List all contents
      *
+     * Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsContentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsContentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Content
 
     /**
      * Update a content
+     *
+     * Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsContentResponse
@@ -309,6 +317,8 @@ class Content
     /**
      * Remove a content
      *
+     * Deletes the LmsContent identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Content
 
     /**
      * Update a content
+     *
+     * Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsContentResponse

@@ -47,6 +47,8 @@ class Member
     /**
      * Create a member
      *
+     * Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Member
     /**
      * Retrieve a member
      *
+     * Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Member
 
     /**
      * Retrieve a member
+     *
+     * Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetMartechMemberResponse
@@ -241,6 +247,8 @@ class Member
     /**
      * List all members
      *
+     * Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsMembersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsMembersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -304,6 +312,8 @@ class Member
     /**
      * List all members
      *
+     * Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListMartechMembersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListMartechMembersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -366,6 +376,8 @@ class Member
 
     /**
      * Update a member
+     *
+     * Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchMartechMemberResponse
@@ -435,6 +447,8 @@ class Member
     /**
      * Remove a member
      *
+     * Deletes the MarketingMember identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -491,6 +505,8 @@ class Member
 
     /**
      * Update a member
+     *
+     * Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMartechMemberResponse

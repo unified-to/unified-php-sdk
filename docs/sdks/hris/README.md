@@ -100,7 +100,7 @@
 
 ## createHrisAttendance
 
-Create an attendance
+Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
 ### Example Usage
 
@@ -131,32 +131,32 @@ $request = new Operations\CreateHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-09-19T14:06:30.623Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-09-19T15:06:28.110Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 51,
-                endAt: Utils\Utils::parseDateTime('2024-02-14T13:16:00.525Z'),
-                id: '90e38399-cdd9-4d0f-9dea-ce081a3fdf76',
+                endAt: Utils\Utils::parseDateTime('2024-02-15T12:19:44.117Z'),
+                id: '885331bb-2d7c-4be6-ab50-f6c0a8246cac',
                 isPaid: false,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-10-29T23:03:00.394Z'),
+                startAt: Utils\Utils::parseDateTime('2023-10-30T19:24:30.520Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'EUR',
         declaredTipsAmount: 54,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-04-23T07:48:11.832Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-24T08:35:36.994Z'),
         hourlyRate: 16,
         hours: 10,
-        id: 'd6a7c321-3372-4891-9b5d-f2d24e9a30c5',
+        id: 'e245fc8a-5b24-4114-9a10-52987bb51214',
         jobName: 'Human Accountability Administrator',
         metadata: [],
         nonCashTipsAmount: 167,
-        startAt: Utils\Utils::parseDateTime('2021-11-11T00:56:01.833Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-11T03:15:04.365Z'),
         status: Shared\HrisAttendanceStatus::Open,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-19T21:04:34.807Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-20T01:08:55.429Z'),
     ),
     connectionId: '<id>',
 );
@@ -188,7 +188,7 @@ if ($response->hrisAttendance !== null) {
 
 ## createHrisBankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -218,7 +218,7 @@ $request = new Operations\CreateHrisBankaccountRequest(
         countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
         currency: 'USD',
-        id: '873b3ffd-2308-487d-a12d-eaadd026c278',
+        id: 'a6b56f32-6680-4278-a7eb-42eafc008478',
         isPrimary: true,
         metadata: [],
         name: 'Granville Schumm - Checking',
@@ -226,7 +226,7 @@ $request = new Operations\CreateHrisBankaccountRequest(
         routingNumber: '448650724',
         splitAmount: 98,
         splitType: Shared\SplitType::Percentage,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-01T06:21:20.400Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-02T21:02:53.617Z'),
     ),
     connectionId: '<id>',
 );
@@ -258,7 +258,7 @@ if ($response->hrisBankaccount !== null) {
 
 ## createHrisBenefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -289,13 +289,13 @@ $request = new Operations\CreateHrisBenefitRequest(
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
         frequency: Shared\HrisBenefitFrequency::Month,
-        id: 'cb407db1-1a01-42f0-a62e-30e0f329f245',
+        id: '14c75d97-923c-437f-89d5-aec3b77e7f11',
         isActive: false,
         metadata: [],
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
         type: Shared\HrisBenefitType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-20T20:21:01.309Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-21T17:08:11.107Z'),
     ),
     connectionId: '<id>',
 );
@@ -327,7 +327,7 @@ if ($response->hrisBenefit !== null) {
 
 ## createHrisCompany
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -359,11 +359,11 @@ $request = new Operations\CreateHrisCompanyRequest(
             regionCode: 'MO',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: 'c6c4605a-089e-4cfb-91a8-c88c7fcf7a68',
+        id: '7c750bde-2fb2-4c0c-93a5-cc962069e617',
         legalName: 'Gottlieb Group LLC',
         metadata: [],
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-08T16:22:56.386Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-10T15:45:47.999Z'),
     ),
     connectionId: '<id>',
 );
@@ -395,7 +395,7 @@ if ($response->hrisCompany !== null) {
 
 ## createHrisDeduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -425,14 +425,14 @@ $request = new Operations\CreateHrisDeductionRequest(
         employerType: Shared\EmployerType::Percentage,
         frequency: Shared\HrisDeductionFrequency::OneTime,
         garnishmentType: Shared\GarnishmentType::ChildSupport,
-        id: 'b93fdf66-995f-4f76-b945-d3a17ab7254b',
+        id: '63abbe37-87cb-429c-8365-04ba2c639cb6',
         isActive: true,
         maxAmount: 21794,
         metadata: [],
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-03-15T07:40:47.474Z'),
+        startAt: Utils\Utils::parseDateTime('2025-03-16T19:58:37.713Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-22T06:59:33.108Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-23T12:19:21.568Z'),
     ),
     connectionId: '<id>',
 );
@@ -464,7 +464,7 @@ if ($response->hrisDeduction !== null) {
 
 ## createHrisDevice
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -495,7 +495,7 @@ $request = new Operations\CreateHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: false,
-        id: '08f0179d-117e-4e0b-9712-d1fd2a9ab777',
+        id: '35aab3f8-e9a2-4dbc-9093-e69da49d460e',
         isMissing: false,
         manufacturer: 'Hackett Inc',
         metadata: [],
@@ -503,7 +503,7 @@ $request = new Operations\CreateHrisDeviceRequest(
         name: 'august-laptop',
         os: 'transmitter',
         osVersion: '8.4.8',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-08T07:20:57.814Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T09:44:14.207Z'),
         version: '4.15.7',
     ),
     connectionId: '<id>',
@@ -536,7 +536,7 @@ if ($response->hrisDevice !== null) {
 
 ## createHrisDocument
 
-Create a document
+Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
 ### Example Usage
 
@@ -562,10 +562,10 @@ $request = new Operations\CreateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: 'b25835b6-2aaf-4225-a1f4-e0249d981e29',
+        id: '7d609a97-f59a-4860-9238-05ad03354cc0',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-11T14:06:05.581Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-13T01:30:16.029Z'),
     ),
     connectionId: '<id>',
 );
@@ -597,7 +597,7 @@ if ($response->hrisDocument !== null) {
 
 ## createHrisEarning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -624,12 +624,12 @@ $request = new Operations\CreateHrisEarningRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
         currency: 'USD',
         frequency: Shared\HrisEarningFrequency::Semimonthly,
-        id: 'e217da60-71ee-4135-afac-bd2548e026c2',
+        id: '76988974-2455-4547-ab67-1103f1de5004',
         metadata: [],
         notes: 'Deporto truculenter vinum beatae.',
-        startAt: Utils\Utils::parseDateTime('2022-07-25T11:48:48.385Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-26T09:21:02.675Z'),
         status: Shared\HrisEarningStatus::Ended,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-08T20:32:52.338Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-09T02:56:01.410Z'),
     ),
     connectionId: '<id>',
 );
@@ -661,7 +661,7 @@ if ($response->hrisEarning !== null) {
 
 ## createHrisEmployee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -720,7 +720,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
         gender: Shared\HrisEmployeeGender::Male,
         hasMfa: true,
         hiredAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
-        id: '5ece6f77-35df-48e1-9496-7d1879563189',
+        id: 'f6a1ee89-b952-43f1-8024-95d665d0bdc5',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
         languageLocale: 'in',
         lastName: 'Prohaska',
@@ -732,7 +732,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: 'db8a06c6-9b85-4baa-8142-748cdc88efd4',
+                id: '554bb5dd-d05f-4c0e-85ca-7aa28f3f1d32',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tutis',
@@ -780,7 +780,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
         timeoffDaysUsed: 9,
         timezone: 'Europe/Ljubljana',
         title: 'District Branding Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2020-07-19T04:12:43.588Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-07-19T09:51:06.439Z'),
     ),
     connectionId: '<id>',
 );
@@ -812,7 +812,7 @@ if ($response->hrisEmployee !== null) {
 
 ## createHrisGroup
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -837,12 +837,12 @@ $request = new Operations\CreateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: 'a367376f-3ee9-4b6c-8743-d83e2575917d',
+        id: '6c919a90-22a1-479d-ab34-1dc3ed8beeb6',
         isActive: false,
         metadata: [],
         name: 'Games',
         type: Shared\HrisGroupType::Branch,
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T23:27:42.075Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T16:27:13.349Z'),
     ),
     connectionId: '<id>',
 );
@@ -874,7 +874,7 @@ if ($response->hrisGroup !== null) {
 
 ## createHrisJob
 
-Create a job
+Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
 
 ### Example Usage
 
@@ -901,11 +901,11 @@ $request = new Operations\CreateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '9a3cb5cb-f487-4b03-8119-62f5eec3c16a',
+        id: '26519dc9-69ac-4059-ba4e-2ee0291a8c88',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-30T05:18:40.719Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-30T23:18:09.859Z'),
     ),
     connectionId: '<id>',
 );
@@ -937,7 +937,7 @@ if ($response->hrisJob !== null) {
 
 ## createHrisLocation
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -972,7 +972,7 @@ $request = new Operations\CreateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: '9d705c51-711f-45a7-a73a-717ad8e2b7b3',
+        id: '5265ff37-d91e-450f-a51f-00456bb7a4f3',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -993,7 +993,7 @@ $request = new Operations\CreateHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-21T02:27:35.009Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-21T19:54:08.292Z'),
     ),
     connectionId: '<id>',
 );
@@ -1025,7 +1025,7 @@ if ($response->hrisLocation !== null) {
 
 ## createHrisTaxonomy
 
-Create a taxonomy
+Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
 
 ### Example Usage
 
@@ -1055,13 +1055,13 @@ $request = new Operations\CreateHrisTaxonomyRequest(
         createdAt: Utils\Utils::parseDateTime('2022-06-23T02:10:00.789Z'),
         description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
         domain: 'Health',
-        id: '2181864e-6f7a-4346-aea3-29f05f968d16',
+        id: '35c515a6-98c6-451b-aee2-3ca74bea618d',
         isActive: false,
         metadata: [],
         name: 'International Functionality Architect',
         subcategory: 'Marble',
         type: Shared\HrisTaxonomyType::Knowledge,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-29T07:25:03.542Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-29T17:40:39.222Z'),
         url: 'https://fixed-membership.biz/',
     ),
     connectionId: '<id>',
@@ -1094,7 +1094,7 @@ if ($response->hrisTaxonomy !== null) {
 
 ## createHrisTimeoff
 
-Create a timeoff
+Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
 
 ### Example Usage
 
@@ -1117,21 +1117,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-23T09:08:38.740Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-23T12:45:41.369Z'),
         comments: 'Blandior ventus curiositas amplitudo.',
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2024-12-28T17:18:17.498Z'),
-        id: 'f0b66e32-63b5-4634-8ced-df6263f431d8',
+        endAt: Utils\Utils::parseDateTime('2024-12-29T23:50:53.916Z'),
+        id: 'e9166945-9121-45f2-8b46-f58c938170ce',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-04T19:24:22.037Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-05T13:29:26.276Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-12T19:42:00.487Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-13T02:55:47.937Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -1164,7 +1164,7 @@ if ($response->hrisTimeoff !== null) {
 
 ## createHrisTimeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -1187,7 +1187,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-18T01:51:06.464Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-18T21:43:25.563Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -1199,13 +1199,13 @@ $request = new Operations\CreateHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-09-27T01:26:47.942Z'),
+        endAt: Utils\Utils::parseDateTime('2026-09-29T00:41:37.965Z'),
         hours: 6,
-        id: '6b0e3410-8eef-4221-b88e-e4d4be208730',
+        id: '220cff1c-9e52-44ee-8079-44ef6ca61acd',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-13T00:30:36.291Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-01T21:53:01.115Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-14T02:48:50.230Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-02T10:56:40.233Z'),
     ),
     connectionId: '<id>',
 );
@@ -1237,7 +1237,7 @@ if ($response->hrisTimeshift !== null) {
 
 ## getHrisAttendance
 
-Retrieve an attendance
+Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1288,7 +1288,7 @@ if ($response->hrisAttendance !== null) {
 
 ## getHrisBankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1339,7 +1339,7 @@ if ($response->hrisBankaccount !== null) {
 
 ## getHrisBenefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1390,7 +1390,7 @@ if ($response->hrisBenefit !== null) {
 
 ## getHrisCompany
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1441,7 +1441,7 @@ if ($response->hrisCompany !== null) {
 
 ## getHrisDeduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1492,7 +1492,7 @@ if ($response->hrisDeduction !== null) {
 
 ## getHrisDevice
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1543,7 +1543,7 @@ if ($response->hrisDevice !== null) {
 
 ## getHrisDocument
 
-Retrieve a document
+Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1594,7 +1594,7 @@ if ($response->hrisDocument !== null) {
 
 ## getHrisEarning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1645,7 +1645,7 @@ if ($response->hrisEarning !== null) {
 
 ## getHrisEmployee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1696,7 +1696,7 @@ if ($response->hrisEmployee !== null) {
 
 ## getHrisGroup
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1747,7 +1747,7 @@ if ($response->hrisGroup !== null) {
 
 ## getHrisJob
 
-Retrieve a job
+Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1798,7 +1798,7 @@ if ($response->hrisJob !== null) {
 
 ## getHrisLocation
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1849,7 +1849,7 @@ if ($response->hrisLocation !== null) {
 
 ## getHrisPaycode
 
-Retrieve a paycode
+Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1900,7 +1900,7 @@ if ($response->hrisPaycode !== null) {
 
 ## getHrisPayroll
 
-Retrieve a payroll
+Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1951,7 +1951,7 @@ if ($response->hrisPayroll !== null) {
 
 ## getHrisPayslip
 
-Retrieve a payslip
+Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2002,7 +2002,7 @@ if ($response->hrisPayslip !== null) {
 
 ## getHrisTaxonomy
 
-Retrieve a taxonomy
+Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2053,7 +2053,7 @@ if ($response->hrisTaxonomy !== null) {
 
 ## getHrisTimeoff
 
-Retrieve a timeoff
+Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2104,7 +2104,7 @@ if ($response->hrisTimeoff !== null) {
 
 ## getHrisTimeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2155,7 +2155,7 @@ if ($response->hrisTimeshift !== null) {
 
 ## listHrisAttendances
 
-List all attendances
+Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2205,7 +2205,7 @@ if ($response->hrisAttendances !== null) {
 
 ## listHrisBankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2255,7 +2255,7 @@ if ($response->hrisBankaccounts !== null) {
 
 ## listHrisBenefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2305,7 +2305,7 @@ if ($response->hrisBenefits !== null) {
 
 ## listHrisCompanies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2355,7 +2355,7 @@ if ($response->hrisCompanies !== null) {
 
 ## listHrisDeductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2405,7 +2405,7 @@ if ($response->hrisDeductions !== null) {
 
 ## listHrisDevices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2455,7 +2455,7 @@ if ($response->hrisDevices !== null) {
 
 ## listHrisDocuments
 
-List all documents
+Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2505,7 +2505,7 @@ if ($response->hrisDocuments !== null) {
 
 ## listHrisEarnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2555,7 +2555,7 @@ if ($response->hrisEarnings !== null) {
 
 ## listHrisEmployees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2605,7 +2605,7 @@ if ($response->hrisEmployees !== null) {
 
 ## listHrisGroups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2655,7 +2655,7 @@ if ($response->hrisGroups !== null) {
 
 ## listHrisJobs
 
-List all jobs
+Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2705,7 +2705,7 @@ if ($response->hrisJobs !== null) {
 
 ## listHrisLocations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2755,7 +2755,7 @@ if ($response->hrisLocations !== null) {
 
 ## listHrisPaycodes
 
-List all paycodes
+Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2805,7 +2805,7 @@ if ($response->hrisPaycodes !== null) {
 
 ## listHrisPayrolls
 
-List all payrolls
+Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2855,7 +2855,7 @@ if ($response->hrisPayrolls !== null) {
 
 ## listHrisPayslips
 
-List all payslips
+Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2905,7 +2905,7 @@ if ($response->hrisPayslips !== null) {
 
 ## listHrisTaxonomies
 
-List all taxonomies
+Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -2955,7 +2955,7 @@ if ($response->hrisTaxonomies !== null) {
 
 ## listHrisTimeoffs
 
-List all timeoffs
+Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3005,7 +3005,7 @@ if ($response->hrisTimeoffs !== null) {
 
 ## listHrisTimeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3055,7 +3055,7 @@ if ($response->hrisTimeshifts !== null) {
 
 ## patchHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -3086,32 +3086,32 @@ $request = new Operations\PatchHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-09-19T14:06:30.624Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-09-19T15:06:28.111Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 51,
-                endAt: Utils\Utils::parseDateTime('2024-02-14T13:16:00.540Z'),
-                id: '939123d3-e26b-44f5-855a-b592fc011641',
+                endAt: Utils\Utils::parseDateTime('2024-02-15T12:19:44.132Z'),
+                id: '535ff72a-3602-4916-aabd-100b5c5bd600',
                 isPaid: false,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-10-29T23:03:00.407Z'),
+                startAt: Utils\Utils::parseDateTime('2023-10-30T19:24:30.533Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'EUR',
         declaredTipsAmount: 54,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-04-23T07:48:11.848Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-24T08:35:37.010Z'),
         hourlyRate: 16,
         hours: 10,
-        id: 'de583745-c602-4069-9149-69ec0f9587aa',
+        id: '3168ed24-e8aa-43a5-b61e-0f0cb5f8bb6f',
         jobName: 'Human Accountability Administrator',
         metadata: [],
         nonCashTipsAmount: 167,
-        startAt: Utils\Utils::parseDateTime('2021-11-11T00:56:01.835Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-11T03:15:04.367Z'),
         status: Shared\HrisAttendanceStatus::Open,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-19T21:04:34.810Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-20T01:08:55.432Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3144,7 +3144,7 @@ if ($response->hrisAttendance !== null) {
 
 ## patchHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -3174,7 +3174,7 @@ $request = new Operations\PatchHrisBankaccountRequest(
         countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
         currency: 'USD',
-        id: '226e7e5d-1767-47a1-b0fd-6b38c5ed69ab',
+        id: '0ac397c0-d0a9-4e91-a40f-625e296f11dc',
         isPrimary: true,
         metadata: [],
         name: 'Granville Schumm - Checking',
@@ -3182,7 +3182,7 @@ $request = new Operations\PatchHrisBankaccountRequest(
         routingNumber: '448650724',
         splitAmount: 98,
         splitType: Shared\SplitType::Percentage,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-01T06:21:20.416Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-02T21:02:53.635Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3215,7 +3215,7 @@ if ($response->hrisBankaccount !== null) {
 
 ## patchHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -3246,13 +3246,13 @@ $request = new Operations\PatchHrisBenefitRequest(
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
         frequency: Shared\HrisBenefitFrequency::Month,
-        id: '9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c',
+        id: '9559438e-6c3b-498f-925d-b0295a2d009d',
         isActive: false,
         metadata: [],
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
         type: Shared\HrisBenefitType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-20T20:21:01.318Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-21T17:08:11.118Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3285,7 +3285,7 @@ if ($response->hrisBenefit !== null) {
 
 ## patchHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -3317,11 +3317,11 @@ $request = new Operations\PatchHrisCompanyRequest(
             regionCode: 'MO',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: '1a037787-e022-401d-a3e7-32542733f2d2',
+        id: '85b73e0f-ec9b-45ff-aa0b-c382b00eba76',
         legalName: 'Gottlieb Group LLC',
         metadata: [],
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-08T16:22:56.398Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-10T15:45:48.033Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3354,7 +3354,7 @@ if ($response->hrisCompany !== null) {
 
 ## patchHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -3384,14 +3384,14 @@ $request = new Operations\PatchHrisDeductionRequest(
         employerType: Shared\EmployerType::Percentage,
         frequency: Shared\HrisDeductionFrequency::OneTime,
         garnishmentType: Shared\GarnishmentType::ChildSupport,
-        id: 'c3213a23-98f3-4a00-85e5-4297c58c69b9',
+        id: '094f9f10-0414-428a-b246-807a48953ae6',
         isActive: true,
         maxAmount: 21794,
         metadata: [],
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-03-15T07:40:47.491Z'),
+        startAt: Utils\Utils::parseDateTime('2025-03-16T19:58:37.731Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-22T06:59:33.122Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-23T12:19:21.582Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3424,7 +3424,7 @@ if ($response->hrisDeduction !== null) {
 
 ## patchHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -3455,7 +3455,7 @@ $request = new Operations\PatchHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: false,
-        id: '23a8d248-5900-4fd8-9b12-17935dbde1f4',
+        id: '41cb5989-1e38-4830-9e95-cb84692d50bf',
         isMissing: false,
         manufacturer: 'Hackett Inc',
         metadata: [],
@@ -3463,7 +3463,7 @@ $request = new Operations\PatchHrisDeviceRequest(
         name: 'august-laptop',
         os: 'transmitter',
         osVersion: '8.4.8',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-08T07:20:57.824Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T09:44:14.218Z'),
         version: '4.15.7',
     ),
     connectionId: '<id>',
@@ -3497,7 +3497,7 @@ if ($response->hrisDevice !== null) {
 
 ## patchHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -3523,10 +3523,10 @@ $request = new Operations\PatchHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: 'b54cade5-8f1a-4f99-99b1-63b35119660c',
+        id: '22db088b-317d-486a-b436-8033c2ffd1ef',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-11T14:06:05.593Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-13T01:30:16.041Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3559,7 +3559,7 @@ if ($response->hrisDocument !== null) {
 
 ## patchHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -3586,12 +3586,12 @@ $request = new Operations\PatchHrisEarningRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
         currency: 'USD',
         frequency: Shared\HrisEarningFrequency::Semimonthly,
-        id: 'ae74f559-3b04-412c-92c7-6b4867daa099',
+        id: '39c3e54d-e6fe-403b-ac15-194da84ef92e',
         metadata: [],
         notes: 'Deporto truculenter vinum beatae.',
-        startAt: Utils\Utils::parseDateTime('2022-07-25T11:48:48.394Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-26T09:21:02.685Z'),
         status: Shared\HrisEarningStatus::Ended,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-08T20:32:52.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-09T02:56:01.413Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3624,7 +3624,7 @@ if ($response->hrisEarning !== null) {
 
 ## patchHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -3683,7 +3683,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
         gender: Shared\HrisEmployeeGender::Male,
         hasMfa: true,
         hiredAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
-        id: '9609249d-8821-468a-b0ee-7d78f4b1ae6a',
+        id: 'cc9adbc7-7e36-4c95-9f64-626deec56178',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
         languageLocale: 'in',
         lastName: 'Prohaska',
@@ -3695,7 +3695,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: '20b100c1-0a48-47af-920c-3385a2834306',
+                id: 'c37f78a9-26c3-499d-8136-291077fe7813',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tutis',
@@ -3743,7 +3743,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
         timeoffDaysUsed: 9,
         timezone: 'Europe/Ljubljana',
         title: 'District Branding Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2020-07-19T04:12:43.602Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-07-19T09:51:06.453Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3776,7 +3776,7 @@ if ($response->hrisEmployee !== null) {
 
 ## patchHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -3801,12 +3801,12 @@ $request = new Operations\PatchHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '0c7aa9a3-c25c-4e54-9338-a92812e404ce',
+        id: '2a6ab666-a779-4d61-8460-1708d2cf490f',
         isActive: false,
         metadata: [],
         name: 'Games',
         type: Shared\HrisGroupType::Branch,
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T23:27:42.085Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T16:27:13.369Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3839,7 +3839,7 @@ if ($response->hrisGroup !== null) {
 
 ## patchHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -3866,11 +3866,11 @@ $request = new Operations\PatchHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '51987954-bfbe-4f6d-8e56-6f516c79198d',
+        id: 'b1e43179-fc71-4f8b-94a8-7d02f75d7ac1',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-30T05:18:40.762Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-30T23:18:09.925Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3903,7 +3903,7 @@ if ($response->hrisJob !== null) {
 
 ## patchHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -3938,7 +3938,7 @@ $request = new Operations\PatchHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: 'c28a0039-b5ac-4680-a8cc-2afb4f82d97b',
+        id: 'a79e86f2-b553-44c7-bcca-ed7260958f52',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -3959,7 +3959,7 @@ $request = new Operations\PatchHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-21T02:27:35.015Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-21T19:54:08.302Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3992,7 +3992,7 @@ if ($response->hrisLocation !== null) {
 
 ## patchHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -4015,21 +4015,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-23T09:08:38.741Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-23T12:45:41.371Z'),
         comments: 'Blandior ventus curiositas amplitudo.',
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2024-12-28T17:18:17.511Z'),
-        id: 'd8855007-ff38-4e99-8643-55c97eb6ff18',
+        endAt: Utils\Utils::parseDateTime('2024-12-29T23:50:53.937Z'),
+        id: '2aba93e5-a27c-4550-ac9b-f0337f0f7383',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-04T19:24:22.045Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-05T13:29:26.288Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-12T19:42:00.490Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-13T02:55:47.942Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -4063,7 +4063,7 @@ if ($response->hrisTimeoff !== null) {
 
 ## patchHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -4086,7 +4086,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-18T01:51:06.472Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-18T21:43:25.574Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -4098,13 +4098,13 @@ $request = new Operations\PatchHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-09-27T01:26:47.962Z'),
+        endAt: Utils\Utils::parseDateTime('2026-09-29T00:41:37.990Z'),
         hours: 6,
-        id: '860cce82-b177-4974-b6a6-dda841cb1baa',
+        id: 'ca9ee199-3154-4f5b-b34b-264ec1a5017e',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-13T00:30:36.302Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-01T21:53:01.120Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-14T02:48:50.244Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-02T10:56:40.240Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4137,7 +4137,7 @@ if ($response->hrisTimeshift !== null) {
 
 ## removeHrisAttendance
 
-Remove an attendance
+Deletes the HrisAttendance identified by `id`.
 
 ### Example Usage
 
@@ -4188,7 +4188,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisBankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -4239,7 +4239,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisBenefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -4290,7 +4290,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisCompany
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -4341,7 +4341,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisDeduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -4392,7 +4392,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisDevice
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -4443,7 +4443,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisDocument
 
-Remove a document
+Deletes the HrisDocument identified by `id`.
 
 ### Example Usage
 
@@ -4494,7 +4494,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisEarning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -4545,7 +4545,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisEmployee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -4596,7 +4596,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisGroup
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -4647,7 +4647,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisJob
 
-Remove a job
+Deletes the HrisJob identified by `id`.
 
 ### Example Usage
 
@@ -4698,7 +4698,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisLocation
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -4749,7 +4749,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisTimeoff
 
-Remove a timeoff
+Deletes the HrisTimeoff identified by `id`.
 
 ### Example Usage
 
@@ -4800,7 +4800,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisTimeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -4851,7 +4851,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -4882,32 +4882,32 @@ $request = new Operations\UpdateHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-09-19T14:06:30.624Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-09-19T15:06:28.111Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 51,
-                endAt: Utils\Utils::parseDateTime('2024-02-14T13:16:00.540Z'),
-                id: '939123d3-e26b-44f5-855a-b592fc011641',
+                endAt: Utils\Utils::parseDateTime('2024-02-15T12:19:44.132Z'),
+                id: '535ff72a-3602-4916-aabd-100b5c5bd600',
                 isPaid: false,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-10-29T23:03:00.407Z'),
+                startAt: Utils\Utils::parseDateTime('2023-10-30T19:24:30.533Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'EUR',
         declaredTipsAmount: 54,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-04-23T07:48:11.848Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-24T08:35:37.010Z'),
         hourlyRate: 16,
         hours: 10,
-        id: 'de583745-c602-4069-9149-69ec0f9587aa',
+        id: '3168ed24-e8aa-43a5-b61e-0f0cb5f8bb6f',
         jobName: 'Human Accountability Administrator',
         metadata: [],
         nonCashTipsAmount: 167,
-        startAt: Utils\Utils::parseDateTime('2021-11-11T00:56:01.835Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-11T03:15:04.367Z'),
         status: Shared\HrisAttendanceStatus::Open,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-19T21:04:34.810Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-20T01:08:55.432Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4940,7 +4940,7 @@ if ($response->hrisAttendance !== null) {
 
 ## updateHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -4970,7 +4970,7 @@ $request = new Operations\UpdateHrisBankaccountRequest(
         countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
         currency: 'USD',
-        id: '226e7e5d-1767-47a1-b0fd-6b38c5ed69ab',
+        id: '0ac397c0-d0a9-4e91-a40f-625e296f11dc',
         isPrimary: true,
         metadata: [],
         name: 'Granville Schumm - Checking',
@@ -4978,7 +4978,7 @@ $request = new Operations\UpdateHrisBankaccountRequest(
         routingNumber: '448650724',
         splitAmount: 98,
         splitType: Shared\SplitType::Percentage,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-01T06:21:20.416Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-02T21:02:53.635Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5011,7 +5011,7 @@ if ($response->hrisBankaccount !== null) {
 
 ## updateHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -5042,13 +5042,13 @@ $request = new Operations\UpdateHrisBenefitRequest(
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
         frequency: Shared\HrisBenefitFrequency::Month,
-        id: '9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c',
+        id: '9559438e-6c3b-498f-925d-b0295a2d009d',
         isActive: false,
         metadata: [],
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
         type: Shared\HrisBenefitType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-20T20:21:01.318Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-21T17:08:11.118Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5081,7 +5081,7 @@ if ($response->hrisBenefit !== null) {
 
 ## updateHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -5113,11 +5113,11 @@ $request = new Operations\UpdateHrisCompanyRequest(
             regionCode: 'MO',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: '1a037787-e022-401d-a3e7-32542733f2d2',
+        id: '85b73e0f-ec9b-45ff-aa0b-c382b00eba76',
         legalName: 'Gottlieb Group LLC',
         metadata: [],
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-08T16:22:56.398Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-10T15:45:48.033Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5150,7 +5150,7 @@ if ($response->hrisCompany !== null) {
 
 ## updateHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -5180,14 +5180,14 @@ $request = new Operations\UpdateHrisDeductionRequest(
         employerType: Shared\EmployerType::Percentage,
         frequency: Shared\HrisDeductionFrequency::OneTime,
         garnishmentType: Shared\GarnishmentType::ChildSupport,
-        id: 'c3213a23-98f3-4a00-85e5-4297c58c69b9',
+        id: '094f9f10-0414-428a-b246-807a48953ae6',
         isActive: true,
         maxAmount: 21794,
         metadata: [],
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-03-15T07:40:47.491Z'),
+        startAt: Utils\Utils::parseDateTime('2025-03-16T19:58:37.731Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-22T06:59:33.122Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-23T12:19:21.582Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5220,7 +5220,7 @@ if ($response->hrisDeduction !== null) {
 
 ## updateHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -5251,7 +5251,7 @@ $request = new Operations\UpdateHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: false,
-        id: '23a8d248-5900-4fd8-9b12-17935dbde1f4',
+        id: '41cb5989-1e38-4830-9e95-cb84692d50bf',
         isMissing: false,
         manufacturer: 'Hackett Inc',
         metadata: [],
@@ -5259,7 +5259,7 @@ $request = new Operations\UpdateHrisDeviceRequest(
         name: 'august-laptop',
         os: 'transmitter',
         osVersion: '8.4.8',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-08T07:20:57.824Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T09:44:14.218Z'),
         version: '4.15.7',
     ),
     connectionId: '<id>',
@@ -5293,7 +5293,7 @@ if ($response->hrisDevice !== null) {
 
 ## updateHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -5319,10 +5319,10 @@ $request = new Operations\UpdateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: 'b54cade5-8f1a-4f99-99b1-63b35119660c',
+        id: '22db088b-317d-486a-b436-8033c2ffd1ef',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-11T14:06:05.593Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-13T01:30:16.041Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5355,7 +5355,7 @@ if ($response->hrisDocument !== null) {
 
 ## updateHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -5382,12 +5382,12 @@ $request = new Operations\UpdateHrisEarningRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
         currency: 'USD',
         frequency: Shared\HrisEarningFrequency::Semimonthly,
-        id: 'ae74f559-3b04-412c-92c7-6b4867daa099',
+        id: '39c3e54d-e6fe-403b-ac15-194da84ef92e',
         metadata: [],
         notes: 'Deporto truculenter vinum beatae.',
-        startAt: Utils\Utils::parseDateTime('2022-07-25T11:48:48.394Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-26T09:21:02.685Z'),
         status: Shared\HrisEarningStatus::Ended,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-08T20:32:52.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-09T02:56:01.413Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5420,7 +5420,7 @@ if ($response->hrisEarning !== null) {
 
 ## updateHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -5479,7 +5479,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
         gender: Shared\HrisEmployeeGender::Male,
         hasMfa: true,
         hiredAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
-        id: '9609249d-8821-468a-b0ee-7d78f4b1ae6a',
+        id: 'cc9adbc7-7e36-4c95-9f64-626deec56178',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
         languageLocale: 'in',
         lastName: 'Prohaska',
@@ -5491,7 +5491,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: '20b100c1-0a48-47af-920c-3385a2834306',
+                id: 'c37f78a9-26c3-499d-8136-291077fe7813',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tutis',
@@ -5539,7 +5539,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
         timeoffDaysUsed: 9,
         timezone: 'Europe/Ljubljana',
         title: 'District Branding Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2020-07-19T04:12:43.602Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-07-19T09:51:06.453Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5572,7 +5572,7 @@ if ($response->hrisEmployee !== null) {
 
 ## updateHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -5597,12 +5597,12 @@ $request = new Operations\UpdateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '0c7aa9a3-c25c-4e54-9338-a92812e404ce',
+        id: '2a6ab666-a779-4d61-8460-1708d2cf490f',
         isActive: false,
         metadata: [],
         name: 'Games',
         type: Shared\HrisGroupType::Branch,
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T23:27:42.085Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T16:27:13.369Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5635,7 +5635,7 @@ if ($response->hrisGroup !== null) {
 
 ## updateHrisJob
 
-Update a job
+Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
 
 ### Example Usage
 
@@ -5662,11 +5662,11 @@ $request = new Operations\UpdateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '51987954-bfbe-4f6d-8e56-6f516c79198d',
+        id: 'b1e43179-fc71-4f8b-94a8-7d02f75d7ac1',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-30T05:18:40.762Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-30T23:18:09.925Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5699,7 +5699,7 @@ if ($response->hrisJob !== null) {
 
 ## updateHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -5734,7 +5734,7 @@ $request = new Operations\UpdateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: 'c28a0039-b5ac-4680-a8cc-2afb4f82d97b',
+        id: 'a79e86f2-b553-44c7-bcca-ed7260958f52',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -5755,7 +5755,7 @@ $request = new Operations\UpdateHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-21T02:27:35.015Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-21T19:54:08.302Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5788,7 +5788,7 @@ if ($response->hrisLocation !== null) {
 
 ## updateHrisTimeoff
 
-Update a timeoff
+Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
 
 ### Example Usage
 
@@ -5811,21 +5811,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-23T09:08:38.741Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-23T12:45:41.371Z'),
         comments: 'Blandior ventus curiositas amplitudo.',
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2024-12-28T17:18:17.511Z'),
-        id: 'd8855007-ff38-4e99-8643-55c97eb6ff18',
+        endAt: Utils\Utils::parseDateTime('2024-12-29T23:50:53.937Z'),
+        id: '2aba93e5-a27c-4550-ac9b-f0337f0f7383',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-04T19:24:22.045Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-05T13:29:26.288Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-12T19:42:00.490Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-13T02:55:47.942Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -5859,7 +5859,7 @@ if ($response->hrisTimeoff !== null) {
 
 ## updateHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -5882,7 +5882,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-18T01:51:06.472Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-18T21:43:25.574Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -5894,13 +5894,13 @@ $request = new Operations\UpdateHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-09-27T01:26:47.962Z'),
+        endAt: Utils\Utils::parseDateTime('2026-09-29T00:41:37.990Z'),
         hours: 6,
-        id: '860cce82-b177-4974-b6a6-dda841cb1baa',
+        id: 'ca9ee199-3154-4f5b-b34b-264ec1a5017e',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-13T00:30:36.302Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-01T21:53:01.120Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-14T02:48:50.244Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-02T10:56:40.240Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

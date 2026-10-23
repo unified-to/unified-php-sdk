@@ -12,7 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class GenaiEmbedding
 {
     /**
-     * $content
+     * The texts to create embeddings for
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\GenaiEmbeddingContent> $content
      */

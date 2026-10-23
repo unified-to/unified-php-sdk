@@ -34,7 +34,7 @@
 
 ## createCalendarCalendar
 
-Create a calendar
+Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they are mapped to the provider's API. Returns the created CalendarCalendar.
 
 ### Example Usage
 
@@ -59,12 +59,12 @@ $request = new Operations\CreateCalendarCalendarRequest(
     calendarCalendar: new Shared\CalendarCalendar(
         createdAt: Utils\Utils::parseDateTime('2020-01-09T23:11:34.147Z'),
         description: 'Acer supra vallum suasoria thesaurus.',
-        id: '32209386-016d-4231-972e-3af2d888186d',
+        id: 'ec06177a-7990-4f24-bc61-234d1789da6a',
         isPrimary: false,
         metadata: [],
         name: 'Interviews',
         timezone: 'Asia/Kolkata',
-        updatedAt: Utils\Utils::parseDateTime('2023-03-28T03:26:46.838Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-29T02:02:07.801Z'),
     ),
     connectionId: '<id>',
 );
@@ -96,7 +96,7 @@ if ($response->calendarCalendar !== null) {
 
 ## createCalendarEvent
 
-Create an event
+Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 
 ### Example Usage
 
@@ -122,9 +122,9 @@ $request = new Operations\CreateCalendarEventRequest(
         attachments: [],
         conference: [],
         createdAt: '2019-08-04T14:33:51.814Z',
-        endAt: '2020-05-24T07:01:09.232Z',
+        endAt: '2020-05-24T12:20:02.865Z',
         hasConference: false,
-        id: 'e9913106-d288-4504-8cd9-df2838bed13c',
+        id: 'b8ee4072-b753-4273-8a08-5aadfde9a7b5',
         isAllDay: false,
         isFree: false,
         isPrivate: false,
@@ -134,15 +134,15 @@ $request = new Operations\CreateCalendarEventRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 4,
-                endAt: Utils\Utils::parseDateTime('2025-03-24T15:41:05.059Z'),
+                endAt: Utils\Utils::parseDateTime('2025-03-26T04:56:52.049Z'),
                 excludedDates: [
-                    '2024-02-02T18:45:37.233Z',
+                    '2024-02-04T00:29:50.152Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Yearly,
                 includedDates: [
-                    '2023-07-07T01:28:09.892Z',
-                    '2025-01-23T21:40:25.793Z',
-                    '2024-04-01T23:41:13.035Z',
+                    '2023-07-08T03:23:34.363Z',
+                    '2025-01-25T09:51:20.038Z',
+                    '2024-04-03T06:29:43.180Z',
                 ],
                 interval: 7,
                 onDays: [
@@ -479,11 +479,11 @@ $request = new Operations\CreateCalendarEventRequest(
                 weekStart: Shared\WeekStart::Tu,
             ),
         ],
-        startAt: '2020-05-23T21:47:32.005Z',
+        startAt: '2020-05-24T03:06:00.590Z',
         status: Shared\CalendarEventStatus::Confirmed,
         subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
         timezone: 'Asia/Bangkok',
-        updatedAt: '2020-06-30T05:23:45.736Z',
+        updatedAt: '2020-06-30T11:22:45.514Z',
         webUrl: 'https://another-pinstripe.com',
     ),
     connectionId: '<id>',
@@ -516,7 +516,7 @@ if ($response->calendarEvent !== null) {
 
 ## createCalendarLink
 
-Create a link
+Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 
 ### Example Usage
 
@@ -541,13 +541,13 @@ $request = new Operations\CreateCalendarLinkRequest(
         createdAt: '2023-03-07T13:34:11.959Z',
         description: 'Vitium clibanus laboriosam uxor denuncio.',
         duration: 74,
-        id: 'ac5a258c-077d-4fdd-988e-bad749ee7965',
+        id: 'cb0ede8b-ce7e-4acb-a53b-6f9a026300ca',
         isActive: true,
         metadata: [],
         name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
         priceAmount: 44,
         priceCurrency: 'USD',
-        updatedAt: '2024-03-15T13:01:57.661Z',
+        updatedAt: '2024-03-16T02:30:17.555Z',
         url: 'https://annual-apricot.info/',
     ),
     connectionId: '<id>',
@@ -580,7 +580,7 @@ if ($response->calendarLink !== null) {
 
 ## createCalendarWebinar
 
-Create a webinar
+Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
 
 ### Example Usage
 
@@ -605,10 +605,10 @@ $request = new Operations\CreateCalendarWebinarRequest(
     calendarWebinar: new Shared\CalendarWebinar(
         conference: [],
         createdAt: Utils\Utils::parseDateTime('2022-07-06T11:45:14.631Z'),
-        endAt: Utils\Utils::parseDateTime('2025-10-28T17:21:45.961Z'),
+        endAt: Utils\Utils::parseDateTime('2025-10-30T06:10:18.165Z'),
         hasPolls: false,
         hasRecording: false,
-        id: '2a4f8547-57e0-41fe-80a7-6476aa0b4aed',
+        id: 'b53040c0-caad-44d9-8664-c335b0707fc2',
         isAutoApprove: false,
         isEnabled: true,
         isWebcast: false,
@@ -618,13 +618,13 @@ $request = new Operations\CreateCalendarWebinarRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 10,
-                endAt: Utils\Utils::parseDateTime('2023-08-31T14:48:28.871Z'),
+                endAt: Utils\Utils::parseDateTime('2023-09-01T03:36:59.387Z'),
                 excludedDates: [
-                    '2025-02-13T00:36:02.077Z',
+                    '2025-02-14T05:34:18.089Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Monthly,
                 includedDates: [
-                    '2024-04-28T06:47:23.929Z',
+                    '2024-04-29T02:55:05.695Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -1015,16 +1015,16 @@ $request = new Operations\CreateCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 3,
-                endAt: Utils\Utils::parseDateTime('2022-09-30T16:13:39.582Z'),
+                endAt: Utils\Utils::parseDateTime('2022-09-30T18:50:56.396Z'),
                 excludedDates: [
-                    '2024-09-01T18:06:20.618Z',
-                    '2024-08-17T05:08:18.362Z',
+                    '2024-09-02T18:04:50.135Z',
+                    '2024-08-18T04:38:26.324Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Daily,
                 includedDates: [
-                    '2024-03-25T04:12:17.419Z',
-                    '2026-01-13T09:41:00.061Z',
-                    '2023-08-14T06:22:20.269Z',
+                    '2024-03-25T23:17:44.626Z',
+                    '2026-01-15T00:49:28.196Z',
+                    '2023-08-14T18:39:10.916Z',
                 ],
                 interval: 1,
                 onDays: [
@@ -1168,16 +1168,16 @@ $request = new Operations\CreateCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 8,
-                endAt: Utils\Utils::parseDateTime('2026-07-26T12:49:27.132Z'),
+                endAt: Utils\Utils::parseDateTime('2026-07-28T09:52:11.252Z'),
                 excludedDates: [
-                    '2023-06-18T14:29:30.222Z',
-                    '2023-06-07T15:19:59.215Z',
+                    '2023-06-19T01:02:56.808Z',
+                    '2023-06-08T01:33:25.216Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Weekly,
                 includedDates: [
-                    '2024-04-02T05:04:36.332Z',
-                    '2023-08-20T01:47:57.968Z',
-                    '2024-09-26T22:53:16.696Z',
+                    '2024-04-03T00:24:43.461Z',
+                    '2023-08-20T14:15:24.712Z',
+                    '2024-09-27T23:37:45.358Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -1330,11 +1330,11 @@ $request = new Operations\CreateCalendarWebinarRequest(
         registrantPassword: 'W7J6DhkM',
         requireAddress: false,
         requireJobTitle: false,
-        startAt: Utils\Utils::parseDateTime('2025-04-30T13:48:53.479Z'),
+        startAt: Utils\Utils::parseDateTime('2025-05-01T21:06:51.251Z'),
         status: Shared\CalendarWebinarStatus::Tentative,
         subject: 'Harum culpa decipio ex cubo ancilla cresco.',
         timezone: 'Europe/Kaliningrad',
-        updatedAt: Utils\Utils::parseDateTime('2026-09-30T12:05:38.043Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-02T11:08:45.375Z'),
         webUrl: 'https://quiet-permafrost.name',
     ),
     connectionId: '<id>',
@@ -1367,7 +1367,7 @@ if ($response->calendarWebinar !== null) {
 
 ## getCalendarCalendar
 
-Retrieve a calendar
+Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1418,7 +1418,7 @@ if ($response->calendarCalendar !== null) {
 
 ## getCalendarEvent
 
-Retrieve an event
+Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1469,7 +1469,7 @@ if ($response->calendarEvent !== null) {
 
 ## getCalendarLink
 
-Retrieve a link
+Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1520,7 +1520,7 @@ if ($response->calendarLink !== null) {
 
 ## getCalendarRecording
 
-Retrieve a recording
+Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1571,7 +1571,7 @@ if ($response->calendarRecording !== null) {
 
 ## getCalendarWebinar
 
-Retrieve a webinar
+Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1622,7 +1622,7 @@ if ($response->calendarWebinar !== null) {
 
 ## listCalendarBusies
 
-List all busies
+Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1672,7 +1672,7 @@ if ($response->calendarBusies !== null) {
 
 ## listCalendarCalendars
 
-List all calendars
+Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1722,7 +1722,7 @@ if ($response->calendarCalendars !== null) {
 
 ## listCalendarEvents
 
-List all events
+Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1772,7 +1772,7 @@ if ($response->calendarEvents !== null) {
 
 ## listCalendarLinks
 
-List all links
+Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1822,7 +1822,7 @@ if ($response->calendarLinks !== null) {
 
 ## listCalendarRecordings
 
-List all recordings
+Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1872,7 +1872,7 @@ if ($response->calendarRecordings !== null) {
 
 ## listCalendarWebinars
 
-List all webinars
+Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1922,7 +1922,7 @@ if ($response->calendarWebinars !== null) {
 
 ## patchCalendarCalendar
 
-Update a calendar
+Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 
 ### Example Usage
 
@@ -1947,12 +1947,12 @@ $request = new Operations\PatchCalendarCalendarRequest(
     calendarCalendar: new Shared\CalendarCalendar(
         createdAt: Utils\Utils::parseDateTime('2020-01-09T23:11:34.147Z'),
         description: 'Acer supra vallum suasoria thesaurus.',
-        id: 'fc9558ee-6201-430d-94cf-e8b9a21a2a77',
+        id: '83d30756-14e2-4a95-83c0-4a127304b0f7',
         isPrimary: false,
         metadata: [],
         name: 'Interviews',
         timezone: 'Asia/Kolkata',
-        updatedAt: Utils\Utils::parseDateTime('2023-03-28T03:26:46.842Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-29T02:02:07.807Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1985,7 +1985,7 @@ if ($response->calendarCalendar !== null) {
 
 ## patchCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2011,9 +2011,9 @@ $request = new Operations\PatchCalendarEventRequest(
         attachments: [],
         conference: [],
         createdAt: '2019-08-04T14:33:51.814Z',
-        endAt: '2020-05-24T07:01:09.236Z',
+        endAt: '2020-05-24T12:20:02.870Z',
         hasConference: false,
-        id: '14a1cdee-441e-4ea7-ba56-39b688c8d77f',
+        id: 'd41a2d95-726f-4099-a0f4-245a7bf3b144',
         isAllDay: false,
         isFree: false,
         isPrivate: false,
@@ -2023,15 +2023,15 @@ $request = new Operations\PatchCalendarEventRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 4,
-                endAt: Utils\Utils::parseDateTime('2025-03-24T15:41:05.085Z'),
+                endAt: Utils\Utils::parseDateTime('2025-03-26T04:56:52.089Z'),
                 excludedDates: [
-                    '2024-02-02T18:45:37.253Z',
+                    '2024-02-04T00:29:50.184Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Yearly,
                 includedDates: [
-                    '2023-07-07T01:28:09.910Z',
-                    '2025-01-23T21:40:25.818Z',
-                    '2024-04-01T23:41:13.055Z',
+                    '2023-07-08T03:23:34.391Z',
+                    '2025-01-25T09:51:20.077Z',
+                    '2024-04-03T06:29:43.213Z',
                 ],
                 interval: 7,
                 onDays: [
@@ -2368,11 +2368,11 @@ $request = new Operations\PatchCalendarEventRequest(
                 weekStart: Shared\WeekStart::Tu,
             ),
         ],
-        startAt: '2020-05-23T21:47:32.009Z',
+        startAt: '2020-05-24T03:06:00.595Z',
         status: Shared\CalendarEventStatus::Confirmed,
         subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
         timezone: 'Asia/Bangkok',
-        updatedAt: '2020-06-30T05:23:45.740Z',
+        updatedAt: '2020-06-30T11:22:45.520Z',
         webUrl: 'https://another-pinstripe.com',
     ),
     connectionId: '<id>',
@@ -2406,7 +2406,7 @@ if ($response->calendarEvent !== null) {
 
 ## patchCalendarLink
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -2431,13 +2431,13 @@ $request = new Operations\PatchCalendarLinkRequest(
         createdAt: '2023-03-07T13:34:11.959Z',
         description: 'Vitium clibanus laboriosam uxor denuncio.',
         duration: 74,
-        id: 'd5c1154a-0df1-447f-9a79-a861d4aa4320',
+        id: 'f74de0f1-7ad4-41d2-9caf-be2a2c0a11aa',
         isActive: true,
         metadata: [],
         name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
         priceAmount: 44,
         priceCurrency: 'USD',
-        updatedAt: '2024-03-15T13:01:57.665Z',
+        updatedAt: '2024-03-16T02:30:17.560Z',
         url: 'https://annual-apricot.info/',
     ),
     connectionId: '<id>',
@@ -2471,7 +2471,7 @@ if ($response->calendarLink !== null) {
 
 ## patchCalendarWebinar
 
-Update a webinar
+Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 
 ### Example Usage
 
@@ -2496,10 +2496,10 @@ $request = new Operations\PatchCalendarWebinarRequest(
     calendarWebinar: new Shared\CalendarWebinar(
         conference: [],
         createdAt: Utils\Utils::parseDateTime('2022-07-06T11:45:14.631Z'),
-        endAt: Utils\Utils::parseDateTime('2025-10-28T17:21:45.988Z'),
+        endAt: Utils\Utils::parseDateTime('2025-10-30T06:10:18.215Z'),
         hasPolls: false,
         hasRecording: false,
-        id: '8206e85f-c36d-41f8-b29d-1ef9f08ddb16',
+        id: 'a4c6499f-6034-4818-95c7-b47b5acb0ef3',
         isAutoApprove: false,
         isEnabled: true,
         isWebcast: false,
@@ -2509,13 +2509,13 @@ $request = new Operations\PatchCalendarWebinarRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 10,
-                endAt: Utils\Utils::parseDateTime('2023-08-31T14:48:28.881Z'),
+                endAt: Utils\Utils::parseDateTime('2023-09-01T03:36:59.405Z'),
                 excludedDates: [
-                    '2025-02-13T00:36:02.099Z',
+                    '2025-02-14T05:34:18.129Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Monthly,
                 includedDates: [
-                    '2024-04-28T06:47:23.945Z',
+                    '2024-04-29T02:55:05.723Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -2906,16 +2906,16 @@ $request = new Operations\PatchCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 3,
-                endAt: Utils\Utils::parseDateTime('2022-09-30T16:13:39.584Z'),
+                endAt: Utils\Utils::parseDateTime('2022-09-30T18:50:56.399Z'),
                 excludedDates: [
-                    '2024-09-01T18:06:20.636Z',
-                    '2024-08-17T05:08:18.379Z',
+                    '2024-09-02T18:04:50.168Z',
+                    '2024-08-18T04:38:26.356Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Daily,
                 includedDates: [
-                    '2024-03-25T04:12:17.433Z',
-                    '2026-01-13T09:41:00.090Z',
-                    '2023-08-14T06:22:20.278Z',
+                    '2024-03-25T23:17:44.653Z',
+                    '2026-01-15T00:49:28.250Z',
+                    '2023-08-14T18:39:10.933Z',
                 ],
                 interval: 1,
                 onDays: [
@@ -3059,16 +3059,16 @@ $request = new Operations\PatchCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 8,
-                endAt: Utils\Utils::parseDateTime('2026-07-26T12:49:27.166Z'),
+                endAt: Utils\Utils::parseDateTime('2026-07-28T09:52:11.314Z'),
                 excludedDates: [
-                    '2023-06-18T14:29:30.230Z',
-                    '2023-06-07T15:19:59.223Z',
+                    '2023-06-19T01:02:56.822Z',
+                    '2023-06-08T01:33:25.230Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Weekly,
                 includedDates: [
-                    '2024-04-02T05:04:36.346Z',
-                    '2023-08-20T01:47:57.978Z',
-                    '2024-09-26T22:53:16.715Z',
+                    '2024-04-03T00:24:43.488Z',
+                    '2023-08-20T14:15:24.729Z',
+                    '2024-09-27T23:37:45.392Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -3221,11 +3221,11 @@ $request = new Operations\PatchCalendarWebinarRequest(
         registrantPassword: 'W7J6DhkM',
         requireAddress: false,
         requireJobTitle: false,
-        startAt: Utils\Utils::parseDateTime('2025-04-30T13:48:53.503Z'),
+        startAt: Utils\Utils::parseDateTime('2025-05-01T21:06:51.294Z'),
         status: Shared\CalendarWebinarStatus::Tentative,
         subject: 'Harum culpa decipio ex cubo ancilla cresco.',
         timezone: 'Europe/Kaliningrad',
-        updatedAt: Utils\Utils::parseDateTime('2026-09-30T12:05:38.079Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-02T11:08:45.439Z'),
         webUrl: 'https://quiet-permafrost.name',
     ),
     connectionId: '<id>',
@@ -3259,7 +3259,7 @@ if ($response->calendarWebinar !== null) {
 
 ## removeCalendarCalendar
 
-Remove a calendar
+Deletes the CalendarCalendar identified by `id`.
 
 ### Example Usage
 
@@ -3310,7 +3310,7 @@ if ($response->statusCode === 200) {
 
 ## removeCalendarEvent
 
-Remove an event
+Deletes the CalendarEvent identified by `id`.
 
 ### Example Usage
 
@@ -3361,7 +3361,7 @@ if ($response->statusCode === 200) {
 
 ## removeCalendarLink
 
-Remove a link
+Deletes the CalendarLink identified by `id`.
 
 ### Example Usage
 
@@ -3412,7 +3412,7 @@ if ($response->statusCode === 200) {
 
 ## removeCalendarWebinar
 
-Remove a webinar
+Deletes the CalendarWebinar identified by `id`.
 
 ### Example Usage
 
@@ -3463,7 +3463,7 @@ if ($response->statusCode === 200) {
 
 ## updateCalendarCalendar
 
-Update a calendar
+Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
 
 ### Example Usage
 
@@ -3488,12 +3488,12 @@ $request = new Operations\UpdateCalendarCalendarRequest(
     calendarCalendar: new Shared\CalendarCalendar(
         createdAt: Utils\Utils::parseDateTime('2020-01-09T23:11:34.147Z'),
         description: 'Acer supra vallum suasoria thesaurus.',
-        id: 'fc9558ee-6201-430d-94cf-e8b9a21a2a77',
+        id: '83d30756-14e2-4a95-83c0-4a127304b0f7',
         isPrimary: false,
         metadata: [],
         name: 'Interviews',
         timezone: 'Asia/Kolkata',
-        updatedAt: Utils\Utils::parseDateTime('2023-03-28T03:26:46.842Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-29T02:02:07.807Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3526,7 +3526,7 @@ if ($response->calendarCalendar !== null) {
 
 ## updateCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -3552,9 +3552,9 @@ $request = new Operations\UpdateCalendarEventRequest(
         attachments: [],
         conference: [],
         createdAt: '2019-08-04T14:33:51.814Z',
-        endAt: '2020-05-24T07:01:09.236Z',
+        endAt: '2020-05-24T12:20:02.870Z',
         hasConference: false,
-        id: '14a1cdee-441e-4ea7-ba56-39b688c8d77f',
+        id: 'd41a2d95-726f-4099-a0f4-245a7bf3b144',
         isAllDay: false,
         isFree: false,
         isPrivate: false,
@@ -3564,15 +3564,15 @@ $request = new Operations\UpdateCalendarEventRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 4,
-                endAt: Utils\Utils::parseDateTime('2025-03-24T15:41:05.085Z'),
+                endAt: Utils\Utils::parseDateTime('2025-03-26T04:56:52.089Z'),
                 excludedDates: [
-                    '2024-02-02T18:45:37.253Z',
+                    '2024-02-04T00:29:50.184Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Yearly,
                 includedDates: [
-                    '2023-07-07T01:28:09.910Z',
-                    '2025-01-23T21:40:25.818Z',
-                    '2024-04-01T23:41:13.055Z',
+                    '2023-07-08T03:23:34.391Z',
+                    '2025-01-25T09:51:20.077Z',
+                    '2024-04-03T06:29:43.213Z',
                 ],
                 interval: 7,
                 onDays: [
@@ -3909,11 +3909,11 @@ $request = new Operations\UpdateCalendarEventRequest(
                 weekStart: Shared\WeekStart::Tu,
             ),
         ],
-        startAt: '2020-05-23T21:47:32.009Z',
+        startAt: '2020-05-24T03:06:00.595Z',
         status: Shared\CalendarEventStatus::Confirmed,
         subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
         timezone: 'Asia/Bangkok',
-        updatedAt: '2020-06-30T05:23:45.740Z',
+        updatedAt: '2020-06-30T11:22:45.520Z',
         webUrl: 'https://another-pinstripe.com',
     ),
     connectionId: '<id>',
@@ -3947,7 +3947,7 @@ if ($response->calendarEvent !== null) {
 
 ## updateCalendarLink
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -3972,13 +3972,13 @@ $request = new Operations\UpdateCalendarLinkRequest(
         createdAt: '2023-03-07T13:34:11.959Z',
         description: 'Vitium clibanus laboriosam uxor denuncio.',
         duration: 74,
-        id: 'd5c1154a-0df1-447f-9a79-a861d4aa4320',
+        id: 'f74de0f1-7ad4-41d2-9caf-be2a2c0a11aa',
         isActive: true,
         metadata: [],
         name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
         priceAmount: 44,
         priceCurrency: 'USD',
-        updatedAt: '2024-03-15T13:01:57.665Z',
+        updatedAt: '2024-03-16T02:30:17.560Z',
         url: 'https://annual-apricot.info/',
     ),
     connectionId: '<id>',
@@ -4012,7 +4012,7 @@ if ($response->calendarLink !== null) {
 
 ## updateCalendarWebinar
 
-Update a webinar
+Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
 
 ### Example Usage
 
@@ -4037,10 +4037,10 @@ $request = new Operations\UpdateCalendarWebinarRequest(
     calendarWebinar: new Shared\CalendarWebinar(
         conference: [],
         createdAt: Utils\Utils::parseDateTime('2022-07-06T11:45:14.631Z'),
-        endAt: Utils\Utils::parseDateTime('2025-10-28T17:21:45.988Z'),
+        endAt: Utils\Utils::parseDateTime('2025-10-30T06:10:18.215Z'),
         hasPolls: false,
         hasRecording: false,
-        id: '8206e85f-c36d-41f8-b29d-1ef9f08ddb16',
+        id: 'a4c6499f-6034-4818-95c7-b47b5acb0ef3',
         isAutoApprove: false,
         isEnabled: true,
         isWebcast: false,
@@ -4050,13 +4050,13 @@ $request = new Operations\UpdateCalendarWebinarRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 10,
-                endAt: Utils\Utils::parseDateTime('2023-08-31T14:48:28.881Z'),
+                endAt: Utils\Utils::parseDateTime('2023-09-01T03:36:59.405Z'),
                 excludedDates: [
-                    '2025-02-13T00:36:02.099Z',
+                    '2025-02-14T05:34:18.129Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Monthly,
                 includedDates: [
-                    '2024-04-28T06:47:23.945Z',
+                    '2024-04-29T02:55:05.723Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -4447,16 +4447,16 @@ $request = new Operations\UpdateCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 3,
-                endAt: Utils\Utils::parseDateTime('2022-09-30T16:13:39.584Z'),
+                endAt: Utils\Utils::parseDateTime('2022-09-30T18:50:56.399Z'),
                 excludedDates: [
-                    '2024-09-01T18:06:20.636Z',
-                    '2024-08-17T05:08:18.379Z',
+                    '2024-09-02T18:04:50.168Z',
+                    '2024-08-18T04:38:26.356Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Daily,
                 includedDates: [
-                    '2024-03-25T04:12:17.433Z',
-                    '2026-01-13T09:41:00.090Z',
-                    '2023-08-14T06:22:20.278Z',
+                    '2024-03-25T23:17:44.653Z',
+                    '2026-01-15T00:49:28.250Z',
+                    '2023-08-14T18:39:10.933Z',
                 ],
                 interval: 1,
                 onDays: [
@@ -4600,16 +4600,16 @@ $request = new Operations\UpdateCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 8,
-                endAt: Utils\Utils::parseDateTime('2026-07-26T12:49:27.166Z'),
+                endAt: Utils\Utils::parseDateTime('2026-07-28T09:52:11.314Z'),
                 excludedDates: [
-                    '2023-06-18T14:29:30.230Z',
-                    '2023-06-07T15:19:59.223Z',
+                    '2023-06-19T01:02:56.822Z',
+                    '2023-06-08T01:33:25.230Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Weekly,
                 includedDates: [
-                    '2024-04-02T05:04:36.346Z',
-                    '2023-08-20T01:47:57.978Z',
-                    '2024-09-26T22:53:16.715Z',
+                    '2024-04-03T00:24:43.488Z',
+                    '2023-08-20T14:15:24.729Z',
+                    '2024-09-27T23:37:45.392Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -4762,11 +4762,11 @@ $request = new Operations\UpdateCalendarWebinarRequest(
         registrantPassword: 'W7J6DhkM',
         requireAddress: false,
         requireJobTitle: false,
-        startAt: Utils\Utils::parseDateTime('2025-04-30T13:48:53.503Z'),
+        startAt: Utils\Utils::parseDateTime('2025-05-01T21:06:51.294Z'),
         status: Shared\CalendarWebinarStatus::Tentative,
         subject: 'Harum culpa decipio ex cubo ancilla cresco.',
         timezone: 'Europe/Kaliningrad',
-        updatedAt: Utils\Utils::parseDateTime('2026-09-30T12:05:38.079Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-02T11:08:45.439Z'),
         webUrl: 'https://quiet-permafrost.name',
     ),
     connectionId: '<id>',

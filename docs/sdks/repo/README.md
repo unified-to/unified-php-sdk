@@ -37,7 +37,7 @@
 
 ## createRepoBranch
 
-Create a branch
+Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 
 ### Example Usage
 
@@ -61,11 +61,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: 'd3de22aa-944f-4ed3-96e8-7b83f147ffae',
+        id: '39f9ff87-4ed4-4fb5-9d39-56841ea1c863',
         metadata: [],
         name: 'transmitter-calculate',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-07T08:02:55.995Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-07T13:27:13.784Z'),
     ),
     connectionId: '<id>',
 );
@@ -97,7 +97,7 @@ if ($response->repoBranch !== null) {
 
 ## createRepoCommit
 
-Create a commit
+Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
 ### Example Usage
 
@@ -121,14 +121,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
-        id: '8faaf651-733b-4d26-92d1-0103bdcae980',
+        id: 'd5ae9929-7002-4e76-90d9-2a7982177f1e',
         linesAdded: 313,
         linesChanged: 659,
         linesDeleted: 482,
         message: 'quantify bluetooth bandwidth',
         metadata: [],
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-31T06:51:27.908Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-01T04:45:33.272Z'),
     ),
     connectionId: '<id>',
 );
@@ -160,7 +160,7 @@ if ($response->repoCommit !== null) {
 
 ## createRepoOrganization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -186,10 +186,10 @@ $request = new Operations\CreateRepoOrganizationRequest(
         avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
         createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
         description: 'Trepide defendo supra testimonium ager.',
-        id: 'd11dbf84-08b3-42b3-9028-bf71a50ce463',
+        id: '535fcb15-73fe-4dc0-9f62-d99174169da3',
         metadata: [],
         name: 'Denesik - Lemke',
-        updatedAt: Utils\Utils::parseDateTime('2023-08-21T15:08:19.151Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-22T03:37:54.033Z'),
         webUrl: 'https://turbulent-overheard.biz',
     ),
     connectionId: '<id>',
@@ -222,7 +222,7 @@ if ($response->repoOrganization !== null) {
 
 ## createRepoPullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -245,9 +245,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-01T13:52:56.618Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-02T18:18:59.473Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: 'f056c8e3-203d-4efa-b38e-98ababfea7f3',
+        id: 'd0924875-30a8-4330-8ecc-c1e883a38cd1',
         labels: [
             'creptio',
             'tutamen',
@@ -256,7 +256,7 @@ $request = new Operations\CreateRepoPullrequestRequest(
         notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-17T07:06:04.358Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-18T20:52:11.514Z'),
     ),
     connectionId: '<id>',
 );
@@ -288,7 +288,7 @@ if ($response->repoPullrequest !== null) {
 
 ## createRepoRepository
 
-Create a repository
+Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
 
 ### Example Usage
 
@@ -313,11 +313,11 @@ $request = new Operations\CreateRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
         createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
         description: 'Sed somnus crastinus armarium.',
-        id: '1becda54-75c5-4934-8961-9ca4ffa219f1',
+        id: '0fbc916a-99b9-4067-ba05-7206e1cdce19',
         isPrivate: false,
         metadata: [],
         name: 'bah-bogus',
-        updatedAt: Utils\Utils::parseDateTime('2024-03-01T02:05:05.865Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-01T12:17:41.904Z'),
         webUrl: 'https://neat-birdbath.org',
     ),
     connectionId: '<id>',
@@ -350,7 +350,7 @@ if ($response->repoRepository !== null) {
 
 ## getRepoBranch
 
-Retrieve a branch
+Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -401,7 +401,7 @@ if ($response->repoBranch !== null) {
 
 ## getRepoCommit
 
-Retrieve a commit
+Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -452,7 +452,7 @@ if ($response->repoCommit !== null) {
 
 ## getRepoOrganization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -503,7 +503,7 @@ if ($response->repoOrganization !== null) {
 
 ## getRepoPullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -554,7 +554,7 @@ if ($response->repoPullrequest !== null) {
 
 ## getRepoRepository
 
-Retrieve a repository
+Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -605,7 +605,7 @@ if ($response->repoRepository !== null) {
 
 ## listRepoBranches
 
-List all branches
+Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -655,7 +655,7 @@ if ($response->repoBranches !== null) {
 
 ## listRepoCommits
 
-List all commits
+Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -705,7 +705,7 @@ if ($response->repoCommits !== null) {
 
 ## listRepoOrganizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -755,7 +755,7 @@ if ($response->repoOrganizations !== null) {
 
 ## listRepoPullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -805,7 +805,7 @@ if ($response->repoPullrequests !== null) {
 
 ## listRepoRepositories
 
-List all repositories
+Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -855,7 +855,7 @@ if ($response->repoRepositories !== null) {
 
 ## patchRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -879,11 +879,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: '2d9cf7e3-a566-41e8-87b2-6bd47606fe69',
+        id: 'e48929ca-2277-4f9e-a5eb-d9e4d91f0ab2',
         metadata: [],
         name: 'transmitter-calculate',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-07T08:02:55.996Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-07T13:27:13.785Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -916,7 +916,7 @@ if ($response->repoBranch !== null) {
 
 ## patchRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -940,14 +940,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
-        id: 'eced1575-116e-4bb5-92fe-18bea53520fd',
+        id: '0b280913-2aea-4946-b079-d9b09bee4ce9',
         linesAdded: 313,
         linesChanged: 659,
         linesDeleted: 482,
         message: 'quantify bluetooth bandwidth',
         metadata: [],
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-31T06:51:27.914Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-01T04:45:33.277Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -980,7 +980,7 @@ if ($response->repoCommit !== null) {
 
 ## patchRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1006,10 +1006,10 @@ $request = new Operations\PatchRepoOrganizationRequest(
         avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
         createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
         description: 'Trepide defendo supra testimonium ager.',
-        id: '5e3f6bde-51ce-47b1-bc1a-309e3993a0df',
+        id: '4299addd-5e00-44fa-a320-8f297f22f563',
         metadata: [],
         name: 'Denesik - Lemke',
-        updatedAt: Utils\Utils::parseDateTime('2023-08-21T15:08:19.154Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-22T03:37:54.037Z'),
         webUrl: 'https://turbulent-overheard.biz',
     ),
     connectionId: '<id>',
@@ -1043,7 +1043,7 @@ if ($response->repoOrganization !== null) {
 
 ## patchRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -1066,9 +1066,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-01T13:52:56.628Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-02T18:18:59.479Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '680f10ed-25c1-4071-ab27-a124bc8edbbd',
+        id: '9ab6e939-684f-4b33-8512-d5c39fd5d35c',
         labels: [
             'creptio',
             'tutamen',
@@ -1077,7 +1077,7 @@ $request = new Operations\PatchRepoPullrequestRequest(
         notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-17T07:06:04.372Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-18T20:52:11.524Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1110,7 +1110,7 @@ if ($response->repoPullrequest !== null) {
 
 ## patchRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -1135,11 +1135,11 @@ $request = new Operations\PatchRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
         createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
         description: 'Sed somnus crastinus armarium.',
-        id: '03073f42-04d8-46d4-8264-186828af3e72',
+        id: '5f0aab62-1abe-43d2-9a1f-c0df5d83c73b',
         isPrivate: false,
         metadata: [],
         name: 'bah-bogus',
-        updatedAt: Utils\Utils::parseDateTime('2024-03-01T02:05:05.868Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-01T12:17:41.906Z'),
         webUrl: 'https://neat-birdbath.org',
     ),
     connectionId: '<id>',
@@ -1173,7 +1173,7 @@ if ($response->repoRepository !== null) {
 
 ## removeRepoBranch
 
-Remove a branch
+Deletes the RepoBranch identified by `id`.
 
 ### Example Usage
 
@@ -1224,7 +1224,7 @@ if ($response->statusCode === 200) {
 
 ## removeRepoCommit
 
-Remove a commit
+Deletes the RepoCommit identified by `id`.
 
 ### Example Usage
 
@@ -1275,7 +1275,7 @@ if ($response->statusCode === 200) {
 
 ## removeRepoOrganization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -1326,7 +1326,7 @@ if ($response->statusCode === 200) {
 
 ## removeRepoPullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -1377,7 +1377,7 @@ if ($response->statusCode === 200) {
 
 ## removeRepoRepository
 
-Remove a repository
+Deletes the RepoRepository identified by `id`.
 
 ### Example Usage
 
@@ -1428,7 +1428,7 @@ if ($response->statusCode === 200) {
 
 ## updateRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -1452,11 +1452,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: '2d9cf7e3-a566-41e8-87b2-6bd47606fe69',
+        id: 'e48929ca-2277-4f9e-a5eb-d9e4d91f0ab2',
         metadata: [],
         name: 'transmitter-calculate',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-07T08:02:55.996Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-07T13:27:13.785Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1489,7 +1489,7 @@ if ($response->repoBranch !== null) {
 
 ## updateRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -1513,14 +1513,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
-        id: 'eced1575-116e-4bb5-92fe-18bea53520fd',
+        id: '0b280913-2aea-4946-b079-d9b09bee4ce9',
         linesAdded: 313,
         linesChanged: 659,
         linesDeleted: 482,
         message: 'quantify bluetooth bandwidth',
         metadata: [],
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-31T06:51:27.914Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-01T04:45:33.277Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1553,7 +1553,7 @@ if ($response->repoCommit !== null) {
 
 ## updateRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1579,10 +1579,10 @@ $request = new Operations\UpdateRepoOrganizationRequest(
         avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
         createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
         description: 'Trepide defendo supra testimonium ager.',
-        id: '5e3f6bde-51ce-47b1-bc1a-309e3993a0df',
+        id: '4299addd-5e00-44fa-a320-8f297f22f563',
         metadata: [],
         name: 'Denesik - Lemke',
-        updatedAt: Utils\Utils::parseDateTime('2023-08-21T15:08:19.154Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-22T03:37:54.037Z'),
         webUrl: 'https://turbulent-overheard.biz',
     ),
     connectionId: '<id>',
@@ -1616,7 +1616,7 @@ if ($response->repoOrganization !== null) {
 
 ## updateRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -1639,9 +1639,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-01T13:52:56.628Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-02T18:18:59.479Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '680f10ed-25c1-4071-ab27-a124bc8edbbd',
+        id: '9ab6e939-684f-4b33-8512-d5c39fd5d35c',
         labels: [
             'creptio',
             'tutamen',
@@ -1650,7 +1650,7 @@ $request = new Operations\UpdateRepoPullrequestRequest(
         notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-17T07:06:04.372Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-18T20:52:11.524Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1683,7 +1683,7 @@ if ($response->repoPullrequest !== null) {
 
 ## updateRepoRepository
 
-Update a repository
+Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
 
 ### Example Usage
 
@@ -1708,11 +1708,11 @@ $request = new Operations\UpdateRepoRepositoryRequest(
     repoRepository: new Shared\RepoRepository(
         createdAt: Utils\Utils::parseDateTime('2023-06-12T09:42:00.080Z'),
         description: 'Sed somnus crastinus armarium.',
-        id: '03073f42-04d8-46d4-8264-186828af3e72',
+        id: '5f0aab62-1abe-43d2-9a1f-c0df5d83c73b',
         isPrivate: false,
         metadata: [],
         name: 'bah-bogus',
-        updatedAt: Utils\Utils::parseDateTime('2024-03-01T02:05:05.868Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-01T12:17:41.906Z'),
         webUrl: 'https://neat-birdbath.org',
     ),
     connectionId: '<id>',

@@ -47,12 +47,16 @@ class Order
     /**
      * Create an order
      *
+     * Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function createAccountingOrder(Operations\CreateAccountingOrderRequest $request, ?Options $options = null): Operations\CreateAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order', Operations\CreateAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -114,6 +118,8 @@ class Order
 
     /**
      * Create an order
+     *
+     * Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAssessmentOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAssessmentOrderResponse
@@ -183,12 +189,16 @@ class Order
     /**
      * Retrieve an order
      *
+     * Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function getAccountingOrder(Operations\GetAccountingOrderRequest $request, ?Options $options = null): Operations\GetAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order/{id}', Operations\GetAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -245,6 +255,8 @@ class Order
 
     /**
      * Retrieve an order
+     *
+     * Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAssessmentOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAssessmentOrderResponse
@@ -309,12 +321,16 @@ class Order
     /**
      * List all orders
      *
+     * Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrdersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingOrdersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function listAccountingOrders(Operations\ListAccountingOrdersRequest $request, ?Options $options = null): Operations\ListAccountingOrdersResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order', Operations\ListAccountingOrdersRequest::class, $request);
         $urlOverride = null;
@@ -372,12 +388,16 @@ class Order
     /**
      * Update an order
      *
+     * Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function patchAccountingOrder(Operations\PatchAccountingOrderRequest $request, ?Options $options = null): Operations\PatchAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order/{id}', Operations\PatchAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -439,6 +459,8 @@ class Order
 
     /**
      * Update an order
+     *
+     * Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAssessmentOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAssessmentOrderResponse
@@ -508,12 +530,16 @@ class Order
     /**
      * Remove an order
      *
+     * Deletes the AccountingOrder identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function removeAccountingOrder(Operations\RemoveAccountingOrderRequest $request, ?Options $options = null): Operations\RemoveAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order/{id}', Operations\RemoveAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -565,12 +591,16 @@ class Order
     /**
      * Update an order
      *
+     * Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
+     * @deprecated  method: This will be removed in a future release, please migrate away from it as soon as possible.
      */
     public function updateAccountingOrder(Operations\UpdateAccountingOrderRequest $request, ?Options $options = null): Operations\UpdateAccountingOrderResponse
     {
+        trigger_error('Method '.__METHOD__.' is deprecated', E_USER_DEPRECATED);
         $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
         $url = Utils\Utils::generateUrl($baseUrl, '/accounting/{connection_id}/order/{id}', Operations\UpdateAccountingOrderRequest::class, $request);
         $urlOverride = null;
@@ -632,6 +662,8 @@ class Order
 
     /**
      * Update an order
+     *
+     * Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderResponse

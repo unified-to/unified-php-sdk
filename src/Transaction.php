@@ -47,6 +47,8 @@ class Transaction
     /**
      * Create a transaction
      *
+     * Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Transaction
     /**
      * Retrieve a transaction
      *
+     * Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Transaction
     /**
      * List all transactions
      *
+     * Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingTransactionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingTransactionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Transaction
 
     /**
      * Update a transaction
+     *
+     * Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingTransactionResponse
@@ -309,6 +317,8 @@ class Transaction
     /**
      * Remove a transaction
      *
+     * Deletes the AccountingTransaction identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingTransactionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Transaction
 
     /**
      * Update a transaction
+     *
+     * Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingTransactionResponse

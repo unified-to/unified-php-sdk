@@ -13,7 +13,7 @@
 
 ## createTicketingTicket
 
-Create a ticket
+Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ $request = new Operations\CreateTicketingTicketRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-25T19:19:31.279Z'),
         description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
         dueAt: Utils\Utils::parseDateTime('2021-07-07T17:39:49.813Z'),
-        id: 'deedd6a3-2f17-44dd-9af1-a0e87655ca78',
+        id: '2d4295c1-a2d6-4a7d-b055-c2bcade85c1e',
         metadata: [],
         priority: 'MEDIUM',
         source: 'email',
@@ -49,7 +49,7 @@ $request = new Operations\CreateTicketingTicketRequest(
         tags: [
             'vilicus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:28:56.759Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:40:40.246Z'),
         url: 'https://similar-velocity.net/',
     ),
     connectionId: '<id>',
@@ -82,7 +82,7 @@ if ($response->ticketingTicket !== null) {
 
 ## getTicketingTicket
 
-Retrieve a ticket
+Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ if ($response->ticketingTicket !== null) {
 
 ## listTicketingTickets
 
-List all tickets
+Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -183,7 +183,7 @@ if ($response->ticketingTickets !== null) {
 
 ## patchTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -210,7 +210,7 @@ $request = new Operations\PatchTicketingTicketRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-25T19:19:31.279Z'),
         description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
         dueAt: Utils\Utils::parseDateTime('2021-07-07T17:39:49.813Z'),
-        id: 'a6e2a7b5-95b9-4d6b-adf4-3393f513e96b',
+        id: 'abcd6b11-d964-41a9-90fb-28d4b0c959c6',
         metadata: [],
         priority: 'MEDIUM',
         source: 'email',
@@ -219,7 +219,7 @@ $request = new Operations\PatchTicketingTicketRequest(
         tags: [
             'vilicus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:28:56.759Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:40:40.246Z'),
         url: 'https://similar-velocity.net/',
     ),
     connectionId: '<id>',
@@ -253,7 +253,7 @@ if ($response->ticketingTicket !== null) {
 
 ## removeTicketingTicket
 
-Remove a ticket
+Deletes the TicketingTicket identified by `id`.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ if ($response->statusCode === 200) {
 
 ## updateTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -331,7 +331,7 @@ $request = new Operations\UpdateTicketingTicketRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-25T19:19:31.279Z'),
         description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
         dueAt: Utils\Utils::parseDateTime('2021-07-07T17:39:49.813Z'),
-        id: 'a6e2a7b5-95b9-4d6b-adf4-3393f513e96b',
+        id: 'abcd6b11-d964-41a9-90fb-28d4b0c959c6',
         metadata: [],
         priority: 'MEDIUM',
         source: 'email',
@@ -340,7 +340,7 @@ $request = new Operations\UpdateTicketingTicketRequest(
         tags: [
             'vilicus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:28:56.759Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:40:40.246Z'),
         url: 'https://similar-velocity.net/',
     ),
     connectionId: '<id>',

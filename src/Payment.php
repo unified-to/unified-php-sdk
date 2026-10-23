@@ -47,6 +47,8 @@ class Payment
     /**
      * Create a link
      *
+     * Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreatePaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Payment
 
     /**
      * Create a payment
+     *
+     * Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreatePaymentPaymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePaymentPaymentResponse
@@ -183,6 +187,8 @@ class Payment
     /**
      * Create a subscription
      *
+     * Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Payment
     /**
      * Retrieve a link
      *
+     * Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetPaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Payment
 
     /**
      * Retrieve a payment
+     *
+     * Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetPaymentPaymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPaymentPaymentResponse
@@ -377,6 +387,8 @@ class Payment
     /**
      * Retrieve a payout
      *
+     * Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetPaymentPayoutRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPaymentPayoutResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Payment
 
     /**
      * Retrieve a refund
+     *
+     * Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetPaymentRefundRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPaymentRefundResponse
@@ -503,6 +517,8 @@ class Payment
     /**
      * Retrieve a subscription
      *
+     * Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetPaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -565,6 +581,8 @@ class Payment
 
     /**
      * List all links
+     *
+     * Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListPaymentLinksRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPaymentLinksResponse
@@ -629,6 +647,8 @@ class Payment
     /**
      * List all payments
      *
+     * Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPaymentPaymentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPaymentPaymentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -691,6 +711,8 @@ class Payment
 
     /**
      * List all payouts
+     *
+     * Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListPaymentPayoutsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPaymentPayoutsResponse
@@ -755,6 +777,8 @@ class Payment
     /**
      * List all refunds
      *
+     * Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPaymentRefundsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPaymentRefundsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -818,6 +842,8 @@ class Payment
     /**
      * List all subscriptions
      *
+     * Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -880,6 +906,8 @@ class Payment
 
     /**
      * Update a link
+     *
+     * Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchPaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchPaymentLinkResponse
@@ -949,6 +977,8 @@ class Payment
     /**
      * Update a payment
      *
+     * Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchPaymentPaymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchPaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1016,6 +1046,8 @@ class Payment
 
     /**
      * Update a subscription
+     *
+     * Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchPaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchPaymentSubscriptionResponse
@@ -1085,6 +1117,8 @@ class Payment
     /**
      * Remove a link
      *
+     * Deletes the PaymentLink identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemovePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1141,6 +1175,8 @@ class Payment
 
     /**
      * Remove a payment
+     *
+     * Deletes the PaymentPayment identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemovePaymentPaymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemovePaymentPaymentResponse
@@ -1199,6 +1235,8 @@ class Payment
     /**
      * Remove a subscription
      *
+     * Deletes the PaymentSubscription identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemovePaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemovePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1255,6 +1293,8 @@ class Payment
 
     /**
      * Update a link
+     *
+     * Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdatePaymentLinkResponse
@@ -1324,6 +1364,8 @@ class Payment
     /**
      * Update a payment
      *
+     * Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentPaymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdatePaymentPaymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1391,6 +1433,8 @@ class Payment
 
     /**
      * Update a subscription
+     *
+     * Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdatePaymentSubscriptionResponse

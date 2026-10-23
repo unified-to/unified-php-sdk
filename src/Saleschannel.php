@@ -47,6 +47,8 @@ class Saleschannel
     /**
      * Create a saleschannel
      *
+     * Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Saleschannel
     /**
      * Retrieve a saleschannel
      *
+     * Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Saleschannel
     /**
      * List all saleschannels
      *
+     * Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceSaleschannelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Saleschannel
 
     /**
      * Update a saleschannel
+     *
+     * Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceSaleschannelResponse
@@ -309,6 +317,8 @@ class Saleschannel
     /**
      * Remove a saleschannel
      *
+     * Deletes the CommerceSaleschannel identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceSaleschannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Saleschannel
 
     /**
      * Update a saleschannel
+     *
+     * Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceSaleschannelResponse

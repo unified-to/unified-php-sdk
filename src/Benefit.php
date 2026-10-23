@@ -47,6 +47,8 @@ class Benefit
     /**
      * Create a benefit
      *
+     * Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Benefit
     /**
      * Retrieve a benefit
      *
+     * Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Benefit
     /**
      * List all benefits
      *
+     * Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisBenefitsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisBenefitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Benefit
 
     /**
      * Update a benefit
+     *
+     * Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisBenefitResponse
@@ -309,6 +317,8 @@ class Benefit
     /**
      * Remove a benefit
      *
+     * Deletes the HrisBenefit identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Benefit
 
     /**
      * Update a benefit
+     *
+     * Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisBenefitResponse

@@ -47,6 +47,8 @@ class Profile
     /**
      * Create a profile
      *
+     * Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to the provider's API. Returns the created CdpProfile.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpProfileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Profile
     /**
      * Retrieve a profile
      *
+     * Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpProfileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Profile
 
     /**
      * Retrieve a profile
+     *
+     * Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetSocialProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSocialProfileResponse
@@ -241,6 +247,8 @@ class Profile
     /**
      * List all profiles
      *
+     * Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpProfilesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpProfilesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -304,6 +312,8 @@ class Profile
     /**
      * List all profiles
      *
+     * Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSocialProfilesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSocialProfilesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -366,6 +376,8 @@ class Profile
 
     /**
      * Update a profile
+     *
+     * Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpProfileResponse
@@ -435,6 +447,8 @@ class Profile
     /**
      * Remove a profile
      *
+     * Deletes the CdpProfile identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpProfileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -491,6 +505,8 @@ class Profile
 
     /**
      * Update a profile
+     *
+     * Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpProfileResponse

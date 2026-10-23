@@ -15,7 +15,7 @@
 
 ## createUcRecording
 
-Create a recording
+Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
 
 ### Example Usage
 
@@ -39,36 +39,36 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateUcRecordingRequest(
     ucRecording: new Shared\UcRecording(
         contacts: [],
-        conversationIdentifier: 'f0a1da69-f7cb-4208-a2ce-423718fb0f03',
+        conversationIdentifier: '166ae753-2570-4f63-aa2c-4c71ee0a8183',
         createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
-        endAt: Utils\Utils::parseDateTime('2024-05-04T23:55:47.113Z'),
-        expiresAt: Utils\Utils::parseDateTime('2026-04-26T18:28:50.983Z'),
-        id: 'f0a1da69-f7cb-4208-a2ce-423718fb0f03',
+        endAt: Utils\Utils::parseDateTime('2024-05-05T18:55:12.659Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-04-28T12:30:03.720Z'),
+        id: '166ae753-2570-4f63-aa2c-4c71ee0a8183',
         media: [
             new Shared\UcRecordingMedia(
-                endAt: Utils\Utils::parseDateTime('2024-04-01T19:35:52.943Z'),
+                endAt: Utils\Utils::parseDateTime('2024-04-02T13:31:47.178Z'),
                 language: 'en',
                 recordingDownloadUrl: 'https://parched-wasabi.com/',
-                startAt: Utils\Utils::parseDateTime('2026-05-15T10:32:45.247Z'),
+                startAt: Utils\Utils::parseDateTime('2026-05-17T05:09:42.461Z'),
                 transcriptDownloadUrl: 'https://colossal-cuckoo.name',
                 transcripts: [
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2026-02-24T12:18:11.290Z'),
-                        startAt: Utils\Utils::parseDateTime('2024-06-02T06:04:20.365Z'),
+                        endAt: Utils\Utils::parseDateTime('2026-02-26T04:22:07.634Z'),
+                        startAt: Utils\Utils::parseDateTime('2024-06-03T01:57:51.559Z'),
                         text: 'Turpis maiores ducimus tero speculum.',
                     ),
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2024-10-12T13:12:34.085Z'),
-                        startAt: Utils\Utils::parseDateTime('2026-08-02T21:07:30.377Z'),
+                        endAt: Utils\Utils::parseDateTime('2024-10-13T13:19:21.754Z'),
+                        startAt: Utils\Utils::parseDateTime('2026-08-04T18:16:32.641Z'),
                         text: 'Magnam consuasor uxor tergiversatio subseco.',
                     ),
                 ],
             ),
         ],
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-04-27T18:04:18.259Z'),
+        startAt: Utils\Utils::parseDateTime('2023-04-28T01:09:10.741Z'),
         type: Shared\UcRecordingType::Outbound,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-16T11:08:19.904Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-17T16:11:41.896Z'),
         userPhone: '1-915-327-0429 x509',
         webUrl: 'https://spherical-comparison.org',
     ),
@@ -102,7 +102,7 @@ if ($response->ucRecording !== null) {
 
 ## getCalendarRecording
 
-Retrieve a recording
+Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -153,7 +153,7 @@ if ($response->calendarRecording !== null) {
 
 ## getUcRecording
 
-Retrieve a recording
+Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ if ($response->ucRecording !== null) {
 
 ## listCalendarRecordings
 
-List all recordings
+Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -254,7 +254,7 @@ if ($response->calendarRecordings !== null) {
 
 ## listUcRecordings
 
-List all recordings
+Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ if ($response->ucRecordings !== null) {
 
 ## patchUcRecording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -328,36 +328,36 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUcRecordingRequest(
     ucRecording: new Shared\UcRecording(
         contacts: [],
-        conversationIdentifier: '5693602d-54d0-4d1d-ab90-ad48b8752a62',
+        conversationIdentifier: '9f3b5f29-332a-4f02-886b-9fe246af9c9a',
         createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
-        endAt: Utils\Utils::parseDateTime('2024-05-04T23:55:47.126Z'),
-        expiresAt: Utils\Utils::parseDateTime('2026-04-26T18:28:51.012Z'),
-        id: '5693602d-54d0-4d1d-ab90-ad48b8752a62',
+        endAt: Utils\Utils::parseDateTime('2024-05-05T18:55:12.675Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-04-28T12:30:03.756Z'),
+        id: '9f3b5f29-332a-4f02-886b-9fe246af9c9a',
         media: [
             new Shared\UcRecordingMedia(
-                endAt: Utils\Utils::parseDateTime('2024-04-01T19:35:52.955Z'),
+                endAt: Utils\Utils::parseDateTime('2024-04-02T13:31:47.193Z'),
                 language: 'en',
                 recordingDownloadUrl: 'https://parched-wasabi.com/',
-                startAt: Utils\Utils::parseDateTime('2026-05-15T10:32:45.277Z'),
+                startAt: Utils\Utils::parseDateTime('2026-05-17T05:09:42.498Z'),
                 transcriptDownloadUrl: 'https://colossal-cuckoo.name',
                 transcripts: [
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2026-02-24T12:18:11.318Z'),
-                        startAt: Utils\Utils::parseDateTime('2024-06-02T06:04:20.379Z'),
+                        endAt: Utils\Utils::parseDateTime('2026-02-26T04:22:07.667Z'),
+                        startAt: Utils\Utils::parseDateTime('2024-06-03T01:57:51.576Z'),
                         text: 'Turpis maiores ducimus tero speculum.',
                     ),
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2024-10-12T13:12:34.102Z'),
-                        startAt: Utils\Utils::parseDateTime('2026-08-02T21:07:30.408Z'),
+                        endAt: Utils\Utils::parseDateTime('2024-10-13T13:19:21.774Z'),
+                        startAt: Utils\Utils::parseDateTime('2026-08-04T18:16:32.678Z'),
                         text: 'Magnam consuasor uxor tergiversatio subseco.',
                     ),
                 ],
             ),
         ],
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-04-27T18:04:18.264Z'),
+        startAt: Utils\Utils::parseDateTime('2023-04-28T01:09:10.747Z'),
         type: Shared\UcRecordingType::Outbound,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-16T11:08:19.924Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-17T16:11:41.920Z'),
         userPhone: '1-915-327-0429 x509',
         webUrl: 'https://spherical-comparison.org',
     ),
@@ -392,7 +392,7 @@ if ($response->ucRecording !== null) {
 
 ## removeUcRecording
 
-Remove a recording
+Deletes the UcRecording identified by `id`.
 
 ### Example Usage
 
@@ -443,7 +443,7 @@ if ($response->statusCode === 200) {
 
 ## updateUcRecording
 
-Update a recording
+Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
 
 ### Example Usage
 
@@ -467,36 +467,36 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUcRecordingRequest(
     ucRecording: new Shared\UcRecording(
         contacts: [],
-        conversationIdentifier: '5693602d-54d0-4d1d-ab90-ad48b8752a62',
+        conversationIdentifier: '9f3b5f29-332a-4f02-886b-9fe246af9c9a',
         createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
-        endAt: Utils\Utils::parseDateTime('2024-05-04T23:55:47.126Z'),
-        expiresAt: Utils\Utils::parseDateTime('2026-04-26T18:28:51.012Z'),
-        id: '5693602d-54d0-4d1d-ab90-ad48b8752a62',
+        endAt: Utils\Utils::parseDateTime('2024-05-05T18:55:12.675Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-04-28T12:30:03.756Z'),
+        id: '9f3b5f29-332a-4f02-886b-9fe246af9c9a',
         media: [
             new Shared\UcRecordingMedia(
-                endAt: Utils\Utils::parseDateTime('2024-04-01T19:35:52.955Z'),
+                endAt: Utils\Utils::parseDateTime('2024-04-02T13:31:47.193Z'),
                 language: 'en',
                 recordingDownloadUrl: 'https://parched-wasabi.com/',
-                startAt: Utils\Utils::parseDateTime('2026-05-15T10:32:45.277Z'),
+                startAt: Utils\Utils::parseDateTime('2026-05-17T05:09:42.498Z'),
                 transcriptDownloadUrl: 'https://colossal-cuckoo.name',
                 transcripts: [
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2026-02-24T12:18:11.318Z'),
-                        startAt: Utils\Utils::parseDateTime('2024-06-02T06:04:20.379Z'),
+                        endAt: Utils\Utils::parseDateTime('2026-02-26T04:22:07.667Z'),
+                        startAt: Utils\Utils::parseDateTime('2024-06-03T01:57:51.576Z'),
                         text: 'Turpis maiores ducimus tero speculum.',
                     ),
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2024-10-12T13:12:34.102Z'),
-                        startAt: Utils\Utils::parseDateTime('2026-08-02T21:07:30.408Z'),
+                        endAt: Utils\Utils::parseDateTime('2024-10-13T13:19:21.774Z'),
+                        startAt: Utils\Utils::parseDateTime('2026-08-04T18:16:32.678Z'),
                         text: 'Magnam consuasor uxor tergiversatio subseco.',
                     ),
                 ],
             ),
         ],
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-04-27T18:04:18.264Z'),
+        startAt: Utils\Utils::parseDateTime('2023-04-28T01:09:10.747Z'),
         type: Shared\UcRecordingType::Outbound,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-16T11:08:19.924Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-17T16:11:41.920Z'),
         userPhone: '1-915-327-0429 x509',
         webUrl: 'https://spherical-comparison.org',
     ),

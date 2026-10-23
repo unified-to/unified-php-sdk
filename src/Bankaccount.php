@@ -47,6 +47,8 @@ class Bankaccount
     /**
      * Create a bankaccount
      *
+     * Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Bankaccount
     /**
      * Retrieve a bankaccount
      *
+     * Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Bankaccount
     /**
      * List all bankaccounts
      *
+     * Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisBankaccountsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisBankaccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Bankaccount
 
     /**
      * Update a bankaccount
+     *
+     * Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisBankaccountResponse
@@ -309,6 +317,8 @@ class Bankaccount
     /**
      * Remove a bankaccount
      *
+     * Deletes the HrisBankaccount identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Bankaccount
 
     /**
      * Update a bankaccount
+     *
+     * Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountResponse

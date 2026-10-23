@@ -55,6 +55,7 @@ class DatastoreDatabase
     public ?array $metadata = null;
 
     /**
+     * The database's name
      *
      * @var ?string $name
      */

@@ -47,6 +47,8 @@ class Domain
     /**
      * Create a domain
      *
+     * Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeDomainResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Domain
     /**
      * Retrieve a domain
      *
+     * Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeDomainResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Domain
     /**
      * List all domains
      *
+     * Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeDomainsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeDomainsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Domain
 
     /**
      * Update a domain
+     *
+     * Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeDomainResponse
@@ -309,6 +317,8 @@ class Domain
     /**
      * Remove a domain
      *
+     * Deletes the ComputeDomain identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeDomainResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Domain
 
     /**
      * Update a domain
+     *
+     * Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeDomainResponse

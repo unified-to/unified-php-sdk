@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class MetadataMetadata
 {
     /**
+     * The display name of the custom field
      *
      * @var string $name
      */
@@ -36,6 +37,7 @@ class MetadataMetadata
     public ?\DateTime $createdAt = null;
 
     /**
+     * The data type of the custom field's values
      *
      * @var ?\Unified\Unified_to\Models\Shared\MetadataMetadataFormat $format
      */

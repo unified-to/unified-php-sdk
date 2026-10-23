@@ -47,6 +47,8 @@ class Collection
     /**
      * Create a collection
      *
+     * Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Collection
 
     /**
      * Create a collection
+     *
+     * Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsCollectionResponse
@@ -183,6 +187,8 @@ class Collection
     /**
      * Retrieve a collection
      *
+     * Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Collection
 
     /**
      * Retrieve a collection
+     *
+     * Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsCollectionResponse
@@ -309,6 +317,8 @@ class Collection
     /**
      * List all collections
      *
+     * Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceCollectionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceCollectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -372,6 +382,8 @@ class Collection
     /**
      * List all collections
      *
+     * Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsCollectionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsCollectionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -434,6 +446,8 @@ class Collection
 
     /**
      * Update a collection
+     *
+     * Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceCollectionResponse
@@ -503,6 +517,8 @@ class Collection
     /**
      * Update a collection
      *
+     * Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -571,6 +587,8 @@ class Collection
     /**
      * Remove a collection
      *
+     * Deletes the CommerceCollection identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Collection
     /**
      * Remove a collection
      *
+     * Deletes the LmsCollection identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -684,6 +704,8 @@ class Collection
 
     /**
      * Update a collection
+     *
+     * Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceCollectionResponse
@@ -752,6 +774,8 @@ class Collection
 
     /**
      * Update a collection
+     *
+     * Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsCollectionResponse

@@ -47,6 +47,8 @@ class Carrier
     /**
      * Retrieve a carrier
      *
+     * Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetShippingCarrierRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetShippingCarrierResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -109,6 +111,8 @@ class Carrier
 
     /**
      * List all carriers
+     *
+     * Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListShippingCarriersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListShippingCarriersResponse

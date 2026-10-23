@@ -47,6 +47,8 @@ class Campaign
     /**
      * Create a campaign
      *
+     * Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Campaign
 
     /**
      * Create a campaign
+     *
+     * Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateMartechCampaignResponse
@@ -183,6 +187,8 @@ class Campaign
     /**
      * Retrieve a campaign
      *
+     * Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Campaign
 
     /**
      * Retrieve a campaign
+     *
+     * Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetMartechCampaignResponse
@@ -309,6 +317,8 @@ class Campaign
     /**
      * List all campaigns
      *
+     * Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsCampaignsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsCampaignsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -372,6 +382,8 @@ class Campaign
     /**
      * List all campaigns
      *
+     * Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListMartechCampaignsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListMartechCampaignsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -434,6 +446,8 @@ class Campaign
 
     /**
      * Update a campaign
+     *
+     * Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsCampaignResponse
@@ -503,6 +517,8 @@ class Campaign
     /**
      * Update a campaign
      *
+     * Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -571,6 +587,8 @@ class Campaign
     /**
      * Remove a campaign
      *
+     * Deletes the AdsCampaign identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Campaign
     /**
      * Remove a campaign
      *
+     * Deletes the MarketingCampaign identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -684,6 +704,8 @@ class Campaign
 
     /**
      * Update a campaign
+     *
+     * Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsCampaignResponse
@@ -752,6 +774,8 @@ class Campaign
 
     /**
      * Update a campaign
+     *
+     * Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMartechCampaignResponse

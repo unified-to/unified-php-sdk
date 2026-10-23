@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** PropertyDatastoreQueryQuery - What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate) */
 class PropertyDatastoreQueryQuery
 {
     /**

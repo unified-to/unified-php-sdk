@@ -21,7 +21,7 @@
 
 ## createSigningDocument
 
-Create a document
+Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 
 ### Example Usage
 
@@ -47,12 +47,12 @@ $request = new Operations\CreateSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '3d0e68e0-30df-45a8-a377-a3031f2cac8f',
+        id: 'efddad88-fde5-43a7-98a3-290f5f4b3c1a',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-06-29T12:05:58.496Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-06-29T22:11:51.154Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-02T22:28:48.273Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-04T12:17:49.876Z'),
     ),
     connectionId: '<id>',
 );
@@ -84,7 +84,7 @@ if ($response->signingDocument !== null) {
 
 ## createSigningSignatory
 
-Create a signatory
+Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
 
 ### Example Usage
 
@@ -109,12 +109,12 @@ $request = new Operations\CreateSigningSignatoryRequest(
     signingSignatory: new Shared\SigningSignatory(
         createdAt: Utils\Utils::parseDateTime('2022-04-16T19:25:01.966Z'),
         email: 'anais.lakin@icloud.com',
-        id: 'a8d15dcb-4bb9-4c04-a1bf-19d786617b09',
+        id: '1b0864c8-aab6-4b49-8b81-52e06c540451',
         metadata: [],
         name: 'Anais Lakin',
         role: Shared\SigningSignatoryRole::Signer,
         status: Shared\SigningSignatoryStatus::Error,
-        updatedAt: Utils\Utils::parseDateTime('2024-05-17T19:57:49.083Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-05-18T18:00:21.130Z'),
     ),
     connectionId: '<id>',
 );
@@ -146,7 +146,7 @@ if ($response->signingSignatory !== null) {
 
 ## getSigningDocument
 
-Retrieve a document
+Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ if ($response->signingDocument !== null) {
 
 ## getSigningSignatory
 
-Retrieve a signatory
+Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -248,7 +248,7 @@ if ($response->signingSignatory !== null) {
 
 ## getSigningTemplate
 
-Retrieve a template
+Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -299,7 +299,7 @@ if ($response->signingTemplate !== null) {
 
 ## listSigningDocuments
 
-List all documents
+Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ if ($response->signingDocuments !== null) {
 
 ## listSigningSignatories
 
-List all signatories
+Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -399,7 +399,7 @@ if ($response->signingSignatories !== null) {
 
 ## listSigningTemplates
 
-List all templates
+Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -449,7 +449,7 @@ if ($response->signingTemplates !== null) {
 
 ## patchSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -475,12 +475,12 @@ $request = new Operations\PatchSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '86e22960-9424-44eb-acf3-82ab31596d76',
+        id: 'ba32fd4b-3106-4424-bd56-05bf07e10eb0',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-06-29T12:05:58.499Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-06-29T22:11:51.157Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-02T22:28:48.283Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-04T12:17:49.889Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -513,7 +513,7 @@ if ($response->signingDocument !== null) {
 
 ## patchSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -538,12 +538,12 @@ $request = new Operations\PatchSigningSignatoryRequest(
     signingSignatory: new Shared\SigningSignatory(
         createdAt: Utils\Utils::parseDateTime('2022-04-16T19:25:01.966Z'),
         email: 'anais.lakin@icloud.com',
-        id: 'b0c1cf50-f19c-478f-8ee0-6beabeda5c3d',
+        id: 'af436cd4-a6f7-40cb-afab-fa3841e76bbc',
         metadata: [],
         name: 'Anais Lakin',
         role: Shared\SigningSignatoryRole::Signer,
         status: Shared\SigningSignatoryStatus::Error,
-        updatedAt: Utils\Utils::parseDateTime('2024-05-17T19:57:49.091Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-05-18T18:00:21.138Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -576,7 +576,7 @@ if ($response->signingSignatory !== null) {
 
 ## removeSigningDocument
 
-Remove a document
+Deletes the SigningDocument identified by `id`.
 
 ### Example Usage
 
@@ -627,7 +627,7 @@ if ($response->statusCode === 200) {
 
 ## removeSigningSignatory
 
-Remove a signatory
+Deletes the SigningSignatory identified by `id`.
 
 ### Example Usage
 
@@ -678,7 +678,7 @@ if ($response->statusCode === 200) {
 
 ## updateSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -704,12 +704,12 @@ $request = new Operations\UpdateSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '86e22960-9424-44eb-acf3-82ab31596d76',
+        id: 'ba32fd4b-3106-4424-bd56-05bf07e10eb0',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-06-29T12:05:58.499Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-06-29T22:11:51.157Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-02T22:28:48.283Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-04T12:17:49.889Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -742,7 +742,7 @@ if ($response->signingDocument !== null) {
 
 ## updateSigningSignatory
 
-Update a signatory
+Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
 
 ### Example Usage
 
@@ -767,12 +767,12 @@ $request = new Operations\UpdateSigningSignatoryRequest(
     signingSignatory: new Shared\SigningSignatory(
         createdAt: Utils\Utils::parseDateTime('2022-04-16T19:25:01.966Z'),
         email: 'anais.lakin@icloud.com',
-        id: 'b0c1cf50-f19c-478f-8ee0-6beabeda5c3d',
+        id: 'af436cd4-a6f7-40cb-afab-fa3841e76bbc',
         metadata: [],
         name: 'Anais Lakin',
         role: Shared\SigningSignatoryRole::Signer,
         status: Shared\SigningSignatoryStatus::Error,
-        updatedAt: Utils\Utils::parseDateTime('2024-05-17T19:57:49.091Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-05-18T18:00:21.138Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

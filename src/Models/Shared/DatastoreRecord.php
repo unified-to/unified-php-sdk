@@ -12,7 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class DatastoreRecord
 {
     /**
-     * $fields
+     * The record's values, keyed by the table's field (column) names; each value is a typed value object (e.g. { "string": "Acme" } or { "number": 3 })
      *
      * @var array<string, \Unified\Unified_to\Models\Shared\DatastoreFieldValue> $fields
      */

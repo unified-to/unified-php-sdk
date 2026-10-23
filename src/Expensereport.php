@@ -47,6 +47,8 @@ class Expensereport
     /**
      * Create an expensereport
      *
+     * Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingExpensereportResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Expensereport
     /**
      * Retrieve an expensereport
      *
+     * Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingExpensereportResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Expensereport
     /**
      * List all expensereports
      *
+     * Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingExpensereportsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingExpensereportsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Expensereport
 
     /**
      * Update an expensereport
+     *
+     * Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingExpensereportResponse
@@ -309,6 +317,8 @@ class Expensereport
     /**
      * Remove an expensereport
      *
+     * Deletes the AccountingExpensereport identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingExpensereportResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Expensereport
 
     /**
      * Update an expensereport
+     *
+     * Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingExpensereportRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingExpensereportResponse

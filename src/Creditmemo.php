@@ -47,6 +47,8 @@ class Creditmemo
     /**
      * Create a creditmemo
      *
+     * Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Creditmemo
     /**
      * Retrieve a creditmemo
      *
+     * Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Creditmemo
     /**
      * List all creditmemoes
      *
+     * Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingCreditmemoesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Creditmemo
 
     /**
      * Update a creditmemo
+     *
+     * Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingCreditmemoResponse
@@ -309,6 +317,8 @@ class Creditmemo
     /**
      * Remove a creditmemo
      *
+     * Deletes the AccountingCreditmemo identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCreditmemoResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Creditmemo
 
     /**
      * Update a creditmemo
+     *
+     * Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCreditmemoResponse

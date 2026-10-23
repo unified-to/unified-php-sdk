@@ -25,7 +25,7 @@
 
 ## createAnalyticsEvent
 
-Create an event
+Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 
 ### Example Usage
 
@@ -50,13 +50,13 @@ $request = new Operations\CreateAnalyticsEventRequest(
     analyticsEvent: new Shared\AnalyticsEvent(
         createdAt: Utils\Utils::parseDateTime('2023-06-21T03:13:22.954Z'),
         eventType: Shared\EventType::ScreenView,
-        id: '16a850a1-a7e9-458c-bd8d-4efe8a5d66ac',
+        id: '5596855f-627d-4ca7-a9e0-47d4eb514e63',
         metadata: [
             'key' => new Shared\PropertyAnalyticsEventMetadata(),
         ],
         name: 'page_view',
         pageUrl: 'https://golden-carboxyl.biz',
-        updatedAt: Utils\Utils::parseDateTime('2023-09-24T16:23:03.740Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-24T20:07:29.259Z'),
     ),
     connectionId: '<id>',
 );
@@ -88,7 +88,7 @@ if ($response->analyticsEvent !== null) {
 
 ## createAnalyticsProperty
 
-Create a property
+Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
 
 ### Example Usage
 
@@ -113,10 +113,10 @@ $request = new Operations\CreateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '8e5d696a-a1b8-4bc8-a358-72945257ff51',
+        id: '66a7cadb-6c99-404e-8583-7a81b923d57f',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:26:18.306Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:40:08.989Z'),
     ),
     connectionId: '<id>',
 );
@@ -148,7 +148,7 @@ if ($response->analyticsProperty !== null) {
 
 ## createAnalyticsVisitor
 
-Create a visitor
+Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
 
 ### Example Usage
 
@@ -174,13 +174,13 @@ $request = new Operations\CreateAnalyticsVisitorRequest(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
         email: 'desiree.o.hara@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: 'bfaa912a-9cdb-411c-ba4a-690f1112f1c6',
-        lastSeenAt: Utils\Utils::parseDateTime('2025-01-11T07:31:53.978Z'),
+        id: 'a2cda971-98a8-4b88-8030-f9db4fc7cbbb',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-01-12T18:13:21.722Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
         totalEvents: 2916,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-29T17:14:52.295Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-01T07:20:06.031Z'),
     ),
     connectionId: '<id>',
 );
@@ -212,7 +212,7 @@ if ($response->analyticsVisitor !== null) {
 
 ## getAnalyticsEvent
 
-Retrieve an event
+Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -263,7 +263,7 @@ if ($response->analyticsEvent !== null) {
 
 ## getAnalyticsProperty
 
-Retrieve a property
+Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ if ($response->analyticsProperty !== null) {
 
 ## getAnalyticsSession
 
-Retrieve a session
+Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -365,7 +365,7 @@ if ($response->analyticsSession !== null) {
 
 ## getAnalyticsVisitor
 
-Retrieve a visitor
+Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -416,7 +416,7 @@ if ($response->analyticsVisitor !== null) {
 
 ## listAnalyticsEvents
 
-List all events
+Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -466,7 +466,7 @@ if ($response->analyticsEvents !== null) {
 
 ## listAnalyticsProperties
 
-List all properties
+Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -516,7 +516,7 @@ if ($response->analyticsProperties !== null) {
 
 ## listAnalyticsReports
 
-List all reports
+Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -566,7 +566,7 @@ if ($response->analyticsReports !== null) {
 
 ## listAnalyticsSessions
 
-List all sessions
+Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -616,7 +616,7 @@ if ($response->analyticsSessions !== null) {
 
 ## listAnalyticsVisitors
 
-List all visitors
+Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -666,7 +666,7 @@ if ($response->analyticsVisitors !== null) {
 
 ## patchAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -691,10 +691,10 @@ $request = new Operations\PatchAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '88eebe3b-1dfe-4b0d-afcf-dc721adea84d',
+        id: '56fec81b-ebae-4419-aba9-f151f63f6764',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:26:18.306Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:40:08.990Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -727,7 +727,7 @@ if ($response->analyticsProperty !== null) {
 
 ## patchAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -753,13 +753,13 @@ $request = new Operations\PatchAnalyticsVisitorRequest(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
         email: 'desiree.o.hara@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: '804ed373-23e4-4381-ae7d-306027990398',
-        lastSeenAt: Utils\Utils::parseDateTime('2025-01-11T07:31:53.988Z'),
+        id: '8fcc2224-5df1-43db-a781-0bf412f36d1d',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-01-12T18:13:21.737Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
         totalEvents: 2916,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-29T17:14:52.305Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-01T07:20:06.048Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -792,7 +792,7 @@ if ($response->analyticsVisitor !== null) {
 
 ## removeAnalyticsProperty
 
-Remove a property
+Deletes the AnalyticsProperty identified by `id`.
 
 ### Example Usage
 
@@ -843,7 +843,7 @@ if ($response->statusCode === 200) {
 
 ## removeAnalyticsVisitor
 
-Remove a visitor
+Deletes the AnalyticsVisitor identified by `id`.
 
 ### Example Usage
 
@@ -894,7 +894,7 @@ if ($response->statusCode === 200) {
 
 ## updateAnalyticsProperty
 
-Update a property
+Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
 
 ### Example Usage
 
@@ -919,10 +919,10 @@ $request = new Operations\UpdateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '88eebe3b-1dfe-4b0d-afcf-dc721adea84d',
+        id: '56fec81b-ebae-4419-aba9-f151f63f6764',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:26:18.306Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T20:40:08.990Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -955,7 +955,7 @@ if ($response->analyticsProperty !== null) {
 
 ## updateAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -981,13 +981,13 @@ $request = new Operations\UpdateAnalyticsVisitorRequest(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
         email: 'desiree.o.hara@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: '804ed373-23e4-4381-ae7d-306027990398',
-        lastSeenAt: Utils\Utils::parseDateTime('2025-01-11T07:31:53.988Z'),
+        id: '8fcc2224-5df1-43db-a781-0bf412f36d1d',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-01-12T18:13:21.737Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
         totalEvents: 2916,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-29T17:14:52.305Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-01T07:20:06.048Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

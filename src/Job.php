@@ -47,6 +47,8 @@ class Job
     /**
      * Create a job
      *
+     * Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Job
 
     /**
      * Create a job
+     *
+     * Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisJobResponse
@@ -183,6 +187,8 @@ class Job
     /**
      * Retrieve a job
      *
+     * Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Job
 
     /**
      * Retrieve a job
+     *
+     * Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisJobResponse
@@ -309,6 +317,8 @@ class Job
     /**
      * List all jobs
      *
+     * Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsJobsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -372,6 +382,8 @@ class Job
     /**
      * List all jobs
      *
+     * Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisJobsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisJobsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -434,6 +446,8 @@ class Job
 
     /**
      * Update a job
+     *
+     * Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
@@ -503,6 +517,8 @@ class Job
     /**
      * Update a job
      *
+     * Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -571,6 +587,8 @@ class Job
     /**
      * Remove a job
      *
+     * Deletes the AtsJob identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Job
     /**
      * Remove a job
      *
+     * Deletes the HrisJob identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -684,6 +704,8 @@ class Job
 
     /**
      * Update a job
+     *
+     * Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
@@ -752,6 +774,8 @@ class Job
 
     /**
      * Update a job
+     *
+     * Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisJobResponse

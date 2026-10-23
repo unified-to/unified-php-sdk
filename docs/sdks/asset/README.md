@@ -10,7 +10,7 @@
 
 ## createAdsAsset
 
-Create an asset
+Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
 
 ### Example Usage
 
@@ -35,12 +35,12 @@ $request = new Operations\CreateAdsAssetRequest(
     adsAsset: new Shared\AdsAsset(
         createdAt: Utils\Utils::parseDateTime('2020-03-27T20:14:38.603Z'),
         height: 400,
-        id: 'b9d2a5ac-0942-44da-aeb7-c1bc675f2148',
+        id: '695af8bf-8c69-475e-ba14-5a05cc1a6016',
         metadata: [],
         mimeType: 'IMAGE_PNG',
         name: 'Lockman - DuBuque',
         type: Shared\AdsAssetType::Image,
-        updatedAt: Utils\Utils::parseDateTime('2022-03-25T04:39:03.974Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-03-25T19:06:38.960Z'),
         url: 'https://informal-perfection.com/',
         width: 600,
     ),
@@ -74,7 +74,7 @@ if ($response->adsAsset !== null) {
 
 ## getAdsAsset
 
-Retrieve an asset
+Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ if ($response->adsAsset !== null) {
 
 ## listAdsAssets
 
-List all assets
+Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

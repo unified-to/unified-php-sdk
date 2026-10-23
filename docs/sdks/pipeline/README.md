@@ -13,7 +13,7 @@
 
 ## createCrmPipeline
 
-Create a pipeline
+Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
 ### Example Usage
 
@@ -39,7 +39,7 @@ $request = new Operations\CreateCrmPipelineRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
         dealProbability: 99,
         displayOrder: 8,
-        id: '020faeaa-7aef-48eb-8503-9e5b08726b8e',
+        id: 'c5e67335-1f8b-4355-8bc8-cadbcccf6276',
         isActive: true,
         metadata: [],
         name: 'Small Steel Bacon',
@@ -49,13 +49,13 @@ $request = new Operations\CreateCrmPipelineRequest(
                 createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
                 dealProbability: 84,
                 displayOrder: 72,
-                id: '431f199f-0e23-4baa-a7b9-9c583698c712',
+                id: 'a770f718-f6ac-468b-afb5-1566779943b6',
                 isClosed: true,
                 name: 'Veniam.',
-                updatedAt: Utils\Utils::parseDateTime('2025-10-10T12:28:32.951Z'),
+                updatedAt: Utils\Utils::parseDateTime('2025-10-11T23:17:41.777Z'),
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-01T05:54:52.602Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-02T17:28:39.451Z'),
     ),
     connectionId: '<id>',
 );
@@ -87,7 +87,7 @@ if ($response->crmPipeline !== null) {
 
 ## getCrmPipeline
 
-Retrieve a pipeline
+Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ if ($response->crmPipeline !== null) {
 
 ## listCrmPipelines
 
-List all pipelines
+Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ if ($response->crmPipelines !== null) {
 
 ## patchCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -214,7 +214,7 @@ $request = new Operations\PatchCrmPipelineRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
         dealProbability: 99,
         displayOrder: 8,
-        id: 'e646ed6a-5891-4590-920f-56531ac2c297',
+        id: '78700093-007c-47ef-8444-7f97f7cd7570',
         isActive: true,
         metadata: [],
         name: 'Small Steel Bacon',
@@ -224,13 +224,13 @@ $request = new Operations\PatchCrmPipelineRequest(
                 createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
                 dealProbability: 84,
                 displayOrder: 72,
-                id: 'adb7be55-98ab-4e90-9d73-31fb8021e556',
+                id: '329e10dc-d8b6-43f4-be7f-78c9effa5f78',
                 isClosed: true,
                 name: 'Veniam.',
-                updatedAt: Utils\Utils::parseDateTime('2025-10-10T12:28:32.963Z'),
+                updatedAt: Utils\Utils::parseDateTime('2025-10-11T23:17:41.790Z'),
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-01T05:54:52.614Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-02T17:28:39.464Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -263,7 +263,7 @@ if ($response->crmPipeline !== null) {
 
 ## removeCrmPipeline
 
-Remove a pipeline
+Deletes the CrmPipeline identified by `id`.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ if ($response->statusCode === 200) {
 
 ## updateCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -340,7 +340,7 @@ $request = new Operations\UpdateCrmPipelineRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
         dealProbability: 99,
         displayOrder: 8,
-        id: 'e646ed6a-5891-4590-920f-56531ac2c297',
+        id: '78700093-007c-47ef-8444-7f97f7cd7570',
         isActive: true,
         metadata: [],
         name: 'Small Steel Bacon',
@@ -350,13 +350,13 @@ $request = new Operations\UpdateCrmPipelineRequest(
                 createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
                 dealProbability: 84,
                 displayOrder: 72,
-                id: 'adb7be55-98ab-4e90-9d73-31fb8021e556',
+                id: '329e10dc-d8b6-43f4-be7f-78c9effa5f78',
                 isClosed: true,
                 name: 'Veniam.',
-                updatedAt: Utils\Utils::parseDateTime('2025-10-10T12:28:32.963Z'),
+                updatedAt: Utils\Utils::parseDateTime('2025-10-11T23:17:41.790Z'),
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-01T05:54:52.614Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-02T17:28:39.464Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

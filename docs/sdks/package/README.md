@@ -45,7 +45,7 @@ $request = new Operations\CreateAssessmentPackageRequest(
         description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: '2d44f122-f4ea-4ce0-9cb8-b0ba6a0ec042',
+        id: '9d6d357e-ec51-4231-89e4-1f948f7bf3eb',
         infoUrl: 'https://ugly-instance.biz/',
         integrationTypes: [
             'viridis',
@@ -60,7 +60,7 @@ $request = new Operations\CreateAssessmentPackageRequest(
             'clamo',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-25T09:14:33.770Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-25T19:34:50.962Z'),
     ),
     connectionId: '<id>',
 );
@@ -143,7 +143,7 @@ if ($response->assessmentPackage !== null) {
 
 ## getVerificationPackage
 
-Retrieve a package
+Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -244,7 +244,7 @@ if ($response->assessmentPackages !== null) {
 
 ## listVerificationPackages
 
-List all packages
+Returns a list of VerificationPackages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ $request = new Operations\PatchAssessmentPackageRequest(
         description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: 'cf09d7d7-035a-4cc5-b696-f2c8c469f143',
+        id: '84f63991-8347-405e-8e47-037c8ca3aadc',
         infoUrl: 'https://ugly-instance.biz/',
         integrationTypes: [
             'viridis',
@@ -339,7 +339,7 @@ $request = new Operations\PatchAssessmentPackageRequest(
             'clamo',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-25T09:14:33.775Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-25T19:34:50.967Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -453,7 +453,7 @@ $request = new Operations\UpdateAssessmentPackageRequest(
         description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: 'cf09d7d7-035a-4cc5-b696-f2c8c469f143',
+        id: '84f63991-8347-405e-8e47-037c8ca3aadc',
         infoUrl: 'https://ugly-instance.biz/',
         integrationTypes: [
             'viridis',
@@ -468,7 +468,7 @@ $request = new Operations\UpdateAssessmentPackageRequest(
             'clamo',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-25T09:14:33.775Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-25T19:34:50.967Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

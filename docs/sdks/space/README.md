@@ -13,7 +13,7 @@
 
 ## createKmsSpace
 
-Create a space
+Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 
 ### Example Usage
 
@@ -38,11 +38,11 @@ $request = new Operations\CreateKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T00:56:54.246Z'),
         description: 'Acer.',
-        id: 'b21eed38-3f30-4a30-868f-0c292f061c9e',
+        id: '8dafebf6-2212-4a89-8f88-7c1ad4c13510',
         isActive: false,
         metadata: [],
         name: 'into nor afore',
-        updatedAt: Utils\Utils::parseDateTime('2025-12-29T22:52:33.056Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-12-31T12:51:23.957Z'),
     ),
     connectionId: '<id>',
 );
@@ -74,7 +74,7 @@ if ($response->kmsSpace !== null) {
 
 ## getKmsSpace
 
-Retrieve a space
+Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ if ($response->kmsSpace !== null) {
 
 ## listKmsSpaces
 
-List all spaces
+Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -175,7 +175,7 @@ if ($response->kmsSpaces !== null) {
 
 ## patchKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -200,11 +200,11 @@ $request = new Operations\PatchKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T00:56:54.246Z'),
         description: 'Acer.',
-        id: 'c6ed6ca0-1967-40b3-bd60-612e0db9ec51',
+        id: '71f93a2c-391a-41ed-9cb3-fad87e1ac4fb',
         isActive: false,
         metadata: [],
         name: 'into nor afore',
-        updatedAt: Utils\Utils::parseDateTime('2025-12-29T22:52:33.064Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-12-31T12:51:23.970Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -237,7 +237,7 @@ if ($response->kmsSpace !== null) {
 
 ## removeKmsSpace
 
-Remove a space
+Deletes the KmsSpace identified by `id`.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ if ($response->statusCode === 200) {
 
 ## updateKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -313,11 +313,11 @@ $request = new Operations\UpdateKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T00:56:54.246Z'),
         description: 'Acer.',
-        id: 'c6ed6ca0-1967-40b3-bd60-612e0db9ec51',
+        id: '71f93a2c-391a-41ed-9cb3-fad87e1ac4fb',
         isActive: false,
         metadata: [],
         name: 'into nor afore',
-        updatedAt: Utils\Utils::parseDateTime('2025-12-29T22:52:33.064Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-12-31T12:51:23.970Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

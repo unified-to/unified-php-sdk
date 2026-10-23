@@ -47,6 +47,8 @@ class Ticketing
     /**
      * Create a category
      *
+     * Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Ticketing
 
     /**
      * Create a customer
+     *
+     * Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateTicketingCustomerRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingCustomerResponse
@@ -183,6 +187,8 @@ class Ticketing
     /**
      * Create a note
      *
+     * Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Ticketing
 
     /**
      * Create a ticket
+     *
+     * Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingTicketResponse
@@ -319,6 +327,8 @@ class Ticketing
     /**
      * Retrieve a category
      *
+     * Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -381,6 +391,8 @@ class Ticketing
 
     /**
      * Retrieve a customer
+     *
+     * Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetTicketingCustomerRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTicketingCustomerResponse
@@ -445,6 +457,8 @@ class Ticketing
     /**
      * Retrieve a note
      *
+     * Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -507,6 +521,8 @@ class Ticketing
 
     /**
      * Retrieve a ticket
+     *
+     * Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTicketingTicketResponse
@@ -571,6 +587,8 @@ class Ticketing
     /**
      * List all categories
      *
+     * Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTicketingCategoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTicketingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -633,6 +651,8 @@ class Ticketing
 
     /**
      * List all customers
+     *
+     * Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListTicketingCustomersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTicketingCustomersResponse
@@ -697,6 +717,8 @@ class Ticketing
     /**
      * List all notes
      *
+     * Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -760,6 +782,8 @@ class Ticketing
     /**
      * List all tickets
      *
+     * Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTicketingTicketsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTicketingTicketsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -822,6 +846,8 @@ class Ticketing
 
     /**
      * Update a category
+     *
+     * Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingCategoryResponse
@@ -891,6 +917,8 @@ class Ticketing
     /**
      * Update a customer
      *
+     * Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchTicketingCustomerRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingCustomerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -958,6 +986,8 @@ class Ticketing
 
     /**
      * Update a note
+     *
+     * Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
@@ -1027,6 +1057,8 @@ class Ticketing
     /**
      * Update a ticket
      *
+     * Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1095,6 +1127,8 @@ class Ticketing
     /**
      * Remove a category
      *
+     * Deletes the TicketingCategory identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1151,6 +1185,8 @@ class Ticketing
 
     /**
      * Remove a customer
+     *
+     * Deletes the TicketingCustomer identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCustomerResponse
@@ -1209,6 +1245,8 @@ class Ticketing
     /**
      * Remove a note
      *
+     * Deletes the TicketingNote identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1266,6 +1304,8 @@ class Ticketing
     /**
      * Remove a ticket
      *
+     * Deletes the TicketingTicket identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingTicketResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1322,6 +1362,8 @@ class Ticketing
 
     /**
      * Update a category
+     *
+     * Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryResponse
@@ -1391,6 +1433,8 @@ class Ticketing
     /**
      * Update a customer
      *
+     * Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTicketingCustomerResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1459,6 +1503,8 @@ class Ticketing
     /**
      * Update a note
      *
+     * Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1526,6 +1572,8 @@ class Ticketing
 
     /**
      * Update a ticket
+     *
+     * Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingTicketRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTicketingTicketResponse

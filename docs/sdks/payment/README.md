@@ -29,7 +29,7 @@
 
 ## createPaymentLink
 
-Create a link
+Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
 ### Example Usage
 
@@ -56,13 +56,13 @@ $request = new Operations\CreatePaymentLinkRequest(
         createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
         currency: 'CAD',
         description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-        id: '44af6dd3-1389-49e9-8034-8adbc5265f45',
+        id: '765123bb-168f-44bd-8ff1-b440b0fcc73a',
         isActive: true,
         isChargeableNow: true,
         lineitems: [
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: 'f9b9e527-2508-4223-bdf6-7fdebfada7ea',
+                id: '90540f29-2c87-41f2-8621-34943b4e1cc0',
                 itemDescription: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
                 itemName: 'Soft Marble Cheese',
                 taxAmount: 0,
@@ -74,7 +74,7 @@ $request = new Operations\CreatePaymentLinkRequest(
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
                 discountAmount: 424.32,
-                id: '1009ccc2-d6fe-4236-8c68-d0fdab642432',
+                id: 'daf81fca-e707-4ab1-a9ba-f519f0a9206e',
                 itemDescription: 'Innovative Shoes featuring utilized technology and Cotton construction',
                 itemName: 'Sleek Aluminum Shoes',
                 notes: 'Cervus decretum viridis doloremque.',
@@ -86,7 +86,7 @@ $request = new Operations\CreatePaymentLinkRequest(
             ),
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: '35cf0b54-224b-4149-847c-02116695cc67',
+                id: '8a3e2f38-e3db-476f-bacb-ad478a662f6b',
                 itemDescription: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
                 itemName: 'Elegant Concrete Gloves',
                 notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -99,8 +99,8 @@ $request = new Operations\CreatePaymentLinkRequest(
         ],
         metadata: [],
         successUrl: 'https://tinted-jet.info',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-13T09:31:26.812Z'),
-        url: 'https://pay.example.com/44af6dd3-1389-49e9-8034-8adbc5265f45',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-13T21:38:29.534Z'),
+        url: 'https://pay.example.com/765123bb-168f-44bd-8ff1-b440b0fcc73a',
     ),
     connectionId: '<id>',
 );
@@ -132,7 +132,7 @@ if ($response->paymentLink !== null) {
 
 ## createPaymentPayment
 
-Create a payment
+Creates a PaymentPayment. Provide the unified PaymentPayment fields in the request body; they are mapped to the provider's API. Returns the created PaymentPayment.
 
 ### Example Usage
 
@@ -162,7 +162,7 @@ $request = new Operations\CreatePaymentPaymentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-10T00:19:42.086Z'),
         currency: 'EUR',
         feeAmount: 2055.82,
-        id: '3d3ebe10-9f28-42c2-b967-793cf13d2dcd',
+        id: '6636b688-4faf-4b24-b102-9e5b9679be32',
         metadata: [],
         netAmount: 68824.18,
         notes: 'Bibo tactus vilicus.',
@@ -174,7 +174,7 @@ $request = new Operations\CreatePaymentPaymentRequest(
         tipAmount: 0,
         totalAmount: 70880,
         type: Shared\PaymentPaymentType::Invoice,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-08T00:35:44.643Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-09T13:34:58.400Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,7 +206,7 @@ if ($response->paymentPayment !== null) {
 
 ## createPaymentSubscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -235,7 +235,7 @@ $request = new Operations\CreatePaymentSubscriptionRequest(
         currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         dayOfMonth: 8,
         description: 'Innovative Mouse featuring important technology and Bamboo construction',
-        id: 'a394f325-5551-4a99-af71-bf68f958a0f6',
+        id: '00ad0491-10fd-423a-9540-056214ba4956',
         interval: 1,
         intervalUnit: Shared\IntervalUnit::Year,
         lineitems: [],
@@ -244,7 +244,7 @@ $request = new Operations\CreatePaymentSubscriptionRequest(
         startAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         status: Shared\PaymentSubscriptionStatus::Active,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-04T12:52:53.384Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-04T18:30:59.446Z'),
     ),
     connectionId: '<id>',
 );
@@ -276,7 +276,7 @@ if ($response->paymentSubscription !== null) {
 
 ## getPaymentLink
 
-Retrieve a link
+Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -327,7 +327,7 @@ if ($response->paymentLink !== null) {
 
 ## getPaymentPayment
 
-Retrieve a payment
+Retrieves a single PaymentPayment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -378,7 +378,7 @@ if ($response->paymentPayment !== null) {
 
 ## getPaymentPayout
 
-Retrieve a payout
+Retrieves a single PaymentPayout by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -429,7 +429,7 @@ if ($response->paymentPayout !== null) {
 
 ## getPaymentRefund
 
-Retrieve a refund
+Retrieves a single PaymentRefund by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -480,7 +480,7 @@ if ($response->paymentRefund !== null) {
 
 ## getPaymentSubscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -531,7 +531,7 @@ if ($response->paymentSubscription !== null) {
 
 ## listPaymentLinks
 
-List all links
+Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -581,7 +581,7 @@ if ($response->paymentLinks !== null) {
 
 ## listPaymentPayments
 
-List all payments
+Returns a list of PaymentPayments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -631,7 +631,7 @@ if ($response->paymentPayments !== null) {
 
 ## listPaymentPayouts
 
-List all payouts
+Returns a list of PaymentPayouts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -681,7 +681,7 @@ if ($response->paymentPayouts !== null) {
 
 ## listPaymentRefunds
 
-List all refunds
+Returns a list of PaymentRefunds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -731,7 +731,7 @@ if ($response->paymentRefunds !== null) {
 
 ## listPaymentSubscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -781,7 +781,7 @@ if ($response->paymentSubscriptions !== null) {
 
 ## patchPaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -808,13 +808,13 @@ $request = new Operations\PatchPaymentLinkRequest(
         createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
         currency: 'CAD',
         description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-        id: '0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+        id: 'ab310546-5a30-4ae4-a471-0f9440b670ce',
         isActive: true,
         isChargeableNow: true,
         lineitems: [
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: 'a4992b6e-470c-465d-b2ef-ed9254b71ac6',
+                id: '645b6fd7-aedb-4967-96d1-3c370be28c35',
                 itemDescription: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
                 itemName: 'Soft Marble Cheese',
                 taxAmount: 0,
@@ -826,7 +826,7 @@ $request = new Operations\PatchPaymentLinkRequest(
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
                 discountAmount: 424.32,
-                id: '2cbd3403-33b5-4168-a882-a350fd62271b',
+                id: '35643734-60d3-4125-898d-565d7537e987',
                 itemDescription: 'Innovative Shoes featuring utilized technology and Cotton construction',
                 itemName: 'Sleek Aluminum Shoes',
                 notes: 'Cervus decretum viridis doloremque.',
@@ -838,7 +838,7 @@ $request = new Operations\PatchPaymentLinkRequest(
             ),
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: '807d9e84-427d-4fd9-9060-9ca6fac75118',
+                id: 'ddd1e563-8fbf-4b2f-8adf-31f7e103de69',
                 itemDescription: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
                 itemName: 'Elegant Concrete Gloves',
                 notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -851,8 +851,8 @@ $request = new Operations\PatchPaymentLinkRequest(
         ],
         metadata: [],
         successUrl: 'https://tinted-jet.info',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-13T09:31:26.816Z'),
-        url: 'https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-13T21:38:29.541Z'),
+        url: 'https://pay.example.com/ab310546-5a30-4ae4-a471-0f9440b670ce',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -885,7 +885,7 @@ if ($response->paymentLink !== null) {
 
 ## patchPaymentPayment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -915,7 +915,7 @@ $request = new Operations\PatchPaymentPaymentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-10T00:19:42.086Z'),
         currency: 'EUR',
         feeAmount: 2055.82,
-        id: '8fffaf3e-a7e1-4753-b96e-207496205429',
+        id: '411e613b-c968-4c9a-afcf-7f0334193513',
         metadata: [],
         netAmount: 68824.18,
         notes: 'Bibo tactus vilicus.',
@@ -927,7 +927,7 @@ $request = new Operations\PatchPaymentPaymentRequest(
         tipAmount: 0,
         totalAmount: 70880,
         type: Shared\PaymentPaymentType::Invoice,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-08T00:35:44.667Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-09T13:34:58.431Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -960,7 +960,7 @@ if ($response->paymentPayment !== null) {
 
 ## patchPaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -989,7 +989,7 @@ $request = new Operations\PatchPaymentSubscriptionRequest(
         currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         dayOfMonth: 8,
         description: 'Innovative Mouse featuring important technology and Bamboo construction',
-        id: 'a1331b76-e046-45c2-8dec-da55813f253f',
+        id: 'ea3a9722-c59c-41de-aa53-178838a1b961',
         interval: 1,
         intervalUnit: Shared\IntervalUnit::Year,
         lineitems: [],
@@ -998,7 +998,7 @@ $request = new Operations\PatchPaymentSubscriptionRequest(
         startAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         status: Shared\PaymentSubscriptionStatus::Active,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-04T12:52:53.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-04T18:30:59.450Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1031,7 +1031,7 @@ if ($response->paymentSubscription !== null) {
 
 ## removePaymentLink
 
-Remove a link
+Deletes the PaymentLink identified by `id`.
 
 ### Example Usage
 
@@ -1082,7 +1082,7 @@ if ($response->statusCode === 200) {
 
 ## removePaymentPayment
 
-Remove a payment
+Deletes the PaymentPayment identified by `id`.
 
 ### Example Usage
 
@@ -1133,7 +1133,7 @@ if ($response->statusCode === 200) {
 
 ## removePaymentSubscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -1184,7 +1184,7 @@ if ($response->statusCode === 200) {
 
 ## updatePaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -1211,13 +1211,13 @@ $request = new Operations\UpdatePaymentLinkRequest(
         createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
         currency: 'CAD',
         description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-        id: '0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+        id: 'ab310546-5a30-4ae4-a471-0f9440b670ce',
         isActive: true,
         isChargeableNow: true,
         lineitems: [
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: 'a4992b6e-470c-465d-b2ef-ed9254b71ac6',
+                id: '645b6fd7-aedb-4967-96d1-3c370be28c35',
                 itemDescription: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
                 itemName: 'Soft Marble Cheese',
                 taxAmount: 0,
@@ -1229,7 +1229,7 @@ $request = new Operations\UpdatePaymentLinkRequest(
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
                 discountAmount: 424.32,
-                id: '2cbd3403-33b5-4168-a882-a350fd62271b',
+                id: '35643734-60d3-4125-898d-565d7537e987',
                 itemDescription: 'Innovative Shoes featuring utilized technology and Cotton construction',
                 itemName: 'Sleek Aluminum Shoes',
                 notes: 'Cervus decretum viridis doloremque.',
@@ -1241,7 +1241,7 @@ $request = new Operations\UpdatePaymentLinkRequest(
             ),
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: '807d9e84-427d-4fd9-9060-9ca6fac75118',
+                id: 'ddd1e563-8fbf-4b2f-8adf-31f7e103de69',
                 itemDescription: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
                 itemName: 'Elegant Concrete Gloves',
                 notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -1254,8 +1254,8 @@ $request = new Operations\UpdatePaymentLinkRequest(
         ],
         metadata: [],
         successUrl: 'https://tinted-jet.info',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-13T09:31:26.816Z'),
-        url: 'https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-13T21:38:29.541Z'),
+        url: 'https://pay.example.com/ab310546-5a30-4ae4-a471-0f9440b670ce',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1288,7 +1288,7 @@ if ($response->paymentLink !== null) {
 
 ## updatePaymentPayment
 
-Update a payment
+Updates the PaymentPayment identified by `id`. Provide the unified PaymentPayment fields to change in the request body.
 
 ### Example Usage
 
@@ -1318,7 +1318,7 @@ $request = new Operations\UpdatePaymentPaymentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-10T00:19:42.086Z'),
         currency: 'EUR',
         feeAmount: 2055.82,
-        id: '8fffaf3e-a7e1-4753-b96e-207496205429',
+        id: '411e613b-c968-4c9a-afcf-7f0334193513',
         metadata: [],
         netAmount: 68824.18,
         notes: 'Bibo tactus vilicus.',
@@ -1330,7 +1330,7 @@ $request = new Operations\UpdatePaymentPaymentRequest(
         tipAmount: 0,
         totalAmount: 70880,
         type: Shared\PaymentPaymentType::Invoice,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-08T00:35:44.667Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-09T13:34:58.431Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1363,7 +1363,7 @@ if ($response->paymentPayment !== null) {
 
 ## updatePaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -1392,7 +1392,7 @@ $request = new Operations\UpdatePaymentSubscriptionRequest(
         currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         dayOfMonth: 8,
         description: 'Innovative Mouse featuring important technology and Bamboo construction',
-        id: 'a1331b76-e046-45c2-8dec-da55813f253f',
+        id: 'ea3a9722-c59c-41de-aa53-178838a1b961',
         interval: 1,
         intervalUnit: Shared\IntervalUnit::Year,
         lineitems: [],
@@ -1401,7 +1401,7 @@ $request = new Operations\UpdatePaymentSubscriptionRequest(
         startAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         status: Shared\PaymentSubscriptionStatus::Active,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-04T12:52:53.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-04T18:30:59.450Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

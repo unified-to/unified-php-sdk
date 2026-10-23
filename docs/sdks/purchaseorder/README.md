@@ -13,7 +13,7 @@
 
 ## createAccountingPurchaseorder
 
-Create a purchaseorder
+Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 
 ### Example Usage
 
@@ -49,7 +49,7 @@ $request = new Operations\CreateAccountingPurchaseorderRequest(
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
         currency: 'EUR',
-        id: '95fc4c52-e984-4e27-a4ce-4dbf003425b2',
+        id: '76a1091d-72ea-4bf1-9efa-fa5e21952343',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
@@ -63,7 +63,7 @@ $request = new Operations\CreateAccountingPurchaseorderRequest(
         ),
         status: Shared\AccountingPurchaseorderStatus::Submitted,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2021-08-11T06:00:23.901Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-08-11T11:24:00.096Z'),
     ),
     connectionId: '<id>',
 );
@@ -95,7 +95,7 @@ if ($response->accountingPurchaseorder !== null) {
 
 ## getAccountingPurchaseorder
 
-Retrieve a purchaseorder
+Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -146,7 +146,7 @@ if ($response->accountingPurchaseorder !== null) {
 
 ## listAccountingPurchaseorders
 
-List all purchaseorders
+Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ if ($response->accountingPurchaseorders !== null) {
 
 ## patchAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -232,7 +232,7 @@ $request = new Operations\PatchAccountingPurchaseorderRequest(
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
         currency: 'EUR',
-        id: '48e97068-ce4d-4074-985d-773cfe1d221d',
+        id: 'c3032a3a-85c9-4eab-a1f6-59691af444f7',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
@@ -246,7 +246,7 @@ $request = new Operations\PatchAccountingPurchaseorderRequest(
         ),
         status: Shared\AccountingPurchaseorderStatus::Submitted,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2021-08-11T06:00:23.906Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-08-11T11:24:00.103Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -279,7 +279,7 @@ if ($response->accountingPurchaseorder !== null) {
 
 ## removeAccountingPurchaseorder
 
-Remove a purchaseorder
+Deletes the AccountingPurchaseorder identified by `id`.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -366,7 +366,7 @@ $request = new Operations\UpdateAccountingPurchaseorderRequest(
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
         currency: 'EUR',
-        id: '48e97068-ce4d-4074-985d-773cfe1d221d',
+        id: 'c3032a3a-85c9-4eab-a1f6-59691af444f7',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
@@ -380,7 +380,7 @@ $request = new Operations\UpdateAccountingPurchaseorderRequest(
         ),
         status: Shared\AccountingPurchaseorderStatus::Submitted,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2021-08-11T06:00:23.906Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-08-11T11:24:00.103Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

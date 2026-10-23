@@ -47,6 +47,8 @@ class Goal
     /**
      * Create a goal
      *
+     * Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreatePerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePerformanceGoalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Goal
     /**
      * Retrieve a goal
      *
+     * Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetPerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPerformanceGoalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Goal
     /**
      * List all goals
      *
+     * Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPerformanceGoalsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPerformanceGoalsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Goal
 
     /**
      * Update a goal
+     *
+     * Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchPerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchPerformanceGoalResponse
@@ -309,6 +317,8 @@ class Goal
     /**
      * Remove a goal
      *
+     * Deletes the PerformanceGoal identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemovePerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemovePerformanceGoalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Goal
 
     /**
      * Update a goal
+     *
+     * Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdatePerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdatePerformanceGoalResponse

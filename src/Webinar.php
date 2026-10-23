@@ -47,6 +47,8 @@ class Webinar
     /**
      * Create a webinar
      *
+     * Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Webinar
     /**
      * Retrieve a webinar
      *
+     * Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Webinar
     /**
      * List all webinars
      *
+     * Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarWebinarsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarWebinarsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Webinar
 
     /**
      * Update a webinar
+     *
+     * Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCalendarWebinarResponse
@@ -309,6 +317,8 @@ class Webinar
     /**
      * Remove a webinar
      *
+     * Deletes the CalendarWebinar identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Webinar
 
     /**
      * Update a webinar
+     *
+     * Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCalendarWebinarResponse

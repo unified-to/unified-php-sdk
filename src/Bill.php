@@ -47,6 +47,8 @@ class Bill
     /**
      * Create a bill
      *
+     * Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Bill
     /**
      * Retrieve a bill
      *
+     * Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Bill
     /**
      * List all bills
      *
+     * Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingBillsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingBillsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Bill
 
     /**
      * Update a bill
+     *
+     * Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingBillResponse
@@ -309,6 +317,8 @@ class Bill
     /**
      * Remove a bill
      *
+     * Deletes the AccountingBill identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Bill
 
     /**
      * Update a bill
+     *
+     * Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBillResponse

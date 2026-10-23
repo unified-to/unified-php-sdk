@@ -47,6 +47,8 @@ class Recording
     /**
      * Create a recording
      *
+     * Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Recording
     /**
      * Retrieve a recording
      *
+     * Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCalendarRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCalendarRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Recording
 
     /**
      * Retrieve a recording
+     *
+     * Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUcRecordingResponse
@@ -241,6 +247,8 @@ class Recording
     /**
      * List all recordings
      *
+     * Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarRecordingsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarRecordingsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -304,6 +312,8 @@ class Recording
     /**
      * List all recordings
      *
+     * Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListUcRecordingsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcRecordingsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -366,6 +376,8 @@ class Recording
 
     /**
      * Update a recording
+     *
+     * Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchUcRecordingResponse
@@ -435,6 +447,8 @@ class Recording
     /**
      * Remove a recording
      *
+     * Deletes the UcRecording identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -491,6 +505,8 @@ class Recording
 
     /**
      * Update a recording
+     *
+     * Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateUcRecordingResponse

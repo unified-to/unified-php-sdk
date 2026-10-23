@@ -47,6 +47,8 @@ class Query
     /**
      * Create a query
      *
+     * Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are mapped to the provider's API. Returns the created DatastoreQuery.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreQueryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateDatastoreQueryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException

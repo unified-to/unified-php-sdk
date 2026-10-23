@@ -47,6 +47,8 @@ class Event
     /**
      * Create an event
      *
+     * Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Event
 
     /**
      * Create an event
+     *
+     * Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCalendarEventResponse
@@ -183,6 +187,8 @@ class Event
     /**
      * Create an event
      *
+     * Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Event
 
     /**
      * Create an event
+     *
+     * Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
@@ -319,6 +327,8 @@ class Event
     /**
      * Retrieve an event
      *
+     * Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAnalyticsEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -381,6 +391,8 @@ class Event
 
     /**
      * Retrieve an event
+     *
+     * Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCalendarEventResponse
@@ -445,6 +457,8 @@ class Event
     /**
      * Retrieve an event
      *
+     * Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -507,6 +521,8 @@ class Event
 
     /**
      * Retrieve an event
+     *
+     * Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsEventResponse
@@ -571,6 +587,8 @@ class Event
     /**
      * Retrieve an event
      *
+     * Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -633,6 +651,8 @@ class Event
 
     /**
      * List all events
+     *
+     * Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAnalyticsEventsResponse
@@ -697,6 +717,8 @@ class Event
     /**
      * List all events
      *
+     * Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -759,6 +781,8 @@ class Event
 
     /**
      * List all events
+     *
+     * Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpEventsResponse
@@ -823,6 +847,8 @@ class Event
     /**
      * List all events
      *
+     * Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -886,6 +912,8 @@ class Event
     /**
      * List all events
      *
+     * Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -948,6 +976,8 @@ class Event
 
     /**
      * Update an event
+     *
+     * Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCalendarEventResponse
@@ -1017,6 +1047,8 @@ class Event
     /**
      * Update an event
      *
+     * Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1084,6 +1116,8 @@ class Event
 
     /**
      * Update an event
+     *
+     * Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
@@ -1153,6 +1187,8 @@ class Event
     /**
      * Update an event
      *
+     * Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchMessagingEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchMessagingEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1221,6 +1257,8 @@ class Event
     /**
      * Remove an event
      *
+     * Deletes the CalendarEvent identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1277,6 +1315,8 @@ class Event
 
     /**
      * Remove an event
+     *
+     * Deletes the CdpEvent identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpEventResponse
@@ -1335,6 +1375,8 @@ class Event
     /**
      * Remove an event
      *
+     * Deletes the CrmEvent identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1391,6 +1433,8 @@ class Event
 
     /**
      * Update an event
+     *
+     * Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCalendarEventResponse
@@ -1460,6 +1504,8 @@ class Event
     /**
      * Update an event
      *
+     * Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1528,6 +1574,8 @@ class Event
     /**
      * Update an event
      *
+     * Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1595,6 +1643,8 @@ class Event
 
     /**
      * Update an event
+     *
+     * Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateMessagingEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMessagingEventResponse

@@ -13,7 +13,7 @@
 
 ## createLmsCourse
 
-Create a course
+Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ $request = new Operations\CreateLmsCourseRequest(
         currency: 'FJD',
         description: 'Vinco alias aut capitulus.',
         durationMinutes: 148,
-        id: 'd646526e-939a-4320-9798-869d3a2a42da',
+        id: 'f0cc7df0-5fdc-4ecb-8a6b-e5a87f9f2fcb',
         instructors: [],
         isActive: true,
         isPrivate: false,
@@ -71,14 +71,14 @@ $request = new Operations\CreateLmsCourseRequest(
         name: 'comptus',
         priceAmount: 84,
         providerName: 'Homenick - Wunsch',
-        publishedAt: Utils\Utils::parseDateTime('2022-11-05T18:11:06.158Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-11-05T19:09:55.352Z'),
         skills: [
             'adiuvo',
             'tam',
         ],
         students: [],
         timeEstimateMinutes: 100,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T18:20:08.719Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T22:25:04.839Z'),
     ),
     connectionId: '<id>',
 );
@@ -110,7 +110,7 @@ if ($response->lmsCourse !== null) {
 
 ## getLmsCourse
 
-Retrieve a course
+Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -161,7 +161,7 @@ if ($response->lmsCourse !== null) {
 
 ## listLmsCourses
 
-List all courses
+Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -211,7 +211,7 @@ if ($response->lmsCourses !== null) {
 
 ## patchLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -242,7 +242,7 @@ $request = new Operations\PatchLmsCourseRequest(
         currency: 'FJD',
         description: 'Vinco alias aut capitulus.',
         durationMinutes: 148,
-        id: 'efcb5073-ec55-445b-b744-96bc88b5942f',
+        id: '7ec46a0e-9733-463a-b4d2-7d64c87f8ac1',
         instructors: [],
         isActive: true,
         isPrivate: false,
@@ -269,14 +269,14 @@ $request = new Operations\PatchLmsCourseRequest(
         name: 'comptus',
         priceAmount: 84,
         providerName: 'Homenick - Wunsch',
-        publishedAt: Utils\Utils::parseDateTime('2022-11-05T18:11:06.159Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-11-05T19:09:55.353Z'),
         skills: [
             'adiuvo',
             'tam',
         ],
         students: [],
         timeEstimateMinutes: 100,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T18:20:08.721Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T22:25:04.841Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -309,7 +309,7 @@ if ($response->lmsCourse !== null) {
 
 ## removeLmsCourse
 
-Remove a course
+Deletes the LmsCourse identified by `id`.
 
 ### Example Usage
 
@@ -360,7 +360,7 @@ if ($response->statusCode === 200) {
 
 ## updateLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -391,7 +391,7 @@ $request = new Operations\UpdateLmsCourseRequest(
         currency: 'FJD',
         description: 'Vinco alias aut capitulus.',
         durationMinutes: 148,
-        id: 'efcb5073-ec55-445b-b744-96bc88b5942f',
+        id: '7ec46a0e-9733-463a-b4d2-7d64c87f8ac1',
         instructors: [],
         isActive: true,
         isPrivate: false,
@@ -418,14 +418,14 @@ $request = new Operations\UpdateLmsCourseRequest(
         name: 'comptus',
         priceAmount: 84,
         providerName: 'Homenick - Wunsch',
-        publishedAt: Utils\Utils::parseDateTime('2022-11-05T18:11:06.159Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-11-05T19:09:55.353Z'),
         skills: [
             'adiuvo',
             'tam',
         ],
         students: [],
         timeEstimateMinutes: 100,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T18:20:08.721Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T22:25:04.841Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

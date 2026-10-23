@@ -47,6 +47,8 @@ class Practicearea
     /**
      * Create a practicearea
      *
+     * Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLegalPracticeareaResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Practicearea
     /**
      * Retrieve a practicearea
      *
+     * Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLegalPracticeareaResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Practicearea
     /**
      * List all practiceareas
      *
+     * Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLegalPracticeareasRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLegalPracticeareasResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Practicearea
 
     /**
      * Update a practicearea
+     *
+     * Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLegalPracticeareaResponse
@@ -309,6 +317,8 @@ class Practicearea
     /**
      * Remove a practicearea
      *
+     * Deletes the LegalPracticearea identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLegalPracticeareaResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Practicearea
 
     /**
      * Update a practicearea
+     *
+     * Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLegalPracticeareaResponse

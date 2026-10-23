@@ -115,6 +115,7 @@ class MessagingMessage
     public ?array $mentionedMembers = null;
 
     /**
+     * The message body as plain text
      *
      * @var ?string $message
      */

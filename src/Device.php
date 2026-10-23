@@ -47,6 +47,8 @@ class Device
     /**
      * Create a device
      *
+     * Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Device
     /**
      * Retrieve a device
      *
+     * Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Device
     /**
      * List all devices
      *
+     * Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisDevicesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisDevicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Device
 
     /**
      * Update a device
+     *
+     * Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisDeviceResponse
@@ -309,6 +317,8 @@ class Device
     /**
      * Remove a device
      *
+     * Deletes the HrisDevice identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Device
 
     /**
      * Update a device
+     *
+     * Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeviceResponse

@@ -13,7 +13,7 @@
 
 ## createHealthcareAppointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -39,7 +39,7 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: 'e57d4ec5-b3c7-47c7-bf0d-adb561ff2349',
+        id: '4c54fcd9-632b-4b42-8562-8c42fd33efe1',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -59,7 +59,7 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-19T10:41:19.860Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-20T21:57:00.639Z'),
     ),
     connectionId: '<id>',
 );
@@ -91,7 +91,7 @@ if ($response->healthcareAppointment !== null) {
 
 ## getHealthcareAppointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -142,7 +142,7 @@ if ($response->healthcareAppointment !== null) {
 
 ## listHealthcareAppointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ if ($response->healthcareAppointments !== null) {
 
 ## patchHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -218,7 +218,7 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: 'cc805b15-1b9f-4db2-9608-a1472e62c59d',
+        id: '69b278e9-f7f9-4adc-bae7-8fee1aad0b6a',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -238,7 +238,7 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-19T10:41:19.878Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-20T21:57:00.654Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -271,7 +271,7 @@ if ($response->healthcareAppointment !== null) {
 
 ## removeHealthcareAppointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -322,7 +322,7 @@ if ($response->statusCode === 200) {
 
 ## updateHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -348,7 +348,7 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: 'cc805b15-1b9f-4db2-9608-a1472e62c59d',
+        id: '69b278e9-f7f9-4adc-bae7-8fee1aad0b6a',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -368,7 +368,7 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-19T10:41:19.878Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-20T21:57:00.654Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

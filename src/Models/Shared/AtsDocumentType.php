@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** The kind of document */
 enum AtsDocumentType: string
 {
     case Resume = 'RESUME';

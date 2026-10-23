@@ -31,7 +31,7 @@
 
 ## createTicketingCategory
 
-Create a category
+Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 
 ### Example Usage
 
@@ -56,11 +56,11 @@ $request = new Operations\CreateTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
         description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: '132cb90b-ff2e-43b0-8ddc-585b0f8060f6',
+        id: 'cbc506da-1ed4-4800-89ef-dc3261f185b5',
         isActive: true,
         metadata: [],
         name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-14T00:34:02.739Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-15T19:01:28.006Z'),
     ),
     connectionId: '<id>',
 );
@@ -92,7 +92,7 @@ if ($response->ticketingCategory !== null) {
 
 ## createTicketingCustomer
 
-Create a customer
+Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ $request = new Operations\CreateTicketingCustomerRequest(
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: 'e3cc0375-1503-474f-afb3-f694c49cd371',
+        id: '8f14819b-1617-4b36-a403-ebe5db008bf6',
         metadata: [],
         name: 'Christian Windler',
         tags: [
@@ -143,7 +143,7 @@ $request = new Operations\CreateTicketingCustomerRequest(
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-04T01:56:17.625Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-05T22:22:31.311Z'),
     ),
     connectionId: '<id>',
 );
@@ -175,7 +175,7 @@ if ($response->ticketingCustomer !== null) {
 
 ## createTicketingNote
 
-Create a note
+Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 
 ### Example Usage
 
@@ -200,9 +200,9 @@ $request = new Operations\CreateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
         description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '379fd407-2c1a-4c4f-9408-8cce16d25ad2',
+        id: '043cc9b8-4e55-41dd-8b70-230b3d96abb4',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2024-09-29T06:43:21.104Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-09-30T16:51:18.236Z'),
     ),
     connectionId: '<id>',
 );
@@ -234,7 +234,7 @@ if ($response->ticketingNote !== null) {
 
 ## createTicketingTicket
 
-Create a ticket
+Creates a TicketingTicket. Provide the unified TicketingTicket fields in the request body; they are mapped to the provider's API. Returns the created TicketingTicket.
 
 ### Example Usage
 
@@ -261,7 +261,7 @@ $request = new Operations\CreateTicketingTicketRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-25T19:19:31.279Z'),
         description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
         dueAt: Utils\Utils::parseDateTime('2021-07-07T17:39:49.813Z'),
-        id: 'deedd6a3-2f17-44dd-9af1-a0e87655ca78',
+        id: '2d4295c1-a2d6-4a7d-b055-c2bcade85c1e',
         metadata: [],
         priority: 'MEDIUM',
         source: 'email',
@@ -270,7 +270,7 @@ $request = new Operations\CreateTicketingTicketRequest(
         tags: [
             'vilicus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:28:56.759Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:40:40.246Z'),
         url: 'https://similar-velocity.net/',
     ),
     connectionId: '<id>',
@@ -303,7 +303,7 @@ if ($response->ticketingTicket !== null) {
 
 ## getTicketingCategory
 
-Retrieve a category
+Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -354,7 +354,7 @@ if ($response->ticketingCategory !== null) {
 
 ## getTicketingCustomer
 
-Retrieve a customer
+Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -405,7 +405,7 @@ if ($response->ticketingCustomer !== null) {
 
 ## getTicketingNote
 
-Retrieve a note
+Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -456,7 +456,7 @@ if ($response->ticketingNote !== null) {
 
 ## getTicketingTicket
 
-Retrieve a ticket
+Retrieves a single TicketingTicket by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -507,7 +507,7 @@ if ($response->ticketingTicket !== null) {
 
 ## listTicketingCategories
 
-List all categories
+Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -557,7 +557,7 @@ if ($response->ticketingCategories !== null) {
 
 ## listTicketingCustomers
 
-List all customers
+Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -607,7 +607,7 @@ if ($response->ticketingCustomers !== null) {
 
 ## listTicketingNotes
 
-List all notes
+Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -657,7 +657,7 @@ if ($response->ticketingNotes !== null) {
 
 ## listTicketingTickets
 
-List all tickets
+Returns a list of TicketingTickets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -707,7 +707,7 @@ if ($response->ticketingTickets !== null) {
 
 ## patchTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -732,11 +732,11 @@ $request = new Operations\PatchTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
         description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: 'fd46751c-c2d1-4514-8eee-2ff2e3627795',
+        id: 'c79706b9-cfe2-413f-b6d1-4bc089c15bb2',
         isActive: true,
         metadata: [],
         name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-14T00:34:02.751Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-15T19:01:28.018Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -769,7 +769,7 @@ if ($response->ticketingCategory !== null) {
 
 ## patchTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -799,7 +799,7 @@ $request = new Operations\PatchTicketingCustomerRequest(
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: '75ff56c0-e087-452f-821a-1b48af1f3273',
+        id: 'da97a462-260f-4918-a35a-2da43dc69624',
         metadata: [],
         name: 'Christian Windler',
         tags: [
@@ -820,7 +820,7 @@ $request = new Operations\PatchTicketingCustomerRequest(
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-04T01:56:17.639Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-05T22:22:31.327Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -853,7 +853,7 @@ if ($response->ticketingCustomer !== null) {
 
 ## patchTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -878,9 +878,9 @@ $request = new Operations\PatchTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
         description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '6a4cdc74-ca84-46cc-aae0-c8f72b91303e',
+        id: '73852e90-d047-4a5d-8bfb-ff4cda387854',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2024-09-29T06:43:21.114Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-09-30T16:51:18.248Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -913,7 +913,7 @@ if ($response->ticketingNote !== null) {
 
 ## patchTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -940,7 +940,7 @@ $request = new Operations\PatchTicketingTicketRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-25T19:19:31.279Z'),
         description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
         dueAt: Utils\Utils::parseDateTime('2021-07-07T17:39:49.813Z'),
-        id: 'a6e2a7b5-95b9-4d6b-adf4-3393f513e96b',
+        id: 'abcd6b11-d964-41a9-90fb-28d4b0c959c6',
         metadata: [],
         priority: 'MEDIUM',
         source: 'email',
@@ -949,7 +949,7 @@ $request = new Operations\PatchTicketingTicketRequest(
         tags: [
             'vilicus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:28:56.759Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:40:40.246Z'),
         url: 'https://similar-velocity.net/',
     ),
     connectionId: '<id>',
@@ -983,7 +983,7 @@ if ($response->ticketingTicket !== null) {
 
 ## removeTicketingCategory
 
-Remove a category
+Deletes the TicketingCategory identified by `id`.
 
 ### Example Usage
 
@@ -1034,7 +1034,7 @@ if ($response->statusCode === 200) {
 
 ## removeTicketingCustomer
 
-Remove a customer
+Deletes the TicketingCustomer identified by `id`.
 
 ### Example Usage
 
@@ -1085,7 +1085,7 @@ if ($response->statusCode === 200) {
 
 ## removeTicketingNote
 
-Remove a note
+Deletes the TicketingNote identified by `id`.
 
 ### Example Usage
 
@@ -1136,7 +1136,7 @@ if ($response->statusCode === 200) {
 
 ## removeTicketingTicket
 
-Remove a ticket
+Deletes the TicketingTicket identified by `id`.
 
 ### Example Usage
 
@@ -1187,7 +1187,7 @@ if ($response->statusCode === 200) {
 
 ## updateTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -1212,11 +1212,11 @@ $request = new Operations\UpdateTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
         description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: 'fd46751c-c2d1-4514-8eee-2ff2e3627795',
+        id: 'c79706b9-cfe2-413f-b6d1-4bc089c15bb2',
         isActive: true,
         metadata: [],
         name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-14T00:34:02.751Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-15T19:01:28.018Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1249,7 +1249,7 @@ if ($response->ticketingCategory !== null) {
 
 ## updateTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -1279,7 +1279,7 @@ $request = new Operations\UpdateTicketingCustomerRequest(
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: '75ff56c0-e087-452f-821a-1b48af1f3273',
+        id: 'da97a462-260f-4918-a35a-2da43dc69624',
         metadata: [],
         name: 'Christian Windler',
         tags: [
@@ -1300,7 +1300,7 @@ $request = new Operations\UpdateTicketingCustomerRequest(
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-04T01:56:17.639Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-05T22:22:31.327Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1333,7 +1333,7 @@ if ($response->ticketingCustomer !== null) {
 
 ## updateTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -1358,9 +1358,9 @@ $request = new Operations\UpdateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
         description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '6a4cdc74-ca84-46cc-aae0-c8f72b91303e',
+        id: '73852e90-d047-4a5d-8bfb-ff4cda387854',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2024-09-29T06:43:21.114Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-09-30T16:51:18.248Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1393,7 +1393,7 @@ if ($response->ticketingNote !== null) {
 
 ## updateTicketingTicket
 
-Update a ticket
+Updates the TicketingTicket identified by `id`. Provide the unified TicketingTicket fields to change in the request body.
 
 ### Example Usage
 
@@ -1420,7 +1420,7 @@ $request = new Operations\UpdateTicketingTicketRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-25T19:19:31.279Z'),
         description: 'Cura dignissimos aut clibanus vulgaris patrocinor. Laborum acies curiositas antepono coniuratio. Correptius curiositas sono censura coma. Bestia suus tot cotidie terror subito coniecto beneficium.',
         dueAt: Utils\Utils::parseDateTime('2021-07-07T17:39:49.813Z'),
-        id: 'a6e2a7b5-95b9-4d6b-adf4-3393f513e96b',
+        id: 'abcd6b11-d964-41a9-90fb-28d4b0c959c6',
         metadata: [],
         priority: 'MEDIUM',
         source: 'email',
@@ -1429,7 +1429,7 @@ $request = new Operations\UpdateTicketingTicketRequest(
         tags: [
             'vilicus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:28:56.759Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-03T18:40:40.246Z'),
         url: 'https://similar-velocity.net/',
     ),
     connectionId: '<id>',

@@ -49,7 +49,7 @@
 
 ## createLmsActivity
 
-Create an activity
+Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 
 ### Example Usage
 
@@ -73,15 +73,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2023-12-05T23:40:40.743Z'),
+        completedAt: Utils\Utils::parseDateTime('2023-12-07T00:32:47.256Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '0b1206e4-ebf4-461d-ad66-a9ed815927b6',
+        id: '8ef8803d-f215-49d2-b7ed-91e7dc13d16a',
         isCompleted: true,
         metadata: [],
         progressPercentage: 100,
-        startedAt: Utils\Utils::parseDateTime('2021-04-25T04:23:32.793Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-30T23:41:21.299Z'),
+        startedAt: Utils\Utils::parseDateTime('2021-04-25T08:31:19.340Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-31T09:55:05.053Z'),
     ),
     connectionId: '<id>',
 );
@@ -113,7 +113,7 @@ if ($response->lmsActivity !== null) {
 
 ## createLmsClass
 
-Create a class
+Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ $request = new Operations\CreateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: '02c0fab5-b196-44ff-ac6f-aad22cd1d454',
+        id: '3d626bb3-633b-41be-ab9a-3ae166742cfe',
         instructors: [],
         languages: [
             'in',
@@ -160,7 +160,7 @@ $request = new Operations\CreateLmsClassRequest(
         metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-03T21:30:44.537Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-05T12:30:35.661Z'),
     ),
     connectionId: '<id>',
 );
@@ -192,7 +192,7 @@ if ($response->lmsClass !== null) {
 
 ## createLmsCollection
 
-Create a collection
+Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
 ### Example Usage
 
@@ -217,7 +217,7 @@ $request = new Operations\CreateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: 'ad8c76c0-de0d-461e-99ec-2610973fca28',
+        id: '6a2ec014-aede-4f89-8c0e-e7af93f30720',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -234,7 +234,7 @@ $request = new Operations\CreateLmsCollectionRequest(
         ],
         metadata: [],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-07-30T07:04:58.077Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-08-01T05:15:10.123Z'),
     ),
     connectionId: '<id>',
 );
@@ -266,7 +266,7 @@ if ($response->lmsCollection !== null) {
 
 ## createLmsContent
 
-Create a content
+Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ $request = new Operations\CreateLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: '30e4f460-4b55-4fc2-956e-f6f5ff936ab5',
+        id: 'd41c5ee7-fa14-4ca9-af98-8391170ededb',
         instructors: [],
         isActive: true,
         languages: [
@@ -356,7 +356,7 @@ $request = new Operations\CreateLmsContentRequest(
         metadata: [],
         name: 'ut',
         providerName: 'Bins LLC',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-03T06:18:34.592Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-03T21:07:34.822Z'),
         shortDescription: 'Caritas.',
         skills: [
             'trucido',
@@ -371,7 +371,7 @@ $request = new Operations\CreateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-04T04:34:53.718Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-04T20:04:18.829Z'),
     ),
     connectionId: '<id>',
 );
@@ -403,7 +403,7 @@ if ($response->lmsContent !== null) {
 
 ## createLmsCourse
 
-Create a course
+Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
 
 ### Example Usage
 
@@ -434,7 +434,7 @@ $request = new Operations\CreateLmsCourseRequest(
         currency: 'FJD',
         description: 'Vinco alias aut capitulus.',
         durationMinutes: 148,
-        id: 'd646526e-939a-4320-9798-869d3a2a42da',
+        id: 'f0cc7df0-5fdc-4ecb-8a6b-e5a87f9f2fcb',
         instructors: [],
         isActive: true,
         isPrivate: false,
@@ -461,14 +461,14 @@ $request = new Operations\CreateLmsCourseRequest(
         name: 'comptus',
         priceAmount: 84,
         providerName: 'Homenick - Wunsch',
-        publishedAt: Utils\Utils::parseDateTime('2022-11-05T18:11:06.158Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-11-05T19:09:55.352Z'),
         skills: [
             'adiuvo',
             'tam',
         ],
         students: [],
         timeEstimateMinutes: 100,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T18:20:08.719Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T22:25:04.839Z'),
     ),
     connectionId: '<id>',
 );
@@ -500,7 +500,7 @@ if ($response->lmsCourse !== null) {
 
 ## createLmsInstructor
 
-Create an instructor
+Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 
 ### Example Usage
 
@@ -528,7 +528,7 @@ $request = new Operations\CreateLmsInstructorRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Deangelo',
-        id: 'ed7352b2-b4e5-46cd-8c4b-b8efc95d1370',
+        id: '72169b55-08d3-486b-af7d-12f838260457',
         imageUrl: 'https://avatars.githubusercontent.com/u/95131132',
         lastName: 'Ritchie',
         metadata: [],
@@ -544,7 +544,7 @@ $request = new Operations\CreateLmsInstructorRequest(
             ),
         ],
         title: 'Regional Security Agent',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-24T10:19:49.914Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-25T22:13:02.082Z'),
     ),
     connectionId: '<id>',
 );
@@ -576,7 +576,7 @@ if ($response->lmsInstructor !== null) {
 
 ## createLmsStudent
 
-Create a student
+Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
 ### Example Usage
 
@@ -612,7 +612,7 @@ $request = new Operations\CreateLmsStudentRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Marcella',
-        id: '04f331a8-dc9c-4c07-8736-fa1537e3c7cb',
+        id: '88ab09dc-4d25-47d4-88b5-741857890652',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
         lastName: 'Murazik',
         metadata: [],
@@ -631,7 +631,7 @@ $request = new Operations\CreateLmsStudentRequest(
                 type: Shared\LmsTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T23:26:48.052Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-01T15:54:34.494Z'),
     ),
     connectionId: '<id>',
 );
@@ -663,7 +663,7 @@ if ($response->lmsStudent !== null) {
 
 ## getLmsActivity
 
-Retrieve an activity
+Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -714,7 +714,7 @@ if ($response->lmsActivity !== null) {
 
 ## getLmsClass
 
-Retrieve a class
+Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -765,7 +765,7 @@ if ($response->lmsClass !== null) {
 
 ## getLmsCollection
 
-Retrieve a collection
+Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -816,7 +816,7 @@ if ($response->lmsCollection !== null) {
 
 ## getLmsContent
 
-Retrieve a content
+Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -867,7 +867,7 @@ if ($response->lmsContent !== null) {
 
 ## getLmsCourse
 
-Retrieve a course
+Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -918,7 +918,7 @@ if ($response->lmsCourse !== null) {
 
 ## getLmsInstructor
 
-Retrieve an instructor
+Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -969,7 +969,7 @@ if ($response->lmsInstructor !== null) {
 
 ## getLmsStudent
 
-Retrieve a student
+Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1020,7 +1020,7 @@ if ($response->lmsStudent !== null) {
 
 ## listLmsActivities
 
-List all activities
+Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1070,7 +1070,7 @@ if ($response->lmsActivities !== null) {
 
 ## listLmsClasses
 
-List all classes
+Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1120,7 +1120,7 @@ if ($response->lmsClasses !== null) {
 
 ## listLmsCollections
 
-List all collections
+Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1170,7 +1170,7 @@ if ($response->lmsCollections !== null) {
 
 ## listLmsContents
 
-List all contents
+Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1220,7 +1220,7 @@ if ($response->lmsContents !== null) {
 
 ## listLmsCourses
 
-List all courses
+Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1270,7 +1270,7 @@ if ($response->lmsCourses !== null) {
 
 ## listLmsInstructors
 
-List all instructors
+Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1320,7 +1320,7 @@ if ($response->lmsInstructors !== null) {
 
 ## listLmsStudents
 
-List all students
+Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1370,7 +1370,7 @@ if ($response->lmsStudents !== null) {
 
 ## patchLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -1394,15 +1394,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2023-12-05T23:40:40.748Z'),
+        completedAt: Utils\Utils::parseDateTime('2023-12-07T00:32:47.263Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '72d4119b-e5e6-45cd-9941-cd292c426d45',
+        id: '0cadbe83-eb81-4e9c-b1e3-5d9ebab0420e',
         isCompleted: true,
         metadata: [],
         progressPercentage: 100,
-        startedAt: Utils\Utils::parseDateTime('2021-04-25T04:23:32.794Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-30T23:41:21.301Z'),
+        startedAt: Utils\Utils::parseDateTime('2021-04-25T08:31:19.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-31T09:55:05.056Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1435,7 +1435,7 @@ if ($response->lmsActivity !== null) {
 
 ## patchLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -1460,7 +1460,7 @@ $request = new Operations\PatchLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: 'd27e8714-52ef-484e-904f-dea9aacb2d55',
+        id: 'ddee1bcd-4b7e-4da9-b781-6a870fe29650',
         instructors: [],
         languages: [
             'in',
@@ -1482,7 +1482,7 @@ $request = new Operations\PatchLmsClassRequest(
         metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-03T21:30:44.550Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-05T12:30:35.679Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1515,7 +1515,7 @@ if ($response->lmsClass !== null) {
 
 ## patchLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -1540,7 +1540,7 @@ $request = new Operations\PatchLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: '776423a0-c2ca-4984-93a0-d53a46ddee1b',
+        id: '914f1f70-a81b-45e1-88a5-173f8add5a6e',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -1557,7 +1557,7 @@ $request = new Operations\PatchLmsCollectionRequest(
         ],
         metadata: [],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-07-30T07:04:58.094Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-08-01T05:15:10.141Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1590,7 +1590,7 @@ if ($response->lmsCollection !== null) {
 
 ## patchLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -1620,7 +1620,7 @@ $request = new Operations\PatchLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: 'de227394-fbd0-4a0b-8f28-9e960cc07406',
+        id: '195da47f-258a-4e0c-a82a-7de66257e6bc',
         instructors: [],
         isActive: true,
         languages: [
@@ -1680,7 +1680,7 @@ $request = new Operations\PatchLmsContentRequest(
         metadata: [],
         name: 'ut',
         providerName: 'Bins LLC',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-03T06:18:34.603Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-03T21:07:34.829Z'),
         shortDescription: 'Caritas.',
         skills: [
             'trucido',
@@ -1695,7 +1695,7 @@ $request = new Operations\PatchLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-04T04:34:53.729Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-04T20:04:18.836Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1728,7 +1728,7 @@ if ($response->lmsContent !== null) {
 
 ## patchLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -1759,7 +1759,7 @@ $request = new Operations\PatchLmsCourseRequest(
         currency: 'FJD',
         description: 'Vinco alias aut capitulus.',
         durationMinutes: 148,
-        id: 'efcb5073-ec55-445b-b744-96bc88b5942f',
+        id: '7ec46a0e-9733-463a-b4d2-7d64c87f8ac1',
         instructors: [],
         isActive: true,
         isPrivate: false,
@@ -1786,14 +1786,14 @@ $request = new Operations\PatchLmsCourseRequest(
         name: 'comptus',
         priceAmount: 84,
         providerName: 'Homenick - Wunsch',
-        publishedAt: Utils\Utils::parseDateTime('2022-11-05T18:11:06.159Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-11-05T19:09:55.353Z'),
         skills: [
             'adiuvo',
             'tam',
         ],
         students: [],
         timeEstimateMinutes: 100,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T18:20:08.721Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T22:25:04.841Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1826,7 +1826,7 @@ if ($response->lmsCourse !== null) {
 
 ## patchLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -1854,7 +1854,7 @@ $request = new Operations\PatchLmsInstructorRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Deangelo',
-        id: '1327c6b3-eddf-40fb-b758-98ccff3a7545',
+        id: 'c4c38d07-3d05-4d98-adfd-910b8c1bbe76',
         imageUrl: 'https://avatars.githubusercontent.com/u/95131132',
         lastName: 'Ritchie',
         metadata: [],
@@ -1870,7 +1870,7 @@ $request = new Operations\PatchLmsInstructorRequest(
             ),
         ],
         title: 'Regional Security Agent',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-24T10:19:49.926Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-25T22:13:02.094Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1903,7 +1903,7 @@ if ($response->lmsInstructor !== null) {
 
 ## patchLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -1939,7 +1939,7 @@ $request = new Operations\PatchLmsStudentRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Marcella',
-        id: '24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa',
+        id: '2dc0119d-4ae8-40e0-a92d-24cde92cc24f',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
         lastName: 'Murazik',
         metadata: [],
@@ -1958,7 +1958,7 @@ $request = new Operations\PatchLmsStudentRequest(
                 type: Shared\LmsTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T23:26:48.060Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-01T15:54:34.501Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1991,7 +1991,7 @@ if ($response->lmsStudent !== null) {
 
 ## removeLmsActivity
 
-Remove an activity
+Deletes the LmsActivity identified by `id`.
 
 ### Example Usage
 
@@ -2042,7 +2042,7 @@ if ($response->statusCode === 200) {
 
 ## removeLmsClass
 
-Remove a class
+Deletes the LmsClass identified by `id`.
 
 ### Example Usage
 
@@ -2093,7 +2093,7 @@ if ($response->statusCode === 200) {
 
 ## removeLmsCollection
 
-Remove a collection
+Deletes the LmsCollection identified by `id`.
 
 ### Example Usage
 
@@ -2144,7 +2144,7 @@ if ($response->statusCode === 200) {
 
 ## removeLmsContent
 
-Remove a content
+Deletes the LmsContent identified by `id`.
 
 ### Example Usage
 
@@ -2195,7 +2195,7 @@ if ($response->statusCode === 200) {
 
 ## removeLmsCourse
 
-Remove a course
+Deletes the LmsCourse identified by `id`.
 
 ### Example Usage
 
@@ -2246,7 +2246,7 @@ if ($response->statusCode === 200) {
 
 ## removeLmsInstructor
 
-Remove an instructor
+Deletes the LmsInstructor identified by `id`.
 
 ### Example Usage
 
@@ -2297,7 +2297,7 @@ if ($response->statusCode === 200) {
 
 ## removeLmsStudent
 
-Remove a student
+Deletes the LmsStudent identified by `id`.
 
 ### Example Usage
 
@@ -2348,7 +2348,7 @@ if ($response->statusCode === 200) {
 
 ## updateLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -2372,15 +2372,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2023-12-05T23:40:40.748Z'),
+        completedAt: Utils\Utils::parseDateTime('2023-12-07T00:32:47.263Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '72d4119b-e5e6-45cd-9941-cd292c426d45',
+        id: '0cadbe83-eb81-4e9c-b1e3-5d9ebab0420e',
         isCompleted: true,
         metadata: [],
         progressPercentage: 100,
-        startedAt: Utils\Utils::parseDateTime('2021-04-25T04:23:32.794Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-30T23:41:21.301Z'),
+        startedAt: Utils\Utils::parseDateTime('2021-04-25T08:31:19.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-31T09:55:05.056Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2413,7 +2413,7 @@ if ($response->lmsActivity !== null) {
 
 ## updateLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -2438,7 +2438,7 @@ $request = new Operations\UpdateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: 'd27e8714-52ef-484e-904f-dea9aacb2d55',
+        id: 'ddee1bcd-4b7e-4da9-b781-6a870fe29650',
         instructors: [],
         languages: [
             'in',
@@ -2460,7 +2460,7 @@ $request = new Operations\UpdateLmsClassRequest(
         metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-03T21:30:44.550Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-05T12:30:35.679Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2493,7 +2493,7 @@ if ($response->lmsClass !== null) {
 
 ## updateLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -2518,7 +2518,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: '776423a0-c2ca-4984-93a0-d53a46ddee1b',
+        id: '914f1f70-a81b-45e1-88a5-173f8add5a6e',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -2535,7 +2535,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
         ],
         metadata: [],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-07-30T07:04:58.094Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-08-01T05:15:10.141Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2568,7 +2568,7 @@ if ($response->lmsCollection !== null) {
 
 ## updateLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -2598,7 +2598,7 @@ $request = new Operations\UpdateLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: 'de227394-fbd0-4a0b-8f28-9e960cc07406',
+        id: '195da47f-258a-4e0c-a82a-7de66257e6bc',
         instructors: [],
         isActive: true,
         languages: [
@@ -2658,7 +2658,7 @@ $request = new Operations\UpdateLmsContentRequest(
         metadata: [],
         name: 'ut',
         providerName: 'Bins LLC',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-03T06:18:34.603Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-03T21:07:34.829Z'),
         shortDescription: 'Caritas.',
         skills: [
             'trucido',
@@ -2673,7 +2673,7 @@ $request = new Operations\UpdateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-04T04:34:53.729Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-04T20:04:18.836Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2706,7 +2706,7 @@ if ($response->lmsContent !== null) {
 
 ## updateLmsCourse
 
-Update a course
+Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
 
 ### Example Usage
 
@@ -2737,7 +2737,7 @@ $request = new Operations\UpdateLmsCourseRequest(
         currency: 'FJD',
         description: 'Vinco alias aut capitulus.',
         durationMinutes: 148,
-        id: 'efcb5073-ec55-445b-b744-96bc88b5942f',
+        id: '7ec46a0e-9733-463a-b4d2-7d64c87f8ac1',
         instructors: [],
         isActive: true,
         isPrivate: false,
@@ -2764,14 +2764,14 @@ $request = new Operations\UpdateLmsCourseRequest(
         name: 'comptus',
         priceAmount: 84,
         providerName: 'Homenick - Wunsch',
-        publishedAt: Utils\Utils::parseDateTime('2022-11-05T18:11:06.159Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-11-05T19:09:55.353Z'),
         skills: [
             'adiuvo',
             'tam',
         ],
         students: [],
         timeEstimateMinutes: 100,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T18:20:08.721Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T22:25:04.841Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2804,7 +2804,7 @@ if ($response->lmsCourse !== null) {
 
 ## updateLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -2832,7 +2832,7 @@ $request = new Operations\UpdateLmsInstructorRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Deangelo',
-        id: '1327c6b3-eddf-40fb-b758-98ccff3a7545',
+        id: 'c4c38d07-3d05-4d98-adfd-910b8c1bbe76',
         imageUrl: 'https://avatars.githubusercontent.com/u/95131132',
         lastName: 'Ritchie',
         metadata: [],
@@ -2848,7 +2848,7 @@ $request = new Operations\UpdateLmsInstructorRequest(
             ),
         ],
         title: 'Regional Security Agent',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-24T10:19:49.926Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-25T22:13:02.094Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2881,7 +2881,7 @@ if ($response->lmsInstructor !== null) {
 
 ## updateLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -2917,7 +2917,7 @@ $request = new Operations\UpdateLmsStudentRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Marcella',
-        id: '24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa',
+        id: '2dc0119d-4ae8-40e0-a92d-24cde92cc24f',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
         lastName: 'Murazik',
         metadata: [],
@@ -2936,7 +2936,7 @@ $request = new Operations\UpdateLmsStudentRequest(
                 type: Shared\LmsTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T23:26:48.060Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-01T15:54:34.501Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

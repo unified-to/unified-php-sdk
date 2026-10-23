@@ -47,6 +47,8 @@ class Vendorcredit
     /**
      * Create a vendorcredit
      *
+     * Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingVendorcreditResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Vendorcredit
     /**
      * Retrieve a vendorcredit
      *
+     * Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingVendorcreditResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Vendorcredit
     /**
      * List all vendorcredits
      *
+     * Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingVendorcreditsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingVendorcreditsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Vendorcredit
 
     /**
      * Update a vendorcredit
+     *
+     * Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingVendorcreditResponse
@@ -309,6 +317,8 @@ class Vendorcredit
     /**
      * Remove a vendorcredit
      *
+     * Deletes the AccountingVendorcredit identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingVendorcreditResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Vendorcredit
 
     /**
      * Update a vendorcredit
+     *
+     * Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingVendorcreditRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingVendorcreditResponse

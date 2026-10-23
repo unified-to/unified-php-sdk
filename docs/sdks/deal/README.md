@@ -13,7 +13,7 @@
 
 ## createCrmDeal
 
-Create a deal
+Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
 ### Example Usage
 
@@ -37,19 +37,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-10T10:06:36.060Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-31T12:37:54.634Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-10T20:00:03.839Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-01T19:51:42.365Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-        id: '7d6cd0b2-f9c5-42c1-a68b-d59f7680ea80',
+        id: 'db0996f8-591a-4180-915e-36f7b36d5fca',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'de172c9b-9f28-4356-b8cd-d329d4ff5974',
+                id: '164a3241-1d61-41e7-a0f7-b87756af05a1',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -62,7 +62,7 @@ $request = new Operations\CreateCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-11T21:12:58.993Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-12T15:38:09.209Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -95,7 +95,7 @@ if ($response->crmDeal !== null) {
 
 ## getCrmDeal
 
-Retrieve a deal
+Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -146,7 +146,7 @@ if ($response->crmDeal !== null) {
 
 ## listCrmDeals
 
-List all deals
+Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -196,7 +196,7 @@ if ($response->crmDeals !== null) {
 
 ## patchCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -220,19 +220,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-10T10:06:36.063Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-31T12:37:54.643Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-10T20:00:03.843Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-01T19:51:42.377Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-        id: '25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3',
+        id: 'efa37fe6-046f-4d86-91c0-ba3c80dd24c5',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '4ce364e7-3ae1-4d8c-8353-0bcb57c73575',
+                id: '8d93e4ba-3524-4e12-bae9-a3be00587a63',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -245,7 +245,7 @@ $request = new Operations\PatchCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-11T21:12:58.999Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-12T15:38:09.216Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -279,7 +279,7 @@ if ($response->crmDeal !== null) {
 
 ## removeCrmDeal
 
-Remove a deal
+Deletes the CrmDeal identified by `id`.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ if ($response->statusCode === 200) {
 
 ## updateCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -354,19 +354,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-10T10:06:36.063Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-31T12:37:54.643Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-10T20:00:03.843Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-01T19:51:42.377Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-        id: '25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3',
+        id: 'efa37fe6-046f-4d86-91c0-ba3c80dd24c5',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '4ce364e7-3ae1-4d8c-8353-0bcb57c73575',
+                id: '8d93e4ba-3524-4e12-bae9-a3be00587a63',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -379,7 +379,7 @@ $request = new Operations\UpdateCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-11T21:12:58.999Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-12T15:38:09.216Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',

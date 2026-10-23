@@ -57,7 +57,7 @@ class AccountingContact
     public ?\DateTime $createdAt = null;
 
     /**
-     * $emails
+     * The contact's email addresses
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingEmail> $emails
      */
@@ -134,6 +134,7 @@ class AccountingContact
     public ?array $metadata = null;
 
     /**
+     * The contact's display name: the company name for a business, or the person's full name
      *
      * @var ?string $name
      */

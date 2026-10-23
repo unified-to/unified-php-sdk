@@ -8,7 +8,7 @@
 
 ## createGenaiEmbedding
 
-Create an embedding
+Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ $request = new Operations\CreateGenaiEmbeddingRequest(
         dimension: 423,
         embeddings: 'Est.',
         encondingFormat: Shared\EncondingFormat::Float,
-        id: '69ad3ee9-3be3-46ae-a50b-94cabdd48b98',
+        id: '59a2d3bc-13ae-40e2-895c-5ea599bf291c',
         maxTokens: 223,
         tokensUsed: 836,
         type: 'classification',

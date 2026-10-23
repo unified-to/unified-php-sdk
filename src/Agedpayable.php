@@ -47,6 +47,8 @@ class Agedpayable
     /**
      * Retrieve an agedpayable
      *
+     * Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingAgedpayableRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingAgedpayableResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -109,6 +111,8 @@ class Agedpayable
 
     /**
      * List all agedpayables
+     *
+     * Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingAgedpayablesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingAgedpayablesResponse

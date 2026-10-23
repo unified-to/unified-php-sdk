@@ -15,7 +15,7 @@
 * [createAccountingExpensereport](#createaccountingexpensereport) - Create an expensereport
 * [createAccountingInvoice](#createaccountinginvoice) - Create an invoice
 * [createAccountingJournal](#createaccountingjournal) - Create a journal
-* [createAccountingOrder](#createaccountingorder) - Create an order
+* [~~createAccountingOrder~~](#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAccountingPaymentterm](#createaccountingpaymentterm) - Create a paymentterm
 * [createAccountingProject](#createaccountingproject) - Create a project
 * [createAccountingPurchaseorder](#createaccountingpurchaseorder) - Create a purchaseorder
@@ -39,7 +39,7 @@
 * [getAccountingExpensereport](#getaccountingexpensereport) - Retrieve an expensereport
 * [getAccountingInvoice](#getaccountinginvoice) - Retrieve an invoice
 * [getAccountingJournal](#getaccountingjournal) - Retrieve a journal
-* [getAccountingOrder](#getaccountingorder) - Retrieve an order
+* [~~getAccountingOrder~~](#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAccountingOrganization](#getaccountingorganization) - Retrieve an organization
 * [getAccountingPaymentterm](#getaccountingpaymentterm) - Retrieve a paymentterm
 * [getAccountingProfitloss](#getaccountingprofitloss) - Retrieve a profitloss
@@ -68,7 +68,7 @@
 * [listAccountingExpenses](#listaccountingexpenses) - List all expenses
 * [listAccountingInvoices](#listaccountinginvoices) - List all invoices
 * [listAccountingJournals](#listaccountingjournals) - List all journals
-* [listAccountingOrders](#listaccountingorders) - List all orders
+* [~~listAccountingOrders~~](#listaccountingorders) - List all orders :warning: **Deprecated**
 * [listAccountingOrganizations](#listaccountingorganizations) - List all organizations
 * [listAccountingPaymentterms](#listaccountingpaymentterms) - List all paymentterms
 * [listAccountingProfitlosses](#listaccountingprofitlosses) - List all profitlosses
@@ -93,7 +93,7 @@
 * [patchAccountingExpensereport](#patchaccountingexpensereport) - Update an expensereport
 * [patchAccountingInvoice](#patchaccountinginvoice) - Update an invoice
 * [patchAccountingJournal](#patchaccountingjournal) - Update a journal
-* [patchAccountingOrder](#patchaccountingorder) - Update an order
+* [~~patchAccountingOrder~~](#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAccountingPaymentterm](#patchaccountingpaymentterm) - Update a paymentterm
 * [patchAccountingProject](#patchaccountingproject) - Update a project
 * [patchAccountingPurchaseorder](#patchaccountingpurchaseorder) - Update a purchaseorder
@@ -113,7 +113,7 @@
 * [removeAccountingExpensereport](#removeaccountingexpensereport) - Remove an expensereport
 * [removeAccountingInvoice](#removeaccountinginvoice) - Remove an invoice
 * [removeAccountingJournal](#removeaccountingjournal) - Remove a journal
-* [removeAccountingOrder](#removeaccountingorder) - Remove an order
+* [~~removeAccountingOrder~~](#removeaccountingorder) - Remove an order :warning: **Deprecated**
 * [removeAccountingPaymentterm](#removeaccountingpaymentterm) - Remove a paymentterm
 * [removeAccountingProject](#removeaccountingproject) - Remove a project
 * [removeAccountingPurchaseorder](#removeaccountingpurchaseorder) - Remove a purchaseorder
@@ -133,7 +133,7 @@
 * [updateAccountingExpensereport](#updateaccountingexpensereport) - Update an expensereport
 * [updateAccountingInvoice](#updateaccountinginvoice) - Update an invoice
 * [updateAccountingJournal](#updateaccountingjournal) - Update a journal
-* [updateAccountingOrder](#updateaccountingorder) - Update an order
+* [~~updateAccountingOrder~~](#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAccountingPaymentterm](#updateaccountingpaymentterm) - Update a paymentterm
 * [updateAccountingProject](#updateaccountingproject) - Update a project
 * [updateAccountingPurchaseorder](#updateaccountingpurchaseorder) - Update a purchaseorder
@@ -145,7 +145,7 @@
 
 ## createAccountingAccount
 
-Create an account
+Creates a AccountingAccount. Provide the unified AccountingAccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingAccount.
 
 ### Example Usage
 
@@ -173,7 +173,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'e1ef892f-3b71-470e-9366-7d11f6594355',
+        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -186,7 +186,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.101Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
     ),
     connectionId: '<id>',
 );
@@ -218,7 +218,7 @@ if ($response->accountingAccount !== null) {
 
 ## createAccountingBankfeedaccount
 
-Create a bankfeedaccount
+Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 
 ### Example Usage
 
@@ -249,12 +249,12 @@ $request = new Operations\CreateAccountingBankfeedaccountRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
         currency: 'AUD',
         feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
-        id: '35586384-5900-42ac-a8d5-c8921d6c4e69',
+        id: '9ff0304a-822b-4e33-9260-a18b0d7dcbc2',
         metadata: [],
         name: 'Corwin, Donnelly and Connelly Checking',
         routingNumber: '694667752',
         status: Shared\AccountingBankfeedaccountStatus::Active,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-23T19:56:22.321Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-24T13:41:42.663Z'),
     ),
     connectionId: '<id>',
 );
@@ -286,7 +286,7 @@ if ($response->accountingBankfeedaccount !== null) {
 
 ## createAccountingBankfeedtransaction
 
-Create a bankfeedtransaction
+Creates a AccountingBankfeedtransaction. Provide the unified AccountingBankfeedtransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedtransaction.
 
 ### Example Usage
 
@@ -315,15 +315,15 @@ $request = new Operations\CreateAccountingBankfeedtransactionRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
         currency: 'CAD',
         description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-        id: 'e0f4b5f3-8bf9-44f4-b365-f37524184310',
+        id: 'f080d207-3e88-44a8-8116-d612351e64bb',
         isPending: true,
         merchantName: 'Buckridge - Feest',
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2025-04-14T19:58:00.131Z'),
+        postedAt: Utils\Utils::parseDateTime('2025-04-16T03:49:52.041Z'),
         reference: '79574105',
-        transactionAt: Utils\Utils::parseDateTime('2022-07-30T08:10:12.137Z'),
+        transactionAt: Utils\Utils::parseDateTime('2022-07-30T11:48:12.702Z'),
         type: Shared\AccountingBankfeedtransactionType::Credit,
-        updatedAt: Utils\Utils::parseDateTime('2022-05-25T01:44:39.014Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-05-25T03:29:13.175Z'),
     ),
     connectionId: '<id>',
 );
@@ -355,7 +355,7 @@ if ($response->accountingBankfeedtransaction !== null) {
 
 ## createAccountingBill
 
-Create a bill
+Creates a AccountingBill. Provide the unified AccountingBill fields in the request body; they are mapped to the provider's API. Returns the created AccountingBill.
 
 ### Example Usage
 
@@ -381,13 +381,13 @@ $request = new Operations\CreateAccountingBillRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://puny-foodstuffs.name',
-                id: 'cebeee36-97bb-4330-9a85-5c69fc343f29',
+                id: '55e2ddb4-12ee-4738-acf5-9f35ad4fae0d',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://grimy-characterization.net',
-                id: '668457df-b516-4b78-9532-eb2cf6d62589',
+                id: '59a88258-e743-46c1-8155-1bda358b5387',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466-1.pdf',
             ),
@@ -400,7 +400,7 @@ $request = new Operations\CreateAccountingBillRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2019-09-07T23:03:14.104Z'),
         extendedNotes: [],
-        id: '7e27068a-669c-4caa-8506-8d9a42328ae2',
+        id: '033ba014-5082-45c2-856f-1d28639c1b99',
         lineitems: [],
         metadata: [],
         notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -416,7 +416,7 @@ $request = new Operations\CreateAccountingBillRequest(
         taxAmount: 0,
         term: Shared\Term::Net90,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2020-06-01T05:48:10.626Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-06-01T11:04:57.928Z'),
         url: 'https://cluttered-importance.org/bills/BILL-2466',
     ),
     connectionId: '<id>',
@@ -449,7 +449,7 @@ if ($response->accountingBill !== null) {
 
 ## createAccountingCategory
 
-Create a category
+Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
 ### Example Usage
 
@@ -474,11 +474,11 @@ $request = new Operations\CreateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
         description: 'Textus ab thymum labore basium.',
-        id: '8733e54b-0f49-4e96-9275-b45e190a6975',
+        id: '2ed59372-fe04-40c8-8628-4c3f5af3a63e',
         isActive: false,
         metadata: [],
         name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T12:11:02.648Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T20:18:03.706Z'),
     ),
     connectionId: '<id>',
 );
@@ -510,7 +510,7 @@ if ($response->accountingCategory !== null) {
 
 ## createAccountingContact
 
-Create a contact
+Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
 ### Example Usage
 
@@ -557,7 +557,7 @@ $request = new Operations\CreateAccountingContactRequest(
             ),
         ],
         firstName: 'Delores',
-        id: '5ed9cc63-e0d5-4b24-8c5f-3e0e3ae59897',
+        id: 'c04f80fa-bfbe-4fd4-a019-dfc193c87147',
         identification: '531850872',
         isActive: true,
         isCustomer: true,
@@ -568,7 +568,7 @@ $request = new Operations\CreateAccountingContactRequest(
         paymentMethods: [
             new Shared\AccountingContactPaymentMethod(
                 default: true,
-                id: 'e1e27032-ccb2-4ac9-b501-b3a64c114b9f',
+                id: 'c5fb38a5-69ba-40a8-9a69-99562f8b4059',
                 name: 'Visa 7844',
                 type: Shared\AccountingContactPaymentMethodType::Card,
             ),
@@ -590,7 +590,7 @@ $request = new Operations\CreateAccountingContactRequest(
                 type: Shared\AccountingTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2023-12-19T20:51:25.364Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-20T18:25:43.215Z'),
         website: 'https://kertzmanngroup.com',
     ),
     connectionId: '<id>',
@@ -623,7 +623,7 @@ if ($response->accountingContact !== null) {
 
 ## createAccountingCreditmemo
 
-Create a creditmemo
+Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
 ### Example Usage
 
@@ -653,7 +653,7 @@ $request = new Operations\CreateAccountingCreditmemoRequest(
         creditmemoNumber: 'CM-99537',
         currency: 'AUD',
         discountAmount: 0,
-        id: '9c7c8eca-81ef-4776-840b-210a14223b3c',
+        id: 'e41c2e8f-2f8b-4c2d-9fa2-dbfe0c507e10',
         lineitems: [],
         metadata: [],
         notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -662,7 +662,7 @@ $request = new Operations\CreateAccountingCreditmemoRequest(
         status: Shared\AccountingCreditmemoStatus::Authorized,
         taxAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T07:57:22.889Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T14:30:43.020Z'),
     ),
     connectionId: '<id>',
 );
@@ -694,7 +694,7 @@ if ($response->accountingCreditmemo !== null) {
 
 ## createAccountingExpense
 
-Create an expense
+Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
 ### Example Usage
 
@@ -720,13 +720,13 @@ $request = new Operations\CreateAccountingExpenseRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://rubbery-couch.biz/',
-                id: '5edd15cd-3ee2-41e4-a439-cf81408cf82f',
+                id: 'baa02116-9bd8-4d02-ab4f-1bbe5b8e646d',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://appropriate-smog.biz/',
-                id: '73fd5b4c-31e3-4336-a108-759567af0a3f',
+                id: 'f3ad53ec-18df-4841-8f6c-8670e7bb5c8b',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696-1.pdf',
             ),
@@ -735,10 +735,10 @@ $request = new Operations\CreateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'GBP',
         externalNumber: 'EXP-38303',
-        id: 'e7de8dcf-e617-4a6e-975f-acf17d8382ca',
+        id: '1141f71b-1df2-460b-9449-03f5213324e3',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '6d3e2ee5-06b5-4989-a6e9-665b2b9819a2',
+                id: '7282567e-e715-4ba6-b1cb-e5bf91560265',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 364.74,
@@ -746,7 +746,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'cb82d68a-1992-402a-9cf6-0ae358ead56c',
+                id: '4910fbb8-aae9-44b9-a910-ce25da3f0299',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 258.35,
@@ -754,7 +754,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '7b15d942-74d8-467f-8356-46ace7e92225',
+                id: '52977deb-cfc3-43c3-9c5d-a4007dc1134e',
                 itemName: 'Conference ticket',
                 notes: 'Casus umquam conicio cinis demitto sint.',
                 taxAmount: 0,
@@ -763,7 +763,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '5160b1b1-9a99-4700-af18-a01383019a6f',
+                id: 'd3fb7ae4-ce77-4e31-bc07-8c41c5cb61c5',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 157.04,
@@ -771,7 +771,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '799420c6-5830-4d0d-ac14-6c143e72a5e7',
+                id: '196148e9-665a-445a-aac7-ff1b731109c3',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 164.02,
@@ -787,7 +787,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
         taxAmount: 0,
         totalAmount: 972.29,
         type: Shared\AccountingExpenseType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2020-09-02T07:17:12.137Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-09-02T08:59:36.000Z'),
     ),
     connectionId: '<id>',
 );
@@ -819,7 +819,7 @@ if ($response->accountingExpense !== null) {
 
 ## createAccountingExpensereport
 
-Create an expensereport
+Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 
 ### Example Usage
 
@@ -842,16 +842,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.790Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.842Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'GBP',
         externalNumber: 'ER-31240',
-        id: '47fc5f29-63b1-4967-8d17-2c4118094a90',
+        id: 'f63bd806-4b21-4bdc-b714-fe0e8e2402a0',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: 'f0a59367-a39b-4ec9-a43f-490649722cd0',
+                id: '5fdcc2ed-91dc-4537-bd23-7143ceb49a1c',
                 itemName: 'Conference ticket',
                 taxAmount: 0,
                 totalAmount: 39.9,
@@ -859,7 +859,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '8f35dff7-42c8-46de-9a69-2c1c1c24e7b7',
+                id: '652c74f5-0ff4-4b06-932d-a0c218ae5a70',
                 itemName: 'Flight',
                 notes: 'Soluta omnis dolor.',
                 taxAmount: 0,
@@ -868,7 +868,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '33b44f34-a048-4d08-8b99-b7f36a8d55b2',
+                id: '03b758bf-d56c-480f-a429-bf471d44d9e1',
                 itemName: 'Client dinner',
                 notes: 'Altus caveo capio.',
                 taxAmount: 0,
@@ -877,7 +877,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '2cb1b50d-0517-48c1-a724-381f15ffb276',
+                id: '962b1da8-8be3-42da-9e1e-27c725c75cfe',
                 itemName: 'Flight',
                 taxAmount: 0,
                 totalAmount: 445.27,
@@ -889,11 +889,11 @@ $request = new Operations\CreateAccountingExpensereportRequest(
         name: 'Lolita Kunde - October expenses',
         postedAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         reimbursedAmount: 908.46,
-        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.790Z'),
+        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.842Z'),
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 0,
         totalAmount: 908.46,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.790Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.842Z'),
     ),
     connectionId: '<id>',
 );
@@ -925,7 +925,7 @@ if ($response->accountingExpensereport !== null) {
 
 ## createAccountingInvoice
 
-Create an invoice
+Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 
 ### Example Usage
 
@@ -951,13 +951,13 @@ $request = new Operations\CreateAccountingInvoiceRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://glossy-markup.net/',
-                id: '8785a531-c170-4e0a-a23b-6026aeb2808f',
+                id: '375cc477-e427-4c2a-bd69-75235f07628c',
                 mimeType: 'application/pdf',
                 name: 'INV-77705.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://earnest-giggle.net',
-                id: '795784ec-1677-4171-87a9-191b7246647a',
+                id: '3ee0b8a0-9440-4164-9d01-09d8c8a2d8a3',
                 mimeType: 'application/pdf',
                 name: 'INV-77705-1.pdf',
             ),
@@ -969,7 +969,7 @@ $request = new Operations\CreateAccountingInvoiceRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2022-12-07T14:17:29.587Z'),
         extendedNotes: [],
-        id: '96f21cc2-029b-451f-bf63-27b0da867a12',
+        id: '1ec363b5-4678-4173-9f76-3a9a86625ea3',
         invoiceNumber: 'INV-77705',
         isInclusiveOfTax: false,
         lineitems: [],
@@ -987,7 +987,7 @@ $request = new Operations\CreateAccountingInvoiceRequest(
         term: Shared\AccountingInvoiceTerm::Net25,
         totalAmount: 0,
         type: Shared\AccountingInvoiceType::Invoice,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-23T13:03:42.762Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-25T06:46:36.172Z'),
         url: 'https://gifted-yarmulke.info/invoices/INV-77705',
     ),
     connectionId: '<id>',
@@ -1020,7 +1020,7 @@ if ($response->accountingInvoice !== null) {
 
 ## createAccountingJournal
 
-Create a journal
+Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
 
 ### Example Usage
 
@@ -1048,16 +1048,16 @@ $request = new Operations\CreateAccountingJournalRequest(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T15:14:55.881Z'),
         currency: 'CAD',
         description: 'Cilicium minima calco constans adipisci.',
-        id: 'fb4cb023-dbc9-43ae-bb15-ccbfbf28de12',
+        id: '9abd1632-a53f-4a7f-ae9d-cf19127cf0cb',
         isInclusiveOfTax: true,
         lineitems: [],
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2023-11-06T10:40:52.829Z'),
+        postedAt: Utils\Utils::parseDateTime('2023-11-07T13:12:51.054Z'),
         reference: 'JE-78884',
         source: 'crustulum',
         status: Shared\AccountingJournalStatus::Void,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2022-01-10T19:42:52.129Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-11T09:13:52.357Z'),
     ),
     connectionId: '<id>',
 );
@@ -1087,9 +1087,11 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## createAccountingOrder
+## ~~createAccountingOrder~~
 
-Create an order
+Creates a AccountingOrder. Provide the unified AccountingOrder fields in the request body; they are mapped to the provider's API. Returns the created AccountingOrder.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -1122,7 +1124,7 @@ $request = new Operations\CreateAccountingOrderRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         currency: 'GBP',
-        id: 'f86dd8f6-a014-47f6-9134-f31f328acb2f',
+        id: '8c3cf509-050d-41a9-8ce6-6d17f6f33e31',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
@@ -1137,7 +1139,7 @@ $request = new Operations\CreateAccountingOrderRequest(
         status: Shared\AccountingOrderStatus::Authorized,
         totalAmount: 0,
         type: Shared\AccountingOrderType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2022-02-08T07:18:52.782Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-08T17:08:09.733Z'),
     ),
     connectionId: '<id>',
 );
@@ -1169,7 +1171,7 @@ if ($response->accountingOrder !== null) {
 
 ## createAccountingPaymentterm
 
-Create a paymentterm
+Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 
 ### Example Usage
 
@@ -1201,12 +1203,12 @@ $request = new Operations\CreateAccountingPaymenttermRequest(
         discountPercent: 5,
         dueDays: 57,
         dueNextMonthDays: 9,
-        id: '0817d982-6c5a-41a4-9212-68862cf6c0b1',
+        id: '42ba22f9-17b1-462e-96dc-6a5cd1dd6193',
         isActive: false,
         metadata: [],
         name: 'Net 30',
         type: Shared\AccountingPaymenttermType::Net15,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-08T11:12:46.138Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-10T03:39:59.459Z'),
     ),
     connectionId: '<id>',
 );
@@ -1238,7 +1240,7 @@ if ($response->accountingPaymentterm !== null) {
 
 ## createAccountingProject
 
-Create a project
+Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
 ### Example Usage
 
@@ -1290,7 +1292,7 @@ if ($response->accountingProject !== null) {
 
 ## createAccountingPurchaseorder
 
-Create a purchaseorder
+Creates a AccountingPurchaseorder. Provide the unified AccountingPurchaseorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingPurchaseorder.
 
 ### Example Usage
 
@@ -1326,7 +1328,7 @@ $request = new Operations\CreateAccountingPurchaseorderRequest(
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
         currency: 'EUR',
-        id: '95fc4c52-e984-4e27-a4ce-4dbf003425b2',
+        id: '76a1091d-72ea-4bf1-9efa-fa5e21952343',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
@@ -1340,7 +1342,7 @@ $request = new Operations\CreateAccountingPurchaseorderRequest(
         ),
         status: Shared\AccountingPurchaseorderStatus::Submitted,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2021-08-11T06:00:23.901Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-08-11T11:24:00.096Z'),
     ),
     connectionId: '<id>',
 );
@@ -1372,7 +1374,7 @@ if ($response->accountingPurchaseorder !== null) {
 
 ## createAccountingQuote
 
-Create a quote
+Creates a AccountingQuote. Provide the unified AccountingQuote fields in the request body; they are mapped to the provider's API. Returns the created AccountingQuote.
 
 ### Example Usage
 
@@ -1424,7 +1426,7 @@ if ($response->accountingQuote !== null) {
 
 ## createAccountingSalesorder
 
-Create a salesorder
+Creates a AccountingSalesorder. Provide the unified AccountingSalesorder fields in the request body; they are mapped to the provider's API. Returns the created AccountingSalesorder.
 
 ### Example Usage
 
@@ -1457,13 +1459,13 @@ $request = new Operations\CreateAccountingSalesorderRequest(
             regionCode: 'MO',
         ),
         categoryIds: [],
-        closedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.155Z'),
+        closedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.181Z'),
         createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
         currency: 'USD',
         discountAmount: 0,
         fees: [],
         fulfillmentType: Shared\FulfillmentType::Other,
-        id: '2ee1a550-d200-4b90-84de-64861a01cf0a',
+        id: '4637a288-911a-429a-bea4-7dcee1e32f51',
         lineitems: [],
         metadata: [],
         orderNumber: '832663',
@@ -1485,7 +1487,7 @@ $request = new Operations\CreateAccountingSalesorderRequest(
         taxAmount: 0,
         tipAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.155Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.181Z'),
     ),
     connectionId: '<id>',
 );
@@ -1517,7 +1519,7 @@ if ($response->accountingSalesorder !== null) {
 
 ## createAccountingTaxrate
 
-Create a taxrate
+Creates a AccountingTaxrate. Provide the unified AccountingTaxrate fields in the request body; they are mapped to the provider's API. Returns the created AccountingTaxrate.
 
 ### Example Usage
 
@@ -1551,7 +1553,7 @@ $request = new Operations\CreateAccountingTaxrateRequest(
         createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
         description: 'Exempt (0%)',
         effectiveRate: 0,
-        id: '1eeede99-19ce-4185-9054-69df8fb32710',
+        id: '2df554ed-f2e1-41c8-b0eb-5d269de95447',
         isActive: false,
         isCompound: false,
         metadata: [],
@@ -1560,7 +1562,7 @@ $request = new Operations\CreateAccountingTaxrateRequest(
         region: 'KS',
         totalRate: 0,
         type: Shared\AccountingTaxrateType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-13T05:09:51.173Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-13T05:55:41.907Z'),
     ),
     connectionId: '<id>',
 );
@@ -1592,7 +1594,7 @@ if ($response->accountingTaxrate !== null) {
 
 ## createAccountingTransaction
 
-Create a transaction
+Creates a AccountingTransaction. Provide the unified AccountingTransaction fields in the request body; they are mapped to the provider's API. Returns the created AccountingTransaction.
 
 ### Example Usage
 
@@ -1616,12 +1618,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '8c13a9ec-0a69-4abd-b610-a83a0fba33cf',
+        id: 'a2d82841-e929-4a25-b6e8-ac591f21a7a1',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-                id: '9c79732b-0fb8-4393-bed0-bfbd5b8e002e',
+                id: 'e3c882b2-0e50-400a-9ec9-e4d2e06f4942',
                 name: 'Shirt',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -1633,7 +1635,7 @@ $request = new Operations\CreateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:08:29.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:29:16.791Z'),
     ),
     connectionId: '<id>',
 );
@@ -1665,7 +1667,7 @@ if ($response->accountingTransaction !== null) {
 
 ## createAccountingVendorcredit
 
-Create a vendorcredit
+Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 
 ### Example Usage
 
@@ -1692,14 +1694,14 @@ $request = new Operations\CreateAccountingVendorcreditRequest(
         balanceAmount: 0,
         createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         currency: 'USD',
-        id: 'fe3ac716-b436-4a30-adb2-714237b7c28f',
+        id: 'ded0be57-4069-4996-87ce-79889634bdc3',
         lineitems: [],
         metadata: [],
         notes: 'Volup conatus cruciamentum decor avaritia.',
         postedAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         status: Shared\AccountingVendorcreditStatus::Authorized,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-03T01:42:12.409Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-03T08:01:18.996Z'),
     ),
     connectionId: '<id>',
 );
@@ -1731,7 +1733,7 @@ if ($response->accountingVendorcredit !== null) {
 
 ## getAccountingAccount
 
-Retrieve an account
+Retrieves a single AccountingAccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1782,7 +1784,7 @@ if ($response->accountingAccount !== null) {
 
 ## getAccountingAgedpayable
 
-Retrieve an agedpayable
+Retrieves a single AccountingAgedpayable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1833,7 +1835,7 @@ if ($response->accountingAgedpayable !== null) {
 
 ## getAccountingAgedreceivable
 
-Retrieve an agedreceivable
+Retrieves a single AccountingAgedreceivable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1884,7 +1886,7 @@ if ($response->accountingAgedreceivable !== null) {
 
 ## getAccountingBalancesheet
 
-Retrieve a balancesheet
+Retrieves a single AccountingBalancesheet by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1935,7 +1937,7 @@ if ($response->accountingBalancesheet !== null) {
 
 ## getAccountingBankfeedaccount
 
-Retrieve a bankfeedaccount
+Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1986,7 +1988,7 @@ if ($response->accountingBankfeedaccount !== null) {
 
 ## getAccountingBankfeedtransaction
 
-Retrieve a bankfeedtransaction
+Retrieves a single AccountingBankfeedtransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2037,7 +2039,7 @@ if ($response->accountingBankfeedtransaction !== null) {
 
 ## getAccountingBill
 
-Retrieve a bill
+Retrieves a single AccountingBill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2088,7 +2090,7 @@ if ($response->accountingBill !== null) {
 
 ## getAccountingCashflow
 
-Retrieve a cashflow
+Retrieves a single AccountingCashflow by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2139,7 +2141,7 @@ if ($response->accountingCashflow !== null) {
 
 ## getAccountingCategory
 
-Retrieve a category
+Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2190,7 +2192,7 @@ if ($response->accountingCategory !== null) {
 
 ## getAccountingContact
 
-Retrieve a contact
+Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2241,7 +2243,7 @@ if ($response->accountingContact !== null) {
 
 ## getAccountingCreditmemo
 
-Retrieve a creditmemo
+Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2292,7 +2294,7 @@ if ($response->accountingCreditmemo !== null) {
 
 ## getAccountingExpense
 
-Retrieve an expense
+Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2343,7 +2345,7 @@ if ($response->accountingExpense !== null) {
 
 ## getAccountingExpensereport
 
-Retrieve an expensereport
+Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2394,7 +2396,7 @@ if ($response->accountingExpensereport !== null) {
 
 ## getAccountingInvoice
 
-Retrieve an invoice
+Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2445,7 +2447,7 @@ if ($response->accountingInvoice !== null) {
 
 ## getAccountingJournal
 
-Retrieve a journal
+Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2494,9 +2496,11 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## getAccountingOrder
+## ~~getAccountingOrder~~
 
-Retrieve an order
+Retrieves a single AccountingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -2547,7 +2551,7 @@ if ($response->accountingOrder !== null) {
 
 ## getAccountingOrganization
 
-Retrieve an organization
+Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2598,7 +2602,7 @@ if ($response->accountingOrganization !== null) {
 
 ## getAccountingPaymentterm
 
-Retrieve a paymentterm
+Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2649,7 +2653,7 @@ if ($response->accountingPaymentterm !== null) {
 
 ## getAccountingProfitloss
 
-Retrieve a profitloss
+Retrieves a single AccountingProfitloss by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2700,7 +2704,7 @@ if ($response->accountingProfitloss !== null) {
 
 ## getAccountingProject
 
-Retrieve a project
+Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2751,7 +2755,7 @@ if ($response->accountingProject !== null) {
 
 ## getAccountingPurchaseorder
 
-Retrieve a purchaseorder
+Retrieves a single AccountingPurchaseorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2802,7 +2806,7 @@ if ($response->accountingPurchaseorder !== null) {
 
 ## getAccountingPurchasereceipt
 
-Retrieve a purchasereceipt
+Retrieves a single AccountingPurchasereceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2853,7 +2857,7 @@ if ($response->accountingPurchasereceipt !== null) {
 
 ## getAccountingQuote
 
-Retrieve a quote
+Retrieves a single AccountingQuote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2904,7 +2908,7 @@ if ($response->accountingQuote !== null) {
 
 ## getAccountingSalesorder
 
-Retrieve a salesorder
+Retrieves a single AccountingSalesorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -2955,7 +2959,7 @@ if ($response->accountingSalesorder !== null) {
 
 ## getAccountingSalesreceipt
 
-Retrieve a salesreceipt
+Retrieves a single AccountingSalesreceipt by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3006,7 +3010,7 @@ if ($response->accountingSalesreceipt !== null) {
 
 ## getAccountingTaxrate
 
-Retrieve a taxrate
+Retrieves a single AccountingTaxrate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3057,7 +3061,7 @@ if ($response->accountingTaxrate !== null) {
 
 ## getAccountingTransaction
 
-Retrieve a transaction
+Retrieves a single AccountingTransaction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3108,7 +3112,7 @@ if ($response->accountingTransaction !== null) {
 
 ## getAccountingTrialbalance
 
-Retrieve a trialbalance
+Retrieves a single AccountingTrialbalance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3159,7 +3163,7 @@ if ($response->accountingTrialbalance !== null) {
 
 ## getAccountingVendorcredit
 
-Retrieve a vendorcredit
+Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -3210,7 +3214,7 @@ if ($response->accountingVendorcredit !== null) {
 
 ## listAccountingAccounts
 
-List all accounts
+Returns a list of AccountingAccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3260,7 +3264,7 @@ if ($response->accountingAccounts !== null) {
 
 ## listAccountingAgedpayables
 
-List all agedpayables
+Returns a list of AccountingAgedpayables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3310,7 +3314,7 @@ if ($response->accountingAgedpayables !== null) {
 
 ## listAccountingAgedreceivables
 
-List all agedreceivables
+Returns a list of AccountingAgedreceivables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3360,7 +3364,7 @@ if ($response->accountingAgedreceivables !== null) {
 
 ## listAccountingBalancesheets
 
-List all balancesheets
+Returns a list of AccountingBalancesheets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3410,7 +3414,7 @@ if ($response->accountingBalancesheets !== null) {
 
 ## listAccountingBankfeedaccounts
 
-List all bankfeedaccounts
+Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3460,7 +3464,7 @@ if ($response->accountingBankfeedaccounts !== null) {
 
 ## listAccountingBankfeedtransactions
 
-List all bankfeedtransactions
+Returns a list of AccountingBankfeedtransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3510,7 +3514,7 @@ if ($response->accountingBankfeedtransactions !== null) {
 
 ## listAccountingBills
 
-List all bills
+Returns a list of AccountingBills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3560,7 +3564,7 @@ if ($response->accountingBills !== null) {
 
 ## listAccountingCashflows
 
-List all cashflows
+Returns a list of AccountingCashflows. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3610,7 +3614,7 @@ if ($response->accountingCashflows !== null) {
 
 ## listAccountingCategories
 
-List all categories
+Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3660,7 +3664,7 @@ if ($response->accountingCategories !== null) {
 
 ## listAccountingContacts
 
-List all contacts
+Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3710,7 +3714,7 @@ if ($response->accountingContacts !== null) {
 
 ## listAccountingCreditmemoes
 
-List all creditmemoes
+Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3760,7 +3764,7 @@ if ($response->accountingCreditmemoes !== null) {
 
 ## listAccountingExpensereports
 
-List all expensereports
+Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3810,7 +3814,7 @@ if ($response->accountingExpensereports !== null) {
 
 ## listAccountingExpenses
 
-List all expenses
+Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3860,7 +3864,7 @@ if ($response->accountingExpenses !== null) {
 
 ## listAccountingInvoices
 
-List all invoices
+Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3910,7 +3914,7 @@ if ($response->accountingInvoices !== null) {
 
 ## listAccountingJournals
 
-List all journals
+Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -3958,9 +3962,11 @@ if ($response->accountingJournals !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## listAccountingOrders
+## ~~listAccountingOrders~~
 
-List all orders
+Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -4010,7 +4016,7 @@ if ($response->accountingOrders !== null) {
 
 ## listAccountingOrganizations
 
-List all organizations
+Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4060,7 +4066,7 @@ if ($response->accountingOrganizations !== null) {
 
 ## listAccountingPaymentterms
 
-List all paymentterms
+Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4110,7 +4116,7 @@ if ($response->accountingPaymentterms !== null) {
 
 ## listAccountingProfitlosses
 
-List all profitlosses
+Returns a list of AccountingProfitlosses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4160,7 +4166,7 @@ if ($response->accountingProfitlosses !== null) {
 
 ## listAccountingProjects
 
-List all projects
+Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4210,7 +4216,7 @@ if ($response->accountingProjects !== null) {
 
 ## listAccountingPurchaseorders
 
-List all purchaseorders
+Returns a list of AccountingPurchaseorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4260,7 +4266,7 @@ if ($response->accountingPurchaseorders !== null) {
 
 ## listAccountingPurchasereceipts
 
-List all purchasereceipts
+Returns a list of AccountingPurchasereceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4310,7 +4316,7 @@ if ($response->accountingPurchasereceipts !== null) {
 
 ## listAccountingQuotes
 
-List all quotes
+Returns a list of AccountingQuotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4360,7 +4366,7 @@ if ($response->accountingQuotes !== null) {
 
 ## listAccountingSalesorders
 
-List all salesorders
+Returns a list of AccountingSalesorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4410,7 +4416,7 @@ if ($response->accountingSalesorders !== null) {
 
 ## listAccountingSalesreceipts
 
-List all salesreceipts
+Returns a list of AccountingSalesreceipts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4460,7 +4466,7 @@ if ($response->accountingSalesreceipts !== null) {
 
 ## listAccountingTaxrates
 
-List all taxrates
+Returns a list of AccountingTaxrates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4510,7 +4516,7 @@ if ($response->accountingTaxrates !== null) {
 
 ## listAccountingTransactions
 
-List all transactions
+Returns a list of AccountingTransactions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4560,7 +4566,7 @@ if ($response->accountingTransactions !== null) {
 
 ## listAccountingTrialbalances
 
-List all trialbalances
+Returns a list of AccountingTrialbalances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4610,7 +4616,7 @@ if ($response->accountingTrialbalances !== null) {
 
 ## listAccountingVendorcredits
 
-List all vendorcredits
+Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -4660,7 +4666,7 @@ if ($response->accountingVendorcredits !== null) {
 
 ## patchAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -4688,7 +4694,7 @@ $request = new Operations\PatchAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'b89164f4-16d4-421e-842f-56eca530ec45',
+        id: 'c0445f00-3fb5-4d79-92ed-8286fdb0f9f0',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -4701,7 +4707,7 @@ $request = new Operations\PatchAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.106Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.336Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4734,7 +4740,7 @@ if ($response->accountingAccount !== null) {
 
 ## patchAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -4765,12 +4771,12 @@ $request = new Operations\PatchAccountingBankfeedaccountRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
         currency: 'AUD',
         feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
-        id: '1905f24b-d20f-459e-9b76-57cdbb658dea',
+        id: '194691c3-3685-4a7d-8885-f8b5fdb930a6',
         metadata: [],
         name: 'Corwin, Donnelly and Connelly Checking',
         routingNumber: '694667752',
         status: Shared\AccountingBankfeedaccountStatus::Active,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-23T19:56:22.329Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-24T13:41:42.669Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4803,7 +4809,7 @@ if ($response->accountingBankfeedaccount !== null) {
 
 ## patchAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -4832,15 +4838,15 @@ $request = new Operations\PatchAccountingBankfeedtransactionRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
         currency: 'CAD',
         description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-        id: '37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423',
+        id: '0ccd919c-7f10-48a9-8909-d562d7d5291a',
         isPending: true,
         merchantName: 'Buckridge - Feest',
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2025-04-14T19:58:00.144Z'),
+        postedAt: Utils\Utils::parseDateTime('2025-04-16T03:49:52.053Z'),
         reference: '79574105',
-        transactionAt: Utils\Utils::parseDateTime('2022-07-30T08:10:12.138Z'),
+        transactionAt: Utils\Utils::parseDateTime('2022-07-30T11:48:12.704Z'),
         type: Shared\AccountingBankfeedtransactionType::Credit,
-        updatedAt: Utils\Utils::parseDateTime('2022-05-25T01:44:39.015Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-05-25T03:29:13.176Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4873,7 +4879,7 @@ if ($response->accountingBankfeedtransaction !== null) {
 
 ## patchAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -4899,13 +4905,13 @@ $request = new Operations\PatchAccountingBillRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://puny-foodstuffs.name',
-                id: '5f7b5dee-8c62-4964-bedd-56fd074ac361',
+                id: '47e28818-2f6e-41d9-9ef8-4f7a72a6c602',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://grimy-characterization.net',
-                id: '5095116b-b393-4afd-87bc-d967ca04b70f',
+                id: 'c367990e-fc87-453d-b207-e522909fbfde',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466-1.pdf',
             ),
@@ -4918,7 +4924,7 @@ $request = new Operations\PatchAccountingBillRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2019-09-07T23:03:14.104Z'),
         extendedNotes: [],
-        id: 'c1f11f76-1eff-43e7-8f44-6a829c9ec2c4',
+        id: '39341e04-0e59-4b05-81de-8bf65b0c1ee7',
         lineitems: [],
         metadata: [],
         notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -4934,7 +4940,7 @@ $request = new Operations\PatchAccountingBillRequest(
         taxAmount: 0,
         term: Shared\Term::Net90,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2020-06-01T05:48:10.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-06-01T11:04:57.934Z'),
         url: 'https://cluttered-importance.org/bills/BILL-2466',
     ),
     connectionId: '<id>',
@@ -4968,7 +4974,7 @@ if ($response->accountingBill !== null) {
 
 ## patchAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -4993,11 +4999,11 @@ $request = new Operations\PatchAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
         description: 'Textus ab thymum labore basium.',
-        id: '19d65ff6-bd39-4539-9f5e-2d62aeaa23a0',
+        id: '0182f5b6-43dd-4d64-bb88-31cf6a69e7b6',
         isActive: false,
         metadata: [],
         name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T12:11:02.655Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T20:18:03.717Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5030,7 +5036,7 @@ if ($response->accountingCategory !== null) {
 
 ## patchAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -5077,7 +5083,7 @@ $request = new Operations\PatchAccountingContactRequest(
             ),
         ],
         firstName: 'Delores',
-        id: 'f99279d9-5e04-4e2f-aac5-98630e0e6481',
+        id: '812919c1-537e-4487-aea9-bf5b7ca3ce68',
         identification: '531850872',
         isActive: true,
         isCustomer: true,
@@ -5088,7 +5094,7 @@ $request = new Operations\PatchAccountingContactRequest(
         paymentMethods: [
             new Shared\AccountingContactPaymentMethod(
                 default: true,
-                id: 'c10d1ec1-1157-467d-97e9-a468cfcb5576',
+                id: 'e6bbcdbb-20f0-4d79-a5a9-b2666b6f950e',
                 name: 'Visa 7844',
                 type: Shared\AccountingContactPaymentMethodType::Card,
             ),
@@ -5110,7 +5116,7 @@ $request = new Operations\PatchAccountingContactRequest(
                 type: Shared\AccountingTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2023-12-19T20:51:25.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-20T18:25:43.240Z'),
         website: 'https://kertzmanngroup.com',
     ),
     connectionId: '<id>',
@@ -5144,7 +5150,7 @@ if ($response->accountingContact !== null) {
 
 ## patchAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -5174,7 +5180,7 @@ $request = new Operations\PatchAccountingCreditmemoRequest(
         creditmemoNumber: 'CM-99537',
         currency: 'AUD',
         discountAmount: 0,
-        id: '568d9318-1556-4402-88ff-ea980ec43dbe',
+        id: 'fe04c90f-0adf-4fb0-82e1-61d23fb2ace1',
         lineitems: [],
         metadata: [],
         notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -5183,7 +5189,7 @@ $request = new Operations\PatchAccountingCreditmemoRequest(
         status: Shared\AccountingCreditmemoStatus::Authorized,
         taxAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T07:57:22.916Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T14:30:43.054Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5216,7 +5222,7 @@ if ($response->accountingCreditmemo !== null) {
 
 ## patchAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -5242,13 +5248,13 @@ $request = new Operations\PatchAccountingExpenseRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://rubbery-couch.biz/',
-                id: '6c24dd53-2b45-4334-bbcf-75c636f28f60',
+                id: '6ca3099c-73ea-4907-a22c-16ecec983921',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://appropriate-smog.biz/',
-                id: 'e1a08bed-3ed0-4fdc-b9ee-fc332c88cd5f',
+                id: 'b089fe25-0a8f-4ad7-86fd-807ee1c337e0',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696-1.pdf',
             ),
@@ -5257,10 +5263,10 @@ $request = new Operations\PatchAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'GBP',
         externalNumber: 'EXP-38303',
-        id: '3c876856-b200-4d87-b983-23fea5ab9ebe',
+        id: '73aff9eb-cf6d-4b65-b39a-ae3fe05c7c6f',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '81fbe3f0-5c73-41bd-9bbc-612377427866',
+                id: 'aeda1539-6127-40c0-bc85-3f32b5324ebd',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 364.74,
@@ -5268,7 +5274,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '0d93bd35-f966-4737-a0c1-2a6f5b7f9429',
+                id: '7912fd65-f0e4-44c8-a00e-d5c62d7e7066',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 258.35,
@@ -5276,7 +5282,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '6f9434e8-5db2-474b-8f0e-3ae4fb4de269',
+                id: '8aaae847-0961-45d1-a812-3894733a5642',
                 itemName: 'Conference ticket',
                 notes: 'Casus umquam conicio cinis demitto sint.',
                 taxAmount: 0,
@@ -5285,7 +5291,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'be81f7a9-a03d-4972-be6a-ff45503fa595',
+                id: '0953cb8d-59de-4dd8-87bf-f2d4f07c5eec',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 157.04,
@@ -5293,7 +5299,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'be6beea5-ab5d-4c48-93ee-b9e4551935ff',
+                id: '59cbffa4-b543-402b-927d-23cb3449b1ff',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 164.02,
@@ -5309,7 +5315,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
         taxAmount: 0,
         totalAmount: 972.29,
         type: Shared\AccountingExpenseType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2020-09-02T07:17:12.139Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-09-02T08:59:36.002Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5342,7 +5348,7 @@ if ($response->accountingExpense !== null) {
 
 ## patchAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -5365,16 +5371,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'GBP',
         externalNumber: 'ER-31240',
-        id: '69060eb7-1248-4734-8695-92f015020820',
+        id: 'ca3d3f3d-ac03-4f98-9f30-5f77919ee7ca',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '736d934a-f77b-47de-a5c1-82c06e7a0566',
+                id: '26a42037-a75f-43ca-8145-8ecf947b1ed1',
                 itemName: 'Conference ticket',
                 taxAmount: 0,
                 totalAmount: 39.9,
@@ -5382,7 +5388,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '1fd15cda-8fdd-4d91-bb47-d80121e55172',
+                id: 'abd2a5a1-da4a-457b-a8b5-0af91e9b002e',
                 itemName: 'Flight',
                 notes: 'Soluta omnis dolor.',
                 taxAmount: 0,
@@ -5391,7 +5397,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'ba79aa66-d7d6-4454-b09f-d90f5c60ac9e',
+                id: 'cac8fe5a-d4a9-4c95-9579-dd7fc97fc758',
                 itemName: 'Client dinner',
                 notes: 'Altus caveo capio.',
                 taxAmount: 0,
@@ -5400,7 +5406,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '9d01fb30-5963-46c4-a6f6-fc0409d4ab78',
+                id: 'a2aac9f8-4107-4bf5-a198-cd4aa7fcec70',
                 itemName: 'Flight',
                 taxAmount: 0,
                 totalAmount: 445.27,
@@ -5412,11 +5418,11 @@ $request = new Operations\PatchAccountingExpensereportRequest(
         name: 'Lolita Kunde - October expenses',
         postedAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         reimbursedAmount: 908.46,
-        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 0,
         totalAmount: 908.46,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5449,7 +5455,7 @@ if ($response->accountingExpensereport !== null) {
 
 ## patchAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -5475,13 +5481,13 @@ $request = new Operations\PatchAccountingInvoiceRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://glossy-markup.net/',
-                id: '21a65956-7898-49fe-954e-657be9079de1',
+                id: '49b43410-bdef-4ec5-b80d-db53c6dda2ae',
                 mimeType: 'application/pdf',
                 name: 'INV-77705.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://earnest-giggle.net',
-                id: '0de07f5c-0422-4bf1-8312-b38a6e63a87d',
+                id: 'd2133d3d-896a-4099-bdee-3a2d53872966',
                 mimeType: 'application/pdf',
                 name: 'INV-77705-1.pdf',
             ),
@@ -5493,7 +5499,7 @@ $request = new Operations\PatchAccountingInvoiceRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2022-12-07T14:17:29.587Z'),
         extendedNotes: [],
-        id: '896edd87-b896-4ec1-9035-22e2a216a31b',
+        id: 'c76c91c5-d89b-4b94-bd13-e9a0a6c57a48',
         invoiceNumber: 'INV-77705',
         isInclusiveOfTax: false,
         lineitems: [],
@@ -5511,7 +5517,7 @@ $request = new Operations\PatchAccountingInvoiceRequest(
         term: Shared\AccountingInvoiceTerm::Net25,
         totalAmount: 0,
         type: Shared\AccountingInvoiceType::Invoice,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-23T13:03:42.816Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-25T06:46:36.228Z'),
         url: 'https://gifted-yarmulke.info/invoices/INV-77705',
     ),
     connectionId: '<id>',
@@ -5545,7 +5551,7 @@ if ($response->accountingInvoice !== null) {
 
 ## patchAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -5573,16 +5579,16 @@ $request = new Operations\PatchAccountingJournalRequest(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T15:14:55.881Z'),
         currency: 'CAD',
         description: 'Cilicium minima calco constans adipisci.',
-        id: 'd31da702-1e25-44be-a4d9-de209d629dab',
+        id: '3eaf5dbc-994d-405f-9fb5-dd25c1b1b0e1',
         isInclusiveOfTax: true,
         lineitems: [],
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2023-11-06T10:40:52.844Z'),
+        postedAt: Utils\Utils::parseDateTime('2023-11-07T13:12:51.071Z'),
         reference: 'JE-78884',
         source: 'crustulum',
         status: Shared\AccountingJournalStatus::Void,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2022-01-10T19:42:52.137Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-11T09:13:52.366Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5613,9 +5619,11 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## patchAccountingOrder
+## ~~patchAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -5648,7 +5656,7 @@ $request = new Operations\PatchAccountingOrderRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         currency: 'GBP',
-        id: '4c2c437b-fa37-41d5-a10b-c8e726820b58',
+        id: '282ec9b9-dd69-4acf-922e-27d049792b63',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
@@ -5663,7 +5671,7 @@ $request = new Operations\PatchAccountingOrderRequest(
         status: Shared\AccountingOrderStatus::Authorized,
         totalAmount: 0,
         type: Shared\AccountingOrderType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2022-02-08T07:18:52.791Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-08T17:08:09.741Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5696,7 +5704,7 @@ if ($response->accountingOrder !== null) {
 
 ## patchAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -5728,12 +5736,12 @@ $request = new Operations\PatchAccountingPaymenttermRequest(
         discountPercent: 5,
         dueDays: 57,
         dueNextMonthDays: 9,
-        id: '454eabd4-960c-4e98-97ff-7883db6f63e6',
+        id: '5ed65666-06fc-4b4e-b933-47edea610552',
         isActive: false,
         metadata: [],
         name: 'Net 30',
         type: Shared\AccountingPaymenttermType::Net15,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-08T11:12:46.149Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-10T03:39:59.475Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5766,7 +5774,7 @@ if ($response->accountingPaymentterm !== null) {
 
 ## patchAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -5819,7 +5827,7 @@ if ($response->accountingProject !== null) {
 
 ## patchAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -5855,7 +5863,7 @@ $request = new Operations\PatchAccountingPurchaseorderRequest(
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
         currency: 'EUR',
-        id: '48e97068-ce4d-4074-985d-773cfe1d221d',
+        id: 'c3032a3a-85c9-4eab-a1f6-59691af444f7',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
@@ -5869,7 +5877,7 @@ $request = new Operations\PatchAccountingPurchaseorderRequest(
         ),
         status: Shared\AccountingPurchaseorderStatus::Submitted,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2021-08-11T06:00:23.906Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-08-11T11:24:00.103Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5902,7 +5910,7 @@ if ($response->accountingPurchaseorder !== null) {
 
 ## patchAccountingQuote
 
-Update a quote
+Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 
 ### Example Usage
 
@@ -5955,7 +5963,7 @@ if ($response->accountingQuote !== null) {
 
 ## patchAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -5988,13 +5996,13 @@ $request = new Operations\PatchAccountingSalesorderRequest(
             regionCode: 'MO',
         ),
         categoryIds: [],
-        closedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.174Z'),
+        closedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.199Z'),
         createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
         currency: 'USD',
         discountAmount: 0,
         fees: [],
         fulfillmentType: Shared\FulfillmentType::Other,
-        id: '81444e74-2438-4d48-a12a-446390d8c063',
+        id: '034dfeb1-d580-474c-8283-43e2e41f0d01',
         lineitems: [],
         metadata: [],
         orderNumber: '832663',
@@ -6016,7 +6024,7 @@ $request = new Operations\PatchAccountingSalesorderRequest(
         taxAmount: 0,
         tipAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.174Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.199Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -6049,7 +6057,7 @@ if ($response->accountingSalesorder !== null) {
 
 ## patchAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -6083,7 +6091,7 @@ $request = new Operations\PatchAccountingTaxrateRequest(
         createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
         description: 'Exempt (0%)',
         effectiveRate: 0,
-        id: '7efef66d-926b-4c67-9803-216a861ed3ec',
+        id: 'df82a08b-d352-4145-845e-aa4f89cb154d',
         isActive: false,
         isCompound: false,
         metadata: [],
@@ -6092,7 +6100,7 @@ $request = new Operations\PatchAccountingTaxrateRequest(
         region: 'KS',
         totalRate: 0,
         type: Shared\AccountingTaxrateType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-13T05:09:51.173Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-13T05:55:41.908Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -6125,7 +6133,7 @@ if ($response->accountingTaxrate !== null) {
 
 ## patchAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -6149,12 +6157,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '3fc62cc2-c890-432a-baa8-21b3a333e541',
+        id: 'edc4c799-9aa8-44e0-bfbf-7c2d70c68050',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-                id: 'b4303d20-48f1-49bc-9d58-f21e053cdbcc',
+                id: '15879e14-d6a1-4fc7-8311-04bd9f86ac66',
                 name: 'Shirt',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -6166,7 +6174,7 @@ $request = new Operations\PatchAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:08:29.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:29:16.791Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -6199,7 +6207,7 @@ if ($response->accountingTransaction !== null) {
 
 ## patchAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -6226,14 +6234,14 @@ $request = new Operations\PatchAccountingVendorcreditRequest(
         balanceAmount: 0,
         createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         currency: 'USD',
-        id: '421efb11-574f-4a58-b1b3-c13d3675e8d3',
+        id: '8582d371-dfff-4f5c-b05f-342aafd613ef',
         lineitems: [],
         metadata: [],
         notes: 'Volup conatus cruciamentum decor avaritia.',
         postedAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         status: Shared\AccountingVendorcreditStatus::Authorized,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-03T01:42:12.414Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-03T08:01:19.002Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -6266,7 +6274,7 @@ if ($response->accountingVendorcredit !== null) {
 
 ## removeAccountingAccount
 
-Remove an account
+Deletes the AccountingAccount identified by `id`.
 
 ### Example Usage
 
@@ -6317,7 +6325,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingBankfeedaccount
 
-Remove a bankfeedaccount
+Deletes the AccountingBankfeedaccount identified by `id`.
 
 ### Example Usage
 
@@ -6368,7 +6376,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingBankfeedtransaction
 
-Remove a bankfeedtransaction
+Deletes the AccountingBankfeedtransaction identified by `id`.
 
 ### Example Usage
 
@@ -6419,7 +6427,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingBill
 
-Remove a bill
+Deletes the AccountingBill identified by `id`.
 
 ### Example Usage
 
@@ -6470,7 +6478,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingCategory
 
-Remove a category
+Deletes the AccountingCategory identified by `id`.
 
 ### Example Usage
 
@@ -6521,7 +6529,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingContact
 
-Remove a contact
+Deletes the AccountingContact identified by `id`.
 
 ### Example Usage
 
@@ -6572,7 +6580,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingCreditmemo
 
-Remove a creditmemo
+Deletes the AccountingCreditmemo identified by `id`.
 
 ### Example Usage
 
@@ -6623,7 +6631,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingExpense
 
-Remove an expense
+Deletes the AccountingExpense identified by `id`.
 
 ### Example Usage
 
@@ -6674,7 +6682,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingExpensereport
 
-Remove an expensereport
+Deletes the AccountingExpensereport identified by `id`.
 
 ### Example Usage
 
@@ -6725,7 +6733,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingInvoice
 
-Remove an invoice
+Deletes the AccountingInvoice identified by `id`.
 
 ### Example Usage
 
@@ -6776,7 +6784,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingJournal
 
-Remove a journal
+Deletes the AccountingJournal identified by `id`.
 
 ### Example Usage
 
@@ -6825,9 +6833,11 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## removeAccountingOrder
+## ~~removeAccountingOrder~~
 
-Remove an order
+Deletes the AccountingOrder identified by `id`.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -6878,7 +6888,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingPaymentterm
 
-Remove a paymentterm
+Deletes the AccountingPaymentterm identified by `id`.
 
 ### Example Usage
 
@@ -6929,7 +6939,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingProject
 
-Remove a project
+Deletes the AccountingProject identified by `id`.
 
 ### Example Usage
 
@@ -6980,7 +6990,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingPurchaseorder
 
-Remove a purchaseorder
+Deletes the AccountingPurchaseorder identified by `id`.
 
 ### Example Usage
 
@@ -7031,7 +7041,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingQuote
 
-Remove a quote
+Deletes the AccountingQuote identified by `id`.
 
 ### Example Usage
 
@@ -7082,7 +7092,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingSalesorder
 
-Remove a salesorder
+Deletes the AccountingSalesorder identified by `id`.
 
 ### Example Usage
 
@@ -7133,7 +7143,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingTaxrate
 
-Remove a taxrate
+Deletes the AccountingTaxrate identified by `id`.
 
 ### Example Usage
 
@@ -7184,7 +7194,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingTransaction
 
-Remove a transaction
+Deletes the AccountingTransaction identified by `id`.
 
 ### Example Usage
 
@@ -7235,7 +7245,7 @@ if ($response->statusCode === 200) {
 
 ## removeAccountingVendorcredit
 
-Remove a vendorcredit
+Deletes the AccountingVendorcredit identified by `id`.
 
 ### Example Usage
 
@@ -7286,7 +7296,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingAccount
 
-Update an account
+Updates the AccountingAccount identified by `id`. Provide the unified AccountingAccount fields to change in the request body.
 
 ### Example Usage
 
@@ -7314,7 +7324,7 @@ $request = new Operations\UpdateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'b89164f4-16d4-421e-842f-56eca530ec45',
+        id: 'c0445f00-3fb5-4d79-92ed-8286fdb0f9f0',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -7327,7 +7337,7 @@ $request = new Operations\UpdateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T21:40:54.106Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.336Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -7360,7 +7370,7 @@ if ($response->accountingAccount !== null) {
 
 ## updateAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -7391,12 +7401,12 @@ $request = new Operations\UpdateAccountingBankfeedaccountRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
         currency: 'AUD',
         feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
-        id: '1905f24b-d20f-459e-9b76-57cdbb658dea',
+        id: '194691c3-3685-4a7d-8885-f8b5fdb930a6',
         metadata: [],
         name: 'Corwin, Donnelly and Connelly Checking',
         routingNumber: '694667752',
         status: Shared\AccountingBankfeedaccountStatus::Active,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-23T19:56:22.329Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-24T13:41:42.669Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -7429,7 +7439,7 @@ if ($response->accountingBankfeedaccount !== null) {
 
 ## updateAccountingBankfeedtransaction
 
-Update a bankfeedtransaction
+Updates the AccountingBankfeedtransaction identified by `id`. Provide the unified AccountingBankfeedtransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -7458,15 +7468,15 @@ $request = new Operations\UpdateAccountingBankfeedtransactionRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-24T23:41:08.374Z'),
         currency: 'CAD',
         description: 'Payment of SRD 92.72 for withdrawal at Halvorson - Ziemann, processed with card ending ****3731 linked to account ***7781.',
-        id: '37cd0e2a-1f6a-43b1-a20e-2cdd60ec6423',
+        id: '0ccd919c-7f10-48a9-8909-d562d7d5291a',
         isPending: true,
         merchantName: 'Buckridge - Feest',
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2025-04-14T19:58:00.144Z'),
+        postedAt: Utils\Utils::parseDateTime('2025-04-16T03:49:52.053Z'),
         reference: '79574105',
-        transactionAt: Utils\Utils::parseDateTime('2022-07-30T08:10:12.138Z'),
+        transactionAt: Utils\Utils::parseDateTime('2022-07-30T11:48:12.704Z'),
         type: Shared\AccountingBankfeedtransactionType::Credit,
-        updatedAt: Utils\Utils::parseDateTime('2022-05-25T01:44:39.015Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-05-25T03:29:13.176Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -7499,7 +7509,7 @@ if ($response->accountingBankfeedtransaction !== null) {
 
 ## updateAccountingBill
 
-Update a bill
+Updates the AccountingBill identified by `id`. Provide the unified AccountingBill fields to change in the request body.
 
 ### Example Usage
 
@@ -7525,13 +7535,13 @@ $request = new Operations\UpdateAccountingBillRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://puny-foodstuffs.name',
-                id: '5f7b5dee-8c62-4964-bedd-56fd074ac361',
+                id: '47e28818-2f6e-41d9-9ef8-4f7a72a6c602',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://grimy-characterization.net',
-                id: '5095116b-b393-4afd-87bc-d967ca04b70f',
+                id: 'c367990e-fc87-453d-b207-e522909fbfde',
                 mimeType: 'application/pdf',
                 name: 'BILL-2466-1.pdf',
             ),
@@ -7544,7 +7554,7 @@ $request = new Operations\UpdateAccountingBillRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2019-09-07T23:03:14.104Z'),
         extendedNotes: [],
-        id: 'c1f11f76-1eff-43e7-8f44-6a829c9ec2c4',
+        id: '39341e04-0e59-4b05-81de-8bf65b0c1ee7',
         lineitems: [],
         metadata: [],
         notes: 'Admiratio deporto tutamen cilicium infit amissio ante demulceo.',
@@ -7560,7 +7570,7 @@ $request = new Operations\UpdateAccountingBillRequest(
         taxAmount: 0,
         term: Shared\Term::Net90,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2020-06-01T05:48:10.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-06-01T11:04:57.934Z'),
         url: 'https://cluttered-importance.org/bills/BILL-2466',
     ),
     connectionId: '<id>',
@@ -7594,7 +7604,7 @@ if ($response->accountingBill !== null) {
 
 ## updateAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -7619,11 +7629,11 @@ $request = new Operations\UpdateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
         description: 'Textus ab thymum labore basium.',
-        id: '19d65ff6-bd39-4539-9f5e-2d62aeaa23a0',
+        id: '0182f5b6-43dd-4d64-bb88-31cf6a69e7b6',
         isActive: false,
         metadata: [],
         name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T12:11:02.655Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T20:18:03.717Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -7656,7 +7666,7 @@ if ($response->accountingCategory !== null) {
 
 ## updateAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -7703,7 +7713,7 @@ $request = new Operations\UpdateAccountingContactRequest(
             ),
         ],
         firstName: 'Delores',
-        id: 'f99279d9-5e04-4e2f-aac5-98630e0e6481',
+        id: '812919c1-537e-4487-aea9-bf5b7ca3ce68',
         identification: '531850872',
         isActive: true,
         isCustomer: true,
@@ -7714,7 +7724,7 @@ $request = new Operations\UpdateAccountingContactRequest(
         paymentMethods: [
             new Shared\AccountingContactPaymentMethod(
                 default: true,
-                id: 'c10d1ec1-1157-467d-97e9-a468cfcb5576',
+                id: 'e6bbcdbb-20f0-4d79-a5a9-b2666b6f950e',
                 name: 'Visa 7844',
                 type: Shared\AccountingContactPaymentMethodType::Card,
             ),
@@ -7736,7 +7746,7 @@ $request = new Operations\UpdateAccountingContactRequest(
                 type: Shared\AccountingTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2023-12-19T20:51:25.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-20T18:25:43.240Z'),
         website: 'https://kertzmanngroup.com',
     ),
     connectionId: '<id>',
@@ -7770,7 +7780,7 @@ if ($response->accountingContact !== null) {
 
 ## updateAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -7800,7 +7810,7 @@ $request = new Operations\UpdateAccountingCreditmemoRequest(
         creditmemoNumber: 'CM-99537',
         currency: 'AUD',
         discountAmount: 0,
-        id: '568d9318-1556-4402-88ff-ea980ec43dbe',
+        id: 'fe04c90f-0adf-4fb0-82e1-61d23fb2ace1',
         lineitems: [],
         metadata: [],
         notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -7809,7 +7819,7 @@ $request = new Operations\UpdateAccountingCreditmemoRequest(
         status: Shared\AccountingCreditmemoStatus::Authorized,
         taxAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T07:57:22.916Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T14:30:43.054Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -7842,7 +7852,7 @@ if ($response->accountingCreditmemo !== null) {
 
 ## updateAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -7868,13 +7878,13 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://rubbery-couch.biz/',
-                id: '6c24dd53-2b45-4334-bbcf-75c636f28f60',
+                id: '6ca3099c-73ea-4907-a22c-16ecec983921',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://appropriate-smog.biz/',
-                id: 'e1a08bed-3ed0-4fdc-b9ee-fc332c88cd5f',
+                id: 'b089fe25-0a8f-4ad7-86fd-807ee1c337e0',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696-1.pdf',
             ),
@@ -7883,10 +7893,10 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'GBP',
         externalNumber: 'EXP-38303',
-        id: '3c876856-b200-4d87-b983-23fea5ab9ebe',
+        id: '73aff9eb-cf6d-4b65-b39a-ae3fe05c7c6f',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '81fbe3f0-5c73-41bd-9bbc-612377427866',
+                id: 'aeda1539-6127-40c0-bc85-3f32b5324ebd',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 364.74,
@@ -7894,7 +7904,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '0d93bd35-f966-4737-a0c1-2a6f5b7f9429',
+                id: '7912fd65-f0e4-44c8-a00e-d5c62d7e7066',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 258.35,
@@ -7902,7 +7912,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '6f9434e8-5db2-474b-8f0e-3ae4fb4de269',
+                id: '8aaae847-0961-45d1-a812-3894733a5642',
                 itemName: 'Conference ticket',
                 notes: 'Casus umquam conicio cinis demitto sint.',
                 taxAmount: 0,
@@ -7911,7 +7921,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'be81f7a9-a03d-4972-be6a-ff45503fa595',
+                id: '0953cb8d-59de-4dd8-87bf-f2d4f07c5eec',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 157.04,
@@ -7919,7 +7929,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'be6beea5-ab5d-4c48-93ee-b9e4551935ff',
+                id: '59cbffa4-b543-402b-927d-23cb3449b1ff',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 164.02,
@@ -7935,7 +7945,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         taxAmount: 0,
         totalAmount: 972.29,
         type: Shared\AccountingExpenseType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2020-09-02T07:17:12.139Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-09-02T08:59:36.002Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -7968,7 +7978,7 @@ if ($response->accountingExpense !== null) {
 
 ## updateAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -7991,16 +8001,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'GBP',
         externalNumber: 'ER-31240',
-        id: '69060eb7-1248-4734-8695-92f015020820',
+        id: 'ca3d3f3d-ac03-4f98-9f30-5f77919ee7ca',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '736d934a-f77b-47de-a5c1-82c06e7a0566',
+                id: '26a42037-a75f-43ca-8145-8ecf947b1ed1',
                 itemName: 'Conference ticket',
                 taxAmount: 0,
                 totalAmount: 39.9,
@@ -8008,7 +8018,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '1fd15cda-8fdd-4d91-bb47-d80121e55172',
+                id: 'abd2a5a1-da4a-457b-a8b5-0af91e9b002e',
                 itemName: 'Flight',
                 notes: 'Soluta omnis dolor.',
                 taxAmount: 0,
@@ -8017,7 +8027,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'ba79aa66-d7d6-4454-b09f-d90f5c60ac9e',
+                id: 'cac8fe5a-d4a9-4c95-9579-dd7fc97fc758',
                 itemName: 'Client dinner',
                 notes: 'Altus caveo capio.',
                 taxAmount: 0,
@@ -8026,7 +8036,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '9d01fb30-5963-46c4-a6f6-fc0409d4ab78',
+                id: 'a2aac9f8-4107-4bf5-a198-cd4aa7fcec70',
                 itemName: 'Flight',
                 taxAmount: 0,
                 totalAmount: 445.27,
@@ -8038,11 +8048,11 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
         name: 'Lolita Kunde - October expenses',
         postedAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         reimbursedAmount: 908.46,
-        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 0,
         totalAmount: 908.46,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -8075,7 +8085,7 @@ if ($response->accountingExpensereport !== null) {
 
 ## updateAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -8101,13 +8111,13 @@ $request = new Operations\UpdateAccountingInvoiceRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://glossy-markup.net/',
-                id: '21a65956-7898-49fe-954e-657be9079de1',
+                id: '49b43410-bdef-4ec5-b80d-db53c6dda2ae',
                 mimeType: 'application/pdf',
                 name: 'INV-77705.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://earnest-giggle.net',
-                id: '0de07f5c-0422-4bf1-8312-b38a6e63a87d',
+                id: 'd2133d3d-896a-4099-bdee-3a2d53872966',
                 mimeType: 'application/pdf',
                 name: 'INV-77705-1.pdf',
             ),
@@ -8119,7 +8129,7 @@ $request = new Operations\UpdateAccountingInvoiceRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2022-12-07T14:17:29.587Z'),
         extendedNotes: [],
-        id: '896edd87-b896-4ec1-9035-22e2a216a31b',
+        id: 'c76c91c5-d89b-4b94-bd13-e9a0a6c57a48',
         invoiceNumber: 'INV-77705',
         isInclusiveOfTax: false,
         lineitems: [],
@@ -8137,7 +8147,7 @@ $request = new Operations\UpdateAccountingInvoiceRequest(
         term: Shared\AccountingInvoiceTerm::Net25,
         totalAmount: 0,
         type: Shared\AccountingInvoiceType::Invoice,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-23T13:03:42.816Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-25T06:46:36.228Z'),
         url: 'https://gifted-yarmulke.info/invoices/INV-77705',
     ),
     connectionId: '<id>',
@@ -8171,7 +8181,7 @@ if ($response->accountingInvoice !== null) {
 
 ## updateAccountingJournal
 
-Update a journal
+Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
 
 ### Example Usage
 
@@ -8199,16 +8209,16 @@ $request = new Operations\UpdateAccountingJournalRequest(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T15:14:55.881Z'),
         currency: 'CAD',
         description: 'Cilicium minima calco constans adipisci.',
-        id: 'd31da702-1e25-44be-a4d9-de209d629dab',
+        id: '3eaf5dbc-994d-405f-9fb5-dd25c1b1b0e1',
         isInclusiveOfTax: true,
         lineitems: [],
         metadata: [],
-        postedAt: Utils\Utils::parseDateTime('2023-11-06T10:40:52.844Z'),
+        postedAt: Utils\Utils::parseDateTime('2023-11-07T13:12:51.071Z'),
         reference: 'JE-78884',
         source: 'crustulum',
         status: Shared\AccountingJournalStatus::Void,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2022-01-10T19:42:52.137Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-11T09:13:52.366Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -8239,9 +8249,11 @@ if ($response->accountingJournal !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
-## updateAccountingOrder
+## ~~updateAccountingOrder~~
 
-Update an order
+Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
+
+> :warning: **DEPRECATED**: This will be removed in a future release, please migrate away from it as soon as possible.
 
 ### Example Usage
 
@@ -8274,7 +8286,7 @@ $request = new Operations\UpdateAccountingOrderRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         currency: 'GBP',
-        id: '4c2c437b-fa37-41d5-a10b-c8e726820b58',
+        id: '282ec9b9-dd69-4acf-922e-27d049792b63',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
@@ -8289,7 +8301,7 @@ $request = new Operations\UpdateAccountingOrderRequest(
         status: Shared\AccountingOrderStatus::Authorized,
         totalAmount: 0,
         type: Shared\AccountingOrderType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2022-02-08T07:18:52.791Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-08T17:08:09.741Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -8322,7 +8334,7 @@ if ($response->accountingOrder !== null) {
 
 ## updateAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -8354,12 +8366,12 @@ $request = new Operations\UpdateAccountingPaymenttermRequest(
         discountPercent: 5,
         dueDays: 57,
         dueNextMonthDays: 9,
-        id: '454eabd4-960c-4e98-97ff-7883db6f63e6',
+        id: '5ed65666-06fc-4b4e-b933-47edea610552',
         isActive: false,
         metadata: [],
         name: 'Net 30',
         type: Shared\AccountingPaymenttermType::Net15,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-08T11:12:46.149Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-10T03:39:59.475Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -8392,7 +8404,7 @@ if ($response->accountingPaymentterm !== null) {
 
 ## updateAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -8445,7 +8457,7 @@ if ($response->accountingProject !== null) {
 
 ## updateAccountingPurchaseorder
 
-Update a purchaseorder
+Updates the AccountingPurchaseorder identified by `id`. Provide the unified AccountingPurchaseorder fields to change in the request body.
 
 ### Example Usage
 
@@ -8481,7 +8493,7 @@ $request = new Operations\UpdateAccountingPurchaseorderRequest(
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
         currency: 'EUR',
-        id: '48e97068-ce4d-4074-985d-773cfe1d221d',
+        id: 'c3032a3a-85c9-4eab-a1f6-59691af444f7',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-12-12T07:17:47.021Z'),
@@ -8495,7 +8507,7 @@ $request = new Operations\UpdateAccountingPurchaseorderRequest(
         ),
         status: Shared\AccountingPurchaseorderStatus::Submitted,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2021-08-11T06:00:23.906Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-08-11T11:24:00.103Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -8528,7 +8540,7 @@ if ($response->accountingPurchaseorder !== null) {
 
 ## updateAccountingQuote
 
-Update a quote
+Updates the AccountingQuote identified by `id`. Provide the unified AccountingQuote fields to change in the request body.
 
 ### Example Usage
 
@@ -8581,7 +8593,7 @@ if ($response->accountingQuote !== null) {
 
 ## updateAccountingSalesorder
 
-Update a salesorder
+Updates the AccountingSalesorder identified by `id`. Provide the unified AccountingSalesorder fields to change in the request body.
 
 ### Example Usage
 
@@ -8614,13 +8626,13 @@ $request = new Operations\UpdateAccountingSalesorderRequest(
             regionCode: 'MO',
         ),
         categoryIds: [],
-        closedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.174Z'),
+        closedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.199Z'),
         createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
         currency: 'USD',
         discountAmount: 0,
         fees: [],
         fulfillmentType: Shared\FulfillmentType::Other,
-        id: '81444e74-2438-4d48-a12a-446390d8c063',
+        id: '034dfeb1-d580-474c-8283-43e2e41f0d01',
         lineitems: [],
         metadata: [],
         orderNumber: '832663',
@@ -8642,7 +8654,7 @@ $request = new Operations\UpdateAccountingSalesorderRequest(
         taxAmount: 0,
         tipAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-25T12:57:23.174Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-26T00:48:27.199Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -8675,7 +8687,7 @@ if ($response->accountingSalesorder !== null) {
 
 ## updateAccountingTaxrate
 
-Update a taxrate
+Updates the AccountingTaxrate identified by `id`. Provide the unified AccountingTaxrate fields to change in the request body.
 
 ### Example Usage
 
@@ -8709,7 +8721,7 @@ $request = new Operations\UpdateAccountingTaxrateRequest(
         createdAt: Utils\Utils::parseDateTime('2020-01-04T10:37:56.894Z'),
         description: 'Exempt (0%)',
         effectiveRate: 0,
-        id: '7efef66d-926b-4c67-9803-216a861ed3ec',
+        id: 'df82a08b-d352-4145-845e-aa4f89cb154d',
         isActive: false,
         isCompound: false,
         metadata: [],
@@ -8718,7 +8730,7 @@ $request = new Operations\UpdateAccountingTaxrateRequest(
         region: 'KS',
         totalRate: 0,
         type: Shared\AccountingTaxrateType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-13T05:09:51.173Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-13T05:55:41.908Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -8751,7 +8763,7 @@ if ($response->accountingTaxrate !== null) {
 
 ## updateAccountingTransaction
 
-Update a transaction
+Updates the AccountingTransaction identified by `id`. Provide the unified AccountingTransaction fields to change in the request body.
 
 ### Example Usage
 
@@ -8775,12 +8787,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '3fc62cc2-c890-432a-baa8-21b3a333e541',
+        id: 'edc4c799-9aa8-44e0-bfbf-7c2d70c68050',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-                id: 'b4303d20-48f1-49bc-9d58-f21e053cdbcc',
+                id: '15879e14-d6a1-4fc7-8311-04bd9f86ac66',
                 name: 'Shirt',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -8792,7 +8804,7 @@ $request = new Operations\UpdateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:08:29.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T06:29:16.791Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -8825,7 +8837,7 @@ if ($response->accountingTransaction !== null) {
 
 ## updateAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -8852,14 +8864,14 @@ $request = new Operations\UpdateAccountingVendorcreditRequest(
         balanceAmount: 0,
         createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         currency: 'USD',
-        id: '421efb11-574f-4a58-b1b3-c13d3675e8d3',
+        id: '8582d371-dfff-4f5c-b05f-342aafd613ef',
         lineitems: [],
         metadata: [],
         notes: 'Volup conatus cruciamentum decor avaritia.',
         postedAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         status: Shared\AccountingVendorcreditStatus::Authorized,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-03T01:42:12.414Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-03T08:01:19.002Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -47,6 +47,8 @@ class Document
     /**
      * Create a document
      *
+     * Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Document
 
     /**
      * Create a document
+     *
+     * Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisDocumentResponse
@@ -183,6 +187,8 @@ class Document
     /**
      * Create a document
      *
+     * Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Document
     /**
      * Retrieve a document
      *
+     * Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Document
 
     /**
      * Retrieve a document
+     *
+     * Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisDocumentResponse
@@ -377,6 +387,8 @@ class Document
     /**
      * Retrieve a document
      *
+     * Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Document
 
     /**
      * List all documents
+     *
+     * Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
@@ -503,6 +517,8 @@ class Document
     /**
      * List all documents
      *
+     * Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisDocumentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisDocumentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -566,6 +582,8 @@ class Document
     /**
      * List all documents
      *
+     * Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSigningDocumentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSigningDocumentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Document
 
     /**
      * Update a document
+     *
+     * Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
@@ -697,6 +717,8 @@ class Document
     /**
      * Update a document
      *
+     * Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -764,6 +786,8 @@ class Document
 
     /**
      * Update a document
+     *
+     * Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchSigningDocumentResponse
@@ -833,6 +857,8 @@ class Document
     /**
      * Remove a document
      *
+     * Deletes the AtsDocument identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -889,6 +915,8 @@ class Document
 
     /**
      * Remove a document
+     *
+     * Deletes the HrisDocument identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisDocumentResponse
@@ -947,6 +975,8 @@ class Document
     /**
      * Remove a document
      *
+     * Deletes the SigningDocument identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1003,6 +1033,8 @@ class Document
 
     /**
      * Update a document
+     *
+     * Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
@@ -1072,6 +1104,8 @@ class Document
     /**
      * Update a document
      *
+     * Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1139,6 +1173,8 @@ class Document
 
     /**
      * Update a document
+     *
+     * Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateSigningDocumentResponse

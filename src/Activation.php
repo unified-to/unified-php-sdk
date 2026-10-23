@@ -47,6 +47,8 @@ class Activation
     /**
      * Create an activation
      *
+     * Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are mapped to the provider's API. Returns the created CdpActivation.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpActivationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Activation
     /**
      * Retrieve an activation
      *
+     * Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpActivationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Activation
     /**
      * List all activations
      *
+     * Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpActivationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpActivationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Activation
 
     /**
      * Update an activation
+     *
+     * Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpActivationResponse
@@ -309,6 +317,8 @@ class Activation
     /**
      * Remove an activation
      *
+     * Deletes the CdpActivation identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpActivationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Activation
 
     /**
      * Update an activation
+     *
+     * Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpActivationResponse

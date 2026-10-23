@@ -47,6 +47,8 @@ class Datastore
     /**
      * Create a database
      *
+     * Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreDatabaseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateDatastoreDatabaseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Datastore
 
     /**
      * Create a query
+     *
+     * Creates a DatastoreQuery. Provide the unified DatastoreQuery fields in the request body; they are mapped to the provider's API. Returns the created DatastoreQuery.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreQueryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateDatastoreQueryResponse
@@ -183,6 +187,8 @@ class Datastore
     /**
      * Create a record
      *
+     * Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Datastore
 
     /**
      * Create a table
+     *
+     * Creates a DatastoreTable. Provide the unified DatastoreTable fields in the request body; they are mapped to the provider's API. Returns the created DatastoreTable.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreTableRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateDatastoreTableResponse
@@ -319,6 +327,8 @@ class Datastore
     /**
      * Retrieve a database
      *
+     * Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetDatastoreDatabaseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetDatastoreDatabaseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -381,6 +391,8 @@ class Datastore
 
     /**
      * Retrieve a record
+     *
+     * Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetDatastoreRecordResponse
@@ -445,6 +457,8 @@ class Datastore
     /**
      * Retrieve a table
      *
+     * Retrieves a single DatastoreTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetDatastoreTableRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetDatastoreTableResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -507,6 +521,8 @@ class Datastore
 
     /**
      * List all databases
+     *
+     * Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListDatastoreDatabasesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListDatastoreDatabasesResponse
@@ -571,6 +587,8 @@ class Datastore
     /**
      * List all records
      *
+     * Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListDatastoreRecordsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListDatastoreRecordsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -634,6 +652,8 @@ class Datastore
     /**
      * List all tables
      *
+     * Returns a list of DatastoreTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListDatastoreTablesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListDatastoreTablesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -696,6 +716,8 @@ class Datastore
 
     /**
      * Update a database
+     *
+     * Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchDatastoreDatabaseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchDatastoreDatabaseResponse
@@ -765,6 +787,8 @@ class Datastore
     /**
      * Update a record
      *
+     * Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -832,6 +856,8 @@ class Datastore
 
     /**
      * Update a table
+     *
+     * Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchDatastoreTableRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchDatastoreTableResponse
@@ -901,6 +927,8 @@ class Datastore
     /**
      * Remove a database
      *
+     * Deletes the DatastoreDatabase identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveDatastoreDatabaseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveDatastoreDatabaseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -957,6 +985,8 @@ class Datastore
 
     /**
      * Remove a record
+     *
+     * Deletes the DatastoreRecord identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveDatastoreRecordResponse
@@ -1015,6 +1045,8 @@ class Datastore
     /**
      * Remove a table
      *
+     * Deletes the DatastoreTable identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveDatastoreTableRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveDatastoreTableResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1071,6 +1103,8 @@ class Datastore
 
     /**
      * Update a database
+     *
+     * Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateDatastoreDatabaseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateDatastoreDatabaseResponse
@@ -1140,6 +1174,8 @@ class Datastore
     /**
      * Update a record
      *
+     * Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1207,6 +1243,8 @@ class Datastore
 
     /**
      * Update a table
+     *
+     * Updates the DatastoreTable identified by `id`. Provide the unified DatastoreTable fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateDatastoreTableRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateDatastoreTableResponse

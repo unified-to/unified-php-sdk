@@ -47,6 +47,8 @@ class Candidate
     /**
      * Create a candidate
      *
+     * Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Candidate
     /**
      * Retrieve a candidate
      *
+     * Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Candidate
     /**
      * List all candidates
      *
+     * Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Candidate
 
     /**
      * Update a candidate
+     *
+     * Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
@@ -309,6 +317,8 @@ class Candidate
     /**
      * Remove a candidate
      *
+     * Deletes the AtsCandidate identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Candidate
 
     /**
      * Update a candidate
+     *
+     * Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse

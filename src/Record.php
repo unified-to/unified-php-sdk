@@ -47,6 +47,8 @@ class Record
     /**
      * Create a record
      *
+     * Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Record
     /**
      * Retrieve a record
      *
+     * Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Record
     /**
      * List all records
      *
+     * Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListDatastoreRecordsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListDatastoreRecordsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Record
 
     /**
      * Update a record
+     *
+     * Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchDatastoreRecordResponse
@@ -309,6 +317,8 @@ class Record
     /**
      * Remove a record
      *
+     * Deletes the DatastoreRecord identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveDatastoreRecordResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Record
 
     /**
      * Update a record
+     *
+     * Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateDatastoreRecordRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateDatastoreRecordResponse

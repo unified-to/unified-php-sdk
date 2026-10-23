@@ -13,7 +13,7 @@
 
 ## createVerificationRequest
 
-Create a request
+Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body; they are mapped to the provider's API. Returns the created VerificationRequest.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(
         createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
-        id: '1a8fe6a0-7e21-4bc0-9457-1f5f5859be91',
+        id: '24d9d51c-3ccb-4653-b17c-d14586939cd0',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -47,7 +47,7 @@ $request = new Operations\CreateVerificationRequestRequest(
         responseDownloadUrls: [],
         responseSource: 'Implemented regional protocol',
         responseStatus: Shared\VerificationRequestResponseStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-27T07:01:08.205Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-27T08:40:18.784Z'),
     ),
     connectionId: '<id>',
 );
@@ -79,7 +79,7 @@ if ($response->verificationRequest !== null) {
 
 ## getVerificationRequest
 
-Retrieve a request
+Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -130,7 +130,7 @@ if ($response->verificationRequest !== null) {
 
 ## listVerificationRequests
 
-List all requests
+Returns a list of VerificationRequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -180,7 +180,7 @@ if ($response->verificationRequests !== null) {
 
 ## patchVerificationRequest
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(
         createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
-        id: 'e99d027a-89a1-4f08-8c6c-bc0e20fd0f8a',
+        id: 'f7d29a22-82e6-4534-b1f8-2632858272aa',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -214,7 +214,7 @@ $request = new Operations\PatchVerificationRequestRequest(
         responseDownloadUrls: [],
         responseSource: 'Implemented regional protocol',
         responseStatus: Shared\VerificationRequestResponseStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-27T07:01:08.207Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-27T08:40:18.785Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -247,7 +247,7 @@ if ($response->verificationRequest !== null) {
 
 ## removeVerificationRequest
 
-Remove a request
+Deletes the VerificationRequest identified by `id`.
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ if ($response->statusCode === 200) {
 
 ## updateVerificationRequest
 
-Update a request
+Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
 
 ### Example Usage
 
@@ -322,7 +322,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(
         createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
-        id: 'e99d027a-89a1-4f08-8c6c-bc0e20fd0f8a',
+        id: 'f7d29a22-82e6-4534-b1f8-2632858272aa',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -332,7 +332,7 @@ $request = new Operations\UpdateVerificationRequestRequest(
         responseDownloadUrls: [],
         responseSource: 'Implemented regional protocol',
         responseStatus: Shared\VerificationRequestResponseStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-27T07:01:08.207Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-27T08:40:18.785Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

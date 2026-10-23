@@ -123,6 +123,7 @@ class TaskTask
     public ?array $metadata = null;
 
     /**
+     * The task's title
      *
      * @var ?string $name
      */

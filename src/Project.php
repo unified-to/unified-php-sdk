@@ -47,6 +47,8 @@ class Project
     /**
      * Create a project
      *
+     * Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Project
 
     /**
      * Create a project
+     *
+     * Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTaskProjectResponse
@@ -183,6 +187,8 @@ class Project
     /**
      * Retrieve a project
      *
+     * Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Project
 
     /**
      * Retrieve a project
+     *
+     * Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTaskProjectResponse
@@ -309,6 +317,8 @@ class Project
     /**
      * List all projects
      *
+     * Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingProjectsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingProjectsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -372,6 +382,8 @@ class Project
     /**
      * List all projects
      *
+     * Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTaskProjectsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTaskProjectsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -434,6 +446,8 @@ class Project
 
     /**
      * Update a project
+     *
+     * Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingProjectResponse
@@ -503,6 +517,8 @@ class Project
     /**
      * Update a project
      *
+     * Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -571,6 +587,8 @@ class Project
     /**
      * Remove a project
      *
+     * Deletes the AccountingProject identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Project
     /**
      * Remove a project
      *
+     * Deletes the TaskProject identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -684,6 +704,8 @@ class Project
 
     /**
      * Update a project
+     *
+     * Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingProjectResponse
@@ -752,6 +774,8 @@ class Project
 
     /**
      * Update a project
+     *
+     * Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTaskProjectResponse

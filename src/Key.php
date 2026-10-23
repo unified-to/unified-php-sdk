@@ -47,6 +47,8 @@ class Key
     /**
      * Create a key
      *
+     * Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeKeyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Key
     /**
      * Retrieve a key
      *
+     * Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeKeyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Key
     /**
      * List all keys
      *
+     * Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeKeysRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeKeysResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Key
 
     /**
      * Update a key
+     *
+     * Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeKeyResponse
@@ -309,6 +317,8 @@ class Key
     /**
      * Remove a key
      *
+     * Deletes the ComputeKey identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeKeyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Key
 
     /**
      * Update a key
+     *
+     * Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeKeyResponse

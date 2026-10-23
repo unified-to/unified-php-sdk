@@ -47,6 +47,8 @@ class Instance
     /**
      * Create an instance
      *
+     * Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeInstanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Instance
     /**
      * Retrieve an instance
      *
+     * Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeInstanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Instance
     /**
      * List all instances
      *
+     * Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeInstancesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeInstancesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Instance
 
     /**
      * Update an instance
+     *
+     * Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeInstanceResponse
@@ -309,6 +317,8 @@ class Instance
     /**
      * Remove an instance
      *
+     * Deletes the ComputeInstance identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeInstanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Instance
 
     /**
      * Update an instance
+     *
+     * Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeInstanceResponse

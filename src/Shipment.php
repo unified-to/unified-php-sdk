@@ -47,6 +47,8 @@ class Shipment
     /**
      * Create a shipment
      *
+     * Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Shipment
     /**
      * Retrieve a shipment
      *
+     * Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Shipment
     /**
      * List all shipments
      *
+     * Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListShippingShipmentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListShippingShipmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Shipment
 
     /**
      * Update a shipment
+     *
+     * Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchShippingShipmentResponse
@@ -309,6 +317,8 @@ class Shipment
     /**
      * Remove a shipment
      *
+     * Deletes the ShippingShipment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Shipment
 
     /**
      * Update a shipment
+     *
+     * Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateShippingShipmentResponse

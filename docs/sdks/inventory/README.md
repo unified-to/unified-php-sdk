@@ -13,7 +13,7 @@
 
 ## createCommerceInventory
 
-Create an inventory
+Creates a CommerceInventory. Provide the unified CommerceInventory fields in the request body; they are mapped to the provider's API. Returns the created CommerceInventory.
 
 ### Example Usage
 
@@ -37,9 +37,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: 'b3ba51df-a271-4054-9b23-658b4ddf92d9',
+        id: '926eae82-d80c-419c-9c20-87c424e622fa',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-20T09:48:39.178Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-22T00:13:27.869Z'),
     ),
     connectionId: '<id>',
 );
@@ -71,7 +71,7 @@ if ($response->commerceInventory !== null) {
 
 ## getCommerceInventory
 
-Retrieve an inventory
+Retrieves a single CommerceInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -122,7 +122,7 @@ if ($response->commerceInventory !== null) {
 
 ## listCommerceInventories
 
-List all inventories
+Returns a list of CommerceInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -172,7 +172,7 @@ if ($response->commerceInventories !== null) {
 
 ## patchCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -196,9 +196,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: '505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26',
+        id: 'd757bd8f-362e-4157-adcb-d38cecdbcaeb',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-20T09:48:39.185Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-22T00:13:27.880Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -231,7 +231,7 @@ if ($response->commerceInventory !== null) {
 
 ## removeCommerceInventory
 
-Remove an inventory
+Deletes the CommerceInventory identified by `id`.
 
 ### Example Usage
 
@@ -282,7 +282,7 @@ if ($response->statusCode === 200) {
 
 ## updateCommerceInventory
 
-Update an inventory
+Updates the CommerceInventory identified by `id`. Provide the unified CommerceInventory fields to change in the request body.
 
 ### Example Usage
 
@@ -306,9 +306,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: '505d8fdb-6d3e-4cc6-8aca-7a9b4ef5be26',
+        id: 'd757bd8f-362e-4157-adcb-d38cecdbcaeb',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-20T09:48:39.185Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-22T00:13:27.880Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

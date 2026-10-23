@@ -47,6 +47,8 @@ class Company
     /**
      * Create a company
      *
+     * Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Company
 
     /**
      * Create a company
+     *
+     * Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
@@ -183,6 +187,8 @@ class Company
     /**
      * Create a company
      *
+     * Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Company
     /**
      * Retrieve a company
      *
+     * Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Company
 
     /**
      * Retrieve a company
+     *
+     * Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
@@ -377,6 +387,8 @@ class Company
     /**
      * Retrieve a company
      *
+     * Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -440,6 +452,8 @@ class Company
     /**
      * List all companies
      *
+     * Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -502,6 +516,8 @@ class Company
 
     /**
      * List all companies
+     *
+     * Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
@@ -629,6 +645,8 @@ class Company
     /**
      * List all companies
      *
+     * Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -691,6 +709,8 @@ class Company
 
     /**
      * Update a company
+     *
+     * Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsCompanyResponse
@@ -760,6 +780,8 @@ class Company
     /**
      * Update a company
      *
+     * Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -827,6 +849,8 @@ class Company
 
     /**
      * Update a company
+     *
+     * Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse
@@ -896,6 +920,8 @@ class Company
     /**
      * Remove a company
      *
+     * Deletes the AtsCompany identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -952,6 +978,8 @@ class Company
 
     /**
      * Remove a company
+     *
+     * Deletes the CrmCompany identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
@@ -1010,6 +1038,8 @@ class Company
     /**
      * Remove a company
      *
+     * Deletes the HrisCompany identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1066,6 +1096,8 @@ class Company
 
     /**
      * Update a company
+     *
+     * Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsCompanyResponse
@@ -1135,6 +1167,8 @@ class Company
     /**
      * Update a company
      *
+     * Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1202,6 +1236,8 @@ class Company
 
     /**
      * Update a company
+     *
+     * Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse

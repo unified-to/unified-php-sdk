@@ -147,6 +147,7 @@ class PropertyAdsReportMetricsAd
     public ?array $metadata = null;
 
     /**
+     * The ad's name
      *
      * @var ?string $name
      */

@@ -19,7 +19,7 @@
 
 ## createCalendarLink
 
-Create a link
+Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
 
 ### Example Usage
 
@@ -44,13 +44,13 @@ $request = new Operations\CreateCalendarLinkRequest(
         createdAt: '2023-03-07T13:34:11.959Z',
         description: 'Vitium clibanus laboriosam uxor denuncio.',
         duration: 74,
-        id: 'ac5a258c-077d-4fdd-988e-bad749ee7965',
+        id: 'cb0ede8b-ce7e-4acb-a53b-6f9a026300ca',
         isActive: true,
         metadata: [],
         name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
         priceAmount: 44,
         priceCurrency: 'USD',
-        updatedAt: '2024-03-15T13:01:57.661Z',
+        updatedAt: '2024-03-16T02:30:17.555Z',
         url: 'https://annual-apricot.info/',
     ),
     connectionId: '<id>',
@@ -83,7 +83,7 @@ if ($response->calendarLink !== null) {
 
 ## createPaymentLink
 
-Create a link
+Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
 
 ### Example Usage
 
@@ -110,13 +110,13 @@ $request = new Operations\CreatePaymentLinkRequest(
         createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
         currency: 'CAD',
         description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-        id: '44af6dd3-1389-49e9-8034-8adbc5265f45',
+        id: '765123bb-168f-44bd-8ff1-b440b0fcc73a',
         isActive: true,
         isChargeableNow: true,
         lineitems: [
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: 'f9b9e527-2508-4223-bdf6-7fdebfada7ea',
+                id: '90540f29-2c87-41f2-8621-34943b4e1cc0',
                 itemDescription: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
                 itemName: 'Soft Marble Cheese',
                 taxAmount: 0,
@@ -128,7 +128,7 @@ $request = new Operations\CreatePaymentLinkRequest(
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
                 discountAmount: 424.32,
-                id: '1009ccc2-d6fe-4236-8c68-d0fdab642432',
+                id: 'daf81fca-e707-4ab1-a9ba-f519f0a9206e',
                 itemDescription: 'Innovative Shoes featuring utilized technology and Cotton construction',
                 itemName: 'Sleek Aluminum Shoes',
                 notes: 'Cervus decretum viridis doloremque.',
@@ -140,7 +140,7 @@ $request = new Operations\CreatePaymentLinkRequest(
             ),
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: '35cf0b54-224b-4149-847c-02116695cc67',
+                id: '8a3e2f38-e3db-476f-bacb-ad478a662f6b',
                 itemDescription: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
                 itemName: 'Elegant Concrete Gloves',
                 notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -153,8 +153,8 @@ $request = new Operations\CreatePaymentLinkRequest(
         ],
         metadata: [],
         successUrl: 'https://tinted-jet.info',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-13T09:31:26.812Z'),
-        url: 'https://pay.example.com/44af6dd3-1389-49e9-8034-8adbc5265f45',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-13T21:38:29.534Z'),
+        url: 'https://pay.example.com/765123bb-168f-44bd-8ff1-b440b0fcc73a',
     ),
     connectionId: '<id>',
 );
@@ -186,7 +186,7 @@ if ($response->paymentLink !== null) {
 
 ## getCalendarLink
 
-Retrieve a link
+Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -237,7 +237,7 @@ if ($response->calendarLink !== null) {
 
 ## getPaymentLink
 
-Retrieve a link
+Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ if ($response->paymentLink !== null) {
 
 ## listCalendarLinks
 
-List all links
+Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -338,7 +338,7 @@ if ($response->calendarLinks !== null) {
 
 ## listPaymentLinks
 
-List all links
+Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -388,7 +388,7 @@ if ($response->paymentLinks !== null) {
 
 ## patchCalendarLink
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -413,13 +413,13 @@ $request = new Operations\PatchCalendarLinkRequest(
         createdAt: '2023-03-07T13:34:11.959Z',
         description: 'Vitium clibanus laboriosam uxor denuncio.',
         duration: 74,
-        id: 'd5c1154a-0df1-447f-9a79-a861d4aa4320',
+        id: 'f74de0f1-7ad4-41d2-9caf-be2a2c0a11aa',
         isActive: true,
         metadata: [],
         name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
         priceAmount: 44,
         priceCurrency: 'USD',
-        updatedAt: '2024-03-15T13:01:57.665Z',
+        updatedAt: '2024-03-16T02:30:17.560Z',
         url: 'https://annual-apricot.info/',
     ),
     connectionId: '<id>',
@@ -453,7 +453,7 @@ if ($response->calendarLink !== null) {
 
 ## patchPaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -480,13 +480,13 @@ $request = new Operations\PatchPaymentLinkRequest(
         createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
         currency: 'CAD',
         description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-        id: '0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+        id: 'ab310546-5a30-4ae4-a471-0f9440b670ce',
         isActive: true,
         isChargeableNow: true,
         lineitems: [
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: 'a4992b6e-470c-465d-b2ef-ed9254b71ac6',
+                id: '645b6fd7-aedb-4967-96d1-3c370be28c35',
                 itemDescription: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
                 itemName: 'Soft Marble Cheese',
                 taxAmount: 0,
@@ -498,7 +498,7 @@ $request = new Operations\PatchPaymentLinkRequest(
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
                 discountAmount: 424.32,
-                id: '2cbd3403-33b5-4168-a882-a350fd62271b',
+                id: '35643734-60d3-4125-898d-565d7537e987',
                 itemDescription: 'Innovative Shoes featuring utilized technology and Cotton construction',
                 itemName: 'Sleek Aluminum Shoes',
                 notes: 'Cervus decretum viridis doloremque.',
@@ -510,7 +510,7 @@ $request = new Operations\PatchPaymentLinkRequest(
             ),
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: '807d9e84-427d-4fd9-9060-9ca6fac75118',
+                id: 'ddd1e563-8fbf-4b2f-8adf-31f7e103de69',
                 itemDescription: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
                 itemName: 'Elegant Concrete Gloves',
                 notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -523,8 +523,8 @@ $request = new Operations\PatchPaymentLinkRequest(
         ],
         metadata: [],
         successUrl: 'https://tinted-jet.info',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-13T09:31:26.816Z'),
-        url: 'https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-13T21:38:29.541Z'),
+        url: 'https://pay.example.com/ab310546-5a30-4ae4-a471-0f9440b670ce',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -557,7 +557,7 @@ if ($response->paymentLink !== null) {
 
 ## removeCalendarLink
 
-Remove a link
+Deletes the CalendarLink identified by `id`.
 
 ### Example Usage
 
@@ -608,7 +608,7 @@ if ($response->statusCode === 200) {
 
 ## removePaymentLink
 
-Remove a link
+Deletes the PaymentLink identified by `id`.
 
 ### Example Usage
 
@@ -659,7 +659,7 @@ if ($response->statusCode === 200) {
 
 ## updateCalendarLink
 
-Update a link
+Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
 
 ### Example Usage
 
@@ -684,13 +684,13 @@ $request = new Operations\UpdateCalendarLinkRequest(
         createdAt: '2023-03-07T13:34:11.959Z',
         description: 'Vitium clibanus laboriosam uxor denuncio.',
         duration: 74,
-        id: 'd5c1154a-0df1-447f-9a79-a861d4aa4320',
+        id: 'f74de0f1-7ad4-41d2-9caf-be2a2c0a11aa',
         isActive: true,
         metadata: [],
         name: 'Sopor sopor ancilla animus anser dignissimos vito confero utilis.',
         priceAmount: 44,
         priceCurrency: 'USD',
-        updatedAt: '2024-03-15T13:01:57.665Z',
+        updatedAt: '2024-03-16T02:30:17.560Z',
         url: 'https://annual-apricot.info/',
     ),
     connectionId: '<id>',
@@ -724,7 +724,7 @@ if ($response->calendarLink !== null) {
 
 ## updatePaymentLink
 
-Update a link
+Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
 
 ### Example Usage
 
@@ -751,13 +751,13 @@ $request = new Operations\UpdatePaymentLinkRequest(
         createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
         currency: 'CAD',
         description: 'Savor the tender essence in our Ball, designed for dim culinary adventures',
-        id: '0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+        id: 'ab310546-5a30-4ae4-a471-0f9440b670ce',
         isActive: true,
         isChargeableNow: true,
         lineitems: [
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: 'a4992b6e-470c-465d-b2ef-ed9254b71ac6',
+                id: '645b6fd7-aedb-4967-96d1-3c370be28c35',
                 itemDescription: 'Discover the worst new Computer with an exciting mix of Steel ingredients',
                 itemName: 'Soft Marble Cheese',
                 taxAmount: 0,
@@ -769,7 +769,7 @@ $request = new Operations\UpdatePaymentLinkRequest(
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
                 discountAmount: 424.32,
-                id: '2cbd3403-33b5-4168-a882-a350fd62271b',
+                id: '35643734-60d3-4125-898d-565d7537e987',
                 itemDescription: 'Innovative Shoes featuring utilized technology and Cotton construction',
                 itemName: 'Sleek Aluminum Shoes',
                 notes: 'Cervus decretum viridis doloremque.',
@@ -781,7 +781,7 @@ $request = new Operations\UpdatePaymentLinkRequest(
             ),
             new Shared\PaymentLineitem(
                 createdAt: Utils\Utils::parseDateTime('2023-06-04T16:11:45.685Z'),
-                id: '807d9e84-427d-4fd9-9060-9ca6fac75118',
+                id: 'ddd1e563-8fbf-4b2f-8adf-31f7e103de69',
                 itemDescription: 'Featuring Osmium-enhanced technology, our Soap offers unparalleled major performance',
                 itemName: 'Elegant Concrete Gloves',
                 notes: 'Desipio usque vacuus currus cetera testimonium.',
@@ -794,8 +794,8 @@ $request = new Operations\UpdatePaymentLinkRequest(
         ],
         metadata: [],
         successUrl: 'https://tinted-jet.info',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-13T09:31:26.816Z'),
-        url: 'https://pay.example.com/0a44ac07-e03e-4d91-b1cc-dcb1f91dba36',
+        updatedAt: Utils\Utils::parseDateTime('2024-04-13T21:38:29.541Z'),
+        url: 'https://pay.example.com/ab310546-5a30-4ae4-a471-0f9440b670ce',
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -83,6 +83,7 @@ class AdsGroup
     public ?AdsGroupBudgetUnit $budgetUnit = null;
 
     /**
+     * The ID of the campaign the ad group belongs to (an AdsCampaign ID)
      *
      * @var ?string $campaignId
      */
@@ -198,6 +199,7 @@ class AdsGroup
     public ?array $metadata = null;
 
     /**
+     * The ad group's name
      *
      * @var ?string $name
      */

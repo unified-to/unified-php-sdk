@@ -13,7 +13,7 @@
 
 ## createAccountingBankfeedaccount
 
-Create a bankfeedaccount
+Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
 
 ### Example Usage
 
@@ -44,12 +44,12 @@ $request = new Operations\CreateAccountingBankfeedaccountRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
         currency: 'AUD',
         feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
-        id: '35586384-5900-42ac-a8d5-c8921d6c4e69',
+        id: '9ff0304a-822b-4e33-9260-a18b0d7dcbc2',
         metadata: [],
         name: 'Corwin, Donnelly and Connelly Checking',
         routingNumber: '694667752',
         status: Shared\AccountingBankfeedaccountStatus::Active,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-23T19:56:22.321Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-24T13:41:42.663Z'),
     ),
     connectionId: '<id>',
 );
@@ -81,7 +81,7 @@ if ($response->accountingBankfeedaccount !== null) {
 
 ## getAccountingBankfeedaccount
 
-Retrieve a bankfeedaccount
+Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -132,7 +132,7 @@ if ($response->accountingBankfeedaccount !== null) {
 
 ## listAccountingBankfeedaccounts
 
-List all bankfeedaccounts
+Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -182,7 +182,7 @@ if ($response->accountingBankfeedaccounts !== null) {
 
 ## patchAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -213,12 +213,12 @@ $request = new Operations\PatchAccountingBankfeedaccountRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
         currency: 'AUD',
         feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
-        id: '1905f24b-d20f-459e-9b76-57cdbb658dea',
+        id: '194691c3-3685-4a7d-8885-f8b5fdb930a6',
         metadata: [],
         name: 'Corwin, Donnelly and Connelly Checking',
         routingNumber: '694667752',
         status: Shared\AccountingBankfeedaccountStatus::Active,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-23T19:56:22.329Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-24T13:41:42.669Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -251,7 +251,7 @@ if ($response->accountingBankfeedaccount !== null) {
 
 ## removeAccountingBankfeedaccount
 
-Remove a bankfeedaccount
+Deletes the AccountingBankfeedaccount identified by `id`.
 
 ### Example Usage
 
@@ -302,7 +302,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingBankfeedaccount
 
-Update a bankfeedaccount
+Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -333,12 +333,12 @@ $request = new Operations\UpdateAccountingBankfeedaccountRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
         currency: 'AUD',
         feedStartAt: Utils\Utils::parseDateTime('2022-10-31T16:42:19.277Z'),
-        id: '1905f24b-d20f-459e-9b76-57cdbb658dea',
+        id: '194691c3-3685-4a7d-8885-f8b5fdb930a6',
         metadata: [],
         name: 'Corwin, Donnelly and Connelly Checking',
         routingNumber: '694667752',
         status: Shared\AccountingBankfeedaccountStatus::Active,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-23T19:56:22.329Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-24T13:41:42.669Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

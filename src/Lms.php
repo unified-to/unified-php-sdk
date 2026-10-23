@@ -47,6 +47,8 @@ class Lms
     /**
      * Create an activity
      *
+     * Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Lms
 
     /**
      * Create a class
+     *
+     * Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsClassRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsClassResponse
@@ -183,6 +187,8 @@ class Lms
     /**
      * Create a collection
      *
+     * Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Lms
 
     /**
      * Create a content
+     *
+     * Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsContentResponse
@@ -319,6 +327,8 @@ class Lms
     /**
      * Create a course
      *
+     * Creates a LmsCourse. Provide the unified LmsCourse fields in the request body; they are mapped to the provider's API. Returns the created LmsCourse.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsCourseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsCourseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Lms
 
     /**
      * Create an instructor
+     *
+     * Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsInstructorResponse
@@ -455,6 +467,8 @@ class Lms
     /**
      * Create a student
      *
+     * Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -523,6 +537,8 @@ class Lms
     /**
      * Retrieve an activity
      *
+     * Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -585,6 +601,8 @@ class Lms
 
     /**
      * Retrieve a class
+     *
+     * Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsClassRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsClassResponse
@@ -649,6 +667,8 @@ class Lms
     /**
      * Retrieve a collection
      *
+     * Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -711,6 +731,8 @@ class Lms
 
     /**
      * Retrieve a content
+     *
+     * Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsContentResponse
@@ -775,6 +797,8 @@ class Lms
     /**
      * Retrieve a course
      *
+     * Retrieves a single LmsCourse by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsCourseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsCourseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -837,6 +861,8 @@ class Lms
 
     /**
      * Retrieve an instructor
+     *
+     * Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsInstructorResponse
@@ -901,6 +927,8 @@ class Lms
     /**
      * Retrieve a student
      *
+     * Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -963,6 +991,8 @@ class Lms
 
     /**
      * List all activities
+     *
+     * Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsActivitiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsActivitiesResponse
@@ -1027,6 +1057,8 @@ class Lms
     /**
      * List all classes
      *
+     * Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsClassesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsClassesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1089,6 +1121,8 @@ class Lms
 
     /**
      * List all collections
+     *
+     * Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsCollectionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsCollectionsResponse
@@ -1153,6 +1187,8 @@ class Lms
     /**
      * List all contents
      *
+     * Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsContentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsContentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1215,6 +1251,8 @@ class Lms
 
     /**
      * List all courses
+     *
+     * Returns a list of LmsCourses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsCoursesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsCoursesResponse
@@ -1279,6 +1317,8 @@ class Lms
     /**
      * List all instructors
      *
+     * Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsInstructorsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsInstructorsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1342,6 +1382,8 @@ class Lms
     /**
      * List all students
      *
+     * Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsStudentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsStudentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1404,6 +1446,8 @@ class Lms
 
     /**
      * Update an activity
+     *
+     * Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsActivityResponse
@@ -1473,6 +1517,8 @@ class Lms
     /**
      * Update a class
      *
+     * Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsClassRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsClassResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1540,6 +1586,8 @@ class Lms
 
     /**
      * Update a collection
+     *
+     * Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsCollectionResponse
@@ -1609,6 +1657,8 @@ class Lms
     /**
      * Update a content
      *
+     * Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1676,6 +1726,8 @@ class Lms
 
     /**
      * Update a course
+     *
+     * Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsCourseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsCourseResponse
@@ -1745,6 +1797,8 @@ class Lms
     /**
      * Update an instructor
      *
+     * Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1812,6 +1866,8 @@ class Lms
 
     /**
      * Update a student
+     *
+     * Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsStudentResponse
@@ -1881,6 +1937,8 @@ class Lms
     /**
      * Remove an activity
      *
+     * Deletes the LmsActivity identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1937,6 +1995,8 @@ class Lms
 
     /**
      * Remove a class
+     *
+     * Deletes the LmsClass identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsClassRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsClassResponse
@@ -1995,6 +2055,8 @@ class Lms
     /**
      * Remove a collection
      *
+     * Deletes the LmsCollection identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsCollectionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2051,6 +2113,8 @@ class Lms
 
     /**
      * Remove a content
+     *
+     * Deletes the LmsContent identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsContentResponse
@@ -2109,6 +2173,8 @@ class Lms
     /**
      * Remove a course
      *
+     * Deletes the LmsCourse identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsCourseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsCourseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2165,6 +2231,8 @@ class Lms
 
     /**
      * Remove an instructor
+     *
+     * Deletes the LmsInstructor identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsInstructorResponse
@@ -2223,6 +2291,8 @@ class Lms
     /**
      * Remove a student
      *
+     * Deletes the LmsStudent identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2279,6 +2349,8 @@ class Lms
 
     /**
      * Update an activity
+     *
+     * Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsActivityResponse
@@ -2348,6 +2420,8 @@ class Lms
     /**
      * Update a class
      *
+     * Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsClassRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsClassResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2415,6 +2489,8 @@ class Lms
 
     /**
      * Update a collection
+     *
+     * Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCollectionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsCollectionResponse
@@ -2484,6 +2560,8 @@ class Lms
     /**
      * Update a content
      *
+     * Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsContentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsContentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2551,6 +2629,8 @@ class Lms
 
     /**
      * Update a course
+     *
+     * Updates the LmsCourse identified by `id`. Provide the unified LmsCourse fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsCourseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsCourseResponse
@@ -2620,6 +2700,8 @@ class Lms
     /**
      * Update an instructor
      *
+     * Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2687,6 +2769,8 @@ class Lms
 
     /**
      * Update a student
+     *
+     * Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsStudentResponse

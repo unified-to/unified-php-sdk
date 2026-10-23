@@ -47,6 +47,8 @@ class Timeshift
     /**
      * Create a timeshift
      *
+     * Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Timeshift
     /**
      * Retrieve a timeshift
      *
+     * Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Timeshift
     /**
      * List all timeshifts
      *
+     * Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeshiftsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisTimeshiftsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Timeshift
 
     /**
      * Update a timeshift
+     *
+     * Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisTimeshiftResponse
@@ -309,6 +317,8 @@ class Timeshift
     /**
      * Remove a timeshift
      *
+     * Deletes the HrisTimeshift identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Timeshift
 
     /**
      * Update a timeshift
+     *
+     * Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftResponse

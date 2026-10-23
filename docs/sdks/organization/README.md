@@ -27,7 +27,7 @@
 
 ## createAdsOrganization
 
-Create an organization
+Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
 
 ### Example Usage
 
@@ -53,13 +53,13 @@ $request = new Operations\CreateAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: '37fa02a7-2485-4c88-a329-c38febfa1be4',
+        id: '0022ef1b-7963-403f-a55a-e49b6a97ce92',
         managers: [],
         metadata: [],
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-29T03:04:47.129Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-30T22:27:01.491Z'),
     ),
     connectionId: '<id>',
 );
@@ -91,7 +91,7 @@ if ($response->adsOrganization !== null) {
 
 ## createGenaiOrganization
 
-Create an organization
+Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
 
 ### Example Usage
 
@@ -116,10 +116,10 @@ $request = new Operations\CreateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: 'f9efe1a2-99d3-49e7-b858-8a1f79714fb9',
+        id: '4027f841-e78f-4318-96db-9ef818e025cb',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-26T10:38:34.878Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-27T04:33:26.116Z'),
     ),
     connectionId: '<id>',
 );
@@ -151,7 +151,7 @@ if ($response->genaiOrganization !== null) {
 
 ## createRepoOrganization
 
-Create an organization
+Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
 
 ### Example Usage
 
@@ -177,10 +177,10 @@ $request = new Operations\CreateRepoOrganizationRequest(
         avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
         createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
         description: 'Trepide defendo supra testimonium ager.',
-        id: 'd11dbf84-08b3-42b3-9028-bf71a50ce463',
+        id: '535fcb15-73fe-4dc0-9f62-d99174169da3',
         metadata: [],
         name: 'Denesik - Lemke',
-        updatedAt: Utils\Utils::parseDateTime('2023-08-21T15:08:19.151Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-22T03:37:54.033Z'),
         webUrl: 'https://turbulent-overheard.biz',
     ),
     connectionId: '<id>',
@@ -213,7 +213,7 @@ if ($response->repoOrganization !== null) {
 
 ## getAccountingOrganization
 
-Retrieve an organization
+Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -264,7 +264,7 @@ if ($response->accountingOrganization !== null) {
 
 ## getAdsOrganization
 
-Retrieve an organization
+Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -315,7 +315,7 @@ if ($response->adsOrganization !== null) {
 
 ## getGenaiOrganization
 
-Retrieve an organization
+Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -366,7 +366,7 @@ if ($response->genaiOrganization !== null) {
 
 ## getRepoOrganization
 
-Retrieve an organization
+Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -417,7 +417,7 @@ if ($response->repoOrganization !== null) {
 
 ## listAccountingOrganizations
 
-List all organizations
+Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -467,7 +467,7 @@ if ($response->accountingOrganizations !== null) {
 
 ## listAdsOrganizations
 
-List all organizations
+Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -517,7 +517,7 @@ if ($response->adsOrganizations !== null) {
 
 ## listGenaiOrganizations
 
-List all organizations
+Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -567,7 +567,7 @@ if ($response->genaiOrganizations !== null) {
 
 ## listRepoOrganizations
 
-List all organizations
+Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -617,7 +617,7 @@ if ($response->repoOrganizations !== null) {
 
 ## patchAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -643,13 +643,13 @@ $request = new Operations\PatchAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: 'dc95b21f-c5ad-4cb6-b1db-4c172e0343f0',
+        id: '6c36c6c1-1193-4e54-920e-b70dd990ec69',
         managers: [],
         metadata: [],
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-29T03:04:47.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-30T22:27:01.507Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -682,7 +682,7 @@ if ($response->adsOrganization !== null) {
 
 ## patchGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -707,10 +707,10 @@ $request = new Operations\PatchGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: '8efc655b-1348-44e4-92a1-1ab5ab8473bc',
+        id: 'ed66f586-2ab5-487a-be49-8deb4e64a3d5',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-26T10:38:34.880Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-27T04:33:26.119Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -743,7 +743,7 @@ if ($response->genaiOrganization !== null) {
 
 ## patchRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -769,10 +769,10 @@ $request = new Operations\PatchRepoOrganizationRequest(
         avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
         createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
         description: 'Trepide defendo supra testimonium ager.',
-        id: '5e3f6bde-51ce-47b1-bc1a-309e3993a0df',
+        id: '4299addd-5e00-44fa-a320-8f297f22f563',
         metadata: [],
         name: 'Denesik - Lemke',
-        updatedAt: Utils\Utils::parseDateTime('2023-08-21T15:08:19.154Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-22T03:37:54.037Z'),
         webUrl: 'https://turbulent-overheard.biz',
     ),
     connectionId: '<id>',
@@ -806,7 +806,7 @@ if ($response->repoOrganization !== null) {
 
 ## removeAdsOrganization
 
-Remove an organization
+Deletes the AdsOrganization identified by `id`.
 
 ### Example Usage
 
@@ -857,7 +857,7 @@ if ($response->statusCode === 200) {
 
 ## removeGenaiOrganization
 
-Remove an organization
+Deletes the GenaiOrganization identified by `id`.
 
 ### Example Usage
 
@@ -908,7 +908,7 @@ if ($response->statusCode === 200) {
 
 ## removeRepoOrganization
 
-Remove an organization
+Deletes the RepoOrganization identified by `id`.
 
 ### Example Usage
 
@@ -959,7 +959,7 @@ if ($response->statusCode === 200) {
 
 ## updateAdsOrganization
 
-Update an organization
+Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -985,13 +985,13 @@ $request = new Operations\UpdateAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: 'dc95b21f-c5ad-4cb6-b1db-4c172e0343f0',
+        id: '6c36c6c1-1193-4e54-920e-b70dd990ec69',
         managers: [],
         metadata: [],
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-29T03:04:47.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-30T22:27:01.507Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1024,7 +1024,7 @@ if ($response->adsOrganization !== null) {
 
 ## updateGenaiOrganization
 
-Update an organization
+Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1049,10 +1049,10 @@ $request = new Operations\UpdateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: '8efc655b-1348-44e4-92a1-1ab5ab8473bc',
+        id: 'ed66f586-2ab5-487a-be49-8deb4e64a3d5',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-26T10:38:34.880Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-27T04:33:26.119Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1085,7 +1085,7 @@ if ($response->genaiOrganization !== null) {
 
 ## updateRepoOrganization
 
-Update an organization
+Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
 
 ### Example Usage
 
@@ -1111,10 +1111,10 @@ $request = new Operations\UpdateRepoOrganizationRequest(
         avatarUrl: 'https://picsum.photos/seed/fGl6Lb/3157/3173',
         createdAt: Utils\Utils::parseDateTime('2022-07-07T00:18:40.748Z'),
         description: 'Trepide defendo supra testimonium ager.',
-        id: '5e3f6bde-51ce-47b1-bc1a-309e3993a0df',
+        id: '4299addd-5e00-44fa-a320-8f297f22f563',
         metadata: [],
         name: 'Denesik - Lemke',
-        updatedAt: Utils\Utils::parseDateTime('2023-08-21T15:08:19.154Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-22T03:37:54.037Z'),
         webUrl: 'https://turbulent-overheard.biz',
     ),
     connectionId: '<id>',

@@ -13,7 +13,7 @@
 
 ## createHrisDevice
 
-Create a device
+Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ $request = new Operations\CreateHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: false,
-        id: '08f0179d-117e-4e0b-9712-d1fd2a9ab777',
+        id: '35aab3f8-e9a2-4dbc-9093-e69da49d460e',
         isMissing: false,
         manufacturer: 'Hackett Inc',
         metadata: [],
@@ -52,7 +52,7 @@ $request = new Operations\CreateHrisDeviceRequest(
         name: 'august-laptop',
         os: 'transmitter',
         osVersion: '8.4.8',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-08T07:20:57.814Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T09:44:14.207Z'),
         version: '4.15.7',
     ),
     connectionId: '<id>',
@@ -85,7 +85,7 @@ if ($response->hrisDevice !== null) {
 
 ## getHrisDevice
 
-Retrieve a device
+Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -136,7 +136,7 @@ if ($response->hrisDevice !== null) {
 
 ## listHrisDevices
 
-List all devices
+Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ if ($response->hrisDevices !== null) {
 
 ## patchHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -217,7 +217,7 @@ $request = new Operations\PatchHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: false,
-        id: '23a8d248-5900-4fd8-9b12-17935dbde1f4',
+        id: '41cb5989-1e38-4830-9e95-cb84692d50bf',
         isMissing: false,
         manufacturer: 'Hackett Inc',
         metadata: [],
@@ -225,7 +225,7 @@ $request = new Operations\PatchHrisDeviceRequest(
         name: 'august-laptop',
         os: 'transmitter',
         osVersion: '8.4.8',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-08T07:20:57.824Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T09:44:14.218Z'),
         version: '4.15.7',
     ),
     connectionId: '<id>',
@@ -259,7 +259,7 @@ if ($response->hrisDevice !== null) {
 
 ## removeHrisDevice
 
-Remove a device
+Deletes the HrisDevice identified by `id`.
 
 ### Example Usage
 
@@ -310,7 +310,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisDevice
 
-Update a device
+Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
 
 ### Example Usage
 
@@ -341,7 +341,7 @@ $request = new Operations\UpdateHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: false,
-        id: '23a8d248-5900-4fd8-9b12-17935dbde1f4',
+        id: '41cb5989-1e38-4830-9e95-cb84692d50bf',
         isMissing: false,
         manufacturer: 'Hackett Inc',
         metadata: [],
@@ -349,7 +349,7 @@ $request = new Operations\UpdateHrisDeviceRequest(
         name: 'august-laptop',
         os: 'transmitter',
         osVersion: '8.4.8',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-08T07:20:57.824Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-09T09:44:14.218Z'),
         version: '4.15.7',
     ),
     connectionId: '<id>',

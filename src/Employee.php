@@ -47,6 +47,8 @@ class Employee
     /**
      * Create an employee
      *
+     * Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Employee
     /**
      * Retrieve an employee
      *
+     * Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Employee
     /**
      * List all employees
      *
+     * Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Employee
 
     /**
      * Update an employee
+     *
+     * Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
@@ -309,6 +317,8 @@ class Employee
     /**
      * Remove an employee
      *
+     * Deletes the HrisEmployee identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Employee
 
     /**
      * Update an employee
+     *
+     * Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse

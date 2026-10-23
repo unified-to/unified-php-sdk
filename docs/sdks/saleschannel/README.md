@@ -13,7 +13,7 @@
 
 ## createCommerceSaleschannel
 
-Create a saleschannel
+Creates a CommerceSaleschannel. Provide the unified CommerceSaleschannel fields in the request body; they are mapped to the provider's API. Returns the created CommerceSaleschannel.
 
 ### Example Usage
 
@@ -39,11 +39,11 @@ $request = new Operations\CreateCommerceSaleschannelRequest(
         collections: [],
         createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
         description: 'Utroque denuncio solutio.',
-        id: 'cc3de979-f65e-4409-9afc-44337c992d3c',
+        id: 'd26f95b7-a59e-43ab-93a5-5edab9b447e1',
         isActive: false,
         metadata: [],
         slug: 'amiculum-congregatio-suspendo',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-28T00:01:54.549Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T06:44:48.573Z'),
     ),
     connectionId: '<id>',
 );
@@ -75,7 +75,7 @@ if ($response->commerceSaleschannel !== null) {
 
 ## getCommerceSaleschannel
 
-Retrieve a saleschannel
+Retrieves a single CommerceSaleschannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -126,7 +126,7 @@ if ($response->commerceSaleschannel !== null) {
 
 ## listCommerceSaleschannels
 
-List all saleschannels
+Returns a list of CommerceSaleschannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ if ($response->commerceSaleschannels !== null) {
 
 ## patchCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -202,11 +202,11 @@ $request = new Operations\PatchCommerceSaleschannelRequest(
         collections: [],
         createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
         description: 'Utroque denuncio solutio.',
-        id: 'dcf669f2-72fe-4f86-bf18-a0776d1f5b30',
+        id: 'df964129-81d7-4efa-805d-b986fdc305ae',
         isActive: false,
         metadata: [],
         slug: 'amiculum-congregatio-suspendo',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-28T00:01:54.554Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T06:44:48.585Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -239,7 +239,7 @@ if ($response->commerceSaleschannel !== null) {
 
 ## removeCommerceSaleschannel
 
-Remove a saleschannel
+Deletes the CommerceSaleschannel identified by `id`.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ if ($response->statusCode === 200) {
 
 ## updateCommerceSaleschannel
 
-Update a saleschannel
+Updates the CommerceSaleschannel identified by `id`. Provide the unified CommerceSaleschannel fields to change in the request body.
 
 ### Example Usage
 
@@ -316,11 +316,11 @@ $request = new Operations\UpdateCommerceSaleschannelRequest(
         collections: [],
         createdAt: Utils\Utils::parseDateTime('2021-12-12T06:19:55.421Z'),
         description: 'Utroque denuncio solutio.',
-        id: 'dcf669f2-72fe-4f86-bf18-a0776d1f5b30',
+        id: 'df964129-81d7-4efa-805d-b986fdc305ae',
         isActive: false,
         metadata: [],
         slug: 'amiculum-congregatio-suspendo',
-        updatedAt: Utils\Utils::parseDateTime('2025-01-28T00:01:54.554Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-29T06:44:48.585Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

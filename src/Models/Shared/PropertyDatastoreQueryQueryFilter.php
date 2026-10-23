@@ -22,10 +22,10 @@ class PropertyDatastoreQueryQueryFilter
     /**
      * $and
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQueryFilter> $and
+     * @var ?array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup> $and
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('and')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQueryFilter>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $and = null;
 
@@ -42,18 +42,18 @@ class PropertyDatastoreQueryQueryFilter
     /**
      * $or
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQueryFilter> $or
+     * @var ?array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup> $or
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('or')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQueryFilter>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $or = null;
 
     /**
      * @param  \Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQueryFilterType  $type
-     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQueryFilter>  $and
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup>  $and
      * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreFilter>  $filters
-     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQueryFilter>  $or
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup>  $or
      * @phpstan-pure
      */
     public function __construct(PropertyDatastoreQueryQueryFilterType $type, ?array $and = null, ?array $filters = null, ?array $or = null)

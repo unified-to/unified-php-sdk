@@ -47,6 +47,8 @@ class Invoice
     /**
      * Create an invoice
      *
+     * Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Invoice
     /**
      * Retrieve an invoice
      *
+     * Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Invoice
     /**
      * List all invoices
      *
+     * Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingInvoicesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingInvoicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Invoice
 
     /**
      * Update an invoice
+     *
+     * Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingInvoiceResponse
@@ -309,6 +317,8 @@ class Invoice
     /**
      * Remove an invoice
      *
+     * Deletes the AccountingInvoice identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingInvoiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Invoice
 
     /**
      * Update an invoice
+     *
+     * Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingInvoiceResponse

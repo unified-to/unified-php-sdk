@@ -47,6 +47,8 @@ class File
     /**
      * Create a file
      *
+     * Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped to the provider's API. Returns the created StorageFile.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateStorageFileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class File
     /**
      * Retrieve a file
      *
+     * Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetStorageFileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class File
     /**
      * List all files
      *
+     * Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListStorageFilesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListStorageFilesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class File
 
     /**
      * Update a file
+     *
+     * Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchStorageFileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchStorageFileResponse
@@ -309,6 +317,8 @@ class File
     /**
      * Remove a file
      *
+     * Deletes the StorageFile identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveStorageFileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveStorageFileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class File
 
     /**
      * Update a file
+     *
+     * Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateStorageFileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateStorageFileResponse

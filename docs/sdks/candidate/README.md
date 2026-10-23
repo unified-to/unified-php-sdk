@@ -13,7 +13,7 @@
 
 ## createAtsCandidate
 
-Create a candidate
+Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 
 ### Example Usage
 
@@ -87,7 +87,7 @@ $request = new Operations\CreateAtsCandidateRequest(
             ),
         ],
         firstName: 'Ardith',
-        id: '664f6e73-f63a-457c-8af7-87c2ab8ec9c2',
+        id: '765d8f1d-ef35-4301-8df0-35945f28d492',
         imageUrl: 'https://avatars.githubusercontent.com/u/27464445',
         jobIds: [],
         lastName: 'Beatty',
@@ -100,7 +100,7 @@ $request = new Operations\CreateAtsCandidateRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '7971fe19-2a15-4b5f-9240-5511e39c68cd',
+                id: '88f377c0-68ae-4125-8dd1-4a4c59aa2d11',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'officia',
@@ -127,7 +127,7 @@ $request = new Operations\CreateAtsCandidateRequest(
             ),
         ],
         title: 'Customer Division Producer',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-28T17:47:32.446Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-29T02:15:35.352Z'),
         webUrl: 'https://fragrant-husband.net/',
     ),
     connectionId: '<id>',
@@ -160,7 +160,7 @@ if ($response->atsCandidate !== null) {
 
 ## getAtsCandidate
 
-Retrieve a candidate
+Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -211,7 +211,7 @@ if ($response->atsCandidate !== null) {
 
 ## listAtsCandidates
 
-List all candidates
+Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -261,7 +261,7 @@ if ($response->atsCandidates !== null) {
 
 ## patchAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -335,7 +335,7 @@ $request = new Operations\PatchAtsCandidateRequest(
             ),
         ],
         firstName: 'Ardith',
-        id: 'e2d5ef47-da9e-4500-8493-4ce44bec7b6e',
+        id: '048dfdaa-43d0-4e45-9000-37cd633a405e',
         imageUrl: 'https://avatars.githubusercontent.com/u/27464445',
         jobIds: [],
         lastName: 'Beatty',
@@ -348,7 +348,7 @@ $request = new Operations\PatchAtsCandidateRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'cca4fa50-af15-422e-8c16-8ed5906d98de',
+                id: '01d15e03-e3cf-4fec-8e4e-15b634f09c61',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'officia',
@@ -375,7 +375,7 @@ $request = new Operations\PatchAtsCandidateRequest(
             ),
         ],
         title: 'Customer Division Producer',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-28T17:47:32.451Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-29T02:15:35.360Z'),
         webUrl: 'https://fragrant-husband.net/',
     ),
     connectionId: '<id>',
@@ -409,7 +409,7 @@ if ($response->atsCandidate !== null) {
 
 ## removeAtsCandidate
 
-Remove a candidate
+Deletes the AtsCandidate identified by `id`.
 
 ### Example Usage
 
@@ -460,7 +460,7 @@ if ($response->statusCode === 200) {
 
 ## updateAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -534,7 +534,7 @@ $request = new Operations\UpdateAtsCandidateRequest(
             ),
         ],
         firstName: 'Ardith',
-        id: 'e2d5ef47-da9e-4500-8493-4ce44bec7b6e',
+        id: '048dfdaa-43d0-4e45-9000-37cd633a405e',
         imageUrl: 'https://avatars.githubusercontent.com/u/27464445',
         jobIds: [],
         lastName: 'Beatty',
@@ -547,7 +547,7 @@ $request = new Operations\UpdateAtsCandidateRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'cca4fa50-af15-422e-8c16-8ed5906d98de',
+                id: '01d15e03-e3cf-4fec-8e4e-15b634f09c61',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'officia',
@@ -574,7 +574,7 @@ $request = new Operations\UpdateAtsCandidateRequest(
             ),
         ],
         title: 'Customer Division Producer',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-28T17:47:32.451Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-29T02:15:35.360Z'),
         webUrl: 'https://fragrant-husband.net/',
     ),
     connectionId: '<id>',

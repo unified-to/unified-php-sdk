@@ -47,6 +47,8 @@ class Comment
     /**
      * Create a comment
      *
+     * Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Comment
 
     /**
      * Create a comment
+     *
+     * Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTaskCommentResponse
@@ -183,6 +187,8 @@ class Comment
     /**
      * Create a comment
      *
+     * Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Comment
     /**
      * Retrieve a comment
      *
+     * Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Comment
 
     /**
      * Retrieve a comment
+     *
+     * Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTaskCommentResponse
@@ -377,6 +387,8 @@ class Comment
     /**
      * Retrieve a comment
      *
+     * Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Comment
 
     /**
      * List all comments
+     *
+     * Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListKmsCommentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListKmsCommentsResponse
@@ -503,6 +517,8 @@ class Comment
     /**
      * List all comments
      *
+     * Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTaskCommentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTaskCommentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -566,6 +582,8 @@ class Comment
     /**
      * List all comments
      *
+     * Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListUcCommentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcCommentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Comment
 
     /**
      * Update a comment
+     *
+     * Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchKmsCommentResponse
@@ -697,6 +717,8 @@ class Comment
     /**
      * Update a comment
      *
+     * Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -764,6 +786,8 @@ class Comment
 
     /**
      * Update a comment
+     *
+     * Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchUcCommentResponse
@@ -833,6 +857,8 @@ class Comment
     /**
      * Remove a comment
      *
+     * Deletes the KmsComment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -889,6 +915,8 @@ class Comment
 
     /**
      * Remove a comment
+     *
+     * Deletes the TaskComment identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTaskCommentResponse
@@ -947,6 +975,8 @@ class Comment
     /**
      * Remove a comment
      *
+     * Deletes the UcComment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1003,6 +1033,8 @@ class Comment
 
     /**
      * Update a comment
+     *
+     * Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateKmsCommentResponse
@@ -1072,6 +1104,8 @@ class Comment
     /**
      * Update a comment
      *
+     * Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1139,6 +1173,8 @@ class Comment
 
     /**
      * Update a comment
+     *
+     * Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateUcCommentResponse

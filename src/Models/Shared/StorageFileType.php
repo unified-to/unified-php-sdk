@@ -9,6 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Whether this is a file or a folder */
 enum StorageFileType: string
 {
     case File = 'FILE';

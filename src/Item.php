@@ -47,6 +47,8 @@ class Item
     /**
      * Create an item
      *
+     * Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Item
     /**
      * Retrieve an item
      *
+     * Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Item
     /**
      * List all items
      *
+     * Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceItemsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceItemsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Item
 
     /**
      * Update an item
+     *
+     * Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceItemResponse
@@ -309,6 +317,8 @@ class Item
     /**
      * Remove an item
      *
+     * Deletes the CommerceItem identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceItemResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Item
 
     /**
      * Update an item
+     *
+     * Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceItemRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceItemResponse

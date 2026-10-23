@@ -47,6 +47,8 @@ class Legal
     /**
      * Create an expense
      *
+     * Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLegalExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Legal
 
     /**
      * Create a matter
+     *
+     * Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLegalMatterResponse
@@ -183,6 +187,8 @@ class Legal
     /**
      * Create a practicearea
      *
+     * Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLegalPracticeareaResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Legal
 
     /**
      * Create a timeentry
+     *
+     * Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLegalTimeentryResponse
@@ -319,6 +327,8 @@ class Legal
     /**
      * Retrieve an expense
      *
+     * Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLegalExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -381,6 +391,8 @@ class Legal
 
     /**
      * Retrieve a matter
+     *
+     * Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLegalMatterResponse
@@ -445,6 +457,8 @@ class Legal
     /**
      * Retrieve a practicearea
      *
+     * Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLegalPracticeareaResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -507,6 +521,8 @@ class Legal
 
     /**
      * Retrieve a timeentry
+     *
+     * Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLegalTimeentryResponse
@@ -571,6 +587,8 @@ class Legal
     /**
      * List all expenses
      *
+     * Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLegalExpensesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLegalExpensesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -633,6 +651,8 @@ class Legal
 
     /**
      * List all matters
+     *
+     * Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListLegalMattersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLegalMattersResponse
@@ -697,6 +717,8 @@ class Legal
     /**
      * List all practiceareas
      *
+     * Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLegalPracticeareasRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLegalPracticeareasResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -760,6 +782,8 @@ class Legal
     /**
      * List all timeentries
      *
+     * Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLegalTimeentriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLegalTimeentriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -822,6 +846,8 @@ class Legal
 
     /**
      * Update an expense
+     *
+     * Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLegalExpenseResponse
@@ -891,6 +917,8 @@ class Legal
     /**
      * Update a matter
      *
+     * Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLegalMatterResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -958,6 +986,8 @@ class Legal
 
     /**
      * Update a practicearea
+     *
+     * Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLegalPracticeareaResponse
@@ -1027,6 +1057,8 @@ class Legal
     /**
      * Update a timeentry
      *
+     * Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLegalTimeentryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1095,6 +1127,8 @@ class Legal
     /**
      * Remove an expense
      *
+     * Deletes the LegalExpense identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLegalExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1151,6 +1185,8 @@ class Legal
 
     /**
      * Remove a matter
+     *
+     * Deletes the LegalMatter identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLegalMatterResponse
@@ -1209,6 +1245,8 @@ class Legal
     /**
      * Remove a practicearea
      *
+     * Deletes the LegalPracticearea identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLegalPracticeareaResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1266,6 +1304,8 @@ class Legal
     /**
      * Remove a timeentry
      *
+     * Deletes the LegalTimeentry identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLegalTimeentryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1322,6 +1362,8 @@ class Legal
 
     /**
      * Update an expense
+     *
+     * Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLegalExpenseResponse
@@ -1391,6 +1433,8 @@ class Legal
     /**
      * Update a matter
      *
+     * Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLegalMatterResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1459,6 +1503,8 @@ class Legal
     /**
      * Update a practicearea
      *
+     * Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLegalPracticeareaRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLegalPracticeareaResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1526,6 +1572,8 @@ class Legal
 
     /**
      * Update a timeentry
+     *
+     * Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLegalTimeentryResponse

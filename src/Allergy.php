@@ -47,6 +47,8 @@ class Allergy
     /**
      * Retrieve an allergy
      *
+     * Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareAllergyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareAllergyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -109,6 +111,8 @@ class Allergy
 
     /**
      * List all allergies
+     *
+     * Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareAllergiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareAllergiesResponse

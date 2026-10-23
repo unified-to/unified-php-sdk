@@ -47,6 +47,8 @@ class Forms
     /**
      * Create a form
      *
+     * Creates a FormsForm. Provide the unified FormsForm fields in the request body; they are mapped to the provider's API. Returns the created FormsForm.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateFormsFormRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateFormsFormResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Forms
     /**
      * Retrieve a form
      *
+     * Retrieves a single FormsForm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetFormsFormRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetFormsFormResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Forms
 
     /**
      * Retrieve a submission
+     *
+     * Retrieves a single FormsSubmission by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetFormsSubmissionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetFormsSubmissionResponse
@@ -241,6 +247,8 @@ class Forms
     /**
      * List all forms
      *
+     * Returns a list of FormsForms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListFormsFormsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListFormsFormsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -304,6 +312,8 @@ class Forms
     /**
      * List all submissions
      *
+     * Returns a list of FormsSubmissions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListFormsSubmissionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListFormsSubmissionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -366,6 +376,8 @@ class Forms
 
     /**
      * Update a form
+     *
+     * Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchFormsFormRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchFormsFormResponse
@@ -435,6 +447,8 @@ class Forms
     /**
      * Remove a form
      *
+     * Deletes the FormsForm identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveFormsFormRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveFormsFormResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -491,6 +505,8 @@ class Forms
 
     /**
      * Update a form
+     *
+     * Updates the FormsForm identified by `id`. Provide the unified FormsForm fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateFormsFormRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateFormsFormResponse

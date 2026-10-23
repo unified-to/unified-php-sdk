@@ -47,6 +47,8 @@ class Pullrequest
     /**
      * Create a pullrequest
      *
+     * Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Pullrequest
     /**
      * Retrieve a pullrequest
      *
+     * Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Pullrequest
     /**
      * List all pullrequests
      *
+     * Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoPullrequestsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoPullrequestsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Pullrequest
 
     /**
      * Update a pullrequest
+     *
+     * Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoPullrequestResponse
@@ -309,6 +317,8 @@ class Pullrequest
     /**
      * Remove a pullrequest
      *
+     * Deletes the RepoPullrequest identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Pullrequest
 
     /**
      * Update a pullrequest
+     *
+     * Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestResponse

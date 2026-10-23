@@ -23,7 +23,7 @@
 
 ## createCommerceLocation
 
-Create a location
+Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
 
 ### Example Usage
 
@@ -58,7 +58,7 @@ $request = new Operations\CreateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: 'cfb9fd29-22d5-44ed-9d15-7b8865a2d9d9',
+        id: '9269d190-f7e4-4ca0-9d9a-3b2cd258af77',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -69,10 +69,10 @@ $request = new Operations\CreateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '1bc20b62-1ed8-468f-a07a-1270eb5f886d',
+                id: 'a9b34ae1-d23f-4ae8-a407-12dc516fa948',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '2db7ffe1-096a-4d3b-ae95-79468699a9df',
+                        id: '51dd7bb8-9a09-4018-a8be-b30616cf72bd',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -98,7 +98,7 @@ $request = new Operations\CreateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-20T17:56:50.699Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-21T10:20:25.147Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -131,7 +131,7 @@ if ($response->commerceLocation !== null) {
 
 ## createHrisLocation
 
-Create a location
+Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
 
 ### Example Usage
 
@@ -166,7 +166,7 @@ $request = new Operations\CreateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: '9d705c51-711f-45a7-a73a-717ad8e2b7b3',
+        id: '5265ff37-d91e-450f-a51f-00456bb7a4f3',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -187,7 +187,7 @@ $request = new Operations\CreateHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-21T02:27:35.009Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-21T19:54:08.292Z'),
     ),
     connectionId: '<id>',
 );
@@ -219,7 +219,7 @@ if ($response->hrisLocation !== null) {
 
 ## getClubsLocation
 
-Retrieve a location
+Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -270,7 +270,7 @@ if ($response->clubsLocation !== null) {
 
 ## getCommerceLocation
 
-Retrieve a location
+Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -321,7 +321,7 @@ if ($response->commerceLocation !== null) {
 
 ## getHealthcareLocation
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -372,7 +372,7 @@ if ($response->healthcareLocation !== null) {
 
 ## getHrisLocation
 
-Retrieve a location
+Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -423,7 +423,7 @@ if ($response->hrisLocation !== null) {
 
 ## listClubsLocations
 
-List all locations
+Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -473,7 +473,7 @@ if ($response->clubsLocations !== null) {
 
 ## listCommerceLocations
 
-List all locations
+Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -523,7 +523,7 @@ if ($response->commerceLocations !== null) {
 
 ## listHealthcareLocations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -573,7 +573,7 @@ if ($response->healthcareLocations !== null) {
 
 ## listHrisLocations
 
-List all locations
+Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -623,7 +623,7 @@ if ($response->hrisLocations !== null) {
 
 ## patchCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -658,7 +658,7 @@ $request = new Operations\PatchCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '40a4434d-2376-4620-9003-349464d19ca7',
+        id: '6d84c5e1-4a04-4750-b446-7984c24185bf',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -669,10 +669,10 @@ $request = new Operations\PatchCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '3e6802f0-02a0-4d54-b944-d6a4b261d631',
+                id: '61a372b2-53b9-4882-b235-31278dee6b9f',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '0b3ca168-ec82-4454-aaac-eff637558b65',
+                        id: '36d1a9c2-1d24-4fb0-bc5c-a15ea787218a',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -698,7 +698,7 @@ $request = new Operations\PatchCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-20T17:56:50.709Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-21T10:20:25.162Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -732,7 +732,7 @@ if ($response->commerceLocation !== null) {
 
 ## patchHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -767,7 +767,7 @@ $request = new Operations\PatchHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: 'c28a0039-b5ac-4680-a8cc-2afb4f82d97b',
+        id: 'a79e86f2-b553-44c7-bcca-ed7260958f52',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -788,7 +788,7 @@ $request = new Operations\PatchHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-21T02:27:35.015Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-21T19:54:08.302Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -821,7 +821,7 @@ if ($response->hrisLocation !== null) {
 
 ## removeCommerceLocation
 
-Remove a location
+Deletes the CommerceLocation identified by `id`.
 
 ### Example Usage
 
@@ -872,7 +872,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisLocation
 
-Remove a location
+Deletes the HrisLocation identified by `id`.
 
 ### Example Usage
 
@@ -923,7 +923,7 @@ if ($response->statusCode === 200) {
 
 ## updateCommerceLocation
 
-Update a location
+Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -958,7 +958,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '40a4434d-2376-4620-9003-349464d19ca7',
+        id: '6d84c5e1-4a04-4750-b446-7984c24185bf',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -969,10 +969,10 @@ $request = new Operations\UpdateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '3e6802f0-02a0-4d54-b944-d6a4b261d631',
+                id: '61a372b2-53b9-4882-b235-31278dee6b9f',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '0b3ca168-ec82-4454-aaac-eff637558b65',
+                        id: '36d1a9c2-1d24-4fb0-bc5c-a15ea787218a',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -998,7 +998,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-20T17:56:50.709Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-21T10:20:25.162Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -1032,7 +1032,7 @@ if ($response->commerceLocation !== null) {
 
 ## updateHrisLocation
 
-Update a location
+Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
 
 ### Example Usage
 
@@ -1067,7 +1067,7 @@ $request = new Operations\UpdateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: 'c28a0039-b5ac-4680-a8cc-2afb4f82d97b',
+        id: 'a79e86f2-b553-44c7-bcca-ed7260958f52',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -1088,7 +1088,7 @@ $request = new Operations\UpdateHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-21T02:27:35.015Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-21T19:54:08.302Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

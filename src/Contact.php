@@ -47,6 +47,8 @@ class Contact
     /**
      * Create a contact
      *
+     * Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Contact
 
     /**
      * Create a contact
+     *
+     * Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmContactResponse
@@ -183,6 +187,8 @@ class Contact
     /**
      * Create a contact
      *
+     * Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Contact
     /**
      * Retrieve a contact
      *
+     * Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Contact
 
     /**
      * Retrieve a contact
+     *
+     * Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmContactResponse
@@ -377,6 +387,8 @@ class Contact
     /**
      * Retrieve a contact
      *
+     * Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Contact
 
     /**
      * List all contacts
+     *
+     * Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingContactsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingContactsResponse
@@ -503,6 +517,8 @@ class Contact
     /**
      * List all contacts
      *
+     * Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmContactsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -566,6 +582,8 @@ class Contact
     /**
      * List all contacts
      *
+     * Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListUcContactsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Contact
 
     /**
      * Update a contact
+     *
+     * Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingContactResponse
@@ -697,6 +717,8 @@ class Contact
     /**
      * Update a contact
      *
+     * Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -764,6 +786,8 @@ class Contact
 
     /**
      * Update a contact
+     *
+     * Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchUcContactResponse
@@ -833,6 +857,8 @@ class Contact
     /**
      * Remove a contact
      *
+     * Deletes the AccountingContact identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -889,6 +915,8 @@ class Contact
 
     /**
      * Remove a contact
+     *
+     * Deletes the CrmContact identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmContactResponse
@@ -947,6 +975,8 @@ class Contact
     /**
      * Remove a contact
      *
+     * Deletes the UcContact identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1003,6 +1033,8 @@ class Contact
 
     /**
      * Update a contact
+     *
+     * Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingContactResponse
@@ -1072,6 +1104,8 @@ class Contact
     /**
      * Update a contact
      *
+     * Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1139,6 +1173,8 @@ class Contact
 
     /**
      * Update a contact
+     *
+     * Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateUcContactResponse

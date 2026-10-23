@@ -47,6 +47,8 @@ class Verification
     /**
      * Create a request
      *
+     * Creates a VerificationRequest. Provide the unified VerificationRequest fields in the request body; they are mapped to the provider's API. Returns the created VerificationRequest.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateVerificationRequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Verification
     /**
      * Retrieve a package
      *
+     * Retrieves a single VerificationPackage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetVerificationPackageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetVerificationPackageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Verification
 
     /**
      * Retrieve a request
+     *
+     * Retrieves a single VerificationRequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetVerificationRequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetVerificationRequestResponse
@@ -241,6 +247,8 @@ class Verification
     /**
      * List all packages
      *
+     * Returns a list of VerificationPackages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListVerificationPackagesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListVerificationPackagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -304,6 +312,8 @@ class Verification
     /**
      * List all requests
      *
+     * Returns a list of VerificationRequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListVerificationRequestsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListVerificationRequestsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -366,6 +376,8 @@ class Verification
 
     /**
      * Update a request
+     *
+     * Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchVerificationRequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchVerificationRequestResponse
@@ -435,6 +447,8 @@ class Verification
     /**
      * Remove a request
      *
+     * Deletes the VerificationRequest identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveVerificationRequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveVerificationRequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -491,6 +505,8 @@ class Verification
 
     /**
      * Update a request
+     *
+     * Updates the VerificationRequest identified by `id`. Provide the unified VerificationRequest fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateVerificationRequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateVerificationRequestResponse

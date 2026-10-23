@@ -74,6 +74,7 @@ class TaskComment
     public ?string $taskId = null;
 
     /**
+     * The comment's text
      *
      * @var ?string $text
      */

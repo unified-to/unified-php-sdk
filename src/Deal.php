@@ -47,6 +47,8 @@ class Deal
     /**
      * Create a deal
      *
+     * Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Deal
     /**
      * Retrieve a deal
      *
+     * Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Deal
     /**
      * List all deals
      *
+     * Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmDealsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Deal
 
     /**
      * Update a deal
+     *
+     * Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
@@ -309,6 +317,8 @@ class Deal
     /**
      * Remove a deal
      *
+     * Deletes the CrmDeal identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Deal
 
     /**
      * Update a deal
+     *
+     * Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse

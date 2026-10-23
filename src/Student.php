@@ -47,6 +47,8 @@ class Student
     /**
      * Create a student
      *
+     * Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Student
     /**
      * Retrieve a student
      *
+     * Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Student
     /**
      * List all students
      *
+     * Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsStudentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsStudentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Student
 
     /**
      * Update a student
+     *
+     * Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsStudentResponse
@@ -309,6 +317,8 @@ class Student
     /**
      * Remove a student
      *
+     * Deletes the LmsStudent identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsStudentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Student
 
     /**
      * Update a student
+     *
+     * Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsStudentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsStudentResponse

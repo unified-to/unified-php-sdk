@@ -47,6 +47,8 @@ class Task
     /**
      * Create a task
      *
+     * Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Task
 
     /**
      * Create a comment
+     *
+     * Creates a TaskComment. Provide the unified TaskComment fields in the request body; they are mapped to the provider's API. Returns the created TaskComment.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTaskCommentResponse
@@ -183,6 +187,8 @@ class Task
     /**
      * Create a project
      *
+     * Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Task
 
     /**
      * Create a task
+     *
+     * Creates a TaskTask. Provide the unified TaskTask fields in the request body; they are mapped to the provider's API. Returns the created TaskTask.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateTaskTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTaskTaskResponse
@@ -319,6 +327,8 @@ class Task
     /**
      * Retrieve a task
      *
+     * Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -381,6 +391,8 @@ class Task
 
     /**
      * Retrieve a change
+     *
+     * Retrieves a single TaskChange by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetTaskChangeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTaskChangeResponse
@@ -445,6 +457,8 @@ class Task
     /**
      * Retrieve a comment
      *
+     * Retrieves a single TaskComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -507,6 +521,8 @@ class Task
 
     /**
      * Retrieve a project
+     *
+     * Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTaskProjectResponse
@@ -571,6 +587,8 @@ class Task
     /**
      * Retrieve a task
      *
+     * Retrieves a single TaskTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetTaskTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTaskTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -633,6 +651,8 @@ class Task
 
     /**
      * List all tasks
+     *
+     * Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiTasksRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiTasksResponse
@@ -697,6 +717,8 @@ class Task
     /**
      * List all changes
      *
+     * Returns a list of TaskChanges. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTaskChangesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTaskChangesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -759,6 +781,8 @@ class Task
 
     /**
      * List all comments
+     *
+     * Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListTaskCommentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTaskCommentsResponse
@@ -823,6 +847,8 @@ class Task
     /**
      * List all projects
      *
+     * Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTaskProjectsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTaskProjectsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -886,6 +912,8 @@ class Task
     /**
      * List all tasks
      *
+     * Returns a list of TaskTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTaskTasksRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTaskTasksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -948,6 +976,8 @@ class Task
 
     /**
      * Update a task
+     *
+     * Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchGenaiTaskResponse
@@ -1017,6 +1047,8 @@ class Task
     /**
      * Update a comment
      *
+     * Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1084,6 +1116,8 @@ class Task
 
     /**
      * Update a project
+     *
+     * Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTaskProjectResponse
@@ -1153,6 +1187,8 @@ class Task
     /**
      * Update a task
      *
+     * Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchTaskTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTaskTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1221,6 +1257,8 @@ class Task
     /**
      * Remove a task
      *
+     * Deletes the GenaiTask identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveGenaiTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1277,6 +1315,8 @@ class Task
 
     /**
      * Remove a comment
+     *
+     * Deletes the TaskComment identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTaskCommentResponse
@@ -1335,6 +1375,8 @@ class Task
     /**
      * Remove a project
      *
+     * Deletes the TaskProject identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1392,6 +1434,8 @@ class Task
     /**
      * Remove a task
      *
+     * Deletes the TaskTask identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTaskTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTaskTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1448,6 +1492,8 @@ class Task
 
     /**
      * Update a task
+     *
+     * Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateGenaiTaskResponse
@@ -1517,6 +1563,8 @@ class Task
     /**
      * Update a comment
      *
+     * Updates the TaskComment identified by `id`. Provide the unified TaskComment fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTaskCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTaskCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1585,6 +1633,8 @@ class Task
     /**
      * Update a project
      *
+     * Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTaskProjectRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTaskProjectResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1652,6 +1702,8 @@ class Task
 
     /**
      * Update a task
+     *
+     * Updates the TaskTask identified by `id`. Provide the unified TaskTask fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTaskTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTaskTaskResponse

@@ -27,7 +27,7 @@
 
 ## createAdsGroup
 
-Create a group
+Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
 
 ### Example Usage
 
@@ -56,15 +56,15 @@ $request = new Operations\CreateAdsGroupRequest(
         createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
         currency: 'USD',
         effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
-        endAt: Utils\Utils::parseDateTime('2026-06-25T01:34:52.041Z'),
-        id: 'a2c68603-1f08-42c7-bf47-91462bbd8ae3',
+        endAt: Utils\Utils::parseDateTime('2026-06-26T23:06:05.743Z'),
+        id: '1da91fc0-7434-448a-a919-f0b108796366',
         languageLocale: 'fr-FR',
         metadata: [],
         name: 'Stark - Baumbach',
-        startAt: Utils\Utils::parseDateTime('2026-01-09T06:49:11.398Z'),
+        startAt: Utils\Utils::parseDateTime('2026-01-11T01:17:34.538Z'),
         status: Shared\AdsGroupStatus::Processing,
         targeting: new Shared\PropertyAdsGroupTargeting(),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-13T16:14:01.125Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-14T08:05:31.572Z'),
     ),
     connectionId: '<id>',
 );
@@ -96,7 +96,7 @@ if ($response->adsGroup !== null) {
 
 ## createHrisGroup
 
-Create a group
+Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
 
 ### Example Usage
 
@@ -121,12 +121,12 @@ $request = new Operations\CreateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: 'a367376f-3ee9-4b6c-8743-d83e2575917d',
+        id: '6c919a90-22a1-479d-ab34-1dc3ed8beeb6',
         isActive: false,
         metadata: [],
         name: 'Games',
         type: Shared\HrisGroupType::Branch,
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T23:27:42.075Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T16:27:13.349Z'),
     ),
     connectionId: '<id>',
 );
@@ -212,7 +212,7 @@ if ($response->scimGroup !== null) {
 
 ## getAdsGroup
 
-Retrieve a group
+Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -263,7 +263,7 @@ if ($response->adsGroup !== null) {
 
 ## getClubsGroup
 
-Retrieve a group
+Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -314,7 +314,7 @@ if ($response->clubsGroup !== null) {
 
 ## getHrisGroup
 
-Retrieve a group
+Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -416,7 +416,7 @@ if ($response->scimGroup !== null) {
 
 ## listAdsGroups
 
-List all groups
+Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -466,7 +466,7 @@ if ($response->adsGroups !== null) {
 
 ## listClubsGroups
 
-List all groups
+Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -516,7 +516,7 @@ if ($response->clubsGroups !== null) {
 
 ## listHrisGroups
 
-List all groups
+Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -616,7 +616,7 @@ if ($response->scimGroups !== null) {
 
 ## patchAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -645,15 +645,15 @@ $request = new Operations\PatchAdsGroupRequest(
         createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
         currency: 'USD',
         effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
-        endAt: Utils\Utils::parseDateTime('2026-06-25T01:34:52.194Z'),
-        id: '7881867d-720e-4bd6-9ea7-1347033a25c3',
+        endAt: Utils\Utils::parseDateTime('2026-06-26T23:06:05.936Z'),
+        id: '0eeec5cc-3170-4279-acfa-ca35313357a2',
         languageLocale: 'fr-FR',
         metadata: [],
         name: 'Stark - Baumbach',
-        startAt: Utils\Utils::parseDateTime('2026-01-09T06:49:11.540Z'),
+        startAt: Utils\Utils::parseDateTime('2026-01-11T01:17:34.718Z'),
         status: Shared\AdsGroupStatus::Processing,
         targeting: new Shared\PropertyAdsGroupTargeting(),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-13T16:14:01.179Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-14T08:05:31.639Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -686,7 +686,7 @@ if ($response->adsGroup !== null) {
 
 ## patchHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -711,12 +711,12 @@ $request = new Operations\PatchHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '0c7aa9a3-c25c-4e54-9338-a92812e404ce',
+        id: '2a6ab666-a779-4d61-8460-1708d2cf490f',
         isActive: false,
         metadata: [],
         name: 'Games',
         type: Shared\HrisGroupType::Branch,
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T23:27:42.085Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T16:27:13.369Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -804,7 +804,7 @@ if ($response->scimGroup !== null) {
 
 ## removeAdsGroup
 
-Remove a group
+Deletes the AdsGroup identified by `id`.
 
 ### Example Usage
 
@@ -855,7 +855,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisGroup
 
-Remove a group
+Deletes the HrisGroup identified by `id`.
 
 ### Example Usage
 
@@ -957,7 +957,7 @@ if ($response->statusCode === 200) {
 
 ## updateAdsGroup
 
-Update a group
+Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -986,15 +986,15 @@ $request = new Operations\UpdateAdsGroupRequest(
         createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
         currency: 'USD',
         effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
-        endAt: Utils\Utils::parseDateTime('2026-06-25T01:34:52.194Z'),
-        id: '7881867d-720e-4bd6-9ea7-1347033a25c3',
+        endAt: Utils\Utils::parseDateTime('2026-06-26T23:06:05.936Z'),
+        id: '0eeec5cc-3170-4279-acfa-ca35313357a2',
         languageLocale: 'fr-FR',
         metadata: [],
         name: 'Stark - Baumbach',
-        startAt: Utils\Utils::parseDateTime('2026-01-09T06:49:11.540Z'),
+        startAt: Utils\Utils::parseDateTime('2026-01-11T01:17:34.718Z'),
         status: Shared\AdsGroupStatus::Processing,
         targeting: new Shared\PropertyAdsGroupTargeting(),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-13T16:14:01.179Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-14T08:05:31.639Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1027,7 +1027,7 @@ if ($response->adsGroup !== null) {
 
 ## updateHrisGroup
 
-Update a group
+Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
 
 ### Example Usage
 
@@ -1052,12 +1052,12 @@ $request = new Operations\UpdateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '0c7aa9a3-c25c-4e54-9338-a92812e404ce',
+        id: '2a6ab666-a779-4d61-8460-1708d2cf490f',
         isActive: false,
         metadata: [],
         name: 'Games',
         type: Shared\HrisGroupType::Branch,
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T23:27:42.085Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T16:27:13.369Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

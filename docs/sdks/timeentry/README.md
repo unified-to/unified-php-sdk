@@ -13,7 +13,7 @@
 
 ## createLegalTimeentry
 
-Create a timeentry
+Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
 ### Example Usage
 
@@ -40,13 +40,13 @@ $request = new Operations\CreateLegalTimeentryRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
         currency: 'ZAR',
         description: 'Ea derideo adulatio torrens.',
-        id: '5556370f-407c-48ae-aa6e-e4e3257f9514',
+        id: '0f089401-a4c2-43b5-a2ba-f4b681d975fa',
         isBillable: true,
         metadata: [],
         minutes: 390,
         rateAmount: 637,
         totalAmount: 4140.5,
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T01:49:26.576Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-30T03:25:54.830Z'),
         workedAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
     ),
     connectionId: '<id>',
@@ -79,7 +79,7 @@ if ($response->legalTimeentry !== null) {
 
 ## getLegalTimeentry
 
-Retrieve a timeentry
+Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -130,7 +130,7 @@ if ($response->legalTimeentry !== null) {
 
 ## listLegalTimeentries
 
-List all timeentries
+Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -180,7 +180,7 @@ if ($response->legalTimeentries !== null) {
 
 ## patchLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -207,13 +207,13 @@ $request = new Operations\PatchLegalTimeentryRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
         currency: 'ZAR',
         description: 'Ea derideo adulatio torrens.',
-        id: '93c9e28c-8664-4e15-a188-ad57cf91af64',
+        id: 'd5305f1d-6d77-4e6c-abd2-e67487dad71c',
         isBillable: true,
         metadata: [],
         minutes: 390,
         rateAmount: 637,
         totalAmount: 4140.5,
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T01:49:26.577Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-30T03:25:54.831Z'),
         workedAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
     ),
     connectionId: '<id>',
@@ -247,7 +247,7 @@ if ($response->legalTimeentry !== null) {
 
 ## removeLegalTimeentry
 
-Remove a timeentry
+Deletes the LegalTimeentry identified by `id`.
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ if ($response->statusCode === 200) {
 
 ## updateLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -325,13 +325,13 @@ $request = new Operations\UpdateLegalTimeentryRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
         currency: 'ZAR',
         description: 'Ea derideo adulatio torrens.',
-        id: '93c9e28c-8664-4e15-a188-ad57cf91af64',
+        id: 'd5305f1d-6d77-4e6c-abd2-e67487dad71c',
         isBillable: true,
         metadata: [],
         minutes: 390,
         rateAmount: 637,
         totalAmount: 4140.5,
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T01:49:26.577Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-30T03:25:54.831Z'),
         workedAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
     ),
     connectionId: '<id>',

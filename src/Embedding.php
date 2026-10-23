@@ -47,6 +47,8 @@ class Embedding
     /**
      * Create an embedding
      *
+     * Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException

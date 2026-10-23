@@ -47,6 +47,8 @@ class Feedback
     /**
      * Create a feedback
      *
+     * Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreatePerformanceFeedbackRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePerformanceFeedbackResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Feedback
     /**
      * Retrieve a feedback
      *
+     * Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetPerformanceFeedbackRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPerformanceFeedbackResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Feedback
 
     /**
      * List all feedbacks
+     *
+     * Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListPerformanceFeedbacksRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPerformanceFeedbacksResponse

@@ -13,7 +13,7 @@
 
 ## createMartechList
 
-Create a list
+Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ $request = new Operations\CreateMartechListRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2019-09-18T02:01:36.950Z'),
         description: 'Vilis.',
-        id: 'fa25e1e6-f0a8-45b9-b31f-6dfd003964d6',
+        id: '3b003412-2577-4c16-94cc-ff85e9f73d48',
         isActive: true,
         language: 'ru',
         metadata: [],
@@ -56,7 +56,7 @@ $request = new Operations\CreateMartechListRequest(
         senderName: 'Blake Kuhn',
         senderPhone: '359.305.7962 x28115',
         subject: 'Theca caecus copia crebro valeo ulciscor.',
-        updatedAt: Utils\Utils::parseDateTime('2022-09-13T10:08:43.347Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-14T06:14:04.658Z'),
     ),
     connectionId: '<id>',
 );
@@ -88,7 +88,7 @@ if ($response->marketingList !== null) {
 
 ## getMartechList
 
-Retrieve a list
+Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -139,7 +139,7 @@ if ($response->marketingList !== null) {
 
 ## listMartechLists
 
-List all lists
+Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -189,7 +189,7 @@ if ($response->marketingLists !== null) {
 
 ## patchMartechList
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -222,7 +222,7 @@ $request = new Operations\PatchMartechListRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2019-09-18T02:01:36.950Z'),
         description: 'Vilis.',
-        id: 'fbf9dae2-4ca6-4dd6-8113-05be28e2eadc',
+        id: '0ebb97b3-1979-48db-9888-59d2a1abd6ea',
         isActive: true,
         language: 'ru',
         metadata: [],
@@ -232,7 +232,7 @@ $request = new Operations\PatchMartechListRequest(
         senderName: 'Blake Kuhn',
         senderPhone: '359.305.7962 x28115',
         subject: 'Theca caecus copia crebro valeo ulciscor.',
-        updatedAt: Utils\Utils::parseDateTime('2022-09-13T10:08:43.358Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-14T06:14:04.670Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -265,7 +265,7 @@ if ($response->marketingList !== null) {
 
 ## removeMartechList
 
-Remove a list
+Deletes the MarketingList identified by `id`.
 
 ### Example Usage
 
@@ -316,7 +316,7 @@ if ($response->statusCode === 200) {
 
 ## updateMartechList
 
-Update a list
+Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ $request = new Operations\UpdateMartechListRequest(
         ),
         createdAt: Utils\Utils::parseDateTime('2019-09-18T02:01:36.950Z'),
         description: 'Vilis.',
-        id: 'fbf9dae2-4ca6-4dd6-8113-05be28e2eadc',
+        id: '0ebb97b3-1979-48db-9888-59d2a1abd6ea',
         isActive: true,
         language: 'ru',
         metadata: [],
@@ -359,7 +359,7 @@ $request = new Operations\UpdateMartechListRequest(
         senderName: 'Blake Kuhn',
         senderPhone: '359.305.7962 x28115',
         subject: 'Theca caecus copia crebro valeo ulciscor.',
-        updatedAt: Utils\Utils::parseDateTime('2022-09-13T10:08:43.358Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-14T06:14:04.670Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

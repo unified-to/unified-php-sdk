@@ -47,6 +47,8 @@ class Cdp
     /**
      * Create an activation
      *
+     * Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are mapped to the provider's API. Returns the created CdpActivation.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpActivationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Cdp
 
     /**
      * Create a destination
+     *
+     * Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are mapped to the provider's API. Returns the created CdpDestination.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpDestinationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpDestinationResponse
@@ -183,6 +187,8 @@ class Cdp
     /**
      * Create an event
      *
+     * Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Cdp
 
     /**
      * Create a profile
+     *
+     * Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to the provider's API. Returns the created CdpProfile.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpProfileResponse
@@ -319,6 +327,8 @@ class Cdp
     /**
      * Create a segment
      *
+     * Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to the provider's API. Returns the created CdpSegment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpSegmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Cdp
 
     /**
      * Create a source
+     *
+     * Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to the provider's API. Returns the created CdpSource.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpSourceResponse
@@ -455,6 +467,8 @@ class Cdp
     /**
      * Retrieve an activation
      *
+     * Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpActivationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -517,6 +531,8 @@ class Cdp
 
     /**
      * Retrieve a destination
+     *
+     * Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpDestinationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpDestinationResponse
@@ -581,6 +597,8 @@ class Cdp
     /**
      * Retrieve an event
      *
+     * Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -643,6 +661,8 @@ class Cdp
 
     /**
      * Retrieve a profile
+     *
+     * Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpProfileResponse
@@ -707,6 +727,8 @@ class Cdp
     /**
      * Retrieve a segment
      *
+     * Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpSegmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -769,6 +791,8 @@ class Cdp
 
     /**
      * Retrieve a source
+     *
+     * Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpSourceResponse
@@ -833,6 +857,8 @@ class Cdp
     /**
      * List all activations
      *
+     * Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpActivationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpActivationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -895,6 +921,8 @@ class Cdp
 
     /**
      * List all destinations
+     *
+     * Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpDestinationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpDestinationsResponse
@@ -959,6 +987,8 @@ class Cdp
     /**
      * List all events
      *
+     * Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1021,6 +1051,8 @@ class Cdp
 
     /**
      * List all profiles
+     *
+     * Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpProfilesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpProfilesResponse
@@ -1085,6 +1117,8 @@ class Cdp
     /**
      * List all segments
      *
+     * Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpSegmentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpSegmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1148,6 +1182,8 @@ class Cdp
     /**
      * List all sources
      *
+     * Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpSourcesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpSourcesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1210,6 +1246,8 @@ class Cdp
 
     /**
      * Update an activation
+     *
+     * Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpActivationResponse
@@ -1279,6 +1317,8 @@ class Cdp
     /**
      * Update a destination
      *
+     * Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpDestinationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpDestinationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1346,6 +1386,8 @@ class Cdp
 
     /**
      * Update an event
+     *
+     * Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpEventResponse
@@ -1415,6 +1457,8 @@ class Cdp
     /**
      * Update a profile
      *
+     * Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpProfileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1482,6 +1526,8 @@ class Cdp
 
     /**
      * Update a segment
+     *
+     * Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpSegmentResponse
@@ -1551,6 +1597,8 @@ class Cdp
     /**
      * Update a source
      *
+     * Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpSourceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1619,6 +1667,8 @@ class Cdp
     /**
      * Remove an activation
      *
+     * Deletes the CdpActivation identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpActivationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1675,6 +1725,8 @@ class Cdp
 
     /**
      * Remove a destination
+     *
+     * Deletes the CdpDestination identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpDestinationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpDestinationResponse
@@ -1733,6 +1785,8 @@ class Cdp
     /**
      * Remove an event
      *
+     * Deletes the CdpEvent identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1789,6 +1843,8 @@ class Cdp
 
     /**
      * Remove a profile
+     *
+     * Deletes the CdpProfile identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpProfileResponse
@@ -1847,6 +1903,8 @@ class Cdp
     /**
      * Remove a segment
      *
+     * Deletes the CdpSegment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpSegmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1904,6 +1962,8 @@ class Cdp
     /**
      * Remove a source
      *
+     * Deletes the CdpSource identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpSourceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1960,6 +2020,8 @@ class Cdp
 
     /**
      * Update an activation
+     *
+     * Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpActivationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpActivationResponse
@@ -2029,6 +2091,8 @@ class Cdp
     /**
      * Update a destination
      *
+     * Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpDestinationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpDestinationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2096,6 +2160,8 @@ class Cdp
 
     /**
      * Update an event
+     *
+     * Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpEventResponse
@@ -2165,6 +2231,8 @@ class Cdp
     /**
      * Update a profile
      *
+     * Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpProfileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2233,6 +2301,8 @@ class Cdp
     /**
      * Update a segment
      *
+     * Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpSegmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2300,6 +2370,8 @@ class Cdp
 
     /**
      * Update a source
+     *
+     * Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpSourceResponse

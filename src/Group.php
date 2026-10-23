@@ -47,6 +47,8 @@ class Group
     /**
      * Create a group
      *
+     * Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Group
 
     /**
      * Create a group
+     *
+     * Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
@@ -248,6 +252,8 @@ class Group
     /**
      * Retrieve a group
      *
+     * Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -311,6 +317,8 @@ class Group
     /**
      * Retrieve a group
      *
+     * Retrieves a single ClubsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -373,6 +381,8 @@ class Group
 
     /**
      * Retrieve a group
+     *
+     * Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
@@ -497,6 +507,8 @@ class Group
     /**
      * List all groups
      *
+     * Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsGroupsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -560,6 +572,8 @@ class Group
     /**
      * List all groups
      *
+     * Returns a list of ClubsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsGroupsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsGroupsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -622,6 +636,8 @@ class Group
 
     /**
      * List all groups
+     *
+     * Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
@@ -749,6 +765,8 @@ class Group
     /**
      * Update a group
      *
+     * Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -816,6 +834,8 @@ class Group
 
     /**
      * Update a group
+     *
+     * Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
@@ -950,6 +970,8 @@ class Group
     /**
      * Remove a group
      *
+     * Deletes the AdsGroup identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1006,6 +1028,8 @@ class Group
 
     /**
      * Remove a group
+     *
+     * Deletes the HrisGroup identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
@@ -1121,6 +1145,8 @@ class Group
     /**
      * Update a group
      *
+     * Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1188,6 +1214,8 @@ class Group
 
     /**
      * Update a group
+     *
+     * Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse

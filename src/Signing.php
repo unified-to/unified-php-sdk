@@ -47,6 +47,8 @@ class Signing
     /**
      * Create a document
      *
+     * Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Signing
 
     /**
      * Create a signatory
+     *
+     * Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateSigningSignatoryResponse
@@ -183,6 +187,8 @@ class Signing
     /**
      * Retrieve a document
      *
+     * Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Signing
 
     /**
      * Retrieve a signatory
+     *
+     * Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSigningSignatoryResponse
@@ -309,6 +317,8 @@ class Signing
     /**
      * Retrieve a template
      *
+     * Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetSigningTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSigningTemplateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -371,6 +381,8 @@ class Signing
 
     /**
      * List all documents
+     *
+     * Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListSigningDocumentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSigningDocumentsResponse
@@ -435,6 +447,8 @@ class Signing
     /**
      * List all signatories
      *
+     * Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSigningSignatoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSigningSignatoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -498,6 +512,8 @@ class Signing
     /**
      * List all templates
      *
+     * Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSigningTemplatesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSigningTemplatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -560,6 +576,8 @@ class Signing
 
     /**
      * Update a document
+     *
+     * Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchSigningDocumentResponse
@@ -629,6 +647,8 @@ class Signing
     /**
      * Update a signatory
      *
+     * Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -697,6 +717,8 @@ class Signing
     /**
      * Remove a document
      *
+     * Deletes the SigningDocument identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveSigningDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -754,6 +776,8 @@ class Signing
     /**
      * Remove a signatory
      *
+     * Deletes the SigningSignatory identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -810,6 +834,8 @@ class Signing
 
     /**
      * Update a document
+     *
+     * Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateSigningDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateSigningDocumentResponse
@@ -878,6 +904,8 @@ class Signing
 
     /**
      * Update a signatory
+     *
+     * Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateSigningSignatoryResponse

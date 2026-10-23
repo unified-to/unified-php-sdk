@@ -47,6 +47,8 @@ class Bankfeedaccount
     /**
      * Create a bankfeedaccount
      *
+     * Creates a AccountingBankfeedaccount. Provide the unified AccountingBankfeedaccount fields in the request body; they are mapped to the provider's API. Returns the created AccountingBankfeedaccount.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingBankfeedaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Bankfeedaccount
     /**
      * Retrieve a bankfeedaccount
      *
+     * Retrieves a single AccountingBankfeedaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingBankfeedaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Bankfeedaccount
     /**
      * List all bankfeedaccounts
      *
+     * Returns a list of AccountingBankfeedaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingBankfeedaccountsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingBankfeedaccountsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Bankfeedaccount
 
     /**
      * Update a bankfeedaccount
+     *
+     * Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingBankfeedaccountResponse
@@ -309,6 +317,8 @@ class Bankfeedaccount
     /**
      * Remove a bankfeedaccount
      *
+     * Deletes the AccountingBankfeedaccount identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingBankfeedaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Bankfeedaccount
 
     /**
      * Update a bankfeedaccount
+     *
+     * Updates the AccountingBankfeedaccount identified by `id`. Provide the unified AccountingBankfeedaccount fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingBankfeedaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingBankfeedaccountResponse

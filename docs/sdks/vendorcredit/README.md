@@ -13,7 +13,7 @@
 
 ## createAccountingVendorcredit
 
-Create a vendorcredit
+Creates a AccountingVendorcredit. Provide the unified AccountingVendorcredit fields in the request body; they are mapped to the provider's API. Returns the created AccountingVendorcredit.
 
 ### Example Usage
 
@@ -40,14 +40,14 @@ $request = new Operations\CreateAccountingVendorcreditRequest(
         balanceAmount: 0,
         createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         currency: 'USD',
-        id: 'fe3ac716-b436-4a30-adb2-714237b7c28f',
+        id: 'ded0be57-4069-4996-87ce-79889634bdc3',
         lineitems: [],
         metadata: [],
         notes: 'Volup conatus cruciamentum decor avaritia.',
         postedAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         status: Shared\AccountingVendorcreditStatus::Authorized,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-03T01:42:12.409Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-03T08:01:18.996Z'),
     ),
     connectionId: '<id>',
 );
@@ -79,7 +79,7 @@ if ($response->accountingVendorcredit !== null) {
 
 ## getAccountingVendorcredit
 
-Retrieve a vendorcredit
+Retrieves a single AccountingVendorcredit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -130,7 +130,7 @@ if ($response->accountingVendorcredit !== null) {
 
 ## listAccountingVendorcredits
 
-List all vendorcredits
+Returns a list of AccountingVendorcredits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -180,7 +180,7 @@ if ($response->accountingVendorcredits !== null) {
 
 ## patchAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -207,14 +207,14 @@ $request = new Operations\PatchAccountingVendorcreditRequest(
         balanceAmount: 0,
         createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         currency: 'USD',
-        id: '421efb11-574f-4a58-b1b3-c13d3675e8d3',
+        id: '8582d371-dfff-4f5c-b05f-342aafd613ef',
         lineitems: [],
         metadata: [],
         notes: 'Volup conatus cruciamentum decor avaritia.',
         postedAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         status: Shared\AccountingVendorcreditStatus::Authorized,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-03T01:42:12.414Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-03T08:01:19.002Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -247,7 +247,7 @@ if ($response->accountingVendorcredit !== null) {
 
 ## removeAccountingVendorcredit
 
-Remove a vendorcredit
+Deletes the AccountingVendorcredit identified by `id`.
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingVendorcredit
 
-Update a vendorcredit
+Updates the AccountingVendorcredit identified by `id`. Provide the unified AccountingVendorcredit fields to change in the request body.
 
 ### Example Usage
 
@@ -325,14 +325,14 @@ $request = new Operations\UpdateAccountingVendorcreditRequest(
         balanceAmount: 0,
         createdAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         currency: 'USD',
-        id: '421efb11-574f-4a58-b1b3-c13d3675e8d3',
+        id: '8582d371-dfff-4f5c-b05f-342aafd613ef',
         lineitems: [],
         metadata: [],
         notes: 'Volup conatus cruciamentum decor avaritia.',
         postedAt: Utils\Utils::parseDateTime('2023-04-15T21:14:08.197Z'),
         status: Shared\AccountingVendorcreditStatus::Authorized,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-03T01:42:12.414Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-03T08:01:19.002Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

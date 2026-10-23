@@ -19,7 +19,7 @@
 
 ## createAccountingProject
 
-Create a project
+Creates a AccountingProject. Provide the unified AccountingProject fields in the request body; they are mapped to the provider's API. Returns the created AccountingProject.
 
 ### Example Usage
 
@@ -71,7 +71,7 @@ if ($response->accountingProject !== null) {
 
 ## createTaskProject
 
-Create a project
+Creates a TaskProject. Provide the unified TaskProject fields in the request body; they are mapped to the provider's API. Returns the created TaskProject.
 
 ### Example Usage
 
@@ -98,14 +98,14 @@ $request = new Operations\CreateTaskProjectRequest(
         description: 'Valetudo aggredior accommodo curiositas vox.',
         hasChildren: false,
         hasTasks: false,
-        id: 'aeb39b9d-e5b0-4a0c-bcb3-cda26afa1b4c',
+        id: '70b9e689-6f7e-4521-b6d3-eb8f952bbe01',
         metadata: [
             new Shared\TaskMetadata(
                 extraData: [
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: 'd98f2b9a-ab7e-405e-8df0-fa5004566c47',
+                id: '2760b84d-998a-4da9-b093-b614914c3d63',
                 namespace: 'custom',
                 slug: 'decens',
                 value: 'uterque',
@@ -115,14 +115,14 @@ $request = new Operations\CreateTaskProjectRequest(
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: 'c06402ac-1b9b-481d-9e29-7d11c4f81614',
+                id: '85000610-f44a-46d8-9ef5-763e97fb3946',
                 namespace: 'custom',
                 slug: 'benevolentia',
                 value: 'pariatur',
             ),
         ],
         name: 'Garden',
-        updatedAt: Utils\Utils::parseDateTime('2023-10-11T14:30:33.168Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-11T18:49:15.277Z'),
     ),
     connectionId: '<id>',
 );
@@ -154,7 +154,7 @@ if ($response->taskProject !== null) {
 
 ## getAccountingProject
 
-Retrieve a project
+Retrieves a single AccountingProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ if ($response->accountingProject !== null) {
 
 ## getTaskProject
 
-Retrieve a project
+Retrieves a single TaskProject by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -256,7 +256,7 @@ if ($response->taskProject !== null) {
 
 ## listAccountingProjects
 
-List all projects
+Returns a list of AccountingProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ if ($response->accountingProjects !== null) {
 
 ## listTaskProjects
 
-List all projects
+Returns a list of TaskProjects. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -356,7 +356,7 @@ if ($response->taskProjects !== null) {
 
 ## patchAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -409,7 +409,7 @@ if ($response->accountingProject !== null) {
 
 ## patchTaskProject
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -436,14 +436,14 @@ $request = new Operations\PatchTaskProjectRequest(
         description: 'Valetudo aggredior accommodo curiositas vox.',
         hasChildren: false,
         hasTasks: false,
-        id: 'b4f834dc-8dc6-45c7-a5d5-5b99e2863128',
+        id: '35f554fb-0e2e-4945-8737-cd3a4a354144',
         metadata: [
             new Shared\TaskMetadata(
                 extraData: [
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: 'dd0adf29-9721-4b90-9a60-ba85528e7dd8',
+                id: 'ee70cb43-dfa1-4406-94e0-baea637a39b4',
                 namespace: 'custom',
                 slug: 'decens',
                 value: 'uterque',
@@ -453,14 +453,14 @@ $request = new Operations\PatchTaskProjectRequest(
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: '3076015c-7c01-4e61-b07b-1a523274e786',
+                id: '228519fa-a86a-439f-85fc-d49d98eea736',
                 namespace: 'custom',
                 slug: 'benevolentia',
                 value: 'pariatur',
             ),
         ],
         name: 'Garden',
-        updatedAt: Utils\Utils::parseDateTime('2023-10-11T14:30:33.169Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-11T18:49:15.279Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -493,7 +493,7 @@ if ($response->taskProject !== null) {
 
 ## removeAccountingProject
 
-Remove a project
+Deletes the AccountingProject identified by `id`.
 
 ### Example Usage
 
@@ -544,7 +544,7 @@ if ($response->statusCode === 200) {
 
 ## removeTaskProject
 
-Remove a project
+Deletes the TaskProject identified by `id`.
 
 ### Example Usage
 
@@ -595,7 +595,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingProject
 
-Update a project
+Updates the AccountingProject identified by `id`. Provide the unified AccountingProject fields to change in the request body.
 
 ### Example Usage
 
@@ -648,7 +648,7 @@ if ($response->accountingProject !== null) {
 
 ## updateTaskProject
 
-Update a project
+Updates the TaskProject identified by `id`. Provide the unified TaskProject fields to change in the request body.
 
 ### Example Usage
 
@@ -675,14 +675,14 @@ $request = new Operations\UpdateTaskProjectRequest(
         description: 'Valetudo aggredior accommodo curiositas vox.',
         hasChildren: false,
         hasTasks: false,
-        id: 'b4f834dc-8dc6-45c7-a5d5-5b99e2863128',
+        id: '35f554fb-0e2e-4945-8737-cd3a4a354144',
         metadata: [
             new Shared\TaskMetadata(
                 extraData: [
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: 'dd0adf29-9721-4b90-9a60-ba85528e7dd8',
+                id: 'ee70cb43-dfa1-4406-94e0-baea637a39b4',
                 namespace: 'custom',
                 slug: 'decens',
                 value: 'uterque',
@@ -692,14 +692,14 @@ $request = new Operations\UpdateTaskProjectRequest(
 
                 ],
                 format: Shared\TaskMetadataFormat::Text,
-                id: '3076015c-7c01-4e61-b07b-1a523274e786',
+                id: '228519fa-a86a-439f-85fc-d49d98eea736',
                 namespace: 'custom',
                 slug: 'benevolentia',
                 value: 'pariatur',
             ),
         ],
         name: 'Garden',
-        updatedAt: Utils\Utils::parseDateTime('2023-10-11T14:30:33.169Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-11T18:49:15.279Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

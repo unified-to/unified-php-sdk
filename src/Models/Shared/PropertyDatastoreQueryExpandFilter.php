@@ -22,10 +22,10 @@ class PropertyDatastoreQueryExpandFilter
     /**
      * $and
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryExpandFilter> $and
+     * @var ?array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup> $and
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('and')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryExpandFilter>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $and = null;
 
@@ -42,18 +42,18 @@ class PropertyDatastoreQueryExpandFilter
     /**
      * $or
      *
-     * @var ?array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryExpandFilter> $or
+     * @var ?array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup> $or
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('or')]
-    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryExpandFilter>|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $or = null;
 
     /**
      * @param  \Unified\Unified_to\Models\Shared\PropertyDatastoreQueryExpandFilterType  $type
-     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryExpandFilter>  $and
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup>  $and
      * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreFilter>  $filters
-     * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryExpandFilter>  $or
+     * @param  ?array<\Unified\Unified_to\Models\Shared\DatastoreFilterGroup>  $or
      * @phpstan-pure
      */
     public function __construct(PropertyDatastoreQueryExpandFilterType $type, ?array $and = null, ?array $filters = null, ?array $or = null)

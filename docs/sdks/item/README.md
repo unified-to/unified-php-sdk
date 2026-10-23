@@ -13,7 +13,7 @@
 
 ## createCommerceItem
 
-Create an item
+Creates a CommerceItem. Provide the unified CommerceItem fields in the request body; they are mapped to the provider's API. Returns the created CommerceItem.
 
 ### Example Usage
 
@@ -41,7 +41,7 @@ $request = new Operations\CreateCommerceItemRequest(
         description: 'Decretum vulnero ustulo abeo.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: 'b932dc7d-d4ba-4c4f-9234-98804f973add',
+        id: '69888d2e-7ba9-417d-8e76-f06781383f3d',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -50,10 +50,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 876,
-                id: 'd49b8ce9-d4c0-4aca-9fa5-bd21a100e401',
+                id: '60f131ab-5d3f-4c5a-998d-2398b5b2cb0d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'a65c394d-c43b-4776-98e5-71eb1f9fdb41',
+                        id: 'b349f7f7-f117-4712-ae25-7c7dff25f551',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -66,10 +66,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: '8fff6f50-742f-453a-800c-20bda1039b3a',
+                id: '2577733c-d9d7-4ad9-aca7-2d9c2697e763',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '1552eab6-e15b-4322-9fea-dad4178a11e9',
+                        id: '59f50590-4bc2-44c7-b89e-28b478033704',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -86,7 +86,7 @@ $request = new Operations\CreateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '85f2a1e8-f760-443f-ac8b-c6a1c1831565',
+                id: 'b5d20319-3f55-4e47-b6ae-a4670d01f524',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -109,7 +109,7 @@ $request = new Operations\CreateCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-19T12:01:33.154Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-20T06:24:31.238Z'),
         vendorName: 'Mayer - Flatley',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,
@@ -144,7 +144,7 @@ if ($response->commerceItem !== null) {
 
 ## getCommerceItem
 
-Retrieve an item
+Retrieves a single CommerceItem by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ if ($response->commerceItem !== null) {
 
 ## listCommerceItems
 
-List all items
+Returns a list of CommerceItems. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -245,7 +245,7 @@ if ($response->commerceItems !== null) {
 
 ## patchCommerceItem
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ $request = new Operations\PatchCommerceItemRequest(
         description: 'Decretum vulnero ustulo abeo.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: 'c13a38fe-fad4-4198-bf4a-7b5dc5f77b0d',
+        id: 'e16779fc-7762-4d3c-8e5b-d727309f0130',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -282,10 +282,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 876,
-                id: '9bda371f-7ce3-4f50-b725-587283bf4f2d',
+                id: 'b5af06a2-45bf-4019-9f88-72f8ca2bdd50',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '79b75953-de77-4893-9da0-5b030a19f949',
+                        id: '01dc9f6b-a04d-4b58-97cf-6d2292c64429',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -298,10 +298,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: '99807e35-840c-4c23-bb17-9c5b9c3fd475',
+                id: '97c47924-f468-4ac6-a746-d3ac5c08ec7d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '78ff5b2d-8ab5-4eab-a0d4-abb192ef8de7',
+                        id: '1b7c372a-3bf2-46ff-8c72-5fb0fd59d522',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -318,7 +318,7 @@ $request = new Operations\PatchCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '10b73839-3f28-45d3-b97e-b2c5fe46fa8f',
+                id: '8d5f9439-2089-429f-9300-69bc44a4ae54',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -341,7 +341,7 @@ $request = new Operations\PatchCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-19T12:01:33.164Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-20T06:24:31.255Z'),
         vendorName: 'Mayer - Flatley',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,
@@ -377,7 +377,7 @@ if ($response->commerceItem !== null) {
 
 ## removeCommerceItem
 
-Remove an item
+Deletes the CommerceItem identified by `id`.
 
 ### Example Usage
 
@@ -428,7 +428,7 @@ if ($response->statusCode === 200) {
 
 ## updateCommerceItem
 
-Update an item
+Updates the CommerceItem identified by `id`. Provide the unified CommerceItem fields to change in the request body.
 
 ### Example Usage
 
@@ -456,7 +456,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         description: 'Decretum vulnero ustulo abeo.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: 'c13a38fe-fad4-4198-bf4a-7b5dc5f77b0d',
+        id: 'e16779fc-7762-4d3c-8e5b-d727309f0130',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -465,10 +465,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 876,
-                id: '9bda371f-7ce3-4f50-b725-587283bf4f2d',
+                id: 'b5af06a2-45bf-4019-9f88-72f8ca2bdd50',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '79b75953-de77-4893-9da0-5b030a19f949',
+                        id: '01dc9f6b-a04d-4b58-97cf-6d2292c64429',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -481,10 +481,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: '99807e35-840c-4c23-bb17-9c5b9c3fd475',
+                id: '97c47924-f468-4ac6-a746-d3ac5c08ec7d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '78ff5b2d-8ab5-4eab-a0d4-abb192ef8de7',
+                        id: '1b7c372a-3bf2-46ff-8c72-5fb0fd59d522',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -501,7 +501,7 @@ $request = new Operations\UpdateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '10b73839-3f28-45d3-b97e-b2c5fe46fa8f',
+                id: '8d5f9439-2089-429f-9300-69bc44a4ae54',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -524,7 +524,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-19T12:01:33.164Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-20T06:24:31.255Z'),
         vendorName: 'Mayer - Flatley',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,

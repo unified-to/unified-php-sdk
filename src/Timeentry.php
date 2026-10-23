@@ -47,6 +47,8 @@ class Timeentry
     /**
      * Create a timeentry
      *
+     * Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLegalTimeentryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Timeentry
     /**
      * Retrieve a timeentry
      *
+     * Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLegalTimeentryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Timeentry
     /**
      * List all timeentries
      *
+     * Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLegalTimeentriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLegalTimeentriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Timeentry
 
     /**
      * Update a timeentry
+     *
+     * Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLegalTimeentryResponse
@@ -309,6 +317,8 @@ class Timeentry
     /**
      * Remove a timeentry
      *
+     * Deletes the LegalTimeentry identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLegalTimeentryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Timeentry
 
     /**
      * Update a timeentry
+     *
+     * Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLegalTimeentryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLegalTimeentryResponse

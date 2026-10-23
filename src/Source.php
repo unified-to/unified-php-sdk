@@ -47,6 +47,8 @@ class Source
     /**
      * Create a source
      *
+     * Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to the provider's API. Returns the created CdpSource.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpSourceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Source
     /**
      * Retrieve a source
      *
+     * Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpSourceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Source
     /**
      * List all sources
      *
+     * Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpSourcesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpSourcesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Source
 
     /**
      * Update a source
+     *
+     * Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpSourceResponse
@@ -309,6 +317,8 @@ class Source
     /**
      * Remove a source
      *
+     * Deletes the CdpSource identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpSourceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Source
 
     /**
      * Update a source
+     *
+     * Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpSourceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpSourceResponse

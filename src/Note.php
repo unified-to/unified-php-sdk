@@ -47,6 +47,8 @@ class Note
     /**
      * Create a note
      *
+     * Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Note
     /**
      * Retrieve a note
      *
+     * Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Note
     /**
      * List all notes
      *
+     * Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTicketingNotesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTicketingNotesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Note
 
     /**
      * Update a note
+     *
+     * Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingNoteResponse
@@ -309,6 +317,8 @@ class Note
     /**
      * Remove a note
      *
+     * Deletes the TicketingNote identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingNoteResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Note
 
     /**
      * Update a note
+     *
+     * Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingNoteRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTicketingNoteResponse

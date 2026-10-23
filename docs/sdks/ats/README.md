@@ -57,7 +57,7 @@
 
 ## createAtsActivity
 
-Create an activity
+Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
 ### Example Usage
 
@@ -82,7 +82,7 @@ $request = new Operations\CreateAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
         description: 'Sapiente.',
-        id: 'e8a2f1e7-5ef1-44d6-b9b0-dd4ae05406d4',
+        id: '9f29f41f-00b8-468d-a94a-d9976a5bfa51',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -90,7 +90,7 @@ $request = new Operations\CreateAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'e90754bb-3fc5-46ca-87c0-2ef0049e309a',
+                id: 'a36967ba-5072-47d3-911e-54d55d57e785',
                 namespace: 'activity',
                 slug: 'cimentarius',
                 value: 'Reprehenderit verto.',
@@ -99,7 +99,7 @@ $request = new Operations\CreateAtsActivityRequest(
         subType: 'TASK',
         title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-04T06:38:15.355Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-06T00:06:46.980Z'),
     ),
     connectionId: '<id>',
 );
@@ -131,7 +131,7 @@ if ($response->atsActivity !== null) {
 
 ## createAtsApplication
 
-Create an application
+Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 
 ### Example Usage
 
@@ -155,17 +155,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-09-29T18:41:44.737Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-01T01:37:37.720Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-12T18:30:35.439Z'),
-        id: '26ec1638-c52c-492b-9fd7-09de41cb00e7',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-14T11:11:43.330Z'),
+        id: '57c46487-4ef4-4520-b33f-0dc7a4f08009',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'c5228933-7b14-40ad-9f1b-19a455f0df4a',
+                id: '3333fd9f-537d-4099-a087-c44c032b92ff',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -174,12 +174,12 @@ $request = new Operations\CreateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-11T13:07:05.713Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-13T12:23:01.431Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-18T09:21:22.037Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-20T08:55:05.791Z'),
     ),
     connectionId: '<id>',
 );
@@ -211,7 +211,7 @@ if ($response->atsApplication !== null) {
 
 ## createAtsCandidate
 
-Create a candidate
+Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
 
 ### Example Usage
 
@@ -285,7 +285,7 @@ $request = new Operations\CreateAtsCandidateRequest(
             ),
         ],
         firstName: 'Ardith',
-        id: '664f6e73-f63a-457c-8af7-87c2ab8ec9c2',
+        id: '765d8f1d-ef35-4301-8df0-35945f28d492',
         imageUrl: 'https://avatars.githubusercontent.com/u/27464445',
         jobIds: [],
         lastName: 'Beatty',
@@ -298,7 +298,7 @@ $request = new Operations\CreateAtsCandidateRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '7971fe19-2a15-4b5f-9240-5511e39c68cd',
+                id: '88f377c0-68ae-4125-8dd1-4a4c59aa2d11',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'officia',
@@ -325,7 +325,7 @@ $request = new Operations\CreateAtsCandidateRequest(
             ),
         ],
         title: 'Customer Division Producer',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-28T17:47:32.446Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-29T02:15:35.352Z'),
         webUrl: 'https://fragrant-husband.net/',
     ),
     connectionId: '<id>',
@@ -358,7 +358,7 @@ if ($response->atsCandidate !== null) {
 
 ## createAtsCompany
 
-Create a company
+Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
 ### Example Usage
 
@@ -382,10 +382,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAtsCompanyRequest(
     atsCompany: new Shared\AtsCompany(
         createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
-        id: 'bc88c053-d149-4889-9144-a45bbbbb011e',
+        id: '65aa9526-a605-4697-b0ac-3a18d9bad4f9',
         name: 'Gulgowski, Dibbert and Wilderman',
         phone: '1-882-360-2010',
-        updatedAt: Utils\Utils::parseDateTime('2020-10-01T04:12:23.715Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-10-01T13:23:51.891Z'),
         websiteUrl: 'https://www.gulgowskidibbert.com',
     ),
     connectionId: '<id>',
@@ -418,7 +418,7 @@ if ($response->atsCompany !== null) {
 
 ## createAtsDocument
 
-Create a document
+Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 
 ### Example Usage
 
@@ -444,10 +444,10 @@ $request = new Operations\CreateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '29c939d9-2af8-44c4-a7d5-67e03b8e6897',
+        id: 'a9b9128f-444c-43cb-bc3d-6803d582a3ca',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-07T04:59:55.140Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-07T16:58:00.725Z'),
     ),
     connectionId: '<id>',
 );
@@ -479,7 +479,7 @@ if ($response->atsDocument !== null) {
 
 ## createAtsInterview
 
-Create an interview
+Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 
 ### Example Usage
 
@@ -504,13 +504,13 @@ $request = new Operations\CreateAtsInterviewRequest(
     atsInterview: new Shared\AtsInterview(
         createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
         endAt: Utils\Utils::parseDateTime('2021-12-08T06:33:19.583Z'),
-        id: '75d45222-2444-450b-8db6-d716949cdd12',
+        id: 'c3aa3c85-97d5-446d-8a4a-a444074900d9',
         location: '26596 Halle Trafficway',
         meetingUrl: 'https://immaculate-foodstuffs.biz',
         metadata: [],
         startAt: Utils\Utils::parseDateTime('2021-12-08T06:03:19.583Z'),
         status: Shared\AtsInterviewStatus::Scheduled,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-23T16:39:11.717Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-24T10:22:27.590Z'),
     ),
     connectionId: '<id>',
 );
@@ -542,7 +542,7 @@ if ($response->atsInterview !== null) {
 
 ## createAtsJob
 
-Create a job
+Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
 
 ### Example Usage
 
@@ -595,7 +595,7 @@ $request = new Operations\CreateAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: 'f1ed3a25-8406-4efd-afcf-0a385a1fadb2',
+        id: '5ab983d8-8aed-4220-b98c-20c535ec253c',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -604,7 +604,7 @@ $request = new Operations\CreateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '6413a6cc-6a8e-4306-8822-db3f3900f798',
+                id: '9d473ef5-2192-4185-8751-1629bb7a7f91',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -617,7 +617,7 @@ $request = new Operations\CreateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-07T21:28:07.896Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-09T15:52:30.296Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -631,14 +631,14 @@ $request = new Operations\CreateAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-02T00:29:26.215Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-03T21:02:48.153Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: 'b6f8c91a-7f05-4e3b-ac0a-c79968a8a9af',
+                id: '813890e3-27c5-40cf-babe-cb546dc9606f',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-08-28T07:52:25.733Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-08-30T05:27:21.197Z'),
             ),
         ],
         publicJobUrls: [
@@ -648,7 +648,7 @@ $request = new Operations\CreateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '81736c36-1b8a-4700-a981-c384da1e68f5',
+                id: 'edba0fef-6feb-480a-9450-8824ead84cca',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -661,7 +661,7 @@ $request = new Operations\CreateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: 'fcd02da9-266c-4de9-a918-9a98f813e617',
+                id: '776515df-d9a9-4e87-b636-b718fad3bd87',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -674,7 +674,7 @@ $request = new Operations\CreateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: 'e29c1433-3d51-4fa1-8492-3354e0f8e77d',
+                id: '77e31e82-0a16-42cb-bc9a-25058cef8acb',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -692,7 +692,7 @@ $request = new Operations\CreateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-27T09:47:18.130Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-01T00:16:32.454Z'),
     ),
     connectionId: '<id>',
 );
@@ -724,7 +724,7 @@ if ($response->atsJob !== null) {
 
 ## createAtsScorecard
 
-Create a scorecard
+Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
 ### Example Usage
 
@@ -749,7 +749,7 @@ $request = new Operations\CreateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: '2dea7d23-46fb-48d0-a30a-b909d9a83d91',
+        id: '19b0e4fb-a259-43aa-a392-afb96fe06d04',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -763,7 +763,7 @@ $request = new Operations\CreateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-05T13:40:04.404Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-06T02:49:08.973Z'),
     ),
     connectionId: '<id>',
 );
@@ -795,7 +795,7 @@ if ($response->atsScorecard !== null) {
 
 ## getAtsActivity
 
-Retrieve an activity
+Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -846,7 +846,7 @@ if ($response->atsActivity !== null) {
 
 ## getAtsApplication
 
-Retrieve an application
+Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -897,7 +897,7 @@ if ($response->atsApplication !== null) {
 
 ## getAtsApplicationstatus
 
-Retrieve an applicationstatus
+Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -948,7 +948,7 @@ if ($response->atsStatus !== null) {
 
 ## getAtsCandidate
 
-Retrieve a candidate
+Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -999,7 +999,7 @@ if ($response->atsCandidate !== null) {
 
 ## getAtsCompany
 
-Retrieve a company
+Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1050,7 +1050,7 @@ if ($response->atsCompany !== null) {
 
 ## getAtsDocument
 
-Retrieve a document
+Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1101,7 +1101,7 @@ if ($response->atsDocument !== null) {
 
 ## getAtsInterview
 
-Retrieve an interview
+Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1152,7 +1152,7 @@ if ($response->atsInterview !== null) {
 
 ## getAtsJob
 
-Retrieve a job
+Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1203,7 +1203,7 @@ if ($response->atsJob !== null) {
 
 ## getAtsScorecard
 
-Retrieve a scorecard
+Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1254,7 +1254,7 @@ if ($response->atsScorecard !== null) {
 
 ## listAtsActivities
 
-List all activities
+Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1304,7 +1304,7 @@ if ($response->atsActivities !== null) {
 
 ## listAtsApplications
 
-List all applications
+Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1354,7 +1354,7 @@ if ($response->atsApplications !== null) {
 
 ## listAtsApplicationstatuses
 
-List all applicationstatuses
+Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1404,7 +1404,7 @@ if ($response->atsStatuses !== null) {
 
 ## listAtsCandidates
 
-List all candidates
+Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1454,7 +1454,7 @@ if ($response->atsCandidates !== null) {
 
 ## listAtsCompanies
 
-List all companies
+Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1504,7 +1504,7 @@ if ($response->atsCompanies !== null) {
 
 ## listAtsDocuments
 
-List all documents
+Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1554,7 +1554,7 @@ if ($response->atsDocuments !== null) {
 
 ## listAtsInterviews
 
-List all interviews
+Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1604,7 +1604,7 @@ if ($response->atsInterviews !== null) {
 
 ## listAtsJobs
 
-List all jobs
+Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1654,7 +1654,7 @@ if ($response->atsJobs !== null) {
 
 ## listAtsScorecards
 
-List all scorecards
+Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1704,7 +1704,7 @@ if ($response->atsScorecards !== null) {
 
 ## patchAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -1729,7 +1729,7 @@ $request = new Operations\PatchAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
         description: 'Sapiente.',
-        id: '1dd88965-536d-4641-a508-0b97b622bef5',
+        id: '621110a0-f5d3-4b25-814f-2739f5b1e852',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -1737,7 +1737,7 @@ $request = new Operations\PatchAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '26853e59-8a39-416d-88e8-757699c82c57',
+                id: 'ca56b027-1a12-41d4-a917-a681c4322f63',
                 namespace: 'activity',
                 slug: 'cimentarius',
                 value: 'Reprehenderit verto.',
@@ -1746,7 +1746,7 @@ $request = new Operations\PatchAtsActivityRequest(
         subType: 'TASK',
         title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-04T06:38:15.375Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-06T00:06:47.007Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1779,7 +1779,7 @@ if ($response->atsActivity !== null) {
 
 ## patchAtsApplication
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -1803,17 +1803,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-09-29T18:41:44.750Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-01T01:37:37.743Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-12T18:30:35.456Z'),
-        id: '95d97fad-3b9a-4527-bb22-1953ed79ef05',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-14T11:11:43.360Z'),
+        id: 'a14c3793-96f0-4da0-ab90-d018fce93490',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '382ffa38-ae9e-4b90-9c6f-f3dacf302b7c',
+                id: '2102778b-bf7f-4765-90b8-dfcf65e38dfa',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -1822,12 +1822,12 @@ $request = new Operations\PatchAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-11T13:07:05.733Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-13T12:23:01.466Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-18T09:21:22.057Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-20T08:55:05.826Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1860,7 +1860,7 @@ if ($response->atsApplication !== null) {
 
 ## patchAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -1934,7 +1934,7 @@ $request = new Operations\PatchAtsCandidateRequest(
             ),
         ],
         firstName: 'Ardith',
-        id: 'e2d5ef47-da9e-4500-8493-4ce44bec7b6e',
+        id: '048dfdaa-43d0-4e45-9000-37cd633a405e',
         imageUrl: 'https://avatars.githubusercontent.com/u/27464445',
         jobIds: [],
         lastName: 'Beatty',
@@ -1947,7 +1947,7 @@ $request = new Operations\PatchAtsCandidateRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'cca4fa50-af15-422e-8c16-8ed5906d98de',
+                id: '01d15e03-e3cf-4fec-8e4e-15b634f09c61',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'officia',
@@ -1974,7 +1974,7 @@ $request = new Operations\PatchAtsCandidateRequest(
             ),
         ],
         title: 'Customer Division Producer',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-28T17:47:32.451Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-29T02:15:35.360Z'),
         webUrl: 'https://fragrant-husband.net/',
     ),
     connectionId: '<id>',
@@ -2008,7 +2008,7 @@ if ($response->atsCandidate !== null) {
 
 ## patchAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -2032,10 +2032,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAtsCompanyRequest(
     atsCompany: new Shared\AtsCompany(
         createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
-        id: 'b636b5e8-021c-497e-9250-478a87440e00',
+        id: '04306bc4-29e8-4ac5-83fb-6732d84841b9',
         name: 'Gulgowski, Dibbert and Wilderman',
         phone: '1-882-360-2010',
-        updatedAt: Utils\Utils::parseDateTime('2020-10-01T04:12:23.719Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-10-01T13:23:51.895Z'),
         websiteUrl: 'https://www.gulgowskidibbert.com',
     ),
     connectionId: '<id>',
@@ -2069,7 +2069,7 @@ if ($response->atsCompany !== null) {
 
 ## patchAtsDocument
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -2095,10 +2095,10 @@ $request = new Operations\PatchAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '907ef7b6-235a-44f3-8ec7-d96d3a868fc2',
+        id: 'ea0b47db-4b68-4e53-9967-aa0c3af04f0b',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-07T04:59:55.146Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-07T16:58:00.730Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2131,7 +2131,7 @@ if ($response->atsDocument !== null) {
 
 ## patchAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -2156,13 +2156,13 @@ $request = new Operations\PatchAtsInterviewRequest(
     atsInterview: new Shared\AtsInterview(
         createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
         endAt: Utils\Utils::parseDateTime('2021-12-08T06:33:19.583Z'),
-        id: 'e4f6fa22-60cf-4f9b-98c5-bf66341af9c5',
+        id: '221868ac-d631-4669-a95c-a32a4721be2b',
         location: '26596 Halle Trafficway',
         meetingUrl: 'https://immaculate-foodstuffs.biz',
         metadata: [],
         startAt: Utils\Utils::parseDateTime('2021-12-08T06:03:19.583Z'),
         status: Shared\AtsInterviewStatus::Scheduled,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-23T16:39:11.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-24T10:22:27.597Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2195,7 +2195,7 @@ if ($response->atsInterview !== null) {
 
 ## patchAtsJob
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -2248,7 +2248,7 @@ $request = new Operations\PatchAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: '0b07a34e-39f9-404a-af24-ab50ae45bbd3',
+        id: 'abdbabdb-e8ee-46ff-bec9-f76ec78092fc',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -2257,7 +2257,7 @@ $request = new Operations\PatchAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '5ae4056e-ffe0-4bd5-bc78-8b4c4dae688f',
+                id: 'a124042e-72e1-4570-816b-573467885d01',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -2270,7 +2270,7 @@ $request = new Operations\PatchAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-07T21:28:07.934Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-09T15:52:30.357Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -2284,14 +2284,14 @@ $request = new Operations\PatchAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-02T00:29:26.254Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-03T21:02:48.217Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: '0711f01a-d966-4692-856e-ebefe2c72287',
+                id: 'a2fdd133-2847-42ba-951c-cfdcb7ddcddd',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-08-28T07:52:25.774Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-08-30T05:27:21.263Z'),
             ),
         ],
         publicJobUrls: [
@@ -2301,7 +2301,7 @@ $request = new Operations\PatchAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '8a96c284-ea18-4779-bda9-ab1be23a235d',
+                id: '95a0c94b-fd09-4fd8-8623-5f0bfb849649',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -2314,7 +2314,7 @@ $request = new Operations\PatchAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '9ed04038-4f62-4955-ba05-9ccf7856a92c',
+                id: '49137bac-9997-4091-a0ce-0abbc7fe610f',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -2327,7 +2327,7 @@ $request = new Operations\PatchAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: '6306a3f2-d536-4273-9170-bad83ea4b5ae',
+                id: 'ad0b5769-3173-4d52-99b4-2c601b00c67d',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -2345,7 +2345,7 @@ $request = new Operations\PatchAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-27T09:47:18.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-01T00:16:32.509Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2378,7 +2378,7 @@ if ($response->atsJob !== null) {
 
 ## patchAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -2403,7 +2403,7 @@ $request = new Operations\PatchAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed',
+        id: 'c5de99f1-c13a-40f6-a55e-2e2e6943034a',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -2417,7 +2417,7 @@ $request = new Operations\PatchAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-05T13:40:04.409Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-06T02:49:08.978Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2450,7 +2450,7 @@ if ($response->atsScorecard !== null) {
 
 ## removeAtsActivity
 
-Remove an activity
+Deletes the AtsActivity identified by `id`.
 
 ### Example Usage
 
@@ -2501,7 +2501,7 @@ if ($response->statusCode === 200) {
 
 ## removeAtsApplication
 
-Remove an application
+Deletes the AtsApplication identified by `id`.
 
 ### Example Usage
 
@@ -2552,7 +2552,7 @@ if ($response->statusCode === 200) {
 
 ## removeAtsCandidate
 
-Remove a candidate
+Deletes the AtsCandidate identified by `id`.
 
 ### Example Usage
 
@@ -2603,7 +2603,7 @@ if ($response->statusCode === 200) {
 
 ## removeAtsCompany
 
-Remove a company
+Deletes the AtsCompany identified by `id`.
 
 ### Example Usage
 
@@ -2654,7 +2654,7 @@ if ($response->statusCode === 200) {
 
 ## removeAtsDocument
 
-Remove a document
+Deletes the AtsDocument identified by `id`.
 
 ### Example Usage
 
@@ -2705,7 +2705,7 @@ if ($response->statusCode === 200) {
 
 ## removeAtsInterview
 
-Remove an interview
+Deletes the AtsInterview identified by `id`.
 
 ### Example Usage
 
@@ -2756,7 +2756,7 @@ if ($response->statusCode === 200) {
 
 ## removeAtsJob
 
-Remove a job
+Deletes the AtsJob identified by `id`.
 
 ### Example Usage
 
@@ -2807,7 +2807,7 @@ if ($response->statusCode === 200) {
 
 ## removeAtsScorecard
 
-Remove a scorecard
+Deletes the AtsScorecard identified by `id`.
 
 ### Example Usage
 
@@ -2858,7 +2858,7 @@ if ($response->statusCode === 200) {
 
 ## updateAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -2883,7 +2883,7 @@ $request = new Operations\UpdateAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
         description: 'Sapiente.',
-        id: '1dd88965-536d-4641-a508-0b97b622bef5',
+        id: '621110a0-f5d3-4b25-814f-2739f5b1e852',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -2891,7 +2891,7 @@ $request = new Operations\UpdateAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '26853e59-8a39-416d-88e8-757699c82c57',
+                id: 'ca56b027-1a12-41d4-a917-a681c4322f63',
                 namespace: 'activity',
                 slug: 'cimentarius',
                 value: 'Reprehenderit verto.',
@@ -2900,7 +2900,7 @@ $request = new Operations\UpdateAtsActivityRequest(
         subType: 'TASK',
         title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-04T06:38:15.375Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-06T00:06:47.007Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2933,7 +2933,7 @@ if ($response->atsActivity !== null) {
 
 ## updateAtsApplication
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -2957,17 +2957,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-09-29T18:41:44.750Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-01T01:37:37.743Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-12T18:30:35.456Z'),
-        id: '95d97fad-3b9a-4527-bb22-1953ed79ef05',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-14T11:11:43.360Z'),
+        id: 'a14c3793-96f0-4da0-ab90-d018fce93490',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '382ffa38-ae9e-4b90-9c6f-f3dacf302b7c',
+                id: '2102778b-bf7f-4765-90b8-dfcf65e38dfa',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -2976,12 +2976,12 @@ $request = new Operations\UpdateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-11T13:07:05.733Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-13T12:23:01.466Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-18T09:21:22.057Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-20T08:55:05.826Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3014,7 +3014,7 @@ if ($response->atsApplication !== null) {
 
 ## updateAtsCandidate
 
-Update a candidate
+Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
 
 ### Example Usage
 
@@ -3088,7 +3088,7 @@ $request = new Operations\UpdateAtsCandidateRequest(
             ),
         ],
         firstName: 'Ardith',
-        id: 'e2d5ef47-da9e-4500-8493-4ce44bec7b6e',
+        id: '048dfdaa-43d0-4e45-9000-37cd633a405e',
         imageUrl: 'https://avatars.githubusercontent.com/u/27464445',
         jobIds: [],
         lastName: 'Beatty',
@@ -3101,7 +3101,7 @@ $request = new Operations\UpdateAtsCandidateRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'cca4fa50-af15-422e-8c16-8ed5906d98de',
+                id: '01d15e03-e3cf-4fec-8e4e-15b634f09c61',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'officia',
@@ -3128,7 +3128,7 @@ $request = new Operations\UpdateAtsCandidateRequest(
             ),
         ],
         title: 'Customer Division Producer',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-28T17:47:32.451Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-29T02:15:35.360Z'),
         webUrl: 'https://fragrant-husband.net/',
     ),
     connectionId: '<id>',
@@ -3162,7 +3162,7 @@ if ($response->atsCandidate !== null) {
 
 ## updateAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -3186,10 +3186,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAtsCompanyRequest(
     atsCompany: new Shared\AtsCompany(
         createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
-        id: 'b636b5e8-021c-497e-9250-478a87440e00',
+        id: '04306bc4-29e8-4ac5-83fb-6732d84841b9',
         name: 'Gulgowski, Dibbert and Wilderman',
         phone: '1-882-360-2010',
-        updatedAt: Utils\Utils::parseDateTime('2020-10-01T04:12:23.719Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-10-01T13:23:51.895Z'),
         websiteUrl: 'https://www.gulgowskidibbert.com',
     ),
     connectionId: '<id>',
@@ -3223,7 +3223,7 @@ if ($response->atsCompany !== null) {
 
 ## updateAtsDocument
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -3249,10 +3249,10 @@ $request = new Operations\UpdateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '907ef7b6-235a-44f3-8ec7-d96d3a868fc2',
+        id: 'ea0b47db-4b68-4e53-9967-aa0c3af04f0b',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-07T04:59:55.146Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-07T16:58:00.730Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3285,7 +3285,7 @@ if ($response->atsDocument !== null) {
 
 ## updateAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -3310,13 +3310,13 @@ $request = new Operations\UpdateAtsInterviewRequest(
     atsInterview: new Shared\AtsInterview(
         createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
         endAt: Utils\Utils::parseDateTime('2021-12-08T06:33:19.583Z'),
-        id: 'e4f6fa22-60cf-4f9b-98c5-bf66341af9c5',
+        id: '221868ac-d631-4669-a95c-a32a4721be2b',
         location: '26596 Halle Trafficway',
         meetingUrl: 'https://immaculate-foodstuffs.biz',
         metadata: [],
         startAt: Utils\Utils::parseDateTime('2021-12-08T06:03:19.583Z'),
         status: Shared\AtsInterviewStatus::Scheduled,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-23T16:39:11.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-24T10:22:27.597Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3349,7 +3349,7 @@ if ($response->atsInterview !== null) {
 
 ## updateAtsJob
 
-Update a job
+Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
 
 ### Example Usage
 
@@ -3402,7 +3402,7 @@ $request = new Operations\UpdateAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: '0b07a34e-39f9-404a-af24-ab50ae45bbd3',
+        id: 'abdbabdb-e8ee-46ff-bec9-f76ec78092fc',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -3411,7 +3411,7 @@ $request = new Operations\UpdateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '5ae4056e-ffe0-4bd5-bc78-8b4c4dae688f',
+                id: 'a124042e-72e1-4570-816b-573467885d01',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -3424,7 +3424,7 @@ $request = new Operations\UpdateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-07T21:28:07.934Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-09T15:52:30.357Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -3438,14 +3438,14 @@ $request = new Operations\UpdateAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-02T00:29:26.254Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-03T21:02:48.217Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: '0711f01a-d966-4692-856e-ebefe2c72287',
+                id: 'a2fdd133-2847-42ba-951c-cfdcb7ddcddd',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-08-28T07:52:25.774Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-08-30T05:27:21.263Z'),
             ),
         ],
         publicJobUrls: [
@@ -3455,7 +3455,7 @@ $request = new Operations\UpdateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '8a96c284-ea18-4779-bda9-ab1be23a235d',
+                id: '95a0c94b-fd09-4fd8-8623-5f0bfb849649',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -3468,7 +3468,7 @@ $request = new Operations\UpdateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '9ed04038-4f62-4955-ba05-9ccf7856a92c',
+                id: '49137bac-9997-4091-a0ce-0abbc7fe610f',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -3481,7 +3481,7 @@ $request = new Operations\UpdateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: '6306a3f2-d536-4273-9170-bad83ea4b5ae',
+                id: 'ad0b5769-3173-4d52-99b4-2c601b00c67d',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -3499,7 +3499,7 @@ $request = new Operations\UpdateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-27T09:47:18.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-01T00:16:32.509Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3532,7 +3532,7 @@ if ($response->atsJob !== null) {
 
 ## updateAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -3557,7 +3557,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed',
+        id: 'c5de99f1-c13a-40f6-a55e-2e2e6943034a',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -3571,7 +3571,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-05T13:40:04.409Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-06T02:49:08.978Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

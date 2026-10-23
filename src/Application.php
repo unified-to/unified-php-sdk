@@ -47,6 +47,8 @@ class Application
     /**
      * Create an application
      *
+     * Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Application
     /**
      * Retrieve an application
      *
+     * Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Application
     /**
      * List all applications
      *
+     * Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Application
 
     /**
      * Update an application
+     *
+     * Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
@@ -309,6 +317,8 @@ class Application
     /**
      * Remove an application
      *
+     * Deletes the AtsApplication identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Application
 
     /**
      * Update an application
+     *
+     * Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse

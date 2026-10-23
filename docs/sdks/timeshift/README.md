@@ -13,7 +13,7 @@
 
 ## createHrisTimeshift
 
-Create a timeshift
+Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
 
 ### Example Usage
 
@@ -36,7 +36,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-18T01:51:06.464Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-18T21:43:25.563Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -48,13 +48,13 @@ $request = new Operations\CreateHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-09-27T01:26:47.942Z'),
+        endAt: Utils\Utils::parseDateTime('2026-09-29T00:41:37.965Z'),
         hours: 6,
-        id: '6b0e3410-8eef-4221-b88e-e4d4be208730',
+        id: '220cff1c-9e52-44ee-8079-44ef6ca61acd',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-13T00:30:36.291Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-01T21:53:01.115Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-14T02:48:50.230Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-02T10:56:40.233Z'),
     ),
     connectionId: '<id>',
 );
@@ -86,7 +86,7 @@ if ($response->hrisTimeshift !== null) {
 
 ## getHrisTimeshift
 
-Retrieve a timeshift
+Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ if ($response->hrisTimeshift !== null) {
 
 ## listHrisTimeshifts
 
-List all timeshifts
+Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ if ($response->hrisTimeshifts !== null) {
 
 ## patchHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -210,7 +210,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-18T01:51:06.472Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-18T21:43:25.574Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -222,13 +222,13 @@ $request = new Operations\PatchHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-09-27T01:26:47.962Z'),
+        endAt: Utils\Utils::parseDateTime('2026-09-29T00:41:37.990Z'),
         hours: 6,
-        id: '860cce82-b177-4974-b6a6-dda841cb1baa',
+        id: 'ca9ee199-3154-4f5b-b34b-264ec1a5017e',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-13T00:30:36.302Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-01T21:53:01.120Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-14T02:48:50.244Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-02T10:56:40.240Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -261,7 +261,7 @@ if ($response->hrisTimeshift !== null) {
 
 ## removeHrisTimeshift
 
-Remove a timeshift
+Deletes the HrisTimeshift identified by `id`.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisTimeshift
 
-Update a timeshift
+Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
 
 ### Example Usage
 
@@ -335,7 +335,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-18T01:51:06.472Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-18T21:43:25.574Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -347,13 +347,13 @@ $request = new Operations\UpdateHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-09-27T01:26:47.962Z'),
+        endAt: Utils\Utils::parseDateTime('2026-09-29T00:41:37.990Z'),
         hours: 6,
-        id: '860cce82-b177-4974-b6a6-dda841cb1baa',
+        id: 'ca9ee199-3154-4f5b-b34b-264ec1a5017e',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-13T00:30:36.302Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-01T21:53:01.120Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-14T02:48:50.244Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-02T10:56:40.240Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

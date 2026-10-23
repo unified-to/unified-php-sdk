@@ -47,6 +47,8 @@ class Expense
     /**
      * Create an expense
      *
+     * Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Expense
 
     /**
      * Create an expense
+     *
+     * Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLegalExpenseResponse
@@ -183,6 +187,8 @@ class Expense
     /**
      * Retrieve an expense
      *
+     * Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Expense
 
     /**
      * Retrieve an expense
+     *
+     * Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLegalExpenseResponse
@@ -309,6 +317,8 @@ class Expense
     /**
      * List all expenses
      *
+     * Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingExpensesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingExpensesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -372,6 +382,8 @@ class Expense
     /**
      * List all expenses
      *
+     * Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLegalExpensesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLegalExpensesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -434,6 +446,8 @@ class Expense
 
     /**
      * Update an expense
+     *
+     * Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingExpenseResponse
@@ -503,6 +517,8 @@ class Expense
     /**
      * Update an expense
      *
+     * Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLegalExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -571,6 +587,8 @@ class Expense
     /**
      * Remove an expense
      *
+     * Deletes the AccountingExpense identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Expense
     /**
      * Remove an expense
      *
+     * Deletes the LegalExpense identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLegalExpenseResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -684,6 +704,8 @@ class Expense
 
     /**
      * Update an expense
+     *
+     * Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingExpenseResponse
@@ -752,6 +774,8 @@ class Expense
 
     /**
      * Update an expense
+     *
+     * Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLegalExpenseRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLegalExpenseResponse

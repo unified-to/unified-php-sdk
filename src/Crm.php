@@ -47,6 +47,8 @@ class Crm
     /**
      * Create a company
      *
+     * Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Crm
 
     /**
      * Create a contact
+     *
+     * Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmContactResponse
@@ -183,6 +187,8 @@ class Crm
     /**
      * Create a deal
      *
+     * Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Crm
 
     /**
      * Create an event
+     *
+     * Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmEventResponse
@@ -319,6 +327,8 @@ class Crm
     /**
      * Create a lead
      *
+     * Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmLeadRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Crm
 
     /**
      * Create a pipeline
+     *
+     * Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCrmPipelineResponse
@@ -455,6 +467,8 @@ class Crm
     /**
      * Retrieve a company
      *
+     * Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -517,6 +531,8 @@ class Crm
 
     /**
      * Retrieve a contact
+     *
+     * Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmContactResponse
@@ -581,6 +597,8 @@ class Crm
     /**
      * Retrieve a deal
      *
+     * Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -643,6 +661,8 @@ class Crm
 
     /**
      * Retrieve an event
+     *
+     * Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmEventResponse
@@ -707,6 +727,8 @@ class Crm
     /**
      * Retrieve a lead
      *
+     * Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmLeadRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -769,6 +791,8 @@ class Crm
 
     /**
      * Retrieve a pipeline
+     *
+     * Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCrmPipelineResponse
@@ -833,6 +857,8 @@ class Crm
     /**
      * List all companies
      *
+     * Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmCompaniesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmCompaniesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -895,6 +921,8 @@ class Crm
 
     /**
      * List all contacts
+     *
+     * Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmContactsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmContactsResponse
@@ -959,6 +987,8 @@ class Crm
     /**
      * List all deals
      *
+     * Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmDealsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmDealsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1021,6 +1051,8 @@ class Crm
 
     /**
      * List all events
+     *
+     * Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmEventsResponse
@@ -1085,6 +1117,8 @@ class Crm
     /**
      * List all leads
      *
+     * Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmLeadsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmLeadsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1147,6 +1181,8 @@ class Crm
 
     /**
      * List all pipelines
+     *
+     * Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmPipelinesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmPipelinesResponse
@@ -1211,6 +1247,8 @@ class Crm
     /**
      * List all taxonomies
      *
+     * Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCrmTaxonomiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCrmTaxonomiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1273,6 +1311,8 @@ class Crm
 
     /**
      * Update a company
+     *
+     * Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmCompanyResponse
@@ -1342,6 +1382,8 @@ class Crm
     /**
      * Update a contact
      *
+     * Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1409,6 +1451,8 @@ class Crm
 
     /**
      * Update a deal
+     *
+     * Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmDealResponse
@@ -1478,6 +1522,8 @@ class Crm
     /**
      * Update an event
      *
+     * Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1545,6 +1591,8 @@ class Crm
 
     /**
      * Update a lead
+     *
+     * Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmLeadRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmLeadResponse
@@ -1614,6 +1662,8 @@ class Crm
     /**
      * Update a pipeline
      *
+     * Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1682,6 +1732,8 @@ class Crm
     /**
      * Remove a company
      *
+     * Deletes the CrmCompany identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1738,6 +1790,8 @@ class Crm
 
     /**
      * Remove a contact
+     *
+     * Deletes the CrmContact identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmContactResponse
@@ -1796,6 +1850,8 @@ class Crm
     /**
      * Remove a deal
      *
+     * Deletes the CrmDeal identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmDealResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1852,6 +1908,8 @@ class Crm
 
     /**
      * Remove an event
+     *
+     * Deletes the CrmEvent identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmEventResponse
@@ -1910,6 +1968,8 @@ class Crm
     /**
      * Remove a lead
      *
+     * Deletes the CrmLead identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmLeadRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1967,6 +2027,8 @@ class Crm
     /**
      * Remove a pipeline
      *
+     * Deletes the CrmPipeline identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCrmPipelineResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2023,6 +2085,8 @@ class Crm
 
     /**
      * Update a company
+     *
+     * Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmCompanyResponse
@@ -2092,6 +2156,8 @@ class Crm
     /**
      * Update a contact
      *
+     * Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2159,6 +2225,8 @@ class Crm
 
     /**
      * Update a deal
+     *
+     * Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmDealRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmDealResponse
@@ -2228,6 +2296,8 @@ class Crm
     /**
      * Update an event
      *
+     * Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2296,6 +2366,8 @@ class Crm
     /**
      * Update a lead
      *
+     * Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmLeadRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmLeadResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2363,6 +2435,8 @@ class Crm
 
     /**
      * Update a pipeline
+     *
+     * Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCrmPipelineRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCrmPipelineResponse

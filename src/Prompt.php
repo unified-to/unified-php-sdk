@@ -47,6 +47,8 @@ class Prompt
     /**
      * Create a prompt
      *
+     * Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiPromptRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiPromptResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException

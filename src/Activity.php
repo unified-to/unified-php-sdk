@@ -47,6 +47,8 @@ class Activity
     /**
      * Create an activity
      *
+     * Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Activity
 
     /**
      * Create an activity
+     *
+     * Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsActivityResponse
@@ -183,6 +187,8 @@ class Activity
     /**
      * Retrieve an activity
      *
+     * Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Activity
 
     /**
      * Retrieve an activity
+     *
+     * Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsActivityResponse
@@ -309,6 +317,8 @@ class Activity
     /**
      * Retrieve an activity
      *
+     * Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -371,6 +381,8 @@ class Activity
 
     /**
      * List all activities
+     *
+     * Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
@@ -435,6 +447,8 @@ class Activity
     /**
      * List all activities
      *
+     * Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsActivitiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsActivitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -498,6 +512,8 @@ class Activity
     /**
      * List all activities
      *
+     * Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsActivitiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsActivitiesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -560,6 +576,8 @@ class Activity
 
     /**
      * Update an activity
+     *
+     * Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
@@ -629,6 +647,8 @@ class Activity
     /**
      * Update an activity
      *
+     * Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -697,6 +717,8 @@ class Activity
     /**
      * Remove an activity
      *
+     * Deletes the AtsActivity identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -754,6 +776,8 @@ class Activity
     /**
      * Remove an activity
      *
+     * Deletes the LmsActivity identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -810,6 +834,8 @@ class Activity
 
     /**
      * Update an activity
+     *
+     * Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
@@ -878,6 +904,8 @@ class Activity
 
     /**
      * Update an activity
+     *
+     * Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsActivityResponse

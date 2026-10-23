@@ -47,6 +47,8 @@ class Deployment
     /**
      * Create a deployment
      *
+     * Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeDeploymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Deployment
     /**
      * Retrieve a deployment
      *
+     * Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeDeploymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Deployment
     /**
      * List all deployments
      *
+     * Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeDeploymentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeDeploymentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Deployment
 
     /**
      * Update a deployment
+     *
+     * Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeDeploymentResponse
@@ -309,6 +317,8 @@ class Deployment
     /**
      * Remove a deployment
      *
+     * Deletes the ComputeDeployment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeDeploymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Deployment
 
     /**
      * Update a deployment
+     *
+     * Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeDeploymentResponse

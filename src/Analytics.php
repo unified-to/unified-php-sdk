@@ -47,6 +47,8 @@ class Analytics
     /**
      * Create an event
      *
+     * Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Analytics
 
     /**
      * Create a property
+     *
+     * Creates a AnalyticsProperty. Provide the unified AnalyticsProperty fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsProperty.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsPropertyResponse
@@ -183,6 +187,8 @@ class Analytics
     /**
      * Create a visitor
      *
+     * Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Analytics
     /**
      * Retrieve an event
      *
+     * Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAnalyticsEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Analytics
 
     /**
      * Retrieve a property
+     *
+     * Retrieves a single AnalyticsProperty by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAnalyticsPropertyResponse
@@ -377,6 +387,8 @@ class Analytics
     /**
      * Retrieve a session
      *
+     * Retrieves a single AnalyticsSession by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsSessionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAnalyticsSessionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Analytics
 
     /**
      * Retrieve a visitor
+     *
+     * Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAnalyticsVisitorResponse
@@ -503,6 +517,8 @@ class Analytics
     /**
      * List all events
      *
+     * Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAnalyticsEventsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -565,6 +581,8 @@ class Analytics
 
     /**
      * List all properties
+     *
+     * Returns a list of AnalyticsProperties. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsPropertiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAnalyticsPropertiesResponse
@@ -629,6 +647,8 @@ class Analytics
     /**
      * List all reports
      *
+     * Returns a list of AnalyticsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsReportsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAnalyticsReportsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -691,6 +711,8 @@ class Analytics
 
     /**
      * List all sessions
+     *
+     * Returns a list of AnalyticsSessions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsSessionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAnalyticsSessionsResponse
@@ -755,6 +777,8 @@ class Analytics
     /**
      * List all visitors
      *
+     * Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsVisitorsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAnalyticsVisitorsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -817,6 +841,8 @@ class Analytics
 
     /**
      * Update a property
+     *
+     * Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAnalyticsPropertyResponse
@@ -886,6 +912,8 @@ class Analytics
     /**
      * Update a visitor
      *
+     * Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -954,6 +982,8 @@ class Analytics
     /**
      * Remove a property
      *
+     * Deletes the AnalyticsProperty identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAnalyticsPropertyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1011,6 +1041,8 @@ class Analytics
     /**
      * Remove a visitor
      *
+     * Deletes the AnalyticsVisitor identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1067,6 +1099,8 @@ class Analytics
 
     /**
      * Update a property
+     *
+     * Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAnalyticsPropertyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAnalyticsPropertyResponse
@@ -1135,6 +1169,8 @@ class Analytics
 
     /**
      * Update a visitor
+     *
+     * Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAnalyticsVisitorResponse

@@ -47,6 +47,8 @@ class Martech
     /**
      * Create a campaign
      *
+     * Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Martech
 
     /**
      * Create a list
+     *
+     * Creates a MarketingList. Provide the unified MarketingList fields in the request body; they are mapped to the provider's API. Returns the created MarketingList.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateMartechListResponse
@@ -183,6 +187,8 @@ class Martech
     /**
      * Create a member
      *
+     * Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Martech
     /**
      * Retrieve a campaign
      *
+     * Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Martech
 
     /**
      * Retrieve a list
+     *
+     * Retrieves a single MarketingList by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetMartechListResponse
@@ -377,6 +387,8 @@ class Martech
     /**
      * Retrieve a member
      *
+     * Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Martech
 
     /**
      * List all campaigns
+     *
+     * Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListMartechCampaignsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListMartechCampaignsResponse
@@ -503,6 +517,8 @@ class Martech
     /**
      * List all lists
      *
+     * Returns a list of MarketingLists. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListMartechListsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListMartechListsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -565,6 +581,8 @@ class Martech
 
     /**
      * List all members
+     *
+     * Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListMartechMembersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListMartechMembersResponse
@@ -629,6 +647,8 @@ class Martech
     /**
      * List all reports
      *
+     * Returns a list of MarketingReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListMartechReportsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListMartechReportsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -691,6 +711,8 @@ class Martech
 
     /**
      * Update a campaign
+     *
+     * Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchMartechCampaignResponse
@@ -760,6 +782,8 @@ class Martech
     /**
      * Update a list
      *
+     * Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -827,6 +851,8 @@ class Martech
 
     /**
      * Update a member
+     *
+     * Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchMartechMemberResponse
@@ -896,6 +922,8 @@ class Martech
     /**
      * Remove a campaign
      *
+     * Deletes the MarketingCampaign identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMartechCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -952,6 +980,8 @@ class Martech
 
     /**
      * Remove a list
+     *
+     * Deletes the MarketingList identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMartechListResponse
@@ -1010,6 +1040,8 @@ class Martech
     /**
      * Remove a member
      *
+     * Deletes the MarketingMember identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMartechMemberResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1066,6 +1098,8 @@ class Martech
 
     /**
      * Update a campaign
+     *
+     * Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateMartechCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMartechCampaignResponse
@@ -1135,6 +1169,8 @@ class Martech
     /**
      * Update a list
      *
+     * Updates the MarketingList identified by `id`. Provide the unified MarketingList fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateMartechListRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMartechListResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1202,6 +1238,8 @@ class Martech
 
     /**
      * Update a member
+     *
+     * Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateMartechMemberRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMartechMemberResponse

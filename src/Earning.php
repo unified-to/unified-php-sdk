@@ -47,6 +47,8 @@ class Earning
     /**
      * Create an earning
      *
+     * Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisEarningResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Earning
     /**
      * Retrieve an earning
      *
+     * Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisEarningResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Earning
     /**
      * List all earnings
      *
+     * Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisEarningsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisEarningsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Earning
 
     /**
      * Update an earning
+     *
+     * Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisEarningResponse
@@ -309,6 +317,8 @@ class Earning
     /**
      * Remove an earning
      *
+     * Deletes the HrisEarning identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisEarningResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Earning
 
     /**
      * Update an earning
+     *
+     * Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisEarningResponse

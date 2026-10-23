@@ -13,7 +13,7 @@
 
 ## createComputeVolume
 
-Create a volume
+Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
 ### Example Usage
 
@@ -37,14 +37,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeVolumeRequest(
     computeVolume: new Shared\ComputeVolume(
         createdAt: Utils\Utils::parseDateTime('2022-11-15T15:12:48.055Z'),
-        id: 'b5c3e485-e508-4dc0-96a7-2c707f0ca0a9',
+        id: '0f4c19d6-4226-482b-a3fb-8806217d3b9a',
         instanceIds: [],
         metadata: [],
         name: 'vol-solum',
         sizeMb: 1024000,
         status: Shared\ComputeVolumeStatus::Other,
         type: Shared\ComputeVolumeType::HighPerformance,
-        updatedAt: Utils\Utils::parseDateTime('2024-02-09T21:51:12.903Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-02-10T12:50:33.737Z'),
         usedMb: 524986,
     ),
     connectionId: '<id>',
@@ -77,7 +77,7 @@ if ($response->computeVolume !== null) {
 
 ## getComputeVolume
 
-Retrieve a volume
+Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -128,7 +128,7 @@ if ($response->computeVolume !== null) {
 
 ## listComputeVolumes
 
-List all volumes
+Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -178,7 +178,7 @@ if ($response->computeVolumes !== null) {
 
 ## patchComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -202,14 +202,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeVolumeRequest(
     computeVolume: new Shared\ComputeVolume(
         createdAt: Utils\Utils::parseDateTime('2022-11-15T15:12:48.055Z'),
-        id: 'eaf8fe41-8674-4052-864b-ae1e1cf307f4',
+        id: 'e4badeea-b975-49df-b1d7-f8110458a2c5',
         instanceIds: [],
         metadata: [],
         name: 'vol-solum',
         sizeMb: 1024000,
         status: Shared\ComputeVolumeStatus::Other,
         type: Shared\ComputeVolumeType::HighPerformance,
-        updatedAt: Utils\Utils::parseDateTime('2024-02-09T21:51:12.908Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-02-10T12:50:33.744Z'),
         usedMb: 524986,
     ),
     connectionId: '<id>',
@@ -243,7 +243,7 @@ if ($response->computeVolume !== null) {
 
 ## removeComputeVolume
 
-Remove a volume
+Deletes the ComputeVolume identified by `id`.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ if ($response->statusCode === 200) {
 
 ## updateComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -318,14 +318,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeVolumeRequest(
     computeVolume: new Shared\ComputeVolume(
         createdAt: Utils\Utils::parseDateTime('2022-11-15T15:12:48.055Z'),
-        id: 'eaf8fe41-8674-4052-864b-ae1e1cf307f4',
+        id: 'e4badeea-b975-49df-b1d7-f8110458a2c5',
         instanceIds: [],
         metadata: [],
         name: 'vol-solum',
         sizeMb: 1024000,
         status: Shared\ComputeVolumeStatus::Other,
         type: Shared\ComputeVolumeType::HighPerformance,
-        updatedAt: Utils\Utils::parseDateTime('2024-02-09T21:51:12.908Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-02-10T12:50:33.744Z'),
         usedMb: 524986,
     ),
     connectionId: '<id>',

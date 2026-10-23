@@ -25,7 +25,7 @@
 
 ## createAccountingContact
 
-Create a contact
+Creates a AccountingContact. Provide the unified AccountingContact fields in the request body; they are mapped to the provider's API. Returns the created AccountingContact.
 
 ### Example Usage
 
@@ -72,7 +72,7 @@ $request = new Operations\CreateAccountingContactRequest(
             ),
         ],
         firstName: 'Delores',
-        id: '5ed9cc63-e0d5-4b24-8c5f-3e0e3ae59897',
+        id: 'c04f80fa-bfbe-4fd4-a019-dfc193c87147',
         identification: '531850872',
         isActive: true,
         isCustomer: true,
@@ -83,7 +83,7 @@ $request = new Operations\CreateAccountingContactRequest(
         paymentMethods: [
             new Shared\AccountingContactPaymentMethod(
                 default: true,
-                id: 'e1e27032-ccb2-4ac9-b501-b3a64c114b9f',
+                id: 'c5fb38a5-69ba-40a8-9a69-99562f8b4059',
                 name: 'Visa 7844',
                 type: Shared\AccountingContactPaymentMethodType::Card,
             ),
@@ -105,7 +105,7 @@ $request = new Operations\CreateAccountingContactRequest(
                 type: Shared\AccountingTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2023-12-19T20:51:25.364Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-20T18:25:43.215Z'),
         website: 'https://kertzmanngroup.com',
     ),
     connectionId: '<id>',
@@ -138,7 +138,7 @@ if ($response->accountingContact !== null) {
 
 ## createCrmContact
 
-Create a contact
+Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
 ### Example Usage
 
@@ -179,7 +179,7 @@ $request = new Operations\CreateCrmContactRequest(
             ),
         ],
         firstName: 'Mohammad',
-        id: '300f2e85-3d9e-4075-840a-4fd9fe523962',
+        id: '48a0c9cc-8014-4a2e-953b-b0c9467b9378',
         imageUrl: 'https://avatars.githubusercontent.com/u/26803724',
         lastName: 'Bartell',
         linkUrls: [
@@ -191,7 +191,7 @@ $request = new Operations\CreateCrmContactRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'f5f35195-7412-4359-8cd1-f82139af7291',
+                id: '784d14cf-1653-45f0-848d-230754e0364a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'antiquus',
@@ -209,7 +209,7 @@ $request = new Operations\CreateCrmContactRequest(
             ),
         ],
         title: 'National Tactics Analyst',
-        updatedAt: Utils\Utils::parseDateTime('2021-02-24T05:06:32.253Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-24T06:18:22.018Z'),
     ),
     connectionId: '<id>',
 );
@@ -241,7 +241,7 @@ if ($response->crmContact !== null) {
 
 ## createUcContact
 
-Create a contact
+Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ $request = new Operations\CreateUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: '16034c6d-9641-43cf-88ab-f1dafcdc65e2',
+        id: 'fa41b6a2-8e93-42a0-81fa-c6c20dd65f16',
         lastName: 'Rogahn',
         metadata: [],
         name: 'Luther Rogahn',
@@ -292,7 +292,7 @@ $request = new Operations\CreateUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-12-08T09:06:39.793Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-09T13:11:45.837Z'),
     ),
     connectionId: '<id>',
 );
@@ -324,7 +324,7 @@ if ($response->ucContact !== null) {
 
 ## getAccountingContact
 
-Retrieve a contact
+Retrieves a single AccountingContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -375,7 +375,7 @@ if ($response->accountingContact !== null) {
 
 ## getCrmContact
 
-Retrieve a contact
+Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -426,7 +426,7 @@ if ($response->crmContact !== null) {
 
 ## getUcContact
 
-Retrieve a contact
+Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -477,7 +477,7 @@ if ($response->ucContact !== null) {
 
 ## listAccountingContacts
 
-List all contacts
+Returns a list of AccountingContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -527,7 +527,7 @@ if ($response->accountingContacts !== null) {
 
 ## listCrmContacts
 
-List all contacts
+Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -577,7 +577,7 @@ if ($response->crmContacts !== null) {
 
 ## listUcContacts
 
-List all contacts
+Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -627,7 +627,7 @@ if ($response->ucContacts !== null) {
 
 ## patchAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -674,7 +674,7 @@ $request = new Operations\PatchAccountingContactRequest(
             ),
         ],
         firstName: 'Delores',
-        id: 'f99279d9-5e04-4e2f-aac5-98630e0e6481',
+        id: '812919c1-537e-4487-aea9-bf5b7ca3ce68',
         identification: '531850872',
         isActive: true,
         isCustomer: true,
@@ -685,7 +685,7 @@ $request = new Operations\PatchAccountingContactRequest(
         paymentMethods: [
             new Shared\AccountingContactPaymentMethod(
                 default: true,
-                id: 'c10d1ec1-1157-467d-97e9-a468cfcb5576',
+                id: 'e6bbcdbb-20f0-4d79-a5a9-b2666b6f950e',
                 name: 'Visa 7844',
                 type: Shared\AccountingContactPaymentMethodType::Card,
             ),
@@ -707,7 +707,7 @@ $request = new Operations\PatchAccountingContactRequest(
                 type: Shared\AccountingTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2023-12-19T20:51:25.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-20T18:25:43.240Z'),
         website: 'https://kertzmanngroup.com',
     ),
     connectionId: '<id>',
@@ -741,7 +741,7 @@ if ($response->accountingContact !== null) {
 
 ## patchCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -782,7 +782,7 @@ $request = new Operations\PatchCrmContactRequest(
             ),
         ],
         firstName: 'Mohammad',
-        id: '6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f',
+        id: '1dff9988-3de3-4a49-8737-02b13264dd45',
         imageUrl: 'https://avatars.githubusercontent.com/u/26803724',
         lastName: 'Bartell',
         linkUrls: [
@@ -794,7 +794,7 @@ $request = new Operations\PatchCrmContactRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'ae413485-8c49-40a3-833a-1a5f212c344f',
+                id: '26983265-291b-4cc5-9f7c-2a36d0e8021c',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'antiquus',
@@ -812,7 +812,7 @@ $request = new Operations\PatchCrmContactRequest(
             ),
         ],
         title: 'National Tactics Analyst',
-        updatedAt: Utils\Utils::parseDateTime('2021-02-24T05:06:32.254Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-24T06:18:22.019Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -845,7 +845,7 @@ if ($response->crmContact !== null) {
 
 ## patchUcContact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -877,7 +877,7 @@ $request = new Operations\PatchUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: '3d110359-50a8-4975-82a9-90517f97f779',
+        id: '1e48d49c-5c49-4401-9d4f-8dce4db19741',
         lastName: 'Rogahn',
         metadata: [],
         name: 'Luther Rogahn',
@@ -896,7 +896,7 @@ $request = new Operations\PatchUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-12-08T09:06:39.805Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-09T13:11:45.848Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -929,7 +929,7 @@ if ($response->ucContact !== null) {
 
 ## removeAccountingContact
 
-Remove a contact
+Deletes the AccountingContact identified by `id`.
 
 ### Example Usage
 
@@ -980,7 +980,7 @@ if ($response->statusCode === 200) {
 
 ## removeCrmContact
 
-Remove a contact
+Deletes the CrmContact identified by `id`.
 
 ### Example Usage
 
@@ -1031,7 +1031,7 @@ if ($response->statusCode === 200) {
 
 ## removeUcContact
 
-Remove a contact
+Deletes the UcContact identified by `id`.
 
 ### Example Usage
 
@@ -1082,7 +1082,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingContact
 
-Update a contact
+Updates the AccountingContact identified by `id`. Provide the unified AccountingContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1129,7 +1129,7 @@ $request = new Operations\UpdateAccountingContactRequest(
             ),
         ],
         firstName: 'Delores',
-        id: 'f99279d9-5e04-4e2f-aac5-98630e0e6481',
+        id: '812919c1-537e-4487-aea9-bf5b7ca3ce68',
         identification: '531850872',
         isActive: true,
         isCustomer: true,
@@ -1140,7 +1140,7 @@ $request = new Operations\UpdateAccountingContactRequest(
         paymentMethods: [
             new Shared\AccountingContactPaymentMethod(
                 default: true,
-                id: 'c10d1ec1-1157-467d-97e9-a468cfcb5576',
+                id: 'e6bbcdbb-20f0-4d79-a5a9-b2666b6f950e',
                 name: 'Visa 7844',
                 type: Shared\AccountingContactPaymentMethodType::Card,
             ),
@@ -1162,7 +1162,7 @@ $request = new Operations\UpdateAccountingContactRequest(
                 type: Shared\AccountingTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2023-12-19T20:51:25.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-20T18:25:43.240Z'),
         website: 'https://kertzmanngroup.com',
     ),
     connectionId: '<id>',
@@ -1196,7 +1196,7 @@ if ($response->accountingContact !== null) {
 
 ## updateCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1237,7 +1237,7 @@ $request = new Operations\UpdateCrmContactRequest(
             ),
         ],
         firstName: 'Mohammad',
-        id: '6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f',
+        id: '1dff9988-3de3-4a49-8737-02b13264dd45',
         imageUrl: 'https://avatars.githubusercontent.com/u/26803724',
         lastName: 'Bartell',
         linkUrls: [
@@ -1249,7 +1249,7 @@ $request = new Operations\UpdateCrmContactRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'ae413485-8c49-40a3-833a-1a5f212c344f',
+                id: '26983265-291b-4cc5-9f7c-2a36d0e8021c',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'antiquus',
@@ -1267,7 +1267,7 @@ $request = new Operations\UpdateCrmContactRequest(
             ),
         ],
         title: 'National Tactics Analyst',
-        updatedAt: Utils\Utils::parseDateTime('2021-02-24T05:06:32.254Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-24T06:18:22.019Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1300,7 +1300,7 @@ if ($response->crmContact !== null) {
 
 ## updateUcContact
 
-Update a contact
+Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1332,7 +1332,7 @@ $request = new Operations\UpdateUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: '3d110359-50a8-4975-82a9-90517f97f779',
+        id: '1e48d49c-5c49-4401-9d4f-8dce4db19741',
         lastName: 'Rogahn',
         metadata: [],
         name: 'Luther Rogahn',
@@ -1351,7 +1351,7 @@ $request = new Operations\UpdateUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-12-08T09:06:39.805Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-09T13:11:45.848Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

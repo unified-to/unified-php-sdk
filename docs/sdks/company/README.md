@@ -26,7 +26,7 @@
 
 ## createAtsCompany
 
-Create a company
+Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
 
 ### Example Usage
 
@@ -50,10 +50,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAtsCompanyRequest(
     atsCompany: new Shared\AtsCompany(
         createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
-        id: 'bc88c053-d149-4889-9144-a45bbbbb011e',
+        id: '65aa9526-a605-4697-b0ac-3a18d9bad4f9',
         name: 'Gulgowski, Dibbert and Wilderman',
         phone: '1-882-360-2010',
-        updatedAt: Utils\Utils::parseDateTime('2020-10-01T04:12:23.715Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-10-01T13:23:51.891Z'),
         websiteUrl: 'https://www.gulgowskidibbert.com',
     ),
     connectionId: '<id>',
@@ -86,7 +86,7 @@ if ($response->atsCompany !== null) {
 
 ## createCrmCompany
 
-Create a company
+Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
 ### Example Usage
 
@@ -138,7 +138,7 @@ $request = new Operations\CreateCrmCompanyRequest(
             ),
         ],
         employees: 4177,
-        id: '76899288-87bf-4646-974b-44a0fd1b3acd',
+        id: '6a388d88-c09e-4d11-976a-d3c2920ffbf8',
         industry: 'Metrics',
         isActive: true,
         linkUrls: [
@@ -150,7 +150,7 @@ $request = new Operations\CreateCrmCompanyRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '31a67396-12ff-4ae0-b56e-f60d44ae7d5d',
+                id: '4535e03c-2a68-45e9-a8de-edb61c2de92f',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'unde',
@@ -169,7 +169,7 @@ $request = new Operations\CreateCrmCompanyRequest(
             ),
         ],
         timezone: 'Atlantic/Azores',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-03T03:44:26.054Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T15:19:25.848Z'),
         websites: [
             'https://www.goodwinsons.com',
         ],
@@ -204,7 +204,7 @@ if ($response->crmCompany !== null) {
 
 ## createHrisCompany
 
-Create a company
+Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
 
 ### Example Usage
 
@@ -236,11 +236,11 @@ $request = new Operations\CreateHrisCompanyRequest(
             regionCode: 'MO',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: 'c6c4605a-089e-4cfb-91a8-c88c7fcf7a68',
+        id: '7c750bde-2fb2-4c0c-93a5-cc962069e617',
         legalName: 'Gottlieb Group LLC',
         metadata: [],
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-08T16:22:56.386Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-10T15:45:47.999Z'),
     ),
     connectionId: '<id>',
 );
@@ -272,7 +272,7 @@ if ($response->hrisCompany !== null) {
 
 ## getAtsCompany
 
-Retrieve a company
+Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ if ($response->atsCompany !== null) {
 
 ## getCrmCompany
 
-Retrieve a company
+Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -374,7 +374,7 @@ if ($response->crmCompany !== null) {
 
 ## getHrisCompany
 
-Retrieve a company
+Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -425,7 +425,7 @@ if ($response->hrisCompany !== null) {
 
 ## listAtsCompanies
 
-List all companies
+Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -475,7 +475,7 @@ if ($response->atsCompanies !== null) {
 
 ## listCrmCompanies
 
-List all companies
+Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -575,7 +575,7 @@ if ($response->enrichCompany !== null) {
 
 ## listHrisCompanies
 
-List all companies
+Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -625,7 +625,7 @@ if ($response->hrisCompanies !== null) {
 
 ## patchAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -649,10 +649,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAtsCompanyRequest(
     atsCompany: new Shared\AtsCompany(
         createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
-        id: 'b636b5e8-021c-497e-9250-478a87440e00',
+        id: '04306bc4-29e8-4ac5-83fb-6732d84841b9',
         name: 'Gulgowski, Dibbert and Wilderman',
         phone: '1-882-360-2010',
-        updatedAt: Utils\Utils::parseDateTime('2020-10-01T04:12:23.719Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-10-01T13:23:51.895Z'),
         websiteUrl: 'https://www.gulgowskidibbert.com',
     ),
     connectionId: '<id>',
@@ -686,7 +686,7 @@ if ($response->atsCompany !== null) {
 
 ## patchCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -738,7 +738,7 @@ $request = new Operations\PatchCrmCompanyRequest(
             ),
         ],
         employees: 4177,
-        id: 'cc28f72c-f444-453c-b4f6-2697156e25e2',
+        id: '5a27ccfb-b0fb-49cd-8739-5707c69b2474',
         industry: 'Metrics',
         isActive: true,
         linkUrls: [
@@ -750,7 +750,7 @@ $request = new Operations\PatchCrmCompanyRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '01f0ae9f-23c2-49fe-a397-7f5bda43cc3e',
+                id: 'cb79908e-7d5f-4534-a067-1e54a01d8df9',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'unde',
@@ -769,7 +769,7 @@ $request = new Operations\PatchCrmCompanyRequest(
             ),
         ],
         timezone: 'Atlantic/Azores',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-03T03:44:26.077Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T15:19:25.864Z'),
         websites: [
             'https://www.goodwinsons.com',
         ],
@@ -805,7 +805,7 @@ if ($response->crmCompany !== null) {
 
 ## patchHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -837,11 +837,11 @@ $request = new Operations\PatchHrisCompanyRequest(
             regionCode: 'MO',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: '1a037787-e022-401d-a3e7-32542733f2d2',
+        id: '85b73e0f-ec9b-45ff-aa0b-c382b00eba76',
         legalName: 'Gottlieb Group LLC',
         metadata: [],
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-08T16:22:56.398Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-10T15:45:48.033Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -874,7 +874,7 @@ if ($response->hrisCompany !== null) {
 
 ## removeAtsCompany
 
-Remove a company
+Deletes the AtsCompany identified by `id`.
 
 ### Example Usage
 
@@ -925,7 +925,7 @@ if ($response->statusCode === 200) {
 
 ## removeCrmCompany
 
-Remove a company
+Deletes the CrmCompany identified by `id`.
 
 ### Example Usage
 
@@ -976,7 +976,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisCompany
 
-Remove a company
+Deletes the HrisCompany identified by `id`.
 
 ### Example Usage
 
@@ -1027,7 +1027,7 @@ if ($response->statusCode === 200) {
 
 ## updateAtsCompany
 
-Update a company
+Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1051,10 +1051,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAtsCompanyRequest(
     atsCompany: new Shared\AtsCompany(
         createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
-        id: 'b636b5e8-021c-497e-9250-478a87440e00',
+        id: '04306bc4-29e8-4ac5-83fb-6732d84841b9',
         name: 'Gulgowski, Dibbert and Wilderman',
         phone: '1-882-360-2010',
-        updatedAt: Utils\Utils::parseDateTime('2020-10-01T04:12:23.719Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-10-01T13:23:51.895Z'),
         websiteUrl: 'https://www.gulgowskidibbert.com',
     ),
     connectionId: '<id>',
@@ -1088,7 +1088,7 @@ if ($response->atsCompany !== null) {
 
 ## updateCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1140,7 +1140,7 @@ $request = new Operations\UpdateCrmCompanyRequest(
             ),
         ],
         employees: 4177,
-        id: 'cc28f72c-f444-453c-b4f6-2697156e25e2',
+        id: '5a27ccfb-b0fb-49cd-8739-5707c69b2474',
         industry: 'Metrics',
         isActive: true,
         linkUrls: [
@@ -1152,7 +1152,7 @@ $request = new Operations\UpdateCrmCompanyRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '01f0ae9f-23c2-49fe-a397-7f5bda43cc3e',
+                id: 'cb79908e-7d5f-4534-a067-1e54a01d8df9',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'unde',
@@ -1171,7 +1171,7 @@ $request = new Operations\UpdateCrmCompanyRequest(
             ),
         ],
         timezone: 'Atlantic/Azores',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-03T03:44:26.077Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T15:19:25.864Z'),
         websites: [
             'https://www.goodwinsons.com',
         ],
@@ -1207,7 +1207,7 @@ if ($response->crmCompany !== null) {
 
 ## updateHrisCompany
 
-Update a company
+Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1239,11 +1239,11 @@ $request = new Operations\UpdateHrisCompanyRequest(
             regionCode: 'MO',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: '1a037787-e022-401d-a3e7-32542733f2d2',
+        id: '85b73e0f-ec9b-45ff-aa0b-c382b00eba76',
         legalName: 'Gottlieb Group LLC',
         metadata: [],
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-08T16:22:56.398Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-10T15:45:48.033Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

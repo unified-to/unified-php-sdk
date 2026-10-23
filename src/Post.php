@@ -47,6 +47,8 @@ class Post
     /**
      * Create a post
      *
+     * Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to the provider's API. Returns the created SocialPost.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateSocialPostResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Post
     /**
      * Retrieve a post
      *
+     * Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSocialPostResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Post
     /**
      * List all posts
      *
+     * Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSocialPostsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSocialPostsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Post
 
     /**
      * Update a post
+     *
+     * Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchSocialPostResponse
@@ -309,6 +317,8 @@ class Post
     /**
      * Remove a post
      *
+     * Deletes the SocialPost identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveSocialPostResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Post
 
     /**
      * Update a post
+     *
+     * Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateSocialPostResponse

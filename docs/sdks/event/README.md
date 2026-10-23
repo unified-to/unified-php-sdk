@@ -32,7 +32,7 @@
 
 ## createAnalyticsEvent
 
-Create an event
+Creates a AnalyticsEvent. Provide the unified AnalyticsEvent fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsEvent.
 
 ### Example Usage
 
@@ -57,13 +57,13 @@ $request = new Operations\CreateAnalyticsEventRequest(
     analyticsEvent: new Shared\AnalyticsEvent(
         createdAt: Utils\Utils::parseDateTime('2023-06-21T03:13:22.954Z'),
         eventType: Shared\EventType::ScreenView,
-        id: '16a850a1-a7e9-458c-bd8d-4efe8a5d66ac',
+        id: '5596855f-627d-4ca7-a9e0-47d4eb514e63',
         metadata: [
             'key' => new Shared\PropertyAnalyticsEventMetadata(),
         ],
         name: 'page_view',
         pageUrl: 'https://golden-carboxyl.biz',
-        updatedAt: Utils\Utils::parseDateTime('2023-09-24T16:23:03.740Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-24T20:07:29.259Z'),
     ),
     connectionId: '<id>',
 );
@@ -95,7 +95,7 @@ if ($response->analyticsEvent !== null) {
 
 ## createCalendarEvent
 
-Create an event
+Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
 
 ### Example Usage
 
@@ -121,9 +121,9 @@ $request = new Operations\CreateCalendarEventRequest(
         attachments: [],
         conference: [],
         createdAt: '2019-08-04T14:33:51.814Z',
-        endAt: '2020-05-24T07:01:09.232Z',
+        endAt: '2020-05-24T12:20:02.865Z',
         hasConference: false,
-        id: 'e9913106-d288-4504-8cd9-df2838bed13c',
+        id: 'b8ee4072-b753-4273-8a08-5aadfde9a7b5',
         isAllDay: false,
         isFree: false,
         isPrivate: false,
@@ -133,15 +133,15 @@ $request = new Operations\CreateCalendarEventRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 4,
-                endAt: Utils\Utils::parseDateTime('2025-03-24T15:41:05.059Z'),
+                endAt: Utils\Utils::parseDateTime('2025-03-26T04:56:52.049Z'),
                 excludedDates: [
-                    '2024-02-02T18:45:37.233Z',
+                    '2024-02-04T00:29:50.152Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Yearly,
                 includedDates: [
-                    '2023-07-07T01:28:09.892Z',
-                    '2025-01-23T21:40:25.793Z',
-                    '2024-04-01T23:41:13.035Z',
+                    '2023-07-08T03:23:34.363Z',
+                    '2025-01-25T09:51:20.038Z',
+                    '2024-04-03T06:29:43.180Z',
                 ],
                 interval: 7,
                 onDays: [
@@ -478,11 +478,11 @@ $request = new Operations\CreateCalendarEventRequest(
                 weekStart: Shared\WeekStart::Tu,
             ),
         ],
-        startAt: '2020-05-23T21:47:32.005Z',
+        startAt: '2020-05-24T03:06:00.590Z',
         status: Shared\CalendarEventStatus::Confirmed,
         subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
         timezone: 'Asia/Bangkok',
-        updatedAt: '2020-06-30T05:23:45.736Z',
+        updatedAt: '2020-06-30T11:22:45.514Z',
         webUrl: 'https://another-pinstripe.com',
     ),
     connectionId: '<id>',
@@ -515,7 +515,7 @@ if ($response->calendarEvent !== null) {
 
 ## createCdpEvent
 
-Create an event
+Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 
 ### Example Usage
 
@@ -567,7 +567,7 @@ if ($response->cdpEvent !== null) {
 
 ## createCrmEvent
 
-Create an event
+Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
 ### Example Usage
 
@@ -593,13 +593,13 @@ $request = new Operations\CreateCrmEventRequest(
         call: new Shared\PropertyCrmEventCall(
             description: 'Arbitro aptus.',
             duration: 64,
-            startAt: Utils\Utils::parseDateTime('2024-12-11T00:48:21.026Z'),
+            startAt: Utils\Utils::parseDateTime('2024-12-12T10:20:39.481Z'),
         ),
         createdAt: Utils\Utils::parseDateTime('2020-07-14T04:53:23.784Z'),
-        id: '2861a115-b973-4d8a-8ef6-7c9a7f2efb64',
+        id: '45b31b2f-b15d-42fd-8142-e262e5f9b3e0',
         metadata: [],
         type: Shared\CrmEventType::Call,
-        updatedAt: Utils\Utils::parseDateTime('2026-10-11T12:55:45.327Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-13T12:24:26.001Z'),
     ),
     connectionId: '<id>',
 );
@@ -631,7 +631,7 @@ if ($response->crmEvent !== null) {
 
 ## getAnalyticsEvent
 
-Retrieve an event
+Retrieves a single AnalyticsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -682,7 +682,7 @@ if ($response->analyticsEvent !== null) {
 
 ## getCalendarEvent
 
-Retrieve an event
+Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -733,7 +733,7 @@ if ($response->calendarEvent !== null) {
 
 ## getCdpEvent
 
-Retrieve an event
+Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -784,7 +784,7 @@ if ($response->cdpEvent !== null) {
 
 ## getClubsEvent
 
-Retrieve an event
+Retrieves a single ClubsEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -835,7 +835,7 @@ if ($response->clubsEvent !== null) {
 
 ## getCrmEvent
 
-Retrieve an event
+Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -886,7 +886,7 @@ if ($response->crmEvent !== null) {
 
 ## listAnalyticsEvents
 
-List all events
+Returns a list of AnalyticsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -936,7 +936,7 @@ if ($response->analyticsEvents !== null) {
 
 ## listCalendarEvents
 
-List all events
+Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -986,7 +986,7 @@ if ($response->calendarEvents !== null) {
 
 ## listCdpEvents
 
-List all events
+Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1036,7 +1036,7 @@ if ($response->cdpEvents !== null) {
 
 ## listClubsEvents
 
-List all events
+Returns a list of ClubsEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1086,7 +1086,7 @@ if ($response->clubsEvents !== null) {
 
 ## listCrmEvents
 
-List all events
+Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1136,7 +1136,7 @@ if ($response->crmEvents !== null) {
 
 ## patchCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1162,9 +1162,9 @@ $request = new Operations\PatchCalendarEventRequest(
         attachments: [],
         conference: [],
         createdAt: '2019-08-04T14:33:51.814Z',
-        endAt: '2020-05-24T07:01:09.236Z',
+        endAt: '2020-05-24T12:20:02.870Z',
         hasConference: false,
-        id: '14a1cdee-441e-4ea7-ba56-39b688c8d77f',
+        id: 'd41a2d95-726f-4099-a0f4-245a7bf3b144',
         isAllDay: false,
         isFree: false,
         isPrivate: false,
@@ -1174,15 +1174,15 @@ $request = new Operations\PatchCalendarEventRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 4,
-                endAt: Utils\Utils::parseDateTime('2025-03-24T15:41:05.085Z'),
+                endAt: Utils\Utils::parseDateTime('2025-03-26T04:56:52.089Z'),
                 excludedDates: [
-                    '2024-02-02T18:45:37.253Z',
+                    '2024-02-04T00:29:50.184Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Yearly,
                 includedDates: [
-                    '2023-07-07T01:28:09.910Z',
-                    '2025-01-23T21:40:25.818Z',
-                    '2024-04-01T23:41:13.055Z',
+                    '2023-07-08T03:23:34.391Z',
+                    '2025-01-25T09:51:20.077Z',
+                    '2024-04-03T06:29:43.213Z',
                 ],
                 interval: 7,
                 onDays: [
@@ -1519,11 +1519,11 @@ $request = new Operations\PatchCalendarEventRequest(
                 weekStart: Shared\WeekStart::Tu,
             ),
         ],
-        startAt: '2020-05-23T21:47:32.009Z',
+        startAt: '2020-05-24T03:06:00.595Z',
         status: Shared\CalendarEventStatus::Confirmed,
         subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
         timezone: 'Asia/Bangkok',
-        updatedAt: '2020-06-30T05:23:45.740Z',
+        updatedAt: '2020-06-30T11:22:45.520Z',
         webUrl: 'https://another-pinstripe.com',
     ),
     connectionId: '<id>',
@@ -1557,7 +1557,7 @@ if ($response->calendarEvent !== null) {
 
 ## patchCdpEvent
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1610,7 +1610,7 @@ if ($response->cdpEvent !== null) {
 
 ## patchCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1636,13 +1636,13 @@ $request = new Operations\PatchCrmEventRequest(
         call: new Shared\PropertyCrmEventCall(
             description: 'Arbitro aptus.',
             duration: 64,
-            startAt: Utils\Utils::parseDateTime('2024-12-11T00:48:21.064Z'),
+            startAt: Utils\Utils::parseDateTime('2024-12-12T10:20:39.517Z'),
         ),
         createdAt: Utils\Utils::parseDateTime('2020-07-14T04:53:23.784Z'),
-        id: 'fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa',
+        id: '7834c7a8-3797-4d94-895a-aea0407eba75',
         metadata: [],
         type: Shared\CrmEventType::Call,
-        updatedAt: Utils\Utils::parseDateTime('2026-10-11T12:55:45.381Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-13T12:24:26.051Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1675,7 +1675,7 @@ if ($response->crmEvent !== null) {
 
 ## patchMessagingEvent
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1703,7 +1703,7 @@ $request = new Operations\PatchMessagingEventRequest(
             name: '',
         ),
         createdAt: Utils\Utils::parseDateTime('2019-05-30T19:44:46.461Z'),
-        id: '7557665c-8c74-4a4b-9f0f-811c0fb08e7a',
+        id: '235d0601-15d2-49bb-bcfa-c2757975effd',
         isReplacingOriginal: false,
         metadata: [],
         type: Shared\MessagingEventType::ButtonClick,
@@ -1739,7 +1739,7 @@ if ($response->messagingEvent !== null) {
 
 ## removeCalendarEvent
 
-Remove an event
+Deletes the CalendarEvent identified by `id`.
 
 ### Example Usage
 
@@ -1790,7 +1790,7 @@ if ($response->statusCode === 200) {
 
 ## removeCdpEvent
 
-Remove an event
+Deletes the CdpEvent identified by `id`.
 
 ### Example Usage
 
@@ -1841,7 +1841,7 @@ if ($response->statusCode === 200) {
 
 ## removeCrmEvent
 
-Remove an event
+Deletes the CrmEvent identified by `id`.
 
 ### Example Usage
 
@@ -1892,7 +1892,7 @@ if ($response->statusCode === 200) {
 
 ## updateCalendarEvent
 
-Update an event
+Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1918,9 +1918,9 @@ $request = new Operations\UpdateCalendarEventRequest(
         attachments: [],
         conference: [],
         createdAt: '2019-08-04T14:33:51.814Z',
-        endAt: '2020-05-24T07:01:09.236Z',
+        endAt: '2020-05-24T12:20:02.870Z',
         hasConference: false,
-        id: '14a1cdee-441e-4ea7-ba56-39b688c8d77f',
+        id: 'd41a2d95-726f-4099-a0f4-245a7bf3b144',
         isAllDay: false,
         isFree: false,
         isPrivate: false,
@@ -1930,15 +1930,15 @@ $request = new Operations\UpdateCalendarEventRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 4,
-                endAt: Utils\Utils::parseDateTime('2025-03-24T15:41:05.085Z'),
+                endAt: Utils\Utils::parseDateTime('2025-03-26T04:56:52.089Z'),
                 excludedDates: [
-                    '2024-02-02T18:45:37.253Z',
+                    '2024-02-04T00:29:50.184Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Yearly,
                 includedDates: [
-                    '2023-07-07T01:28:09.910Z',
-                    '2025-01-23T21:40:25.818Z',
-                    '2024-04-01T23:41:13.055Z',
+                    '2023-07-08T03:23:34.391Z',
+                    '2025-01-25T09:51:20.077Z',
+                    '2024-04-03T06:29:43.213Z',
                 ],
                 interval: 7,
                 onDays: [
@@ -2275,11 +2275,11 @@ $request = new Operations\UpdateCalendarEventRequest(
                 weekStart: Shared\WeekStart::Tu,
             ),
         ],
-        startAt: '2020-05-23T21:47:32.009Z',
+        startAt: '2020-05-24T03:06:00.595Z',
         status: Shared\CalendarEventStatus::Confirmed,
         subject: 'Sunt spargo tepidus bestia vigor credo coadunatio appello.',
         timezone: 'Asia/Bangkok',
-        updatedAt: '2020-06-30T05:23:45.740Z',
+        updatedAt: '2020-06-30T11:22:45.520Z',
         webUrl: 'https://another-pinstripe.com',
     ),
     connectionId: '<id>',
@@ -2313,7 +2313,7 @@ if ($response->calendarEvent !== null) {
 
 ## updateCdpEvent
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2366,7 +2366,7 @@ if ($response->cdpEvent !== null) {
 
 ## updateCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2392,13 +2392,13 @@ $request = new Operations\UpdateCrmEventRequest(
         call: new Shared\PropertyCrmEventCall(
             description: 'Arbitro aptus.',
             duration: 64,
-            startAt: Utils\Utils::parseDateTime('2024-12-11T00:48:21.064Z'),
+            startAt: Utils\Utils::parseDateTime('2024-12-12T10:20:39.517Z'),
         ),
         createdAt: Utils\Utils::parseDateTime('2020-07-14T04:53:23.784Z'),
-        id: 'fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa',
+        id: '7834c7a8-3797-4d94-895a-aea0407eba75',
         metadata: [],
         type: Shared\CrmEventType::Call,
-        updatedAt: Utils\Utils::parseDateTime('2026-10-11T12:55:45.381Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-13T12:24:26.051Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2431,7 +2431,7 @@ if ($response->crmEvent !== null) {
 
 ## updateMessagingEvent
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2459,7 +2459,7 @@ $request = new Operations\UpdateMessagingEventRequest(
             name: '',
         ),
         createdAt: Utils\Utils::parseDateTime('2019-05-30T19:44:46.461Z'),
-        id: '7557665c-8c74-4a4b-9f0f-811c0fb08e7a',
+        id: '235d0601-15d2-49bb-bcfa-c2757975effd',
         isReplacingOriginal: false,
         metadata: [],
         type: Shared\MessagingEventType::ButtonClick,

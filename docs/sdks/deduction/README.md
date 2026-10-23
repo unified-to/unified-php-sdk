@@ -13,7 +13,7 @@
 
 ## createHrisDeduction
 
-Create a deduction
+Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
 
 ### Example Usage
 
@@ -43,14 +43,14 @@ $request = new Operations\CreateHrisDeductionRequest(
         employerType: Shared\EmployerType::Percentage,
         frequency: Shared\HrisDeductionFrequency::OneTime,
         garnishmentType: Shared\GarnishmentType::ChildSupport,
-        id: 'b93fdf66-995f-4f76-b945-d3a17ab7254b',
+        id: '63abbe37-87cb-429c-8365-04ba2c639cb6',
         isActive: true,
         maxAmount: 21794,
         metadata: [],
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-03-15T07:40:47.474Z'),
+        startAt: Utils\Utils::parseDateTime('2025-03-16T19:58:37.713Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-22T06:59:33.108Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-23T12:19:21.568Z'),
     ),
     connectionId: '<id>',
 );
@@ -82,7 +82,7 @@ if ($response->hrisDeduction !== null) {
 
 ## getHrisDeduction
 
-Retrieve a deduction
+Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ if ($response->hrisDeduction !== null) {
 
 ## listHrisDeductions
 
-List all deductions
+Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -183,7 +183,7 @@ if ($response->hrisDeductions !== null) {
 
 ## patchHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -213,14 +213,14 @@ $request = new Operations\PatchHrisDeductionRequest(
         employerType: Shared\EmployerType::Percentage,
         frequency: Shared\HrisDeductionFrequency::OneTime,
         garnishmentType: Shared\GarnishmentType::ChildSupport,
-        id: 'c3213a23-98f3-4a00-85e5-4297c58c69b9',
+        id: '094f9f10-0414-428a-b246-807a48953ae6',
         isActive: true,
         maxAmount: 21794,
         metadata: [],
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-03-15T07:40:47.491Z'),
+        startAt: Utils\Utils::parseDateTime('2025-03-16T19:58:37.731Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-22T06:59:33.122Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-23T12:19:21.582Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -253,7 +253,7 @@ if ($response->hrisDeduction !== null) {
 
 ## removeHrisDeduction
 
-Remove a deduction
+Deletes the HrisDeduction identified by `id`.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisDeduction
 
-Update a deduction
+Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
 
 ### Example Usage
 
@@ -334,14 +334,14 @@ $request = new Operations\UpdateHrisDeductionRequest(
         employerType: Shared\EmployerType::Percentage,
         frequency: Shared\HrisDeductionFrequency::OneTime,
         garnishmentType: Shared\GarnishmentType::ChildSupport,
-        id: 'c3213a23-98f3-4a00-85e5-4297c58c69b9',
+        id: '094f9f10-0414-428a-b246-807a48953ae6',
         isActive: true,
         maxAmount: 21794,
         metadata: [],
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-03-15T07:40:47.491Z'),
+        startAt: Utils\Utils::parseDateTime('2025-03-16T19:58:37.731Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-22T06:59:33.122Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-03-23T12:19:21.582Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

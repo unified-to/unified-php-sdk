@@ -13,7 +13,7 @@
 
 ## createComputeInstance
 
-Create an instance
+Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
 ### Example Usage
 
@@ -54,7 +54,7 @@ $request = new Operations\CreateComputeInstanceRequest(
         ],
         gpuCount: 0,
         hasInternetAccess: true,
-        id: '4077e3bd-a54f-466b-b69d-d9c1e5cad805',
+        id: 'e2ab3563-4706-4658-88c3-53364c4ea537',
         image: 'ubuntu:24.04',
         market: Shared\Market::Spot,
         memoryMb: 2048,
@@ -69,11 +69,11 @@ $request = new Operations\CreateComputeInstanceRequest(
             port: 22,
             username: 'root',
         ),
-        startedAt: Utils\Utils::parseDateTime('2025-03-23T23:18:11.036Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-03-25T04:21:08.819Z'),
         status: Shared\ComputeInstanceStatus::Error,
         statusReason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
         type: Shared\ComputeInstanceType::Baremetal,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-16T04:50:44.691Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-17T12:37:07.611Z'),
     ),
     connectionId: '<id>',
 );
@@ -105,7 +105,7 @@ if ($response->computeInstance !== null) {
 
 ## getComputeInstance
 
-Retrieve an instance
+Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -156,7 +156,7 @@ if ($response->computeInstance !== null) {
 
 ## listComputeInstances
 
-List all instances
+Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -206,7 +206,7 @@ if ($response->computeInstances !== null) {
 
 ## patchComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -247,7 +247,7 @@ $request = new Operations\PatchComputeInstanceRequest(
         ],
         gpuCount: 0,
         hasInternetAccess: true,
-        id: '68a4cfd4-c11d-4807-8d5e-f972fde6e258',
+        id: '32a54e86-dc4c-43c8-81e5-4aeefde9d981',
         image: 'ubuntu:24.04',
         market: Shared\Market::Spot,
         memoryMb: 2048,
@@ -262,11 +262,11 @@ $request = new Operations\PatchComputeInstanceRequest(
             port: 22,
             username: 'root',
         ),
-        startedAt: Utils\Utils::parseDateTime('2025-03-23T23:18:11.066Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-03-25T04:21:08.845Z'),
         status: Shared\ComputeInstanceStatus::Error,
         statusReason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
         type: Shared\ComputeInstanceType::Baremetal,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-16T04:50:44.724Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-17T12:37:07.640Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -299,7 +299,7 @@ if ($response->computeInstance !== null) {
 
 ## removeComputeInstance
 
-Remove an instance
+Deletes the ComputeInstance identified by `id`.
 
 ### Example Usage
 
@@ -350,7 +350,7 @@ if ($response->statusCode === 200) {
 
 ## updateComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -391,7 +391,7 @@ $request = new Operations\UpdateComputeInstanceRequest(
         ],
         gpuCount: 0,
         hasInternetAccess: true,
-        id: '68a4cfd4-c11d-4807-8d5e-f972fde6e258',
+        id: '32a54e86-dc4c-43c8-81e5-4aeefde9d981',
         image: 'ubuntu:24.04',
         market: Shared\Market::Spot,
         memoryMb: 2048,
@@ -406,11 +406,11 @@ $request = new Operations\UpdateComputeInstanceRequest(
             port: 22,
             username: 'root',
         ),
-        startedAt: Utils\Utils::parseDateTime('2025-03-23T23:18:11.066Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-03-25T04:21:08.845Z'),
         status: Shared\ComputeInstanceStatus::Error,
         statusReason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
         type: Shared\ComputeInstanceType::Baremetal,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-16T04:50:44.724Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-17T12:37:07.640Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

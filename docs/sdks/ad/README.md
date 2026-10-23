@@ -13,7 +13,7 @@
 
 ## createAdsAd
 
-Create an ad
+Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
 
 ### Example Usage
 
@@ -43,11 +43,11 @@ $request = new Operations\CreateAdsAdRequest(
         creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
         description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
         finalUrl: 'https://improbable-sanity.com',
-        id: '1607f143-283d-4a82-ace1-3ebc68008f8f',
+        id: '12a559b2-074c-49d5-8f7a-75cb170bce8f',
         metadata: [],
         name: 'Hermiston Group',
         status: Shared\AdsAdStatus::Archived,
-        updatedAt: Utils\Utils::parseDateTime('2024-06-18T13:39:37.415Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-19T09:06:11.794Z'),
     ),
     connectionId: '<id>',
 );
@@ -79,7 +79,7 @@ if ($response->adsAd !== null) {
 
 ## getAdsAd
 
-Retrieve an ad
+Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -130,7 +130,7 @@ if ($response->adsAd !== null) {
 
 ## listAdsAds
 
-List all ads
+Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -180,7 +180,7 @@ if ($response->adsAds !== null) {
 
 ## patchAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -210,11 +210,11 @@ $request = new Operations\PatchAdsAdRequest(
         creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
         description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
         finalUrl: 'https://improbable-sanity.com',
-        id: '95185ea9-82a3-415a-b9ce-ae773a1ace06',
+        id: 'b0b0524c-8867-4742-8522-90e7adb683a9',
         metadata: [],
         name: 'Hermiston Group',
         status: Shared\AdsAdStatus::Archived,
-        updatedAt: Utils\Utils::parseDateTime('2024-06-18T13:39:37.425Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-19T09:06:11.812Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -247,7 +247,7 @@ if ($response->adsAd !== null) {
 
 ## removeAdsAd
 
-Remove an ad
+Deletes the AdsAd identified by `id`.
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ if ($response->statusCode === 200) {
 
 ## updateAdsAd
 
-Update an ad
+Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
 
 ### Example Usage
 
@@ -328,11 +328,11 @@ $request = new Operations\UpdateAdsAdRequest(
         creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
         description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
         finalUrl: 'https://improbable-sanity.com',
-        id: '95185ea9-82a3-415a-b9ce-ae773a1ace06',
+        id: 'b0b0524c-8867-4742-8522-90e7adb683a9',
         metadata: [],
         name: 'Hermiston Group',
         status: Shared\AdsAdStatus::Archived,
-        updatedAt: Utils\Utils::parseDateTime('2024-06-18T13:39:37.425Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-19T09:06:11.812Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

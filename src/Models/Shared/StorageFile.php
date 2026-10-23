@@ -81,6 +81,7 @@ class StorageFile
     public ?string $mimeType = null;
 
     /**
+     * The file or folder name, including the file's extension
      *
      * @var ?string $name
      */
@@ -117,7 +118,7 @@ class StorageFile
     public ?array $raw = null;
 
     /**
-     * $references
+     * The records the file is attached to (e.g. an invoice or a candidate), each by its id and type
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\StorageReference> $references
      */
@@ -145,6 +146,7 @@ class StorageFile
     public ?array $tags = null;
 
     /**
+     * Whether this is a file or a folder
      *
      * @var ?\Unified\Unified_to\Models\Shared\StorageFileType $type
      */

@@ -13,7 +13,7 @@
 
 ## createLegalPracticearea
 
-Create a practicearea
+Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
 ### Example Usage
 
@@ -38,11 +38,11 @@ $request = new Operations\CreateLegalPracticeareaRequest(
     legalPracticearea: new Shared\LegalPracticearea(
         code: 'QCA',
         createdAt: Utils\Utils::parseDateTime('2023-01-28T21:00:26.264Z'),
-        id: 'ad6630d8-1aec-45c2-9620-ed1693d104c8',
+        id: '1523ba44-d3df-4638-b9bd-09e1f365d66f',
         metadata: [],
         name: 'witty Law',
         type: Shared\LegalPracticeareaType::Education,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-27T17:08:43.506Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-29T02:08:05.503Z'),
     ),
     connectionId: '<id>',
 );
@@ -74,7 +74,7 @@ if ($response->legalPracticearea !== null) {
 
 ## getLegalPracticearea
 
-Retrieve a practicearea
+Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ if ($response->legalPracticearea !== null) {
 
 ## listLegalPracticeareas
 
-List all practiceareas
+Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -175,7 +175,7 @@ if ($response->legalPracticeareas !== null) {
 
 ## patchLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -200,11 +200,11 @@ $request = new Operations\PatchLegalPracticeareaRequest(
     legalPracticearea: new Shared\LegalPracticearea(
         code: 'QCA',
         createdAt: Utils\Utils::parseDateTime('2023-01-28T21:00:26.264Z'),
-        id: 'e61009e9-ee31-4608-b2c4-39e037f7d5e1',
+        id: '7823ac50-beb1-435d-b880-83b77d55b891',
         metadata: [],
         name: 'witty Law',
         type: Shared\LegalPracticeareaType::Education,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-27T17:08:43.521Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-29T02:08:05.520Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -237,7 +237,7 @@ if ($response->legalPracticearea !== null) {
 
 ## removeLegalPracticearea
 
-Remove a practicearea
+Deletes the LegalPracticearea identified by `id`.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ if ($response->statusCode === 200) {
 
 ## updateLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -313,11 +313,11 @@ $request = new Operations\UpdateLegalPracticeareaRequest(
     legalPracticearea: new Shared\LegalPracticearea(
         code: 'QCA',
         createdAt: Utils\Utils::parseDateTime('2023-01-28T21:00:26.264Z'),
-        id: 'e61009e9-ee31-4608-b2c4-39e037f7d5e1',
+        id: '7823ac50-beb1-435d-b880-83b77d55b891',
         metadata: [],
         name: 'witty Law',
         type: Shared\LegalPracticeareaType::Education,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-27T17:08:43.521Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-29T02:08:05.520Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

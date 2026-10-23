@@ -13,7 +13,7 @@
 
 ## createRepoBranch
 
-Create a branch
+Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
 
 ### Example Usage
 
@@ -37,11 +37,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: 'd3de22aa-944f-4ed3-96e8-7b83f147ffae',
+        id: '39f9ff87-4ed4-4fb5-9d39-56841ea1c863',
         metadata: [],
         name: 'transmitter-calculate',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-07T08:02:55.995Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-07T13:27:13.784Z'),
     ),
     connectionId: '<id>',
 );
@@ -73,7 +73,7 @@ if ($response->repoBranch !== null) {
 
 ## getRepoBranch
 
-Retrieve a branch
+Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ if ($response->repoBranch !== null) {
 
 ## listRepoBranches
 
-List all branches
+Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -174,7 +174,7 @@ if ($response->repoBranches !== null) {
 
 ## patchRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -198,11 +198,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: '2d9cf7e3-a566-41e8-87b2-6bd47606fe69',
+        id: 'e48929ca-2277-4f9e-a5eb-d9e4d91f0ab2',
         metadata: [],
         name: 'transmitter-calculate',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-07T08:02:55.996Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-07T13:27:13.785Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -235,7 +235,7 @@ if ($response->repoBranch !== null) {
 
 ## removeRepoBranch
 
-Remove a branch
+Deletes the RepoBranch identified by `id`.
 
 ### Example Usage
 
@@ -286,7 +286,7 @@ if ($response->statusCode === 200) {
 
 ## updateRepoBranch
 
-Update a branch
+Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
 
 ### Example Usage
 
@@ -310,11 +310,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: '2d9cf7e3-a566-41e8-87b2-6bd47606fe69',
+        id: 'e48929ca-2277-4f9e-a5eb-d9e4d91f0ab2',
         metadata: [],
         name: 'transmitter-calculate',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-07T08:02:55.996Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-07T13:27:13.785Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

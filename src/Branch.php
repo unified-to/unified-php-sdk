@@ -47,6 +47,8 @@ class Branch
     /**
      * Create a branch
      *
+     * Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Branch
     /**
      * Retrieve a branch
      *
+     * Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Branch
     /**
      * List all branches
      *
+     * Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoBranchesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoBranchesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Branch
 
     /**
      * Update a branch
+     *
+     * Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoBranchResponse
@@ -309,6 +317,8 @@ class Branch
     /**
      * Remove a branch
      *
+     * Deletes the RepoBranch identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Branch
 
     /**
      * Update a branch
+     *
+     * Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoBranchResponse

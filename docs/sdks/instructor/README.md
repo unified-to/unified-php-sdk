@@ -13,7 +13,7 @@
 
 ## createLmsInstructor
 
-Create an instructor
+Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
 
 ### Example Usage
 
@@ -41,7 +41,7 @@ $request = new Operations\CreateLmsInstructorRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Deangelo',
-        id: 'ed7352b2-b4e5-46cd-8c4b-b8efc95d1370',
+        id: '72169b55-08d3-486b-af7d-12f838260457',
         imageUrl: 'https://avatars.githubusercontent.com/u/95131132',
         lastName: 'Ritchie',
         metadata: [],
@@ -57,7 +57,7 @@ $request = new Operations\CreateLmsInstructorRequest(
             ),
         ],
         title: 'Regional Security Agent',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-24T10:19:49.914Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-25T22:13:02.082Z'),
     ),
     connectionId: '<id>',
 );
@@ -89,7 +89,7 @@ if ($response->lmsInstructor !== null) {
 
 ## getLmsInstructor
 
-Retrieve an instructor
+Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ if ($response->lmsInstructor !== null) {
 
 ## listLmsInstructors
 
-List all instructors
+Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ if ($response->lmsInstructors !== null) {
 
 ## patchLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -218,7 +218,7 @@ $request = new Operations\PatchLmsInstructorRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Deangelo',
-        id: '1327c6b3-eddf-40fb-b758-98ccff3a7545',
+        id: 'c4c38d07-3d05-4d98-adfd-910b8c1bbe76',
         imageUrl: 'https://avatars.githubusercontent.com/u/95131132',
         lastName: 'Ritchie',
         metadata: [],
@@ -234,7 +234,7 @@ $request = new Operations\PatchLmsInstructorRequest(
             ),
         ],
         title: 'Regional Security Agent',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-24T10:19:49.926Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-25T22:13:02.094Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -267,7 +267,7 @@ if ($response->lmsInstructor !== null) {
 
 ## removeLmsInstructor
 
-Remove an instructor
+Deletes the LmsInstructor identified by `id`.
 
 ### Example Usage
 
@@ -318,7 +318,7 @@ if ($response->statusCode === 200) {
 
 ## updateLmsInstructor
 
-Update an instructor
+Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
 
 ### Example Usage
 
@@ -346,7 +346,7 @@ $request = new Operations\UpdateLmsInstructorRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Deangelo',
-        id: '1327c6b3-eddf-40fb-b758-98ccff3a7545',
+        id: 'c4c38d07-3d05-4d98-adfd-910b8c1bbe76',
         imageUrl: 'https://avatars.githubusercontent.com/u/95131132',
         lastName: 'Ritchie',
         metadata: [],
@@ -362,7 +362,7 @@ $request = new Operations\UpdateLmsInstructorRequest(
             ),
         ],
         title: 'Regional Security Agent',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-24T10:19:49.926Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-25T22:13:02.094Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

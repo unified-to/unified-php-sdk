@@ -30,7 +30,7 @@ class PropertyDatastoreQueryResponseAggregates
     public ?float $count = null;
 
     /**
-     * $groups
+     * Each item is one group row: a map of field name to value
      *
      * @var ?array<array<string, \Unified\Unified_to\Models\Shared\DatastoreFieldValue>> $groups
      */

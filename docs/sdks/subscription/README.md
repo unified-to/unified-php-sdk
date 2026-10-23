@@ -13,7 +13,7 @@
 
 ## createPaymentSubscription
 
-Create a subscription
+Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ $request = new Operations\CreatePaymentSubscriptionRequest(
         currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         dayOfMonth: 8,
         description: 'Innovative Mouse featuring important technology and Bamboo construction',
-        id: 'a394f325-5551-4a99-af71-bf68f958a0f6',
+        id: '00ad0491-10fd-423a-9540-056214ba4956',
         interval: 1,
         intervalUnit: Shared\IntervalUnit::Year,
         lineitems: [],
@@ -51,7 +51,7 @@ $request = new Operations\CreatePaymentSubscriptionRequest(
         startAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         status: Shared\PaymentSubscriptionStatus::Active,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-04T12:52:53.384Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-04T18:30:59.446Z'),
     ),
     connectionId: '<id>',
 );
@@ -83,7 +83,7 @@ if ($response->paymentSubscription !== null) {
 
 ## getPaymentSubscription
 
-Retrieve a subscription
+Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ if ($response->paymentSubscription !== null) {
 
 ## listPaymentSubscriptions
 
-List all subscriptions
+Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ if ($response->paymentSubscriptions !== null) {
 
 ## patchPaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -213,7 +213,7 @@ $request = new Operations\PatchPaymentSubscriptionRequest(
         currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         dayOfMonth: 8,
         description: 'Innovative Mouse featuring important technology and Bamboo construction',
-        id: 'a1331b76-e046-45c2-8dec-da55813f253f',
+        id: 'ea3a9722-c59c-41de-aa53-178838a1b961',
         interval: 1,
         intervalUnit: Shared\IntervalUnit::Year,
         lineitems: [],
@@ -222,7 +222,7 @@ $request = new Operations\PatchPaymentSubscriptionRequest(
         startAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         status: Shared\PaymentSubscriptionStatus::Active,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-04T12:52:53.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-04T18:30:59.450Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -255,7 +255,7 @@ if ($response->paymentSubscription !== null) {
 
 ## removePaymentSubscription
 
-Remove a subscription
+Deletes the PaymentSubscription identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ if ($response->statusCode === 200) {
 
 ## updatePaymentSubscription
 
-Update a subscription
+Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
 
 ### Example Usage
 
@@ -335,7 +335,7 @@ $request = new Operations\UpdatePaymentSubscriptionRequest(
         currentPeriodStartAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         dayOfMonth: 8,
         description: 'Innovative Mouse featuring important technology and Bamboo construction',
-        id: 'a1331b76-e046-45c2-8dec-da55813f253f',
+        id: 'ea3a9722-c59c-41de-aa53-178838a1b961',
         interval: 1,
         intervalUnit: Shared\IntervalUnit::Year,
         lineitems: [],
@@ -344,7 +344,7 @@ $request = new Operations\UpdatePaymentSubscriptionRequest(
         startAt: Utils\Utils::parseDateTime('2023-05-08T10:11:03.414Z'),
         status: Shared\PaymentSubscriptionStatus::Active,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-04T12:52:53.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-04T18:30:59.450Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

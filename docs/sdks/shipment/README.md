@@ -13,7 +13,7 @@
 
 ## createShippingShipment
 
-Create a shipment
+Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
 
 ### Example Usage
 
@@ -37,7 +37,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: 'aa5f6c4a-01d3-48d7-882d-b4d25280042f',
+        id: 'a97b9394-530d-4c94-bd61-5ac70a910d7f',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -47,7 +47,7 @@ $request = new Operations\CreateShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-15T06:46:20.874Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-15T08:48:41.556Z'),
     ),
     connectionId: '<id>',
 );
@@ -79,7 +79,7 @@ if ($response->shippingShipment !== null) {
 
 ## getShippingShipment
 
-Retrieve a shipment
+Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -130,7 +130,7 @@ if ($response->shippingShipment !== null) {
 
 ## listShippingShipments
 
-List all shipments
+Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -180,7 +180,7 @@ if ($response->shippingShipments !== null) {
 
 ## patchShippingShipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -204,7 +204,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: '1a7f03d0-ee89-4708-871e-abbc7015a961',
+        id: 'e395a54b-9c4e-4338-b2a8-841232973ca5',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -214,7 +214,7 @@ $request = new Operations\PatchShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-15T06:46:20.878Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-15T08:48:41.561Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -247,7 +247,7 @@ if ($response->shippingShipment !== null) {
 
 ## removeShippingShipment
 
-Remove a shipment
+Deletes the ShippingShipment identified by `id`.
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ if ($response->statusCode === 200) {
 
 ## updateShippingShipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -322,7 +322,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: '1a7f03d0-ee89-4708-871e-abbc7015a961',
+        id: 'e395a54b-9c4e-4338-b2a8-841232973ca5',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -332,7 +332,7 @@ $request = new Operations\UpdateShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-15T06:46:20.878Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-15T08:48:41.561Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

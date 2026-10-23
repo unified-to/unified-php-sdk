@@ -43,7 +43,7 @@
 
 ## createCdpActivation
 
-Create an activation
+Creates a CdpActivation. Provide the unified CdpActivation fields in the request body; they are mapped to the provider's API. Returns the created CdpActivation.
 
 ### Example Usage
 
@@ -95,7 +95,7 @@ if ($response->cdpActivation !== null) {
 
 ## createCdpDestination
 
-Create a destination
+Creates a CdpDestination. Provide the unified CdpDestination fields in the request body; they are mapped to the provider's API. Returns the created CdpDestination.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ if ($response->cdpDestination !== null) {
 
 ## createCdpEvent
 
-Create an event
+Creates a CdpEvent. Provide the unified CdpEvent fields in the request body; they are mapped to the provider's API. Returns the created CdpEvent.
 
 ### Example Usage
 
@@ -199,7 +199,7 @@ if ($response->cdpEvent !== null) {
 
 ## createCdpProfile
 
-Create a profile
+Creates a CdpProfile. Provide the unified CdpProfile fields in the request body; they are mapped to the provider's API. Returns the created CdpProfile.
 
 ### Example Usage
 
@@ -251,7 +251,7 @@ if ($response->cdpProfile !== null) {
 
 ## createCdpSegment
 
-Create a segment
+Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to the provider's API. Returns the created CdpSegment.
 
 ### Example Usage
 
@@ -303,7 +303,7 @@ if ($response->cdpSegment !== null) {
 
 ## createCdpSource
 
-Create a source
+Creates a CdpSource. Provide the unified CdpSource fields in the request body; they are mapped to the provider's API. Returns the created CdpSource.
 
 ### Example Usage
 
@@ -355,7 +355,7 @@ if ($response->cdpSource !== null) {
 
 ## getCdpActivation
 
-Retrieve an activation
+Retrieves a single CdpActivation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -406,7 +406,7 @@ if ($response->cdpActivation !== null) {
 
 ## getCdpDestination
 
-Retrieve a destination
+Retrieves a single CdpDestination by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -457,7 +457,7 @@ if ($response->cdpDestination !== null) {
 
 ## getCdpEvent
 
-Retrieve an event
+Retrieves a single CdpEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -508,7 +508,7 @@ if ($response->cdpEvent !== null) {
 
 ## getCdpProfile
 
-Retrieve a profile
+Retrieves a single CdpProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -559,7 +559,7 @@ if ($response->cdpProfile !== null) {
 
 ## getCdpSegment
 
-Retrieve a segment
+Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -610,7 +610,7 @@ if ($response->cdpSegment !== null) {
 
 ## getCdpSource
 
-Retrieve a source
+Retrieves a single CdpSource by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -661,7 +661,7 @@ if ($response->cdpSource !== null) {
 
 ## listCdpActivations
 
-List all activations
+Returns a list of CdpActivations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -711,7 +711,7 @@ if ($response->cdpActivations !== null) {
 
 ## listCdpDestinations
 
-List all destinations
+Returns a list of CdpDestinations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -761,7 +761,7 @@ if ($response->cdpDestinations !== null) {
 
 ## listCdpEvents
 
-List all events
+Returns a list of CdpEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -811,7 +811,7 @@ if ($response->cdpEvents !== null) {
 
 ## listCdpProfiles
 
-List all profiles
+Returns a list of CdpProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -861,7 +861,7 @@ if ($response->cdpProfiles !== null) {
 
 ## listCdpSegments
 
-List all segments
+Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -911,7 +911,7 @@ if ($response->cdpSegments !== null) {
 
 ## listCdpSources
 
-List all sources
+Returns a list of CdpSources. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -961,7 +961,7 @@ if ($response->cdpSources !== null) {
 
 ## patchCdpActivation
 
-Update an activation
+Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
 
 ### Example Usage
 
@@ -1014,7 +1014,7 @@ if ($response->cdpActivation !== null) {
 
 ## patchCdpDestination
 
-Update a destination
+Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
 
 ### Example Usage
 
@@ -1067,7 +1067,7 @@ if ($response->cdpDestination !== null) {
 
 ## patchCdpEvent
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1120,7 +1120,7 @@ if ($response->cdpEvent !== null) {
 
 ## patchCdpProfile
 
-Update a profile
+Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
 
 ### Example Usage
 
@@ -1173,7 +1173,7 @@ if ($response->cdpProfile !== null) {
 
 ## patchCdpSegment
 
-Update a segment
+Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
 
 ### Example Usage
 
@@ -1226,7 +1226,7 @@ if ($response->cdpSegment !== null) {
 
 ## patchCdpSource
 
-Update a source
+Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 
 ### Example Usage
 
@@ -1279,7 +1279,7 @@ if ($response->cdpSource !== null) {
 
 ## removeCdpActivation
 
-Remove an activation
+Deletes the CdpActivation identified by `id`.
 
 ### Example Usage
 
@@ -1330,7 +1330,7 @@ if ($response->statusCode === 200) {
 
 ## removeCdpDestination
 
-Remove a destination
+Deletes the CdpDestination identified by `id`.
 
 ### Example Usage
 
@@ -1381,7 +1381,7 @@ if ($response->statusCode === 200) {
 
 ## removeCdpEvent
 
-Remove an event
+Deletes the CdpEvent identified by `id`.
 
 ### Example Usage
 
@@ -1432,7 +1432,7 @@ if ($response->statusCode === 200) {
 
 ## removeCdpProfile
 
-Remove a profile
+Deletes the CdpProfile identified by `id`.
 
 ### Example Usage
 
@@ -1483,7 +1483,7 @@ if ($response->statusCode === 200) {
 
 ## removeCdpSegment
 
-Remove a segment
+Deletes the CdpSegment identified by `id`.
 
 ### Example Usage
 
@@ -1534,7 +1534,7 @@ if ($response->statusCode === 200) {
 
 ## removeCdpSource
 
-Remove a source
+Deletes the CdpSource identified by `id`.
 
 ### Example Usage
 
@@ -1585,7 +1585,7 @@ if ($response->statusCode === 200) {
 
 ## updateCdpActivation
 
-Update an activation
+Updates the CdpActivation identified by `id`. Provide the unified CdpActivation fields to change in the request body.
 
 ### Example Usage
 
@@ -1638,7 +1638,7 @@ if ($response->cdpActivation !== null) {
 
 ## updateCdpDestination
 
-Update a destination
+Updates the CdpDestination identified by `id`. Provide the unified CdpDestination fields to change in the request body.
 
 ### Example Usage
 
@@ -1691,7 +1691,7 @@ if ($response->cdpDestination !== null) {
 
 ## updateCdpEvent
 
-Update an event
+Updates the CdpEvent identified by `id`. Provide the unified CdpEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1744,7 +1744,7 @@ if ($response->cdpEvent !== null) {
 
 ## updateCdpProfile
 
-Update a profile
+Updates the CdpProfile identified by `id`. Provide the unified CdpProfile fields to change in the request body.
 
 ### Example Usage
 
@@ -1797,7 +1797,7 @@ if ($response->cdpProfile !== null) {
 
 ## updateCdpSegment
 
-Update a segment
+Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
 
 ### Example Usage
 
@@ -1850,7 +1850,7 @@ if ($response->cdpSegment !== null) {
 
 ## updateCdpSource
 
-Update a source
+Updates the CdpSource identified by `id`. Provide the unified CdpSource fields to change in the request body.
 
 ### Example Usage
 

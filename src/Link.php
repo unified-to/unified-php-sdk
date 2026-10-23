@@ -47,6 +47,8 @@ class Link
     /**
      * Create a link
      *
+     * Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Link
 
     /**
      * Create a link
+     *
+     * Creates a PaymentLink. Provide the unified PaymentLink fields in the request body; they are mapped to the provider's API. Returns the created PaymentLink.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreatePaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePaymentLinkResponse
@@ -183,6 +187,8 @@ class Link
     /**
      * Retrieve a link
      *
+     * Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Link
 
     /**
      * Retrieve a link
+     *
+     * Retrieves a single PaymentLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetPaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPaymentLinkResponse
@@ -309,6 +317,8 @@ class Link
     /**
      * List all links
      *
+     * Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarLinksRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarLinksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -372,6 +382,8 @@ class Link
     /**
      * List all links
      *
+     * Returns a list of PaymentLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPaymentLinksRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPaymentLinksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -434,6 +446,8 @@ class Link
 
     /**
      * Update a link
+     *
+     * Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCalendarLinkResponse
@@ -503,6 +517,8 @@ class Link
     /**
      * Update a link
      *
+     * Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchPaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchPaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -571,6 +587,8 @@ class Link
     /**
      * Remove a link
      *
+     * Deletes the CalendarLink identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Link
     /**
      * Remove a link
      *
+     * Deletes the PaymentLink identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemovePaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemovePaymentLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -684,6 +704,8 @@ class Link
 
     /**
      * Update a link
+     *
+     * Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCalendarLinkResponse
@@ -752,6 +774,8 @@ class Link
 
     /**
      * Update a link
+     *
+     * Updates the PaymentLink identified by `id`. Provide the unified PaymentLink fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdatePaymentLinkResponse

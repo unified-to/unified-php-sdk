@@ -13,7 +13,7 @@
 
 ## createComputeDomain
 
-Create a domain
+Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 
 ### Example Usage
 
@@ -37,12 +37,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: 'd1214327-0d8d-4738-b98c-02c549ea5128',
+        id: '1bfaa0e8-0ada-4a53-83ad-8e1d97e0981e',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-03T15:11:50.494Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-04T18:25:50.145Z'),
     ),
     connectionId: '<id>',
 );
@@ -74,7 +74,7 @@ if ($response->computeDomain !== null) {
 
 ## getComputeDomain
 
-Retrieve a domain
+Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ if ($response->computeDomain !== null) {
 
 ## listComputeDomains
 
-List all domains
+Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -175,7 +175,7 @@ if ($response->computeDomains !== null) {
 
 ## patchComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -199,12 +199,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: 'e8f3231f-b9e3-46c7-8c74-885565e1ae9f',
+        id: 'e6ce4eb3-5d67-4d20-a9b6-45d61aa175db',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-03T15:11:50.499Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-04T18:25:50.152Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -237,7 +237,7 @@ if ($response->computeDomain !== null) {
 
 ## removeComputeDomain
 
-Remove a domain
+Deletes the ComputeDomain identified by `id`.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ if ($response->statusCode === 200) {
 
 ## updateComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -312,12 +312,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: 'e8f3231f-b9e3-46c7-8c74-885565e1ae9f',
+        id: 'e6ce4eb3-5d67-4d20-a9b6-45d61aa175db',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-03T15:11:50.499Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-04T18:25:50.152Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

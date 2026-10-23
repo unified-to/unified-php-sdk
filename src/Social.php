@@ -47,6 +47,8 @@ class Social
     /**
      * Create a post
      *
+     * Creates a SocialPost. Provide the unified SocialPost fields in the request body; they are mapped to the provider's API. Returns the created SocialPost.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateSocialPostResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Social
     /**
      * Retrieve an insight
      *
+     * Retrieves a single SocialInsight by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetSocialInsightRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSocialInsightResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Social
 
     /**
      * Retrieve a post
+     *
+     * Retrieves a single SocialPost by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSocialPostResponse
@@ -241,6 +247,8 @@ class Social
     /**
      * Retrieve a profile
      *
+     * Retrieves a single SocialProfile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetSocialProfileRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSocialProfileResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -303,6 +311,8 @@ class Social
 
     /**
      * Retrieve a review
+     *
+     * Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetSocialReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSocialReviewResponse
@@ -367,6 +377,8 @@ class Social
     /**
      * List all insights
      *
+     * Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSocialInsightsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSocialInsightsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -429,6 +441,8 @@ class Social
 
     /**
      * List all posts
+     *
+     * Returns a list of SocialPosts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListSocialPostsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSocialPostsResponse
@@ -493,6 +507,8 @@ class Social
     /**
      * List all profiles
      *
+     * Returns a list of SocialProfiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSocialProfilesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSocialProfilesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -556,6 +572,8 @@ class Social
     /**
      * List all reviews
      *
+     * Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSocialReviewsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSocialReviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -618,6 +636,8 @@ class Social
 
     /**
      * Update a post
+     *
+     * Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchSocialPostResponse
@@ -687,6 +707,8 @@ class Social
     /**
      * Update a review
      *
+     * Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchSocialReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchSocialReviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -755,6 +777,8 @@ class Social
     /**
      * Remove a post
      *
+     * Deletes the SocialPost identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveSocialPostResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -811,6 +835,8 @@ class Social
 
     /**
      * Update a post
+     *
+     * Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateSocialPostRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateSocialPostResponse
@@ -879,6 +905,8 @@ class Social
 
     /**
      * Update a review
+     *
+     * Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateSocialReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateSocialReviewResponse

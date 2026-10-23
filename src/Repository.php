@@ -47,6 +47,8 @@ class Repository
     /**
      * Create a repository
      *
+     * Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Repository
     /**
      * Retrieve a repository
      *
+     * Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Repository
     /**
      * List all repositories
      *
+     * Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoRepositoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoRepositoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Repository
 
     /**
      * Update a repository
+     *
+     * Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoRepositoryResponse
@@ -309,6 +317,8 @@ class Repository
     /**
      * Remove a repository
      *
+     * Deletes the RepoRepository identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Repository
 
     /**
      * Update a repository
+     *
+     * Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryResponse

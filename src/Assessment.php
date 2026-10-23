@@ -47,6 +47,8 @@ class Assessment
     /**
      * Create an order
      *
+     * Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAssessmentOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAssessmentOrderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -179,6 +181,8 @@ class Assessment
 
     /**
      * Retrieve an order
+     *
+     * Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAssessmentOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAssessmentOrderResponse
@@ -365,6 +369,8 @@ class Assessment
 
     /**
      * Update an order
+     *
+     * Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAssessmentOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAssessmentOrderResponse
@@ -555,6 +561,8 @@ class Assessment
 
     /**
      * Update an order
+     *
+     * Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAssessmentOrderResponse

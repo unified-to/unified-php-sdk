@@ -13,7 +13,7 @@
 
 ## createHrisBenefit
 
-Create a benefit
+Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
 
 ### Example Usage
 
@@ -44,13 +44,13 @@ $request = new Operations\CreateHrisBenefitRequest(
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
         frequency: Shared\HrisBenefitFrequency::Month,
-        id: 'cb407db1-1a01-42f0-a62e-30e0f329f245',
+        id: '14c75d97-923c-437f-89d5-aec3b77e7f11',
         isActive: false,
         metadata: [],
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
         type: Shared\HrisBenefitType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-20T20:21:01.309Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-21T17:08:11.107Z'),
     ),
     connectionId: '<id>',
 );
@@ -82,7 +82,7 @@ if ($response->hrisBenefit !== null) {
 
 ## getHrisBenefit
 
-Retrieve a benefit
+Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ if ($response->hrisBenefit !== null) {
 
 ## listHrisBenefits
 
-List all benefits
+Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -183,7 +183,7 @@ if ($response->hrisBenefits !== null) {
 
 ## patchHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -214,13 +214,13 @@ $request = new Operations\PatchHrisBenefitRequest(
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
         frequency: Shared\HrisBenefitFrequency::Month,
-        id: '9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c',
+        id: '9559438e-6c3b-498f-925d-b0295a2d009d',
         isActive: false,
         metadata: [],
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
         type: Shared\HrisBenefitType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-20T20:21:01.318Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-21T17:08:11.118Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -253,7 +253,7 @@ if ($response->hrisBenefit !== null) {
 
 ## removeHrisBenefit
 
-Remove a benefit
+Deletes the HrisBenefit identified by `id`.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisBenefit
 
-Update a benefit
+Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
 
 ### Example Usage
 
@@ -335,13 +335,13 @@ $request = new Operations\UpdateHrisBenefitRequest(
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
         frequency: Shared\HrisBenefitFrequency::Month,
-        id: '9e16e0e2-62b1-474c-9f90-11fd9ee0ed8c',
+        id: '9559438e-6c3b-498f-925d-b0295a2d009d',
         isActive: false,
         metadata: [],
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
         type: Shared\HrisBenefitType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-20T20:21:01.318Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-21T17:08:11.118Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

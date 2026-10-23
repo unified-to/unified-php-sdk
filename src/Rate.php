@@ -47,6 +47,8 @@ class Rate
     /**
      * Create a rate
      *
+     * Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateShippingRateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateShippingRateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException

@@ -31,7 +31,7 @@
 
 ## createLegalExpense
 
-Create an expense
+Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
 ### Example Usage
 
@@ -58,7 +58,7 @@ $request = new Operations\CreateLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: 'c69864e8-ba64-4b75-9084-fe989722d7cf',
+        id: '6a4d5389-7254-43a6-aace-94cbf418e234',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -66,7 +66,7 @@ $request = new Operations\CreateLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-30T23:21:13.014Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-01T02:32:10.673Z'),
     ),
     connectionId: '<id>',
 );
@@ -98,7 +98,7 @@ if ($response->legalExpense !== null) {
 
 ## createLegalMatter
 
-Create a matter
+Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
 
 ### Example Usage
 
@@ -128,11 +128,11 @@ $request = new Operations\CreateLegalMatterRequest(
         createdAt: Utils\Utils::parseDateTime('2023-05-28T04:10:42.375Z'),
         currency: 'BOB',
         description: 'Speciosus cresco aut cotidie temeritas arma.',
-        id: '758a09bf-ac35-4ca0-9297-ac6c2c6e768e',
+        id: 'f85c5f3c-0ae8-4615-976c-a5a49a98003c',
         metadata: [],
         name: 'Walter v. Franecki - Spinka',
         number: '2023-3062',
-        openedAt: Utils\Utils::parseDateTime('2023-07-05T06:18:43.614Z'),
+        openedAt: Utils\Utils::parseDateTime('2023-07-05T07:46:27.868Z'),
         parties: [
             new Shared\LegalParty(
                 description: 'Urban Walter',
@@ -141,8 +141,8 @@ $request = new Operations\CreateLegalMatterRequest(
         ],
         stage: 'currus',
         status: Shared\LegalMatterStatus::Open,
-        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-28T21:12:06.224Z'),
-        updatedAt: Utils\Utils::parseDateTime('2023-07-17T10:05:24.278Z'),
+        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-30T20:52:36.666Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-17T12:01:08.804Z'),
     ),
     connectionId: '<id>',
 );
@@ -174,7 +174,7 @@ if ($response->legalMatter !== null) {
 
 ## createLegalPracticearea
 
-Create a practicearea
+Creates a LegalPracticearea. Provide the unified LegalPracticearea fields in the request body; they are mapped to the provider's API. Returns the created LegalPracticearea.
 
 ### Example Usage
 
@@ -199,11 +199,11 @@ $request = new Operations\CreateLegalPracticeareaRequest(
     legalPracticearea: new Shared\LegalPracticearea(
         code: 'QCA',
         createdAt: Utils\Utils::parseDateTime('2023-01-28T21:00:26.264Z'),
-        id: 'ad6630d8-1aec-45c2-9620-ed1693d104c8',
+        id: '1523ba44-d3df-4638-b9bd-09e1f365d66f',
         metadata: [],
         name: 'witty Law',
         type: Shared\LegalPracticeareaType::Education,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-27T17:08:43.506Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-29T02:08:05.503Z'),
     ),
     connectionId: '<id>',
 );
@@ -235,7 +235,7 @@ if ($response->legalPracticearea !== null) {
 
 ## createLegalTimeentry
 
-Create a timeentry
+Creates a LegalTimeentry. Provide the unified LegalTimeentry fields in the request body; they are mapped to the provider's API. Returns the created LegalTimeentry.
 
 ### Example Usage
 
@@ -262,13 +262,13 @@ $request = new Operations\CreateLegalTimeentryRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
         currency: 'ZAR',
         description: 'Ea derideo adulatio torrens.',
-        id: '5556370f-407c-48ae-aa6e-e4e3257f9514',
+        id: '0f089401-a4c2-43b5-a2ba-f4b681d975fa',
         isBillable: true,
         metadata: [],
         minutes: 390,
         rateAmount: 637,
         totalAmount: 4140.5,
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T01:49:26.576Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-30T03:25:54.830Z'),
         workedAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
     ),
     connectionId: '<id>',
@@ -301,7 +301,7 @@ if ($response->legalTimeentry !== null) {
 
 ## getLegalExpense
 
-Retrieve an expense
+Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -352,7 +352,7 @@ if ($response->legalExpense !== null) {
 
 ## getLegalMatter
 
-Retrieve a matter
+Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -403,7 +403,7 @@ if ($response->legalMatter !== null) {
 
 ## getLegalPracticearea
 
-Retrieve a practicearea
+Retrieves a single LegalPracticearea by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -454,7 +454,7 @@ if ($response->legalPracticearea !== null) {
 
 ## getLegalTimeentry
 
-Retrieve a timeentry
+Retrieves a single LegalTimeentry by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -505,7 +505,7 @@ if ($response->legalTimeentry !== null) {
 
 ## listLegalExpenses
 
-List all expenses
+Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -555,7 +555,7 @@ if ($response->legalExpenses !== null) {
 
 ## listLegalMatters
 
-List all matters
+Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -605,7 +605,7 @@ if ($response->legalMatters !== null) {
 
 ## listLegalPracticeareas
 
-List all practiceareas
+Returns a list of LegalPracticeareas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -655,7 +655,7 @@ if ($response->legalPracticeareas !== null) {
 
 ## listLegalTimeentries
 
-List all timeentries
+Returns a list of LegalTimeentries. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -705,7 +705,7 @@ if ($response->legalTimeentries !== null) {
 
 ## patchLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -732,7 +732,7 @@ $request = new Operations\PatchLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: '17ac53c3-22e7-4a63-8a7f-7d7ad85275e4',
+        id: 'a1e6530a-9c67-4b16-b02e-dd1bfa483ecb',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -740,7 +740,7 @@ $request = new Operations\PatchLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-30T23:21:13.027Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-01T02:32:10.683Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -773,7 +773,7 @@ if ($response->legalExpense !== null) {
 
 ## patchLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -803,11 +803,11 @@ $request = new Operations\PatchLegalMatterRequest(
         createdAt: Utils\Utils::parseDateTime('2023-05-28T04:10:42.375Z'),
         currency: 'BOB',
         description: 'Speciosus cresco aut cotidie temeritas arma.',
-        id: 'a08b5258-b003-44e5-ad6e-92b4727c2be4',
+        id: '889de8d2-7e6e-4898-8d0f-5c517690c435',
         metadata: [],
         name: 'Walter v. Franecki - Spinka',
         number: '2023-3062',
-        openedAt: Utils\Utils::parseDateTime('2023-07-05T06:18:43.615Z'),
+        openedAt: Utils\Utils::parseDateTime('2023-07-05T07:46:27.869Z'),
         parties: [
             new Shared\LegalParty(
                 description: 'Urban Walter',
@@ -816,8 +816,8 @@ $request = new Operations\PatchLegalMatterRequest(
         ],
         stage: 'currus',
         status: Shared\LegalMatterStatus::Open,
-        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-28T21:12:06.253Z'),
-        updatedAt: Utils\Utils::parseDateTime('2023-07-17T10:05:24.279Z'),
+        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-30T20:52:36.691Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-17T12:01:08.805Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -850,7 +850,7 @@ if ($response->legalMatter !== null) {
 
 ## patchLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -875,11 +875,11 @@ $request = new Operations\PatchLegalPracticeareaRequest(
     legalPracticearea: new Shared\LegalPracticearea(
         code: 'QCA',
         createdAt: Utils\Utils::parseDateTime('2023-01-28T21:00:26.264Z'),
-        id: 'e61009e9-ee31-4608-b2c4-39e037f7d5e1',
+        id: '7823ac50-beb1-435d-b880-83b77d55b891',
         metadata: [],
         name: 'witty Law',
         type: Shared\LegalPracticeareaType::Education,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-27T17:08:43.521Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-29T02:08:05.520Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -912,7 +912,7 @@ if ($response->legalPracticearea !== null) {
 
 ## patchLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -939,13 +939,13 @@ $request = new Operations\PatchLegalTimeentryRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
         currency: 'ZAR',
         description: 'Ea derideo adulatio torrens.',
-        id: '93c9e28c-8664-4e15-a188-ad57cf91af64',
+        id: 'd5305f1d-6d77-4e6c-abd2-e67487dad71c',
         isBillable: true,
         metadata: [],
         minutes: 390,
         rateAmount: 637,
         totalAmount: 4140.5,
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T01:49:26.577Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-30T03:25:54.831Z'),
         workedAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
     ),
     connectionId: '<id>',
@@ -979,7 +979,7 @@ if ($response->legalTimeentry !== null) {
 
 ## removeLegalExpense
 
-Remove an expense
+Deletes the LegalExpense identified by `id`.
 
 ### Example Usage
 
@@ -1030,7 +1030,7 @@ if ($response->statusCode === 200) {
 
 ## removeLegalMatter
 
-Remove a matter
+Deletes the LegalMatter identified by `id`.
 
 ### Example Usage
 
@@ -1081,7 +1081,7 @@ if ($response->statusCode === 200) {
 
 ## removeLegalPracticearea
 
-Remove a practicearea
+Deletes the LegalPracticearea identified by `id`.
 
 ### Example Usage
 
@@ -1132,7 +1132,7 @@ if ($response->statusCode === 200) {
 
 ## removeLegalTimeentry
 
-Remove a timeentry
+Deletes the LegalTimeentry identified by `id`.
 
 ### Example Usage
 
@@ -1183,7 +1183,7 @@ if ($response->statusCode === 200) {
 
 ## updateLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -1210,7 +1210,7 @@ $request = new Operations\UpdateLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: '17ac53c3-22e7-4a63-8a7f-7d7ad85275e4',
+        id: 'a1e6530a-9c67-4b16-b02e-dd1bfa483ecb',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -1218,7 +1218,7 @@ $request = new Operations\UpdateLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-30T23:21:13.027Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-01T02:32:10.683Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1251,7 +1251,7 @@ if ($response->legalExpense !== null) {
 
 ## updateLegalMatter
 
-Update a matter
+Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
 
 ### Example Usage
 
@@ -1281,11 +1281,11 @@ $request = new Operations\UpdateLegalMatterRequest(
         createdAt: Utils\Utils::parseDateTime('2023-05-28T04:10:42.375Z'),
         currency: 'BOB',
         description: 'Speciosus cresco aut cotidie temeritas arma.',
-        id: 'a08b5258-b003-44e5-ad6e-92b4727c2be4',
+        id: '889de8d2-7e6e-4898-8d0f-5c517690c435',
         metadata: [],
         name: 'Walter v. Franecki - Spinka',
         number: '2023-3062',
-        openedAt: Utils\Utils::parseDateTime('2023-07-05T06:18:43.615Z'),
+        openedAt: Utils\Utils::parseDateTime('2023-07-05T07:46:27.869Z'),
         parties: [
             new Shared\LegalParty(
                 description: 'Urban Walter',
@@ -1294,8 +1294,8 @@ $request = new Operations\UpdateLegalMatterRequest(
         ],
         stage: 'currus',
         status: Shared\LegalMatterStatus::Open,
-        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-28T21:12:06.253Z'),
-        updatedAt: Utils\Utils::parseDateTime('2023-07-17T10:05:24.279Z'),
+        statuteOfLimitationsAt: Utils\Utils::parseDateTime('2027-06-30T20:52:36.691Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-17T12:01:08.805Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1328,7 +1328,7 @@ if ($response->legalMatter !== null) {
 
 ## updateLegalPracticearea
 
-Update a practicearea
+Updates the LegalPracticearea identified by `id`. Provide the unified LegalPracticearea fields to change in the request body.
 
 ### Example Usage
 
@@ -1353,11 +1353,11 @@ $request = new Operations\UpdateLegalPracticeareaRequest(
     legalPracticearea: new Shared\LegalPracticearea(
         code: 'QCA',
         createdAt: Utils\Utils::parseDateTime('2023-01-28T21:00:26.264Z'),
-        id: 'e61009e9-ee31-4608-b2c4-39e037f7d5e1',
+        id: '7823ac50-beb1-435d-b880-83b77d55b891',
         metadata: [],
         name: 'witty Law',
         type: Shared\LegalPracticeareaType::Education,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-27T17:08:43.521Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-29T02:08:05.520Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1390,7 +1390,7 @@ if ($response->legalPracticearea !== null) {
 
 ## updateLegalTimeentry
 
-Update a timeentry
+Updates the LegalTimeentry identified by `id`. Provide the unified LegalTimeentry fields to change in the request body.
 
 ### Example Usage
 
@@ -1417,13 +1417,13 @@ $request = new Operations\UpdateLegalTimeentryRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
         currency: 'ZAR',
         description: 'Ea derideo adulatio torrens.',
-        id: '93c9e28c-8664-4e15-a188-ad57cf91af64',
+        id: 'd5305f1d-6d77-4e6c-abd2-e67487dad71c',
         isBillable: true,
         metadata: [],
         minutes: 390,
         rateAmount: 637,
         totalAmount: 4140.5,
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T01:49:26.577Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-30T03:25:54.831Z'),
         workedAt: Utils\Utils::parseDateTime('2022-05-06T03:26:03.756Z'),
     ),
     connectionId: '<id>',

@@ -47,6 +47,8 @@ class Uc
     /**
      * Create a comment
      *
+     * Creates a UcComment. Provide the unified UcComment fields in the request body; they are mapped to the provider's API. Returns the created UcComment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Uc
 
     /**
      * Create a contact
+     *
+     * Creates a UcContact. Provide the unified UcContact fields in the request body; they are mapped to the provider's API. Returns the created UcContact.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateUcContactResponse
@@ -183,6 +187,8 @@ class Uc
     /**
      * Create a recording
      *
+     * Creates a UcRecording. Provide the unified UcRecording fields in the request body; they are mapped to the provider's API. Returns the created UcRecording.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Uc
     /**
      * Retrieve a call
      *
+     * Retrieves a single UcCall by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetUcCallRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUcCallResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Uc
 
     /**
      * Retrieve a comment
+     *
+     * Retrieves a single UcComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUcCommentResponse
@@ -377,6 +387,8 @@ class Uc
     /**
      * Retrieve a contact
      *
+     * Retrieves a single UcContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Uc
 
     /**
      * Retrieve a recording
+     *
+     * Retrieves a single UcRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUcRecordingResponse
@@ -503,6 +517,8 @@ class Uc
     /**
      * Retrieve a scorecard
      *
+     * Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetUcScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUcScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -565,6 +581,8 @@ class Uc
 
     /**
      * Retrieve a scorecardtemplate
+     *
+     * Retrieves a single UcScorecardtemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetUcScorecardtemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetUcScorecardtemplateResponse
@@ -629,6 +647,8 @@ class Uc
     /**
      * List all calls
      *
+     * Returns a list of UcCalls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListUcCallsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcCallsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -691,6 +711,8 @@ class Uc
 
     /**
      * List all comments
+     *
+     * Returns a list of UcComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListUcCommentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcCommentsResponse
@@ -755,6 +777,8 @@ class Uc
     /**
      * List all contacts
      *
+     * Returns a list of UcContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListUcContactsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcContactsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -817,6 +841,8 @@ class Uc
 
     /**
      * List all recordings
+     *
+     * Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListUcRecordingsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcRecordingsResponse
@@ -881,6 +907,8 @@ class Uc
     /**
      * List all scorecards
      *
+     * Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListUcScorecardsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcScorecardsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -944,6 +972,8 @@ class Uc
     /**
      * List all scorecardtemplates
      *
+     * Returns a list of UcScorecardtemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListUcScorecardtemplatesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListUcScorecardtemplatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1006,6 +1036,8 @@ class Uc
 
     /**
      * Update a comment
+     *
+     * Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchUcCommentResponse
@@ -1075,6 +1107,8 @@ class Uc
     /**
      * Update a contact
      *
+     * Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1142,6 +1176,8 @@ class Uc
 
     /**
      * Update a recording
+     *
+     * Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchUcRecordingResponse
@@ -1211,6 +1247,8 @@ class Uc
     /**
      * Remove a comment
      *
+     * Deletes the UcComment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveUcCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1267,6 +1305,8 @@ class Uc
 
     /**
      * Remove a contact
+     *
+     * Deletes the UcContact identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveUcContactResponse
@@ -1325,6 +1365,8 @@ class Uc
     /**
      * Remove a recording
      *
+     * Deletes the UcRecording identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveUcRecordingResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1381,6 +1423,8 @@ class Uc
 
     /**
      * Update a comment
+     *
+     * Updates the UcComment identified by `id`. Provide the unified UcComment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateUcCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateUcCommentResponse
@@ -1450,6 +1494,8 @@ class Uc
     /**
      * Update a contact
      *
+     * Updates the UcContact identified by `id`. Provide the unified UcContact fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateUcContactRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateUcContactResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1517,6 +1563,8 @@ class Uc
 
     /**
      * Update a recording
+     *
+     * Updates the UcRecording identified by `id`. Provide the unified UcRecording fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateUcRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateUcRecordingResponse

@@ -13,7 +13,7 @@
 
 ## createComputeEnvvar
 
-Create an envvar
+Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
 ### Example Usage
 
@@ -40,11 +40,11 @@ $request = new Operations\CreateComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '5c354e68-66c7-4e3d-8c30-acdaee168414',
+        id: 'b03545d3-4b47-49c0-9e65-22d37c473a83',
         isSecret: true,
         metadata: [],
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-03T14:22:07.159Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-05T02:05:16.358Z'),
     ),
     connectionId: '<id>',
 );
@@ -76,7 +76,7 @@ if ($response->computeEnvvar !== null) {
 
 ## getComputeEnvvar
 
-Retrieve an envvar
+Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -127,7 +127,7 @@ if ($response->computeEnvvar !== null) {
 
 ## listComputeEnvvars
 
-List all envvars
+Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -177,7 +177,7 @@ if ($response->computeEnvvars !== null) {
 
 ## patchComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -204,11 +204,11 @@ $request = new Operations\PatchComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '64c98e54-a680-4235-b4b7-03f073fc5eda',
+        id: 'c86c2bc8-0928-444a-84e1-400af53781a0',
         isSecret: true,
         metadata: [],
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-03T14:22:07.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-05T02:05:16.370Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -241,7 +241,7 @@ if ($response->computeEnvvar !== null) {
 
 ## removeComputeEnvvar
 
-Remove an envvar
+Deletes the ComputeEnvvar identified by `id`.
 
 ### Example Usage
 
@@ -292,7 +292,7 @@ if ($response->statusCode === 200) {
 
 ## updateComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -319,11 +319,11 @@ $request = new Operations\UpdateComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '64c98e54-a680-4235-b4b7-03f073fc5eda',
+        id: 'c86c2bc8-0928-444a-84e1-400af53781a0',
         isSecret: true,
         metadata: [],
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-03T14:22:07.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-05T02:05:16.370Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

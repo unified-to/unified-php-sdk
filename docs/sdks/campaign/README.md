@@ -19,7 +19,7 @@
 
 ## createAdsCampaign
 
-Create a campaign
+Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
 
 ### Example Usage
 
@@ -48,18 +48,18 @@ $request = new Operations\CreateAdsCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
         currency: 'USD',
         effectiveStatus: Shared\EffectiveStatus::NotEligible,
-        endAt: Utils\Utils::parseDateTime('2025-05-31T23:30:23.660Z'),
-        id: '2a3e23ca-f2d4-472e-a1df-9bf34b6d51b8',
+        endAt: Utils\Utils::parseDateTime('2025-06-02T08:12:06.694Z'),
+        id: '7734a920-8b81-4528-ad2c-7f85f1886802',
         labels: [
             'comedo',
         ],
         metadata: [],
         name: 'Emard Inc',
-        startAt: Utils\Utils::parseDateTime('2022-07-21T10:50:21.338Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-21T12:38:38.281Z'),
         status: Shared\AdsCampaignStatus::ProcessingFailed,
         targeting: new Shared\PropertyAdsCampaignTargeting(),
         totalSpendAmount: 2349.8642875347286,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-01T14:07:49.917Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-03T05:09:59.570Z'),
     ),
     connectionId: '<id>',
 );
@@ -91,7 +91,7 @@ if ($response->adsCampaign !== null) {
 
 ## createMartechCampaign
 
-Create a campaign
+Creates a MarketingCampaign. Provide the unified MarketingCampaign fields in the request body; they are mapped to the provider's API. Returns the created MarketingCampaign.
 
 ### Example Usage
 
@@ -117,7 +117,7 @@ $request = new Operations\CreateMartechCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-19T11:18:15.589Z'),
         fromEmail: 'graham.mertz@gmail.com',
         fromName: 'Graham Mertz',
-        id: '152b6a39-cc03-4bf3-820b-401d75975804',
+        id: '407a1645-beda-4d0b-b5f2-36d4cfb30e0f',
         metadata: [],
         name: 'Consequatur atqui sustineo.',
         previewText: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -126,7 +126,7 @@ $request = new Operations\CreateMartechCampaignRequest(
         status: Shared\MarketingCampaignStatus::Scheduled,
         subjectLine: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
         type: 'absplit',
-        updatedAt: Utils\Utils::parseDateTime('2022-06-22T02:50:23.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-22T22:42:06.196Z'),
     ),
     connectionId: '<id>',
 );
@@ -158,7 +158,7 @@ if ($response->marketingCampaign !== null) {
 
 ## getAdsCampaign
 
-Retrieve a campaign
+Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ if ($response->adsCampaign !== null) {
 
 ## getMartechCampaign
 
-Retrieve a campaign
+Retrieves a single MarketingCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -260,7 +260,7 @@ if ($response->marketingCampaign !== null) {
 
 ## listAdsCampaigns
 
-List all campaigns
+Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -310,7 +310,7 @@ if ($response->adsCampaigns !== null) {
 
 ## listMartechCampaigns
 
-List all campaigns
+Returns a list of MarketingCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -360,7 +360,7 @@ if ($response->marketingCampaigns !== null) {
 
 ## patchAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -389,18 +389,18 @@ $request = new Operations\PatchAdsCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
         currency: 'USD',
         effectiveStatus: Shared\EffectiveStatus::NotEligible,
-        endAt: Utils\Utils::parseDateTime('2025-05-31T23:30:23.735Z'),
-        id: '58a93fe5-d8d1-4977-b7f1-db6c66108cf2',
+        endAt: Utils\Utils::parseDateTime('2025-06-02T08:12:06.805Z'),
+        id: 'a9072f26-4981-4c59-a064-9f4778c74f87',
         labels: [
             'comedo',
         ],
         metadata: [],
         name: 'Emard Inc',
-        startAt: Utils\Utils::parseDateTime('2022-07-21T10:50:21.342Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-21T12:38:38.287Z'),
         status: Shared\AdsCampaignStatus::ProcessingFailed,
         targeting: new Shared\PropertyAdsCampaignTargeting(),
         totalSpendAmount: 2349.8642875347286,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-01T14:07:50.007Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-03T05:09:59.702Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -433,7 +433,7 @@ if ($response->adsCampaign !== null) {
 
 ## patchMartechCampaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -459,7 +459,7 @@ $request = new Operations\PatchMartechCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-19T11:18:15.589Z'),
         fromEmail: 'graham.mertz@gmail.com',
         fromName: 'Graham Mertz',
-        id: '8d59a242-5d0d-4977-9089-a8e78c0a7e7e',
+        id: '5a48f9a6-02f2-4b50-8a34-5bcc96b0d40a',
         metadata: [],
         name: 'Consequatur atqui sustineo.',
         previewText: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -468,7 +468,7 @@ $request = new Operations\PatchMartechCampaignRequest(
         status: Shared\MarketingCampaignStatus::Scheduled,
         subjectLine: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
         type: 'absplit',
-        updatedAt: Utils\Utils::parseDateTime('2022-06-22T02:50:23.732Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-22T22:42:06.204Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -501,7 +501,7 @@ if ($response->marketingCampaign !== null) {
 
 ## removeAdsCampaign
 
-Remove a campaign
+Deletes the AdsCampaign identified by `id`.
 
 ### Example Usage
 
@@ -552,7 +552,7 @@ if ($response->statusCode === 200) {
 
 ## removeMartechCampaign
 
-Remove a campaign
+Deletes the MarketingCampaign identified by `id`.
 
 ### Example Usage
 
@@ -603,7 +603,7 @@ if ($response->statusCode === 200) {
 
 ## updateAdsCampaign
 
-Update a campaign
+Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -632,18 +632,18 @@ $request = new Operations\UpdateAdsCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
         currency: 'USD',
         effectiveStatus: Shared\EffectiveStatus::NotEligible,
-        endAt: Utils\Utils::parseDateTime('2025-05-31T23:30:23.735Z'),
-        id: '58a93fe5-d8d1-4977-b7f1-db6c66108cf2',
+        endAt: Utils\Utils::parseDateTime('2025-06-02T08:12:06.805Z'),
+        id: 'a9072f26-4981-4c59-a064-9f4778c74f87',
         labels: [
             'comedo',
         ],
         metadata: [],
         name: 'Emard Inc',
-        startAt: Utils\Utils::parseDateTime('2022-07-21T10:50:21.342Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-21T12:38:38.287Z'),
         status: Shared\AdsCampaignStatus::ProcessingFailed,
         targeting: new Shared\PropertyAdsCampaignTargeting(),
         totalSpendAmount: 2349.8642875347286,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-01T14:07:50.007Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-03T05:09:59.702Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -676,7 +676,7 @@ if ($response->adsCampaign !== null) {
 
 ## updateMartechCampaign
 
-Update a campaign
+Updates the MarketingCampaign identified by `id`. Provide the unified MarketingCampaign fields to change in the request body.
 
 ### Example Usage
 
@@ -702,7 +702,7 @@ $request = new Operations\UpdateMartechCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-19T11:18:15.589Z'),
         fromEmail: 'graham.mertz@gmail.com',
         fromName: 'Graham Mertz',
-        id: '8d59a242-5d0d-4977-9089-a8e78c0a7e7e',
+        id: '5a48f9a6-02f2-4b50-8a34-5bcc96b0d40a',
         metadata: [],
         name: 'Consequatur atqui sustineo.',
         previewText: 'Auctus votum ver umbra corroboro turpis spoliatio tamen strues auxilium benigne tempus error eaque suasoria.',
@@ -711,7 +711,7 @@ $request = new Operations\UpdateMartechCampaignRequest(
         status: Shared\MarketingCampaignStatus::Scheduled,
         subjectLine: 'Trepide utpote conculco tibi solio supplanto peior tibi.',
         type: 'absplit',
-        updatedAt: Utils\Utils::parseDateTime('2022-06-22T02:50:23.732Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-06-22T22:42:06.204Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -47,6 +47,8 @@ class Visitor
     /**
      * Create a visitor
      *
+     * Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Visitor
     /**
      * Retrieve a visitor
      *
+     * Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Visitor
     /**
      * List all visitors
      *
+     * Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAnalyticsVisitorsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAnalyticsVisitorsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Visitor
 
     /**
      * Update a visitor
+     *
+     * Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAnalyticsVisitorResponse
@@ -309,6 +317,8 @@ class Visitor
     /**
      * Remove a visitor
      *
+     * Deletes the AnalyticsVisitor identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAnalyticsVisitorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Visitor
 
     /**
      * Update a visitor
+     *
+     * Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAnalyticsVisitorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAnalyticsVisitorResponse

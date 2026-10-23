@@ -13,7 +13,7 @@
 
 ## createHrisEmployee
 
-Create an employee
+Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
 
 ### Example Usage
 
@@ -72,7 +72,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
         gender: Shared\HrisEmployeeGender::Male,
         hasMfa: true,
         hiredAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
-        id: '5ece6f77-35df-48e1-9496-7d1879563189',
+        id: 'f6a1ee89-b952-43f1-8024-95d665d0bdc5',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
         languageLocale: 'in',
         lastName: 'Prohaska',
@@ -84,7 +84,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: 'db8a06c6-9b85-4baa-8142-748cdc88efd4',
+                id: '554bb5dd-d05f-4c0e-85ca-7aa28f3f1d32',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tutis',
@@ -132,7 +132,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
         timeoffDaysUsed: 9,
         timezone: 'Europe/Ljubljana',
         title: 'District Branding Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2020-07-19T04:12:43.588Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-07-19T09:51:06.439Z'),
     ),
     connectionId: '<id>',
 );
@@ -164,7 +164,7 @@ if ($response->hrisEmployee !== null) {
 
 ## getHrisEmployee
 
-Retrieve an employee
+Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -215,7 +215,7 @@ if ($response->hrisEmployee !== null) {
 
 ## listHrisEmployees
 
-List all employees
+Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -265,7 +265,7 @@ if ($response->hrisEmployees !== null) {
 
 ## patchHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
         gender: Shared\HrisEmployeeGender::Male,
         hasMfa: true,
         hiredAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
-        id: '9609249d-8821-468a-b0ee-7d78f4b1ae6a',
+        id: 'cc9adbc7-7e36-4c95-9f64-626deec56178',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
         languageLocale: 'in',
         lastName: 'Prohaska',
@@ -336,7 +336,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: '20b100c1-0a48-47af-920c-3385a2834306',
+                id: 'c37f78a9-26c3-499d-8136-291077fe7813',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tutis',
@@ -384,7 +384,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
         timeoffDaysUsed: 9,
         timezone: 'Europe/Ljubljana',
         title: 'District Branding Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2020-07-19T04:12:43.602Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-07-19T09:51:06.453Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -417,7 +417,7 @@ if ($response->hrisEmployee !== null) {
 
 ## removeHrisEmployee
 
-Remove an employee
+Deletes the HrisEmployee identified by `id`.
 
 ### Example Usage
 
@@ -468,7 +468,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisEmployee
 
-Update an employee
+Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
 
 ### Example Usage
 
@@ -527,7 +527,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
         gender: Shared\HrisEmployeeGender::Male,
         hasMfa: true,
         hiredAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
-        id: '9609249d-8821-468a-b0ee-7d78f4b1ae6a',
+        id: 'cc9adbc7-7e36-4c95-9f64-626deec56178',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
         languageLocale: 'in',
         lastName: 'Prohaska',
@@ -539,7 +539,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: '20b100c1-0a48-47af-920c-3385a2834306',
+                id: 'c37f78a9-26c3-499d-8136-291077fe7813',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tutis',
@@ -587,7 +587,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
         timeoffDaysUsed: 9,
         timezone: 'Europe/Ljubljana',
         title: 'District Branding Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2020-07-19T04:12:43.602Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-07-19T09:51:06.453Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

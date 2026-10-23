@@ -19,7 +19,7 @@
 
 ## createCommerceReview
 
-Create a review
+Creates a CommerceReview. Provide the unified CommerceReview fields in the request body; they are mapped to the provider's API. Returns the created CommerceReview.
 
 ### Example Usage
 
@@ -50,7 +50,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: 'a701a537-140d-43ca-82c9-18ce8f785886',
+        id: '33e41b27-10cf-4b96-a393-9efbcd3c1be0',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -58,10 +58,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '7d289800-5f77-4fbe-92b2-b1eb3fa9e31e',
+                id: '49585c8f-4972-4faa-8a1c-5b8efe96d149',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'fdc2101f-e2db-4cd0-be49-c031a306184a',
+                        id: 'ae1023b0-2eb4-4ea5-87ec-f1c5a0c73632',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -74,10 +74,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '6ee6be79-1ed9-45eb-a395-3bd13d182f01',
+                id: '5dcac3f4-0b89-4e09-b590-f097819a2c59',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '8b9b79fe-905f-496d-9674-d3111c203fe4',
+                        id: 'f42a8516-2b7d-45b4-b6dd-edb18d7195a3',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -93,7 +93,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-21T08:42:36.697Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-23T00:16:55.799Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -127,7 +127,7 @@ if ($response->commerceReview !== null) {
 
 ## getCommerceReview
 
-Retrieve a review
+Retrieves a single CommerceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -178,7 +178,7 @@ if ($response->commerceReview !== null) {
 
 ## getPerformanceReview
 
-Retrieve a review
+Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -229,7 +229,7 @@ if ($response->performanceReview !== null) {
 
 ## getSocialReview
 
-Retrieve a review
+Retrieves a single SocialReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -280,7 +280,7 @@ if ($response->socialReview !== null) {
 
 ## listCommerceReviews
 
-List all reviews
+Returns a list of CommerceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ if ($response->commerceReviews !== null) {
 
 ## listPerformanceReviews
 
-List all reviews
+Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -380,7 +380,7 @@ if ($response->performanceReviews !== null) {
 
 ## listSocialReviews
 
-List all reviews
+Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -430,7 +430,7 @@ if ($response->socialReviews !== null) {
 
 ## patchCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -461,7 +461,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '578fe127-194b-4d01-a25f-c54fc1709240',
+        id: 'a71c13aa-d416-43f6-8ad8-35258e7a6fe8',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -469,10 +469,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '65be1798-462d-44e5-84c9-515cac1619eb',
+                id: '71c01db3-0af8-4bc1-a421-12a5e570269b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '9f916c18-3b91-4219-8d26-0639d2363609',
+                        id: 'a87907e7-6777-432a-a079-cdaff033b9ec',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -485,10 +485,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: 'c1af0dea-75ef-4e0b-a7aa-d6d3b840ec10',
+                id: '6568d505-d413-41fd-b64d-3067705e05a3',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '9ad8d0f3-c8b8-4fd9-a4a7-53a7062bf74d',
+                        id: '864adde6-6719-41ea-8fc8-f1d7c8c545ae',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -504,7 +504,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-21T08:42:36.722Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-23T00:16:55.843Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -539,7 +539,7 @@ if ($response->commerceReview !== null) {
 
 ## patchSocialReview
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 
@@ -592,7 +592,7 @@ if ($response->socialReview !== null) {
 
 ## removeCommerceReview
 
-Remove a review
+Deletes the CommerceReview identified by `id`.
 
 ### Example Usage
 
@@ -643,7 +643,7 @@ if ($response->statusCode === 200) {
 
 ## updateCommerceReview
 
-Update a review
+Updates the CommerceReview identified by `id`. Provide the unified CommerceReview fields to change in the request body.
 
 ### Example Usage
 
@@ -674,7 +674,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '578fe127-194b-4d01-a25f-c54fc1709240',
+        id: 'a71c13aa-d416-43f6-8ad8-35258e7a6fe8',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -682,10 +682,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '65be1798-462d-44e5-84c9-515cac1619eb',
+                id: '71c01db3-0af8-4bc1-a421-12a5e570269b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '9f916c18-3b91-4219-8d26-0639d2363609',
+                        id: 'a87907e7-6777-432a-a079-cdaff033b9ec',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -698,10 +698,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: 'c1af0dea-75ef-4e0b-a7aa-d6d3b840ec10',
+                id: '6568d505-d413-41fd-b64d-3067705e05a3',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '9ad8d0f3-c8b8-4fd9-a4a7-53a7062bf74d',
+                        id: '864adde6-6719-41ea-8fc8-f1d7c8c545ae',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -717,7 +717,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-21T08:42:36.722Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-23T00:16:55.843Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -752,7 +752,7 @@ if ($response->commerceReview !== null) {
 
 ## updateSocialReview
 
-Update a review
+Updates the SocialReview identified by `id`. Provide the unified SocialReview fields to change in the request body.
 
 ### Example Usage
 

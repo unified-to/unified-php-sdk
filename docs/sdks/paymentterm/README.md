@@ -13,7 +13,7 @@
 
 ## createAccountingPaymentterm
 
-Create a paymentterm
+Creates a AccountingPaymentterm. Provide the unified AccountingPaymentterm fields in the request body; they are mapped to the provider's API. Returns the created AccountingPaymentterm.
 
 ### Example Usage
 
@@ -45,12 +45,12 @@ $request = new Operations\CreateAccountingPaymenttermRequest(
         discountPercent: 5,
         dueDays: 57,
         dueNextMonthDays: 9,
-        id: '0817d982-6c5a-41a4-9212-68862cf6c0b1',
+        id: '42ba22f9-17b1-462e-96dc-6a5cd1dd6193',
         isActive: false,
         metadata: [],
         name: 'Net 30',
         type: Shared\AccountingPaymenttermType::Net15,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-08T11:12:46.138Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-10T03:39:59.459Z'),
     ),
     connectionId: '<id>',
 );
@@ -82,7 +82,7 @@ if ($response->accountingPaymentterm !== null) {
 
 ## getAccountingPaymentterm
 
-Retrieve a paymentterm
+Retrieves a single AccountingPaymentterm by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -133,7 +133,7 @@ if ($response->accountingPaymentterm !== null) {
 
 ## listAccountingPaymentterms
 
-List all paymentterms
+Returns a list of AccountingPaymentterms. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -183,7 +183,7 @@ if ($response->accountingPaymentterms !== null) {
 
 ## patchAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -215,12 +215,12 @@ $request = new Operations\PatchAccountingPaymenttermRequest(
         discountPercent: 5,
         dueDays: 57,
         dueNextMonthDays: 9,
-        id: '454eabd4-960c-4e98-97ff-7883db6f63e6',
+        id: '5ed65666-06fc-4b4e-b933-47edea610552',
         isActive: false,
         metadata: [],
         name: 'Net 30',
         type: Shared\AccountingPaymenttermType::Net15,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-08T11:12:46.149Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-10T03:39:59.475Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -253,7 +253,7 @@ if ($response->accountingPaymentterm !== null) {
 
 ## removeAccountingPaymentterm
 
-Remove a paymentterm
+Deletes the AccountingPaymentterm identified by `id`.
 
 ### Example Usage
 
@@ -304,7 +304,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingPaymentterm
 
-Update a paymentterm
+Updates the AccountingPaymentterm identified by `id`. Provide the unified AccountingPaymentterm fields to change in the request body.
 
 ### Example Usage
 
@@ -336,12 +336,12 @@ $request = new Operations\UpdateAccountingPaymenttermRequest(
         discountPercent: 5,
         dueDays: 57,
         dueNextMonthDays: 9,
-        id: '454eabd4-960c-4e98-97ff-7883db6f63e6',
+        id: '5ed65666-06fc-4b4e-b933-47edea610552',
         isActive: false,
         metadata: [],
         name: 'Net 30',
         type: Shared\AccountingPaymenttermType::Net15,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-08T11:12:46.149Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-10T03:39:59.475Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -74,6 +74,7 @@ class HrisGroup
     public ?array $metadata = null;
 
     /**
+     * The name of the group (e.g. a team or department)
      *
      * @var ?string $name
      */

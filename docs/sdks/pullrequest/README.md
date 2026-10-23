@@ -13,7 +13,7 @@
 
 ## createRepoPullrequest
 
-Create a pullrequest
+Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
 
 ### Example Usage
 
@@ -36,9 +36,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-01T13:52:56.618Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-02T18:18:59.473Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: 'f056c8e3-203d-4efa-b38e-98ababfea7f3',
+        id: 'd0924875-30a8-4330-8ecc-c1e883a38cd1',
         labels: [
             'creptio',
             'tutamen',
@@ -47,7 +47,7 @@ $request = new Operations\CreateRepoPullrequestRequest(
         notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-17T07:06:04.358Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-18T20:52:11.514Z'),
     ),
     connectionId: '<id>',
 );
@@ -79,7 +79,7 @@ if ($response->repoPullrequest !== null) {
 
 ## getRepoPullrequest
 
-Retrieve a pullrequest
+Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -130,7 +130,7 @@ if ($response->repoPullrequest !== null) {
 
 ## listRepoPullrequests
 
-List all pullrequests
+Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -180,7 +180,7 @@ if ($response->repoPullrequests !== null) {
 
 ## patchRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -203,9 +203,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-01T13:52:56.628Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-02T18:18:59.479Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '680f10ed-25c1-4071-ab27-a124bc8edbbd',
+        id: '9ab6e939-684f-4b33-8512-d5c39fd5d35c',
         labels: [
             'creptio',
             'tutamen',
@@ -214,7 +214,7 @@ $request = new Operations\PatchRepoPullrequestRequest(
         notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-17T07:06:04.372Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-18T20:52:11.524Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -247,7 +247,7 @@ if ($response->repoPullrequest !== null) {
 
 ## removeRepoPullrequest
 
-Remove a pullrequest
+Deletes the RepoPullrequest identified by `id`.
 
 ### Example Usage
 
@@ -298,7 +298,7 @@ if ($response->statusCode === 200) {
 
 ## updateRepoPullrequest
 
-Update a pullrequest
+Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
 
 ### Example Usage
 
@@ -321,9 +321,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-01T13:52:56.628Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-02T18:18:59.479Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '680f10ed-25c1-4071-ab27-a124bc8edbbd',
+        id: '9ab6e939-684f-4b33-8512-d5c39fd5d35c',
         labels: [
             'creptio',
             'tutamen',
@@ -332,7 +332,7 @@ $request = new Operations\UpdateRepoPullrequestRequest(
         notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-17T07:06:04.372Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-18T20:52:11.524Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

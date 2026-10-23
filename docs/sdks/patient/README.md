@@ -12,7 +12,7 @@
 
 ## createHealthcarePatient
 
-Create a patient
+Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
             postalCode: '54031',
             region: 'Nebraska',
         ),
-        birthdate: '2025-02-12',
+        birthdate: '2025-02-14',
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
@@ -52,7 +52,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '71bef0d8-2160-4fef-8b45-37b8a6bb244f',
+        id: 'a52c9f25-c4f9-40c5-bd59-e9b9432ac692',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -72,7 +72,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-22T20:18:33.735Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-24T17:04:00.614Z'),
     ),
     connectionId: '<id>',
 );
@@ -104,7 +104,7 @@ if ($response->healthcarePatient !== null) {
 
 ## getHealthcarePatient
 
-Retrieve a patient
+Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -155,7 +155,7 @@ if ($response->healthcarePatient !== null) {
 
 ## listHealthcarePatients
 
-List all patients
+Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -205,7 +205,7 @@ if ($response->healthcarePatients !== null) {
 
 ## patchHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -235,7 +235,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
             postalCode: '54031',
             region: 'Nebraska',
         ),
-        birthdate: '2025-02-12',
+        birthdate: '2025-02-14',
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
@@ -245,7 +245,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '570149a1-cb28-49d2-861b-e9417dc279e4',
+        id: 'bed47327-7098-4f38-8997-3634f77f065a',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -265,7 +265,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-22T20:18:33.752Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-24T17:04:00.643Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -298,7 +298,7 @@ if ($response->healthcarePatient !== null) {
 
 ## updateHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -328,7 +328,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
             postalCode: '54031',
             region: 'Nebraska',
         ),
-        birthdate: '2025-02-12',
+        birthdate: '2025-02-14',
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
@@ -338,7 +338,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '570149a1-cb28-49d2-861b-e9417dc279e4',
+        id: 'bed47327-7098-4f38-8997-3634f77f065a',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -358,7 +358,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-22T20:18:33.752Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-24T17:04:00.643Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

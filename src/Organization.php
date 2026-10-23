@@ -47,6 +47,8 @@ class Organization
     /**
      * Create an organization
      *
+     * Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Organization
 
     /**
      * Create an organization
+     *
+     * Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiOrganizationResponse
@@ -183,6 +187,8 @@ class Organization
     /**
      * Create an organization
      *
+     * Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Organization
     /**
      * Retrieve an organization
      *
+     * Retrieves a single AccountingOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Organization
 
     /**
      * Retrieve an organization
+     *
+     * Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsOrganizationResponse
@@ -377,6 +387,8 @@ class Organization
     /**
      * Retrieve an organization
      *
+     * Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Organization
 
     /**
      * Retrieve an organization
+     *
+     * Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoOrganizationResponse
@@ -503,6 +517,8 @@ class Organization
     /**
      * List all organizations
      *
+     * Returns a list of AccountingOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -565,6 +581,8 @@ class Organization
 
     /**
      * List all organizations
+     *
+     * Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsOrganizationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsOrganizationsResponse
@@ -629,6 +647,8 @@ class Organization
     /**
      * List all organizations
      *
+     * Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiOrganizationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -692,6 +712,8 @@ class Organization
     /**
      * List all organizations
      *
+     * Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoOrganizationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoOrganizationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -754,6 +776,8 @@ class Organization
 
     /**
      * Update an organization
+     *
+     * Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsOrganizationResponse
@@ -823,6 +847,8 @@ class Organization
     /**
      * Update an organization
      *
+     * Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchGenaiOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -890,6 +916,8 @@ class Organization
 
     /**
      * Update an organization
+     *
+     * Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoOrganizationResponse
@@ -959,6 +987,8 @@ class Organization
     /**
      * Remove an organization
      *
+     * Deletes the AdsOrganization identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1015,6 +1045,8 @@ class Organization
 
     /**
      * Remove an organization
+     *
+     * Deletes the GenaiOrganization identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveGenaiOrganizationResponse
@@ -1073,6 +1105,8 @@ class Organization
     /**
      * Remove an organization
      *
+     * Deletes the RepoOrganization identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1129,6 +1163,8 @@ class Organization
 
     /**
      * Update an organization
+     *
+     * Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationResponse
@@ -1198,6 +1234,8 @@ class Organization
     /**
      * Update an organization
      *
+     * Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateGenaiOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1265,6 +1303,8 @@ class Organization
 
     /**
      * Update an organization
+     *
+     * Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationResponse

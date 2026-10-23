@@ -47,6 +47,8 @@ class Volume
     /**
      * Create a volume
      *
+     * Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeVolumeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Volume
     /**
      * Retrieve a volume
      *
+     * Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeVolumeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Volume
     /**
      * List all volumes
      *
+     * Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeVolumesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeVolumesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Volume
 
     /**
      * Update a volume
+     *
+     * Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeVolumeResponse
@@ -309,6 +317,8 @@ class Volume
     /**
      * Remove a volume
      *
+     * Deletes the ComputeVolume identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeVolumeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Volume
 
     /**
      * Update a volume
+     *
+     * Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeVolumeResponse

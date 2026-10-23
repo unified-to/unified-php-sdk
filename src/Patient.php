@@ -47,6 +47,8 @@ class Patient
     /**
      * Create a patient
      *
+     * Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHealthcarePatientRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHealthcarePatientResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Patient
     /**
      * Retrieve a patient
      *
+     * Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcarePatientRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcarePatientResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Patient
     /**
      * List all patients
      *
+     * Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcarePatientsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcarePatientsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Patient
 
     /**
      * Update a patient
+     *
+     * Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHealthcarePatientRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHealthcarePatientResponse
@@ -308,6 +316,8 @@ class Patient
 
     /**
      * Update a patient
+     *
+     * Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHealthcarePatientRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHealthcarePatientResponse

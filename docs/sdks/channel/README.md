@@ -13,7 +13,7 @@
 
 ## createMessagingChannel
 
-Create a channel
+Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
 
 ### Example Usage
 
@@ -39,13 +39,13 @@ $request = new Operations\CreateMessagingChannelRequest(
         createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
         description: 'Dolores tutis.',
         hasSubchannels: true,
-        id: 'd9e11e3c-2e30-4962-857a-b0faf012090c',
+        id: 'a5009b3f-7791-4c11-915b-38f653d73e89',
         isActive: false,
         isPrivate: true,
         members: [],
         metadata: [],
         name: 'tego',
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T13:53:36.504Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T07:02:00.262Z'),
         webUrl: 'https://svelte-rule.name/',
     ),
     connectionId: '<id>',
@@ -78,7 +78,7 @@ if ($response->messagingChannel !== null) {
 
 ## getMessagingChannel
 
-Retrieve a channel
+Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -129,7 +129,7 @@ if ($response->messagingChannel !== null) {
 
 ## listMessagingChannels
 
-List all channels
+Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -179,7 +179,7 @@ if ($response->messagingChannels !== null) {
 
 ## patchMessagingChannel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -205,13 +205,13 @@ $request = new Operations\PatchMessagingChannelRequest(
         createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
         description: 'Dolores tutis.',
         hasSubchannels: true,
-        id: '017f7008-218c-4aa0-ae0b-b5feeaffee37',
+        id: 'd6d1c58d-5a71-461a-8f42-0464957f4543',
         isActive: false,
         isPrivate: true,
         members: [],
         metadata: [],
         name: 'tego',
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T13:53:36.518Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T07:02:00.273Z'),
         webUrl: 'https://svelte-rule.name/',
     ),
     connectionId: '<id>',
@@ -245,7 +245,7 @@ if ($response->messagingChannel !== null) {
 
 ## removeMessagingChannel
 
-Remove a channel
+Deletes the MessagingChannel identified by `id`.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ if ($response->statusCode === 200) {
 
 ## updateMessagingChannel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -322,13 +322,13 @@ $request = new Operations\UpdateMessagingChannelRequest(
         createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
         description: 'Dolores tutis.',
         hasSubchannels: true,
-        id: '017f7008-218c-4aa0-ae0b-b5feeaffee37',
+        id: 'd6d1c58d-5a71-461a-8f42-0464957f4543',
         isActive: false,
         isPrivate: true,
         members: [],
         metadata: [],
         name: 'tego',
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T13:53:36.518Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T07:02:00.273Z'),
         webUrl: 'https://svelte-rule.name/',
     ),
     connectionId: '<id>',

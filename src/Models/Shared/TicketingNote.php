@@ -29,6 +29,7 @@ class TicketingNote
     public ?string $customerId = null;
 
     /**
+     * The note's text
      *
      * @var ?string $description
      */
@@ -65,6 +66,7 @@ class TicketingNote
     public ?array $raw = null;
 
     /**
+     * The ID of the ticket the note is added to (a TicketingTicket ID)
      *
      * @var ?string $ticketId
      */

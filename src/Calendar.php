@@ -47,6 +47,8 @@ class Calendar
     /**
      * Create a calendar
      *
+     * Creates a CalendarCalendar. Provide the unified CalendarCalendar fields in the request body; they are mapped to the provider's API. Returns the created CalendarCalendar.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCalendarCalendarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCalendarCalendarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Calendar
 
     /**
      * Create an event
+     *
+     * Creates a CalendarEvent. Provide the unified CalendarEvent fields in the request body; they are mapped to the provider's API. Returns the created CalendarEvent.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCalendarEventResponse
@@ -183,6 +187,8 @@ class Calendar
     /**
      * Create a link
      *
+     * Creates a CalendarLink. Provide the unified CalendarLink fields in the request body; they are mapped to the provider's API. Returns the created CalendarLink.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Calendar
 
     /**
      * Create a webinar
+     *
+     * Creates a CalendarWebinar. Provide the unified CalendarWebinar fields in the request body; they are mapped to the provider's API. Returns the created CalendarWebinar.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCalendarWebinarResponse
@@ -319,6 +327,8 @@ class Calendar
     /**
      * Retrieve a calendar
      *
+     * Retrieves a single CalendarCalendar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCalendarCalendarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCalendarCalendarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -381,6 +391,8 @@ class Calendar
 
     /**
      * Retrieve an event
+     *
+     * Retrieves a single CalendarEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCalendarEventResponse
@@ -445,6 +457,8 @@ class Calendar
     /**
      * Retrieve a link
      *
+     * Retrieves a single CalendarLink by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -507,6 +521,8 @@ class Calendar
 
     /**
      * Retrieve a recording
+     *
+     * Retrieves a single CalendarRecording by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCalendarRecordingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCalendarRecordingResponse
@@ -571,6 +587,8 @@ class Calendar
     /**
      * Retrieve a webinar
      *
+     * Retrieves a single CalendarWebinar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -633,6 +651,8 @@ class Calendar
 
     /**
      * List all busies
+     *
+     * Returns a list of CalendarBusies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarBusiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarBusiesResponse
@@ -697,6 +717,8 @@ class Calendar
     /**
      * List all calendars
      *
+     * Returns a list of CalendarCalendars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarCalendarsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarCalendarsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -759,6 +781,8 @@ class Calendar
 
     /**
      * List all events
+     *
+     * Returns a list of CalendarEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarEventsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarEventsResponse
@@ -823,6 +847,8 @@ class Calendar
     /**
      * List all links
      *
+     * Returns a list of CalendarLinks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarLinksRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarLinksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -885,6 +911,8 @@ class Calendar
 
     /**
      * List all recordings
+     *
+     * Returns a list of CalendarRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarRecordingsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarRecordingsResponse
@@ -949,6 +977,8 @@ class Calendar
     /**
      * List all webinars
      *
+     * Returns a list of CalendarWebinars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCalendarWebinarsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCalendarWebinarsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1011,6 +1041,8 @@ class Calendar
 
     /**
      * Update a calendar
+     *
+     * Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCalendarCalendarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCalendarCalendarResponse
@@ -1080,6 +1112,8 @@ class Calendar
     /**
      * Update an event
      *
+     * Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1147,6 +1181,8 @@ class Calendar
 
     /**
      * Update a link
+     *
+     * Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCalendarLinkResponse
@@ -1216,6 +1252,8 @@ class Calendar
     /**
      * Update a webinar
      *
+     * Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1284,6 +1322,8 @@ class Calendar
     /**
      * Remove a calendar
      *
+     * Deletes the CalendarCalendar identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarCalendarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCalendarCalendarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1340,6 +1380,8 @@ class Calendar
 
     /**
      * Remove an event
+     *
+     * Deletes the CalendarEvent identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCalendarEventResponse
@@ -1398,6 +1440,8 @@ class Calendar
     /**
      * Remove a link
      *
+     * Deletes the CalendarLink identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1455,6 +1499,8 @@ class Calendar
     /**
      * Remove a webinar
      *
+     * Deletes the CalendarWebinar identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCalendarWebinarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1511,6 +1557,8 @@ class Calendar
 
     /**
      * Update a calendar
+     *
+     * Updates the CalendarCalendar identified by `id`. Provide the unified CalendarCalendar fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarCalendarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCalendarCalendarResponse
@@ -1580,6 +1628,8 @@ class Calendar
     /**
      * Update an event
      *
+     * Updates the CalendarEvent identified by `id`. Provide the unified CalendarEvent fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarEventRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCalendarEventResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1648,6 +1698,8 @@ class Calendar
     /**
      * Update a link
      *
+     * Updates the CalendarLink identified by `id`. Provide the unified CalendarLink fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarLinkRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCalendarLinkResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1715,6 +1767,8 @@ class Calendar
 
     /**
      * Update a webinar
+     *
+     * Updates the CalendarWebinar identified by `id`. Provide the unified CalendarWebinar fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCalendarWebinarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCalendarWebinarResponse

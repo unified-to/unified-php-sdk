@@ -30,6 +30,7 @@ class CrmLead
     public ?string $companyId = null;
 
     /**
+     * The name of the company the lead works for
      *
      * @var ?string $companyName
      */
@@ -117,7 +118,7 @@ class CrmLead
     public ?array $linkUrls = null;
 
     /**
-     * $metadata
+     * Custom field values. Include only existing custom fields and only the ones being set; omit to leave them unchanged.
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\CrmMetadata> $metadata
      */
@@ -127,6 +128,7 @@ class CrmLead
     public ?array $metadata = null;
 
     /**
+     * The lead's full name
      *
      * @var ?string $name
      */

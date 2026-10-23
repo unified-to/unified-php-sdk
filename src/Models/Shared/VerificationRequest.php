@@ -48,6 +48,7 @@ class VerificationRequest
     public ?array $metadata = null;
 
     /**
+     * The ID of the verification package (the check) to run (a VerificationPackage ID)
      *
      * @var ?string $packageId
      */
@@ -85,7 +86,7 @@ class VerificationRequest
     public ?string $profileDateOfBirth = null;
 
     /**
-     * $profileEmails
+     * The email addresses of the person being verified
      *
      * @var ?array<string> $profileEmails
      */
@@ -113,6 +114,7 @@ class VerificationRequest
     public ?string $profileIpAddress = null;
 
     /**
+     * The full name of the person being verified
      *
      * @var ?string $profileName
      */

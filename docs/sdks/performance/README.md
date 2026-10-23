@@ -20,7 +20,7 @@
 
 ## createPerformanceFeedback
 
-Create a feedback
+Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreatePerformanceFeedbackRequest(
     performanceFeedback: new Shared\PerformanceFeedback(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T16:21:53.862Z'),
-        id: '08b0e130-964c-4da1-9540-3eddd43399bb',
+        id: 'b903536e-0573-420e-90c1-8f7d22ec584e',
         isVisible: true,
         message: 'Tabernus corpus voluptate aestus.',
         metadata: [],
@@ -53,7 +53,7 @@ $request = new Operations\CreatePerformanceFeedbackRequest(
             'hexagon',
         ],
         type: Shared\PerformanceFeedbackType::Praise,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-04T02:28:03.157Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-05T10:54:01.678Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -86,7 +86,7 @@ if ($response->performanceFeedback !== null) {
 
 ## createPerformanceGoal
 
-Create a goal
+Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
 
 ### Example Usage
 
@@ -111,14 +111,14 @@ $request = new Operations\CreatePerformanceGoalRequest(
     performanceGoal: new Shared\PerformanceGoal(
         createdAt: Utils\Utils::parseDateTime('2020-01-09T20:43:07.380Z'),
         description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-        dueAt: Utils\Utils::parseDateTime('2026-07-29T18:24:47.134Z'),
-        id: '1064e514-6d78-4c8b-9814-8ecc8f63bc60',
+        dueAt: Utils\Utils::parseDateTime('2026-07-31T16:29:09.322Z'),
+        id: '3df190f1-58c1-40a7-88d2-820ca3dc7775',
         metadata: [],
         milestones: [
             new Shared\PerformanceGoalMilestone(
                 currentValue: 10,
-                dueAt: Utils\Utils::parseDateTime('2026-06-03T21:06:37.643Z'),
-                id: '638b749b-62db-4019-9481-ad391608e0d5',
+                dueAt: Utils\Utils::parseDateTime('2026-06-05T18:06:26.026Z'),
+                id: 'c1d49a6d-54ca-4de6-a2bd-ab6c45520442',
                 isCompleted: true,
                 name: 'Team-oriented secondary matrix',
                 targetValue: 32,
@@ -127,8 +127,8 @@ $request = new Operations\CreatePerformanceGoalRequest(
             ),
             new Shared\PerformanceGoalMilestone(
                 currentValue: 0,
-                dueAt: Utils\Utils::parseDateTime('2026-08-08T11:15:35.390Z'),
-                id: '6f61a364-8d6a-483e-b3bb-cf48ca41bf46',
+                dueAt: Utils\Utils::parseDateTime('2026-08-10T09:31:10.060Z'),
+                id: 'e55af9d2-82c4-4dbd-b18b-08e06bd67c05',
                 isCompleted: true,
                 name: 'Exclusive client-server conglomeration',
                 targetValue: 32,
@@ -137,8 +137,8 @@ $request = new Operations\CreatePerformanceGoalRequest(
             new Shared\PerformanceGoalMilestone(
                 currentValue: 31,
                 description: 'Hic explicabo odit.',
-                dueAt: Utils\Utils::parseDateTime('2026-10-10T10:05:35.566Z'),
-                id: 'cf4ac1bb-2569-43a8-9a63-68bb5b4d6c9e',
+                dueAt: Utils\Utils::parseDateTime('2026-10-12T09:33:53.660Z'),
+                id: '2df5a8c2-3ce6-4719-accf-92f5b2ed074f',
                 isCompleted: true,
                 name: 'Synchronised immersive success',
                 targetValue: 32,
@@ -147,10 +147,10 @@ $request = new Operations\CreatePerformanceGoalRequest(
         ],
         name: 'Proactive national protocol',
         progress: 3,
-        startAt: Utils\Utils::parseDateTime('2025-07-23T09:11:53.948Z'),
+        startAt: Utils\Utils::parseDateTime('2025-07-25T00:07:13.959Z'),
         status: Shared\PerformanceGoalStatus::Closed,
         type: Shared\PerformanceGoalSchemasType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2022-09-13T01:29:05.592Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-13T20:17:59.317Z'),
         weight: 5,
     ),
     connectionId: '<id>',
@@ -183,7 +183,7 @@ if ($response->performanceGoal !== null) {
 
 ## getPerformanceCycle
 
-Retrieve a cycle
+Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -234,7 +234,7 @@ if ($response->performanceCycle !== null) {
 
 ## getPerformanceFeedback
 
-Retrieve a feedback
+Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -285,7 +285,7 @@ if ($response->performanceFeedback !== null) {
 
 ## getPerformanceGoal
 
-Retrieve a goal
+Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ if ($response->performanceGoal !== null) {
 
 ## getPerformanceReview
 
-Retrieve a review
+Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -387,7 +387,7 @@ if ($response->performanceReview !== null) {
 
 ## listPerformanceCycles
 
-List all cycles
+Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -437,7 +437,7 @@ if ($response->performanceCycles !== null) {
 
 ## listPerformanceFeedbacks
 
-List all feedbacks
+Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -487,7 +487,7 @@ if ($response->performanceFeedbacks !== null) {
 
 ## listPerformanceGoals
 
-List all goals
+Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -537,7 +537,7 @@ if ($response->performanceGoals !== null) {
 
 ## listPerformanceReviews
 
-List all reviews
+Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -587,7 +587,7 @@ if ($response->performanceReviews !== null) {
 
 ## patchPerformanceGoal
 
-Update a goal
+Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
 ### Example Usage
 
@@ -612,14 +612,14 @@ $request = new Operations\PatchPerformanceGoalRequest(
     performanceGoal: new Shared\PerformanceGoal(
         createdAt: Utils\Utils::parseDateTime('2020-01-09T20:43:07.380Z'),
         description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-        dueAt: Utils\Utils::parseDateTime('2026-07-29T18:24:47.159Z'),
-        id: 'c7e8b855-ca2e-41b1-a761-37e22b0d52ec',
+        dueAt: Utils\Utils::parseDateTime('2026-07-31T16:29:09.343Z'),
+        id: '5b9a3d76-1677-4f34-8153-013b30b7223f',
         metadata: [],
         milestones: [
             new Shared\PerformanceGoalMilestone(
                 currentValue: 10,
-                dueAt: Utils\Utils::parseDateTime('2026-06-03T21:06:37.667Z'),
-                id: '78ac582b-9c36-4639-8990-9aefddcd94fc',
+                dueAt: Utils\Utils::parseDateTime('2026-06-05T18:06:26.047Z'),
+                id: 'ceec02a3-a2ce-442e-803f-902dfd7f118d',
                 isCompleted: true,
                 name: 'Team-oriented secondary matrix',
                 targetValue: 32,
@@ -628,8 +628,8 @@ $request = new Operations\PatchPerformanceGoalRequest(
             ),
             new Shared\PerformanceGoalMilestone(
                 currentValue: 0,
-                dueAt: Utils\Utils::parseDateTime('2026-08-08T11:15:35.415Z'),
-                id: '932c298e-5031-4948-ad1c-53d1b63946b8',
+                dueAt: Utils\Utils::parseDateTime('2026-08-10T09:31:10.082Z'),
+                id: 'b897bc9b-1fd4-4fcf-a6c4-b0123c36d653',
                 isCompleted: true,
                 name: 'Exclusive client-server conglomeration',
                 targetValue: 32,
@@ -638,8 +638,8 @@ $request = new Operations\PatchPerformanceGoalRequest(
             new Shared\PerformanceGoalMilestone(
                 currentValue: 31,
                 description: 'Hic explicabo odit.',
-                dueAt: Utils\Utils::parseDateTime('2026-10-10T10:05:35.592Z'),
-                id: 'be0f4797-77a9-424f-b085-5b45c77558b2',
+                dueAt: Utils\Utils::parseDateTime('2026-10-12T09:33:53.682Z'),
+                id: '0b8b5044-0428-4b30-bbac-1f755074fbca',
                 isCompleted: true,
                 name: 'Synchronised immersive success',
                 targetValue: 32,
@@ -648,10 +648,10 @@ $request = new Operations\PatchPerformanceGoalRequest(
         ],
         name: 'Proactive national protocol',
         progress: 3,
-        startAt: Utils\Utils::parseDateTime('2025-07-23T09:11:53.968Z'),
+        startAt: Utils\Utils::parseDateTime('2025-07-25T00:07:13.977Z'),
         status: Shared\PerformanceGoalStatus::Closed,
         type: Shared\PerformanceGoalSchemasType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2022-09-13T01:29:05.603Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-13T20:17:59.326Z'),
         weight: 5,
     ),
     connectionId: '<id>',
@@ -685,7 +685,7 @@ if ($response->performanceGoal !== null) {
 
 ## removePerformanceGoal
 
-Remove a goal
+Deletes the PerformanceGoal identified by `id`.
 
 ### Example Usage
 
@@ -736,7 +736,7 @@ if ($response->statusCode === 200) {
 
 ## updatePerformanceGoal
 
-Update a goal
+Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
 
 ### Example Usage
 
@@ -761,14 +761,14 @@ $request = new Operations\UpdatePerformanceGoalRequest(
     performanceGoal: new Shared\PerformanceGoal(
         createdAt: Utils\Utils::parseDateTime('2020-01-09T20:43:07.380Z'),
         description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-        dueAt: Utils\Utils::parseDateTime('2026-07-29T18:24:47.159Z'),
-        id: 'c7e8b855-ca2e-41b1-a761-37e22b0d52ec',
+        dueAt: Utils\Utils::parseDateTime('2026-07-31T16:29:09.343Z'),
+        id: '5b9a3d76-1677-4f34-8153-013b30b7223f',
         metadata: [],
         milestones: [
             new Shared\PerformanceGoalMilestone(
                 currentValue: 10,
-                dueAt: Utils\Utils::parseDateTime('2026-06-03T21:06:37.667Z'),
-                id: '78ac582b-9c36-4639-8990-9aefddcd94fc',
+                dueAt: Utils\Utils::parseDateTime('2026-06-05T18:06:26.047Z'),
+                id: 'ceec02a3-a2ce-442e-803f-902dfd7f118d',
                 isCompleted: true,
                 name: 'Team-oriented secondary matrix',
                 targetValue: 32,
@@ -777,8 +777,8 @@ $request = new Operations\UpdatePerformanceGoalRequest(
             ),
             new Shared\PerformanceGoalMilestone(
                 currentValue: 0,
-                dueAt: Utils\Utils::parseDateTime('2026-08-08T11:15:35.415Z'),
-                id: '932c298e-5031-4948-ad1c-53d1b63946b8',
+                dueAt: Utils\Utils::parseDateTime('2026-08-10T09:31:10.082Z'),
+                id: 'b897bc9b-1fd4-4fcf-a6c4-b0123c36d653',
                 isCompleted: true,
                 name: 'Exclusive client-server conglomeration',
                 targetValue: 32,
@@ -787,8 +787,8 @@ $request = new Operations\UpdatePerformanceGoalRequest(
             new Shared\PerformanceGoalMilestone(
                 currentValue: 31,
                 description: 'Hic explicabo odit.',
-                dueAt: Utils\Utils::parseDateTime('2026-10-10T10:05:35.592Z'),
-                id: 'be0f4797-77a9-424f-b085-5b45c77558b2',
+                dueAt: Utils\Utils::parseDateTime('2026-10-12T09:33:53.682Z'),
+                id: '0b8b5044-0428-4b30-bbac-1f755074fbca',
                 isCompleted: true,
                 name: 'Synchronised immersive success',
                 targetValue: 32,
@@ -797,10 +797,10 @@ $request = new Operations\UpdatePerformanceGoalRequest(
         ],
         name: 'Proactive national protocol',
         progress: 3,
-        startAt: Utils\Utils::parseDateTime('2025-07-23T09:11:53.968Z'),
+        startAt: Utils\Utils::parseDateTime('2025-07-25T00:07:13.977Z'),
         status: Shared\PerformanceGoalStatus::Closed,
         type: Shared\PerformanceGoalSchemasType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2022-09-13T01:29:05.603Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-13T20:17:59.326Z'),
         weight: 5,
     ),
     connectionId: '<id>',

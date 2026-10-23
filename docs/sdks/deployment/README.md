@@ -13,7 +13,7 @@
 
 ## createComputeDeployment
 
-Create a deployment
+Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
 ### Example Usage
 
@@ -41,13 +41,13 @@ $request = new Operations\CreateComputeDeploymentRequest(
         commitMessage: 'copy primary pixel',
         createdAt: Utils\Utils::parseDateTime('2022-06-07T03:52:04.613Z'),
         environment: Shared\Environment::Preview,
-        finishedAt: Utils\Utils::parseDateTime('2025-08-29T15:05:51.661Z'),
-        id: 'ca841094-cd73-4024-bfea-725904a495cd',
+        finishedAt: Utils\Utils::parseDateTime('2025-08-31T02:18:43.588Z'),
+        id: '870f0b88-2e11-44e7-b1f1-7a9b39c2a21f',
         metadata: [],
-        startedAt: Utils\Utils::parseDateTime('2025-04-10T07:30:12.606Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-11T14:29:55.518Z'),
         status: Shared\ComputeDeploymentStatus::Live,
         trigger: Shared\Trigger::Api,
-        updatedAt: Utils\Utils::parseDateTime('2026-02-28T18:03:13.449Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-02T10:44:07.876Z'),
         url: 'https://comfortable-petal.name',
     ),
     connectionId: '<id>',
@@ -80,7 +80,7 @@ if ($response->computeDeployment !== null) {
 
 ## getComputeDeployment
 
-Retrieve a deployment
+Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ if ($response->computeDeployment !== null) {
 
 ## listComputeDeployments
 
-List all deployments
+Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -181,7 +181,7 @@ if ($response->computeDeployments !== null) {
 
 ## patchComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -209,13 +209,13 @@ $request = new Operations\PatchComputeDeploymentRequest(
         commitMessage: 'copy primary pixel',
         createdAt: Utils\Utils::parseDateTime('2022-06-07T03:52:04.613Z'),
         environment: Shared\Environment::Preview,
-        finishedAt: Utils\Utils::parseDateTime('2025-08-29T15:05:51.669Z'),
-        id: '9eed3546-cbe3-49c2-9354-a3897f19a658',
+        finishedAt: Utils\Utils::parseDateTime('2025-08-31T02:18:43.603Z'),
+        id: 'd0c76f8b-1b23-40e3-9d9b-08fffa1350de',
         metadata: [],
-        startedAt: Utils\Utils::parseDateTime('2025-04-10T07:30:12.613Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-11T14:29:55.531Z'),
         status: Shared\ComputeDeploymentStatus::Live,
         trigger: Shared\Trigger::Api,
-        updatedAt: Utils\Utils::parseDateTime('2026-02-28T18:03:13.459Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-02T10:44:07.893Z'),
         url: 'https://comfortable-petal.name',
     ),
     connectionId: '<id>',
@@ -249,7 +249,7 @@ if ($response->computeDeployment !== null) {
 
 ## removeComputeDeployment
 
-Remove a deployment
+Deletes the ComputeDeployment identified by `id`.
 
 ### Example Usage
 
@@ -300,7 +300,7 @@ if ($response->statusCode === 200) {
 
 ## updateComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -328,13 +328,13 @@ $request = new Operations\UpdateComputeDeploymentRequest(
         commitMessage: 'copy primary pixel',
         createdAt: Utils\Utils::parseDateTime('2022-06-07T03:52:04.613Z'),
         environment: Shared\Environment::Preview,
-        finishedAt: Utils\Utils::parseDateTime('2025-08-29T15:05:51.669Z'),
-        id: '9eed3546-cbe3-49c2-9354-a3897f19a658',
+        finishedAt: Utils\Utils::parseDateTime('2025-08-31T02:18:43.603Z'),
+        id: 'd0c76f8b-1b23-40e3-9d9b-08fffa1350de',
         metadata: [],
-        startedAt: Utils\Utils::parseDateTime('2025-04-10T07:30:12.613Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-11T14:29:55.531Z'),
         status: Shared\ComputeDeploymentStatus::Live,
         trigger: Shared\Trigger::Api,
-        updatedAt: Utils\Utils::parseDateTime('2026-02-28T18:03:13.459Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-02T10:44:07.893Z'),
         url: 'https://comfortable-petal.name',
     ),
     connectionId: '<id>',

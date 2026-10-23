@@ -47,6 +47,8 @@ class Journal
     /**
      * Create a journal
      *
+     * Creates a AccountingJournal. Provide the unified AccountingJournal fields in the request body; they are mapped to the provider's API. Returns the created AccountingJournal.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Journal
     /**
      * Retrieve a journal
      *
+     * Retrieves a single AccountingJournal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Journal
     /**
      * List all journals
      *
+     * Returns a list of AccountingJournals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingJournalsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingJournalsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Journal
 
     /**
      * Update a journal
+     *
+     * Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingJournalResponse
@@ -309,6 +317,8 @@ class Journal
     /**
      * Remove a journal
      *
+     * Deletes the AccountingJournal identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingJournalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Journal
 
     /**
      * Update a journal
+     *
+     * Updates the AccountingJournal identified by `id`. Provide the unified AccountingJournal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingJournalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingJournalResponse

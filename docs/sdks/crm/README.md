@@ -44,7 +44,7 @@
 
 ## createCrmCompany
 
-Create a company
+Creates a CrmCompany. Provide the unified CrmCompany fields in the request body; they are mapped to the provider's API. Returns the created CrmCompany.
 
 ### Example Usage
 
@@ -96,7 +96,7 @@ $request = new Operations\CreateCrmCompanyRequest(
             ),
         ],
         employees: 4177,
-        id: '76899288-87bf-4646-974b-44a0fd1b3acd',
+        id: '6a388d88-c09e-4d11-976a-d3c2920ffbf8',
         industry: 'Metrics',
         isActive: true,
         linkUrls: [
@@ -108,7 +108,7 @@ $request = new Operations\CreateCrmCompanyRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '31a67396-12ff-4ae0-b56e-f60d44ae7d5d',
+                id: '4535e03c-2a68-45e9-a8de-edb61c2de92f',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'unde',
@@ -127,7 +127,7 @@ $request = new Operations\CreateCrmCompanyRequest(
             ),
         ],
         timezone: 'Atlantic/Azores',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-03T03:44:26.054Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T15:19:25.848Z'),
         websites: [
             'https://www.goodwinsons.com',
         ],
@@ -162,7 +162,7 @@ if ($response->crmCompany !== null) {
 
 ## createCrmContact
 
-Create a contact
+Creates a CrmContact. Provide the unified CrmContact fields in the request body; they are mapped to the provider's API. Returns the created CrmContact.
 
 ### Example Usage
 
@@ -203,7 +203,7 @@ $request = new Operations\CreateCrmContactRequest(
             ),
         ],
         firstName: 'Mohammad',
-        id: '300f2e85-3d9e-4075-840a-4fd9fe523962',
+        id: '48a0c9cc-8014-4a2e-953b-b0c9467b9378',
         imageUrl: 'https://avatars.githubusercontent.com/u/26803724',
         lastName: 'Bartell',
         linkUrls: [
@@ -215,7 +215,7 @@ $request = new Operations\CreateCrmContactRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'f5f35195-7412-4359-8cd1-f82139af7291',
+                id: '784d14cf-1653-45f0-848d-230754e0364a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'antiquus',
@@ -233,7 +233,7 @@ $request = new Operations\CreateCrmContactRequest(
             ),
         ],
         title: 'National Tactics Analyst',
-        updatedAt: Utils\Utils::parseDateTime('2021-02-24T05:06:32.253Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-24T06:18:22.018Z'),
     ),
     connectionId: '<id>',
 );
@@ -265,7 +265,7 @@ if ($response->crmContact !== null) {
 
 ## createCrmDeal
 
-Create a deal
+Creates a CrmDeal. Provide the unified CrmDeal fields in the request body; they are mapped to the provider's API. Returns the created CrmDeal.
 
 ### Example Usage
 
@@ -289,19 +289,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-10T10:06:36.060Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-31T12:37:54.634Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-10T20:00:03.839Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-01T19:51:42.365Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-        id: '7d6cd0b2-f9c5-42c1-a68b-d59f7680ea80',
+        id: 'db0996f8-591a-4180-915e-36f7b36d5fca',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'de172c9b-9f28-4356-b8cd-d329d4ff5974',
+                id: '164a3241-1d61-41e7-a0f7-b87756af05a1',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -314,7 +314,7 @@ $request = new Operations\CreateCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-11T21:12:58.993Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-12T15:38:09.209Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -347,7 +347,7 @@ if ($response->crmDeal !== null) {
 
 ## createCrmEvent
 
-Create an event
+Creates a CrmEvent. Provide the unified CrmEvent fields in the request body; they are mapped to the provider's API. Returns the created CrmEvent.
 
 ### Example Usage
 
@@ -373,13 +373,13 @@ $request = new Operations\CreateCrmEventRequest(
         call: new Shared\PropertyCrmEventCall(
             description: 'Arbitro aptus.',
             duration: 64,
-            startAt: Utils\Utils::parseDateTime('2024-12-11T00:48:21.026Z'),
+            startAt: Utils\Utils::parseDateTime('2024-12-12T10:20:39.481Z'),
         ),
         createdAt: Utils\Utils::parseDateTime('2020-07-14T04:53:23.784Z'),
-        id: '2861a115-b973-4d8a-8ef6-7c9a7f2efb64',
+        id: '45b31b2f-b15d-42fd-8142-e262e5f9b3e0',
         metadata: [],
         type: Shared\CrmEventType::Call,
-        updatedAt: Utils\Utils::parseDateTime('2026-10-11T12:55:45.327Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-13T12:24:26.001Z'),
     ),
     connectionId: '<id>',
 );
@@ -411,7 +411,7 @@ if ($response->crmEvent !== null) {
 
 ## createCrmLead
 
-Create a lead
+Creates a CrmLead. Provide the unified CrmLead fields in the request body; they are mapped to the provider's API. Returns the created CrmLead.
 
 ### Example Usage
 
@@ -451,7 +451,7 @@ $request = new Operations\CreateCrmLeadRequest(
             ),
         ],
         firstName: 'Velda',
-        id: 'fdf5c447-a048-4324-91ea-918517eaf80b',
+        id: '9fe7c268-bd08-4ad3-ac2c-2727d15d4431',
         isActive: true,
         lastName: 'Sporer',
         linkUrls: [
@@ -463,7 +463,7 @@ $request = new Operations\CreateCrmLeadRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'f9248f76-97df-44eb-9efe-20e1c22d7ac4',
+                id: '54aeb03f-4ba1-4459-ba0c-46112f0a9f34',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'vitiosus',
@@ -487,7 +487,7 @@ $request = new Operations\CreateCrmLeadRequest(
             ),
         ],
         title: 'International Factors Administrator',
-        updatedAt: Utils\Utils::parseDateTime('2020-05-17T21:34:50.146Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-05-18T01:38:22.223Z'),
     ),
     connectionId: '<id>',
 );
@@ -519,7 +519,7 @@ if ($response->crmLead !== null) {
 
 ## createCrmPipeline
 
-Create a pipeline
+Creates a CrmPipeline. Provide the unified CrmPipeline fields in the request body; they are mapped to the provider's API. Returns the created CrmPipeline.
 
 ### Example Usage
 
@@ -545,7 +545,7 @@ $request = new Operations\CreateCrmPipelineRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
         dealProbability: 99,
         displayOrder: 8,
-        id: '020faeaa-7aef-48eb-8503-9e5b08726b8e',
+        id: 'c5e67335-1f8b-4355-8bc8-cadbcccf6276',
         isActive: true,
         metadata: [],
         name: 'Small Steel Bacon',
@@ -555,13 +555,13 @@ $request = new Operations\CreateCrmPipelineRequest(
                 createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
                 dealProbability: 84,
                 displayOrder: 72,
-                id: '431f199f-0e23-4baa-a7b9-9c583698c712',
+                id: 'a770f718-f6ac-468b-afb5-1566779943b6',
                 isClosed: true,
                 name: 'Veniam.',
-                updatedAt: Utils\Utils::parseDateTime('2025-10-10T12:28:32.951Z'),
+                updatedAt: Utils\Utils::parseDateTime('2025-10-11T23:17:41.777Z'),
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-01T05:54:52.602Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-02T17:28:39.451Z'),
     ),
     connectionId: '<id>',
 );
@@ -593,7 +593,7 @@ if ($response->crmPipeline !== null) {
 
 ## getCrmCompany
 
-Retrieve a company
+Retrieves a single CrmCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -644,7 +644,7 @@ if ($response->crmCompany !== null) {
 
 ## getCrmContact
 
-Retrieve a contact
+Retrieves a single CrmContact by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -695,7 +695,7 @@ if ($response->crmContact !== null) {
 
 ## getCrmDeal
 
-Retrieve a deal
+Retrieves a single CrmDeal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -746,7 +746,7 @@ if ($response->crmDeal !== null) {
 
 ## getCrmEvent
 
-Retrieve an event
+Retrieves a single CrmEvent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -797,7 +797,7 @@ if ($response->crmEvent !== null) {
 
 ## getCrmLead
 
-Retrieve a lead
+Retrieves a single CrmLead by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -848,7 +848,7 @@ if ($response->crmLead !== null) {
 
 ## getCrmPipeline
 
-Retrieve a pipeline
+Retrieves a single CrmPipeline by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -899,7 +899,7 @@ if ($response->crmPipeline !== null) {
 
 ## listCrmCompanies
 
-List all companies
+Returns a list of CrmCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -949,7 +949,7 @@ if ($response->crmCompanies !== null) {
 
 ## listCrmContacts
 
-List all contacts
+Returns a list of CrmContacts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -999,7 +999,7 @@ if ($response->crmContacts !== null) {
 
 ## listCrmDeals
 
-List all deals
+Returns a list of CrmDeals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1049,7 +1049,7 @@ if ($response->crmDeals !== null) {
 
 ## listCrmEvents
 
-List all events
+Returns a list of CrmEvents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1099,7 +1099,7 @@ if ($response->crmEvents !== null) {
 
 ## listCrmLeads
 
-List all leads
+Returns a list of CrmLeads. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1149,7 +1149,7 @@ if ($response->crmLeads !== null) {
 
 ## listCrmPipelines
 
-List all pipelines
+Returns a list of CrmPipelines. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1199,7 +1199,7 @@ if ($response->crmPipelines !== null) {
 
 ## listCrmTaxonomies
 
-List all taxonomies
+Returns a list of CrmTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1249,7 +1249,7 @@ if ($response->crmTaxonomies !== null) {
 
 ## patchCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -1301,7 +1301,7 @@ $request = new Operations\PatchCrmCompanyRequest(
             ),
         ],
         employees: 4177,
-        id: 'cc28f72c-f444-453c-b4f6-2697156e25e2',
+        id: '5a27ccfb-b0fb-49cd-8739-5707c69b2474',
         industry: 'Metrics',
         isActive: true,
         linkUrls: [
@@ -1313,7 +1313,7 @@ $request = new Operations\PatchCrmCompanyRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '01f0ae9f-23c2-49fe-a397-7f5bda43cc3e',
+                id: 'cb79908e-7d5f-4534-a067-1e54a01d8df9',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'unde',
@@ -1332,7 +1332,7 @@ $request = new Operations\PatchCrmCompanyRequest(
             ),
         ],
         timezone: 'Atlantic/Azores',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-03T03:44:26.077Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T15:19:25.864Z'),
         websites: [
             'https://www.goodwinsons.com',
         ],
@@ -1368,7 +1368,7 @@ if ($response->crmCompany !== null) {
 
 ## patchCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -1409,7 +1409,7 @@ $request = new Operations\PatchCrmContactRequest(
             ),
         ],
         firstName: 'Mohammad',
-        id: '6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f',
+        id: '1dff9988-3de3-4a49-8737-02b13264dd45',
         imageUrl: 'https://avatars.githubusercontent.com/u/26803724',
         lastName: 'Bartell',
         linkUrls: [
@@ -1421,7 +1421,7 @@ $request = new Operations\PatchCrmContactRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'ae413485-8c49-40a3-833a-1a5f212c344f',
+                id: '26983265-291b-4cc5-9f7c-2a36d0e8021c',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'antiquus',
@@ -1439,7 +1439,7 @@ $request = new Operations\PatchCrmContactRequest(
             ),
         ],
         title: 'National Tactics Analyst',
-        updatedAt: Utils\Utils::parseDateTime('2021-02-24T05:06:32.254Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-24T06:18:22.019Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1472,7 +1472,7 @@ if ($response->crmContact !== null) {
 
 ## patchCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -1496,19 +1496,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-10T10:06:36.063Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-31T12:37:54.643Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-10T20:00:03.843Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-01T19:51:42.377Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-        id: '25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3',
+        id: 'efa37fe6-046f-4d86-91c0-ba3c80dd24c5',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '4ce364e7-3ae1-4d8c-8353-0bcb57c73575',
+                id: '8d93e4ba-3524-4e12-bae9-a3be00587a63',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -1521,7 +1521,7 @@ $request = new Operations\PatchCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-11T21:12:58.999Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-12T15:38:09.216Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -1555,7 +1555,7 @@ if ($response->crmDeal !== null) {
 
 ## patchCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -1581,13 +1581,13 @@ $request = new Operations\PatchCrmEventRequest(
         call: new Shared\PropertyCrmEventCall(
             description: 'Arbitro aptus.',
             duration: 64,
-            startAt: Utils\Utils::parseDateTime('2024-12-11T00:48:21.064Z'),
+            startAt: Utils\Utils::parseDateTime('2024-12-12T10:20:39.517Z'),
         ),
         createdAt: Utils\Utils::parseDateTime('2020-07-14T04:53:23.784Z'),
-        id: 'fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa',
+        id: '7834c7a8-3797-4d94-895a-aea0407eba75',
         metadata: [],
         type: Shared\CrmEventType::Call,
-        updatedAt: Utils\Utils::parseDateTime('2026-10-11T12:55:45.381Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-13T12:24:26.051Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1620,7 +1620,7 @@ if ($response->crmEvent !== null) {
 
 ## patchCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -1660,7 +1660,7 @@ $request = new Operations\PatchCrmLeadRequest(
             ),
         ],
         firstName: 'Velda',
-        id: '6c8c585e-50d2-4a85-a7c8-7909fac94b4c',
+        id: 'ecf163f3-cd60-45c4-91be-4aa8e2a444bc',
         isActive: true,
         lastName: 'Sporer',
         linkUrls: [
@@ -1672,7 +1672,7 @@ $request = new Operations\PatchCrmLeadRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '8f740a58-690e-4ddc-9d90-630a91b6caa2',
+                id: '3aab5cee-ff6b-4cf7-b5f2-162847cd7a90',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'vitiosus',
@@ -1696,7 +1696,7 @@ $request = new Operations\PatchCrmLeadRequest(
             ),
         ],
         title: 'International Factors Administrator',
-        updatedAt: Utils\Utils::parseDateTime('2020-05-17T21:34:50.148Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-05-18T01:38:22.226Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1729,7 +1729,7 @@ if ($response->crmLead !== null) {
 
 ## patchCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -1755,7 +1755,7 @@ $request = new Operations\PatchCrmPipelineRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
         dealProbability: 99,
         displayOrder: 8,
-        id: 'e646ed6a-5891-4590-920f-56531ac2c297',
+        id: '78700093-007c-47ef-8444-7f97f7cd7570',
         isActive: true,
         metadata: [],
         name: 'Small Steel Bacon',
@@ -1765,13 +1765,13 @@ $request = new Operations\PatchCrmPipelineRequest(
                 createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
                 dealProbability: 84,
                 displayOrder: 72,
-                id: 'adb7be55-98ab-4e90-9d73-31fb8021e556',
+                id: '329e10dc-d8b6-43f4-be7f-78c9effa5f78',
                 isClosed: true,
                 name: 'Veniam.',
-                updatedAt: Utils\Utils::parseDateTime('2025-10-10T12:28:32.963Z'),
+                updatedAt: Utils\Utils::parseDateTime('2025-10-11T23:17:41.790Z'),
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-01T05:54:52.614Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-02T17:28:39.464Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1804,7 +1804,7 @@ if ($response->crmPipeline !== null) {
 
 ## removeCrmCompany
 
-Remove a company
+Deletes the CrmCompany identified by `id`.
 
 ### Example Usage
 
@@ -1855,7 +1855,7 @@ if ($response->statusCode === 200) {
 
 ## removeCrmContact
 
-Remove a contact
+Deletes the CrmContact identified by `id`.
 
 ### Example Usage
 
@@ -1906,7 +1906,7 @@ if ($response->statusCode === 200) {
 
 ## removeCrmDeal
 
-Remove a deal
+Deletes the CrmDeal identified by `id`.
 
 ### Example Usage
 
@@ -1957,7 +1957,7 @@ if ($response->statusCode === 200) {
 
 ## removeCrmEvent
 
-Remove an event
+Deletes the CrmEvent identified by `id`.
 
 ### Example Usage
 
@@ -2008,7 +2008,7 @@ if ($response->statusCode === 200) {
 
 ## removeCrmLead
 
-Remove a lead
+Deletes the CrmLead identified by `id`.
 
 ### Example Usage
 
@@ -2059,7 +2059,7 @@ if ($response->statusCode === 200) {
 
 ## removeCrmPipeline
 
-Remove a pipeline
+Deletes the CrmPipeline identified by `id`.
 
 ### Example Usage
 
@@ -2110,7 +2110,7 @@ if ($response->statusCode === 200) {
 
 ## updateCrmCompany
 
-Update a company
+Updates the CrmCompany identified by `id`. Provide the unified CrmCompany fields to change in the request body.
 
 ### Example Usage
 
@@ -2162,7 +2162,7 @@ $request = new Operations\UpdateCrmCompanyRequest(
             ),
         ],
         employees: 4177,
-        id: 'cc28f72c-f444-453c-b4f6-2697156e25e2',
+        id: '5a27ccfb-b0fb-49cd-8739-5707c69b2474',
         industry: 'Metrics',
         isActive: true,
         linkUrls: [
@@ -2174,7 +2174,7 @@ $request = new Operations\UpdateCrmCompanyRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '01f0ae9f-23c2-49fe-a397-7f5bda43cc3e',
+                id: 'cb79908e-7d5f-4534-a067-1e54a01d8df9',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'unde',
@@ -2193,7 +2193,7 @@ $request = new Operations\UpdateCrmCompanyRequest(
             ),
         ],
         timezone: 'Atlantic/Azores',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-03T03:44:26.077Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T15:19:25.864Z'),
         websites: [
             'https://www.goodwinsons.com',
         ],
@@ -2229,7 +2229,7 @@ if ($response->crmCompany !== null) {
 
 ## updateCrmContact
 
-Update a contact
+Updates the CrmContact identified by `id`. Provide the unified CrmContact fields to change in the request body.
 
 ### Example Usage
 
@@ -2270,7 +2270,7 @@ $request = new Operations\UpdateCrmContactRequest(
             ),
         ],
         firstName: 'Mohammad',
-        id: '6ed2fb9f-37d9-4e9b-94e4-71fc8efcf77f',
+        id: '1dff9988-3de3-4a49-8737-02b13264dd45',
         imageUrl: 'https://avatars.githubusercontent.com/u/26803724',
         lastName: 'Bartell',
         linkUrls: [
@@ -2282,7 +2282,7 @@ $request = new Operations\UpdateCrmContactRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'ae413485-8c49-40a3-833a-1a5f212c344f',
+                id: '26983265-291b-4cc5-9f7c-2a36d0e8021c',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'antiquus',
@@ -2300,7 +2300,7 @@ $request = new Operations\UpdateCrmContactRequest(
             ),
         ],
         title: 'National Tactics Analyst',
-        updatedAt: Utils\Utils::parseDateTime('2021-02-24T05:06:32.254Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-02-24T06:18:22.019Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2333,7 +2333,7 @@ if ($response->crmContact !== null) {
 
 ## updateCrmDeal
 
-Update a deal
+Updates the CrmDeal identified by `id`. Provide the unified CrmDeal fields to change in the request body.
 
 ### Example Usage
 
@@ -2357,19 +2357,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-10T10:06:36.063Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-08-31T12:37:54.643Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-10T20:00:03.843Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-01T19:51:42.377Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-        id: '25cb1f3c-58e5-463c-b7e6-ab7a5e2dc1f3',
+        id: 'efa37fe6-046f-4d86-91c0-ba3c80dd24c5',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '4ce364e7-3ae1-4d8c-8353-0bcb57c73575',
+                id: '8d93e4ba-3524-4e12-bae9-a3be00587a63',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -2382,7 +2382,7 @@ $request = new Operations\UpdateCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-11T21:12:58.999Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-12T15:38:09.216Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -2416,7 +2416,7 @@ if ($response->crmDeal !== null) {
 
 ## updateCrmEvent
 
-Update an event
+Updates the CrmEvent identified by `id`. Provide the unified CrmEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -2442,13 +2442,13 @@ $request = new Operations\UpdateCrmEventRequest(
         call: new Shared\PropertyCrmEventCall(
             description: 'Arbitro aptus.',
             duration: 64,
-            startAt: Utils\Utils::parseDateTime('2024-12-11T00:48:21.064Z'),
+            startAt: Utils\Utils::parseDateTime('2024-12-12T10:20:39.517Z'),
         ),
         createdAt: Utils\Utils::parseDateTime('2020-07-14T04:53:23.784Z'),
-        id: 'fc1b8c52-fc3c-4ad5-8c05-6d3e8eb071aa',
+        id: '7834c7a8-3797-4d94-895a-aea0407eba75',
         metadata: [],
         type: Shared\CrmEventType::Call,
-        updatedAt: Utils\Utils::parseDateTime('2026-10-11T12:55:45.381Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-13T12:24:26.051Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2481,7 +2481,7 @@ if ($response->crmEvent !== null) {
 
 ## updateCrmLead
 
-Update a lead
+Updates the CrmLead identified by `id`. Provide the unified CrmLead fields to change in the request body.
 
 ### Example Usage
 
@@ -2521,7 +2521,7 @@ $request = new Operations\UpdateCrmLeadRequest(
             ),
         ],
         firstName: 'Velda',
-        id: '6c8c585e-50d2-4a85-a7c8-7909fac94b4c',
+        id: 'ecf163f3-cd60-45c4-91be-4aa8e2a444bc',
         isActive: true,
         lastName: 'Sporer',
         linkUrls: [
@@ -2533,7 +2533,7 @@ $request = new Operations\UpdateCrmLeadRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '8f740a58-690e-4ddc-9d90-630a91b6caa2',
+                id: '3aab5cee-ff6b-4cf7-b5f2-162847cd7a90',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'vitiosus',
@@ -2557,7 +2557,7 @@ $request = new Operations\UpdateCrmLeadRequest(
             ),
         ],
         title: 'International Factors Administrator',
-        updatedAt: Utils\Utils::parseDateTime('2020-05-17T21:34:50.148Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-05-18T01:38:22.226Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2590,7 +2590,7 @@ if ($response->crmLead !== null) {
 
 ## updateCrmPipeline
 
-Update a pipeline
+Updates the CrmPipeline identified by `id`. Provide the unified CrmPipeline fields to change in the request body.
 
 ### Example Usage
 
@@ -2616,7 +2616,7 @@ $request = new Operations\UpdateCrmPipelineRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
         dealProbability: 99,
         displayOrder: 8,
-        id: 'e646ed6a-5891-4590-920f-56531ac2c297',
+        id: '78700093-007c-47ef-8444-7f97f7cd7570',
         isActive: true,
         metadata: [],
         name: 'Small Steel Bacon',
@@ -2626,13 +2626,13 @@ $request = new Operations\UpdateCrmPipelineRequest(
                 createdAt: Utils\Utils::parseDateTime('2022-12-28T13:45:38.446Z'),
                 dealProbability: 84,
                 displayOrder: 72,
-                id: 'adb7be55-98ab-4e90-9d73-31fb8021e556',
+                id: '329e10dc-d8b6-43f4-be7f-78c9effa5f78',
                 isClosed: true,
                 name: 'Veniam.',
-                updatedAt: Utils\Utils::parseDateTime('2025-10-10T12:28:32.963Z'),
+                updatedAt: Utils\Utils::parseDateTime('2025-10-11T23:17:41.790Z'),
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-11-01T05:54:52.614Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-02T17:28:39.464Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

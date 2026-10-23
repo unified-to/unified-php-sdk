@@ -31,6 +31,7 @@ class AtsApplication
     public ?\DateTime $appliedAt = null;
 
     /**
+     * The ID of the candidate who is applying (an AtsCandidate ID)
      *
      * @var ?string $candidateId
      */
@@ -65,6 +66,7 @@ class AtsApplication
     public ?string $id = null;
 
     /**
+     * The ID of the job being applied to (an AtsJob ID)
      *
      * @var ?string $jobId
      */

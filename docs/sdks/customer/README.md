@@ -13,7 +13,7 @@
 
 ## createTicketingCustomer
 
-Create a customer
+Creates a TicketingCustomer. Provide the unified TicketingCustomer fields in the request body; they are mapped to the provider's API. Returns the created TicketingCustomer.
 
 ### Example Usage
 
@@ -43,7 +43,7 @@ $request = new Operations\CreateTicketingCustomerRequest(
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: 'e3cc0375-1503-474f-afb3-f694c49cd371',
+        id: '8f14819b-1617-4b36-a403-ebe5db008bf6',
         metadata: [],
         name: 'Christian Windler',
         tags: [
@@ -64,7 +64,7 @@ $request = new Operations\CreateTicketingCustomerRequest(
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-04T01:56:17.625Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-05T22:22:31.311Z'),
     ),
     connectionId: '<id>',
 );
@@ -96,7 +96,7 @@ if ($response->ticketingCustomer !== null) {
 
 ## getTicketingCustomer
 
-Retrieve a customer
+Retrieves a single TicketingCustomer by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -147,7 +147,7 @@ if ($response->ticketingCustomer !== null) {
 
 ## listTicketingCustomers
 
-List all customers
+Returns a list of TicketingCustomers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -197,7 +197,7 @@ if ($response->ticketingCustomers !== null) {
 
 ## patchTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -227,7 +227,7 @@ $request = new Operations\PatchTicketingCustomerRequest(
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: '75ff56c0-e087-452f-821a-1b48af1f3273',
+        id: 'da97a462-260f-4918-a35a-2da43dc69624',
         metadata: [],
         name: 'Christian Windler',
         tags: [
@@ -248,7 +248,7 @@ $request = new Operations\PatchTicketingCustomerRequest(
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-04T01:56:17.639Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-05T22:22:31.327Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -281,7 +281,7 @@ if ($response->ticketingCustomer !== null) {
 
 ## removeTicketingCustomer
 
-Remove a customer
+Deletes the TicketingCustomer identified by `id`.
 
 ### Example Usage
 
@@ -332,7 +332,7 @@ if ($response->statusCode === 200) {
 
 ## updateTicketingCustomer
 
-Update a customer
+Updates the TicketingCustomer identified by `id`. Provide the unified TicketingCustomer fields to change in the request body.
 
 ### Example Usage
 
@@ -362,7 +362,7 @@ $request = new Operations\UpdateTicketingCustomerRequest(
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: '75ff56c0-e087-452f-821a-1b48af1f3273',
+        id: 'da97a462-260f-4918-a35a-2da43dc69624',
         metadata: [],
         name: 'Christian Windler',
         tags: [
@@ -383,7 +383,7 @@ $request = new Operations\UpdateTicketingCustomerRequest(
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-04T01:56:17.639Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-05T22:22:31.327Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

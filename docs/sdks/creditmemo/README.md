@@ -13,7 +13,7 @@
 
 ## createAccountingCreditmemo
 
-Create a creditmemo
+Creates a AccountingCreditmemo. Provide the unified AccountingCreditmemo fields in the request body; they are mapped to the provider's API. Returns the created AccountingCreditmemo.
 
 ### Example Usage
 
@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingCreditmemoRequest(
         creditmemoNumber: 'CM-99537',
         currency: 'AUD',
         discountAmount: 0,
-        id: '9c7c8eca-81ef-4776-840b-210a14223b3c',
+        id: 'e41c2e8f-2f8b-4c2d-9fa2-dbfe0c507e10',
         lineitems: [],
         metadata: [],
         notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -52,7 +52,7 @@ $request = new Operations\CreateAccountingCreditmemoRequest(
         status: Shared\AccountingCreditmemoStatus::Authorized,
         taxAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T07:57:22.889Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T14:30:43.020Z'),
     ),
     connectionId: '<id>',
 );
@@ -84,7 +84,7 @@ if ($response->accountingCreditmemo !== null) {
 
 ## getAccountingCreditmemo
 
-Retrieve a creditmemo
+Retrieves a single AccountingCreditmemo by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -135,7 +135,7 @@ if ($response->accountingCreditmemo !== null) {
 
 ## listAccountingCreditmemoes
 
-List all creditmemoes
+Returns a list of AccountingCreditmemoes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -185,7 +185,7 @@ if ($response->accountingCreditmemoes !== null) {
 
 ## patchAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -215,7 +215,7 @@ $request = new Operations\PatchAccountingCreditmemoRequest(
         creditmemoNumber: 'CM-99537',
         currency: 'AUD',
         discountAmount: 0,
-        id: '568d9318-1556-4402-88ff-ea980ec43dbe',
+        id: 'fe04c90f-0adf-4fb0-82e1-61d23fb2ace1',
         lineitems: [],
         metadata: [],
         notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -224,7 +224,7 @@ $request = new Operations\PatchAccountingCreditmemoRequest(
         status: Shared\AccountingCreditmemoStatus::Authorized,
         taxAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T07:57:22.916Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T14:30:43.054Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -257,7 +257,7 @@ if ($response->accountingCreditmemo !== null) {
 
 ## removeAccountingCreditmemo
 
-Remove a creditmemo
+Deletes the AccountingCreditmemo identified by `id`.
 
 ### Example Usage
 
@@ -308,7 +308,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingCreditmemo
 
-Update a creditmemo
+Updates the AccountingCreditmemo identified by `id`. Provide the unified AccountingCreditmemo fields to change in the request body.
 
 ### Example Usage
 
@@ -338,7 +338,7 @@ $request = new Operations\UpdateAccountingCreditmemoRequest(
         creditmemoNumber: 'CM-99537',
         currency: 'AUD',
         discountAmount: 0,
-        id: '568d9318-1556-4402-88ff-ea980ec43dbe',
+        id: 'fe04c90f-0adf-4fb0-82e1-61d23fb2ace1',
         lineitems: [],
         metadata: [],
         notes: 'Hic vorax dedecor amo adfero torqueo quas victoria.',
@@ -347,7 +347,7 @@ $request = new Operations\UpdateAccountingCreditmemoRequest(
         status: Shared\AccountingCreditmemoStatus::Authorized,
         taxAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T07:57:22.916Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T14:30:43.054Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

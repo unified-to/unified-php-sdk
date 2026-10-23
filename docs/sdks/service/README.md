@@ -13,7 +13,7 @@
 
 ## createComputeService
 
-Create a service
+Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
 ### Example Usage
 
@@ -39,7 +39,7 @@ $request = new Operations\CreateComputeServiceRequest(
         branch: 'main',
         buildCommand: 'npm run build',
         createdAt: Utils\Utils::parseDateTime('2023-10-04T02:06:29.391Z'),
-        id: 'b1ada32d-e859-4f4d-9be6-71cddc9e2727',
+        id: '22760591-f13e-4b8d-8e10-7e3a9bc2269b',
         instanceCount: 6,
         maxInstanceCount: 6,
         metadata: [],
@@ -50,7 +50,7 @@ $request = new Operations\CreateComputeServiceRequest(
         runtime: 'python',
         status: Shared\ComputeServiceStatus::Suspended,
         type: Shared\ComputeServiceType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-04T16:30:27.060Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-05T16:00:31.772Z'),
         url: 'https://tame-sideboard.rotating-shoulder.biz',
     ),
     connectionId: '<id>',
@@ -83,7 +83,7 @@ if ($response->computeService !== null) {
 
 ## getComputeService
 
-Retrieve a service
+Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ if ($response->computeService !== null) {
 
 ## listComputeServices
 
-List all services
+Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ if ($response->computeServices !== null) {
 
 ## patchComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -210,7 +210,7 @@ $request = new Operations\PatchComputeServiceRequest(
         branch: 'main',
         buildCommand: 'npm run build',
         createdAt: Utils\Utils::parseDateTime('2023-10-04T02:06:29.391Z'),
-        id: '43273ad6-5268-461f-88b5-814d999d20b3',
+        id: 'b55fded7-57df-438d-8445-077c82b0d96b',
         instanceCount: 6,
         maxInstanceCount: 6,
         metadata: [],
@@ -221,7 +221,7 @@ $request = new Operations\PatchComputeServiceRequest(
         runtime: 'python',
         status: Shared\ComputeServiceStatus::Suspended,
         type: Shared\ComputeServiceType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-04T16:30:27.072Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-05T16:00:31.785Z'),
         url: 'https://tame-sideboard.rotating-shoulder.biz',
     ),
     connectionId: '<id>',
@@ -255,7 +255,7 @@ if ($response->computeService !== null) {
 
 ## removeComputeService
 
-Remove a service
+Deletes the ComputeService identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ if ($response->statusCode === 200) {
 
 ## updateComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -332,7 +332,7 @@ $request = new Operations\UpdateComputeServiceRequest(
         branch: 'main',
         buildCommand: 'npm run build',
         createdAt: Utils\Utils::parseDateTime('2023-10-04T02:06:29.391Z'),
-        id: '43273ad6-5268-461f-88b5-814d999d20b3',
+        id: 'b55fded7-57df-438d-8445-077c82b0d96b',
         instanceCount: 6,
         maxInstanceCount: 6,
         metadata: [],
@@ -343,7 +343,7 @@ $request = new Operations\UpdateComputeServiceRequest(
         runtime: 'python',
         status: Shared\ComputeServiceStatus::Suspended,
         type: Shared\ComputeServiceType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-04T16:30:27.072Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-05T16:00:31.785Z'),
         url: 'https://tame-sideboard.rotating-shoulder.biz',
     ),
     connectionId: '<id>',

@@ -13,7 +13,7 @@
 
 ## createCommerceReservation
 
-Create a reservation
+Creates a CommerceReservation. Provide the unified CommerceReservation fields in the request body; they are mapped to the provider's API. Returns the created CommerceReservation.
 
 ### Example Usage
 
@@ -41,13 +41,13 @@ $request = new Operations\CreateCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: '0ef71e6c-d9d9-4c9f-b62a-3f0f0f56fb0f',
+        id: '8fc9ed13-ae4e-4a15-bb40-bbb5b203a787',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-03T21:23:50.117Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-04T07:45:43.823Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -80,7 +80,7 @@ if ($response->commerceReservation !== null) {
 
 ## getCommerceReservation
 
-Retrieve a reservation
+Retrieves a single CommerceReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ if ($response->commerceReservation !== null) {
 
 ## listCommerceReservations
 
-List all reservations
+Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -181,7 +181,7 @@ if ($response->commerceReservations !== null) {
 
 ## patchCommerceReservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -209,13 +209,13 @@ $request = new Operations\PatchCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: '4c9dd695-6c67-4102-9022-4ea5300139ad',
+        id: 'a5c680e7-8a89-412e-9043-134d1481fef3',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-03T21:23:50.121Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-04T07:45:43.827Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -249,7 +249,7 @@ if ($response->commerceReservation !== null) {
 
 ## removeCommerceReservation
 
-Remove a reservation
+Deletes the CommerceReservation identified by `id`.
 
 ### Example Usage
 
@@ -300,7 +300,7 @@ if ($response->statusCode === 200) {
 
 ## updateCommerceReservation
 
-Update a reservation
+Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
 
 ### Example Usage
 
@@ -328,13 +328,13 @@ $request = new Operations\UpdateCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: '4c9dd695-6c67-4102-9022-4ea5300139ad',
+        id: 'a5c680e7-8a89-412e-9043-134d1481fef3',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-03T21:23:50.121Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-04T07:45:43.827Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',

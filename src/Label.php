@@ -47,6 +47,8 @@ class Label
     /**
      * Create a label
      *
+     * Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Label
     /**
      * Retrieve a label
      *
+     * Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Label
     /**
      * List all labels
      *
+     * Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListShippingLabelsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListShippingLabelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Label
 
     /**
      * Update a label
+     *
+     * Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchShippingLabelResponse
@@ -309,6 +317,8 @@ class Label
     /**
      * Remove a label
      *
+     * Deletes the ShippingLabel identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Label
 
     /**
      * Update a label
+     *
+     * Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateShippingLabelResponse

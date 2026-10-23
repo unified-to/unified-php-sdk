@@ -47,6 +47,8 @@ class Commit
     /**
      * Create a commit
      *
+     * Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Commit
     /**
      * Retrieve a commit
      *
+     * Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Commit
     /**
      * List all commits
      *
+     * Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoCommitsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoCommitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Commit
 
     /**
      * Update a commit
+     *
+     * Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoCommitResponse
@@ -309,6 +317,8 @@ class Commit
     /**
      * Remove a commit
      *
+     * Deletes the RepoCommit identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Commit
 
     /**
      * Update a commit
+     *
+     * Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoCommitResponse

@@ -13,7 +13,7 @@
 
 ## createKmsPage
 
-Create a page
+Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 
 ### Example Usage
 
@@ -39,12 +39,12 @@ $request = new Operations\CreateKmsPageRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
         downloadUrl: 'https://agitated-validity.info',
         hasChildren: true,
-        id: '6ddf7535-f377-4882-8d68-f853b3459224',
+        id: '3e3f360a-de43-4650-a9bd-911dfb7ed5ac',
         isActive: true,
         metadata: [],
         title: 'even minister extract',
         type: Shared\KmsPageType::Html,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-09T04:22:36.892Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-10T21:25:24.997Z'),
         webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
@@ -77,7 +77,7 @@ if ($response->kmsPage !== null) {
 
 ## getKmsPage
 
-Retrieve a page
+Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -128,7 +128,7 @@ if ($response->kmsPage !== null) {
 
 ## listKmsPages
 
-List all pages
+Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -178,7 +178,7 @@ if ($response->kmsPages !== null) {
 
 ## patchKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -204,12 +204,12 @@ $request = new Operations\PatchKmsPageRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
         downloadUrl: 'https://agitated-validity.info',
         hasChildren: true,
-        id: '8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7',
+        id: 'a3213212-f378-45d5-8801-204ceeee06da',
         isActive: true,
         metadata: [],
         title: 'even minister extract',
         type: Shared\KmsPageType::Html,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-09T04:22:36.905Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-10T21:25:25.025Z'),
         webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
@@ -243,7 +243,7 @@ if ($response->kmsPage !== null) {
 
 ## removeKmsPage
 
-Remove a page
+Deletes the KmsPage identified by `id`.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ if ($response->statusCode === 200) {
 
 ## updateKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -320,12 +320,12 @@ $request = new Operations\UpdateKmsPageRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
         downloadUrl: 'https://agitated-validity.info',
         hasChildren: true,
-        id: '8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7',
+        id: 'a3213212-f378-45d5-8801-204ceeee06da',
         isActive: true,
         metadata: [],
         title: 'even minister extract',
         type: Shared\KmsPageType::Html,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-09T04:22:36.905Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-10T21:25:25.025Z'),
         webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',

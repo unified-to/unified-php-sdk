@@ -47,6 +47,8 @@ class Hris
     /**
      * Create an attendance
      *
+     * Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisAttendanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisAttendanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Hris
 
     /**
      * Create a bankaccount
+     *
+     * Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisBankaccountResponse
@@ -183,6 +187,8 @@ class Hris
     /**
      * Create a benefit
      *
+     * Creates a HrisBenefit. Provide the unified HrisBenefit fields in the request body; they are mapped to the provider's API. Returns the created HrisBenefit.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Hris
 
     /**
      * Create a company
+     *
+     * Creates a HrisCompany. Provide the unified HrisCompany fields in the request body; they are mapped to the provider's API. Returns the created HrisCompany.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisCompanyResponse
@@ -319,6 +327,8 @@ class Hris
     /**
      * Create a deduction
      *
+     * Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Hris
 
     /**
      * Create a device
+     *
+     * Creates a HrisDevice. Provide the unified HrisDevice fields in the request body; they are mapped to the provider's API. Returns the created HrisDevice.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisDeviceResponse
@@ -455,6 +467,8 @@ class Hris
     /**
      * Create a document
      *
+     * Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -522,6 +536,8 @@ class Hris
 
     /**
      * Create an earning
+     *
+     * Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisEarningResponse
@@ -591,6 +607,8 @@ class Hris
     /**
      * Create an employee
      *
+     * Creates a HrisEmployee. Provide the unified HrisEmployee fields in the request body; they are mapped to the provider's API. Returns the created HrisEmployee.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -658,6 +676,8 @@ class Hris
 
     /**
      * Create a group
+     *
+     * Creates a HrisGroup. Provide the unified HrisGroup fields in the request body; they are mapped to the provider's API. Returns the created HrisGroup.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisGroupResponse
@@ -727,6 +747,8 @@ class Hris
     /**
      * Create a job
      *
+     * Creates a HrisJob. Provide the unified HrisJob fields in the request body; they are mapped to the provider's API. Returns the created HrisJob.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -794,6 +816,8 @@ class Hris
 
     /**
      * Create a location
+     *
+     * Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisLocationResponse
@@ -863,6 +887,8 @@ class Hris
     /**
      * Create a taxonomy
      *
+     * Creates a HrisTaxonomy. Provide the unified HrisTaxonomy fields in the request body; they are mapped to the provider's API. Returns the created HrisTaxonomy.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisTaxonomyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisTaxonomyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -930,6 +956,8 @@ class Hris
 
     /**
      * Create a timeoff
+     *
+     * Creates a HrisTimeoff. Provide the unified HrisTimeoff fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeoff.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisTimeoffRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisTimeoffResponse
@@ -999,6 +1027,8 @@ class Hris
     /**
      * Create a timeshift
      *
+     * Creates a HrisTimeshift. Provide the unified HrisTimeshift fields in the request body; they are mapped to the provider's API. Returns the created HrisTimeshift.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1067,6 +1097,8 @@ class Hris
     /**
      * Retrieve an attendance
      *
+     * Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisAttendanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisAttendanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1129,6 +1161,8 @@ class Hris
 
     /**
      * Retrieve a bankaccount
+     *
+     * Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisBankaccountResponse
@@ -1193,6 +1227,8 @@ class Hris
     /**
      * Retrieve a benefit
      *
+     * Retrieves a single HrisBenefit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1255,6 +1291,8 @@ class Hris
 
     /**
      * Retrieve a company
+     *
+     * Retrieves a single HrisCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisCompanyResponse
@@ -1319,6 +1357,8 @@ class Hris
     /**
      * Retrieve a deduction
      *
+     * Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1381,6 +1421,8 @@ class Hris
 
     /**
      * Retrieve a device
+     *
+     * Retrieves a single HrisDevice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisDeviceResponse
@@ -1445,6 +1487,8 @@ class Hris
     /**
      * Retrieve a document
      *
+     * Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1507,6 +1551,8 @@ class Hris
 
     /**
      * Retrieve an earning
+     *
+     * Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisEarningResponse
@@ -1571,6 +1617,8 @@ class Hris
     /**
      * Retrieve an employee
      *
+     * Retrieves a single HrisEmployee by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1633,6 +1681,8 @@ class Hris
 
     /**
      * Retrieve a group
+     *
+     * Retrieves a single HrisGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisGroupResponse
@@ -1697,6 +1747,8 @@ class Hris
     /**
      * Retrieve a job
      *
+     * Retrieves a single HrisJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1759,6 +1811,8 @@ class Hris
 
     /**
      * Retrieve a location
+     *
+     * Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisLocationResponse
@@ -1823,6 +1877,8 @@ class Hris
     /**
      * Retrieve a paycode
      *
+     * Retrieves a single HrisPaycode by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisPaycodeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisPaycodeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1885,6 +1941,8 @@ class Hris
 
     /**
      * Retrieve a payroll
+     *
+     * Retrieves a single HrisPayroll by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisPayrollRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisPayrollResponse
@@ -1949,6 +2007,8 @@ class Hris
     /**
      * Retrieve a payslip
      *
+     * Retrieves a single HrisPayslip by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisPayslipRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisPayslipResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2011,6 +2071,8 @@ class Hris
 
     /**
      * Retrieve a taxonomy
+     *
+     * Retrieves a single HrisTaxonomy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisTaxonomyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisTaxonomyResponse
@@ -2075,6 +2137,8 @@ class Hris
     /**
      * Retrieve a timeoff
      *
+     * Retrieves a single HrisTimeoff by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeoffRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2137,6 +2201,8 @@ class Hris
 
     /**
      * Retrieve a timeshift
+     *
+     * Retrieves a single HrisTimeshift by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisTimeshiftResponse
@@ -2201,6 +2267,8 @@ class Hris
     /**
      * List all attendances
      *
+     * Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisAttendancesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisAttendancesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2263,6 +2331,8 @@ class Hris
 
     /**
      * List all bankaccounts
+     *
+     * Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisBankaccountsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisBankaccountsResponse
@@ -2327,6 +2397,8 @@ class Hris
     /**
      * List all benefits
      *
+     * Returns a list of HrisBenefits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisBenefitsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisBenefitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2389,6 +2461,8 @@ class Hris
 
     /**
      * List all companies
+     *
+     * Returns a list of HrisCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisCompaniesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisCompaniesResponse
@@ -2453,6 +2527,8 @@ class Hris
     /**
      * List all deductions
      *
+     * Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisDeductionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisDeductionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2515,6 +2591,8 @@ class Hris
 
     /**
      * List all devices
+     *
+     * Returns a list of HrisDevices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisDevicesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisDevicesResponse
@@ -2579,6 +2657,8 @@ class Hris
     /**
      * List all documents
      *
+     * Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisDocumentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisDocumentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2641,6 +2721,8 @@ class Hris
 
     /**
      * List all earnings
+     *
+     * Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisEarningsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisEarningsResponse
@@ -2705,6 +2787,8 @@ class Hris
     /**
      * List all employees
      *
+     * Returns a list of HrisEmployees. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisEmployeesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisEmployeesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2767,6 +2851,8 @@ class Hris
 
     /**
      * List all groups
+     *
+     * Returns a list of HrisGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisGroupsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisGroupsResponse
@@ -2831,6 +2917,8 @@ class Hris
     /**
      * List all jobs
      *
+     * Returns a list of HrisJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisJobsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisJobsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2893,6 +2981,8 @@ class Hris
 
     /**
      * List all locations
+     *
+     * Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisLocationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisLocationsResponse
@@ -2957,6 +3047,8 @@ class Hris
     /**
      * List all paycodes
      *
+     * Returns a list of HrisPaycodes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisPaycodesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisPaycodesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3019,6 +3111,8 @@ class Hris
 
     /**
      * List all payrolls
+     *
+     * Returns a list of HrisPayrolls. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisPayrollsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisPayrollsResponse
@@ -3083,6 +3177,8 @@ class Hris
     /**
      * List all payslips
      *
+     * Returns a list of HrisPayslips. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisPayslipsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisPayslipsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3145,6 +3241,8 @@ class Hris
 
     /**
      * List all taxonomies
+     *
+     * Returns a list of HrisTaxonomies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisTaxonomiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisTaxonomiesResponse
@@ -3209,6 +3307,8 @@ class Hris
     /**
      * List all timeoffs
      *
+     * Returns a list of HrisTimeoffs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeoffsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisTimeoffsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3272,6 +3372,8 @@ class Hris
     /**
      * List all timeshifts
      *
+     * Returns a list of HrisTimeshifts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisTimeshiftsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisTimeshiftsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3334,6 +3436,8 @@ class Hris
 
     /**
      * Update an attendance
+     *
+     * Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisAttendanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisAttendanceResponse
@@ -3403,6 +3507,8 @@ class Hris
     /**
      * Update a bankaccount
      *
+     * Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3470,6 +3576,8 @@ class Hris
 
     /**
      * Update a benefit
+     *
+     * Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisBenefitResponse
@@ -3539,6 +3647,8 @@ class Hris
     /**
      * Update a company
      *
+     * Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3606,6 +3716,8 @@ class Hris
 
     /**
      * Update a deduction
+     *
+     * Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisDeductionResponse
@@ -3675,6 +3787,8 @@ class Hris
     /**
      * Update a device
      *
+     * Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3742,6 +3856,8 @@ class Hris
 
     /**
      * Update a document
+     *
+     * Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisDocumentResponse
@@ -3811,6 +3927,8 @@ class Hris
     /**
      * Update an earning
      *
+     * Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisEarningResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3878,6 +3996,8 @@ class Hris
 
     /**
      * Update an employee
+     *
+     * Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisEmployeeResponse
@@ -3947,6 +4067,8 @@ class Hris
     /**
      * Update a group
      *
+     * Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4014,6 +4136,8 @@ class Hris
 
     /**
      * Update a job
+     *
+     * Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisJobResponse
@@ -4083,6 +4207,8 @@ class Hris
     /**
      * Update a location
      *
+     * Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4150,6 +4276,8 @@ class Hris
 
     /**
      * Update a timeoff
+     *
+     * Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisTimeoffRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisTimeoffResponse
@@ -4219,6 +4347,8 @@ class Hris
     /**
      * Update a timeshift
      *
+     * Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4287,6 +4417,8 @@ class Hris
     /**
      * Remove an attendance
      *
+     * Deletes the HrisAttendance identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisAttendanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisAttendanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4343,6 +4475,8 @@ class Hris
 
     /**
      * Remove a bankaccount
+     *
+     * Deletes the HrisBankaccount identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisBankaccountResponse
@@ -4401,6 +4535,8 @@ class Hris
     /**
      * Remove a benefit
      *
+     * Deletes the HrisBenefit identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisBenefitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4457,6 +4593,8 @@ class Hris
 
     /**
      * Remove a company
+     *
+     * Deletes the HrisCompany identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisCompanyResponse
@@ -4515,6 +4653,8 @@ class Hris
     /**
      * Remove a deduction
      *
+     * Deletes the HrisDeduction identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4571,6 +4711,8 @@ class Hris
 
     /**
      * Remove a device
+     *
+     * Deletes the HrisDevice identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeviceResponse
@@ -4629,6 +4771,8 @@ class Hris
     /**
      * Remove a document
      *
+     * Deletes the HrisDocument identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4685,6 +4829,8 @@ class Hris
 
     /**
      * Remove an earning
+     *
+     * Deletes the HrisEarning identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisEarningResponse
@@ -4743,6 +4889,8 @@ class Hris
     /**
      * Remove an employee
      *
+     * Deletes the HrisEmployee identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisEmployeeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4799,6 +4947,8 @@ class Hris
 
     /**
      * Remove a group
+     *
+     * Deletes the HrisGroup identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisGroupResponse
@@ -4857,6 +5007,8 @@ class Hris
     /**
      * Remove a job
      *
+     * Deletes the HrisJob identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -4913,6 +5065,8 @@ class Hris
 
     /**
      * Remove a location
+     *
+     * Deletes the HrisLocation identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse
@@ -4971,6 +5125,8 @@ class Hris
     /**
      * Remove a timeoff
      *
+     * Deletes the HrisTimeoff identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTimeoffRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5028,6 +5184,8 @@ class Hris
     /**
      * Remove a timeshift
      *
+     * Deletes the HrisTimeshift identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisTimeshiftResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5084,6 +5242,8 @@ class Hris
 
     /**
      * Update an attendance
+     *
+     * Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisAttendanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisAttendanceResponse
@@ -5153,6 +5313,8 @@ class Hris
     /**
      * Update a bankaccount
      *
+     * Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisBankaccountResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5220,6 +5382,8 @@ class Hris
 
     /**
      * Update a benefit
+     *
+     * Updates the HrisBenefit identified by `id`. Provide the unified HrisBenefit fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisBenefitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisBenefitResponse
@@ -5289,6 +5453,8 @@ class Hris
     /**
      * Update a company
      *
+     * Updates the HrisCompany identified by `id`. Provide the unified HrisCompany fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5356,6 +5522,8 @@ class Hris
 
     /**
      * Update a deduction
+     *
+     * Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeductionResponse
@@ -5425,6 +5593,8 @@ class Hris
     /**
      * Update a device
      *
+     * Updates the HrisDevice identified by `id`. Provide the unified HrisDevice fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeviceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeviceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5492,6 +5662,8 @@ class Hris
 
     /**
      * Update a document
+     *
+     * Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisDocumentResponse
@@ -5561,6 +5733,8 @@ class Hris
     /**
      * Update an earning
      *
+     * Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisEarningRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisEarningResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5628,6 +5802,8 @@ class Hris
 
     /**
      * Update an employee
+     *
+     * Updates the HrisEmployee identified by `id`. Provide the unified HrisEmployee fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisEmployeeResponse
@@ -5697,6 +5873,8 @@ class Hris
     /**
      * Update a group
      *
+     * Updates the HrisGroup identified by `id`. Provide the unified HrisGroup fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5764,6 +5942,8 @@ class Hris
 
     /**
      * Update a job
+     *
+     * Updates the HrisJob identified by `id`. Provide the unified HrisJob fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisJobResponse
@@ -5833,6 +6013,8 @@ class Hris
     /**
      * Update a location
      *
+     * Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5901,6 +6083,8 @@ class Hris
     /**
      * Update a timeoff
      *
+     * Updates the HrisTimeoff identified by `id`. Provide the unified HrisTimeoff fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTimeoffRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisTimeoffResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -5968,6 +6152,8 @@ class Hris
 
     /**
      * Update a timeshift
+     *
+     * Updates the HrisTimeshift identified by `id`. Provide the unified HrisTimeshift fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisTimeshiftResponse

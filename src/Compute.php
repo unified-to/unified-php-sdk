@@ -47,6 +47,8 @@ class Compute
     /**
      * Create a deployment
      *
+     * Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeDeploymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Compute
 
     /**
      * Create a domain
+     *
+     * Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeDomainResponse
@@ -183,6 +187,8 @@ class Compute
     /**
      * Create an envvar
      *
+     * Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeEnvvarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeEnvvarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Compute
 
     /**
      * Create an instance
+     *
+     * Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeInstanceResponse
@@ -319,6 +327,8 @@ class Compute
     /**
      * Create a key
      *
+     * Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeKeyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Compute
 
     /**
      * Create a service
+     *
+     * Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeServiceResponse
@@ -455,6 +467,8 @@ class Compute
     /**
      * Create a snapshot
      *
+     * Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeSnapshotRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeSnapshotResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -522,6 +536,8 @@ class Compute
 
     /**
      * Create a template
+     *
+     * Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeTemplateResponse
@@ -591,6 +607,8 @@ class Compute
     /**
      * Create a volume
      *
+     * Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeVolumeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -659,6 +677,8 @@ class Compute
     /**
      * Retrieve a deployment
      *
+     * Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeDeploymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -721,6 +741,8 @@ class Compute
 
     /**
      * Retrieve a domain
+     *
+     * Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeDomainResponse
@@ -785,6 +807,8 @@ class Compute
     /**
      * Retrieve an envvar
      *
+     * Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeEnvvarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeEnvvarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -847,6 +871,8 @@ class Compute
 
     /**
      * Retrieve a gputype
+     *
+     * Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeGputypeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeGputypeResponse
@@ -911,6 +937,8 @@ class Compute
     /**
      * Retrieve an instance
      *
+     * Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeInstanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -973,6 +1001,8 @@ class Compute
 
     /**
      * Retrieve a key
+     *
+     * Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeKeyResponse
@@ -1037,6 +1067,8 @@ class Compute
     /**
      * Retrieve a region
      *
+     * Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeRegionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeRegionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1099,6 +1131,8 @@ class Compute
 
     /**
      * Retrieve a service
+     *
+     * Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeServiceResponse
@@ -1163,6 +1197,8 @@ class Compute
     /**
      * Retrieve a snapshot
      *
+     * Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeSnapshotRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeSnapshotResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1225,6 +1261,8 @@ class Compute
 
     /**
      * Retrieve a template
+     *
+     * Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeTemplateResponse
@@ -1289,6 +1327,8 @@ class Compute
     /**
      * Retrieve a volume
      *
+     * Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeVolumeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1351,6 +1391,8 @@ class Compute
 
     /**
      * List all deployments
+     *
+     * Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeDeploymentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeDeploymentsResponse
@@ -1415,6 +1457,8 @@ class Compute
     /**
      * List all domains
      *
+     * Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeDomainsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeDomainsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1477,6 +1521,8 @@ class Compute
 
     /**
      * List all envvars
+     *
+     * Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeEnvvarsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeEnvvarsResponse
@@ -1541,6 +1587,8 @@ class Compute
     /**
      * List all gputypes
      *
+     * Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeGputypesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeGputypesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1603,6 +1651,8 @@ class Compute
 
     /**
      * List all instances
+     *
+     * Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeInstancesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeInstancesResponse
@@ -1667,6 +1717,8 @@ class Compute
     /**
      * List all keys
      *
+     * Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeKeysRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeKeysResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1729,6 +1781,8 @@ class Compute
 
     /**
      * List all regions
+     *
+     * Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeRegionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeRegionsResponse
@@ -1793,6 +1847,8 @@ class Compute
     /**
      * List all services
      *
+     * Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeServicesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeServicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1855,6 +1911,8 @@ class Compute
 
     /**
      * List all snapshots
+     *
+     * Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeSnapshotsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeSnapshotsResponse
@@ -1919,6 +1977,8 @@ class Compute
     /**
      * List all templates
      *
+     * Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeTemplatesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeTemplatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1981,6 +2041,8 @@ class Compute
 
     /**
      * List all usages
+     *
+     * Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeUsagesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeUsagesResponse
@@ -2045,6 +2107,8 @@ class Compute
     /**
      * List all volumes
      *
+     * Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeVolumesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeVolumesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2107,6 +2171,8 @@ class Compute
 
     /**
      * Update a deployment
+     *
+     * Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeDeploymentResponse
@@ -2176,6 +2242,8 @@ class Compute
     /**
      * Update a domain
      *
+     * Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeDomainResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2243,6 +2311,8 @@ class Compute
 
     /**
      * Update an envvar
+     *
+     * Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeEnvvarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeEnvvarResponse
@@ -2312,6 +2382,8 @@ class Compute
     /**
      * Update an instance
      *
+     * Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeInstanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2379,6 +2451,8 @@ class Compute
 
     /**
      * Update a key
+     *
+     * Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeKeyResponse
@@ -2448,6 +2522,8 @@ class Compute
     /**
      * Update a service
      *
+     * Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeServiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2515,6 +2591,8 @@ class Compute
 
     /**
      * Update a template
+     *
+     * Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeTemplateResponse
@@ -2584,6 +2662,8 @@ class Compute
     /**
      * Update a volume
      *
+     * Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeVolumeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2652,6 +2732,8 @@ class Compute
     /**
      * Remove a deployment
      *
+     * Deletes the ComputeDeployment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeDeploymentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2708,6 +2790,8 @@ class Compute
 
     /**
      * Remove a domain
+     *
+     * Deletes the ComputeDomain identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeDomainResponse
@@ -2766,6 +2850,8 @@ class Compute
     /**
      * Remove an envvar
      *
+     * Deletes the ComputeEnvvar identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeEnvvarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeEnvvarResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2822,6 +2908,8 @@ class Compute
 
     /**
      * Remove an instance
+     *
+     * Deletes the ComputeInstance identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeInstanceResponse
@@ -2880,6 +2968,8 @@ class Compute
     /**
      * Remove a key
      *
+     * Deletes the ComputeKey identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeKeyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2936,6 +3026,8 @@ class Compute
 
     /**
      * Remove a service
+     *
+     * Deletes the ComputeService identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeServiceResponse
@@ -2994,6 +3086,8 @@ class Compute
     /**
      * Remove a snapshot
      *
+     * Deletes the ComputeSnapshot identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeSnapshotRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeSnapshotResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3050,6 +3144,8 @@ class Compute
 
     /**
      * Remove a template
+     *
+     * Deletes the ComputeTemplate identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeTemplateResponse
@@ -3108,6 +3204,8 @@ class Compute
     /**
      * Remove a volume
      *
+     * Deletes the ComputeVolume identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeVolumeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3164,6 +3262,8 @@ class Compute
 
     /**
      * Update a deployment
+     *
+     * Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeDeploymentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeDeploymentResponse
@@ -3233,6 +3333,8 @@ class Compute
     /**
      * Update a domain
      *
+     * Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeDomainRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeDomainResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3300,6 +3402,8 @@ class Compute
 
     /**
      * Update an envvar
+     *
+     * Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeEnvvarRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeEnvvarResponse
@@ -3369,6 +3473,8 @@ class Compute
     /**
      * Update an instance
      *
+     * Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeInstanceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeInstanceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3436,6 +3542,8 @@ class Compute
 
     /**
      * Update a key
+     *
+     * Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeKeyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeKeyResponse
@@ -3505,6 +3613,8 @@ class Compute
     /**
      * Update a service
      *
+     * Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeServiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3573,6 +3683,8 @@ class Compute
     /**
      * Update a template
      *
+     * Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeTemplateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3640,6 +3752,8 @@ class Compute
 
     /**
      * Update a volume
+     *
+     * Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeVolumeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeVolumeResponse

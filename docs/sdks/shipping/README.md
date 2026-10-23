@@ -24,7 +24,7 @@
 
 ## createShippingLabel
 
-Create a label
+Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
 
 ### Example Usage
 
@@ -48,17 +48,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: 'd84cfc51-3ee3-43f1-85b1-a3f3e9704c6a',
+        id: '314a330f-6ac9-4b67-a677-b76c87a60f32',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
         labelFormat: Shared\LabelFormat::Png,
-        labelUrl: 'https://labels.example.com/d84cfc51-3ee3-43f1-85b1-a3f3e9704c6a.pdf',
+        labelUrl: 'https://labels.example.com/314a330f-6ac9-4b67-a677-b76c87a60f32.pdf',
         metadata: [],
         serviceCode: 'Dzy',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'ZYV60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-28T21:53:50.785Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-29T15:26:46.564Z'),
     ),
     connectionId: '<id>',
 );
@@ -90,7 +90,7 @@ if ($response->shippingLabel !== null) {
 
 ## createShippingRate
 
-Create a rate
+Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
 
 ### Example Usage
 
@@ -114,7 +114,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingRateRequest(
     shippingRate: new Shared\ShippingRate(
         currency: 'USD',
-        id: '01f6f2cf-1d29-4d5f-833e-d6d1dcfad6c9',
+        id: '30e738c4-c3a5-4e6d-a9f8-811af169af55',
         metadata: [],
         rates: [
             new Shared\ShippingRateRate(
@@ -162,7 +162,7 @@ if ($response->shippingRate !== null) {
 
 ## createShippingShipment
 
-Create a shipment
+Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
 
 ### Example Usage
 
@@ -186,7 +186,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: 'aa5f6c4a-01d3-48d7-882d-b4d25280042f',
+        id: 'a97b9394-530d-4c94-bd61-5ac70a910d7f',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -196,7 +196,7 @@ $request = new Operations\CreateShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-15T06:46:20.874Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-15T08:48:41.556Z'),
     ),
     connectionId: '<id>',
 );
@@ -228,7 +228,7 @@ if ($response->shippingShipment !== null) {
 
 ## getShippingCarrier
 
-Retrieve a carrier
+Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -279,7 +279,7 @@ if ($response->shippingCarrier !== null) {
 
 ## getShippingLabel
 
-Retrieve a label
+Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -330,7 +330,7 @@ if ($response->shippingLabel !== null) {
 
 ## getShippingShipment
 
-Retrieve a shipment
+Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -381,7 +381,7 @@ if ($response->shippingShipment !== null) {
 
 ## getShippingTracking
 
-Retrieve a tracking
+Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -432,7 +432,7 @@ if ($response->shippingTracking !== null) {
 
 ## listShippingCarriers
 
-List all carriers
+Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -482,7 +482,7 @@ if ($response->shippingCarriers !== null) {
 
 ## listShippingLabels
 
-List all labels
+Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -532,7 +532,7 @@ if ($response->shippingLabels !== null) {
 
 ## listShippingShipments
 
-List all shipments
+Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -582,7 +582,7 @@ if ($response->shippingShipments !== null) {
 
 ## listShippingTrackings
 
-List all trackings
+Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -632,7 +632,7 @@ if ($response->shippingTrackings !== null) {
 
 ## patchShippingLabel
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -656,17 +656,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: 'b135e7ce-742d-4e70-9ad5-86820cfc5773',
+        id: '97024063-7323-4504-9028-b82eb5f7ae59',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
         labelFormat: Shared\LabelFormat::Png,
-        labelUrl: 'https://labels.example.com/b135e7ce-742d-4e70-9ad5-86820cfc5773.pdf',
+        labelUrl: 'https://labels.example.com/97024063-7323-4504-9028-b82eb5f7ae59.pdf',
         metadata: [],
         serviceCode: 'Dzy',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'ZYV60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-28T21:53:50.790Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-29T15:26:46.573Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -699,7 +699,7 @@ if ($response->shippingLabel !== null) {
 
 ## patchShippingShipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -723,7 +723,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: '1a7f03d0-ee89-4708-871e-abbc7015a961',
+        id: 'e395a54b-9c4e-4338-b2a8-841232973ca5',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -733,7 +733,7 @@ $request = new Operations\PatchShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-15T06:46:20.878Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-15T08:48:41.561Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -766,7 +766,7 @@ if ($response->shippingShipment !== null) {
 
 ## removeShippingLabel
 
-Remove a label
+Deletes the ShippingLabel identified by `id`.
 
 ### Example Usage
 
@@ -817,7 +817,7 @@ if ($response->statusCode === 200) {
 
 ## removeShippingShipment
 
-Remove a shipment
+Deletes the ShippingShipment identified by `id`.
 
 ### Example Usage
 
@@ -868,7 +868,7 @@ if ($response->statusCode === 200) {
 
 ## updateShippingLabel
 
-Update a label
+Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
 
 ### Example Usage
 
@@ -892,17 +892,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: 'b135e7ce-742d-4e70-9ad5-86820cfc5773',
+        id: '97024063-7323-4504-9028-b82eb5f7ae59',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
         labelFormat: Shared\LabelFormat::Png,
-        labelUrl: 'https://labels.example.com/b135e7ce-742d-4e70-9ad5-86820cfc5773.pdf',
+        labelUrl: 'https://labels.example.com/97024063-7323-4504-9028-b82eb5f7ae59.pdf',
         metadata: [],
         serviceCode: 'Dzy',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'ZYV60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-28T21:53:50.790Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-29T15:26:46.573Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -935,7 +935,7 @@ if ($response->shippingLabel !== null) {
 
 ## updateShippingShipment
 
-Update a shipment
+Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
 
 ### Example Usage
 
@@ -959,7 +959,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: '1a7f03d0-ee89-4708-871e-abbc7015a961',
+        id: 'e395a54b-9c4e-4338-b2a8-841232973ca5',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -969,7 +969,7 @@ $request = new Operations\UpdateShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-15T06:46:20.878Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-15T08:48:41.561Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

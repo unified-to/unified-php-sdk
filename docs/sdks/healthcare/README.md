@@ -37,7 +37,7 @@
 
 ## createHealthcareAppointment
 
-Create an appointment
+Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
 
 ### Example Usage
 
@@ -63,7 +63,7 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: 'e57d4ec5-b3c7-47c7-bf0d-adb561ff2349',
+        id: '4c54fcd9-632b-4b42-8562-8c42fd33efe1',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -83,7 +83,7 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-19T10:41:19.860Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-20T21:57:00.639Z'),
     ),
     connectionId: '<id>',
 );
@@ -115,7 +115,7 @@ if ($response->healthcareAppointment !== null) {
 
 ## createHealthcareObservation
 
-Create an observation
+Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 
 ### Example Usage
 
@@ -170,15 +170,15 @@ $request = new Operations\CreateHealthcareObservationRequest(
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2022-12-06T21:34:04.293Z'),
-        id: 'c618a863-9850-40c0-979c-241f62edc05a',
+        id: 'b1726807-dcc2-4bfa-943a-0f9ed186fee6',
         interpretation: Shared\Interpretation::CriticalHigh,
-        issuedAt: Utils\Utils::parseDateTime('2025-05-11T10:29:32.163Z'),
+        issuedAt: Utils\Utils::parseDateTime('2025-05-12T16:22:53.032Z'),
         metadata: [],
         name: 'Blood pressure panel',
-        observedAt: Utils\Utils::parseDateTime('2025-01-20T04:00:19.834Z'),
+        observedAt: Utils\Utils::parseDateTime('2025-01-21T06:08:35.617Z'),
         status: Shared\HealthcareObservationStatus::Corrected,
         type: Shared\HealthcareObservationType::VitalSigns,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-24T06:24:42.917Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-25T22:58:58.045Z'),
     ),
     connectionId: '<id>',
 );
@@ -210,7 +210,7 @@ if ($response->healthcareObservation !== null) {
 
 ## createHealthcarePatient
 
-Create a patient
+Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
 
 ### Example Usage
 
@@ -240,7 +240,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
             postalCode: '54031',
             region: 'Nebraska',
         ),
-        birthdate: '2025-02-12',
+        birthdate: '2025-02-14',
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
@@ -250,7 +250,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '71bef0d8-2160-4fef-8b45-37b8a6bb244f',
+        id: 'a52c9f25-c4f9-40c5-bd59-e9b9432ac692',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -270,7 +270,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-22T20:18:33.735Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-24T17:04:00.614Z'),
     ),
     connectionId: '<id>',
 );
@@ -302,7 +302,7 @@ if ($response->healthcarePatient !== null) {
 
 ## getHealthcareAllergy
 
-Retrieve an allergy
+Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -353,7 +353,7 @@ if ($response->healthcareAllergy !== null) {
 
 ## getHealthcareAppointment
 
-Retrieve an appointment
+Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -404,7 +404,7 @@ if ($response->healthcareAppointment !== null) {
 
 ## getHealthcareCondition
 
-Retrieve a condition
+Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -455,7 +455,7 @@ if ($response->healthcareCondition !== null) {
 
 ## getHealthcareEncounter
 
-Retrieve an encounter
+Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -506,7 +506,7 @@ if ($response->healthcareEncounter !== null) {
 
 ## getHealthcareImmunization
 
-Retrieve an immunization
+Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -557,7 +557,7 @@ if ($response->healthcareImmunization !== null) {
 
 ## getHealthcareLocation
 
-Retrieve a location
+Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -608,7 +608,7 @@ if ($response->healthcareLocation !== null) {
 
 ## getHealthcareMedication
 
-Retrieve a medication
+Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -659,7 +659,7 @@ if ($response->healthcareMedication !== null) {
 
 ## getHealthcareObservation
 
-Retrieve an observation
+Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -710,7 +710,7 @@ if ($response->healthcareObservation !== null) {
 
 ## getHealthcarePatient
 
-Retrieve a patient
+Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -761,7 +761,7 @@ if ($response->healthcarePatient !== null) {
 
 ## getHealthcarePractitioner
 
-Retrieve a practitioner
+Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -812,7 +812,7 @@ if ($response->healthcarePractitioner !== null) {
 
 ## getHealthcareSlot
 
-Retrieve a slot
+Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -863,7 +863,7 @@ if ($response->healthcareSlot !== null) {
 
 ## listHealthcareAllergies
 
-List all allergies
+Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -913,7 +913,7 @@ if ($response->healthcareAllergies !== null) {
 
 ## listHealthcareAppointments
 
-List all appointments
+Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -963,7 +963,7 @@ if ($response->healthcareAppointments !== null) {
 
 ## listHealthcareConditions
 
-List all conditions
+Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1013,7 +1013,7 @@ if ($response->healthcareConditions !== null) {
 
 ## listHealthcareEncounters
 
-List all encounters
+Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1063,7 +1063,7 @@ if ($response->healthcareEncounters !== null) {
 
 ## listHealthcareImmunizations
 
-List all immunizations
+Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1113,7 +1113,7 @@ if ($response->healthcareImmunizations !== null) {
 
 ## listHealthcareLocations
 
-List all locations
+Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1163,7 +1163,7 @@ if ($response->healthcareLocations !== null) {
 
 ## listHealthcareMedications
 
-List all medications
+Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1213,7 +1213,7 @@ if ($response->healthcareMedications !== null) {
 
 ## listHealthcareObservations
 
-List all observations
+Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1263,7 +1263,7 @@ if ($response->healthcareObservations !== null) {
 
 ## listHealthcarePatients
 
-List all patients
+Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1313,7 +1313,7 @@ if ($response->healthcarePatients !== null) {
 
 ## listHealthcarePractitioners
 
-List all practitioners
+Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1363,7 +1363,7 @@ if ($response->healthcarePractitioners !== null) {
 
 ## listHealthcareSlots
 
-List all slots
+Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1413,7 +1413,7 @@ if ($response->healthcareSlots !== null) {
 
 ## patchHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1439,7 +1439,7 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: 'cc805b15-1b9f-4db2-9608-a1472e62c59d',
+        id: '69b278e9-f7f9-4adc-bae7-8fee1aad0b6a',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -1459,7 +1459,7 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-19T10:41:19.878Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-20T21:57:00.654Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1492,7 +1492,7 @@ if ($response->healthcareAppointment !== null) {
 
 ## patchHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1522,7 +1522,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
             postalCode: '54031',
             region: 'Nebraska',
         ),
-        birthdate: '2025-02-12',
+        birthdate: '2025-02-14',
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
@@ -1532,7 +1532,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '570149a1-cb28-49d2-861b-e9417dc279e4',
+        id: 'bed47327-7098-4f38-8997-3634f77f065a',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -1552,7 +1552,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-22T20:18:33.752Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-24T17:04:00.643Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1585,7 +1585,7 @@ if ($response->healthcarePatient !== null) {
 
 ## removeHealthcareAppointment
 
-Remove an appointment
+Deletes the HealthcareAppointment identified by `id`.
 
 ### Example Usage
 
@@ -1636,7 +1636,7 @@ if ($response->statusCode === 200) {
 
 ## updateHealthcareAppointment
 
-Update an appointment
+Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
 
 ### Example Usage
 
@@ -1662,7 +1662,7 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: 'cc805b15-1b9f-4db2-9608-a1472e62c59d',
+        id: '69b278e9-f7f9-4adc-bae7-8fee1aad0b6a',
         metadata: [],
         practitionerIds: [],
         reasons: [
@@ -1682,7 +1682,7 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-19T10:41:19.878Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-20T21:57:00.654Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1715,7 +1715,7 @@ if ($response->healthcareAppointment !== null) {
 
 ## updateHealthcarePatient
 
-Update a patient
+Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
 
 ### Example Usage
 
@@ -1745,7 +1745,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
             postalCode: '54031',
             region: 'Nebraska',
         ),
-        birthdate: '2025-02-12',
+        birthdate: '2025-02-14',
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
@@ -1755,7 +1755,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '570149a1-cb28-49d2-861b-e9417dc279e4',
+        id: 'bed47327-7098-4f38-8997-3634f77f065a',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -1775,7 +1775,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-22T20:18:33.752Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-24T17:04:00.643Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

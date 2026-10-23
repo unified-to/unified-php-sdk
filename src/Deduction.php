@@ -47,6 +47,8 @@ class Deduction
     /**
      * Create a deduction
      *
+     * Creates a HrisDeduction. Provide the unified HrisDeduction fields in the request body; they are mapped to the provider's API. Returns the created HrisDeduction.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Deduction
     /**
      * Retrieve a deduction
      *
+     * Retrieves a single HrisDeduction by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Deduction
     /**
      * List all deductions
      *
+     * Returns a list of HrisDeductions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisDeductionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisDeductionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Deduction
 
     /**
      * Update a deduction
+     *
+     * Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisDeductionResponse
@@ -309,6 +317,8 @@ class Deduction
     /**
      * Remove a deduction
      *
+     * Deletes the HrisDeduction identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisDeductionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Deduction
 
     /**
      * Update a deduction
+     *
+     * Updates the HrisDeduction identified by `id`. Provide the unified HrisDeduction fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisDeductionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisDeductionResponse

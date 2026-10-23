@@ -47,6 +47,8 @@ class Instructor
     /**
      * Create an instructor
      *
+     * Creates a LmsInstructor. Provide the unified LmsInstructor fields in the request body; they are mapped to the provider's API. Returns the created LmsInstructor.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Instructor
     /**
      * Retrieve an instructor
      *
+     * Retrieves a single LmsInstructor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Instructor
     /**
      * List all instructors
      *
+     * Returns a list of LmsInstructors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLmsInstructorsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLmsInstructorsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Instructor
 
     /**
      * Update an instructor
+     *
+     * Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLmsInstructorResponse
@@ -309,6 +317,8 @@ class Instructor
     /**
      * Remove an instructor
      *
+     * Deletes the LmsInstructor identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLmsInstructorResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Instructor
 
     /**
      * Update an instructor
+     *
+     * Updates the LmsInstructor identified by `id`. Provide the unified LmsInstructor fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLmsInstructorRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLmsInstructorResponse

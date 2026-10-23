@@ -47,6 +47,8 @@ class Agent
     /**
      * Create an agent
      *
+     * Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiAgentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Agent
     /**
      * Retrieve an agent
      *
+     * Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiAgentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Agent
     /**
      * List all agents
      *
+     * Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiAgentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiAgentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Agent
 
     /**
      * Update an agent
+     *
+     * Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchGenaiAgentResponse
@@ -309,6 +317,8 @@ class Agent
     /**
      * Remove an agent
      *
+     * Deletes the GenaiAgent identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveGenaiAgentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Agent
 
     /**
      * Update an agent
+     *
+     * Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateGenaiAgentResponse

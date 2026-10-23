@@ -355,6 +355,7 @@ class AssessmentOrder
     public ?string $responseUrl = null;
 
     /**
+     * The current state of the assessment order
      *
      * @var ?\Unified\Unified_to\Models\Shared\AssessmentOrderStatus $status
      */

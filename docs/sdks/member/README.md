@@ -15,7 +15,7 @@
 
 ## createMartechMember
 
-Create a member
+Creates a MarketingMember. Provide the unified MarketingMember fields in the request body; they are mapped to the provider's API. Returns the created MarketingMember.
 
 ### Example Usage
 
@@ -47,7 +47,7 @@ $request = new Operations\CreateMartechMemberRequest(
             ),
         ],
         firstName: 'Jude',
-        id: 'd7b88a89-ae37-4349-a4d9-8a4beafb4569',
+        id: '270da929-b988-4159-8918-38d7bdde4ce8',
         lastName: 'Leffler',
         metadata: [],
         name: 'Jude Leffler',
@@ -56,7 +56,7 @@ $request = new Operations\CreateMartechMemberRequest(
             'adnuo',
             'verumtamen',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-08T19:52:27.940Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-10T05:59:16.554Z'),
     ),
     connectionId: '<id>',
 );
@@ -88,7 +88,7 @@ if ($response->marketingMember !== null) {
 
 ## getClubsMember
 
-Retrieve a member
+Retrieves a single ClubsMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -139,7 +139,7 @@ if ($response->clubsMember !== null) {
 
 ## getMartechMember
 
-Retrieve a member
+Retrieves a single MarketingMember by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -190,7 +190,7 @@ if ($response->marketingMember !== null) {
 
 ## listClubsMembers
 
-List all members
+Returns a list of ClubsMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -240,7 +240,7 @@ if ($response->clubsMembers !== null) {
 
 ## listMartechMembers
 
-List all members
+Returns a list of MarketingMembers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ if ($response->marketingMembers !== null) {
 
 ## patchMartechMember
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -322,7 +322,7 @@ $request = new Operations\PatchMartechMemberRequest(
             ),
         ],
         firstName: 'Jude',
-        id: 'e1a7a651-8834-4eb6-b703-61cf8cec3e72',
+        id: '2e8f501b-b93b-4cbe-807d-29c89dba8c62',
         lastName: 'Leffler',
         metadata: [],
         name: 'Jude Leffler',
@@ -331,7 +331,7 @@ $request = new Operations\PatchMartechMemberRequest(
             'adnuo',
             'verumtamen',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-08T19:52:27.952Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-10T05:59:16.568Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -364,7 +364,7 @@ if ($response->marketingMember !== null) {
 
 ## removeMartechMember
 
-Remove a member
+Deletes the MarketingMember identified by `id`.
 
 ### Example Usage
 
@@ -415,7 +415,7 @@ if ($response->statusCode === 200) {
 
 ## updateMartechMember
 
-Update a member
+Updates the MarketingMember identified by `id`. Provide the unified MarketingMember fields to change in the request body.
 
 ### Example Usage
 
@@ -447,7 +447,7 @@ $request = new Operations\UpdateMartechMemberRequest(
             ),
         ],
         firstName: 'Jude',
-        id: 'e1a7a651-8834-4eb6-b703-61cf8cec3e72',
+        id: '2e8f501b-b93b-4cbe-807d-29c89dba8c62',
         lastName: 'Leffler',
         metadata: [],
         name: 'Jude Leffler',
@@ -456,7 +456,7 @@ $request = new Operations\UpdateMartechMemberRequest(
             'adnuo',
             'verumtamen',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-08T19:52:27.952Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-10T05:59:16.568Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

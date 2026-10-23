@@ -252,6 +252,7 @@ class PaymentPayment
     public ?float $tipAmount = null;
 
     /**
+     * The amount paid, in the payment's currency
      *
      * @var ?float $totalAmount
      */

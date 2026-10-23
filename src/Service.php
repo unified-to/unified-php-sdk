@@ -47,6 +47,8 @@ class Service
     /**
      * Create a service
      *
+     * Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeServiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Service
     /**
      * Retrieve a service
      *
+     * Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeServiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Service
     /**
      * List all services
      *
+     * Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeServicesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeServicesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Service
 
     /**
      * Update a service
+     *
+     * Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeServiceResponse
@@ -309,6 +317,8 @@ class Service
     /**
      * Remove a service
      *
+     * Deletes the ComputeService identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeServiceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Service
 
     /**
      * Update a service
+     *
+     * Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeServiceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeServiceResponse

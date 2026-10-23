@@ -13,7 +13,7 @@
 
 ## createRepoCommit
 
-Create a commit
+Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
 
 ### Example Usage
 
@@ -37,14 +37,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
-        id: '8faaf651-733b-4d26-92d1-0103bdcae980',
+        id: 'd5ae9929-7002-4e76-90d9-2a7982177f1e',
         linesAdded: 313,
         linesChanged: 659,
         linesDeleted: 482,
         message: 'quantify bluetooth bandwidth',
         metadata: [],
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-31T06:51:27.908Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-01T04:45:33.272Z'),
     ),
     connectionId: '<id>',
 );
@@ -76,7 +76,7 @@ if ($response->repoCommit !== null) {
 
 ## getRepoCommit
 
-Retrieve a commit
+Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -127,7 +127,7 @@ if ($response->repoCommit !== null) {
 
 ## listRepoCommits
 
-List all commits
+Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -177,7 +177,7 @@ if ($response->repoCommits !== null) {
 
 ## patchRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -201,14 +201,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
-        id: 'eced1575-116e-4bb5-92fe-18bea53520fd',
+        id: '0b280913-2aea-4946-b079-d9b09bee4ce9',
         linesAdded: 313,
         linesChanged: 659,
         linesDeleted: 482,
         message: 'quantify bluetooth bandwidth',
         metadata: [],
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-31T06:51:27.914Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-01T04:45:33.277Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -241,7 +241,7 @@ if ($response->repoCommit !== null) {
 
 ## removeRepoCommit
 
-Remove a commit
+Deletes the RepoCommit identified by `id`.
 
 ### Example Usage
 
@@ -292,7 +292,7 @@ if ($response->statusCode === 200) {
 
 ## updateRepoCommit
 
-Update a commit
+Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
 
 ### Example Usage
 
@@ -316,14 +316,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateRepoCommitRequest(
     repoCommit: new Shared\RepoCommit(
         createdAt: Utils\Utils::parseDateTime('2020-07-12T16:20:42.520Z'),
-        id: 'eced1575-116e-4bb5-92fe-18bea53520fd',
+        id: '0b280913-2aea-4946-b079-d9b09bee4ce9',
         linesAdded: 313,
         linesChanged: 659,
         linesDeleted: 482,
         message: 'quantify bluetooth bandwidth',
         metadata: [],
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2023-05-31T06:51:27.914Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-01T04:45:33.277Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

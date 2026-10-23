@@ -47,6 +47,8 @@ class Channel
     /**
      * Create a channel
      *
+     * Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateMessagingChannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateMessagingChannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Channel
     /**
      * Retrieve a channel
      *
+     * Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetMessagingChannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetMessagingChannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Channel
     /**
      * List all channels
      *
+     * Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListMessagingChannelsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListMessagingChannelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Channel
 
     /**
      * Update a channel
+     *
+     * Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchMessagingChannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchMessagingChannelResponse
@@ -309,6 +317,8 @@ class Channel
     /**
      * Remove a channel
      *
+     * Deletes the MessagingChannel identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveMessagingChannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveMessagingChannelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Channel
 
     /**
      * Update a channel
+     *
+     * Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateMessagingChannelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateMessagingChannelResponse

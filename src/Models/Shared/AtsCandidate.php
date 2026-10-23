@@ -66,7 +66,7 @@ class AtsCandidate
     public ?array $education = null;
 
     /**
-     * $emails
+     * The candidate's email addresses
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AtsEmail> $emails
      */
@@ -156,6 +156,7 @@ class AtsCandidate
     public ?array $metadata = null;
 
     /**
+     * The candidate's full name
      *
      * @var ?string $name
      */

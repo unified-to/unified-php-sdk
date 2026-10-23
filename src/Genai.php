@@ -47,6 +47,8 @@ class Genai
     /**
      * Create an agent
      *
+     * Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiAgentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Genai
 
     /**
      * Create an embedding
+     *
+     * Creates a GenaiEmbedding. Provide the unified GenaiEmbedding fields in the request body; they are mapped to the provider's API. Returns the created GenaiEmbedding.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiEmbeddingResponse
@@ -183,6 +187,8 @@ class Genai
     /**
      * Create a memory
      *
+     * Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiMemoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Genai
 
     /**
      * Create an organization
+     *
+     * Creates a GenaiOrganization. Provide the unified GenaiOrganization fields in the request body; they are mapped to the provider's API. Returns the created GenaiOrganization.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiOrganizationResponse
@@ -319,6 +327,8 @@ class Genai
     /**
      * Create a prompt
      *
+     * Creates a GenaiPrompt. Provide the unified GenaiPrompt fields in the request body; they are mapped to the provider's API. Returns the created GenaiPrompt.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiPromptRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiPromptResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Genai
 
     /**
      * Create a task
+     *
+     * Creates a GenaiTask. Provide the unified GenaiTask fields in the request body; they are mapped to the provider's API. Returns the created GenaiTask.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiTaskResponse
@@ -455,6 +467,8 @@ class Genai
     /**
      * Retrieve an agent
      *
+     * Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiAgentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -517,6 +531,8 @@ class Genai
 
     /**
      * Retrieve a memory
+     *
+     * Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiMemoryResponse
@@ -581,6 +597,8 @@ class Genai
     /**
      * Retrieve a model
      *
+     * Retrieves a single GenaiModel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiModelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiModelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -643,6 +661,8 @@ class Genai
 
     /**
      * Retrieve an organization
+     *
+     * Retrieves a single GenaiOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiOrganizationResponse
@@ -707,6 +727,8 @@ class Genai
     /**
      * Retrieve a skill
      *
+     * Retrieves a single GenaiSkill by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiSkillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiSkillResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -769,6 +791,8 @@ class Genai
 
     /**
      * Retrieve a task
+     *
+     * Retrieves a single GenaiTask by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiTaskResponse
@@ -833,6 +857,8 @@ class Genai
     /**
      * List all agents
      *
+     * Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiAgentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiAgentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -895,6 +921,8 @@ class Genai
 
     /**
      * List all memories
+     *
+     * Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiMemoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiMemoriesResponse
@@ -959,6 +987,8 @@ class Genai
     /**
      * List all models
      *
+     * Returns a list of GenaiModels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiModelsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiModelsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1021,6 +1051,8 @@ class Genai
 
     /**
      * List all organizations
+     *
+     * Returns a list of GenaiOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiOrganizationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiOrganizationsResponse
@@ -1085,6 +1117,8 @@ class Genai
     /**
      * List all skills
      *
+     * Returns a list of GenaiSkills. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiSkillsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiSkillsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1148,6 +1182,8 @@ class Genai
     /**
      * List all tasks
      *
+     * Returns a list of GenaiTasks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiTasksRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiTasksResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1210,6 +1246,8 @@ class Genai
 
     /**
      * Update an agent
+     *
+     * Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchGenaiAgentResponse
@@ -1279,6 +1317,8 @@ class Genai
     /**
      * Update a memory
      *
+     * Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchGenaiMemoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1346,6 +1386,8 @@ class Genai
 
     /**
      * Update an organization
+     *
+     * Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchGenaiOrganizationResponse
@@ -1415,6 +1457,8 @@ class Genai
     /**
      * Update a task
      *
+     * Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchGenaiTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1483,6 +1527,8 @@ class Genai
     /**
      * Remove an agent
      *
+     * Deletes the GenaiAgent identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveGenaiAgentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1539,6 +1585,8 @@ class Genai
 
     /**
      * Remove a memory
+     *
+     * Deletes the GenaiMemory identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveGenaiMemoryResponse
@@ -1597,6 +1645,8 @@ class Genai
     /**
      * Remove an organization
      *
+     * Deletes the GenaiOrganization identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveGenaiOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1653,6 +1703,8 @@ class Genai
 
     /**
      * Remove a skill
+     *
+     * Deletes the GenaiSkill identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveGenaiSkillRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveGenaiSkillResponse
@@ -1711,6 +1763,8 @@ class Genai
     /**
      * Remove a task
      *
+     * Deletes the GenaiTask identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveGenaiTaskResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1767,6 +1821,8 @@ class Genai
 
     /**
      * Update an agent
+     *
+     * Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateGenaiAgentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateGenaiAgentResponse
@@ -1836,6 +1892,8 @@ class Genai
     /**
      * Update a memory
      *
+     * Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateGenaiMemoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1904,6 +1962,8 @@ class Genai
     /**
      * Update an organization
      *
+     * Updates the GenaiOrganization identified by `id`. Provide the unified GenaiOrganization fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateGenaiOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateGenaiOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1971,6 +2031,8 @@ class Genai
 
     /**
      * Update a task
+     *
+     * Updates the GenaiTask identified by `id`. Provide the unified GenaiTask fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateGenaiTaskRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateGenaiTaskResponse

@@ -64,7 +64,7 @@
 
 ## createComputeDeployment
 
-Create a deployment
+Creates a ComputeDeployment. Provide the unified ComputeDeployment fields in the request body; they are mapped to the provider's API. Returns the created ComputeDeployment.
 
 ### Example Usage
 
@@ -92,13 +92,13 @@ $request = new Operations\CreateComputeDeploymentRequest(
         commitMessage: 'copy primary pixel',
         createdAt: Utils\Utils::parseDateTime('2022-06-07T03:52:04.613Z'),
         environment: Shared\Environment::Preview,
-        finishedAt: Utils\Utils::parseDateTime('2025-08-29T15:05:51.661Z'),
-        id: 'ca841094-cd73-4024-bfea-725904a495cd',
+        finishedAt: Utils\Utils::parseDateTime('2025-08-31T02:18:43.588Z'),
+        id: '870f0b88-2e11-44e7-b1f1-7a9b39c2a21f',
         metadata: [],
-        startedAt: Utils\Utils::parseDateTime('2025-04-10T07:30:12.606Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-11T14:29:55.518Z'),
         status: Shared\ComputeDeploymentStatus::Live,
         trigger: Shared\Trigger::Api,
-        updatedAt: Utils\Utils::parseDateTime('2026-02-28T18:03:13.449Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-02T10:44:07.876Z'),
         url: 'https://comfortable-petal.name',
     ),
     connectionId: '<id>',
@@ -131,7 +131,7 @@ if ($response->computeDeployment !== null) {
 
 ## createComputeDomain
 
-Create a domain
+Creates a ComputeDomain. Provide the unified ComputeDomain fields in the request body; they are mapped to the provider's API. Returns the created ComputeDomain.
 
 ### Example Usage
 
@@ -155,12 +155,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: 'd1214327-0d8d-4738-b98c-02c549ea5128',
+        id: '1bfaa0e8-0ada-4a53-83ad-8e1d97e0981e',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-03T15:11:50.494Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-04T18:25:50.145Z'),
     ),
     connectionId: '<id>',
 );
@@ -192,7 +192,7 @@ if ($response->computeDomain !== null) {
 
 ## createComputeEnvvar
 
-Create an envvar
+Creates a ComputeEnvvar. Provide the unified ComputeEnvvar fields in the request body; they are mapped to the provider's API. Returns the created ComputeEnvvar.
 
 ### Example Usage
 
@@ -219,11 +219,11 @@ $request = new Operations\CreateComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '5c354e68-66c7-4e3d-8c30-acdaee168414',
+        id: 'b03545d3-4b47-49c0-9e65-22d37c473a83',
         isSecret: true,
         metadata: [],
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-03T14:22:07.159Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-05T02:05:16.358Z'),
     ),
     connectionId: '<id>',
 );
@@ -255,7 +255,7 @@ if ($response->computeEnvvar !== null) {
 
 ## createComputeInstance
 
-Create an instance
+Creates a ComputeInstance. Provide the unified ComputeInstance fields in the request body; they are mapped to the provider's API. Returns the created ComputeInstance.
 
 ### Example Usage
 
@@ -296,7 +296,7 @@ $request = new Operations\CreateComputeInstanceRequest(
         ],
         gpuCount: 0,
         hasInternetAccess: true,
-        id: '4077e3bd-a54f-466b-b69d-d9c1e5cad805',
+        id: 'e2ab3563-4706-4658-88c3-53364c4ea537',
         image: 'ubuntu:24.04',
         market: Shared\Market::Spot,
         memoryMb: 2048,
@@ -311,11 +311,11 @@ $request = new Operations\CreateComputeInstanceRequest(
             port: 22,
             username: 'root',
         ),
-        startedAt: Utils\Utils::parseDateTime('2025-03-23T23:18:11.036Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-03-25T04:21:08.819Z'),
         status: Shared\ComputeInstanceStatus::Error,
         statusReason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
         type: Shared\ComputeInstanceType::Baremetal,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-16T04:50:44.691Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-17T12:37:07.611Z'),
     ),
     connectionId: '<id>',
 );
@@ -347,7 +347,7 @@ if ($response->computeInstance !== null) {
 
 ## createComputeKey
 
-Create a key
+Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 
 ### Example Usage
 
@@ -371,11 +371,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '54e64597-39da-487e-a0d4-40da5496fb18',
+        id: 'e1d725b7-b4a0-4617-bb2f-9d98d3fcf146',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-06T23:20:44.187Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-07T16:23:58.542Z'),
     ),
     connectionId: '<id>',
 );
@@ -407,7 +407,7 @@ if ($response->computeKey !== null) {
 
 ## createComputeService
 
-Create a service
+Creates a ComputeService. Provide the unified ComputeService fields in the request body; they are mapped to the provider's API. Returns the created ComputeService.
 
 ### Example Usage
 
@@ -433,7 +433,7 @@ $request = new Operations\CreateComputeServiceRequest(
         branch: 'main',
         buildCommand: 'npm run build',
         createdAt: Utils\Utils::parseDateTime('2023-10-04T02:06:29.391Z'),
-        id: 'b1ada32d-e859-4f4d-9be6-71cddc9e2727',
+        id: '22760591-f13e-4b8d-8e10-7e3a9bc2269b',
         instanceCount: 6,
         maxInstanceCount: 6,
         metadata: [],
@@ -444,7 +444,7 @@ $request = new Operations\CreateComputeServiceRequest(
         runtime: 'python',
         status: Shared\ComputeServiceStatus::Suspended,
         type: Shared\ComputeServiceType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-04T16:30:27.060Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-05T16:00:31.772Z'),
         url: 'https://tame-sideboard.rotating-shoulder.biz',
     ),
     connectionId: '<id>',
@@ -477,7 +477,7 @@ if ($response->computeService !== null) {
 
 ## createComputeSnapshot
 
-Create a snapshot
+Creates a ComputeSnapshot. Provide the unified ComputeSnapshot fields in the request body; they are mapped to the provider's API. Returns the created ComputeSnapshot.
 
 ### Example Usage
 
@@ -501,13 +501,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: 'abdaf705-cd8b-45f5-acb1-4ea71458961b',
+        id: '9df2327e-0f73-4287-a7df-4ac283baa06f',
         metadata: [],
         name: 'snap-alius',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-30T21:24:26.180Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-01T15:49:46.407Z'),
     ),
     connectionId: '<id>',
 );
@@ -539,7 +539,7 @@ if ($response->computeSnapshot !== null) {
 
 ## createComputeTemplate
 
-Create a template
+Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
 
 ### Example Usage
 
@@ -568,10 +568,10 @@ $request = new Operations\CreateComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: '87214967-c388-454a-b15b-d7ea77a70778',
+        id: 'b31729ed-306a-42ed-bd80-4fab29435c12',
         image: 'perfumed-molasses/cohibeo:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-03-23T20:27:16.056Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-03-25T12:35:39.751Z'),
         memoryMb: 8192,
         metadata: [],
         name: 'multi-byte-card',
@@ -579,7 +579,7 @@ $request = new Operations\CreateComputeTemplateRequest(
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-12T18:38:51.398Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-13T20:21:59.024Z'),
     ),
     connectionId: '<id>',
 );
@@ -611,7 +611,7 @@ if ($response->computeTemplate !== null) {
 
 ## createComputeVolume
 
-Create a volume
+Creates a ComputeVolume. Provide the unified ComputeVolume fields in the request body; they are mapped to the provider's API. Returns the created ComputeVolume.
 
 ### Example Usage
 
@@ -635,14 +635,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeVolumeRequest(
     computeVolume: new Shared\ComputeVolume(
         createdAt: Utils\Utils::parseDateTime('2022-11-15T15:12:48.055Z'),
-        id: 'b5c3e485-e508-4dc0-96a7-2c707f0ca0a9',
+        id: '0f4c19d6-4226-482b-a3fb-8806217d3b9a',
         instanceIds: [],
         metadata: [],
         name: 'vol-solum',
         sizeMb: 1024000,
         status: Shared\ComputeVolumeStatus::Other,
         type: Shared\ComputeVolumeType::HighPerformance,
-        updatedAt: Utils\Utils::parseDateTime('2024-02-09T21:51:12.903Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-02-10T12:50:33.737Z'),
         usedMb: 524986,
     ),
     connectionId: '<id>',
@@ -675,7 +675,7 @@ if ($response->computeVolume !== null) {
 
 ## getComputeDeployment
 
-Retrieve a deployment
+Retrieves a single ComputeDeployment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -726,7 +726,7 @@ if ($response->computeDeployment !== null) {
 
 ## getComputeDomain
 
-Retrieve a domain
+Retrieves a single ComputeDomain by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -777,7 +777,7 @@ if ($response->computeDomain !== null) {
 
 ## getComputeEnvvar
 
-Retrieve an envvar
+Retrieves a single ComputeEnvvar by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -828,7 +828,7 @@ if ($response->computeEnvvar !== null) {
 
 ## getComputeGputype
 
-Retrieve a gputype
+Retrieves a single ComputeGputype by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -879,7 +879,7 @@ if ($response->computeGputype !== null) {
 
 ## getComputeInstance
 
-Retrieve an instance
+Retrieves a single ComputeInstance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -930,7 +930,7 @@ if ($response->computeInstance !== null) {
 
 ## getComputeKey
 
-Retrieve a key
+Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -981,7 +981,7 @@ if ($response->computeKey !== null) {
 
 ## getComputeRegion
 
-Retrieve a region
+Retrieves a single ComputeRegion by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1032,7 +1032,7 @@ if ($response->computeRegion !== null) {
 
 ## getComputeService
 
-Retrieve a service
+Retrieves a single ComputeService by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1083,7 +1083,7 @@ if ($response->computeService !== null) {
 
 ## getComputeSnapshot
 
-Retrieve a snapshot
+Retrieves a single ComputeSnapshot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1134,7 +1134,7 @@ if ($response->computeSnapshot !== null) {
 
 ## getComputeTemplate
 
-Retrieve a template
+Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1185,7 +1185,7 @@ if ($response->computeTemplate !== null) {
 
 ## getComputeVolume
 
-Retrieve a volume
+Retrieves a single ComputeVolume by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -1236,7 +1236,7 @@ if ($response->computeVolume !== null) {
 
 ## listComputeDeployments
 
-List all deployments
+Returns a list of ComputeDeployments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1286,7 +1286,7 @@ if ($response->computeDeployments !== null) {
 
 ## listComputeDomains
 
-List all domains
+Returns a list of ComputeDomains. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1336,7 +1336,7 @@ if ($response->computeDomains !== null) {
 
 ## listComputeEnvvars
 
-List all envvars
+Returns a list of ComputeEnvvars. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1386,7 +1386,7 @@ if ($response->computeEnvvars !== null) {
 
 ## listComputeGputypes
 
-List all gputypes
+Returns a list of ComputeGputypes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1436,7 +1436,7 @@ if ($response->computeGputypes !== null) {
 
 ## listComputeInstances
 
-List all instances
+Returns a list of ComputeInstances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1486,7 +1486,7 @@ if ($response->computeInstances !== null) {
 
 ## listComputeKeys
 
-List all keys
+Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1536,7 +1536,7 @@ if ($response->computeKeys !== null) {
 
 ## listComputeRegions
 
-List all regions
+Returns a list of ComputeRegions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1586,7 +1586,7 @@ if ($response->computeRegions !== null) {
 
 ## listComputeServices
 
-List all services
+Returns a list of ComputeServices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1636,7 +1636,7 @@ if ($response->computeServices !== null) {
 
 ## listComputeSnapshots
 
-List all snapshots
+Returns a list of ComputeSnapshots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1686,7 +1686,7 @@ if ($response->computeSnapshots !== null) {
 
 ## listComputeTemplates
 
-List all templates
+Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1736,7 +1736,7 @@ if ($response->computeTemplates !== null) {
 
 ## listComputeUsages
 
-List all usages
+Returns a list of ComputeUsages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1786,7 +1786,7 @@ if ($response->computeUsages !== null) {
 
 ## listComputeVolumes
 
-List all volumes
+Returns a list of ComputeVolumes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -1836,7 +1836,7 @@ if ($response->computeVolumes !== null) {
 
 ## patchComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -1864,13 +1864,13 @@ $request = new Operations\PatchComputeDeploymentRequest(
         commitMessage: 'copy primary pixel',
         createdAt: Utils\Utils::parseDateTime('2022-06-07T03:52:04.613Z'),
         environment: Shared\Environment::Preview,
-        finishedAt: Utils\Utils::parseDateTime('2025-08-29T15:05:51.669Z'),
-        id: '9eed3546-cbe3-49c2-9354-a3897f19a658',
+        finishedAt: Utils\Utils::parseDateTime('2025-08-31T02:18:43.603Z'),
+        id: 'd0c76f8b-1b23-40e3-9d9b-08fffa1350de',
         metadata: [],
-        startedAt: Utils\Utils::parseDateTime('2025-04-10T07:30:12.613Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-11T14:29:55.531Z'),
         status: Shared\ComputeDeploymentStatus::Live,
         trigger: Shared\Trigger::Api,
-        updatedAt: Utils\Utils::parseDateTime('2026-02-28T18:03:13.459Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-02T10:44:07.893Z'),
         url: 'https://comfortable-petal.name',
     ),
     connectionId: '<id>',
@@ -1904,7 +1904,7 @@ if ($response->computeDeployment !== null) {
 
 ## patchComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -1928,12 +1928,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: 'e8f3231f-b9e3-46c7-8c74-885565e1ae9f',
+        id: 'e6ce4eb3-5d67-4d20-a9b6-45d61aa175db',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-03T15:11:50.499Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-04T18:25:50.152Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1966,7 +1966,7 @@ if ($response->computeDomain !== null) {
 
 ## patchComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -1993,11 +1993,11 @@ $request = new Operations\PatchComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '64c98e54-a680-4235-b4b7-03f073fc5eda',
+        id: 'c86c2bc8-0928-444a-84e1-400af53781a0',
         isSecret: true,
         metadata: [],
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-03T14:22:07.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-05T02:05:16.370Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2030,7 +2030,7 @@ if ($response->computeEnvvar !== null) {
 
 ## patchComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -2071,7 +2071,7 @@ $request = new Operations\PatchComputeInstanceRequest(
         ],
         gpuCount: 0,
         hasInternetAccess: true,
-        id: '68a4cfd4-c11d-4807-8d5e-f972fde6e258',
+        id: '32a54e86-dc4c-43c8-81e5-4aeefde9d981',
         image: 'ubuntu:24.04',
         market: Shared\Market::Spot,
         memoryMb: 2048,
@@ -2086,11 +2086,11 @@ $request = new Operations\PatchComputeInstanceRequest(
             port: 22,
             username: 'root',
         ),
-        startedAt: Utils\Utils::parseDateTime('2025-03-23T23:18:11.066Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-03-25T04:21:08.845Z'),
         status: Shared\ComputeInstanceStatus::Error,
         statusReason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
         type: Shared\ComputeInstanceType::Baremetal,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-16T04:50:44.724Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-17T12:37:07.640Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2123,7 +2123,7 @@ if ($response->computeInstance !== null) {
 
 ## patchComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -2147,11 +2147,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '29896d38-9bc4-4ba4-b23b-324c0c78a71a',
+        id: 'cdb1cf75-328b-420c-9de9-22a0e527c1d2',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-06T23:20:44.193Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-07T16:23:58.547Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2184,7 +2184,7 @@ if ($response->computeKey !== null) {
 
 ## patchComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -2210,7 +2210,7 @@ $request = new Operations\PatchComputeServiceRequest(
         branch: 'main',
         buildCommand: 'npm run build',
         createdAt: Utils\Utils::parseDateTime('2023-10-04T02:06:29.391Z'),
-        id: '43273ad6-5268-461f-88b5-814d999d20b3',
+        id: 'b55fded7-57df-438d-8445-077c82b0d96b',
         instanceCount: 6,
         maxInstanceCount: 6,
         metadata: [],
@@ -2221,7 +2221,7 @@ $request = new Operations\PatchComputeServiceRequest(
         runtime: 'python',
         status: Shared\ComputeServiceStatus::Suspended,
         type: Shared\ComputeServiceType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-04T16:30:27.072Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-05T16:00:31.785Z'),
         url: 'https://tame-sideboard.rotating-shoulder.biz',
     ),
     connectionId: '<id>',
@@ -2255,7 +2255,7 @@ if ($response->computeService !== null) {
 
 ## patchComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -2284,10 +2284,10 @@ $request = new Operations\PatchComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: '9cb36833-667b-4fd1-a64c-9bad7d4d2a50',
+        id: '4987e5c9-5105-4ff1-9d64-b5e540d84fd4',
         image: 'perfumed-molasses/cohibeo:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-03-23T20:27:16.077Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-03-25T12:35:39.770Z'),
         memoryMb: 8192,
         metadata: [],
         name: 'multi-byte-card',
@@ -2295,7 +2295,7 @@ $request = new Operations\PatchComputeTemplateRequest(
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-12T18:38:51.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-13T20:21:59.037Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2328,7 +2328,7 @@ if ($response->computeTemplate !== null) {
 
 ## patchComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -2352,14 +2352,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeVolumeRequest(
     computeVolume: new Shared\ComputeVolume(
         createdAt: Utils\Utils::parseDateTime('2022-11-15T15:12:48.055Z'),
-        id: 'eaf8fe41-8674-4052-864b-ae1e1cf307f4',
+        id: 'e4badeea-b975-49df-b1d7-f8110458a2c5',
         instanceIds: [],
         metadata: [],
         name: 'vol-solum',
         sizeMb: 1024000,
         status: Shared\ComputeVolumeStatus::Other,
         type: Shared\ComputeVolumeType::HighPerformance,
-        updatedAt: Utils\Utils::parseDateTime('2024-02-09T21:51:12.908Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-02-10T12:50:33.744Z'),
         usedMb: 524986,
     ),
     connectionId: '<id>',
@@ -2393,7 +2393,7 @@ if ($response->computeVolume !== null) {
 
 ## removeComputeDeployment
 
-Remove a deployment
+Deletes the ComputeDeployment identified by `id`.
 
 ### Example Usage
 
@@ -2444,7 +2444,7 @@ if ($response->statusCode === 200) {
 
 ## removeComputeDomain
 
-Remove a domain
+Deletes the ComputeDomain identified by `id`.
 
 ### Example Usage
 
@@ -2495,7 +2495,7 @@ if ($response->statusCode === 200) {
 
 ## removeComputeEnvvar
 
-Remove an envvar
+Deletes the ComputeEnvvar identified by `id`.
 
 ### Example Usage
 
@@ -2546,7 +2546,7 @@ if ($response->statusCode === 200) {
 
 ## removeComputeInstance
 
-Remove an instance
+Deletes the ComputeInstance identified by `id`.
 
 ### Example Usage
 
@@ -2597,7 +2597,7 @@ if ($response->statusCode === 200) {
 
 ## removeComputeKey
 
-Remove a key
+Deletes the ComputeKey identified by `id`.
 
 ### Example Usage
 
@@ -2648,7 +2648,7 @@ if ($response->statusCode === 200) {
 
 ## removeComputeService
 
-Remove a service
+Deletes the ComputeService identified by `id`.
 
 ### Example Usage
 
@@ -2699,7 +2699,7 @@ if ($response->statusCode === 200) {
 
 ## removeComputeSnapshot
 
-Remove a snapshot
+Deletes the ComputeSnapshot identified by `id`.
 
 ### Example Usage
 
@@ -2750,7 +2750,7 @@ if ($response->statusCode === 200) {
 
 ## removeComputeTemplate
 
-Remove a template
+Deletes the ComputeTemplate identified by `id`.
 
 ### Example Usage
 
@@ -2801,7 +2801,7 @@ if ($response->statusCode === 200) {
 
 ## removeComputeVolume
 
-Remove a volume
+Deletes the ComputeVolume identified by `id`.
 
 ### Example Usage
 
@@ -2852,7 +2852,7 @@ if ($response->statusCode === 200) {
 
 ## updateComputeDeployment
 
-Update a deployment
+Updates the ComputeDeployment identified by `id`. Provide the unified ComputeDeployment fields to change in the request body.
 
 ### Example Usage
 
@@ -2880,13 +2880,13 @@ $request = new Operations\UpdateComputeDeploymentRequest(
         commitMessage: 'copy primary pixel',
         createdAt: Utils\Utils::parseDateTime('2022-06-07T03:52:04.613Z'),
         environment: Shared\Environment::Preview,
-        finishedAt: Utils\Utils::parseDateTime('2025-08-29T15:05:51.669Z'),
-        id: '9eed3546-cbe3-49c2-9354-a3897f19a658',
+        finishedAt: Utils\Utils::parseDateTime('2025-08-31T02:18:43.603Z'),
+        id: 'd0c76f8b-1b23-40e3-9d9b-08fffa1350de',
         metadata: [],
-        startedAt: Utils\Utils::parseDateTime('2025-04-10T07:30:12.613Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-11T14:29:55.531Z'),
         status: Shared\ComputeDeploymentStatus::Live,
         trigger: Shared\Trigger::Api,
-        updatedAt: Utils\Utils::parseDateTime('2026-02-28T18:03:13.459Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-02T10:44:07.893Z'),
         url: 'https://comfortable-petal.name',
     ),
     connectionId: '<id>',
@@ -2920,7 +2920,7 @@ if ($response->computeDeployment !== null) {
 
 ## updateComputeDomain
 
-Update a domain
+Updates the ComputeDomain identified by `id`. Provide the unified ComputeDomain fields to change in the request body.
 
 ### Example Usage
 
@@ -2944,12 +2944,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: 'e8f3231f-b9e3-46c7-8c74-885565e1ae9f',
+        id: 'e6ce4eb3-5d67-4d20-a9b6-45d61aa175db',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-03T15:11:50.499Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-04T18:25:50.152Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2982,7 +2982,7 @@ if ($response->computeDomain !== null) {
 
 ## updateComputeEnvvar
 
-Update an envvar
+Updates the ComputeEnvvar identified by `id`. Provide the unified ComputeEnvvar fields to change in the request body.
 
 ### Example Usage
 
@@ -3009,11 +3009,11 @@ $request = new Operations\UpdateComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '64c98e54-a680-4235-b4b7-03f073fc5eda',
+        id: 'c86c2bc8-0928-444a-84e1-400af53781a0',
         isSecret: true,
         metadata: [],
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-03T14:22:07.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-05T02:05:16.370Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3046,7 +3046,7 @@ if ($response->computeEnvvar !== null) {
 
 ## updateComputeInstance
 
-Update an instance
+Updates the ComputeInstance identified by `id`. Provide the unified ComputeInstance fields to change in the request body.
 
 ### Example Usage
 
@@ -3087,7 +3087,7 @@ $request = new Operations\UpdateComputeInstanceRequest(
         ],
         gpuCount: 0,
         hasInternetAccess: true,
-        id: '68a4cfd4-c11d-4807-8d5e-f972fde6e258',
+        id: '32a54e86-dc4c-43c8-81e5-4aeefde9d981',
         image: 'ubuntu:24.04',
         market: Shared\Market::Spot,
         memoryMb: 2048,
@@ -3102,11 +3102,11 @@ $request = new Operations\UpdateComputeInstanceRequest(
             port: 22,
             username: 'root',
         ),
-        startedAt: Utils\Utils::parseDateTime('2025-03-23T23:18:11.066Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-03-25T04:21:08.845Z'),
         status: Shared\ComputeInstanceStatus::Error,
         statusReason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
         type: Shared\ComputeInstanceType::Baremetal,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-16T04:50:44.724Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-06-17T12:37:07.640Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3139,7 +3139,7 @@ if ($response->computeInstance !== null) {
 
 ## updateComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -3163,11 +3163,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '29896d38-9bc4-4ba4-b23b-324c0c78a71a',
+        id: 'cdb1cf75-328b-420c-9de9-22a0e527c1d2',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-06T23:20:44.193Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-07T16:23:58.547Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3200,7 +3200,7 @@ if ($response->computeKey !== null) {
 
 ## updateComputeService
 
-Update a service
+Updates the ComputeService identified by `id`. Provide the unified ComputeService fields to change in the request body.
 
 ### Example Usage
 
@@ -3226,7 +3226,7 @@ $request = new Operations\UpdateComputeServiceRequest(
         branch: 'main',
         buildCommand: 'npm run build',
         createdAt: Utils\Utils::parseDateTime('2023-10-04T02:06:29.391Z'),
-        id: '43273ad6-5268-461f-88b5-814d999d20b3',
+        id: 'b55fded7-57df-438d-8445-077c82b0d96b',
         instanceCount: 6,
         maxInstanceCount: 6,
         metadata: [],
@@ -3237,7 +3237,7 @@ $request = new Operations\UpdateComputeServiceRequest(
         runtime: 'python',
         status: Shared\ComputeServiceStatus::Suspended,
         type: Shared\ComputeServiceType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-04T16:30:27.072Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-05T16:00:31.785Z'),
         url: 'https://tame-sideboard.rotating-shoulder.biz',
     ),
     connectionId: '<id>',
@@ -3271,7 +3271,7 @@ if ($response->computeService !== null) {
 
 ## updateComputeTemplate
 
-Update a template
+Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
 
 ### Example Usage
 
@@ -3300,10 +3300,10 @@ $request = new Operations\UpdateComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: '9cb36833-667b-4fd1-a64c-9bad7d4d2a50',
+        id: '4987e5c9-5105-4ff1-9d64-b5e540d84fd4',
         image: 'perfumed-molasses/cohibeo:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-03-23T20:27:16.077Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-03-25T12:35:39.770Z'),
         memoryMb: 8192,
         metadata: [],
         name: 'multi-byte-card',
@@ -3311,7 +3311,7 @@ $request = new Operations\UpdateComputeTemplateRequest(
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-12T18:38:51.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-13T20:21:59.037Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3344,7 +3344,7 @@ if ($response->computeTemplate !== null) {
 
 ## updateComputeVolume
 
-Update a volume
+Updates the ComputeVolume identified by `id`. Provide the unified ComputeVolume fields to change in the request body.
 
 ### Example Usage
 
@@ -3368,14 +3368,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeVolumeRequest(
     computeVolume: new Shared\ComputeVolume(
         createdAt: Utils\Utils::parseDateTime('2022-11-15T15:12:48.055Z'),
-        id: 'eaf8fe41-8674-4052-864b-ae1e1cf307f4',
+        id: 'e4badeea-b975-49df-b1d7-f8110458a2c5',
         instanceIds: [],
         metadata: [],
         name: 'vol-solum',
         sizeMb: 1024000,
         status: Shared\ComputeVolumeStatus::Other,
         type: Shared\ComputeVolumeType::HighPerformance,
-        updatedAt: Utils\Utils::parseDateTime('2024-02-09T21:51:12.908Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-02-10T12:50:33.744Z'),
         usedMb: 524986,
     ),
     connectionId: '<id>',

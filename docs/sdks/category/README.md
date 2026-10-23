@@ -19,7 +19,7 @@
 
 ## createAccountingCategory
 
-Create a category
+Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
 
 ### Example Usage
 
@@ -44,11 +44,11 @@ $request = new Operations\CreateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
         description: 'Textus ab thymum labore basium.',
-        id: '8733e54b-0f49-4e96-9275-b45e190a6975',
+        id: '2ed59372-fe04-40c8-8628-4c3f5af3a63e',
         isActive: false,
         metadata: [],
         name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T12:11:02.648Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T20:18:03.706Z'),
     ),
     connectionId: '<id>',
 );
@@ -80,7 +80,7 @@ if ($response->accountingCategory !== null) {
 
 ## createTicketingCategory
 
-Create a category
+Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
 
 ### Example Usage
 
@@ -105,11 +105,11 @@ $request = new Operations\CreateTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
         description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: '132cb90b-ff2e-43b0-8ddc-585b0f8060f6',
+        id: 'cbc506da-1ed4-4800-89ef-dc3261f185b5',
         isActive: true,
         metadata: [],
         name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-14T00:34:02.739Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-15T19:01:28.006Z'),
     ),
     connectionId: '<id>',
 );
@@ -141,7 +141,7 @@ if ($response->ticketingCategory !== null) {
 
 ## getAccountingCategory
 
-Retrieve a category
+Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -192,7 +192,7 @@ if ($response->accountingCategory !== null) {
 
 ## getTicketingCategory
 
-Retrieve a category
+Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -243,7 +243,7 @@ if ($response->ticketingCategory !== null) {
 
 ## listAccountingCategories
 
-List all categories
+Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -293,7 +293,7 @@ if ($response->accountingCategories !== null) {
 
 ## listTicketingCategories
 
-List all categories
+Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -343,7 +343,7 @@ if ($response->ticketingCategories !== null) {
 
 ## patchAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -368,11 +368,11 @@ $request = new Operations\PatchAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
         description: 'Textus ab thymum labore basium.',
-        id: '19d65ff6-bd39-4539-9f5e-2d62aeaa23a0',
+        id: '0182f5b6-43dd-4d64-bb88-31cf6a69e7b6',
         isActive: false,
         metadata: [],
         name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T12:11:02.655Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T20:18:03.717Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -405,7 +405,7 @@ if ($response->accountingCategory !== null) {
 
 ## patchTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -430,11 +430,11 @@ $request = new Operations\PatchTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
         description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: 'fd46751c-c2d1-4514-8eee-2ff2e3627795',
+        id: 'c79706b9-cfe2-413f-b6d1-4bc089c15bb2',
         isActive: true,
         metadata: [],
         name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-14T00:34:02.751Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-15T19:01:28.018Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -467,7 +467,7 @@ if ($response->ticketingCategory !== null) {
 
 ## removeAccountingCategory
 
-Remove a category
+Deletes the AccountingCategory identified by `id`.
 
 ### Example Usage
 
@@ -518,7 +518,7 @@ if ($response->statusCode === 200) {
 
 ## removeTicketingCategory
 
-Remove a category
+Deletes the TicketingCategory identified by `id`.
 
 ### Example Usage
 
@@ -569,7 +569,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingCategory
 
-Update a category
+Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -594,11 +594,11 @@ $request = new Operations\UpdateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
         description: 'Textus ab thymum labore basium.',
-        id: '19d65ff6-bd39-4539-9f5e-2d62aeaa23a0',
+        id: '0182f5b6-43dd-4d64-bb88-31cf6a69e7b6',
         isActive: false,
         metadata: [],
         name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T12:11:02.655Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T20:18:03.717Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -631,7 +631,7 @@ if ($response->accountingCategory !== null) {
 
 ## updateTicketingCategory
 
-Update a category
+Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
 
 ### Example Usage
 
@@ -656,11 +656,11 @@ $request = new Operations\UpdateTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
         description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: 'fd46751c-c2d1-4514-8eee-2ff2e3627795',
+        id: 'c79706b9-cfe2-413f-b6d1-4bc089c15bb2',
         isActive: true,
         metadata: [],
         name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-14T00:34:02.751Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-15T19:01:28.018Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

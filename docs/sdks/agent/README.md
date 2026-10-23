@@ -13,7 +13,7 @@
 
 ## createGenaiAgent
 
-Create an agent
+Creates a GenaiAgent. Provide the unified GenaiAgent fields in the request body; they are mapped to the provider's API. Returns the created GenaiAgent.
 
 ### Example Usage
 
@@ -38,11 +38,11 @@ $request = new Operations\CreateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: 'bddafc1a-890a-4ac9-81f7-8a777f0d9001',
+        id: '998ddf7d-f663-4008-a6cc-db5c6dc9e8da',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-15T10:47:48.979Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-17T02:11:22.328Z'),
     ),
     connectionId: '<id>',
 );
@@ -74,7 +74,7 @@ if ($response->genaiAgent !== null) {
 
 ## getGenaiAgent
 
-Retrieve an agent
+Retrieves a single GenaiAgent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -125,7 +125,7 @@ if ($response->genaiAgent !== null) {
 
 ## listGenaiAgents
 
-List all agents
+Returns a list of GenaiAgents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -175,7 +175,7 @@ if ($response->genaiAgents !== null) {
 
 ## patchGenaiAgent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -200,11 +200,11 @@ $request = new Operations\PatchGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '84fc5f34-c274-43ed-9767-bf6338847936',
+        id: '200aeb7e-786a-4f80-a752-29102cb9d6e3',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-15T10:47:48.983Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-17T02:11:22.337Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -237,7 +237,7 @@ if ($response->genaiAgent !== null) {
 
 ## removeGenaiAgent
 
-Remove an agent
+Deletes the GenaiAgent identified by `id`.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ if ($response->statusCode === 200) {
 
 ## updateGenaiAgent
 
-Update an agent
+Updates the GenaiAgent identified by `id`. Provide the unified GenaiAgent fields to change in the request body.
 
 ### Example Usage
 
@@ -313,11 +313,11 @@ $request = new Operations\UpdateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '84fc5f34-c274-43ed-9767-bf6338847936',
+        id: '200aeb7e-786a-4f80-a752-29102cb9d6e3',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-15T10:47:48.983Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-17T02:11:22.337Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

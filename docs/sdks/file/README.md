@@ -13,7 +13,7 @@
 
 ## createStorageFile
 
-Create a file
+Creates a StorageFile. Provide the unified StorageFile fields in the request body; they are mapped to the provider's API. Returns the created StorageFile.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ $request = new Operations\CreateStorageFileRequest(
         description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
         downloadUrl: 'https://clueless-laughter.biz',
         hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-        id: '5a3b2522-ba9a-4fc0-b63a-50257b278c9b',
+        id: '83549c04-8697-4601-a4ea-4a1749789a6f',
         metadata: [],
         mimeType: 'application/pdf',
         name: 'softly.pdf',
@@ -49,7 +49,7 @@ $request = new Operations\CreateStorageFileRequest(
             'suasoria',
         ],
         type: Shared\StorageFileType::Folder,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-05T13:00:18.919Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T02:04:07.903Z'),
         version: '1',
         webUrl: 'https://faraway-inspection.org',
     ),
@@ -83,7 +83,7 @@ if ($response->storageFile !== null) {
 
 ## getStorageFile
 
-Retrieve a file
+Retrieves a single StorageFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ if ($response->storageFile !== null) {
 
 ## listStorageFiles
 
-List all files
+Returns a list of StorageFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ if ($response->storageFiles !== null) {
 
 ## patchStorageFile
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -211,7 +211,7 @@ $request = new Operations\PatchStorageFileRequest(
         description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
         downloadUrl: 'https://clueless-laughter.biz',
         hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-        id: '78dc5fa1-2bf0-4000-a4ed-49fb5198ac5e',
+        id: '482d8815-e0fe-4853-b46a-8e0ef83bf944',
         metadata: [],
         mimeType: 'application/pdf',
         name: 'softly.pdf',
@@ -220,7 +220,7 @@ $request = new Operations\PatchStorageFileRequest(
             'suasoria',
         ],
         type: Shared\StorageFileType::Folder,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-05T13:00:18.925Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T02:04:07.910Z'),
         version: '1',
         webUrl: 'https://faraway-inspection.org',
     ),
@@ -255,7 +255,7 @@ if ($response->storageFile !== null) {
 
 ## removeStorageFile
 
-Remove a file
+Deletes the StorageFile identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ if ($response->statusCode === 200) {
 
 ## updateStorageFile
 
-Update a file
+Updates the StorageFile identified by `id`. Provide the unified StorageFile fields to change in the request body.
 
 ### Example Usage
 
@@ -333,7 +333,7 @@ $request = new Operations\UpdateStorageFileRequest(
         description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
         downloadUrl: 'https://clueless-laughter.biz',
         hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-        id: '78dc5fa1-2bf0-4000-a4ed-49fb5198ac5e',
+        id: '482d8815-e0fe-4853-b46a-8e0ef83bf944',
         metadata: [],
         mimeType: 'application/pdf',
         name: 'softly.pdf',
@@ -342,7 +342,7 @@ $request = new Operations\UpdateStorageFileRequest(
             'suasoria',
         ],
         type: Shared\StorageFileType::Folder,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-05T13:00:18.925Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-06T02:04:07.910Z'),
         version: '1',
         webUrl: 'https://faraway-inspection.org',
     ),

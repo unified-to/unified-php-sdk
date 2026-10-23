@@ -48,6 +48,7 @@ class AtsCompany
     public ?array $metadata = null;
 
     /**
+     * The company's name
      *
      * @var ?string $name
      */

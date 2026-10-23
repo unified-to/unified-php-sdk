@@ -13,7 +13,7 @@
 
 ## createAtsApplication
 
-Create an application
+Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
 
 ### Example Usage
 
@@ -37,17 +37,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-09-29T18:41:44.737Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-01T01:37:37.720Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-12T18:30:35.439Z'),
-        id: '26ec1638-c52c-492b-9fd7-09de41cb00e7',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-14T11:11:43.330Z'),
+        id: '57c46487-4ef4-4520-b33f-0dc7a4f08009',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'c5228933-7b14-40ad-9f1b-19a455f0df4a',
+                id: '3333fd9f-537d-4099-a087-c44c032b92ff',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -56,12 +56,12 @@ $request = new Operations\CreateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-11T13:07:05.713Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-13T12:23:01.431Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-18T09:21:22.037Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-20T08:55:05.791Z'),
     ),
     connectionId: '<id>',
 );
@@ -93,7 +93,7 @@ if ($response->atsApplication !== null) {
 
 ## getAtsApplication
 
-Retrieve an application
+Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -144,7 +144,7 @@ if ($response->atsApplication !== null) {
 
 ## listAtsApplications
 
-List all applications
+Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -194,7 +194,7 @@ if ($response->atsApplications !== null) {
 
 ## patchAtsApplication
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -218,17 +218,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-09-29T18:41:44.750Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-01T01:37:37.743Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-12T18:30:35.456Z'),
-        id: '95d97fad-3b9a-4527-bb22-1953ed79ef05',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-14T11:11:43.360Z'),
+        id: 'a14c3793-96f0-4da0-ab90-d018fce93490',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '382ffa38-ae9e-4b90-9c6f-f3dacf302b7c',
+                id: '2102778b-bf7f-4765-90b8-dfcf65e38dfa',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -237,12 +237,12 @@ $request = new Operations\PatchAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-11T13:07:05.733Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-13T12:23:01.466Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-18T09:21:22.057Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-20T08:55:05.826Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -275,7 +275,7 @@ if ($response->atsApplication !== null) {
 
 ## removeAtsApplication
 
-Remove an application
+Deletes the AtsApplication identified by `id`.
 
 ### Example Usage
 
@@ -326,7 +326,7 @@ if ($response->statusCode === 200) {
 
 ## updateAtsApplication
 
-Update an application
+Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
 
 ### Example Usage
 
@@ -350,17 +350,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-09-29T18:41:44.750Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-01T01:37:37.743Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-12T18:30:35.456Z'),
-        id: '95d97fad-3b9a-4527-bb22-1953ed79ef05',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-14T11:11:43.360Z'),
+        id: 'a14c3793-96f0-4da0-ab90-d018fce93490',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '382ffa38-ae9e-4b90-9c6f-f3dacf302b7c',
+                id: '2102778b-bf7f-4765-90b8-dfcf65e38dfa',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -369,12 +369,12 @@ $request = new Operations\UpdateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-11T13:07:05.733Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-13T12:23:01.466Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-18T09:21:22.057Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-20T08:55:05.826Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

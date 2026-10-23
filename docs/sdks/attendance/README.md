@@ -13,7 +13,7 @@
 
 ## createHrisAttendance
 
-Create an attendance
+Creates a HrisAttendance. Provide the unified HrisAttendance fields in the request body; they are mapped to the provider's API. Returns the created HrisAttendance.
 
 ### Example Usage
 
@@ -44,32 +44,32 @@ $request = new Operations\CreateHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-09-19T14:06:30.623Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-09-19T15:06:28.110Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 51,
-                endAt: Utils\Utils::parseDateTime('2024-02-14T13:16:00.525Z'),
-                id: '90e38399-cdd9-4d0f-9dea-ce081a3fdf76',
+                endAt: Utils\Utils::parseDateTime('2024-02-15T12:19:44.117Z'),
+                id: '885331bb-2d7c-4be6-ab50-f6c0a8246cac',
                 isPaid: false,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-10-29T23:03:00.394Z'),
+                startAt: Utils\Utils::parseDateTime('2023-10-30T19:24:30.520Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'EUR',
         declaredTipsAmount: 54,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-04-23T07:48:11.832Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-24T08:35:36.994Z'),
         hourlyRate: 16,
         hours: 10,
-        id: 'd6a7c321-3372-4891-9b5d-f2d24e9a30c5',
+        id: 'e245fc8a-5b24-4114-9a10-52987bb51214',
         jobName: 'Human Accountability Administrator',
         metadata: [],
         nonCashTipsAmount: 167,
-        startAt: Utils\Utils::parseDateTime('2021-11-11T00:56:01.833Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-11T03:15:04.365Z'),
         status: Shared\HrisAttendanceStatus::Open,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-19T21:04:34.807Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-20T01:08:55.429Z'),
     ),
     connectionId: '<id>',
 );
@@ -101,7 +101,7 @@ if ($response->hrisAttendance !== null) {
 
 ## getHrisAttendance
 
-Retrieve an attendance
+Retrieves a single HrisAttendance by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -152,7 +152,7 @@ if ($response->hrisAttendance !== null) {
 
 ## listHrisAttendances
 
-List all attendances
+Returns a list of HrisAttendances. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -202,7 +202,7 @@ if ($response->hrisAttendances !== null) {
 
 ## patchHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -233,32 +233,32 @@ $request = new Operations\PatchHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-09-19T14:06:30.624Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-09-19T15:06:28.111Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 51,
-                endAt: Utils\Utils::parseDateTime('2024-02-14T13:16:00.540Z'),
-                id: '939123d3-e26b-44f5-855a-b592fc011641',
+                endAt: Utils\Utils::parseDateTime('2024-02-15T12:19:44.132Z'),
+                id: '535ff72a-3602-4916-aabd-100b5c5bd600',
                 isPaid: false,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-10-29T23:03:00.407Z'),
+                startAt: Utils\Utils::parseDateTime('2023-10-30T19:24:30.533Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'EUR',
         declaredTipsAmount: 54,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-04-23T07:48:11.848Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-24T08:35:37.010Z'),
         hourlyRate: 16,
         hours: 10,
-        id: 'de583745-c602-4069-9149-69ec0f9587aa',
+        id: '3168ed24-e8aa-43a5-b61e-0f0cb5f8bb6f',
         jobName: 'Human Accountability Administrator',
         metadata: [],
         nonCashTipsAmount: 167,
-        startAt: Utils\Utils::parseDateTime('2021-11-11T00:56:01.835Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-11T03:15:04.367Z'),
         status: Shared\HrisAttendanceStatus::Open,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-19T21:04:34.810Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-20T01:08:55.432Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -291,7 +291,7 @@ if ($response->hrisAttendance !== null) {
 
 ## removeHrisAttendance
 
-Remove an attendance
+Deletes the HrisAttendance identified by `id`.
 
 ### Example Usage
 
@@ -342,7 +342,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisAttendance
 
-Update an attendance
+Updates the HrisAttendance identified by `id`. Provide the unified HrisAttendance fields to change in the request body.
 
 ### Example Usage
 
@@ -373,32 +373,32 @@ $request = new Operations\UpdateHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-09-19T14:06:30.624Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-09-19T15:06:28.111Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 51,
-                endAt: Utils\Utils::parseDateTime('2024-02-14T13:16:00.540Z'),
-                id: '939123d3-e26b-44f5-855a-b592fc011641',
+                endAt: Utils\Utils::parseDateTime('2024-02-15T12:19:44.132Z'),
+                id: '535ff72a-3602-4916-aabd-100b5c5bd600',
                 isPaid: false,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-10-29T23:03:00.407Z'),
+                startAt: Utils\Utils::parseDateTime('2023-10-30T19:24:30.533Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'EUR',
         declaredTipsAmount: 54,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-04-23T07:48:11.848Z'),
+        endAt: Utils\Utils::parseDateTime('2024-04-24T08:35:37.010Z'),
         hourlyRate: 16,
         hours: 10,
-        id: 'de583745-c602-4069-9149-69ec0f9587aa',
+        id: '3168ed24-e8aa-43a5-b61e-0f0cb5f8bb6f',
         jobName: 'Human Accountability Administrator',
         metadata: [],
         nonCashTipsAmount: 167,
-        startAt: Utils\Utils::parseDateTime('2021-11-11T00:56:01.835Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-11T03:15:04.367Z'),
         status: Shared\HrisAttendanceStatus::Open,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-19T21:04:34.810Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-20T01:08:55.432Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

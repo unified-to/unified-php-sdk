@@ -1,0 +1,11 @@
+# DatastoreFilterGroup
+
+
+## Fields
+
+| Field                                                                              | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `and`                                                                              | array<[Shared\DatastoreFilterGroup](../../Models/Shared/DatastoreFilterGroup.md)>  | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `filters`                                                                          | array<[Shared\DatastoreFilter](../../Models/Shared/DatastoreFilter.md)>            | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `or`                                                                               | array<[Shared\DatastoreFilterGroup](../../Models/Shared/DatastoreFilterGroup.md)>  | :heavy_minus_sign:                                                                 | N/A                                                                                |
+| `type`                                                                             | [Shared\DatastoreFilterGroupType](../../Models/Shared/DatastoreFilterGroupType.md) | :heavy_check_mark:                                                                 | N/A                                                                                |

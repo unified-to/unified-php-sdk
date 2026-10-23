@@ -21,7 +21,7 @@
 
 ## createAtsActivity
 
-Create an activity
+Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
 
 ### Example Usage
 
@@ -46,7 +46,7 @@ $request = new Operations\CreateAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
         description: 'Sapiente.',
-        id: 'e8a2f1e7-5ef1-44d6-b9b0-dd4ae05406d4',
+        id: '9f29f41f-00b8-468d-a94a-d9976a5bfa51',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -54,7 +54,7 @@ $request = new Operations\CreateAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'e90754bb-3fc5-46ca-87c0-2ef0049e309a',
+                id: 'a36967ba-5072-47d3-911e-54d55d57e785',
                 namespace: 'activity',
                 slug: 'cimentarius',
                 value: 'Reprehenderit verto.',
@@ -63,7 +63,7 @@ $request = new Operations\CreateAtsActivityRequest(
         subType: 'TASK',
         title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-04T06:38:15.355Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-06T00:06:46.980Z'),
     ),
     connectionId: '<id>',
 );
@@ -95,7 +95,7 @@ if ($response->atsActivity !== null) {
 
 ## createLmsActivity
 
-Create an activity
+Creates a LmsActivity. Provide the unified LmsActivity fields in the request body; they are mapped to the provider's API. Returns the created LmsActivity.
 
 ### Example Usage
 
@@ -119,15 +119,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2023-12-05T23:40:40.743Z'),
+        completedAt: Utils\Utils::parseDateTime('2023-12-07T00:32:47.256Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '0b1206e4-ebf4-461d-ad66-a9ed815927b6',
+        id: '8ef8803d-f215-49d2-b7ed-91e7dc13d16a',
         isCompleted: true,
         metadata: [],
         progressPercentage: 100,
-        startedAt: Utils\Utils::parseDateTime('2021-04-25T04:23:32.793Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-30T23:41:21.299Z'),
+        startedAt: Utils\Utils::parseDateTime('2021-04-25T08:31:19.340Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-31T09:55:05.053Z'),
     ),
     connectionId: '<id>',
 );
@@ -159,7 +159,7 @@ if ($response->lmsActivity !== null) {
 
 ## getAtsActivity
 
-Retrieve an activity
+Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -210,7 +210,7 @@ if ($response->atsActivity !== null) {
 
 ## getClubsActivity
 
-Retrieve an activity
+Retrieves a single ClubsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -261,7 +261,7 @@ if ($response->clubsActivity !== null) {
 
 ## getLmsActivity
 
-Retrieve an activity
+Retrieves a single LmsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ if ($response->lmsActivity !== null) {
 
 ## listAtsActivities
 
-List all activities
+Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -362,7 +362,7 @@ if ($response->atsActivities !== null) {
 
 ## listClubsActivities
 
-List all activities
+Returns a list of ClubsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -412,7 +412,7 @@ if ($response->clubsActivities !== null) {
 
 ## listLmsActivities
 
-List all activities
+Returns a list of LmsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -462,7 +462,7 @@ if ($response->lmsActivities !== null) {
 
 ## patchAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -487,7 +487,7 @@ $request = new Operations\PatchAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
         description: 'Sapiente.',
-        id: '1dd88965-536d-4641-a508-0b97b622bef5',
+        id: '621110a0-f5d3-4b25-814f-2739f5b1e852',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -495,7 +495,7 @@ $request = new Operations\PatchAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '26853e59-8a39-416d-88e8-757699c82c57',
+                id: 'ca56b027-1a12-41d4-a917-a681c4322f63',
                 namespace: 'activity',
                 slug: 'cimentarius',
                 value: 'Reprehenderit verto.',
@@ -504,7 +504,7 @@ $request = new Operations\PatchAtsActivityRequest(
         subType: 'TASK',
         title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-04T06:38:15.375Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-06T00:06:47.007Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -537,7 +537,7 @@ if ($response->atsActivity !== null) {
 
 ## patchLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -561,15 +561,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2023-12-05T23:40:40.748Z'),
+        completedAt: Utils\Utils::parseDateTime('2023-12-07T00:32:47.263Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '72d4119b-e5e6-45cd-9941-cd292c426d45',
+        id: '0cadbe83-eb81-4e9c-b1e3-5d9ebab0420e',
         isCompleted: true,
         metadata: [],
         progressPercentage: 100,
-        startedAt: Utils\Utils::parseDateTime('2021-04-25T04:23:32.794Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-30T23:41:21.301Z'),
+        startedAt: Utils\Utils::parseDateTime('2021-04-25T08:31:19.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-31T09:55:05.056Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -602,7 +602,7 @@ if ($response->lmsActivity !== null) {
 
 ## removeAtsActivity
 
-Remove an activity
+Deletes the AtsActivity identified by `id`.
 
 ### Example Usage
 
@@ -653,7 +653,7 @@ if ($response->statusCode === 200) {
 
 ## removeLmsActivity
 
-Remove an activity
+Deletes the LmsActivity identified by `id`.
 
 ### Example Usage
 
@@ -704,7 +704,7 @@ if ($response->statusCode === 200) {
 
 ## updateAtsActivity
 
-Update an activity
+Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -729,7 +729,7 @@ $request = new Operations\UpdateAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
         description: 'Sapiente.',
-        id: '1dd88965-536d-4641-a508-0b97b622bef5',
+        id: '621110a0-f5d3-4b25-814f-2739f5b1e852',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -737,7 +737,7 @@ $request = new Operations\UpdateAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '26853e59-8a39-416d-88e8-757699c82c57',
+                id: 'ca56b027-1a12-41d4-a917-a681c4322f63',
                 namespace: 'activity',
                 slug: 'cimentarius',
                 value: 'Reprehenderit verto.',
@@ -746,7 +746,7 @@ $request = new Operations\UpdateAtsActivityRequest(
         subType: 'TASK',
         title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-04T06:38:15.375Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-06T00:06:47.007Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -779,7 +779,7 @@ if ($response->atsActivity !== null) {
 
 ## updateLmsActivity
 
-Update an activity
+Updates the LmsActivity identified by `id`. Provide the unified LmsActivity fields to change in the request body.
 
 ### Example Usage
 
@@ -803,15 +803,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateLmsActivityRequest(
     lmsActivity: new Shared\LmsActivity(
         assignedGrade: 'summopere',
-        completedAt: Utils\Utils::parseDateTime('2023-12-05T23:40:40.748Z'),
+        completedAt: Utils\Utils::parseDateTime('2023-12-07T00:32:47.263Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-17T01:25:21.745Z'),
         durationMinutes: 55,
-        id: '72d4119b-e5e6-45cd-9941-cd292c426d45',
+        id: '0cadbe83-eb81-4e9c-b1e3-5d9ebab0420e',
         isCompleted: true,
         metadata: [],
         progressPercentage: 100,
-        startedAt: Utils\Utils::parseDateTime('2021-04-25T04:23:32.794Z'),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-30T23:41:21.301Z'),
+        startedAt: Utils\Utils::parseDateTime('2021-04-25T08:31:19.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-31T09:55:05.056Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

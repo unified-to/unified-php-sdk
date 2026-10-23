@@ -47,6 +47,8 @@ class Segment
     /**
      * Create a segment
      *
+     * Creates a CdpSegment. Provide the unified CdpSegment fields in the request body; they are mapped to the provider's API. Returns the created CdpSegment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCdpSegmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Segment
     /**
      * Retrieve a segment
      *
+     * Retrieves a single CdpSegment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCdpSegmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Segment
     /**
      * List all segments
      *
+     * Returns a list of CdpSegments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListCdpSegmentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCdpSegmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Segment
 
     /**
      * Update a segment
+     *
+     * Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCdpSegmentResponse
@@ -309,6 +317,8 @@ class Segment
     /**
      * Remove a segment
      *
+     * Deletes the CdpSegment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCdpSegmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Segment
 
     /**
      * Update a segment
+     *
+     * Updates the CdpSegment identified by `id`. Provide the unified CdpSegment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCdpSegmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCdpSegmentResponse

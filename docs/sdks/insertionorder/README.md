@@ -13,7 +13,7 @@
 
 ## createAdsInsertionorder
 
-Create an insertionorder
+Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
 
 ### Example Usage
 
@@ -37,11 +37,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: '29e470ca-1a4f-4c5c-91fc-6a28fa9d22d7',
+        id: '09ee7e7a-562c-4409-b688-8dd41a1b2946',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-28T19:47:29.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T20:13:44.671Z'),
     ),
     connectionId: '<id>',
 );
@@ -73,7 +73,7 @@ if ($response->adsInsertionorder !== null) {
 
 ## getAdsInsertionorder
 
-Retrieve an insertionorder
+Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ if ($response->adsInsertionorder !== null) {
 
 ## listAdsInsertionorders
 
-List all insertionorders
+Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -174,7 +174,7 @@ if ($response->adsInsertionorders !== null) {
 
 ## patchAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -198,11 +198,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: 'e53f2bec-eced-427d-9568-4b613573b749',
+        id: '572472e0-6ed5-4e80-a835-aea09e94ff04',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-28T19:47:29.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T20:13:44.672Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -235,7 +235,7 @@ if ($response->adsInsertionorder !== null) {
 
 ## removeAdsInsertionorder
 
-Remove an insertionorder
+Deletes the AdsInsertionorder identified by `id`.
 
 ### Example Usage
 
@@ -286,7 +286,7 @@ if ($response->statusCode === 200) {
 
 ## updateAdsInsertionorder
 
-Update an insertionorder
+Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
 
 ### Example Usage
 
@@ -310,11 +310,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: 'e53f2bec-eced-427d-9568-4b613573b749',
+        id: '572472e0-6ed5-4e80-a835-aea09e94ff04',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-28T19:47:29.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T20:13:44.672Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

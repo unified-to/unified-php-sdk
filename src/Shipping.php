@@ -47,6 +47,8 @@ class Shipping
     /**
      * Create a label
      *
+     * Creates a ShippingLabel. Provide the unified ShippingLabel fields in the request body; they are mapped to the provider's API. Returns the created ShippingLabel.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Shipping
 
     /**
      * Create a rate
+     *
+     * Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateShippingRateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateShippingRateResponse
@@ -183,6 +187,8 @@ class Shipping
     /**
      * Create a shipment
      *
+     * Creates a ShippingShipment. Provide the unified ShippingShipment fields in the request body; they are mapped to the provider's API. Returns the created ShippingShipment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Shipping
     /**
      * Retrieve a carrier
      *
+     * Retrieves a single ShippingCarrier by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetShippingCarrierRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetShippingCarrierResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Shipping
 
     /**
      * Retrieve a label
+     *
+     * Retrieves a single ShippingLabel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetShippingLabelResponse
@@ -377,6 +387,8 @@ class Shipping
     /**
      * Retrieve a shipment
      *
+     * Retrieves a single ShippingShipment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Shipping
 
     /**
      * Retrieve a tracking
+     *
+     * Retrieves a single ShippingTracking by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetShippingTrackingRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetShippingTrackingResponse
@@ -503,6 +517,8 @@ class Shipping
     /**
      * List all carriers
      *
+     * Returns a list of ShippingCarriers. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListShippingCarriersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListShippingCarriersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -565,6 +581,8 @@ class Shipping
 
     /**
      * List all labels
+     *
+     * Returns a list of ShippingLabels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListShippingLabelsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListShippingLabelsResponse
@@ -629,6 +647,8 @@ class Shipping
     /**
      * List all shipments
      *
+     * Returns a list of ShippingShipments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListShippingShipmentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListShippingShipmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -692,6 +712,8 @@ class Shipping
     /**
      * List all trackings
      *
+     * Returns a list of ShippingTrackings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListShippingTrackingsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListShippingTrackingsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -754,6 +776,8 @@ class Shipping
 
     /**
      * Update a label
+     *
+     * Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchShippingLabelResponse
@@ -823,6 +847,8 @@ class Shipping
     /**
      * Update a shipment
      *
+     * Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -891,6 +917,8 @@ class Shipping
     /**
      * Remove a label
      *
+     * Deletes the ShippingLabel identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveShippingLabelResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -948,6 +976,8 @@ class Shipping
     /**
      * Remove a shipment
      *
+     * Deletes the ShippingShipment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveShippingShipmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1004,6 +1034,8 @@ class Shipping
 
     /**
      * Update a label
+     *
+     * Updates the ShippingLabel identified by `id`. Provide the unified ShippingLabel fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateShippingLabelRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateShippingLabelResponse
@@ -1072,6 +1104,8 @@ class Shipping
 
     /**
      * Update a shipment
+     *
+     * Updates the ShippingShipment identified by `id`. Provide the unified ShippingShipment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateShippingShipmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateShippingShipmentResponse

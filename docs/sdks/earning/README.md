@@ -13,7 +13,7 @@
 
 ## createHrisEarning
 
-Create an earning
+Creates a HrisEarning. Provide the unified HrisEarning fields in the request body; they are mapped to the provider's API. Returns the created HrisEarning.
 
 ### Example Usage
 
@@ -40,12 +40,12 @@ $request = new Operations\CreateHrisEarningRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
         currency: 'USD',
         frequency: Shared\HrisEarningFrequency::Semimonthly,
-        id: 'e217da60-71ee-4135-afac-bd2548e026c2',
+        id: '76988974-2455-4547-ab67-1103f1de5004',
         metadata: [],
         notes: 'Deporto truculenter vinum beatae.',
-        startAt: Utils\Utils::parseDateTime('2022-07-25T11:48:48.385Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-26T09:21:02.675Z'),
         status: Shared\HrisEarningStatus::Ended,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-08T20:32:52.338Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-09T02:56:01.410Z'),
     ),
     connectionId: '<id>',
 );
@@ -77,7 +77,7 @@ if ($response->hrisEarning !== null) {
 
 ## getHrisEarning
 
-Retrieve an earning
+Retrieves a single HrisEarning by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -128,7 +128,7 @@ if ($response->hrisEarning !== null) {
 
 ## listHrisEarnings
 
-List all earnings
+Returns a list of HrisEarnings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -178,7 +178,7 @@ if ($response->hrisEarnings !== null) {
 
 ## patchHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -205,12 +205,12 @@ $request = new Operations\PatchHrisEarningRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
         currency: 'USD',
         frequency: Shared\HrisEarningFrequency::Semimonthly,
-        id: 'ae74f559-3b04-412c-92c7-6b4867daa099',
+        id: '39c3e54d-e6fe-403b-ac15-194da84ef92e',
         metadata: [],
         notes: 'Deporto truculenter vinum beatae.',
-        startAt: Utils\Utils::parseDateTime('2022-07-25T11:48:48.394Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-26T09:21:02.685Z'),
         status: Shared\HrisEarningStatus::Ended,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-08T20:32:52.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-09T02:56:01.413Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -243,7 +243,7 @@ if ($response->hrisEarning !== null) {
 
 ## removeHrisEarning
 
-Remove an earning
+Deletes the HrisEarning identified by `id`.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisEarning
 
-Update an earning
+Updates the HrisEarning identified by `id`. Provide the unified HrisEarning fields to change in the request body.
 
 ### Example Usage
 
@@ -321,12 +321,12 @@ $request = new Operations\UpdateHrisEarningRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
         currency: 'USD',
         frequency: Shared\HrisEarningFrequency::Semimonthly,
-        id: 'ae74f559-3b04-412c-92c7-6b4867daa099',
+        id: '39c3e54d-e6fe-403b-ac15-194da84ef92e',
         metadata: [],
         notes: 'Deporto truculenter vinum beatae.',
-        startAt: Utils\Utils::parseDateTime('2022-07-25T11:48:48.394Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-26T09:21:02.685Z'),
         status: Shared\HrisEarningStatus::Ended,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-08T20:32:52.341Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-09T02:56:01.413Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

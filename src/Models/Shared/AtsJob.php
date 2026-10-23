@@ -157,6 +157,7 @@ class AtsJob
     public ?float $minimumExperienceYears = null;
 
     /**
+     * The job's title
      *
      * @var ?string $name
      */

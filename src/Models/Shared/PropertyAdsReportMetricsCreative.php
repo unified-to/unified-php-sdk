@@ -178,6 +178,7 @@ class PropertyAdsReportMetricsCreative
     public ?array $metadata = null;
 
     /**
+     * The creative's name
      *
      * @var ?string $name
      */

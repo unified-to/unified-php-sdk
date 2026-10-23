@@ -47,6 +47,8 @@ class Asset
     /**
      * Create an asset
      *
+     * Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsAssetRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsAssetResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Asset
     /**
      * Retrieve an asset
      *
+     * Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsAssetRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsAssetResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Asset
 
     /**
      * List all assets
+     *
+     * Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsAssetsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsAssetsResponse

@@ -128,7 +128,7 @@ class AccountingBill
     public ?string $id = null;
 
     /**
-     * $lineitems
+     * The bill's line items: what is billed, with the quantity, price and amount of each
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem> $lineitems
      */

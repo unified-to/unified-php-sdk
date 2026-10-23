@@ -21,7 +21,7 @@
 
 ## createMessagingChannel
 
-Create a channel
+Creates a MessagingChannel. Provide the unified MessagingChannel fields in the request body; they are mapped to the provider's API. Returns the created MessagingChannel.
 
 ### Example Usage
 
@@ -47,13 +47,13 @@ $request = new Operations\CreateMessagingChannelRequest(
         createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
         description: 'Dolores tutis.',
         hasSubchannels: true,
-        id: 'd9e11e3c-2e30-4962-857a-b0faf012090c',
+        id: 'a5009b3f-7791-4c11-915b-38f653d73e89',
         isActive: false,
         isPrivate: true,
         members: [],
         metadata: [],
         name: 'tego',
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T13:53:36.504Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T07:02:00.262Z'),
         webUrl: 'https://svelte-rule.name/',
     ),
     connectionId: '<id>',
@@ -86,7 +86,7 @@ if ($response->messagingChannel !== null) {
 
 ## createMessagingMessage
 
-Create a message
+Creates a MessagingMessage. Provide the unified MessagingMessage fields in the request body; they are mapped to the provider's API. Returns the created MessagingMessage.
 
 ### Example Usage
 
@@ -111,17 +111,17 @@ $request = new Operations\CreateMessagingMessageRequest(
     messagingMessage: new Shared\MessagingMessage(
         attachments: [
             new Shared\MessagingAttachment(
-                contentIdentifier: '04e45111-bc68-4a8e-bd3d-b3fa0e97f6ec',
+                contentIdentifier: 'fd7f4098-5522-45f3-aa2c-6dea3f7535a7',
                 contentType: 'coaegresco',
                 downloadUrl: 'https://rotating-advertisement.org',
                 filename: 'super',
-                messageId: '4bdf761b-5982-4226-a859-f701491f4395',
+                messageId: '7d22bbc3-085b-4643-9022-b34cd227d62e',
                 size: 327,
             ),
         ],
         buttons: [
             new Shared\MessagingButton(
-                id: '40290deb-4326-4491-83e5-5f3efe588a90',
+                id: '58db3fcc-8190-4ca3-8063-b3aa2465254e',
                 text: 'comparo',
             ),
         ],
@@ -129,7 +129,7 @@ $request = new Operations\CreateMessagingMessageRequest(
         destinationMembers: [],
         hasChildren: true,
         hiddenMembers: [],
-        id: '4bdf761b-5982-4226-a859-f701491f4395',
+        id: '7d22bbc3-085b-4643-9022-b34cd227d62e',
         isUnread: false,
         mentionedMembers: [],
         message: 'Sum utique aliquid.',
@@ -138,7 +138,7 @@ $request = new Operations\CreateMessagingMessageRequest(
         metadata: [],
         reactions: [],
         subject: 'Cernuus optio cohaero summisse in.',
-        updatedAt: Utils\Utils::parseDateTime('2023-07-17T11:56:35.209Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-18T03:52:35.710Z'),
         webUrl: 'https://grumpy-kit.net',
     ),
     connectionId: '<id>',
@@ -171,7 +171,7 @@ if ($response->messagingMessage !== null) {
 
 ## getMessagingChannel
 
-Retrieve a channel
+Retrieves a single MessagingChannel by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -222,7 +222,7 @@ if ($response->messagingChannel !== null) {
 
 ## getMessagingMessage
 
-Retrieve a message
+Retrieves a single MessagingMessage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -273,7 +273,7 @@ if ($response->messagingMessage !== null) {
 
 ## listMessagingChannels
 
-List all channels
+Returns a list of MessagingChannels. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -323,7 +323,7 @@ if ($response->messagingChannels !== null) {
 
 ## listMessagingMessages
 
-List all messages
+Returns a list of MessagingMessages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -373,7 +373,7 @@ if ($response->messagingMessages !== null) {
 
 ## patchMessagingChannel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -399,13 +399,13 @@ $request = new Operations\PatchMessagingChannelRequest(
         createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
         description: 'Dolores tutis.',
         hasSubchannels: true,
-        id: '017f7008-218c-4aa0-ae0b-b5feeaffee37',
+        id: 'd6d1c58d-5a71-461a-8f42-0464957f4543',
         isActive: false,
         isPrivate: true,
         members: [],
         metadata: [],
         name: 'tego',
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T13:53:36.518Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T07:02:00.273Z'),
         webUrl: 'https://svelte-rule.name/',
     ),
     connectionId: '<id>',
@@ -439,7 +439,7 @@ if ($response->messagingChannel !== null) {
 
 ## patchMessagingEvent
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -467,7 +467,7 @@ $request = new Operations\PatchMessagingEventRequest(
             name: '',
         ),
         createdAt: Utils\Utils::parseDateTime('2019-05-30T19:44:46.461Z'),
-        id: '7557665c-8c74-4a4b-9f0f-811c0fb08e7a',
+        id: '235d0601-15d2-49bb-bcfa-c2757975effd',
         isReplacingOriginal: false,
         metadata: [],
         type: Shared\MessagingEventType::ButtonClick,
@@ -503,7 +503,7 @@ if ($response->messagingEvent !== null) {
 
 ## patchMessagingMessage
 
-Update a message
+Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
 ### Example Usage
 
@@ -528,17 +528,17 @@ $request = new Operations\PatchMessagingMessageRequest(
     messagingMessage: new Shared\MessagingMessage(
         attachments: [
             new Shared\MessagingAttachment(
-                contentIdentifier: '79549f0f-f993-4179-9a67-edef3885b2c3',
+                contentIdentifier: 'f6dae411-bf06-4e36-a01a-a60a1ff8491d',
                 contentType: 'coaegresco',
                 downloadUrl: 'https://rotating-advertisement.org',
                 filename: 'super',
-                messageId: '34eefc31-7e2a-43f9-9c71-8cc9aff190ad',
+                messageId: 'f98cb815-bd1d-4fb6-9053-11ee68e37ad7',
                 size: 327,
             ),
         ],
         buttons: [
             new Shared\MessagingButton(
-                id: 'c1b75a2d-be6b-44e2-96cf-6f0e95770135',
+                id: 'bfbe12c0-567f-4fa1-83f1-0dd63a630518',
                 text: 'comparo',
             ),
         ],
@@ -546,7 +546,7 @@ $request = new Operations\PatchMessagingMessageRequest(
         destinationMembers: [],
         hasChildren: true,
         hiddenMembers: [],
-        id: '34eefc31-7e2a-43f9-9c71-8cc9aff190ad',
+        id: 'f98cb815-bd1d-4fb6-9053-11ee68e37ad7',
         isUnread: false,
         mentionedMembers: [],
         message: 'Sum utique aliquid.',
@@ -555,7 +555,7 @@ $request = new Operations\PatchMessagingMessageRequest(
         metadata: [],
         reactions: [],
         subject: 'Cernuus optio cohaero summisse in.',
-        updatedAt: Utils\Utils::parseDateTime('2023-07-17T11:56:35.225Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-18T03:52:35.720Z'),
         webUrl: 'https://grumpy-kit.net',
     ),
     connectionId: '<id>',
@@ -589,7 +589,7 @@ if ($response->messagingMessage !== null) {
 
 ## removeMessagingChannel
 
-Remove a channel
+Deletes the MessagingChannel identified by `id`.
 
 ### Example Usage
 
@@ -640,7 +640,7 @@ if ($response->statusCode === 200) {
 
 ## removeMessagingMessage
 
-Remove a message
+Deletes the MessagingMessage identified by `id`.
 
 ### Example Usage
 
@@ -691,7 +691,7 @@ if ($response->statusCode === 200) {
 
 ## updateMessagingChannel
 
-Update a channel
+Updates the MessagingChannel identified by `id`. Provide the unified MessagingChannel fields to change in the request body.
 
 ### Example Usage
 
@@ -717,13 +717,13 @@ $request = new Operations\UpdateMessagingChannelRequest(
         createdAt: Utils\Utils::parseDateTime('2023-10-05T02:09:22.795Z'),
         description: 'Dolores tutis.',
         hasSubchannels: true,
-        id: '017f7008-218c-4aa0-ae0b-b5feeaffee37',
+        id: 'd6d1c58d-5a71-461a-8f42-0464957f4543',
         isActive: false,
         isPrivate: true,
         members: [],
         metadata: [],
         name: 'tego',
-        updatedAt: Utils\Utils::parseDateTime('2026-05-21T13:53:36.518Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T07:02:00.273Z'),
         webUrl: 'https://svelte-rule.name/',
     ),
     connectionId: '<id>',
@@ -757,7 +757,7 @@ if ($response->messagingChannel !== null) {
 
 ## updateMessagingEvent
 
-Update an event
+Updates the MessagingEvent identified by `id`. Provide the unified MessagingEvent fields to change in the request body.
 
 ### Example Usage
 
@@ -785,7 +785,7 @@ $request = new Operations\UpdateMessagingEventRequest(
             name: '',
         ),
         createdAt: Utils\Utils::parseDateTime('2019-05-30T19:44:46.461Z'),
-        id: '7557665c-8c74-4a4b-9f0f-811c0fb08e7a',
+        id: '235d0601-15d2-49bb-bcfa-c2757975effd',
         isReplacingOriginal: false,
         metadata: [],
         type: Shared\MessagingEventType::ButtonClick,
@@ -821,7 +821,7 @@ if ($response->messagingEvent !== null) {
 
 ## updateMessagingMessage
 
-Update a message
+Updates the MessagingMessage identified by `id`. Provide the unified MessagingMessage fields to change in the request body.
 
 ### Example Usage
 
@@ -846,17 +846,17 @@ $request = new Operations\UpdateMessagingMessageRequest(
     messagingMessage: new Shared\MessagingMessage(
         attachments: [
             new Shared\MessagingAttachment(
-                contentIdentifier: '79549f0f-f993-4179-9a67-edef3885b2c3',
+                contentIdentifier: 'f6dae411-bf06-4e36-a01a-a60a1ff8491d',
                 contentType: 'coaegresco',
                 downloadUrl: 'https://rotating-advertisement.org',
                 filename: 'super',
-                messageId: '34eefc31-7e2a-43f9-9c71-8cc9aff190ad',
+                messageId: 'f98cb815-bd1d-4fb6-9053-11ee68e37ad7',
                 size: 327,
             ),
         ],
         buttons: [
             new Shared\MessagingButton(
-                id: 'c1b75a2d-be6b-44e2-96cf-6f0e95770135',
+                id: 'bfbe12c0-567f-4fa1-83f1-0dd63a630518',
                 text: 'comparo',
             ),
         ],
@@ -864,7 +864,7 @@ $request = new Operations\UpdateMessagingMessageRequest(
         destinationMembers: [],
         hasChildren: true,
         hiddenMembers: [],
-        id: '34eefc31-7e2a-43f9-9c71-8cc9aff190ad',
+        id: 'f98cb815-bd1d-4fb6-9053-11ee68e37ad7',
         isUnread: false,
         mentionedMembers: [],
         message: 'Sum utique aliquid.',
@@ -873,7 +873,7 @@ $request = new Operations\UpdateMessagingMessageRequest(
         metadata: [],
         reactions: [],
         subject: 'Cernuus optio cohaero summisse in.',
-        updatedAt: Utils\Utils::parseDateTime('2023-07-17T11:56:35.225Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-18T03:52:35.720Z'),
         webUrl: 'https://grumpy-kit.net',
     ),
     connectionId: '<id>',

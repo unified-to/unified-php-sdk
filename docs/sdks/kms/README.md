@@ -25,7 +25,7 @@
 
 ## createKmsComment
 
-Create a comment
+Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
 
 ### Example Usage
 
@@ -51,10 +51,10 @@ $request = new Operations\CreateKmsCommentRequest(
         content: 'Decimus tolero viriliter usque.',
         contentType: Shared\ContentType::Html,
         createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
-        id: '7d48c048-f83a-497e-932d-ae75226e4a84',
+        id: '6e86b1a7-3b9b-4320-a925-7c73a796b9ae',
         metadata: [],
         type: Shared\KmsCommentType::Page,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-26T06:47:39.913Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T21:09:07.966Z'),
     ),
     connectionId: '<id>',
 );
@@ -86,7 +86,7 @@ if ($response->kmsComment !== null) {
 
 ## createKmsPage
 
-Create a page
+Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
 
 ### Example Usage
 
@@ -112,12 +112,12 @@ $request = new Operations\CreateKmsPageRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
         downloadUrl: 'https://agitated-validity.info',
         hasChildren: true,
-        id: '6ddf7535-f377-4882-8d68-f853b3459224',
+        id: '3e3f360a-de43-4650-a9bd-911dfb7ed5ac',
         isActive: true,
         metadata: [],
         title: 'even minister extract',
         type: Shared\KmsPageType::Html,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-09T04:22:36.892Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-10T21:25:24.997Z'),
         webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
@@ -150,7 +150,7 @@ if ($response->kmsPage !== null) {
 
 ## createKmsSpace
 
-Create a space
+Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
 
 ### Example Usage
 
@@ -175,11 +175,11 @@ $request = new Operations\CreateKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T00:56:54.246Z'),
         description: 'Acer.',
-        id: 'b21eed38-3f30-4a30-868f-0c292f061c9e',
+        id: '8dafebf6-2212-4a89-8f88-7c1ad4c13510',
         isActive: false,
         metadata: [],
         name: 'into nor afore',
-        updatedAt: Utils\Utils::parseDateTime('2025-12-29T22:52:33.056Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-12-31T12:51:23.957Z'),
     ),
     connectionId: '<id>',
 );
@@ -211,7 +211,7 @@ if ($response->kmsSpace !== null) {
 
 ## getKmsComment
 
-Retrieve a comment
+Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ if ($response->kmsComment !== null) {
 
 ## getKmsPage
 
-Retrieve a page
+Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -313,7 +313,7 @@ if ($response->kmsPage !== null) {
 
 ## getKmsSpace
 
-Retrieve a space
+Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -364,7 +364,7 @@ if ($response->kmsSpace !== null) {
 
 ## listKmsComments
 
-List all comments
+Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -414,7 +414,7 @@ if ($response->kmsComments !== null) {
 
 ## listKmsPages
 
-List all pages
+Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -464,7 +464,7 @@ if ($response->kmsPages !== null) {
 
 ## listKmsSpaces
 
-List all spaces
+Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -514,7 +514,7 @@ if ($response->kmsSpaces !== null) {
 
 ## patchKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -540,10 +540,10 @@ $request = new Operations\PatchKmsCommentRequest(
         content: 'Decimus tolero viriliter usque.',
         contentType: Shared\ContentType::Html,
         createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
-        id: '481c0558-3e28-4883-a956-58b21d1bee75',
+        id: '326bb35a-355d-44f1-8aa6-bfb9de8f8773',
         metadata: [],
         type: Shared\KmsCommentType::Page,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-26T06:47:39.916Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T21:09:07.971Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -576,7 +576,7 @@ if ($response->kmsComment !== null) {
 
 ## patchKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -602,12 +602,12 @@ $request = new Operations\PatchKmsPageRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
         downloadUrl: 'https://agitated-validity.info',
         hasChildren: true,
-        id: '8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7',
+        id: 'a3213212-f378-45d5-8801-204ceeee06da',
         isActive: true,
         metadata: [],
         title: 'even minister extract',
         type: Shared\KmsPageType::Html,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-09T04:22:36.905Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-10T21:25:25.025Z'),
         webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
@@ -641,7 +641,7 @@ if ($response->kmsPage !== null) {
 
 ## patchKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -666,11 +666,11 @@ $request = new Operations\PatchKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T00:56:54.246Z'),
         description: 'Acer.',
-        id: 'c6ed6ca0-1967-40b3-bd60-612e0db9ec51',
+        id: '71f93a2c-391a-41ed-9cb3-fad87e1ac4fb',
         isActive: false,
         metadata: [],
         name: 'into nor afore',
-        updatedAt: Utils\Utils::parseDateTime('2025-12-29T22:52:33.064Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-12-31T12:51:23.970Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -703,7 +703,7 @@ if ($response->kmsSpace !== null) {
 
 ## removeKmsComment
 
-Remove a comment
+Deletes the KmsComment identified by `id`.
 
 ### Example Usage
 
@@ -754,7 +754,7 @@ if ($response->statusCode === 200) {
 
 ## removeKmsPage
 
-Remove a page
+Deletes the KmsPage identified by `id`.
 
 ### Example Usage
 
@@ -805,7 +805,7 @@ if ($response->statusCode === 200) {
 
 ## removeKmsSpace
 
-Remove a space
+Deletes the KmsSpace identified by `id`.
 
 ### Example Usage
 
@@ -856,7 +856,7 @@ if ($response->statusCode === 200) {
 
 ## updateKmsComment
 
-Update a comment
+Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
 
 ### Example Usage
 
@@ -882,10 +882,10 @@ $request = new Operations\UpdateKmsCommentRequest(
         content: 'Decimus tolero viriliter usque.',
         contentType: Shared\ContentType::Html,
         createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
-        id: '481c0558-3e28-4883-a956-58b21d1bee75',
+        id: '326bb35a-355d-44f1-8aa6-bfb9de8f8773',
         metadata: [],
         type: Shared\KmsCommentType::Page,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-26T06:47:39.916Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-26T21:09:07.971Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -918,7 +918,7 @@ if ($response->kmsComment !== null) {
 
 ## updateKmsPage
 
-Update a page
+Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
 
 ### Example Usage
 
@@ -944,12 +944,12 @@ $request = new Operations\UpdateKmsPageRequest(
         createdAt: Utils\Utils::parseDateTime('2019-05-20T18:06:50.749Z'),
         downloadUrl: 'https://agitated-validity.info',
         hasChildren: true,
-        id: '8c9ed97f-b8be-41ce-bb37-2ba55ccd95c7',
+        id: 'a3213212-f378-45d5-8801-204ceeee06da',
         isActive: true,
         metadata: [],
         title: 'even minister extract',
         type: Shared\KmsPageType::Html,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-09T04:22:36.905Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-10T21:25:25.025Z'),
         webUrl: 'https://another-petticoat.info',
     ),
     connectionId: '<id>',
@@ -983,7 +983,7 @@ if ($response->kmsPage !== null) {
 
 ## updateKmsSpace
 
-Update a space
+Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
 
 ### Example Usage
 
@@ -1008,11 +1008,11 @@ $request = new Operations\UpdateKmsSpaceRequest(
     kmsSpace: new Shared\KmsSpace(
         createdAt: Utils\Utils::parseDateTime('2022-10-31T00:56:54.246Z'),
         description: 'Acer.',
-        id: 'c6ed6ca0-1967-40b3-bd60-612e0db9ec51',
+        id: '71f93a2c-391a-41ed-9cb3-fad87e1ac4fb',
         isActive: false,
         metadata: [],
         name: 'into nor afore',
-        updatedAt: Utils\Utils::parseDateTime('2025-12-29T22:52:33.064Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-12-31T12:51:23.970Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

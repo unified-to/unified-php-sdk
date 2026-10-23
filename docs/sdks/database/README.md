@@ -13,7 +13,7 @@
 
 ## createDatastoreDatabase
 
-Create a database
+Creates a DatastoreDatabase. Provide the unified DatastoreDatabase fields in the request body; they are mapped to the provider's API. Returns the created DatastoreDatabase.
 
 ### Example Usage
 
@@ -38,13 +38,13 @@ $request = new Operations\CreateDatastoreDatabaseRequest(
     datastoreDatabase: new Shared\DatastoreDatabase(
         createdAt: Utils\Utils::parseDateTime('2019-03-05T14:31:00.223Z'),
         description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
-        id: 'e1ac73cf-78a9-4280-8b3c-3c5fcb09fe7c',
+        id: 'd28e9097-c155-4984-9b60-97192f466090',
         isActive: true,
         metadata: [],
         name: 'Rau - O\'Reilly',
         password: 'iYLhYwOHm0NLDvI',
         region: 'France',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-30T19:48:44.870Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-01T22:48:57.105Z'),
         webUrl: 'https://optimal-signature.name',
     ),
     connectionId: '<id>',
@@ -77,7 +77,7 @@ if ($response->datastoreDatabase !== null) {
 
 ## getDatastoreDatabase
 
-Retrieve a database
+Retrieves a single DatastoreDatabase by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -128,7 +128,7 @@ if ($response->datastoreDatabase !== null) {
 
 ## listDatastoreDatabases
 
-List all databases
+Returns a list of DatastoreDatabases. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -178,7 +178,7 @@ if ($response->datastoreDatabases !== null) {
 
 ## patchDatastoreDatabase
 
-Update a database
+Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
 ### Example Usage
 
@@ -203,13 +203,13 @@ $request = new Operations\PatchDatastoreDatabaseRequest(
     datastoreDatabase: new Shared\DatastoreDatabase(
         createdAt: Utils\Utils::parseDateTime('2019-03-05T14:31:00.223Z'),
         description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
-        id: '39e3794b-1afe-4d93-9086-7a42705e3d29',
+        id: 'bb1b6296-f585-4de3-a982-e4650d57c1a5',
         isActive: true,
         metadata: [],
         name: 'Rau - O\'Reilly',
         password: 'iYLhYwOHm0NLDvI',
         region: 'France',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-30T19:48:44.875Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-01T22:48:57.113Z'),
         webUrl: 'https://optimal-signature.name',
     ),
     connectionId: '<id>',
@@ -243,7 +243,7 @@ if ($response->datastoreDatabase !== null) {
 
 ## removeDatastoreDatabase
 
-Remove a database
+Deletes the DatastoreDatabase identified by `id`.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ if ($response->statusCode === 200) {
 
 ## updateDatastoreDatabase
 
-Update a database
+Updates the DatastoreDatabase identified by `id`. Provide the unified DatastoreDatabase fields to change in the request body.
 
 ### Example Usage
 
@@ -319,13 +319,13 @@ $request = new Operations\UpdateDatastoreDatabaseRequest(
     datastoreDatabase: new Shared\DatastoreDatabase(
         createdAt: Utils\Utils::parseDateTime('2019-03-05T14:31:00.223Z'),
         description: 'Substantia tantillus coniuratio repellat coerceo amet vito vorago.',
-        id: '39e3794b-1afe-4d93-9086-7a42705e3d29',
+        id: 'bb1b6296-f585-4de3-a982-e4650d57c1a5',
         isActive: true,
         metadata: [],
         name: 'Rau - O\'Reilly',
         password: 'iYLhYwOHm0NLDvI',
         region: 'France',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-30T19:48:44.875Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-07-01T22:48:57.113Z'),
         webUrl: 'https://optimal-signature.name',
     ),
     connectionId: '<id>',

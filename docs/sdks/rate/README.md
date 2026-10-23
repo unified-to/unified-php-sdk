@@ -8,7 +8,7 @@
 
 ## createShippingRate
 
-Create a rate
+Creates a ShippingRate. Provide the unified ShippingRate fields in the request body; they are mapped to the provider's API. Returns the created ShippingRate.
 
 ### Example Usage
 
@@ -32,7 +32,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingRateRequest(
     shippingRate: new Shared\ShippingRate(
         currency: 'USD',
-        id: '01f6f2cf-1d29-4d5f-833e-d6d1dcfad6c9',
+        id: '30e738c4-c3a5-4e6d-a9f8-811af169af55',
         metadata: [],
         rates: [
             new Shared\ShippingRateRate(

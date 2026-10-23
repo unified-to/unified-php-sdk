@@ -47,6 +47,8 @@ class Signatory
     /**
      * Create a signatory
      *
+     * Creates a SigningSignatory. Provide the unified SigningSignatory fields in the request body; they are mapped to the provider's API. Returns the created SigningSignatory.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Signatory
     /**
      * Retrieve a signatory
      *
+     * Retrieves a single SigningSignatory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Signatory
     /**
      * List all signatories
      *
+     * Returns a list of SigningSignatories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSigningSignatoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSigningSignatoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Signatory
 
     /**
      * Update a signatory
+     *
+     * Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchSigningSignatoryResponse
@@ -309,6 +317,8 @@ class Signatory
     /**
      * Remove a signatory
      *
+     * Deletes the SigningSignatory identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveSigningSignatoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Signatory
 
     /**
      * Update a signatory
+     *
+     * Updates the SigningSignatory identified by `id`. Provide the unified SigningSignatory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateSigningSignatoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateSigningSignatoryResponse

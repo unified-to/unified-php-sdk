@@ -13,7 +13,7 @@
 
 ## createLmsClass
 
-Create a class
+Creates a LmsClass. Provide the unified LmsClass fields in the request body; they are mapped to the provider's API. Returns the created LmsClass.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ $request = new Operations\CreateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: '02c0fab5-b196-44ff-ac6f-aad22cd1d454',
+        id: '3d626bb3-633b-41be-ab9a-3ae166742cfe',
         instructors: [],
         languages: [
             'in',
@@ -60,7 +60,7 @@ $request = new Operations\CreateLmsClassRequest(
         metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-03T21:30:44.537Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-05T12:30:35.661Z'),
     ),
     connectionId: '<id>',
 );
@@ -92,7 +92,7 @@ if ($response->lmsClass !== null) {
 
 ## getLmsClass
 
-Retrieve a class
+Retrieves a single LmsClass by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -143,7 +143,7 @@ if ($response->lmsClass !== null) {
 
 ## listLmsClasses
 
-List all classes
+Returns a list of LmsClasses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -193,7 +193,7 @@ if ($response->lmsClasses !== null) {
 
 ## patchLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -218,7 +218,7 @@ $request = new Operations\PatchLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: 'd27e8714-52ef-484e-904f-dea9aacb2d55',
+        id: 'ddee1bcd-4b7e-4da9-b781-6a870fe29650',
         instructors: [],
         languages: [
             'in',
@@ -240,7 +240,7 @@ $request = new Operations\PatchLmsClassRequest(
         metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-03T21:30:44.550Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-05T12:30:35.679Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -273,7 +273,7 @@ if ($response->lmsClass !== null) {
 
 ## removeLmsClass
 
-Remove a class
+Deletes the LmsClass identified by `id`.
 
 ### Example Usage
 
@@ -324,7 +324,7 @@ if ($response->statusCode === 200) {
 
 ## updateLmsClass
 
-Update a class
+Updates the LmsClass identified by `id`. Provide the unified LmsClass fields to change in the request body.
 
 ### Example Usage
 
@@ -349,7 +349,7 @@ $request = new Operations\UpdateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: 'd27e8714-52ef-484e-904f-dea9aacb2d55',
+        id: 'ddee1bcd-4b7e-4da9-b781-6a870fe29650',
         instructors: [],
         languages: [
             'in',
@@ -371,7 +371,7 @@ $request = new Operations\UpdateLmsClassRequest(
         metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-03T21:30:44.550Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-05T12:30:35.679Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

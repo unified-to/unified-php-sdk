@@ -15,7 +15,7 @@
 
 ## createAtsScorecard
 
-Create a scorecard
+Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ $request = new Operations\CreateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: '2dea7d23-46fb-48d0-a30a-b909d9a83d91',
+        id: '19b0e4fb-a259-43aa-a392-afb96fe06d04',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -54,7 +54,7 @@ $request = new Operations\CreateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-05T13:40:04.404Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-06T02:49:08.973Z'),
     ),
     connectionId: '<id>',
 );
@@ -86,7 +86,7 @@ if ($response->atsScorecard !== null) {
 
 ## getAtsScorecard
 
-Retrieve a scorecard
+Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ if ($response->atsScorecard !== null) {
 
 ## getUcScorecard
 
-Retrieve a scorecard
+Retrieves a single UcScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -188,7 +188,7 @@ if ($response->ucScorecard !== null) {
 
 ## listAtsScorecards
 
-List all scorecards
+Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -238,7 +238,7 @@ if ($response->atsScorecards !== null) {
 
 ## listUcScorecards
 
-List all scorecards
+Returns a list of UcScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -288,7 +288,7 @@ if ($response->ucScorecards !== null) {
 
 ## patchAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -313,7 +313,7 @@ $request = new Operations\PatchAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed',
+        id: 'c5de99f1-c13a-40f6-a55e-2e2e6943034a',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -327,7 +327,7 @@ $request = new Operations\PatchAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-05T13:40:04.409Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-06T02:49:08.978Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -360,7 +360,7 @@ if ($response->atsScorecard !== null) {
 
 ## removeAtsScorecard
 
-Remove a scorecard
+Deletes the AtsScorecard identified by `id`.
 
 ### Example Usage
 
@@ -411,7 +411,7 @@ if ($response->statusCode === 200) {
 
 ## updateAtsScorecard
 
-Update a scorecard
+Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
 
 ### Example Usage
 
@@ -436,7 +436,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'b9b9b7a0-dae3-4133-a9d1-fa9a7b5843ed',
+        id: 'c5de99f1-c13a-40f6-a55e-2e2e6943034a',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -450,7 +450,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-05T13:40:04.409Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-06T02:49:08.978Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

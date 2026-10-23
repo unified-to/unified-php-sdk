@@ -47,6 +47,8 @@ class Healthcare
     /**
      * Create an appointment
      *
+     * Creates a HealthcareAppointment. Provide the unified HealthcareAppointment fields in the request body; they are mapped to the provider's API. Returns the created HealthcareAppointment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHealthcareAppointmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Healthcare
 
     /**
      * Create an observation
+     *
+     * Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHealthcareObservationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHealthcareObservationResponse
@@ -183,6 +187,8 @@ class Healthcare
     /**
      * Create a patient
      *
+     * Creates a HealthcarePatient. Provide the unified HealthcarePatient fields in the request body; they are mapped to the provider's API. Returns the created HealthcarePatient.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateHealthcarePatientRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHealthcarePatientResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Healthcare
     /**
      * Retrieve an allergy
      *
+     * Retrieves a single HealthcareAllergy by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareAllergyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareAllergyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Healthcare
 
     /**
      * Retrieve an appointment
+     *
+     * Retrieves a single HealthcareAppointment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareAppointmentResponse
@@ -377,6 +387,8 @@ class Healthcare
     /**
      * Retrieve a condition
      *
+     * Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareConditionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareConditionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Healthcare
 
     /**
      * Retrieve an encounter
+     *
+     * Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareEncounterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareEncounterResponse
@@ -503,6 +517,8 @@ class Healthcare
     /**
      * Retrieve an immunization
      *
+     * Retrieves a single HealthcareImmunization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareImmunizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareImmunizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -565,6 +581,8 @@ class Healthcare
 
     /**
      * Retrieve a location
+     *
+     * Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareLocationResponse
@@ -629,6 +647,8 @@ class Healthcare
     /**
      * Retrieve a medication
      *
+     * Retrieves a single HealthcareMedication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareMedicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareMedicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -691,6 +711,8 @@ class Healthcare
 
     /**
      * Retrieve an observation
+     *
+     * Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareObservationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareObservationResponse
@@ -755,6 +777,8 @@ class Healthcare
     /**
      * Retrieve a patient
      *
+     * Retrieves a single HealthcarePatient by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcarePatientRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcarePatientResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -817,6 +841,8 @@ class Healthcare
 
     /**
      * Retrieve a practitioner
+     *
+     * Retrieves a single HealthcarePractitioner by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcarePractitionerRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcarePractitionerResponse
@@ -881,6 +907,8 @@ class Healthcare
     /**
      * Retrieve a slot
      *
+     * Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareSlotRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareSlotResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -943,6 +971,8 @@ class Healthcare
 
     /**
      * List all allergies
+     *
+     * Returns a list of HealthcareAllergies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareAllergiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareAllergiesResponse
@@ -1007,6 +1037,8 @@ class Healthcare
     /**
      * List all appointments
      *
+     * Returns a list of HealthcareAppointments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareAppointmentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareAppointmentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1069,6 +1101,8 @@ class Healthcare
 
     /**
      * List all conditions
+     *
+     * Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareConditionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareConditionsResponse
@@ -1133,6 +1167,8 @@ class Healthcare
     /**
      * List all encounters
      *
+     * Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareEncountersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareEncountersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1195,6 +1231,8 @@ class Healthcare
 
     /**
      * List all immunizations
+     *
+     * Returns a list of HealthcareImmunizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareImmunizationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareImmunizationsResponse
@@ -1259,6 +1297,8 @@ class Healthcare
     /**
      * List all locations
      *
+     * Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareLocationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1321,6 +1361,8 @@ class Healthcare
 
     /**
      * List all medications
+     *
+     * Returns a list of HealthcareMedications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareMedicationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareMedicationsResponse
@@ -1385,6 +1427,8 @@ class Healthcare
     /**
      * List all observations
      *
+     * Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareObservationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareObservationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1447,6 +1491,8 @@ class Healthcare
 
     /**
      * List all patients
+     *
+     * Returns a list of HealthcarePatients. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcarePatientsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcarePatientsResponse
@@ -1511,6 +1557,8 @@ class Healthcare
     /**
      * List all practitioners
      *
+     * Returns a list of HealthcarePractitioners. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcarePractitionersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcarePractitionersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1574,6 +1622,8 @@ class Healthcare
     /**
      * List all slots
      *
+     * Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareSlotsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareSlotsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1636,6 +1686,8 @@ class Healthcare
 
     /**
      * Update an appointment
+     *
+     * Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHealthcareAppointmentResponse
@@ -1705,6 +1757,8 @@ class Healthcare
     /**
      * Update a patient
      *
+     * Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHealthcarePatientRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHealthcarePatientResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1773,6 +1827,8 @@ class Healthcare
     /**
      * Remove an appointment
      *
+     * Deletes the HealthcareAppointment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHealthcareAppointmentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1829,6 +1885,8 @@ class Healthcare
 
     /**
      * Update an appointment
+     *
+     * Updates the HealthcareAppointment identified by `id`. Provide the unified HealthcareAppointment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHealthcareAppointmentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHealthcareAppointmentResponse
@@ -1897,6 +1955,8 @@ class Healthcare
 
     /**
      * Update a patient
+     *
+     * Updates the HealthcarePatient identified by `id`. Provide the unified HealthcarePatient fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHealthcarePatientRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHealthcarePatientResponse

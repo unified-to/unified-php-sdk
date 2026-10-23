@@ -13,7 +13,7 @@
 
 ## createAccountingExpensereport
 
-Create an expensereport
+Creates a AccountingExpensereport. Provide the unified AccountingExpensereport fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpensereport.
 
 ### Example Usage
 
@@ -36,16 +36,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.790Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.842Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'GBP',
         externalNumber: 'ER-31240',
-        id: '47fc5f29-63b1-4967-8d17-2c4118094a90',
+        id: 'f63bd806-4b21-4bdc-b714-fe0e8e2402a0',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: 'f0a59367-a39b-4ec9-a43f-490649722cd0',
+                id: '5fdcc2ed-91dc-4537-bd23-7143ceb49a1c',
                 itemName: 'Conference ticket',
                 taxAmount: 0,
                 totalAmount: 39.9,
@@ -53,7 +53,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '8f35dff7-42c8-46de-9a69-2c1c1c24e7b7',
+                id: '652c74f5-0ff4-4b06-932d-a0c218ae5a70',
                 itemName: 'Flight',
                 notes: 'Soluta omnis dolor.',
                 taxAmount: 0,
@@ -62,7 +62,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '33b44f34-a048-4d08-8b99-b7f36a8d55b2',
+                id: '03b758bf-d56c-480f-a429-bf471d44d9e1',
                 itemName: 'Client dinner',
                 notes: 'Altus caveo capio.',
                 taxAmount: 0,
@@ -71,7 +71,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '2cb1b50d-0517-48c1-a724-381f15ffb276',
+                id: '962b1da8-8be3-42da-9e1e-27c725c75cfe',
                 itemName: 'Flight',
                 taxAmount: 0,
                 totalAmount: 445.27,
@@ -83,11 +83,11 @@ $request = new Operations\CreateAccountingExpensereportRequest(
         name: 'Lolita Kunde - October expenses',
         postedAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         reimbursedAmount: 908.46,
-        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.790Z'),
+        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.842Z'),
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 0,
         totalAmount: 908.46,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.790Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.842Z'),
     ),
     connectionId: '<id>',
 );
@@ -119,7 +119,7 @@ if ($response->accountingExpensereport !== null) {
 
 ## getAccountingExpensereport
 
-Retrieve an expensereport
+Retrieves a single AccountingExpensereport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -170,7 +170,7 @@ if ($response->accountingExpensereport !== null) {
 
 ## listAccountingExpensereports
 
-List all expensereports
+Returns a list of AccountingExpensereports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -220,7 +220,7 @@ if ($response->accountingExpensereports !== null) {
 
 ## patchAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -243,16 +243,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'GBP',
         externalNumber: 'ER-31240',
-        id: '69060eb7-1248-4734-8695-92f015020820',
+        id: 'ca3d3f3d-ac03-4f98-9f30-5f77919ee7ca',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '736d934a-f77b-47de-a5c1-82c06e7a0566',
+                id: '26a42037-a75f-43ca-8145-8ecf947b1ed1',
                 itemName: 'Conference ticket',
                 taxAmount: 0,
                 totalAmount: 39.9,
@@ -260,7 +260,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '1fd15cda-8fdd-4d91-bb47-d80121e55172',
+                id: 'abd2a5a1-da4a-457b-a8b5-0af91e9b002e',
                 itemName: 'Flight',
                 notes: 'Soluta omnis dolor.',
                 taxAmount: 0,
@@ -269,7 +269,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'ba79aa66-d7d6-4454-b09f-d90f5c60ac9e',
+                id: 'cac8fe5a-d4a9-4c95-9579-dd7fc97fc758',
                 itemName: 'Client dinner',
                 notes: 'Altus caveo capio.',
                 taxAmount: 0,
@@ -278,7 +278,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '9d01fb30-5963-46c4-a6f6-fc0409d4ab78',
+                id: 'a2aac9f8-4107-4bf5-a198-cd4aa7fcec70',
                 itemName: 'Flight',
                 taxAmount: 0,
                 totalAmount: 445.27,
@@ -290,11 +290,11 @@ $request = new Operations\PatchAccountingExpensereportRequest(
         name: 'Lolita Kunde - October expenses',
         postedAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         reimbursedAmount: 908.46,
-        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 0,
         totalAmount: 908.46,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -327,7 +327,7 @@ if ($response->accountingExpensereport !== null) {
 
 ## removeAccountingExpensereport
 
-Remove an expensereport
+Deletes the AccountingExpensereport identified by `id`.
 
 ### Example Usage
 
@@ -378,7 +378,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingExpensereport
 
-Update an expensereport
+Updates the AccountingExpensereport identified by `id`. Provide the unified AccountingExpensereport fields to change in the request body.
 
 ### Example Usage
 
@@ -401,16 +401,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'GBP',
         externalNumber: 'ER-31240',
-        id: '69060eb7-1248-4734-8695-92f015020820',
+        id: 'ca3d3f3d-ac03-4f98-9f30-5f77919ee7ca',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '736d934a-f77b-47de-a5c1-82c06e7a0566',
+                id: '26a42037-a75f-43ca-8145-8ecf947b1ed1',
                 itemName: 'Conference ticket',
                 taxAmount: 0,
                 totalAmount: 39.9,
@@ -418,7 +418,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '1fd15cda-8fdd-4d91-bb47-d80121e55172',
+                id: 'abd2a5a1-da4a-457b-a8b5-0af91e9b002e',
                 itemName: 'Flight',
                 notes: 'Soluta omnis dolor.',
                 taxAmount: 0,
@@ -427,7 +427,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'ba79aa66-d7d6-4454-b09f-d90f5c60ac9e',
+                id: 'cac8fe5a-d4a9-4c95-9579-dd7fc97fc758',
                 itemName: 'Client dinner',
                 notes: 'Altus caveo capio.',
                 taxAmount: 0,
@@ -436,7 +436,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '9d01fb30-5963-46c4-a6f6-fc0409d4ab78',
+                id: 'a2aac9f8-4107-4bf5-a198-cd4aa7fcec70',
                 itemName: 'Flight',
                 taxAmount: 0,
                 totalAmount: 445.27,
@@ -448,11 +448,11 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
         name: 'Lolita Kunde - October expenses',
         postedAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         reimbursedAmount: 908.46,
-        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        reimbursedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 0,
         totalAmount: 908.46,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-19T11:29:13.798Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-19T18:07:41.850Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

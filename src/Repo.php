@@ -47,6 +47,8 @@ class Repo
     /**
      * Create a branch
      *
+     * Creates a RepoBranch. Provide the unified RepoBranch fields in the request body; they are mapped to the provider's API. Returns the created RepoBranch.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Repo
 
     /**
      * Create a commit
+     *
+     * Creates a RepoCommit. Provide the unified RepoCommit fields in the request body; they are mapped to the provider's API. Returns the created RepoCommit.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoCommitResponse
@@ -183,6 +187,8 @@ class Repo
     /**
      * Create an organization
      *
+     * Creates a RepoOrganization. Provide the unified RepoOrganization fields in the request body; they are mapped to the provider's API. Returns the created RepoOrganization.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Repo
 
     /**
      * Create a pullrequest
+     *
+     * Creates a RepoPullrequest. Provide the unified RepoPullrequest fields in the request body; they are mapped to the provider's API. Returns the created RepoPullrequest.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoPullrequestResponse
@@ -319,6 +327,8 @@ class Repo
     /**
      * Create a repository
      *
+     * Creates a RepoRepository. Provide the unified RepoRepository fields in the request body; they are mapped to the provider's API. Returns the created RepoRepository.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -387,6 +397,8 @@ class Repo
     /**
      * Retrieve a branch
      *
+     * Retrieves a single RepoBranch by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -449,6 +461,8 @@ class Repo
 
     /**
      * Retrieve a commit
+     *
+     * Retrieves a single RepoCommit by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoCommitResponse
@@ -513,6 +527,8 @@ class Repo
     /**
      * Retrieve an organization
      *
+     * Retrieves a single RepoOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -575,6 +591,8 @@ class Repo
 
     /**
      * Retrieve a pullrequest
+     *
+     * Retrieves a single RepoPullrequest by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoPullrequestResponse
@@ -639,6 +657,8 @@ class Repo
     /**
      * Retrieve a repository
      *
+     * Retrieves a single RepoRepository by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -701,6 +721,8 @@ class Repo
 
     /**
      * List all branches
+     *
+     * Returns a list of RepoBranches. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoBranchesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoBranchesResponse
@@ -765,6 +787,8 @@ class Repo
     /**
      * List all commits
      *
+     * Returns a list of RepoCommits. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoCommitsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoCommitsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -827,6 +851,8 @@ class Repo
 
     /**
      * List all organizations
+     *
+     * Returns a list of RepoOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoOrganizationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoOrganizationsResponse
@@ -891,6 +917,8 @@ class Repo
     /**
      * List all pullrequests
      *
+     * Returns a list of RepoPullrequests. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoPullrequestsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoPullrequestsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -954,6 +982,8 @@ class Repo
     /**
      * List all repositories
      *
+     * Returns a list of RepoRepositories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListRepoRepositoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListRepoRepositoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1016,6 +1046,8 @@ class Repo
 
     /**
      * Update a branch
+     *
+     * Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoBranchResponse
@@ -1085,6 +1117,8 @@ class Repo
     /**
      * Update a commit
      *
+     * Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1152,6 +1186,8 @@ class Repo
 
     /**
      * Update an organization
+     *
+     * Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoOrganizationResponse
@@ -1221,6 +1257,8 @@ class Repo
     /**
      * Update a pullrequest
      *
+     * Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1288,6 +1326,8 @@ class Repo
 
     /**
      * Update a repository
+     *
+     * Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchRepoRepositoryResponse
@@ -1357,6 +1397,8 @@ class Repo
     /**
      * Remove a branch
      *
+     * Deletes the RepoBranch identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoBranchResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1413,6 +1455,8 @@ class Repo
 
     /**
      * Remove a commit
+     *
+     * Deletes the RepoCommit identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoCommitResponse
@@ -1471,6 +1515,8 @@ class Repo
     /**
      * Remove an organization
      *
+     * Deletes the RepoOrganization identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1527,6 +1573,8 @@ class Repo
 
     /**
      * Remove a pullrequest
+     *
+     * Deletes the RepoPullrequest identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoPullrequestResponse
@@ -1585,6 +1633,8 @@ class Repo
     /**
      * Remove a repository
      *
+     * Deletes the RepoRepository identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveRepoRepositoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1641,6 +1691,8 @@ class Repo
 
     /**
      * Update a branch
+     *
+     * Updates the RepoBranch identified by `id`. Provide the unified RepoBranch fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoBranchRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoBranchResponse
@@ -1710,6 +1762,8 @@ class Repo
     /**
      * Update a commit
      *
+     * Updates the RepoCommit identified by `id`. Provide the unified RepoCommit fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoCommitRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoCommitResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1777,6 +1831,8 @@ class Repo
 
     /**
      * Update an organization
+     *
+     * Updates the RepoOrganization identified by `id`. Provide the unified RepoOrganization fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoOrganizationResponse
@@ -1846,6 +1902,8 @@ class Repo
     /**
      * Update a pullrequest
      *
+     * Updates the RepoPullrequest identified by `id`. Provide the unified RepoPullrequest fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoPullrequestResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1913,6 +1971,8 @@ class Repo
 
     /**
      * Update a repository
+     *
+     * Updates the RepoRepository identified by `id`. Provide the unified RepoRepository fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateRepoRepositoryResponse

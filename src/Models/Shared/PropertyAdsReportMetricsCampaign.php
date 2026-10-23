@@ -164,6 +164,7 @@ class PropertyAdsReportMetricsCampaign
     public ?array $metadata = null;
 
     /**
+     * The campaign's name
      *
      * @var ?string $name
      */
@@ -172,6 +173,7 @@ class PropertyAdsReportMetricsCampaign
     public ?string $name = null;
 
     /**
+     * The ID of the ad account the campaign belongs to (an AdsOrganization ID)
      *
      * @var ?string $organizationId
      */

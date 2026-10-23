@@ -13,7 +13,7 @@
 
 ## createHrisBankaccount
 
-Create a bankaccount
+Creates a HrisBankaccount. Provide the unified HrisBankaccount fields in the request body; they are mapped to the provider's API. Returns the created HrisBankaccount.
 
 ### Example Usage
 
@@ -43,7 +43,7 @@ $request = new Operations\CreateHrisBankaccountRequest(
         countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
         currency: 'USD',
-        id: '873b3ffd-2308-487d-a12d-eaadd026c278',
+        id: 'a6b56f32-6680-4278-a7eb-42eafc008478',
         isPrimary: true,
         metadata: [],
         name: 'Granville Schumm - Checking',
@@ -51,7 +51,7 @@ $request = new Operations\CreateHrisBankaccountRequest(
         routingNumber: '448650724',
         splitAmount: 98,
         splitType: Shared\SplitType::Percentage,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-01T06:21:20.400Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-02T21:02:53.617Z'),
     ),
     connectionId: '<id>',
 );
@@ -83,7 +83,7 @@ if ($response->hrisBankaccount !== null) {
 
 ## getHrisBankaccount
 
-Retrieve a bankaccount
+Retrieves a single HrisBankaccount by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -134,7 +134,7 @@ if ($response->hrisBankaccount !== null) {
 
 ## listHrisBankaccounts
 
-List all bankaccounts
+Returns a list of HrisBankaccounts. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -184,7 +184,7 @@ if ($response->hrisBankaccounts !== null) {
 
 ## patchHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -214,7 +214,7 @@ $request = new Operations\PatchHrisBankaccountRequest(
         countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
         currency: 'USD',
-        id: '226e7e5d-1767-47a1-b0fd-6b38c5ed69ab',
+        id: '0ac397c0-d0a9-4e91-a40f-625e296f11dc',
         isPrimary: true,
         metadata: [],
         name: 'Granville Schumm - Checking',
@@ -222,7 +222,7 @@ $request = new Operations\PatchHrisBankaccountRequest(
         routingNumber: '448650724',
         splitAmount: 98,
         splitType: Shared\SplitType::Percentage,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-01T06:21:20.416Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-02T21:02:53.635Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -255,7 +255,7 @@ if ($response->hrisBankaccount !== null) {
 
 ## removeHrisBankaccount
 
-Remove a bankaccount
+Deletes the HrisBankaccount identified by `id`.
 
 ### Example Usage
 
@@ -306,7 +306,7 @@ if ($response->statusCode === 200) {
 
 ## updateHrisBankaccount
 
-Update a bankaccount
+Updates the HrisBankaccount identified by `id`. Provide the unified HrisBankaccount fields to change in the request body.
 
 ### Example Usage
 
@@ -336,7 +336,7 @@ $request = new Operations\UpdateHrisBankaccountRequest(
         countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
         currency: 'USD',
-        id: '226e7e5d-1767-47a1-b0fd-6b38c5ed69ab',
+        id: '0ac397c0-d0a9-4e91-a40f-625e296f11dc',
         isPrimary: true,
         metadata: [],
         name: 'Granville Schumm - Checking',
@@ -344,7 +344,7 @@ $request = new Operations\UpdateHrisBankaccountRequest(
         routingNumber: '448650724',
         splitAmount: 98,
         splitType: Shared\SplitType::Percentage,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-01T06:21:20.416Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-02T21:02:53.635Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

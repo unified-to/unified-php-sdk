@@ -25,7 +25,7 @@
 
 ## createAtsDocument
 
-Create a document
+Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
 
 ### Example Usage
 
@@ -51,10 +51,10 @@ $request = new Operations\CreateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '29c939d9-2af8-44c4-a7d5-67e03b8e6897',
+        id: 'a9b9128f-444c-43cb-bc3d-6803d582a3ca',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-07T04:59:55.140Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-07T16:58:00.725Z'),
     ),
     connectionId: '<id>',
 );
@@ -86,7 +86,7 @@ if ($response->atsDocument !== null) {
 
 ## createHrisDocument
 
-Create a document
+Creates a HrisDocument. Provide the unified HrisDocument fields in the request body; they are mapped to the provider's API. Returns the created HrisDocument.
 
 ### Example Usage
 
@@ -112,10 +112,10 @@ $request = new Operations\CreateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: 'b25835b6-2aaf-4225-a1f4-e0249d981e29',
+        id: '7d609a97-f59a-4860-9238-05ad03354cc0',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-11T14:06:05.581Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-13T01:30:16.029Z'),
     ),
     connectionId: '<id>',
 );
@@ -147,7 +147,7 @@ if ($response->hrisDocument !== null) {
 
 ## createSigningDocument
 
-Create a document
+Creates a SigningDocument. Provide the unified SigningDocument fields in the request body; they are mapped to the provider's API. Returns the created SigningDocument.
 
 ### Example Usage
 
@@ -173,12 +173,12 @@ $request = new Operations\CreateSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '3d0e68e0-30df-45a8-a377-a3031f2cac8f',
+        id: 'efddad88-fde5-43a7-98a3-290f5f4b3c1a',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-06-29T12:05:58.496Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-06-29T22:11:51.154Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-02T22:28:48.273Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-04T12:17:49.876Z'),
     ),
     connectionId: '<id>',
 );
@@ -210,7 +210,7 @@ if ($response->signingDocument !== null) {
 
 ## getAtsDocument
 
-Retrieve a document
+Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -261,7 +261,7 @@ if ($response->atsDocument !== null) {
 
 ## getHrisDocument
 
-Retrieve a document
+Retrieves a single HrisDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ if ($response->hrisDocument !== null) {
 
 ## getSigningDocument
 
-Retrieve a document
+Retrieves a single SigningDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -363,7 +363,7 @@ if ($response->signingDocument !== null) {
 
 ## listAtsDocuments
 
-List all documents
+Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -413,7 +413,7 @@ if ($response->atsDocuments !== null) {
 
 ## listHrisDocuments
 
-List all documents
+Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -463,7 +463,7 @@ if ($response->hrisDocuments !== null) {
 
 ## listSigningDocuments
 
-List all documents
+Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -513,7 +513,7 @@ if ($response->signingDocuments !== null) {
 
 ## patchAtsDocument
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -539,10 +539,10 @@ $request = new Operations\PatchAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '907ef7b6-235a-44f3-8ec7-d96d3a868fc2',
+        id: 'ea0b47db-4b68-4e53-9967-aa0c3af04f0b',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-07T04:59:55.146Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-07T16:58:00.730Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -575,7 +575,7 @@ if ($response->atsDocument !== null) {
 
 ## patchHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -601,10 +601,10 @@ $request = new Operations\PatchHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: 'b54cade5-8f1a-4f99-99b1-63b35119660c',
+        id: '22db088b-317d-486a-b436-8033c2ffd1ef',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-11T14:06:05.593Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-13T01:30:16.041Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -637,7 +637,7 @@ if ($response->hrisDocument !== null) {
 
 ## patchSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -663,12 +663,12 @@ $request = new Operations\PatchSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '86e22960-9424-44eb-acf3-82ab31596d76',
+        id: 'ba32fd4b-3106-4424-bd56-05bf07e10eb0',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-06-29T12:05:58.499Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-06-29T22:11:51.157Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-02T22:28:48.283Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-04T12:17:49.889Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -701,7 +701,7 @@ if ($response->signingDocument !== null) {
 
 ## removeAtsDocument
 
-Remove a document
+Deletes the AtsDocument identified by `id`.
 
 ### Example Usage
 
@@ -752,7 +752,7 @@ if ($response->statusCode === 200) {
 
 ## removeHrisDocument
 
-Remove a document
+Deletes the HrisDocument identified by `id`.
 
 ### Example Usage
 
@@ -803,7 +803,7 @@ if ($response->statusCode === 200) {
 
 ## removeSigningDocument
 
-Remove a document
+Deletes the SigningDocument identified by `id`.
 
 ### Example Usage
 
@@ -854,7 +854,7 @@ if ($response->statusCode === 200) {
 
 ## updateAtsDocument
 
-Update a document
+Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -880,10 +880,10 @@ $request = new Operations\UpdateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '907ef7b6-235a-44f3-8ec7-d96d3a868fc2',
+        id: 'ea0b47db-4b68-4e53-9967-aa0c3af04f0b',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-07T04:59:55.146Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-07T16:58:00.730Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -916,7 +916,7 @@ if ($response->atsDocument !== null) {
 
 ## updateHrisDocument
 
-Update a document
+Updates the HrisDocument identified by `id`. Provide the unified HrisDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -942,10 +942,10 @@ $request = new Operations\UpdateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: 'b54cade5-8f1a-4f99-99b1-63b35119660c',
+        id: '22db088b-317d-486a-b436-8033c2ffd1ef',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-11T14:06:05.593Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-13T01:30:16.041Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -978,7 +978,7 @@ if ($response->hrisDocument !== null) {
 
 ## updateSigningDocument
 
-Update a document
+Updates the SigningDocument identified by `id`. Provide the unified SigningDocument fields to change in the request body.
 
 ### Example Usage
 
@@ -1004,12 +1004,12 @@ $request = new Operations\UpdateSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '86e22960-9424-44eb-acf3-82ab31596d76',
+        id: 'ba32fd4b-3106-4424-bd56-05bf07e10eb0',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-06-29T12:05:58.499Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-06-29T22:11:51.157Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-02T22:28:48.283Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-04T12:17:49.889Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

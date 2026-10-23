@@ -47,6 +47,8 @@ class Insertionorder
     /**
      * Create an insertionorder
      *
+     * Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Insertionorder
     /**
      * Retrieve an insertionorder
      *
+     * Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Insertionorder
     /**
      * List all insertionorders
      *
+     * Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsInsertionordersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsInsertionordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Insertionorder
 
     /**
      * Update an insertionorder
+     *
+     * Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderResponse
@@ -309,6 +317,8 @@ class Insertionorder
     /**
      * Remove an insertionorder
      *
+     * Deletes the AdsInsertionorder identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Insertionorder
 
     /**
      * Update an insertionorder
+     *
+     * Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderResponse

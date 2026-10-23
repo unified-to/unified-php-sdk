@@ -13,7 +13,7 @@
 
 ## createCommerceItemvariant
 
-Create an itemvariant
+Creates a CommerceItemvariant. Provide the unified CommerceItemvariant fields in the request body; they are mapped to the provider's API. Returns the created CommerceItemvariant.
 
 ### Example Usage
 
@@ -40,7 +40,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Stylish Salad designed to make you stand out with little looks',
         height: 54,
-        id: '21db4bbc-5da8-4b7e-8542-9513b516847a',
+        id: '095325c8-f323-4f30-989c-c770f39fbe7d',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -49,10 +49,10 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Hic desipio thorax.',
                 height: 961,
-                id: 'ca51d48c-b6b2-4f76-b640-30f89cdc34cb',
+                id: '718f1a3a-48f8-40c0-87f3-3c8c7b28ea05',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'd1e9b8f7-eeff-45d5-9e9e-027461c63701',
+                        id: '5243fa2c-4cfc-422a-87f1-74dd513fe48f',
                         slug: 'ubi',
                         value: 'textus',
                     ),
@@ -69,7 +69,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: 'f1dc1de2-ad01-4062-ad1d-26fcbdb0f39a',
+                id: '73b992be-aa91-430f-b091-49092867cb6d',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'absens',
@@ -78,7 +78,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         name: 'Chair',
         options: [
             new Shared\CommerceItemOption(
-                id: 'de487d6a-518f-4143-832a-f0e5d623f17d',
+                id: '958148c8-2b5b-428e-8a5f-5cfa28aa1399',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -86,7 +86,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '2d0a0790-a7e6-430c-aa3e-d5168c991f3c',
+                id: 'f2a752d5-9a6d-4d00-87c9-4a65e82c26e4',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -109,7 +109,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             'deserunt',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-09T16:20:44.119Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-11T09:49:38.577Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,
@@ -144,7 +144,7 @@ if ($response->commerceItemvariant !== null) {
 
 ## getCommerceItemvariant
 
-Retrieve an itemvariant
+Retrieves a single CommerceItemvariant by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -195,7 +195,7 @@ if ($response->commerceItemvariant !== null) {
 
 ## listCommerceItemvariants
 
-List all itemvariants
+Returns a list of CommerceItemvariants. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -245,7 +245,7 @@ if ($response->commerceItemvariants !== null) {
 
 ## patchCommerceItemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -272,7 +272,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Stylish Salad designed to make you stand out with little looks',
         height: 54,
-        id: 'e5b6c614-77df-4640-9851-1b017edac238',
+        id: 'b4e53342-2af5-4efa-a293-7ac75f25e68a',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -281,10 +281,10 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Hic desipio thorax.',
                 height: 961,
-                id: '193d724e-664a-4ff3-9e5e-f06a3a6d6bce',
+                id: 'a6b0552c-adbd-4142-bbbb-59187beb12b6',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'be94f989-1203-4816-9c17-6ec4a183fb8c',
+                        id: '2ebb0e9d-e614-4b19-9d8c-d0d2c9580081',
                         slug: 'ubi',
                         value: 'textus',
                     ),
@@ -301,7 +301,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '029b8520-9463-4356-9fca-a3b2058019a8',
+                id: 'ce1351ef-274f-4f0e-b3fe-844e61153c5a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'absens',
@@ -310,7 +310,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         name: 'Chair',
         options: [
             new Shared\CommerceItemOption(
-                id: 'e1ec43ce-9696-49ad-9233-4941ec412803',
+                id: '2911f5f1-0792-4b04-a81e-2dab72da752f',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -318,7 +318,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '9c026072-0592-40da-a00c-9556e7198eed',
+                id: '634ba452-f269-42b4-97bd-3169923350c2',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -341,7 +341,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             'deserunt',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-09T16:20:44.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-11T09:49:38.618Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,
@@ -377,7 +377,7 @@ if ($response->commerceItemvariant !== null) {
 
 ## removeCommerceItemvariant
 
-Remove an itemvariant
+Deletes the CommerceItemvariant identified by `id`.
 
 ### Example Usage
 
@@ -428,7 +428,7 @@ if ($response->statusCode === 200) {
 
 ## updateCommerceItemvariant
 
-Update an itemvariant
+Updates the CommerceItemvariant identified by `id`. Provide the unified CommerceItemvariant fields to change in the request body.
 
 ### Example Usage
 
@@ -455,7 +455,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Stylish Salad designed to make you stand out with little looks',
         height: 54,
-        id: 'e5b6c614-77df-4640-9851-1b017edac238',
+        id: 'b4e53342-2af5-4efa-a293-7ac75f25e68a',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -464,10 +464,10 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Hic desipio thorax.',
                 height: 961,
-                id: '193d724e-664a-4ff3-9e5e-f06a3a6d6bce',
+                id: 'a6b0552c-adbd-4142-bbbb-59187beb12b6',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'be94f989-1203-4816-9c17-6ec4a183fb8c',
+                        id: '2ebb0e9d-e614-4b19-9d8c-d0d2c9580081',
                         slug: 'ubi',
                         value: 'textus',
                     ),
@@ -484,7 +484,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '029b8520-9463-4356-9fca-a3b2058019a8',
+                id: 'ce1351ef-274f-4f0e-b3fe-844e61153c5a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'absens',
@@ -493,7 +493,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         name: 'Chair',
         options: [
             new Shared\CommerceItemOption(
-                id: 'e1ec43ce-9696-49ad-9233-4941ec412803',
+                id: '2911f5f1-0792-4b04-a81e-2dab72da752f',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -501,7 +501,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '9c026072-0592-40da-a00c-9556e7198eed',
+                id: '634ba452-f269-42b4-97bd-3169923350c2',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -524,7 +524,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             'deserunt',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-09T16:20:44.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-11T09:49:38.618Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,

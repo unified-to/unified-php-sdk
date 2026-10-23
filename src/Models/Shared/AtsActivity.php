@@ -30,6 +30,7 @@ class AtsActivity
     public ?array $bcc = null;
 
     /**
+     * The ID of the candidate the activity is about (an AtsCandidate ID)
      *
      * @var ?string $candidateId
      */
@@ -66,6 +67,7 @@ class AtsActivity
     public ?\DateTime $createdAt = null;
 
     /**
+     * The activity's content, such as the text of a note or the body of an email
      *
      * @var ?string $description
      */

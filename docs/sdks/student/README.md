@@ -13,7 +13,7 @@
 
 ## createLmsStudent
 
-Create a student
+Creates a LmsStudent. Provide the unified LmsStudent fields in the request body; they are mapped to the provider's API. Returns the created LmsStudent.
 
 ### Example Usage
 
@@ -49,7 +49,7 @@ $request = new Operations\CreateLmsStudentRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Marcella',
-        id: '04f331a8-dc9c-4c07-8736-fa1537e3c7cb',
+        id: '88ab09dc-4d25-47d4-88b5-741857890652',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
         lastName: 'Murazik',
         metadata: [],
@@ -68,7 +68,7 @@ $request = new Operations\CreateLmsStudentRequest(
                 type: Shared\LmsTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T23:26:48.052Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-01T15:54:34.494Z'),
     ),
     connectionId: '<id>',
 );
@@ -100,7 +100,7 @@ if ($response->lmsStudent !== null) {
 
 ## getLmsStudent
 
-Retrieve a student
+Retrieves a single LmsStudent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -151,7 +151,7 @@ if ($response->lmsStudent !== null) {
 
 ## listLmsStudents
 
-List all students
+Returns a list of LmsStudents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ if ($response->lmsStudents !== null) {
 
 ## patchLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -237,7 +237,7 @@ $request = new Operations\PatchLmsStudentRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Marcella',
-        id: '24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa',
+        id: '2dc0119d-4ae8-40e0-a92d-24cde92cc24f',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
         lastName: 'Murazik',
         metadata: [],
@@ -256,7 +256,7 @@ $request = new Operations\PatchLmsStudentRequest(
                 type: Shared\LmsTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T23:26:48.060Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-01T15:54:34.501Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -289,7 +289,7 @@ if ($response->lmsStudent !== null) {
 
 ## removeLmsStudent
 
-Remove a student
+Deletes the LmsStudent identified by `id`.
 
 ### Example Usage
 
@@ -340,7 +340,7 @@ if ($response->statusCode === 200) {
 
 ## updateLmsStudent
 
-Update a student
+Updates the LmsStudent identified by `id`. Provide the unified LmsStudent fields to change in the request body.
 
 ### Example Usage
 
@@ -376,7 +376,7 @@ $request = new Operations\UpdateLmsStudentRequest(
             new Shared\LmsEmail(),
         ],
         firstName: 'Marcella',
-        id: '24f1db3e-48d4-45d8-a0f7-78d5a7bcd6fa',
+        id: '2dc0119d-4ae8-40e0-a92d-24cde92cc24f',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/56.jpg',
         lastName: 'Murazik',
         metadata: [],
@@ -395,7 +395,7 @@ $request = new Operations\UpdateLmsStudentRequest(
                 type: Shared\LmsTelephoneType::Fax,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-06-30T23:26:48.060Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-01T15:54:34.501Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

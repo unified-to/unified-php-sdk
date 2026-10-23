@@ -10,7 +10,7 @@
 
 ## createHealthcareObservation
 
-Create an observation
+Creates a HealthcareObservation. Provide the unified HealthcareObservation fields in the request body; they are mapped to the provider's API. Returns the created HealthcareObservation.
 
 ### Example Usage
 
@@ -65,15 +65,15 @@ $request = new Operations\CreateHealthcareObservationRequest(
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2022-12-06T21:34:04.293Z'),
-        id: 'c618a863-9850-40c0-979c-241f62edc05a',
+        id: 'b1726807-dcc2-4bfa-943a-0f9ed186fee6',
         interpretation: Shared\Interpretation::CriticalHigh,
-        issuedAt: Utils\Utils::parseDateTime('2025-05-11T10:29:32.163Z'),
+        issuedAt: Utils\Utils::parseDateTime('2025-05-12T16:22:53.032Z'),
         metadata: [],
         name: 'Blood pressure panel',
-        observedAt: Utils\Utils::parseDateTime('2025-01-20T04:00:19.834Z'),
+        observedAt: Utils\Utils::parseDateTime('2025-01-21T06:08:35.617Z'),
         status: Shared\HealthcareObservationStatus::Corrected,
         type: Shared\HealthcareObservationType::VitalSigns,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-24T06:24:42.917Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-25T22:58:58.045Z'),
     ),
     connectionId: '<id>',
 );
@@ -105,7 +105,7 @@ if ($response->healthcareObservation !== null) {
 
 ## getHealthcareObservation
 
-Retrieve an observation
+Retrieves a single HealthcareObservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -156,7 +156,7 @@ if ($response->healthcareObservation !== null) {
 
 ## listHealthcareObservations
 
-List all observations
+Returns a list of HealthcareObservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 

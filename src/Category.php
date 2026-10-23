@@ -47,6 +47,8 @@ class Category
     /**
      * Create a category
      *
+     * Creates a AccountingCategory. Provide the unified AccountingCategory fields in the request body; they are mapped to the provider's API. Returns the created AccountingCategory.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Category
 
     /**
      * Create a category
+     *
+     * Creates a TicketingCategory. Provide the unified TicketingCategory fields in the request body; they are mapped to the provider's API. Returns the created TicketingCategory.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateTicketingCategoryResponse
@@ -183,6 +187,8 @@ class Category
     /**
      * Retrieve a category
      *
+     * Retrieves a single AccountingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Category
 
     /**
      * Retrieve a category
+     *
+     * Retrieves a single TicketingCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetTicketingCategoryResponse
@@ -309,6 +317,8 @@ class Category
     /**
      * List all categories
      *
+     * Returns a list of AccountingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAccountingCategoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAccountingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -372,6 +382,8 @@ class Category
     /**
      * List all categories
      *
+     * Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListTicketingCategoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListTicketingCategoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -434,6 +446,8 @@ class Category
 
     /**
      * Update a category
+     *
+     * Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAccountingCategoryResponse
@@ -503,6 +517,8 @@ class Category
     /**
      * Update a category
      *
+     * Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -571,6 +587,8 @@ class Category
     /**
      * Remove a category
      *
+     * Deletes the AccountingCategory identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAccountingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Category
     /**
      * Remove a category
      *
+     * Deletes the TicketingCategory identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveTicketingCategoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -684,6 +704,8 @@ class Category
 
     /**
      * Update a category
+     *
+     * Updates the AccountingCategory identified by `id`. Provide the unified AccountingCategory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAccountingCategoryResponse
@@ -752,6 +774,8 @@ class Category
 
     /**
      * Update a category
+     *
+     * Updates the TicketingCategory identified by `id`. Provide the unified TicketingCategory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateTicketingCategoryResponse

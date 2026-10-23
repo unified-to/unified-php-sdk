@@ -19,7 +19,7 @@
 
 ## createCommerceCollection
 
-Create a collection
+Creates a CommerceCollection. Provide the unified CommerceCollection fields in the request body; they are mapped to the provider's API. Returns the created CommerceCollection.
 
 ### Example Usage
 
@@ -44,7 +44,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: '1991e4a2-1f34-47c0-8486-bcee77e5935d',
+        id: '3e54b1cf-8e90-48c3-aece-180ce04df367',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -53,10 +53,10 @@ $request = new Operations\CreateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: 'd299b709-a77d-4d3b-b544-ec9239c78317',
+                id: '0fce4930-3146-40a8-bcf6-4e5f6d9fc02e',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '6df6510d-b37f-41f1-8606-9f92778811de',
+                        id: '2f65bd01-8292-4ad4-91ea-791e5e43cf90',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -69,7 +69,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '25c38385-e463-4e8f-a923-ecef43f8e92b',
+                id: 'c12292ff-a232-4491-b2d3-4b9570a1a5d9',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -83,7 +83,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-15T01:18:21.480Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-16T01:38:38.253Z'),
     ),
     connectionId: '<id>',
 );
@@ -115,7 +115,7 @@ if ($response->commerceCollection !== null) {
 
 ## createLmsCollection
 
-Create a collection
+Creates a LmsCollection. Provide the unified LmsCollection fields in the request body; they are mapped to the provider's API. Returns the created LmsCollection.
 
 ### Example Usage
 
@@ -140,7 +140,7 @@ $request = new Operations\CreateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: 'ad8c76c0-de0d-461e-99ec-2610973fca28',
+        id: '6a2ec014-aede-4f89-8c0e-e7af93f30720',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -157,7 +157,7 @@ $request = new Operations\CreateLmsCollectionRequest(
         ],
         metadata: [],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-07-30T07:04:58.077Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-08-01T05:15:10.123Z'),
     ),
     connectionId: '<id>',
 );
@@ -189,7 +189,7 @@ if ($response->lmsCollection !== null) {
 
 ## getCommerceCollection
 
-Retrieve a collection
+Retrieves a single CommerceCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -240,7 +240,7 @@ if ($response->commerceCollection !== null) {
 
 ## getLmsCollection
 
-Retrieve a collection
+Retrieves a single LmsCollection by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -291,7 +291,7 @@ if ($response->lmsCollection !== null) {
 
 ## listCommerceCollections
 
-List all collections
+Returns a list of CommerceCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -341,7 +341,7 @@ if ($response->commerceCollections !== null) {
 
 ## listLmsCollections
 
-List all collections
+Returns a list of LmsCollections. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -391,7 +391,7 @@ if ($response->lmsCollections !== null) {
 
 ## patchCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -416,7 +416,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: 'b9e54251-c92b-4782-b1bb-926437414e65',
+        id: 'a258c3aa-d818-4b8c-8c60-ba089e9a9b36',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -425,10 +425,10 @@ $request = new Operations\PatchCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: 'b5d8356e-a5c4-4e37-88f1-f0f6c4baf524',
+                id: '17088427-fefd-419b-822c-893b4842f844',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'be896d4e-ad51-4055-86be-b2da90d4641b',
+                        id: 'e5459c1f-cb38-462e-b902-ca9c5dfc16bf',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -441,7 +441,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: 'e6a20238-d170-498a-be5d-6832a5df7d28',
+                id: 'e84025f6-0d87-440d-9431-58363bfced85',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -455,7 +455,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-15T01:18:21.493Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-16T01:38:38.273Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -488,7 +488,7 @@ if ($response->commerceCollection !== null) {
 
 ## patchLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -513,7 +513,7 @@ $request = new Operations\PatchLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: '776423a0-c2ca-4984-93a0-d53a46ddee1b',
+        id: '914f1f70-a81b-45e1-88a5-173f8add5a6e',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -530,7 +530,7 @@ $request = new Operations\PatchLmsCollectionRequest(
         ],
         metadata: [],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-07-30T07:04:58.094Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-08-01T05:15:10.141Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -563,7 +563,7 @@ if ($response->lmsCollection !== null) {
 
 ## removeCommerceCollection
 
-Remove a collection
+Deletes the CommerceCollection identified by `id`.
 
 ### Example Usage
 
@@ -614,7 +614,7 @@ if ($response->statusCode === 200) {
 
 ## removeLmsCollection
 
-Remove a collection
+Deletes the LmsCollection identified by `id`.
 
 ### Example Usage
 
@@ -665,7 +665,7 @@ if ($response->statusCode === 200) {
 
 ## updateCommerceCollection
 
-Update a collection
+Updates the CommerceCollection identified by `id`. Provide the unified CommerceCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -690,7 +690,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'The Integrated leading edge website Cheese offers reliable performance and productive design',
-        id: 'b9e54251-c92b-4782-b1bb-926437414e65',
+        id: 'a258c3aa-d818-4b8c-8c60-ba089e9a9b36',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -699,10 +699,10 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Defungo adopto thorax.',
                 height: 759,
-                id: 'b5d8356e-a5c4-4e37-88f1-f0f6c4baf524',
+                id: '17088427-fefd-419b-822c-893b4842f844',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'be896d4e-ad51-4055-86be-b2da90d4641b',
+                        id: 'e5459c1f-cb38-462e-b902-ca9c5dfc16bf',
                         slug: 'censura',
                         value: 'toties',
                     ),
@@ -715,7 +715,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: 'e6a20238-d170-498a-be5d-6832a5df7d28',
+                id: 'e84025f6-0d87-440d-9431-58363bfced85',
                 slug: 'aetas',
                 value: 'consuasor',
             ),
@@ -729,7 +729,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             'contego',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-15T01:18:21.493Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-16T01:38:38.273Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -762,7 +762,7 @@ if ($response->commerceCollection !== null) {
 
 ## updateLmsCollection
 
-Update a collection
+Updates the LmsCollection identified by `id`. Provide the unified LmsCollection fields to change in the request body.
 
 ### Example Usage
 
@@ -787,7 +787,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Ab.',
-        id: '776423a0-c2ca-4984-93a0-d53a46ddee1b',
+        id: '914f1f70-a81b-45e1-88a5-173f8add5a6e',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -804,7 +804,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
         ],
         metadata: [],
         name: 'ara',
-        updatedAt: Utils\Utils::parseDateTime('2026-07-30T07:04:58.094Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-08-01T05:15:10.141Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

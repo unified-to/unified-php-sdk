@@ -47,6 +47,8 @@ class Matter
     /**
      * Create a matter
      *
+     * Creates a LegalMatter. Provide the unified LegalMatter fields in the request body; they are mapped to the provider's API. Returns the created LegalMatter.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateLegalMatterResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Matter
     /**
      * Retrieve a matter
      *
+     * Retrieves a single LegalMatter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetLegalMatterResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Matter
     /**
      * List all matters
      *
+     * Returns a list of LegalMatters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListLegalMattersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListLegalMattersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Matter
 
     /**
      * Update a matter
+     *
+     * Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchLegalMatterResponse
@@ -309,6 +317,8 @@ class Matter
     /**
      * Remove a matter
      *
+     * Deletes the LegalMatter identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveLegalMatterResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Matter
 
     /**
      * Update a matter
+     *
+     * Updates the LegalMatter identified by `id`. Provide the unified LegalMatter fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateLegalMatterRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateLegalMatterResponse

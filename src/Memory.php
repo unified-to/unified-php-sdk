@@ -47,6 +47,8 @@ class Memory
     /**
      * Create a memory
      *
+     * Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateGenaiMemoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Memory
     /**
      * Retrieve a memory
      *
+     * Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetGenaiMemoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Memory
     /**
      * List all memories
      *
+     * Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListGenaiMemoriesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListGenaiMemoriesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Memory
 
     /**
      * Update a memory
+     *
+     * Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchGenaiMemoryResponse
@@ -309,6 +317,8 @@ class Memory
     /**
      * Remove a memory
      *
+     * Deletes the GenaiMemory identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveGenaiMemoryResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Memory
 
     /**
      * Update a memory
+     *
+     * Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateGenaiMemoryRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateGenaiMemoryResponse

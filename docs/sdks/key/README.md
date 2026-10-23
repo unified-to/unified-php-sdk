@@ -13,7 +13,7 @@
 
 ## createComputeKey
 
-Create a key
+Creates a ComputeKey. Provide the unified ComputeKey fields in the request body; they are mapped to the provider's API. Returns the created ComputeKey.
 
 ### Example Usage
 
@@ -37,11 +37,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '54e64597-39da-487e-a0d4-40da5496fb18',
+        id: 'e1d725b7-b4a0-4617-bb2f-9d98d3fcf146',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-06T23:20:44.187Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-07T16:23:58.542Z'),
     ),
     connectionId: '<id>',
 );
@@ -73,7 +73,7 @@ if ($response->computeKey !== null) {
 
 ## getComputeKey
 
-Retrieve a key
+Retrieves a single ComputeKey by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -124,7 +124,7 @@ if ($response->computeKey !== null) {
 
 ## listComputeKeys
 
-List all keys
+Returns a list of ComputeKeys. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -174,7 +174,7 @@ if ($response->computeKeys !== null) {
 
 ## patchComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -198,11 +198,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '29896d38-9bc4-4ba4-b23b-324c0c78a71a',
+        id: 'cdb1cf75-328b-420c-9de9-22a0e527c1d2',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-06T23:20:44.193Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-07T16:23:58.547Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -235,7 +235,7 @@ if ($response->computeKey !== null) {
 
 ## removeComputeKey
 
-Remove a key
+Deletes the ComputeKey identified by `id`.
 
 ### Example Usage
 
@@ -286,7 +286,7 @@ if ($response->statusCode === 200) {
 
 ## updateComputeKey
 
-Update a key
+Updates the ComputeKey identified by `id`. Provide the unified ComputeKey fields to change in the request body.
 
 ### Example Usage
 
@@ -310,11 +310,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '29896d38-9bc4-4ba4-b23b-324c0c78a71a',
+        id: 'cdb1cf75-328b-420c-9de9-22a0e527c1d2',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-06T23:20:44.193Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-07T16:23:58.547Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -30,6 +30,7 @@ class DatastoreQuery
     public ?array $metadata = null;
 
     /**
+     * What to run: a raw `sql` statement, or a structured query (select, filter, sort, limit/offset, aggregate)
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyDatastoreQueryQuery $query
      */

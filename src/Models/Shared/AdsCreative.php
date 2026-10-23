@@ -178,6 +178,7 @@ class AdsCreative
     public ?array $metadata = null;
 
     /**
+     * The creative's name
      *
      * @var ?string $name
      */

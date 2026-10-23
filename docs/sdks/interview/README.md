@@ -13,7 +13,7 @@
 
 ## createAtsInterview
 
-Create an interview
+Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
 
 ### Example Usage
 
@@ -38,13 +38,13 @@ $request = new Operations\CreateAtsInterviewRequest(
     atsInterview: new Shared\AtsInterview(
         createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
         endAt: Utils\Utils::parseDateTime('2021-12-08T06:33:19.583Z'),
-        id: '75d45222-2444-450b-8db6-d716949cdd12',
+        id: 'c3aa3c85-97d5-446d-8a4a-a444074900d9',
         location: '26596 Halle Trafficway',
         meetingUrl: 'https://immaculate-foodstuffs.biz',
         metadata: [],
         startAt: Utils\Utils::parseDateTime('2021-12-08T06:03:19.583Z'),
         status: Shared\AtsInterviewStatus::Scheduled,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-23T16:39:11.717Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-24T10:22:27.590Z'),
     ),
     connectionId: '<id>',
 );
@@ -76,7 +76,7 @@ if ($response->atsInterview !== null) {
 
 ## getAtsInterview
 
-Retrieve an interview
+Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -127,7 +127,7 @@ if ($response->atsInterview !== null) {
 
 ## listAtsInterviews
 
-List all interviews
+Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -177,7 +177,7 @@ if ($response->atsInterviews !== null) {
 
 ## patchAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -202,13 +202,13 @@ $request = new Operations\PatchAtsInterviewRequest(
     atsInterview: new Shared\AtsInterview(
         createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
         endAt: Utils\Utils::parseDateTime('2021-12-08T06:33:19.583Z'),
-        id: 'e4f6fa22-60cf-4f9b-98c5-bf66341af9c5',
+        id: '221868ac-d631-4669-a95c-a32a4721be2b',
         location: '26596 Halle Trafficway',
         meetingUrl: 'https://immaculate-foodstuffs.biz',
         metadata: [],
         startAt: Utils\Utils::parseDateTime('2021-12-08T06:03:19.583Z'),
         status: Shared\AtsInterviewStatus::Scheduled,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-23T16:39:11.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-24T10:22:27.597Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -241,7 +241,7 @@ if ($response->atsInterview !== null) {
 
 ## removeAtsInterview
 
-Remove an interview
+Deletes the AtsInterview identified by `id`.
 
 ### Example Usage
 
@@ -292,7 +292,7 @@ if ($response->statusCode === 200) {
 
 ## updateAtsInterview
 
-Update an interview
+Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
 
 ### Example Usage
 
@@ -317,13 +317,13 @@ $request = new Operations\UpdateAtsInterviewRequest(
     atsInterview: new Shared\AtsInterview(
         createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
         endAt: Utils\Utils::parseDateTime('2021-12-08T06:33:19.583Z'),
-        id: 'e4f6fa22-60cf-4f9b-98c5-bf66341af9c5',
+        id: '221868ac-d631-4669-a95c-a32a4721be2b',
         location: '26596 Halle Trafficway',
         meetingUrl: 'https://immaculate-foodstuffs.biz',
         metadata: [],
         startAt: Utils\Utils::parseDateTime('2021-12-08T06:03:19.583Z'),
         status: Shared\AtsInterviewStatus::Scheduled,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-23T16:39:11.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-24T10:22:27.597Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

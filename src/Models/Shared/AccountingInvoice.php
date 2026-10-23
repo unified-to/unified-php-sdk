@@ -137,7 +137,7 @@ class AccountingInvoice
     public ?bool $isInclusiveOfTax = null;
 
     /**
-     * $lineitems
+     * The invoice's line items: what is billed, with the quantity, price and amount of each
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingLineitem> $lineitems
      */

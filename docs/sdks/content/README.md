@@ -13,7 +13,7 @@
 
 ## createLmsContent
 
-Create a content
+Creates a LmsContent. Provide the unified LmsContent fields in the request body; they are mapped to the provider's API. Returns the created LmsContent.
 
 ### Example Usage
 
@@ -43,7 +43,7 @@ $request = new Operations\CreateLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: '30e4f460-4b55-4fc2-956e-f6f5ff936ab5',
+        id: 'd41c5ee7-fa14-4ca9-af98-8391170ededb',
         instructors: [],
         isActive: true,
         languages: [
@@ -103,7 +103,7 @@ $request = new Operations\CreateLmsContentRequest(
         metadata: [],
         name: 'ut',
         providerName: 'Bins LLC',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-03T06:18:34.592Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-03T21:07:34.822Z'),
         shortDescription: 'Caritas.',
         skills: [
             'trucido',
@@ -118,7 +118,7 @@ $request = new Operations\CreateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-04T04:34:53.718Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-04T20:04:18.829Z'),
     ),
     connectionId: '<id>',
 );
@@ -150,7 +150,7 @@ if ($response->lmsContent !== null) {
 
 ## getLmsContent
 
-Retrieve a content
+Retrieves a single LmsContent by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -201,7 +201,7 @@ if ($response->lmsContent !== null) {
 
 ## listLmsContents
 
-List all contents
+Returns a list of LmsContents. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -251,7 +251,7 @@ if ($response->lmsContents !== null) {
 
 ## patchLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -281,7 +281,7 @@ $request = new Operations\PatchLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: 'de227394-fbd0-4a0b-8f28-9e960cc07406',
+        id: '195da47f-258a-4e0c-a82a-7de66257e6bc',
         instructors: [],
         isActive: true,
         languages: [
@@ -341,7 +341,7 @@ $request = new Operations\PatchLmsContentRequest(
         metadata: [],
         name: 'ut',
         providerName: 'Bins LLC',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-03T06:18:34.603Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-03T21:07:34.829Z'),
         shortDescription: 'Caritas.',
         skills: [
             'trucido',
@@ -356,7 +356,7 @@ $request = new Operations\PatchLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-04T04:34:53.729Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-04T20:04:18.836Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -389,7 +389,7 @@ if ($response->lmsContent !== null) {
 
 ## removeLmsContent
 
-Remove a content
+Deletes the LmsContent identified by `id`.
 
 ### Example Usage
 
@@ -440,7 +440,7 @@ if ($response->statusCode === 200) {
 
 ## updateLmsContent
 
-Update a content
+Updates the LmsContent identified by `id`. Provide the unified LmsContent fields to change in the request body.
 
 ### Example Usage
 
@@ -470,7 +470,7 @@ $request = new Operations\UpdateLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: 'de227394-fbd0-4a0b-8f28-9e960cc07406',
+        id: '195da47f-258a-4e0c-a82a-7de66257e6bc',
         instructors: [],
         isActive: true,
         languages: [
@@ -530,7 +530,7 @@ $request = new Operations\UpdateLmsContentRequest(
         metadata: [],
         name: 'ut',
         providerName: 'Bins LLC',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-03T06:18:34.603Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-03T21:07:34.829Z'),
         shortDescription: 'Caritas.',
         skills: [
             'trucido',
@@ -545,7 +545,7 @@ $request = new Operations\UpdateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-04T04:34:53.729Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-04T20:04:18.836Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

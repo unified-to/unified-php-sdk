@@ -20,6 +20,7 @@ class AtsDocument
     public ?string $applicationId = null;
 
     /**
+     * The ID of the candidate the document belongs to (an AtsCandidate ID)
      *
      * @var ?string $candidateId
      */
@@ -55,6 +56,7 @@ class AtsDocument
     public ?string $documentUrl = null;
 
     /**
+     * The document's file name, including its extension (e.g. resume.pdf)
      *
      * @var ?string $filename
      */
@@ -99,6 +101,7 @@ class AtsDocument
     public ?array $raw = null;
 
     /**
+     * The kind of document
      *
      * @var ?\Unified\Unified_to\Models\Shared\AtsDocumentType $type
      */

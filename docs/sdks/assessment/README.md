@@ -17,7 +17,7 @@
 
 ## createAssessmentOrder
 
-Create an order
+Creates a AssessmentOrder. Provide the unified AssessmentOrder fields in the request body; they are mapped to the provider's API. Returns the created AssessmentOrder.
 
 ### Example Usage
 
@@ -42,7 +42,7 @@ $request = new Operations\CreateAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
         createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
-        id: '46cb793e-1410-48a9-86d0-1a4baf1eeaa6',
+        id: 'e4deecb5-a978-419b-ab61-a80ca92420ed',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -69,7 +69,7 @@ $request = new Operations\CreateAssessmentOrderRequest(
         responseUrl: 'https://rowdy-fisherman.biz/',
         status: Shared\AssessmentOrderStatus::Rejected,
         targetUrl: 'https://cautious-turret.info',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-25T20:34:45.957Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T09:15:43.301Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -132,7 +132,7 @@ $request = new Operations\CreateAssessmentPackageRequest(
         description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: '2d44f122-f4ea-4ce0-9cb8-b0ba6a0ec042',
+        id: '9d6d357e-ec51-4231-89e4-1f948f7bf3eb',
         infoUrl: 'https://ugly-instance.biz/',
         integrationTypes: [
             'viridis',
@@ -147,7 +147,7 @@ $request = new Operations\CreateAssessmentPackageRequest(
             'clamo',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-25T09:14:33.770Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-25T19:34:50.962Z'),
     ),
     connectionId: '<id>',
 );
@@ -179,7 +179,7 @@ if ($response->assessmentPackage !== null) {
 
 ## getAssessmentOrder
 
-Retrieve an order
+Retrieves a single AssessmentOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -331,7 +331,7 @@ if ($response->assessmentPackages !== null) {
 
 ## patchAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -356,7 +356,7 @@ $request = new Operations\PatchAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
         createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
-        id: '5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec',
+        id: '79bbd734-8e01-4ed4-93cb-acf9e73a268a',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -383,7 +383,7 @@ $request = new Operations\PatchAssessmentOrderRequest(
         responseUrl: 'https://rowdy-fisherman.biz/',
         status: Shared\AssessmentOrderStatus::Rejected,
         targetUrl: 'https://cautious-turret.info',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-25T20:34:45.967Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T09:15:43.311Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -447,7 +447,7 @@ $request = new Operations\PatchAssessmentPackageRequest(
         description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: 'cf09d7d7-035a-4cc5-b696-f2c8c469f143',
+        id: '84f63991-8347-405e-8e47-037c8ca3aadc',
         infoUrl: 'https://ugly-instance.biz/',
         integrationTypes: [
             'viridis',
@@ -462,7 +462,7 @@ $request = new Operations\PatchAssessmentPackageRequest(
             'clamo',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-25T09:14:33.775Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-25T19:34:50.967Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -546,7 +546,7 @@ if ($response->statusCode === 200) {
 
 ## updateAssessmentOrder
 
-Update an order
+Updates the AssessmentOrder identified by `id`. Provide the unified AssessmentOrder fields to change in the request body.
 
 ### Example Usage
 
@@ -571,7 +571,7 @@ $request = new Operations\UpdateAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
         connectionId: '<id>',
         createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
-        id: '5bfd87cf-d33d-4ceb-a9fc-922f4bbd52ec',
+        id: '79bbd734-8e01-4ed4-93cb-acf9e73a268a',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -598,7 +598,7 @@ $request = new Operations\UpdateAssessmentOrderRequest(
         responseUrl: 'https://rowdy-fisherman.biz/',
         status: Shared\AssessmentOrderStatus::Rejected,
         targetUrl: 'https://cautious-turret.info',
-        updatedAt: Utils\Utils::parseDateTime('2023-01-25T20:34:45.967Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-26T09:15:43.311Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -662,7 +662,7 @@ $request = new Operations\UpdateAssessmentPackageRequest(
         description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: 'cf09d7d7-035a-4cc5-b696-f2c8c469f143',
+        id: '84f63991-8347-405e-8e47-037c8ca3aadc',
         infoUrl: 'https://ugly-instance.biz/',
         integrationTypes: [
             'viridis',
@@ -677,7 +677,7 @@ $request = new Operations\UpdateAssessmentPackageRequest(
             'clamo',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-25T09:14:33.775Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-25T19:34:50.967Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

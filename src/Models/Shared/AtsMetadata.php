@@ -21,6 +21,7 @@ class AtsMetadata
     public array|string|float|bool|null $extraData = null;
 
     /**
+     * The data type of the custom field, which determines how `value` is formatted.
      *
      * @var ?\Unified\Unified_to\Models\Shared\AtsMetadataFormat $format
      */
@@ -30,6 +31,7 @@ class AtsMetadata
     public ?AtsMetadataFormat $format = null;
 
     /**
+     * The ID of the custom field definition (from the metadata/metadata endpoint).
      *
      * @var ?string $id
      */
@@ -46,7 +48,7 @@ class AtsMetadata
     public ?string $namespace = null;
 
     /**
-     * Actual textual value of the slug
+     * The integration's API name (key) of an existing custom field. List valid slugs for this object with the metadata/metadata endpoint; unknown slugs are rejected by the integration.
      *
      * @var ?string $slug
      */
@@ -55,6 +57,7 @@ class AtsMetadata
     public ?string $slug = null;
 
     /**
+     * The field's value, typed by `format`: DATE as ISO-8601 (`YYYY-MM-DD`, or `YYYY-MM-DDTHH:MM:SSZ` for date-times); NUMBER, PRICE and CURRENCY as a number; BOOLEAN and YES_NO as true/false; MULTIPLE_SELECT as an array of option values; otherwise a string.
      *
      * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\AtsMetadataSchemas1|string|float|bool>|null $value
      */

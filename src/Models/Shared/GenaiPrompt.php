@@ -59,7 +59,7 @@ class GenaiPrompt
     public ?string $mcpUrl = null;
 
     /**
-     * $messages
+     * The conversation to send to the model, in order; each message has a role and its content
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\GenaiContent> $messages
      */
@@ -69,6 +69,7 @@ class GenaiPrompt
     public ?array $messages = null;
 
     /**
+     * The ID of the model to use (a GenaiModel ID)
      *
      * @var ?string $modelId
      */

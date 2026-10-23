@@ -98,6 +98,7 @@ class KmsPage
     public ?string $spaceId = null;
 
     /**
+     * The page's title
      *
      * @var ?string $title
      */

@@ -47,6 +47,8 @@ class Performance
     /**
      * Create a feedback
      *
+     * Creates a PerformanceFeedback. Provide the unified PerformanceFeedback fields in the request body; they are mapped to the provider's API. Returns the created PerformanceFeedback.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreatePerformanceFeedbackRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePerformanceFeedbackResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Performance
 
     /**
      * Create a goal
+     *
+     * Creates a PerformanceGoal. Provide the unified PerformanceGoal fields in the request body; they are mapped to the provider's API. Returns the created PerformanceGoal.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreatePerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePerformanceGoalResponse
@@ -183,6 +187,8 @@ class Performance
     /**
      * Retrieve a cycle
      *
+     * Retrieves a single PerformanceCycle by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetPerformanceCycleRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPerformanceCycleResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Performance
 
     /**
      * Retrieve a feedback
+     *
+     * Retrieves a single PerformanceFeedback by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetPerformanceFeedbackRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPerformanceFeedbackResponse
@@ -309,6 +317,8 @@ class Performance
     /**
      * Retrieve a goal
      *
+     * Retrieves a single PerformanceGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetPerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPerformanceGoalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -371,6 +381,8 @@ class Performance
 
     /**
      * Retrieve a review
+     *
+     * Retrieves a single PerformanceReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetPerformanceReviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPerformanceReviewResponse
@@ -435,6 +447,8 @@ class Performance
     /**
      * List all cycles
      *
+     * Returns a list of PerformanceCycles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPerformanceCyclesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPerformanceCyclesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -497,6 +511,8 @@ class Performance
 
     /**
      * List all feedbacks
+     *
+     * Returns a list of PerformanceFeedbacks. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListPerformanceFeedbacksRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPerformanceFeedbacksResponse
@@ -561,6 +577,8 @@ class Performance
     /**
      * List all goals
      *
+     * Returns a list of PerformanceGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPerformanceGoalsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPerformanceGoalsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -624,6 +642,8 @@ class Performance
     /**
      * List all reviews
      *
+     * Returns a list of PerformanceReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPerformanceReviewsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPerformanceReviewsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -686,6 +706,8 @@ class Performance
 
     /**
      * Update a goal
+     *
+     * Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchPerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchPerformanceGoalResponse
@@ -755,6 +777,8 @@ class Performance
     /**
      * Remove a goal
      *
+     * Deletes the PerformanceGoal identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemovePerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemovePerformanceGoalResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -811,6 +835,8 @@ class Performance
 
     /**
      * Update a goal
+     *
+     * Updates the PerformanceGoal identified by `id`. Provide the unified PerformanceGoal fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdatePerformanceGoalRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdatePerformanceGoalResponse

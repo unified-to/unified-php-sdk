@@ -13,7 +13,7 @@
 
 ## createGenaiMemory
 
-Create a memory
+Creates a GenaiMemory. Provide the unified GenaiMemory fields in the request body; they are mapped to the provider's API. Returns the created GenaiMemory.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: '88bb3c43-4389-4a83-839c-696b4051536e',
+        id: '30c5b61b-64ce-451b-86ea-0d45e2587196',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -53,7 +53,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
         ],
         name: 'sponte.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-25T21:28:57.374Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-26T11:52:14.382Z'),
         userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
     ),
     connectionId: '<id>',
@@ -86,7 +86,7 @@ if ($response->genaiMemory !== null) {
 
 ## getGenaiMemory
 
-Retrieve a memory
+Retrieves a single GenaiMemory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -137,7 +137,7 @@ if ($response->genaiMemory !== null) {
 
 ## listGenaiMemories
 
-List all memories
+Returns a list of GenaiMemories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -187,7 +187,7 @@ if ($response->genaiMemories !== null) {
 
 ## patchGenaiMemory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -212,7 +212,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: '9365b4e5-aab5-4ff3-ba49-ac556dab74c1',
+        id: 'a49fc703-76bd-475c-8c11-b39d565bef31',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -227,7 +227,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
         ],
         name: 'sponte.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-25T21:28:57.376Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-26T11:52:14.387Z'),
         userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
     ),
     connectionId: '<id>',
@@ -261,7 +261,7 @@ if ($response->genaiMemory !== null) {
 
 ## removeGenaiMemory
 
-Remove a memory
+Deletes the GenaiMemory identified by `id`.
 
 ### Example Usage
 
@@ -312,7 +312,7 @@ if ($response->statusCode === 200) {
 
 ## updateGenaiMemory
 
-Update a memory
+Updates the GenaiMemory identified by `id`. Provide the unified GenaiMemory fields to change in the request body.
 
 ### Example Usage
 
@@ -337,7 +337,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: '9365b4e5-aab5-4ff3-ba49-ac556dab74c1',
+        id: 'a49fc703-76bd-475c-8c11-b39d565bef31',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -352,7 +352,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
         ],
         name: 'sponte.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-25T21:28:57.376Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-26T11:52:14.387Z'),
         userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
     ),
     connectionId: '<id>',

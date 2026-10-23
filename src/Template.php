@@ -47,6 +47,8 @@ class Template
     /**
      * Create a template
      *
+     * Creates a ComputeTemplate. Provide the unified ComputeTemplate fields in the request body; they are mapped to the provider's API. Returns the created ComputeTemplate.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateComputeTemplateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Template
     /**
      * Retrieve a template
      *
+     * Retrieves a single ComputeTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetComputeTemplateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -177,6 +181,8 @@ class Template
 
     /**
      * Retrieve a template
+     *
+     * Retrieves a single SigningTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetSigningTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetSigningTemplateResponse
@@ -241,6 +247,8 @@ class Template
     /**
      * List all templates
      *
+     * Returns a list of ComputeTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListComputeTemplatesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListComputeTemplatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -304,6 +312,8 @@ class Template
     /**
      * List all templates
      *
+     * Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListSigningTemplatesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListSigningTemplatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -366,6 +376,8 @@ class Template
 
     /**
      * Update a template
+     *
+     * Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchComputeTemplateResponse
@@ -435,6 +447,8 @@ class Template
     /**
      * Remove a template
      *
+     * Deletes the ComputeTemplate identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveComputeTemplateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -491,6 +505,8 @@ class Template
 
     /**
      * Update a template
+     *
+     * Updates the ComputeTemplate identified by `id`. Provide the unified ComputeTemplate fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateComputeTemplateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateComputeTemplateResponse

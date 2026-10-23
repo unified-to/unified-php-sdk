@@ -47,6 +47,8 @@ class Kms
     /**
      * Create a comment
      *
+     * Creates a KmsComment. Provide the unified KmsComment fields in the request body; they are mapped to the provider's API. Returns the created KmsComment.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Kms
 
     /**
      * Create a page
+     *
+     * Creates a KmsPage. Provide the unified KmsPage fields in the request body; they are mapped to the provider's API. Returns the created KmsPage.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateKmsPageResponse
@@ -183,6 +187,8 @@ class Kms
     /**
      * Create a space
      *
+     * Creates a KmsSpace. Provide the unified KmsSpace fields in the request body; they are mapped to the provider's API. Returns the created KmsSpace.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateKmsSpaceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -251,6 +257,8 @@ class Kms
     /**
      * Retrieve a comment
      *
+     * Retrieves a single KmsComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -313,6 +321,8 @@ class Kms
 
     /**
      * Retrieve a page
+     *
+     * Retrieves a single KmsPage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetKmsPageResponse
@@ -377,6 +387,8 @@ class Kms
     /**
      * Retrieve a space
      *
+     * Retrieves a single KmsSpace by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetKmsSpaceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -439,6 +451,8 @@ class Kms
 
     /**
      * List all comments
+     *
+     * Returns a list of KmsComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListKmsCommentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListKmsCommentsResponse
@@ -503,6 +517,8 @@ class Kms
     /**
      * List all pages
      *
+     * Returns a list of KmsPages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListKmsPagesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListKmsPagesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -566,6 +582,8 @@ class Kms
     /**
      * List all spaces
      *
+     * Returns a list of KmsSpaces. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListKmsSpacesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListKmsSpacesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -628,6 +646,8 @@ class Kms
 
     /**
      * Update a comment
+     *
+     * Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchKmsCommentResponse
@@ -697,6 +717,8 @@ class Kms
     /**
      * Update a page
      *
+     * Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -764,6 +786,8 @@ class Kms
 
     /**
      * Update a space
+     *
+     * Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchKmsSpaceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchKmsSpaceResponse
@@ -833,6 +857,8 @@ class Kms
     /**
      * Remove a comment
      *
+     * Deletes the KmsComment identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveKmsCommentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -889,6 +915,8 @@ class Kms
 
     /**
      * Remove a page
+     *
+     * Deletes the KmsPage identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveKmsPageResponse
@@ -947,6 +975,8 @@ class Kms
     /**
      * Remove a space
      *
+     * Deletes the KmsSpace identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveKmsSpaceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveKmsSpaceResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1003,6 +1033,8 @@ class Kms
 
     /**
      * Update a comment
+     *
+     * Updates the KmsComment identified by `id`. Provide the unified KmsComment fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateKmsCommentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateKmsCommentResponse
@@ -1072,6 +1104,8 @@ class Kms
     /**
      * Update a page
      *
+     * Updates the KmsPage identified by `id`. Provide the unified KmsPage fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateKmsPageRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateKmsPageResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1139,6 +1173,8 @@ class Kms
 
     /**
      * Update a space
+     *
+     * Updates the KmsSpace identified by `id`. Provide the unified KmsSpace fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateKmsSpaceRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateKmsSpaceResponse

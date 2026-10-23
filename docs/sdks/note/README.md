@@ -13,7 +13,7 @@
 
 ## createTicketingNote
 
-Create a note
+Creates a TicketingNote. Provide the unified TicketingNote fields in the request body; they are mapped to the provider's API. Returns the created TicketingNote.
 
 ### Example Usage
 
@@ -38,9 +38,9 @@ $request = new Operations\CreateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
         description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '379fd407-2c1a-4c4f-9408-8cce16d25ad2',
+        id: '043cc9b8-4e55-41dd-8b70-230b3d96abb4',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2024-09-29T06:43:21.104Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-09-30T16:51:18.236Z'),
     ),
     connectionId: '<id>',
 );
@@ -72,7 +72,7 @@ if ($response->ticketingNote !== null) {
 
 ## getTicketingNote
 
-Retrieve a note
+Retrieves a single TicketingNote by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -123,7 +123,7 @@ if ($response->ticketingNote !== null) {
 
 ## listTicketingNotes
 
-List all notes
+Returns a list of TicketingNotes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -173,7 +173,7 @@ if ($response->ticketingNotes !== null) {
 
 ## patchTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -198,9 +198,9 @@ $request = new Operations\PatchTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
         description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '6a4cdc74-ca84-46cc-aae0-c8f72b91303e',
+        id: '73852e90-d047-4a5d-8bfb-ff4cda387854',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2024-09-29T06:43:21.114Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-09-30T16:51:18.248Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -233,7 +233,7 @@ if ($response->ticketingNote !== null) {
 
 ## removeTicketingNote
 
-Remove a note
+Deletes the TicketingNote identified by `id`.
 
 ### Example Usage
 
@@ -284,7 +284,7 @@ if ($response->statusCode === 200) {
 
 ## updateTicketingNote
 
-Update a note
+Updates the TicketingNote identified by `id`. Provide the unified TicketingNote fields to change in the request body.
 
 ### Example Usage
 
@@ -309,9 +309,9 @@ $request = new Operations\UpdateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
         description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '6a4cdc74-ca84-46cc-aae0-c8f72b91303e',
+        id: '73852e90-d047-4a5d-8bfb-ff4cda387854',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2024-09-29T06:43:21.114Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-09-30T16:51:18.248Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

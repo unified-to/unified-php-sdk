@@ -13,7 +13,7 @@
 
 ## createDatastoreRecord
 
-Create a record
+Creates a DatastoreRecord. Provide the unified DatastoreRecord fields in the request body; they are mapped to the provider's API. Returns the created DatastoreRecord.
 
 ### Example Usage
 
@@ -40,10 +40,10 @@ $request = new Operations\CreateDatastoreRecordRequest(
         fields: [
 
         ],
-        id: 'd276c856-0316-471f-ae0b-5aa447ef6069',
+        id: '21f1849e-0df5-4b1c-b643-1fb45cc31608',
         metadata: [],
         rowNumber: 33,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-05T03:10:26.342Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-06T08:42:49.741Z'),
     ),
     connectionId: '<id>',
 );
@@ -75,7 +75,7 @@ if ($response->datastoreRecord !== null) {
 
 ## getDatastoreRecord
 
-Retrieve a record
+Retrieves a single DatastoreRecord by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -126,7 +126,7 @@ if ($response->datastoreRecord !== null) {
 
 ## listDatastoreRecords
 
-List all records
+Returns a list of DatastoreRecords. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -176,7 +176,7 @@ if ($response->datastoreRecords !== null) {
 
 ## patchDatastoreRecord
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -203,10 +203,10 @@ $request = new Operations\PatchDatastoreRecordRequest(
         fields: [
 
         ],
-        id: '0923ff5a-b6a3-439c-a463-aa7ee864ee65',
+        id: 'f51ae1d3-4898-4080-b815-00bd01a98a06',
         metadata: [],
         rowNumber: 33,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-05T03:10:26.355Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-06T08:42:49.749Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -239,7 +239,7 @@ if ($response->datastoreRecord !== null) {
 
 ## removeDatastoreRecord
 
-Remove a record
+Deletes the DatastoreRecord identified by `id`.
 
 ### Example Usage
 
@@ -290,7 +290,7 @@ if ($response->statusCode === 200) {
 
 ## updateDatastoreRecord
 
-Update a record
+Updates the DatastoreRecord identified by `id`. Provide the unified DatastoreRecord fields to change in the request body.
 
 ### Example Usage
 
@@ -317,10 +317,10 @@ $request = new Operations\UpdateDatastoreRecordRequest(
         fields: [
 
         ],
-        id: '0923ff5a-b6a3-439c-a463-aa7ee864ee65',
+        id: 'f51ae1d3-4898-4080-b815-00bd01a98a06',
         metadata: [],
         rowNumber: 33,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-05T03:10:26.355Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-06T08:42:49.749Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

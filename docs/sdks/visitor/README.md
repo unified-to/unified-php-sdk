@@ -13,7 +13,7 @@
 
 ## createAnalyticsVisitor
 
-Create a visitor
+Creates a AnalyticsVisitor. Provide the unified AnalyticsVisitor fields in the request body; they are mapped to the provider's API. Returns the created AnalyticsVisitor.
 
 ### Example Usage
 
@@ -39,13 +39,13 @@ $request = new Operations\CreateAnalyticsVisitorRequest(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
         email: 'desiree.o.hara@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: 'bfaa912a-9cdb-411c-ba4a-690f1112f1c6',
-        lastSeenAt: Utils\Utils::parseDateTime('2025-01-11T07:31:53.978Z'),
+        id: 'a2cda971-98a8-4b88-8030-f9db4fc7cbbb',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-01-12T18:13:21.722Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
         totalEvents: 2916,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-29T17:14:52.295Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-01T07:20:06.031Z'),
     ),
     connectionId: '<id>',
 );
@@ -77,7 +77,7 @@ if ($response->analyticsVisitor !== null) {
 
 ## getAnalyticsVisitor
 
-Retrieve a visitor
+Retrieves a single AnalyticsVisitor by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -128,7 +128,7 @@ if ($response->analyticsVisitor !== null) {
 
 ## listAnalyticsVisitors
 
-List all visitors
+Returns a list of AnalyticsVisitors. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -178,7 +178,7 @@ if ($response->analyticsVisitors !== null) {
 
 ## patchAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -204,13 +204,13 @@ $request = new Operations\PatchAnalyticsVisitorRequest(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
         email: 'desiree.o.hara@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: '804ed373-23e4-4381-ae7d-306027990398',
-        lastSeenAt: Utils\Utils::parseDateTime('2025-01-11T07:31:53.988Z'),
+        id: '8fcc2224-5df1-43db-a781-0bf412f36d1d',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-01-12T18:13:21.737Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
         totalEvents: 2916,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-29T17:14:52.305Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-01T07:20:06.048Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -243,7 +243,7 @@ if ($response->analyticsVisitor !== null) {
 
 ## removeAnalyticsVisitor
 
-Remove a visitor
+Deletes the AnalyticsVisitor identified by `id`.
 
 ### Example Usage
 
@@ -294,7 +294,7 @@ if ($response->statusCode === 200) {
 
 ## updateAnalyticsVisitor
 
-Update a visitor
+Updates the AnalyticsVisitor identified by `id`. Provide the unified AnalyticsVisitor fields to change in the request body.
 
 ### Example Usage
 
@@ -320,13 +320,13 @@ $request = new Operations\UpdateAnalyticsVisitorRequest(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
         email: 'desiree.o.hara@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: '804ed373-23e4-4381-ae7d-306027990398',
-        lastSeenAt: Utils\Utils::parseDateTime('2025-01-11T07:31:53.988Z'),
+        id: '8fcc2224-5df1-43db-a781-0bf412f36d1d',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-01-12T18:13:21.737Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
         totalEvents: 2916,
-        updatedAt: Utils\Utils::parseDateTime('2025-06-29T17:14:52.305Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-01T07:20:06.048Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

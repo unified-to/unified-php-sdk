@@ -47,6 +47,8 @@ class Ads
     /**
      * Create an ad
      *
+     * Creates a AdsAd. Provide the unified AdsAd fields in the request body; they are mapped to the provider's API. Returns the created AdsAd.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Ads
 
     /**
      * Create an asset
+     *
+     * Creates a AdsAsset. Provide the unified AdsAsset fields in the request body; they are mapped to the provider's API. Returns the created AdsAsset.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsAssetRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsAssetResponse
@@ -183,6 +187,8 @@ class Ads
     /**
      * Create a campaign
      *
+     * Creates a AdsCampaign. Provide the unified AdsCampaign fields in the request body; they are mapped to the provider's API. Returns the created AdsCampaign.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Ads
 
     /**
      * Create a creative
+     *
+     * Creates a AdsCreative. Provide the unified AdsCreative fields in the request body; they are mapped to the provider's API. Returns the created AdsCreative.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsCreativeResponse
@@ -319,6 +327,8 @@ class Ads
     /**
      * Create a group
      *
+     * Creates a AdsGroup. Provide the unified AdsGroup fields in the request body; they are mapped to the provider's API. Returns the created AdsGroup.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Ads
 
     /**
      * Create an insertionorder
+     *
+     * Creates a AdsInsertionorder. Provide the unified AdsInsertionorder fields in the request body; they are mapped to the provider's API. Returns the created AdsInsertionorder.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsInsertionorderResponse
@@ -455,6 +467,8 @@ class Ads
     /**
      * Create an organization
      *
+     * Creates a AdsOrganization. Provide the unified AdsOrganization fields in the request body; they are mapped to the provider's API. Returns the created AdsOrganization.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -523,6 +537,8 @@ class Ads
     /**
      * Retrieve an ad
      *
+     * Retrieves a single AdsAd by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -585,6 +601,8 @@ class Ads
 
     /**
      * Retrieve an asset
+     *
+     * Retrieves a single AdsAsset by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsAssetRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsAssetResponse
@@ -649,6 +667,8 @@ class Ads
     /**
      * Retrieve a campaign
      *
+     * Retrieves a single AdsCampaign by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -711,6 +731,8 @@ class Ads
 
     /**
      * Retrieve a creative
+     *
+     * Retrieves a single AdsCreative by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsCreativeResponse
@@ -775,6 +797,8 @@ class Ads
     /**
      * Retrieve a group
      *
+     * Retrieves a single AdsGroup by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -837,6 +861,8 @@ class Ads
 
     /**
      * Retrieve an insertionorder
+     *
+     * Retrieves a single AdsInsertionorder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsInsertionorderResponse
@@ -901,6 +927,8 @@ class Ads
     /**
      * Retrieve an organization
      *
+     * Retrieves a single AdsOrganization by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -963,6 +991,8 @@ class Ads
 
     /**
      * Retrieve a promoted
+     *
+     * Retrieves a single AdsPromoted by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsPromotedRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsPromotedResponse
@@ -1027,6 +1057,8 @@ class Ads
     /**
      * Retrieve a target
      *
+     * Retrieves a single AdsTarget by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAdsTargetRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAdsTargetResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1089,6 +1121,8 @@ class Ads
 
     /**
      * List all ads
+     *
+     * Returns a list of AdsAds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsAdsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsAdsResponse
@@ -1153,6 +1187,8 @@ class Ads
     /**
      * List all assets
      *
+     * Returns a list of AdsAssets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsAssetsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsAssetsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1215,6 +1251,8 @@ class Ads
 
     /**
      * List all campaigns
+     *
+     * Returns a list of AdsCampaigns. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsCampaignsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsCampaignsResponse
@@ -1279,6 +1317,8 @@ class Ads
     /**
      * List all creatives
      *
+     * Returns a list of AdsCreatives. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsCreativesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsCreativesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1341,6 +1381,8 @@ class Ads
 
     /**
      * List all groups
+     *
+     * Returns a list of AdsGroups. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsGroupsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsGroupsResponse
@@ -1405,6 +1447,8 @@ class Ads
     /**
      * List all insertionorders
      *
+     * Returns a list of AdsInsertionorders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsInsertionordersRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsInsertionordersResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1467,6 +1511,8 @@ class Ads
 
     /**
      * List all organizations
+     *
+     * Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsOrganizationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsOrganizationsResponse
@@ -1531,6 +1577,8 @@ class Ads
     /**
      * List all promoteds
      *
+     * Returns a list of AdsPromoteds. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsPromotedsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsPromotedsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1593,6 +1641,8 @@ class Ads
 
     /**
      * List all reports
+     *
+     * Returns a list of AdsReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsReportsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsReportsResponse
@@ -1657,6 +1707,8 @@ class Ads
     /**
      * List all targets
      *
+     * Returns a list of AdsTargets. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAdsTargetsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAdsTargetsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1719,6 +1771,8 @@ class Ads
 
     /**
      * Update an ad
+     *
+     * Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsAdResponse
@@ -1788,6 +1842,8 @@ class Ads
     /**
      * Update a campaign
      *
+     * Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1855,6 +1911,8 @@ class Ads
 
     /**
      * Update a creative
+     *
+     * Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsCreativeResponse
@@ -1924,6 +1982,8 @@ class Ads
     /**
      * Update a group
      *
+     * Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1991,6 +2051,8 @@ class Ads
 
     /**
      * Update an insertionorder
+     *
+     * Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsInsertionorderResponse
@@ -2060,6 +2122,8 @@ class Ads
     /**
      * Update an organization
      *
+     * Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2128,6 +2192,8 @@ class Ads
     /**
      * Remove an ad
      *
+     * Deletes the AdsAd identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsAdResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2184,6 +2250,8 @@ class Ads
 
     /**
      * Remove a campaign
+     *
+     * Deletes the AdsCampaign identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsCampaignResponse
@@ -2242,6 +2310,8 @@ class Ads
     /**
      * Remove a creative
      *
+     * Deletes the AdsCreative identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsCreativeResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2298,6 +2368,8 @@ class Ads
 
     /**
      * Remove a group
+     *
+     * Deletes the AdsGroup identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsGroupResponse
@@ -2356,6 +2428,8 @@ class Ads
     /**
      * Remove an insertionorder
      *
+     * Deletes the AdsInsertionorder identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2413,6 +2487,8 @@ class Ads
     /**
      * Remove an organization
      *
+     * Deletes the AdsOrganization identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAdsOrganizationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2469,6 +2545,8 @@ class Ads
 
     /**
      * Update an ad
+     *
+     * Updates the AdsAd identified by `id`. Provide the unified AdsAd fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsAdRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsAdResponse
@@ -2538,6 +2616,8 @@ class Ads
     /**
      * Update a campaign
      *
+     * Updates the AdsCampaign identified by `id`. Provide the unified AdsCampaign fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsCampaignRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsCampaignResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2605,6 +2685,8 @@ class Ads
 
     /**
      * Update a creative
+     *
+     * Updates the AdsCreative identified by `id`. Provide the unified AdsCreative fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsCreativeRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsCreativeResponse
@@ -2674,6 +2756,8 @@ class Ads
     /**
      * Update a group
      *
+     * Updates the AdsGroup identified by `id`. Provide the unified AdsGroup fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsGroupRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsGroupResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2742,6 +2826,8 @@ class Ads
     /**
      * Update an insertionorder
      *
+     * Updates the AdsInsertionorder identified by `id`. Provide the unified AdsInsertionorder fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsInsertionorderResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2809,6 +2895,8 @@ class Ads
 
     /**
      * Update an organization
+     *
+     * Updates the AdsOrganization identified by `id`. Provide the unified AdsOrganization fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAdsOrganizationResponse

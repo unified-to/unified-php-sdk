@@ -47,6 +47,8 @@ class Subscription
     /**
      * Create a subscription
      *
+     * Creates a PaymentSubscription. Provide the unified PaymentSubscription fields in the request body; they are mapped to the provider's API. Returns the created PaymentSubscription.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreatePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -115,6 +117,8 @@ class Subscription
     /**
      * Retrieve a subscription
      *
+     * Retrieves a single PaymentSubscription by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetPaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetPaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -178,6 +182,8 @@ class Subscription
     /**
      * List all subscriptions
      *
+     * Returns a list of PaymentSubscriptions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListPaymentSubscriptionsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -240,6 +246,8 @@ class Subscription
 
     /**
      * Update a subscription
+     *
+     * Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchPaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchPaymentSubscriptionResponse
@@ -309,6 +317,8 @@ class Subscription
     /**
      * Remove a subscription
      *
+     * Deletes the PaymentSubscription identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemovePaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemovePaymentSubscriptionResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -365,6 +375,8 @@ class Subscription
 
     /**
      * Update a subscription
+     *
+     * Updates the PaymentSubscription identified by `id`. Provide the unified PaymentSubscription fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdatePaymentSubscriptionRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdatePaymentSubscriptionResponse

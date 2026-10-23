@@ -47,6 +47,8 @@ class Ats
     /**
      * Create an activity
      *
+     * Creates a AtsActivity. Provide the unified AtsActivity fields in the request body; they are mapped to the provider's API. Returns the created AtsActivity.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Ats
 
     /**
      * Create an application
+     *
+     * Creates a AtsApplication. Provide the unified AtsApplication fields in the request body; they are mapped to the provider's API. Returns the created AtsApplication.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsApplicationResponse
@@ -183,6 +187,8 @@ class Ats
     /**
      * Create a candidate
      *
+     * Creates a AtsCandidate. Provide the unified AtsCandidate fields in the request body; they are mapped to the provider's API. Returns the created AtsCandidate.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -250,6 +256,8 @@ class Ats
 
     /**
      * Create a company
+     *
+     * Creates a AtsCompany. Provide the unified AtsCompany fields in the request body; they are mapped to the provider's API. Returns the created AtsCompany.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsCompanyResponse
@@ -319,6 +327,8 @@ class Ats
     /**
      * Create a document
      *
+     * Creates a AtsDocument. Provide the unified AtsDocument fields in the request body; they are mapped to the provider's API. Returns the created AtsDocument.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -386,6 +396,8 @@ class Ats
 
     /**
      * Create an interview
+     *
+     * Creates a AtsInterview. Provide the unified AtsInterview fields in the request body; they are mapped to the provider's API. Returns the created AtsInterview.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsInterviewResponse
@@ -455,6 +467,8 @@ class Ats
     /**
      * Create a job
      *
+     * Creates a AtsJob. Provide the unified AtsJob fields in the request body; they are mapped to the provider's API. Returns the created AtsJob.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -522,6 +536,8 @@ class Ats
 
     /**
      * Create a scorecard
+     *
+     * Creates a AtsScorecard. Provide the unified AtsScorecard fields in the request body; they are mapped to the provider's API. Returns the created AtsScorecard.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateAtsScorecardResponse
@@ -591,6 +607,8 @@ class Ats
     /**
      * Retrieve an activity
      *
+     * Retrieves a single AtsActivity by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -653,6 +671,8 @@ class Ats
 
     /**
      * Retrieve an application
+     *
+     * Retrieves a single AtsApplication by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsApplicationResponse
@@ -717,6 +737,8 @@ class Ats
     /**
      * Retrieve an applicationstatus
      *
+     * Retrieves a single AtsStatus by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsApplicationstatusRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsApplicationstatusResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -779,6 +801,8 @@ class Ats
 
     /**
      * Retrieve a candidate
+     *
+     * Retrieves a single AtsCandidate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsCandidateResponse
@@ -843,6 +867,8 @@ class Ats
     /**
      * Retrieve a company
      *
+     * Retrieves a single AtsCompany by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -905,6 +931,8 @@ class Ats
 
     /**
      * Retrieve a document
+     *
+     * Retrieves a single AtsDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsDocumentResponse
@@ -969,6 +997,8 @@ class Ats
     /**
      * Retrieve an interview
      *
+     * Retrieves a single AtsInterview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1031,6 +1061,8 @@ class Ats
 
     /**
      * Retrieve a job
+     *
+     * Retrieves a single AtsJob by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsJobResponse
@@ -1095,6 +1127,8 @@ class Ats
     /**
      * Retrieve a scorecard
      *
+     * Retrieves a single AtsScorecard by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1157,6 +1191,8 @@ class Ats
 
     /**
      * List all activities
+     *
+     * Returns a list of AtsActivities. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsActivitiesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsActivitiesResponse
@@ -1221,6 +1257,8 @@ class Ats
     /**
      * List all applications
      *
+     * Returns a list of AtsApplications. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1283,6 +1321,8 @@ class Ats
 
     /**
      * List all applicationstatuses
+     *
+     * Returns a list of AtsStatuses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsApplicationstatusesResponse
@@ -1347,6 +1387,8 @@ class Ats
     /**
      * List all candidates
      *
+     * Returns a list of AtsCandidates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsCandidatesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsCandidatesResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1409,6 +1451,8 @@ class Ats
 
     /**
      * List all companies
+     *
+     * Returns a list of AtsCompanies. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsCompaniesRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsCompaniesResponse
@@ -1473,6 +1517,8 @@ class Ats
     /**
      * List all documents
      *
+     * Returns a list of AtsDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsDocumentsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsDocumentsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1535,6 +1581,8 @@ class Ats
 
     /**
      * List all interviews
+     *
+     * Returns a list of AtsInterviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsInterviewsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsInterviewsResponse
@@ -1599,6 +1647,8 @@ class Ats
     /**
      * List all jobs
      *
+     * Returns a list of AtsJobs. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsJobsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsJobsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1662,6 +1712,8 @@ class Ats
     /**
      * List all scorecards
      *
+     * Returns a list of AtsScorecards. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListAtsScorecardsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListAtsScorecardsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1724,6 +1776,8 @@ class Ats
 
     /**
      * Update an activity
+     *
+     * Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsActivityResponse
@@ -1793,6 +1847,8 @@ class Ats
     /**
      * Update an application
      *
+     * Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1860,6 +1916,8 @@ class Ats
 
     /**
      * Update a candidate
+     *
+     * Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsCandidateResponse
@@ -1929,6 +1987,8 @@ class Ats
     /**
      * Update a company
      *
+     * Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -1996,6 +2056,8 @@ class Ats
 
     /**
      * Update a document
+     *
+     * Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsDocumentResponse
@@ -2065,6 +2127,8 @@ class Ats
     /**
      * Update an interview
      *
+     * Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2132,6 +2196,8 @@ class Ats
 
     /**
      * Update a job
+     *
+     * Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsJobResponse
@@ -2201,6 +2267,8 @@ class Ats
     /**
      * Update a scorecard
      *
+     * Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2269,6 +2337,8 @@ class Ats
     /**
      * Remove an activity
      *
+     * Deletes the AtsActivity identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsActivityResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2325,6 +2395,8 @@ class Ats
 
     /**
      * Remove an application
+     *
+     * Deletes the AtsApplication identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsApplicationResponse
@@ -2383,6 +2455,8 @@ class Ats
     /**
      * Remove a candidate
      *
+     * Deletes the AtsCandidate identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsCandidateResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2439,6 +2513,8 @@ class Ats
 
     /**
      * Remove a company
+     *
+     * Deletes the AtsCompany identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsCompanyResponse
@@ -2497,6 +2573,8 @@ class Ats
     /**
      * Remove a document
      *
+     * Deletes the AtsDocument identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsDocumentResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2553,6 +2631,8 @@ class Ats
 
     /**
      * Remove an interview
+     *
+     * Deletes the AtsInterview identified by `id`.
      *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsInterviewResponse
@@ -2611,6 +2691,8 @@ class Ats
     /**
      * Remove a job
      *
+     * Deletes the AtsJob identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2668,6 +2750,8 @@ class Ats
     /**
      * Remove a scorecard
      *
+     * Deletes the AtsScorecard identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveAtsScorecardResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2724,6 +2808,8 @@ class Ats
 
     /**
      * Update an activity
+     *
+     * Updates the AtsActivity identified by `id`. Provide the unified AtsActivity fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsActivityRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsActivityResponse
@@ -2793,6 +2879,8 @@ class Ats
     /**
      * Update an application
      *
+     * Updates the AtsApplication identified by `id`. Provide the unified AtsApplication fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsApplicationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsApplicationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2860,6 +2948,8 @@ class Ats
 
     /**
      * Update a candidate
+     *
+     * Updates the AtsCandidate identified by `id`. Provide the unified AtsCandidate fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCandidateRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsCandidateResponse
@@ -2929,6 +3019,8 @@ class Ats
     /**
      * Update a company
      *
+     * Updates the AtsCompany identified by `id`. Provide the unified AtsCompany fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsCompanyRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsCompanyResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -2996,6 +3088,8 @@ class Ats
 
     /**
      * Update a document
+     *
+     * Updates the AtsDocument identified by `id`. Provide the unified AtsDocument fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsDocumentRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsDocumentResponse
@@ -3065,6 +3159,8 @@ class Ats
     /**
      * Update an interview
      *
+     * Updates the AtsInterview identified by `id`. Provide the unified AtsInterview fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsInterviewRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsInterviewResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3133,6 +3229,8 @@ class Ats
     /**
      * Update a job
      *
+     * Updates the AtsJob identified by `id`. Provide the unified AtsJob fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsJobRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsJobResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -3200,6 +3298,8 @@ class Ats
 
     /**
      * Update a scorecard
+     *
+     * Updates the AtsScorecard identified by `id`. Provide the unified AtsScorecard fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateAtsScorecardRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateAtsScorecardResponse

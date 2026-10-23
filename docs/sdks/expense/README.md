@@ -19,7 +19,7 @@
 
 ## createAccountingExpense
 
-Create an expense
+Creates a AccountingExpense. Provide the unified AccountingExpense fields in the request body; they are mapped to the provider's API. Returns the created AccountingExpense.
 
 ### Example Usage
 
@@ -45,13 +45,13 @@ $request = new Operations\CreateAccountingExpenseRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://rubbery-couch.biz/',
-                id: '5edd15cd-3ee2-41e4-a439-cf81408cf82f',
+                id: 'baa02116-9bd8-4d02-ab4f-1bbe5b8e646d',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://appropriate-smog.biz/',
-                id: '73fd5b4c-31e3-4336-a108-759567af0a3f',
+                id: 'f3ad53ec-18df-4841-8f6c-8670e7bb5c8b',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696-1.pdf',
             ),
@@ -60,10 +60,10 @@ $request = new Operations\CreateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'GBP',
         externalNumber: 'EXP-38303',
-        id: 'e7de8dcf-e617-4a6e-975f-acf17d8382ca',
+        id: '1141f71b-1df2-460b-9449-03f5213324e3',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '6d3e2ee5-06b5-4989-a6e9-665b2b9819a2',
+                id: '7282567e-e715-4ba6-b1cb-e5bf91560265',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 364.74,
@@ -71,7 +71,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'cb82d68a-1992-402a-9cf6-0ae358ead56c',
+                id: '4910fbb8-aae9-44b9-a910-ce25da3f0299',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 258.35,
@@ -79,7 +79,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '7b15d942-74d8-467f-8356-46ace7e92225',
+                id: '52977deb-cfc3-43c3-9c5d-a4007dc1134e',
                 itemName: 'Conference ticket',
                 notes: 'Casus umquam conicio cinis demitto sint.',
                 taxAmount: 0,
@@ -88,7 +88,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '5160b1b1-9a99-4700-af18-a01383019a6f',
+                id: 'd3fb7ae4-ce77-4e31-bc07-8c41c5cb61c5',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 157.04,
@@ -96,7 +96,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '799420c6-5830-4d0d-ac14-6c143e72a5e7',
+                id: '196148e9-665a-445a-aac7-ff1b731109c3',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 164.02,
@@ -112,7 +112,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
         taxAmount: 0,
         totalAmount: 972.29,
         type: Shared\AccountingExpenseType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2020-09-02T07:17:12.137Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-09-02T08:59:36.000Z'),
     ),
     connectionId: '<id>',
 );
@@ -144,7 +144,7 @@ if ($response->accountingExpense !== null) {
 
 ## createLegalExpense
 
-Create an expense
+Creates a LegalExpense. Provide the unified LegalExpense fields in the request body; they are mapped to the provider's API. Returns the created LegalExpense.
 
 ### Example Usage
 
@@ -171,7 +171,7 @@ $request = new Operations\CreateLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: 'c69864e8-ba64-4b75-9084-fe989722d7cf',
+        id: '6a4d5389-7254-43a6-aace-94cbf418e234',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -179,7 +179,7 @@ $request = new Operations\CreateLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-30T23:21:13.014Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-01T02:32:10.673Z'),
     ),
     connectionId: '<id>',
 );
@@ -211,7 +211,7 @@ if ($response->legalExpense !== null) {
 
 ## getAccountingExpense
 
-Retrieve an expense
+Retrieves a single AccountingExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -262,7 +262,7 @@ if ($response->accountingExpense !== null) {
 
 ## getLegalExpense
 
-Retrieve an expense
+Retrieves a single LegalExpense by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -313,7 +313,7 @@ if ($response->legalExpense !== null) {
 
 ## listAccountingExpenses
 
-List all expenses
+Returns a list of AccountingExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -363,7 +363,7 @@ if ($response->accountingExpenses !== null) {
 
 ## listLegalExpenses
 
-List all expenses
+Returns a list of LegalExpenses. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -413,7 +413,7 @@ if ($response->legalExpenses !== null) {
 
 ## patchAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -439,13 +439,13 @@ $request = new Operations\PatchAccountingExpenseRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://rubbery-couch.biz/',
-                id: '6c24dd53-2b45-4334-bbcf-75c636f28f60',
+                id: '6ca3099c-73ea-4907-a22c-16ecec983921',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://appropriate-smog.biz/',
-                id: 'e1a08bed-3ed0-4fdc-b9ee-fc332c88cd5f',
+                id: 'b089fe25-0a8f-4ad7-86fd-807ee1c337e0',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696-1.pdf',
             ),
@@ -454,10 +454,10 @@ $request = new Operations\PatchAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'GBP',
         externalNumber: 'EXP-38303',
-        id: '3c876856-b200-4d87-b983-23fea5ab9ebe',
+        id: '73aff9eb-cf6d-4b65-b39a-ae3fe05c7c6f',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '81fbe3f0-5c73-41bd-9bbc-612377427866',
+                id: 'aeda1539-6127-40c0-bc85-3f32b5324ebd',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 364.74,
@@ -465,7 +465,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '0d93bd35-f966-4737-a0c1-2a6f5b7f9429',
+                id: '7912fd65-f0e4-44c8-a00e-d5c62d7e7066',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 258.35,
@@ -473,7 +473,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '6f9434e8-5db2-474b-8f0e-3ae4fb4de269',
+                id: '8aaae847-0961-45d1-a812-3894733a5642',
                 itemName: 'Conference ticket',
                 notes: 'Casus umquam conicio cinis demitto sint.',
                 taxAmount: 0,
@@ -482,7 +482,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'be81f7a9-a03d-4972-be6a-ff45503fa595',
+                id: '0953cb8d-59de-4dd8-87bf-f2d4f07c5eec',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 157.04,
@@ -490,7 +490,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'be6beea5-ab5d-4c48-93ee-b9e4551935ff',
+                id: '59cbffa4-b543-402b-927d-23cb3449b1ff',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 164.02,
@@ -506,7 +506,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
         taxAmount: 0,
         totalAmount: 972.29,
         type: Shared\AccountingExpenseType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2020-09-02T07:17:12.139Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-09-02T08:59:36.002Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -539,7 +539,7 @@ if ($response->accountingExpense !== null) {
 
 ## patchLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -566,7 +566,7 @@ $request = new Operations\PatchLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: '17ac53c3-22e7-4a63-8a7f-7d7ad85275e4',
+        id: 'a1e6530a-9c67-4b16-b02e-dd1bfa483ecb',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -574,7 +574,7 @@ $request = new Operations\PatchLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-30T23:21:13.027Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-01T02:32:10.683Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -607,7 +607,7 @@ if ($response->legalExpense !== null) {
 
 ## removeAccountingExpense
 
-Remove an expense
+Deletes the AccountingExpense identified by `id`.
 
 ### Example Usage
 
@@ -658,7 +658,7 @@ if ($response->statusCode === 200) {
 
 ## removeLegalExpense
 
-Remove an expense
+Deletes the LegalExpense identified by `id`.
 
 ### Example Usage
 
@@ -709,7 +709,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingExpense
 
-Update an expense
+Updates the AccountingExpense identified by `id`. Provide the unified AccountingExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -735,13 +735,13 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://rubbery-couch.biz/',
-                id: '6c24dd53-2b45-4334-bbcf-75c636f28f60',
+                id: '6ca3099c-73ea-4907-a22c-16ecec983921',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://appropriate-smog.biz/',
-                id: 'e1a08bed-3ed0-4fdc-b9ee-fc332c88cd5f',
+                id: 'b089fe25-0a8f-4ad7-86fd-807ee1c337e0',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696-1.pdf',
             ),
@@ -750,10 +750,10 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'GBP',
         externalNumber: 'EXP-38303',
-        id: '3c876856-b200-4d87-b983-23fea5ab9ebe',
+        id: '73aff9eb-cf6d-4b65-b39a-ae3fe05c7c6f',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '81fbe3f0-5c73-41bd-9bbc-612377427866',
+                id: 'aeda1539-6127-40c0-bc85-3f32b5324ebd',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 364.74,
@@ -761,7 +761,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '0d93bd35-f966-4737-a0c1-2a6f5b7f9429',
+                id: '7912fd65-f0e4-44c8-a00e-d5c62d7e7066',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 258.35,
@@ -769,7 +769,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '6f9434e8-5db2-474b-8f0e-3ae4fb4de269',
+                id: '8aaae847-0961-45d1-a812-3894733a5642',
                 itemName: 'Conference ticket',
                 notes: 'Casus umquam conicio cinis demitto sint.',
                 taxAmount: 0,
@@ -778,7 +778,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'be81f7a9-a03d-4972-be6a-ff45503fa595',
+                id: '0953cb8d-59de-4dd8-87bf-f2d4f07c5eec',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 157.04,
@@ -786,7 +786,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'be6beea5-ab5d-4c48-93ee-b9e4551935ff',
+                id: '59cbffa4-b543-402b-927d-23cb3449b1ff',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 164.02,
@@ -802,7 +802,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         taxAmount: 0,
         totalAmount: 972.29,
         type: Shared\AccountingExpenseType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2020-09-02T07:17:12.139Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-09-02T08:59:36.002Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -835,7 +835,7 @@ if ($response->accountingExpense !== null) {
 
 ## updateLegalExpense
 
-Update an expense
+Updates the LegalExpense identified by `id`. Provide the unified LegalExpense fields to change in the request body.
 
 ### Example Usage
 
@@ -862,7 +862,7 @@ $request = new Operations\UpdateLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: '17ac53c3-22e7-4a63-8a7f-7d7ad85275e4',
+        id: 'a1e6530a-9c67-4b16-b02e-dd1bfa483ecb',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -870,7 +870,7 @@ $request = new Operations\UpdateLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-03-30T23:21:13.027Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-01T02:32:10.683Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

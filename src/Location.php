@@ -47,6 +47,8 @@ class Location
     /**
      * Create a location
      *
+     * Creates a CommerceLocation. Provide the unified CommerceLocation fields in the request body; they are mapped to the provider's API. Returns the created CommerceLocation.
+     *
      * @param  \Unified\Unified_to\Models\Operations\CreateCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -114,6 +116,8 @@ class Location
 
     /**
      * Create a location
+     *
+     * Creates a HrisLocation. Provide the unified HrisLocation fields in the request body; they are mapped to the provider's API. Returns the created HrisLocation.
      *
      * @param  \Unified\Unified_to\Models\Operations\CreateHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\CreateHrisLocationResponse
@@ -183,6 +187,8 @@ class Location
     /**
      * Retrieve a location
      *
+     * Retrieves a single ClubsLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetClubsLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetClubsLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -245,6 +251,8 @@ class Location
 
     /**
      * Retrieve a location
+     *
+     * Retrieves a single CommerceLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetCommerceLocationResponse
@@ -309,6 +317,8 @@ class Location
     /**
      * Retrieve a location
      *
+     * Retrieves a single HealthcareLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+     *
      * @param  \Unified\Unified_to\Models\Operations\GetHealthcareLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHealthcareLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -371,6 +381,8 @@ class Location
 
     /**
      * Retrieve a location
+     *
+     * Retrieves a single HrisLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
      *
      * @param  \Unified\Unified_to\Models\Operations\GetHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\GetHrisLocationResponse
@@ -435,6 +447,8 @@ class Location
     /**
      * List all locations
      *
+     * Returns a list of ClubsLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListClubsLocationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListClubsLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -497,6 +511,8 @@ class Location
 
     /**
      * List all locations
+     *
+     * Returns a list of CommerceLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
      *
      * @param  \Unified\Unified_to\Models\Operations\ListCommerceLocationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListCommerceLocationsResponse
@@ -561,6 +577,8 @@ class Location
     /**
      * List all locations
      *
+     * Returns a list of HealthcareLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHealthcareLocationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHealthcareLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -624,6 +642,8 @@ class Location
     /**
      * List all locations
      *
+     * Returns a list of HrisLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+     *
      * @param  \Unified\Unified_to\Models\Operations\ListHrisLocationsRequest  $request
      * @return \Unified\Unified_to\Models\Operations\ListHrisLocationsResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -686,6 +706,8 @@ class Location
 
     /**
      * Update a location
+     *
+     * Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\PatchCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchCommerceLocationResponse
@@ -755,6 +777,8 @@ class Location
     /**
      * Update a location
      *
+     * Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
+     *
      * @param  \Unified\Unified_to\Models\Operations\PatchHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\PatchHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -823,6 +847,8 @@ class Location
     /**
      * Remove a location
      *
+     * Deletes the CommerceLocation identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveCommerceLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -880,6 +906,8 @@ class Location
     /**
      * Remove a location
      *
+     * Deletes the HrisLocation identified by `id`.
+     *
      * @param  \Unified\Unified_to\Models\Operations\RemoveHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\RemoveHrisLocationResponse
      * @throws \Unified\Unified_to\Models\Errors\SDKException
@@ -936,6 +964,8 @@ class Location
 
     /**
      * Update a location
+     *
+     * Updates the CommerceLocation identified by `id`. Provide the unified CommerceLocation fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateCommerceLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateCommerceLocationResponse
@@ -1004,6 +1034,8 @@ class Location
 
     /**
      * Update a location
+     *
+     * Updates the HrisLocation identified by `id`. Provide the unified HrisLocation fields to change in the request body.
      *
      * @param  \Unified\Unified_to\Models\Operations\UpdateHrisLocationRequest  $request
      * @return \Unified\Unified_to\Models\Operations\UpdateHrisLocationResponse

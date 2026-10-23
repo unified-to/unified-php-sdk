@@ -13,7 +13,7 @@
 
 ## createMetadataMetadata
 
-Create a metadata
+Creates a MetadataMetadata. Provide the unified MetadataMetadata fields in the request body; they are mapped to the provider's API. Returns the created MetadataMetadata.
 
 ### Example Usage
 
@@ -38,7 +38,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'dbbc040f-bb48-4438-8256-765ae1cb0848',
+        id: 'de1f6bb7-89c4-4061-961a-13b216604909',
         isRequired: false,
         name: 'autem',
         objectType: 'social_review',
@@ -48,7 +48,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-21T23:11:37.812Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-23T09:19:58.898Z'),
     ),
     connectionId: '<id>',
 );
@@ -80,7 +80,7 @@ if ($response->metadataMetadata !== null) {
 
 ## getMetadataMetadata
 
-Retrieve a metadata
+Retrieves a single MetadataMetadata by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -131,7 +131,7 @@ if ($response->metadataMetadata !== null) {
 
 ## listMetadataMetadatas
 
-List all metadatas
+Returns a list of MetadataMetadatas. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -181,7 +181,7 @@ if ($response->metadataMetadatas !== null) {
 
 ## patchMetadataMetadata
 
-Update a metadata
+Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 
 ### Example Usage
 
@@ -206,7 +206,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '0912c17d-86b6-421b-a784-7e3b97268ea4',
+        id: '3ed29ea8-0fba-47cb-b951-5f26625418fc',
         isRequired: false,
         name: 'autem',
         objectType: 'social_review',
@@ -216,7 +216,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-21T23:11:37.818Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-23T09:19:58.907Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -249,7 +249,7 @@ if ($response->metadataMetadata !== null) {
 
 ## removeMetadataMetadata
 
-Remove a metadata
+Deletes the MetadataMetadata identified by `id`.
 
 ### Example Usage
 
@@ -300,7 +300,7 @@ if ($response->statusCode === 200) {
 
 ## updateMetadataMetadata
 
-Update a metadata
+Updates the MetadataMetadata identified by `id`. Provide the unified MetadataMetadata fields to change in the request body.
 
 ### Example Usage
 
@@ -325,7 +325,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '0912c17d-86b6-421b-a784-7e3b97268ea4',
+        id: '3ed29ea8-0fba-47cb-b951-5f26625418fc',
         isRequired: false,
         name: 'autem',
         objectType: 'social_review',
@@ -335,7 +335,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-21T23:11:37.818Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-23T09:19:58.907Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

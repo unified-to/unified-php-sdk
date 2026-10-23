@@ -13,7 +13,7 @@
 
 ## createAccountingInvoice
 
-Create an invoice
+Creates a AccountingInvoice. Provide the unified AccountingInvoice fields in the request body; they are mapped to the provider's API. Returns the created AccountingInvoice.
 
 ### Example Usage
 
@@ -39,13 +39,13 @@ $request = new Operations\CreateAccountingInvoiceRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://glossy-markup.net/',
-                id: '8785a531-c170-4e0a-a23b-6026aeb2808f',
+                id: '375cc477-e427-4c2a-bd69-75235f07628c',
                 mimeType: 'application/pdf',
                 name: 'INV-77705.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://earnest-giggle.net',
-                id: '795784ec-1677-4171-87a9-191b7246647a',
+                id: '3ee0b8a0-9440-4164-9d01-09d8c8a2d8a3',
                 mimeType: 'application/pdf',
                 name: 'INV-77705-1.pdf',
             ),
@@ -57,7 +57,7 @@ $request = new Operations\CreateAccountingInvoiceRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2022-12-07T14:17:29.587Z'),
         extendedNotes: [],
-        id: '96f21cc2-029b-451f-bf63-27b0da867a12',
+        id: '1ec363b5-4678-4173-9f76-3a9a86625ea3',
         invoiceNumber: 'INV-77705',
         isInclusiveOfTax: false,
         lineitems: [],
@@ -75,7 +75,7 @@ $request = new Operations\CreateAccountingInvoiceRequest(
         term: Shared\AccountingInvoiceTerm::Net25,
         totalAmount: 0,
         type: Shared\AccountingInvoiceType::Invoice,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-23T13:03:42.762Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-25T06:46:36.172Z'),
         url: 'https://gifted-yarmulke.info/invoices/INV-77705',
     ),
     connectionId: '<id>',
@@ -108,7 +108,7 @@ if ($response->accountingInvoice !== null) {
 
 ## getAccountingInvoice
 
-Retrieve an invoice
+Retrieves a single AccountingInvoice by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
 
 ### Example Usage
 
@@ -159,7 +159,7 @@ if ($response->accountingInvoice !== null) {
 
 ## listAccountingInvoices
 
-List all invoices
+Returns a list of AccountingInvoices. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
 
 ### Example Usage
 
@@ -209,7 +209,7 @@ if ($response->accountingInvoices !== null) {
 
 ## patchAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -235,13 +235,13 @@ $request = new Operations\PatchAccountingInvoiceRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://glossy-markup.net/',
-                id: '21a65956-7898-49fe-954e-657be9079de1',
+                id: '49b43410-bdef-4ec5-b80d-db53c6dda2ae',
                 mimeType: 'application/pdf',
                 name: 'INV-77705.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://earnest-giggle.net',
-                id: '0de07f5c-0422-4bf1-8312-b38a6e63a87d',
+                id: 'd2133d3d-896a-4099-bdee-3a2d53872966',
                 mimeType: 'application/pdf',
                 name: 'INV-77705-1.pdf',
             ),
@@ -253,7 +253,7 @@ $request = new Operations\PatchAccountingInvoiceRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2022-12-07T14:17:29.587Z'),
         extendedNotes: [],
-        id: '896edd87-b896-4ec1-9035-22e2a216a31b',
+        id: 'c76c91c5-d89b-4b94-bd13-e9a0a6c57a48',
         invoiceNumber: 'INV-77705',
         isInclusiveOfTax: false,
         lineitems: [],
@@ -271,7 +271,7 @@ $request = new Operations\PatchAccountingInvoiceRequest(
         term: Shared\AccountingInvoiceTerm::Net25,
         totalAmount: 0,
         type: Shared\AccountingInvoiceType::Invoice,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-23T13:03:42.816Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-25T06:46:36.228Z'),
         url: 'https://gifted-yarmulke.info/invoices/INV-77705',
     ),
     connectionId: '<id>',
@@ -305,7 +305,7 @@ if ($response->accountingInvoice !== null) {
 
 ## removeAccountingInvoice
 
-Remove an invoice
+Deletes the AccountingInvoice identified by `id`.
 
 ### Example Usage
 
@@ -356,7 +356,7 @@ if ($response->statusCode === 200) {
 
 ## updateAccountingInvoice
 
-Update an invoice
+Updates the AccountingInvoice identified by `id`. Provide the unified AccountingInvoice fields to change in the request body.
 
 ### Example Usage
 
@@ -382,13 +382,13 @@ $request = new Operations\UpdateAccountingInvoiceRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://glossy-markup.net/',
-                id: '21a65956-7898-49fe-954e-657be9079de1',
+                id: '49b43410-bdef-4ec5-b80d-db53c6dda2ae',
                 mimeType: 'application/pdf',
                 name: 'INV-77705.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://earnest-giggle.net',
-                id: '0de07f5c-0422-4bf1-8312-b38a6e63a87d',
+                id: 'd2133d3d-896a-4099-bdee-3a2d53872966',
                 mimeType: 'application/pdf',
                 name: 'INV-77705-1.pdf',
             ),
@@ -400,7 +400,7 @@ $request = new Operations\UpdateAccountingInvoiceRequest(
         discountAmount: 0,
         dueAt: Utils\Utils::parseDateTime('2022-12-07T14:17:29.587Z'),
         extendedNotes: [],
-        id: '896edd87-b896-4ec1-9035-22e2a216a31b',
+        id: 'c76c91c5-d89b-4b94-bd13-e9a0a6c57a48',
         invoiceNumber: 'INV-77705',
         isInclusiveOfTax: false,
         lineitems: [],
@@ -418,7 +418,7 @@ $request = new Operations\UpdateAccountingInvoiceRequest(
         term: Shared\AccountingInvoiceTerm::Net25,
         totalAmount: 0,
         type: Shared\AccountingInvoiceType::Invoice,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-23T13:03:42.816Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-25T06:46:36.228Z'),
         url: 'https://gifted-yarmulke.info/invoices/INV-77705',
     ),
     connectionId: '<id>',
