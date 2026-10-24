@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+        id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+        id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
     ),
     connectionId: '<id>',
 );
@@ -631,8 +631,11 @@ if ($response->accountingAccount !== null) {
 
 ### [Call](docs/sdks/call/README.md)
 
+* [createUcCall](docs/sdks/call/README.md#createuccall) - Create a call
 * [getUcCall](docs/sdks/call/README.md#getuccall) - Retrieve a call
 * [listUcCalls](docs/sdks/call/README.md#listuccalls) - List all calls
+* [patchUcCall](docs/sdks/call/README.md#patchuccall) - Update a call
+* [updateUcCall](docs/sdks/call/README.md#updateuccall) - Update a call
 
 ### [Campaign](docs/sdks/campaign/README.md)
 
@@ -2667,6 +2670,7 @@ if ($response->accountingAccount !== null) {
 
 ### [Uc](docs/sdks/uc/README.md)
 
+* [createUcCall](docs/sdks/uc/README.md#createuccall) - Create a call
 * [createUcComment](docs/sdks/uc/README.md#createuccomment) - Create a comment
 * [createUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
 * [createUcRecording](docs/sdks/uc/README.md#createucrecording) - Create a recording
@@ -2682,12 +2686,14 @@ if ($response->accountingAccount !== null) {
 * [listUcRecordings](docs/sdks/uc/README.md#listucrecordings) - List all recordings
 * [listUcScorecards](docs/sdks/uc/README.md#listucscorecards) - List all scorecards
 * [listUcScorecardtemplates](docs/sdks/uc/README.md#listucscorecardtemplates) - List all scorecardtemplates
+* [patchUcCall](docs/sdks/uc/README.md#patchuccall) - Update a call
 * [patchUcComment](docs/sdks/uc/README.md#patchuccomment) - Update a comment
 * [patchUcContact](docs/sdks/uc/README.md#patchuccontact) - Update a contact
 * [patchUcRecording](docs/sdks/uc/README.md#patchucrecording) - Update a recording
 * [removeUcComment](docs/sdks/uc/README.md#removeuccomment) - Remove a comment
 * [removeUcContact](docs/sdks/uc/README.md#removeuccontact) - Remove a contact
 * [removeUcRecording](docs/sdks/uc/README.md#removeucrecording) - Remove a recording
+* [updateUcCall](docs/sdks/uc/README.md#updateuccall) - Update a call
 * [updateUcComment](docs/sdks/uc/README.md#updateuccomment) - Update a comment
 * [updateUcContact](docs/sdks/uc/README.md#updateuccontact) - Update a contact
 * [updateUcRecording](docs/sdks/uc/README.md#updateucrecording) - Update a recording
@@ -2849,7 +2855,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+            id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -2862,7 +2868,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
         ),
         connectionId: '<id>',
     );
@@ -2920,7 +2926,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+        id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -2933,7 +2939,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
     ),
     connectionId: '<id>',
 );
@@ -2974,7 +2980,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '898bd106-40b2-43f3-9e8a-03eca401222f',
+        id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -2987,7 +2993,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T09:48:02.330Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
     ),
     connectionId: '<id>',
 );

@@ -27,4 +27,11 @@ enum ListUcCallsQueryParamFields: string
     case Metadata = 'metadata';
     case Raw = 'raw';
     case ConversationIdentifier = 'conversation_identifier';
+    case Status = 'status';
+    case AnswerAt = 'answer_at';
+    case DurationSeconds = 'duration_seconds';
+    case CostAmount = 'cost_amount';
+    case Currency = 'currency';
+    case ParentId = 'parent_id';
+    case Instructions = 'instructions';
 }

@@ -181,6 +181,7 @@ enum PropertyConnectionPermissions: string
     case HrisEarningRead = 'hris_earning_read';
     case HrisEarningWrite = 'hris_earning_write';
     case UcCallRead = 'uc_call_read';
+    case UcCallWrite = 'uc_call_write';
     case UcContactRead = 'uc_contact_read';
     case UcContactWrite = 'uc_contact_write';
     case UcCommentRead = 'uc_comment_read';

@@ -12,6 +12,15 @@ namespace Unified\Unified_to\Models\Shared;
 class UcCall
 {
     /**
+     * When the call was answered (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $answerAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('answer_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $answerAt = null;
+
+    /**
      * The contact ID for call (reference to UcContact)
      *
      * @var ?string $contactId
@@ -40,6 +49,15 @@ class UcCall
     public ?string $conversationIdentifier = null;
 
     /**
+     * What the integration charged for the call
+     *
+     * @var ?float $costAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cost_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $costAmount = null;
+
+    /**
      * The date that this call object was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
@@ -47,6 +65,24 @@ class UcCall
     #[\Speakeasy\Serializer\Annotation\SerializedName('created_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $createdAt = null;
+
+    /**
+     * ISO 4217 currency of cost_amount
+     *
+     * @var ?string $currency
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $currency = null;
+
+    /**
+     * Call length in seconds
+     *
+     * @var ?float $durationSeconds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('duration_seconds')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $durationSeconds = null;
 
     /**
      * The end time of the call (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -67,6 +103,16 @@ class UcCall
     public ?string $id = null;
 
     /**
+     * Write-only: what the call does once answered (create/update only; never returned)
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\UcCallInstruction> $instructions
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('instructions')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcCallInstruction>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $instructions = null;
+
+    /**
      *
      * @var ?bool $isPrivate
      */
@@ -83,6 +129,15 @@ class UcCall
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\UcMetadata>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $metadata = null;
+
+    /**
+     * The parent call (leg) that this call belongs to
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
 
     /**
      * The raw data returned by the integration for this call
@@ -102,6 +157,16 @@ class UcCall
     #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?\DateTime $startAt = null;
+
+    /**
+     * The current or final status of the call
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\UcCallStatus $status
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\UcCallStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?UcCallStatus $status = null;
 
     /**
      * The telephone number called
@@ -157,16 +222,23 @@ class UcCall
     public ?string $userPhone = null;
 
     /**
+     * @param  ?\DateTime  $answerAt
      * @param  ?string  $contactId
      * @param  ?array<\Unified\Unified_to\Models\Shared\UcContact>  $contacts
      * @param  ?string  $conversationIdentifier
+     * @param  ?float  $costAmount
      * @param  ?\DateTime  $createdAt
+     * @param  ?string  $currency
+     * @param  ?float  $durationSeconds
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Shared\UcCallInstruction>  $instructions
      * @param  ?bool  $isPrivate
      * @param  ?array<\Unified\Unified_to\Models\Shared\UcMetadata>  $metadata
+     * @param  ?string  $parentId
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
+     * @param  ?\Unified\Unified_to\Models\Shared\UcCallStatus  $status
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyUcCallTelephone  $telephone
      * @param  ?\Unified\Unified_to\Models\Shared\UcCallType  $type
      * @param  ?\DateTime  $updatedAt
@@ -175,18 +247,25 @@ class UcCall
      * @param  ?string  $userPhone
      * @phpstan-pure
      */
-    public function __construct(?string $contactId = null, ?array $contacts = null, ?string $conversationIdentifier = null, ?\DateTime $createdAt = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPrivate = null, ?array $metadata = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyUcCallTelephone $telephone = null, ?UcCallType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null)
+    public function __construct(?\DateTime $answerAt = null, ?string $contactId = null, ?array $contacts = null, ?string $conversationIdentifier = null, ?float $costAmount = null, ?\DateTime $createdAt = null, ?string $currency = null, ?float $durationSeconds = null, ?\DateTime $endAt = null, ?string $id = null, ?array $instructions = null, ?bool $isPrivate = null, ?array $metadata = null, ?string $parentId = null, ?array $raw = null, ?\DateTime $startAt = null, ?UcCallStatus $status = null, ?PropertyUcCallTelephone $telephone = null, ?UcCallType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $userName = null, ?string $userPhone = null)
     {
+        $this->answerAt = $answerAt;
         $this->contactId = $contactId;
         $this->contacts = $contacts;
         $this->conversationIdentifier = $conversationIdentifier;
+        $this->costAmount = $costAmount;
         $this->createdAt = $createdAt;
+        $this->currency = $currency;
+        $this->durationSeconds = $durationSeconds;
         $this->endAt = $endAt;
         $this->id = $id;
+        $this->instructions = $instructions;
         $this->isPrivate = $isPrivate;
         $this->metadata = $metadata;
+        $this->parentId = $parentId;
         $this->raw = $raw;
         $this->startAt = $startAt;
+        $this->status = $status;
         $this->telephone = $telephone;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

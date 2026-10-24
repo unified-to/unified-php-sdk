@@ -37,11 +37,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: '39f9ff87-4ed4-4fb5-9d39-56841ea1c863',
+        id: '6cb4a34b-3cfe-4459-aee4-202cb80abc53',
         metadata: [],
         name: 'transmitter-calculate',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-07T13:27:13.784Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-07T15:48:17.728Z'),
     ),
     connectionId: '<id>',
 );
@@ -198,11 +198,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: 'e48929ca-2277-4f9e-a5eb-d9e4d91f0ab2',
+        id: 'd1c80f96-48cc-43b4-9fa4-b8c045220dfb',
         metadata: [],
         name: 'transmitter-calculate',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-07T13:27:13.785Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-07T15:48:17.729Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -310,11 +310,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateRepoBranchRequest(
     repoBranch: new Shared\RepoBranch(
         createdAt: Utils\Utils::parseDateTime('2019-02-24T09:33:48.540Z'),
-        id: 'e48929ca-2277-4f9e-a5eb-d9e4d91f0ab2',
+        id: 'd1c80f96-48cc-43b4-9fa4-b8c045220dfb',
         metadata: [],
         name: 'transmitter-calculate',
         repoId: '<id>',
-        updatedAt: Utils\Utils::parseDateTime('2020-01-07T13:27:13.785Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-01-07T15:48:17.729Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

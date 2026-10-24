@@ -4,8 +4,96 @@
 
 ### Available Operations
 
+* [createUcCall](#createuccall) - Create a call
 * [getUcCall](#getuccall) - Retrieve a call
 * [listUcCalls](#listuccalls) - List all calls
+* [patchUcCall](#patchuccall) - Update a call
+* [updateUcCall](#updateuccall) - Update a call
+
+## createUcCall
+
+Creates a UcCall. Provide the unified UcCall fields in the request body; they are mapped to the provider's API. Returns the created UcCall.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createUcCall" method="post" path="/uc/{connection_id}/call" example="uc_call" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateUcCallRequest(
+    ucCall: new Shared\UcCall(
+        answerAt: Utils\Utils::parseDateTime('2025-05-15T07:37:02.253Z'),
+        contacts: [],
+        conversationIdentifier: '085edbd2-3d92-4092-81ac-f87d135ddc04',
+        costAmount: 1.564,
+        createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
+        currency: 'USD',
+        durationSeconds: 2556,
+        endAt: Utils\Utils::parseDateTime('2024-05-30T23:10:59.811Z'),
+        id: '085edbd2-3d92-4092-81ac-f87d135ddc04',
+        isPrivate: false,
+        metadata: [
+            new Shared\UcMetadata(
+                extraData: [
+
+                ],
+                format: Shared\UcMetadataFormat::Price,
+                id: 'fb337f42-7980-422b-8573-5ebd3cdac692',
+                namespace: 'custom',
+                slug: 'custom_field',
+                value: 'tui',
+            ),
+        ],
+        startAt: Utils\Utils::parseDateTime('2023-12-17T22:48:25.791Z'),
+        status: Shared\UcCallStatus::InProgress,
+        telephone: new Shared\PropertyUcCallTelephone(
+            telephone: '(493) 534-0768',
+            type: Shared\PropertyUcCallTelephoneType::Mobile,
+        ),
+        type: Shared\UcCallType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2023-08-03T14:04:16.016Z'),
+        userPhone: '819-894-3317 x163',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->call->createUcCall(
+    request: $request
+);
+
+if ($response->ucCall !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\CreateUcCallRequest](../../Models/Operations/CreateUcCallRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\CreateUcCallResponse](../../Models/Operations/CreateUcCallResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getUcCall
 
@@ -101,6 +189,178 @@ if ($response->ucCalls !== null) {
 ### Response
 
 **[?Operations\ListUcCallsResponse](../../Models/Operations/ListUcCallsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchUcCall
+
+Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchUcCall" method="patch" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchUcCallRequest(
+    ucCall: new Shared\UcCall(
+        answerAt: Utils\Utils::parseDateTime('2025-05-15T07:37:02.284Z'),
+        contacts: [],
+        conversationIdentifier: '1e462f3b-0ea0-4223-95b0-3fe50625c540',
+        costAmount: 1.564,
+        createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
+        currency: 'USD',
+        durationSeconds: 2556,
+        endAt: Utils\Utils::parseDateTime('2024-05-30T23:10:59.827Z'),
+        id: '1e462f3b-0ea0-4223-95b0-3fe50625c540',
+        isPrivate: false,
+        metadata: [
+            new Shared\UcMetadata(
+                extraData: [
+
+                ],
+                format: Shared\UcMetadataFormat::Price,
+                id: 'b4f7ed1b-2634-4173-9152-2f806e9fecf2',
+                namespace: 'custom',
+                slug: 'custom_field',
+                value: 'tui',
+            ),
+        ],
+        startAt: Utils\Utils::parseDateTime('2023-12-17T22:48:25.801Z'),
+        status: Shared\UcCallStatus::InProgress,
+        telephone: new Shared\PropertyUcCallTelephone(
+            telephone: '(493) 534-0768',
+            type: Shared\PropertyUcCallTelephoneType::Mobile,
+        ),
+        type: Shared\UcCallType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2023-08-03T14:04:16.020Z'),
+        userPhone: '819-894-3317 x163',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->call->patchUcCall(
+    request: $request
+);
+
+if ($response->ucCall !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\PatchUcCallRequest](../../Models/Operations/PatchUcCallRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+### Response
+
+**[?Operations\PatchUcCallResponse](../../Models/Operations/PatchUcCallResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateUcCall
+
+Updates the UcCall identified by `id`. Provide the unified UcCall fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateUcCall" method="put" path="/uc/{connection_id}/call/{id}" example="uc_call" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateUcCallRequest(
+    ucCall: new Shared\UcCall(
+        answerAt: Utils\Utils::parseDateTime('2025-05-15T07:37:02.284Z'),
+        contacts: [],
+        conversationIdentifier: '1e462f3b-0ea0-4223-95b0-3fe50625c540',
+        costAmount: 1.564,
+        createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
+        currency: 'USD',
+        durationSeconds: 2556,
+        endAt: Utils\Utils::parseDateTime('2024-05-30T23:10:59.827Z'),
+        id: '1e462f3b-0ea0-4223-95b0-3fe50625c540',
+        isPrivate: false,
+        metadata: [
+            new Shared\UcMetadata(
+                extraData: [
+
+                ],
+                format: Shared\UcMetadataFormat::Price,
+                id: 'b4f7ed1b-2634-4173-9152-2f806e9fecf2',
+                namespace: 'custom',
+                slug: 'custom_field',
+                value: 'tui',
+            ),
+        ],
+        startAt: Utils\Utils::parseDateTime('2023-12-17T22:48:25.801Z'),
+        status: Shared\UcCallStatus::InProgress,
+        telephone: new Shared\PropertyUcCallTelephone(
+            telephone: '(493) 534-0768',
+            type: Shared\PropertyUcCallTelephoneType::Mobile,
+        ),
+        type: Shared\UcCallType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2023-08-03T14:04:16.020Z'),
+        userPhone: '819-894-3317 x163',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->call->updateUcCall(
+    request: $request
+);
+
+if ($response->ucCall !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                        | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `$request`                                                                       | [Operations\UpdateUcCallRequest](../../Models/Operations/UpdateUcCallRequest.md) | :heavy_check_mark:                                                               | The request object to use for the request.                                       |
+
+### Response
+
+**[?Operations\UpdateUcCallResponse](../../Models/Operations/UpdateUcCallResponse.md)**
 
 ### Errors
 

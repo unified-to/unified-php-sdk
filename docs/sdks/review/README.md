@@ -50,7 +50,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '33e41b27-10cf-4b96-a393-9efbcd3c1be0',
+        id: '52f5009e-6ea7-48a8-a0f8-4264731efe7a',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -58,10 +58,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '49585c8f-4972-4faa-8a1c-5b8efe96d149',
+                id: '7d9d9e89-0c5b-435c-ab36-0ea9c425e2c7',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'ae1023b0-2eb4-4ea5-87ec-f1c5a0c73632',
+                        id: '214fdebb-fe70-482b-9c12-d1bdea6fcc9a',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -74,10 +74,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '5dcac3f4-0b89-4e09-b590-f097819a2c59',
+                id: '9f6e8875-0e98-4602-adb9-5c281ed4d63b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'f42a8516-2b7d-45b4-b6dd-edb18d7195a3',
+                        id: 'e6beb4de-af7b-48c0-9254-cc155c298d92',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -93,7 +93,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-23T00:16:55.799Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-23T17:29:44.616Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -461,7 +461,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: 'a71c13aa-d416-43f6-8ad8-35258e7a6fe8',
+        id: '9cfd618e-e75c-4b42-bc03-ffda8a9ec9d3',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -469,10 +469,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '71c01db3-0af8-4bc1-a421-12a5e570269b',
+                id: '1b5a2e71-e433-49f8-94e3-731e004f1d6b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'a87907e7-6777-432a-a079-cdaff033b9ec',
+                        id: '5927adbd-3e99-404f-aae2-bd5731ac68ba',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -485,10 +485,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '6568d505-d413-41fd-b64d-3067705e05a3',
+                id: '83cb43aa-73d5-48b4-9750-cb4dd635a72d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '864adde6-6719-41ea-8fc8-f1d7c8c545ae',
+                        id: '69eeaebf-6e21-4fd8-aaed-4fd5eed4b0da',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -504,7 +504,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-23T00:16:55.843Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-23T17:29:44.655Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -674,7 +674,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: 'a71c13aa-d416-43f6-8ad8-35258e7a6fe8',
+        id: '9cfd618e-e75c-4b42-bc03-ffda8a9ec9d3',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -682,10 +682,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '71c01db3-0af8-4bc1-a421-12a5e570269b',
+                id: '1b5a2e71-e433-49f8-94e3-731e004f1d6b',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'a87907e7-6777-432a-a079-cdaff033b9ec',
+                        id: '5927adbd-3e99-404f-aae2-bd5731ac68ba',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -698,10 +698,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '6568d505-d413-41fd-b64d-3067705e05a3',
+                id: '83cb43aa-73d5-48b4-9750-cb4dd635a72d',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '864adde6-6719-41ea-8fc8-f1d7c8c545ae',
+                        id: '69eeaebf-6e21-4fd8-aaed-4fd5eed4b0da',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -717,7 +717,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-23T00:16:55.843Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-23T17:29:44.655Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
