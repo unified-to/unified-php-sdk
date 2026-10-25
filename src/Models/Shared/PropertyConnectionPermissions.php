@@ -408,4 +408,16 @@ enum PropertyConnectionPermissions: string
     case HealthcareObservationWrite = 'healthcare_observation_write';
     case HealthcareImmunizationRead = 'healthcare_immunization_read';
     case HealthcareImmunizationWrite = 'healthcare_immunization_write';
+    case HealthcareDocumentRead = 'healthcare_document_read';
+    case HealthcareDocumentWrite = 'healthcare_document_write';
+    case HealthcareCoverageRead = 'healthcare_coverage_read';
+    case HealthcareCoverageWrite = 'healthcare_coverage_write';
+    case HealthcareProcedureRead = 'healthcare_procedure_read';
+    case HealthcareProcedureWrite = 'healthcare_procedure_write';
+    case HealthcareReportRead = 'healthcare_report_read';
+    case HealthcareReportWrite = 'healthcare_report_write';
+    case HealthcareCareplanRead = 'healthcare_careplan_read';
+    case HealthcareCareplanWrite = 'healthcare_careplan_write';
+    case HealthcareGoalRead = 'healthcare_goal_read';
+    case HealthcareGoalWrite = 'healthcare_goal_write';
 }

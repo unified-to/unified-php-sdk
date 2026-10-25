@@ -239,12 +239,12 @@ class HrisEmployee
 
     /**
      *
-     * @var ?\Unified\Unified_to\Models\Shared\MaritalStatus $maritalStatus
+     * @var ?\Unified\Unified_to\Models\Shared\HrisEmployeeMaritalStatus $maritalStatus
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('marital_status')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MaritalStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HrisEmployeeMaritalStatus|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?MaritalStatus $maritalStatus = null;
+    public ?HrisEmployeeMaritalStatus $maritalStatus = null;
 
     /**
      * $metadata
@@ -440,7 +440,7 @@ class HrisEmployee
      * @param  ?string  $lastName
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisLocation>  $locations
      * @param  ?string  $managerId
-     * @param  ?\Unified\Unified_to\Models\Shared\MaritalStatus  $maritalStatus
+     * @param  ?\Unified\Unified_to\Models\Shared\HrisEmployeeMaritalStatus  $maritalStatus
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?\Unified\Unified_to\Models\Shared\PayFrequency  $payFrequency
@@ -462,7 +462,7 @@ class HrisEmployee
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?FlsaStatus $flsaStatus = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $jobId = null, ?string $languageLocale = null, ?string $lastName = null, ?array $locations = null, ?string $managerId = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?PayFrequency $payFrequency = null, ?string $pronouns = null, ?array $raw = null, ?array $relationships = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?float $timeoffDaysTotal = null, ?float $timeoffDaysUsed = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?FlsaStatus $flsaStatus = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $jobId = null, ?string $languageLocale = null, ?string $lastName = null, ?array $locations = null, ?string $managerId = null, ?HrisEmployeeMaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?PayFrequency $payFrequency = null, ?string $pronouns = null, ?array $raw = null, ?array $relationships = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?float $timeoffDaysTotal = null, ?float $timeoffDaysUsed = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->bio = $bio;

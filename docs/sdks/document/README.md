@@ -5,12 +5,15 @@
 ### Available Operations
 
 * [createAtsDocument](#createatsdocument) - Create a document
+* [createHealthcareDocument](#createhealthcaredocument) - Create a document
 * [createHrisDocument](#createhrisdocument) - Create a document
 * [createSigningDocument](#createsigningdocument) - Create a document
 * [getAtsDocument](#getatsdocument) - Retrieve a document
+* [getHealthcareDocument](#gethealthcaredocument) - Retrieve a document
 * [getHrisDocument](#gethrisdocument) - Retrieve a document
 * [getSigningDocument](#getsigningdocument) - Retrieve a document
 * [listAtsDocuments](#listatsdocuments) - List all documents
+* [listHealthcareDocuments](#listhealthcaredocuments) - List all documents
 * [listHrisDocuments](#listhrisdocuments) - List all documents
 * [listSigningDocuments](#listsigningdocuments) - List all documents
 * [patchAtsDocument](#patchatsdocument) - Update a document
@@ -51,10 +54,10 @@ $request = new Operations\CreateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: 'b9f39797-10de-47a2-8c50-4a69de1e62bc',
+        id: '214fdc70-7f12-4e2c-9bb9-75abd054e144',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-07T22:10:22.826Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-08T05:18:51.660Z'),
     ),
     connectionId: '<id>',
 );
@@ -77,6 +80,78 @@ if ($response->atsDocument !== null) {
 ### Response
 
 **[?Operations\CreateAtsDocumentResponse](../../Models/Operations/CreateAtsDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createHealthcareDocument
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateHealthcareDocumentRequest(
+    healthcareDocument: new Shared\HealthcareDocument(
+        authoredAt: Utils\Utils::parseDateTime('2023-07-16T04:00:25.853Z'),
+        codes: [
+            new Shared\HealthcareCode(
+                code: '23671711',
+                display: 'History and physical',
+                system: 'http://loinc.org',
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2023-07-16T04:00:25.853Z'),
+        documentUrl: 'https://overcooked-yogurt.org',
+        filename: 'ugh_after.elc',
+        id: '69e6686f-2126-45c5-8bc2-baaa078b2f01',
+        metadata: [],
+        mimeType: 'application/pdf',
+        name: 'History and physical',
+        status: Shared\HealthcareDocumentStatus::Superseded,
+        type: Shared\HealthcareDocumentType::ConsultationNote,
+        updatedAt: Utils\Utils::parseDateTime('2024-12-28T13:31:15.398Z'),
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->document->createHealthcareDocument(
+    request: $request
+);
+
+if ($response->healthcareDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\CreateHealthcareDocumentRequest](../../Models/Operations/CreateHealthcareDocumentRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\CreateHealthcareDocumentResponse](../../Models/Operations/CreateHealthcareDocumentResponse.md)**
 
 ### Errors
 
@@ -112,10 +187,10 @@ $request = new Operations\CreateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: '6f713dce-7c58-4499-b1fa-d12e2dcc05b3',
+        id: '67cbd0d6-e8fa-4e38-bc59-9ff9202f5b6d',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-13T16:54:16.409Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-14T14:01:44.841Z'),
     ),
     connectionId: '<id>',
 );
@@ -173,12 +248,12 @@ $request = new Operations\CreateSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '541dc4f6-72ea-4c6f-9928-c11a82da2d1e',
+        id: 'c7237717-82c0-4345-876c-743e62444258',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-06-30T02:35:24.197Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-06-30T08:36:55.137Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-05T04:44:50.116Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-06T03:18:43.221Z'),
     ),
     connectionId: '<id>',
 );
@@ -252,6 +327,57 @@ if ($response->atsDocument !== null) {
 ### Response
 
 **[?Operations\GetAtsDocumentResponse](../../Models/Operations/GetAtsDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getHealthcareDocument
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHealthcareDocumentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->getHealthcareDocument(
+    request: $request
+);
+
+if ($response->healthcareDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetHealthcareDocumentRequest](../../Models/Operations/GetHealthcareDocumentRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\GetHealthcareDocumentResponse](../../Models/Operations/GetHealthcareDocumentResponse.md)**
 
 ### Errors
 
@@ -411,6 +537,56 @@ if ($response->atsDocuments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listHealthcareDocuments
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHealthcareDocumentsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->document->listHealthcareDocuments(
+    request: $request
+);
+
+if ($response->healthcareDocuments !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListHealthcareDocumentsRequest](../../Models/Operations/ListHealthcareDocumentsRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\ListHealthcareDocumentsResponse](../../Models/Operations/ListHealthcareDocumentsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listHrisDocuments
 
 Returns a list of HrisDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -539,10 +715,10 @@ $request = new Operations\PatchAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '6a24dafd-39f3-4f0a-a38e-ab16992fecb8',
+        id: '23b4d47c-5e90-4f85-ab07-a53de708b944',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-07T22:10:22.830Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-08T05:18:51.664Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -601,10 +777,10 @@ $request = new Operations\PatchHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: '8773d06e-6184-48a4-916e-829bcc4d963f',
+        id: 'a7e739f5-4abe-4d13-8a9b-1d263b6695b0',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-13T16:54:16.424Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-14T14:01:44.853Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -663,12 +839,12 @@ $request = new Operations\PatchSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '276a405b-5d17-4e86-b748-601573e6e3bb',
+        id: '7e7ae805-4ad5-4a95-9d97-ac3509fac158',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-06-30T02:35:24.200Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-06-30T08:36:55.140Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-05T04:44:50.127Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-06T03:18:43.234Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -880,10 +1056,10 @@ $request = new Operations\UpdateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '6a24dafd-39f3-4f0a-a38e-ab16992fecb8',
+        id: '23b4d47c-5e90-4f85-ab07-a53de708b944',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-07T22:10:22.830Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-08T05:18:51.664Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -942,10 +1118,10 @@ $request = new Operations\UpdateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: '8773d06e-6184-48a4-916e-829bcc4d963f',
+        id: 'a7e739f5-4abe-4d13-8a9b-1d263b6695b0',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-13T16:54:16.424Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-14T14:01:44.853Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1004,12 +1180,12 @@ $request = new Operations\UpdateSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '276a405b-5d17-4e86-b748-601573e6e3bb',
+        id: '7e7ae805-4ad5-4a95-9d97-ac3509fac158',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-06-30T02:35:24.200Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-06-30T08:36:55.140Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-05T04:44:50.127Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-06T03:18:43.234Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

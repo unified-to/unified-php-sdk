@@ -57,6 +57,15 @@ class HealthcareAppointment
     public ?string $id = null;
 
     /**
+     * Whether the appointment is a telehealth/virtual visit
+     *
+     * @var ?bool $isVirtual
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_virtual')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isVirtual = null;
+
+    /**
      * Where the appointment takes place
      *
      * @var ?string $locationId
@@ -64,6 +73,15 @@ class HealthcareAppointment
     #[\Speakeasy\Serializer\Annotation\SerializedName('location_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $locationId = null;
+
+    /**
+     * Join link for a telehealth/virtual visit
+     *
+     * @var ?string $meetingUrl
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('meeting_url')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $meetingUrl = null;
 
     /**
      * Custom field values
@@ -177,7 +195,9 @@ class HealthcareAppointment
      * @param  ?string  $description
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
+     * @param  ?bool  $isVirtual
      * @param  ?string  $locationId
+     * @param  ?string  $meetingUrl
      * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareMetadata>  $metadata
      * @param  ?string  $notes
      * @param  ?string  $patientId
@@ -191,14 +211,16 @@ class HealthcareAppointment
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $cancellationReason = null, ?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?string $locationId = null, ?array $metadata = null, ?string $notes = null, ?string $patientId = null, ?array $practitionerIds = null, ?array $raw = null, ?array $reasons = null, ?array $serviceTypes = null, ?array $slotIds = null, ?\DateTime $startAt = null, ?HealthcareAppointmentStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $cancellationReason = null, ?\DateTime $createdAt = null, ?string $description = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isVirtual = null, ?string $locationId = null, ?string $meetingUrl = null, ?array $metadata = null, ?string $notes = null, ?string $patientId = null, ?array $practitionerIds = null, ?array $raw = null, ?array $reasons = null, ?array $serviceTypes = null, ?array $slotIds = null, ?\DateTime $startAt = null, ?HealthcareAppointmentStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->cancellationReason = $cancellationReason;
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->endAt = $endAt;
         $this->id = $id;
+        $this->isVirtual = $isVirtual;
         $this->locationId = $locationId;
+        $this->meetingUrl = $meetingUrl;
         $this->metadata = $metadata;
         $this->notes = $notes;
         $this->patientId = $patientId;

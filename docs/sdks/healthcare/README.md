@@ -5,29 +5,42 @@
 ### Available Operations
 
 * [createHealthcareAppointment](#createhealthcareappointment) - Create an appointment
+* [createHealthcareDocument](#createhealthcaredocument) - Create a document
 * [createHealthcareObservation](#createhealthcareobservation) - Create an observation
 * [createHealthcarePatient](#createhealthcarepatient) - Create a patient
 * [getHealthcareAllergy](#gethealthcareallergy) - Retrieve an allergy
 * [getHealthcareAppointment](#gethealthcareappointment) - Retrieve an appointment
+* [getHealthcareCareplan](#gethealthcarecareplan) - Retrieve a careplan
 * [getHealthcareCondition](#gethealthcarecondition) - Retrieve a condition
+* [getHealthcareCoverage](#gethealthcarecoverage) - Retrieve a coverage
+* [getHealthcareDocument](#gethealthcaredocument) - Retrieve a document
 * [getHealthcareEncounter](#gethealthcareencounter) - Retrieve an encounter
+* [getHealthcareGoal](#gethealthcaregoal) - Retrieve a goal
 * [getHealthcareImmunization](#gethealthcareimmunization) - Retrieve an immunization
 * [getHealthcareLocation](#gethealthcarelocation) - Retrieve a location
 * [getHealthcareMedication](#gethealthcaremedication) - Retrieve a medication
 * [getHealthcareObservation](#gethealthcareobservation) - Retrieve an observation
 * [getHealthcarePatient](#gethealthcarepatient) - Retrieve a patient
 * [getHealthcarePractitioner](#gethealthcarepractitioner) - Retrieve a practitioner
+* [getHealthcareProcedure](#gethealthcareprocedure) - Retrieve a procedure
+* [getHealthcareReport](#gethealthcarereport) - Retrieve a report
 * [getHealthcareSlot](#gethealthcareslot) - Retrieve a slot
 * [listHealthcareAllergies](#listhealthcareallergies) - List all allergies
 * [listHealthcareAppointments](#listhealthcareappointments) - List all appointments
+* [listHealthcareCareplans](#listhealthcarecareplans) - List all careplans
 * [listHealthcareConditions](#listhealthcareconditions) - List all conditions
+* [listHealthcareCoverages](#listhealthcarecoverages) - List all coverages
+* [listHealthcareDocuments](#listhealthcaredocuments) - List all documents
 * [listHealthcareEncounters](#listhealthcareencounters) - List all encounters
+* [listHealthcareGoals](#listhealthcaregoals) - List all goals
 * [listHealthcareImmunizations](#listhealthcareimmunizations) - List all immunizations
 * [listHealthcareLocations](#listhealthcarelocations) - List all locations
 * [listHealthcareMedications](#listhealthcaremedications) - List all medications
 * [listHealthcareObservations](#listhealthcareobservations) - List all observations
 * [listHealthcarePatients](#listhealthcarepatients) - List all patients
 * [listHealthcarePractitioners](#listhealthcarepractitioners) - List all practitioners
+* [listHealthcareProcedures](#listhealthcareprocedures) - List all procedures
+* [listHealthcareReports](#listhealthcarereports) - List all reports
 * [listHealthcareSlots](#listhealthcareslots) - List all slots
 * [patchHealthcareAppointment](#patchhealthcareappointment) - Update an appointment
 * [patchHealthcarePatient](#patchhealthcarepatient) - Update a patient
@@ -63,27 +76,23 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '684730ea-a7fa-4868-9df4-3bdcf0844706',
+        id: '0a7ca15e-2977-4f3a-9336-1afb858eae00',
+        isVirtual: true,
+        meetingUrl: 'https://expensive-slipper.name/',
         metadata: [],
+        notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
         practitionerIds: [],
-        reasons: [
-            new Shared\HealthcareCode(
-                code: '12762740',
-                display: 'cubicularis caput',
-                system: 'http://snomed.info/sct',
-            ),
-        ],
         serviceTypes: [
             new Shared\HealthcareCode(
-                code: '61128108',
-                display: 'Annual physical',
+                code: '12762740',
+                display: 'New patient visit',
                 system: 'http://snomed.info/sct',
             ),
         ],
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-21T13:17:18.542Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-26T04:13:25.126Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,6 +115,78 @@ if ($response->healthcareAppointment !== null) {
 ### Response
 
 **[?Operations\CreateHealthcareAppointmentResponse](../../Models/Operations/CreateHealthcareAppointmentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createHealthcareDocument
+
+Creates a HealthcareDocument. Provide the unified HealthcareDocument fields in the request body; they are mapped to the provider's API. Returns the created HealthcareDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createHealthcareDocument" method="post" path="/healthcare/{connection_id}/document" example="healthcare_document" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateHealthcareDocumentRequest(
+    healthcareDocument: new Shared\HealthcareDocument(
+        authoredAt: Utils\Utils::parseDateTime('2023-07-16T04:00:25.853Z'),
+        codes: [
+            new Shared\HealthcareCode(
+                code: '23671711',
+                display: 'History and physical',
+                system: 'http://loinc.org',
+            ),
+        ],
+        createdAt: Utils\Utils::parseDateTime('2023-07-16T04:00:25.853Z'),
+        documentUrl: 'https://overcooked-yogurt.org',
+        filename: 'ugh_after.elc',
+        id: '69e6686f-2126-45c5-8bc2-baaa078b2f01',
+        metadata: [],
+        mimeType: 'application/pdf',
+        name: 'History and physical',
+        status: Shared\HealthcareDocumentStatus::Superseded,
+        type: Shared\HealthcareDocumentType::ConsultationNote,
+        updatedAt: Utils\Utils::parseDateTime('2024-12-28T13:31:15.398Z'),
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->healthcare->createHealthcareDocument(
+    request: $request
+);
+
+if ($response->healthcareDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\CreateHealthcareDocumentRequest](../../Models/Operations/CreateHealthcareDocumentRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\CreateHealthcareDocumentResponse](../../Models/Operations/CreateHealthcareDocumentResponse.md)**
 
 ### Errors
 
@@ -170,15 +251,15 @@ $request = new Operations\CreateHealthcareObservationRequest(
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2022-12-06T21:34:04.293Z'),
-        id: '41e8ef2c-0745-462e-8984-3f9bc7cfc694',
+        id: '2a185b53-23cb-409b-8940-b62f34cb8ca9',
         interpretation: Shared\Interpretation::CriticalHigh,
-        issuedAt: Utils\Utils::parseDateTime('2025-05-13T05:22:58.293Z'),
+        issuedAt: Utils\Utils::parseDateTime('2025-05-13T23:13:01.641Z'),
         metadata: [],
         name: 'Blood pressure panel',
-        observedAt: Utils\Utils::parseDateTime('2025-01-21T17:30:46.306Z'),
+        observedAt: Utils\Utils::parseDateTime('2025-01-22T09:06:31.432Z'),
         status: Shared\HealthcareObservationStatus::Corrected,
         type: Shared\HealthcareObservationType::VitalSigns,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-26T16:37:50.509Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-27T16:50:18.768Z'),
     ),
     connectionId: '<id>',
 );
@@ -240,7 +321,20 @@ $request = new Operations\CreateHealthcarePatientRequest(
             postalCode: '54031',
             region: 'Nebraska',
         ),
-        birthdate: '2025-02-14',
+        birthdate: '2025-02-16',
+        contacts: [
+            new Shared\HealthcarePatientContact(
+                emails: [],
+                name: 'Antonia Lebsack',
+                relationship: 'Spouse',
+                telephones: [
+                    new Shared\HealthcareTelephone(
+                        telephone: '(695) 328-7029 x4412',
+                        type: Shared\HealthcareTelephoneType::Mobile,
+                    ),
+                ],
+            ),
+        ],
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
@@ -250,7 +344,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '9fb73473-2020-4c46-a3e0-c56f2589a6ad',
+        id: 'bea989bc-1408-4524-a7b9-9ce8d32741f4',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -270,7 +364,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-25T12:32:09.140Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-26T15:14:30.438Z'),
     ),
     connectionId: '<id>',
 );
@@ -402,6 +496,57 @@ if ($response->healthcareAppointment !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getHealthcareCareplan
+
+Retrieves a single HealthcareCareplan by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHealthcareCareplan" method="get" path="/healthcare/{connection_id}/careplan/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHealthcareCareplanRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->healthcare->getHealthcareCareplan(
+    request: $request
+);
+
+if ($response->healthcareCareplan !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetHealthcareCareplanRequest](../../Models/Operations/GetHealthcareCareplanRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\GetHealthcareCareplanResponse](../../Models/Operations/GetHealthcareCareplanResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getHealthcareCondition
 
 Retrieves a single HealthcareCondition by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -453,6 +598,108 @@ if ($response->healthcareCondition !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getHealthcareCoverage
+
+Retrieves a single HealthcareCoverage by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHealthcareCoverage" method="get" path="/healthcare/{connection_id}/coverage/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHealthcareCoverageRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->healthcare->getHealthcareCoverage(
+    request: $request
+);
+
+if ($response->healthcareCoverage !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetHealthcareCoverageRequest](../../Models/Operations/GetHealthcareCoverageRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\GetHealthcareCoverageResponse](../../Models/Operations/GetHealthcareCoverageResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getHealthcareDocument
+
+Retrieves a single HealthcareDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHealthcareDocument" method="get" path="/healthcare/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHealthcareDocumentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->healthcare->getHealthcareDocument(
+    request: $request
+);
+
+if ($response->healthcareDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\GetHealthcareDocumentRequest](../../Models/Operations/GetHealthcareDocumentRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\GetHealthcareDocumentResponse](../../Models/Operations/GetHealthcareDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getHealthcareEncounter
 
 Retrieves a single HealthcareEncounter by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -497,6 +744,57 @@ if ($response->healthcareEncounter !== null) {
 ### Response
 
 **[?Operations\GetHealthcareEncounterResponse](../../Models/Operations/GetHealthcareEncounterResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getHealthcareGoal
+
+Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHealthcareGoal" method="get" path="/healthcare/{connection_id}/goal/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHealthcareGoalRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->healthcare->getHealthcareGoal(
+    request: $request
+);
+
+if ($response->healthcareGoal !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetHealthcareGoalRequest](../../Models/Operations/GetHealthcareGoalRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\GetHealthcareGoalResponse](../../Models/Operations/GetHealthcareGoalResponse.md)**
 
 ### Errors
 
@@ -810,6 +1108,108 @@ if ($response->healthcarePractitioner !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getHealthcareProcedure
+
+Retrieves a single HealthcareProcedure by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHealthcareProcedure" method="get" path="/healthcare/{connection_id}/procedure/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHealthcareProcedureRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->healthcare->getHealthcareProcedure(
+    request: $request
+);
+
+if ($response->healthcareProcedure !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetHealthcareProcedureRequest](../../Models/Operations/GetHealthcareProcedureRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\GetHealthcareProcedureResponse](../../Models/Operations/GetHealthcareProcedureResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getHealthcareReport
+
+Retrieves a single HealthcareReport by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHealthcareReport" method="get" path="/healthcare/{connection_id}/report/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHealthcareReportRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->healthcare->getHealthcareReport(
+    request: $request
+);
+
+if ($response->healthcareReport !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetHealthcareReportRequest](../../Models/Operations/GetHealthcareReportRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\GetHealthcareReportResponse](../../Models/Operations/GetHealthcareReportResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getHealthcareSlot
 
 Retrieves a single HealthcareSlot by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
@@ -961,6 +1361,56 @@ if ($response->healthcareAppointments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listHealthcareCareplans
+
+Returns a list of HealthcareCareplans. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHealthcareCareplans" method="get" path="/healthcare/{connection_id}/careplan" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHealthcareCareplansRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->healthcare->listHealthcareCareplans(
+    request: $request
+);
+
+if ($response->healthcareCareplans !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListHealthcareCareplansRequest](../../Models/Operations/ListHealthcareCareplansRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\ListHealthcareCareplansResponse](../../Models/Operations/ListHealthcareCareplansResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listHealthcareConditions
 
 Returns a list of HealthcareConditions. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1011,6 +1461,106 @@ if ($response->healthcareConditions !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listHealthcareCoverages
+
+Returns a list of HealthcareCoverages. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHealthcareCoverages" method="get" path="/healthcare/{connection_id}/coverage" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHealthcareCoveragesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->healthcare->listHealthcareCoverages(
+    request: $request
+);
+
+if ($response->healthcareCoverages !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListHealthcareCoveragesRequest](../../Models/Operations/ListHealthcareCoveragesRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\ListHealthcareCoveragesResponse](../../Models/Operations/ListHealthcareCoveragesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listHealthcareDocuments
+
+Returns a list of HealthcareDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHealthcareDocuments" method="get" path="/healthcare/{connection_id}/document" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHealthcareDocumentsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->healthcare->listHealthcareDocuments(
+    request: $request
+);
+
+if ($response->healthcareDocuments !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                              | Type                                                                                                   | Required                                                                                               | Description                                                                                            |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                             | [Operations\ListHealthcareDocumentsRequest](../../Models/Operations/ListHealthcareDocumentsRequest.md) | :heavy_check_mark:                                                                                     | The request object to use for the request.                                                             |
+
+### Response
+
+**[?Operations\ListHealthcareDocumentsResponse](../../Models/Operations/ListHealthcareDocumentsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listHealthcareEncounters
 
 Returns a list of HealthcareEncounters. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1054,6 +1604,56 @@ if ($response->healthcareEncounters !== null) {
 ### Response
 
 **[?Operations\ListHealthcareEncountersResponse](../../Models/Operations/ListHealthcareEncountersResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listHealthcareGoals
+
+Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHealthcareGoals" method="get" path="/healthcare/{connection_id}/goal" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHealthcareGoalsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->healthcare->listHealthcareGoals(
+    request: $request
+);
+
+if ($response->healthcareGoals !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListHealthcareGoalsRequest](../../Models/Operations/ListHealthcareGoalsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\ListHealthcareGoalsResponse](../../Models/Operations/ListHealthcareGoalsResponse.md)**
 
 ### Errors
 
@@ -1361,6 +1961,106 @@ if ($response->healthcarePractitioners !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listHealthcareProcedures
+
+Returns a list of HealthcareProcedures. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHealthcareProcedures" method="get" path="/healthcare/{connection_id}/procedure" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHealthcareProceduresRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->healthcare->listHealthcareProcedures(
+    request: $request
+);
+
+if ($response->healthcareProcedures !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListHealthcareProceduresRequest](../../Models/Operations/ListHealthcareProceduresRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\ListHealthcareProceduresResponse](../../Models/Operations/ListHealthcareProceduresResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listHealthcareReports
+
+Returns a list of HealthcareReports. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHealthcareReports" method="get" path="/healthcare/{connection_id}/report" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHealthcareReportsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->healthcare->listHealthcareReports(
+    request: $request
+);
+
+if ($response->healthcareReports !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListHealthcareReportsRequest](../../Models/Operations/ListHealthcareReportsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\ListHealthcareReportsResponse](../../Models/Operations/ListHealthcareReportsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listHealthcareSlots
 
 Returns a list of HealthcareSlots. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1439,27 +2139,23 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '86ecd2b0-d230-4276-9e69-ad4a4062d457',
+        id: 'a47f2a36-96b3-405a-b707-9c086c754e09',
+        isVirtual: true,
+        meetingUrl: 'https://expensive-slipper.name/',
         metadata: [],
+        notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
         practitionerIds: [],
-        reasons: [
-            new Shared\HealthcareCode(
-                code: '12762740',
-                display: 'cubicularis caput',
-                system: 'http://snomed.info/sct',
-            ),
-        ],
         serviceTypes: [
             new Shared\HealthcareCode(
-                code: '61128108',
-                display: 'Annual physical',
+                code: '12762740',
+                display: 'New patient visit',
                 system: 'http://snomed.info/sct',
             ),
         ],
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-21T13:17:18.559Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-26T04:13:25.149Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1522,7 +2218,20 @@ $request = new Operations\PatchHealthcarePatientRequest(
             postalCode: '54031',
             region: 'Nebraska',
         ),
-        birthdate: '2025-02-14',
+        birthdate: '2025-02-16',
+        contacts: [
+            new Shared\HealthcarePatientContact(
+                emails: [],
+                name: 'Antonia Lebsack',
+                relationship: 'Spouse',
+                telephones: [
+                    new Shared\HealthcareTelephone(
+                        telephone: '(695) 328-7029 x4412',
+                        type: Shared\HealthcareTelephoneType::Mobile,
+                    ),
+                ],
+            ),
+        ],
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
@@ -1532,7 +2241,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: 'ce3a7577-ea4c-45f8-84ba-ec7716b90856',
+        id: 'b6a216da-662b-4333-969b-6a922a37e019',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -1552,7 +2261,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-25T12:32:09.166Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-26T15:14:30.471Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1662,27 +2371,23 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
         description: 'clarus aptus cetera',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '86ecd2b0-d230-4276-9e69-ad4a4062d457',
+        id: 'a47f2a36-96b3-405a-b707-9c086c754e09',
+        isVirtual: true,
+        meetingUrl: 'https://expensive-slipper.name/',
         metadata: [],
+        notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
         practitionerIds: [],
-        reasons: [
-            new Shared\HealthcareCode(
-                code: '12762740',
-                display: 'cubicularis caput',
-                system: 'http://snomed.info/sct',
-            ),
-        ],
         serviceTypes: [
             new Shared\HealthcareCode(
-                code: '61128108',
-                display: 'Annual physical',
+                code: '12762740',
+                display: 'New patient visit',
                 system: 'http://snomed.info/sct',
             ),
         ],
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-21T13:17:18.559Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-26T04:13:25.149Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1745,7 +2450,20 @@ $request = new Operations\UpdateHealthcarePatientRequest(
             postalCode: '54031',
             region: 'Nebraska',
         ),
-        birthdate: '2025-02-14',
+        birthdate: '2025-02-16',
+        contacts: [
+            new Shared\HealthcarePatientContact(
+                emails: [],
+                name: 'Antonia Lebsack',
+                relationship: 'Spouse',
+                telephones: [
+                    new Shared\HealthcareTelephone(
+                        telephone: '(695) 328-7029 x4412',
+                        type: Shared\HealthcareTelephoneType::Mobile,
+                    ),
+                ],
+            ),
+        ],
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
@@ -1755,7 +2473,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: 'ce3a7577-ea4c-45f8-84ba-ec7716b90856',
+        id: 'b6a216da-662b-4333-969b-6a922a37e019',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -1775,7 +2493,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-25T12:32:09.166Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-26T15:14:30.471Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

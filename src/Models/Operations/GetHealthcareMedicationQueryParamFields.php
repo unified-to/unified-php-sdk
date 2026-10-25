@@ -26,6 +26,9 @@ enum GetHealthcareMedicationQueryParamFields: string
     case StartAt = 'start_at';
     case EndAt = 'end_at';
     case Notes = 'notes';
+    case Route = 'route';
+    case DoseNumber = 'dose_number';
+    case DoseUnit = 'dose_unit';
     case Metadata = 'metadata';
     case Raw = 'raw';
 }

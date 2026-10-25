@@ -28,6 +28,10 @@ enum UpdateHealthcarePatientQueryParamFields: string
     case Identifiers = 'identifiers';
     case PractitionerIds = 'practitioner_ids';
     case IsActive = 'is_active';
+    case Races = 'races';
+    case Ethnicities = 'ethnicities';
+    case MaritalStatus = 'marital_status';
+    case Contacts = 'contacts';
     case Metadata = 'metadata';
     case Raw = 'raw';
 }

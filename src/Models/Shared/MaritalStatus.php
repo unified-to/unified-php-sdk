@@ -9,8 +9,16 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Marital status of the patient */
 enum MaritalStatus: string
 {
     case Married = 'MARRIED';
     case Single = 'SINGLE';
+    case DomesticPartner = 'DOMESTIC_PARTNER';
+    case Separated = 'SEPARATED';
+    case Divorced = 'DIVORCED';
+    case Widowed = 'WIDOWED';
+    case Annulled = 'ANNULLED';
+    case Unknown = 'UNKNOWN';
+    case Other = 'OTHER';
 }

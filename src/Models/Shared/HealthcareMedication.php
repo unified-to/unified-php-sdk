@@ -49,6 +49,24 @@ class HealthcareMedication
     public ?string $dosage = null;
 
     /**
+     * Amount of medication per dose
+     *
+     * @var ?float $doseNumber
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('dose_number')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $doseNumber = null;
+
+    /**
+     * Unit of the dose amount (e.g. mg, tablet)
+     *
+     * @var ?string $doseUnit
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('dose_unit')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $doseUnit = null;
+
+    /**
      * The encounter in which the medication was ordered
      *
      * @var ?string $encounterId
@@ -141,6 +159,15 @@ class HealthcareMedication
     public ?float $refillCount = null;
 
     /**
+     * How the medication is taken (e.g. oral, intravenous)
+     *
+     * @var ?string $route
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('route')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $route = null;
+
+    /**
      * When the patient should start taking the medication (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startAt
@@ -173,6 +200,8 @@ class HealthcareMedication
      * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareCode>  $codes
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $dosage
+     * @param  ?float  $doseNumber
+     * @param  ?string  $doseUnit
      * @param  ?string  $encounterId
      * @param  ?\DateTime  $endAt
      * @param  ?string  $id
@@ -183,17 +212,20 @@ class HealthcareMedication
      * @param  ?string  $practitionerId
      * @param  ?array<string, mixed>  $raw
      * @param  ?float  $refillCount
+     * @param  ?string  $route
      * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\HealthcareMedicationStatus  $status
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $authoredAt = null, ?array $codes = null, ?\DateTime $createdAt = null, ?string $dosage = null, ?string $encounterId = null, ?\DateTime $endAt = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $patientId = null, ?string $practitionerId = null, ?array $raw = null, ?float $refillCount = null, ?\DateTime $startAt = null, ?HealthcareMedicationStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $authoredAt = null, ?array $codes = null, ?\DateTime $createdAt = null, ?string $dosage = null, ?float $doseNumber = null, ?string $doseUnit = null, ?string $encounterId = null, ?\DateTime $endAt = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $patientId = null, ?string $practitionerId = null, ?array $raw = null, ?float $refillCount = null, ?string $route = null, ?\DateTime $startAt = null, ?HealthcareMedicationStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->authoredAt = $authoredAt;
         $this->codes = $codes;
         $this->createdAt = $createdAt;
         $this->dosage = $dosage;
+        $this->doseNumber = $doseNumber;
+        $this->doseUnit = $doseUnit;
         $this->encounterId = $encounterId;
         $this->endAt = $endAt;
         $this->id = $id;
@@ -204,6 +236,7 @@ class HealthcareMedication
         $this->practitionerId = $practitionerId;
         $this->raw = $raw;
         $this->refillCount = $refillCount;
+        $this->route = $route;
         $this->startAt = $startAt;
         $this->status = $status;
         $this->updatedAt = $updatedAt;

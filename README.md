@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
+        id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
+        id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
     ),
     connectionId: '<id>',
 );
@@ -661,6 +661,11 @@ if ($response->accountingAccount !== null) {
 * [removeAtsCandidate](docs/sdks/candidate/README.md#removeatscandidate) - Remove a candidate
 * [updateAtsCandidate](docs/sdks/candidate/README.md#updateatscandidate) - Update a candidate
 
+### [Careplan](docs/sdks/careplan/README.md)
+
+* [getHealthcareCareplan](docs/sdks/careplan/README.md#gethealthcarecareplan) - Retrieve a careplan
+* [listHealthcareCareplans](docs/sdks/careplan/README.md#listhealthcarecareplans) - List all careplans
+
 ### [Carrier](docs/sdks/carrier/README.md)
 
 * [getShippingCarrier](docs/sdks/carrier/README.md#getshippingcarrier) - Retrieve a carrier
@@ -994,6 +999,11 @@ if ($response->accountingAccount !== null) {
 * [removeLmsCourse](docs/sdks/course/README.md#removelmscourse) - Remove a course
 * [updateLmsCourse](docs/sdks/course/README.md#updatelmscourse) - Update a course
 
+### [Coverage](docs/sdks/coverage/README.md)
+
+* [getHealthcareCoverage](docs/sdks/coverage/README.md#gethealthcarecoverage) - Retrieve a coverage
+* [listHealthcareCoverages](docs/sdks/coverage/README.md#listhealthcarecoverages) - List all coverages
+
 ### [Creative](docs/sdks/creative/README.md)
 
 * [createAdsCreative](docs/sdks/creative/README.md#createadscreative) - Create a creative
@@ -1145,12 +1155,15 @@ if ($response->accountingAccount !== null) {
 ### [Document](docs/sdks/document/README.md)
 
 * [createAtsDocument](docs/sdks/document/README.md#createatsdocument) - Create a document
+* [createHealthcareDocument](docs/sdks/document/README.md#createhealthcaredocument) - Create a document
 * [createHrisDocument](docs/sdks/document/README.md#createhrisdocument) - Create a document
 * [createSigningDocument](docs/sdks/document/README.md#createsigningdocument) - Create a document
 * [getAtsDocument](docs/sdks/document/README.md#getatsdocument) - Retrieve a document
+* [getHealthcareDocument](docs/sdks/document/README.md#gethealthcaredocument) - Retrieve a document
 * [getHrisDocument](docs/sdks/document/README.md#gethrisdocument) - Retrieve a document
 * [getSigningDocument](docs/sdks/document/README.md#getsigningdocument) - Retrieve a document
 * [listAtsDocuments](docs/sdks/document/README.md#listatsdocuments) - List all documents
+* [listHealthcareDocuments](docs/sdks/document/README.md#listhealthcaredocuments) - List all documents
 * [listHrisDocuments](docs/sdks/document/README.md#listhrisdocuments) - List all documents
 * [listSigningDocuments](docs/sdks/document/README.md#listsigningdocuments) - List all documents
 * [patchAtsDocument](docs/sdks/document/README.md#patchatsdocument) - Update a document
@@ -1343,7 +1356,9 @@ if ($response->accountingAccount !== null) {
 ### [Goal](docs/sdks/goal/README.md)
 
 * [createPerformanceGoal](docs/sdks/goal/README.md#createperformancegoal) - Create a goal
+* [getHealthcareGoal](docs/sdks/goal/README.md#gethealthcaregoal) - Retrieve a goal
 * [getPerformanceGoal](docs/sdks/goal/README.md#getperformancegoal) - Retrieve a goal
+* [listHealthcareGoals](docs/sdks/goal/README.md#listhealthcaregoals) - List all goals
 * [listPerformanceGoals](docs/sdks/goal/README.md#listperformancegoals) - List all goals
 * [patchPerformanceGoal](docs/sdks/goal/README.md#patchperformancegoal) - Update a goal
 * [removePerformanceGoal](docs/sdks/goal/README.md#removeperformancegoal) - Remove a goal
@@ -1380,29 +1395,42 @@ if ($response->accountingAccount !== null) {
 ### [Healthcare](docs/sdks/healthcare/README.md)
 
 * [createHealthcareAppointment](docs/sdks/healthcare/README.md#createhealthcareappointment) - Create an appointment
+* [createHealthcareDocument](docs/sdks/healthcare/README.md#createhealthcaredocument) - Create a document
 * [createHealthcareObservation](docs/sdks/healthcare/README.md#createhealthcareobservation) - Create an observation
 * [createHealthcarePatient](docs/sdks/healthcare/README.md#createhealthcarepatient) - Create a patient
 * [getHealthcareAllergy](docs/sdks/healthcare/README.md#gethealthcareallergy) - Retrieve an allergy
 * [getHealthcareAppointment](docs/sdks/healthcare/README.md#gethealthcareappointment) - Retrieve an appointment
+* [getHealthcareCareplan](docs/sdks/healthcare/README.md#gethealthcarecareplan) - Retrieve a careplan
 * [getHealthcareCondition](docs/sdks/healthcare/README.md#gethealthcarecondition) - Retrieve a condition
+* [getHealthcareCoverage](docs/sdks/healthcare/README.md#gethealthcarecoverage) - Retrieve a coverage
+* [getHealthcareDocument](docs/sdks/healthcare/README.md#gethealthcaredocument) - Retrieve a document
 * [getHealthcareEncounter](docs/sdks/healthcare/README.md#gethealthcareencounter) - Retrieve an encounter
+* [getHealthcareGoal](docs/sdks/healthcare/README.md#gethealthcaregoal) - Retrieve a goal
 * [getHealthcareImmunization](docs/sdks/healthcare/README.md#gethealthcareimmunization) - Retrieve an immunization
 * [getHealthcareLocation](docs/sdks/healthcare/README.md#gethealthcarelocation) - Retrieve a location
 * [getHealthcareMedication](docs/sdks/healthcare/README.md#gethealthcaremedication) - Retrieve a medication
 * [getHealthcareObservation](docs/sdks/healthcare/README.md#gethealthcareobservation) - Retrieve an observation
 * [getHealthcarePatient](docs/sdks/healthcare/README.md#gethealthcarepatient) - Retrieve a patient
 * [getHealthcarePractitioner](docs/sdks/healthcare/README.md#gethealthcarepractitioner) - Retrieve a practitioner
+* [getHealthcareProcedure](docs/sdks/healthcare/README.md#gethealthcareprocedure) - Retrieve a procedure
+* [getHealthcareReport](docs/sdks/healthcare/README.md#gethealthcarereport) - Retrieve a report
 * [getHealthcareSlot](docs/sdks/healthcare/README.md#gethealthcareslot) - Retrieve a slot
 * [listHealthcareAllergies](docs/sdks/healthcare/README.md#listhealthcareallergies) - List all allergies
 * [listHealthcareAppointments](docs/sdks/healthcare/README.md#listhealthcareappointments) - List all appointments
+* [listHealthcareCareplans](docs/sdks/healthcare/README.md#listhealthcarecareplans) - List all careplans
 * [listHealthcareConditions](docs/sdks/healthcare/README.md#listhealthcareconditions) - List all conditions
+* [listHealthcareCoverages](docs/sdks/healthcare/README.md#listhealthcarecoverages) - List all coverages
+* [listHealthcareDocuments](docs/sdks/healthcare/README.md#listhealthcaredocuments) - List all documents
 * [listHealthcareEncounters](docs/sdks/healthcare/README.md#listhealthcareencounters) - List all encounters
+* [listHealthcareGoals](docs/sdks/healthcare/README.md#listhealthcaregoals) - List all goals
 * [listHealthcareImmunizations](docs/sdks/healthcare/README.md#listhealthcareimmunizations) - List all immunizations
 * [listHealthcareLocations](docs/sdks/healthcare/README.md#listhealthcarelocations) - List all locations
 * [listHealthcareMedications](docs/sdks/healthcare/README.md#listhealthcaremedications) - List all medications
 * [listHealthcareObservations](docs/sdks/healthcare/README.md#listhealthcareobservations) - List all observations
 * [listHealthcarePatients](docs/sdks/healthcare/README.md#listhealthcarepatients) - List all patients
 * [listHealthcarePractitioners](docs/sdks/healthcare/README.md#listhealthcarepractitioners) - List all practitioners
+* [listHealthcareProcedures](docs/sdks/healthcare/README.md#listhealthcareprocedures) - List all procedures
+* [listHealthcareReports](docs/sdks/healthcare/README.md#listhealthcarereports) - List all reports
 * [listHealthcareSlots](docs/sdks/healthcare/README.md#listhealthcareslots) - List all slots
 * [patchHealthcareAppointment](docs/sdks/healthcare/README.md#patchhealthcareappointment) - Update an appointment
 * [patchHealthcarePatient](docs/sdks/healthcare/README.md#patchhealthcarepatient) - Update a patient
@@ -2086,6 +2114,11 @@ if ($response->accountingAccount !== null) {
 * [getHealthcarePractitioner](docs/sdks/practitioner/README.md#gethealthcarepractitioner) - Retrieve a practitioner
 * [listHealthcarePractitioners](docs/sdks/practitioner/README.md#listhealthcarepractitioners) - List all practitioners
 
+### [Procedure](docs/sdks/procedure/README.md)
+
+* [getHealthcareProcedure](docs/sdks/procedure/README.md#gethealthcareprocedure) - Retrieve a procedure
+* [listHealthcareProcedures](docs/sdks/procedure/README.md#listhealthcareprocedures) - List all procedures
+
 ### [Profile](docs/sdks/profile/README.md)
 
 * [createCdpProfile](docs/sdks/profile/README.md#createcdpprofile) - Create a profile
@@ -2240,8 +2273,10 @@ if ($response->accountingAccount !== null) {
 
 ### [Report](docs/sdks/report/README.md)
 
+* [getHealthcareReport](docs/sdks/report/README.md#gethealthcarereport) - Retrieve a report
 * [listAdsReports](docs/sdks/report/README.md#listadsreports) - List all reports
 * [listAnalyticsReports](docs/sdks/report/README.md#listanalyticsreports) - List all reports
+* [listHealthcareReports](docs/sdks/report/README.md#listhealthcarereports) - List all reports
 * [listMartechReports](docs/sdks/report/README.md#listmartechreports) - List all reports
 
 ### [Repository](docs/sdks/repository/README.md)
@@ -2855,7 +2890,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
+            id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -2868,7 +2903,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
         ),
         connectionId: '<id>',
     );
@@ -2926,7 +2961,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
+        id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -2939,7 +2974,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
     ),
     connectionId: '<id>',
 );
@@ -2980,7 +3015,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '834f9bf6-e287-4fe6-8831-2e93690e9680',
+        id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -2993,7 +3028,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T15:04:20.415Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
     ),
     connectionId: '<id>',
 );

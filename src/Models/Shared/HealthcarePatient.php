@@ -31,6 +31,16 @@ class HealthcarePatient
     public ?string $birthdate = null;
 
     /**
+     * Emergency contacts, guardians and other contact persons for the patient
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HealthcarePatientContact> $contacts
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contacts')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HealthcarePatientContact>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $contacts = null;
+
+    /**
      * When the patient record was created (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
@@ -57,6 +67,16 @@ class HealthcarePatient
     #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HealthcareEmail>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $emails = null;
+
+    /**
+     * Codings for the patient's ethnicity (e.g. CDC ethnicity codes)
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HealthcareCode> $ethnicities
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('ethnicities')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HealthcareCode>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $ethnicities = null;
 
     /**
      * Given name of the patient
@@ -133,6 +153,16 @@ class HealthcarePatient
     public ?string $lastName = null;
 
     /**
+     * Marital status of the patient
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\MaritalStatus $maritalStatus
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('marital_status')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\MaritalStatus|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?MaritalStatus $maritalStatus = null;
+
+    /**
      * Custom field values
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\HealthcareMetadata> $metadata
@@ -160,6 +190,16 @@ class HealthcarePatient
     #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?array $practitionerIds = null;
+
+    /**
+     * Codings for the patient's race (e.g. CDC race codes)
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HealthcareCode> $races
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('races')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HealthcareCode>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $races = null;
 
     /**
      * Raw data from integration
@@ -193,9 +233,11 @@ class HealthcarePatient
     /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyHealthcarePatientAddress  $address
      * @param  ?string  $birthdate
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcarePatientContact>  $contacts
      * @param  ?\DateTime  $createdAt
      * @param  ?\DateTime  $deceasedAt
      * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareEmail>  $emails
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareCode>  $ethnicities
      * @param  ?string  $firstName
      * @param  ?\Unified\Unified_to\Models\Shared\HealthcarePatientGender  $gender
      * @param  ?string  $id
@@ -204,21 +246,25 @@ class HealthcarePatient
      * @param  ?bool  $isDeceased
      * @param  ?string  $language
      * @param  ?string  $lastName
+     * @param  ?\Unified\Unified_to\Models\Shared\MaritalStatus  $maritalStatus
      * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string>  $practitionerIds
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareCode>  $races
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareTelephone>  $telephones
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHealthcarePatientAddress $address = null, ?string $birthdate = null, ?\DateTime $createdAt = null, ?\DateTime $deceasedAt = null, ?array $emails = null, ?string $firstName = null, ?HealthcarePatientGender $gender = null, ?string $id = null, ?array $identifiers = null, ?bool $isActive = null, ?bool $isDeceased = null, ?string $language = null, ?string $lastName = null, ?array $metadata = null, ?string $name = null, ?array $practitionerIds = null, ?array $raw = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHealthcarePatientAddress $address = null, ?string $birthdate = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $deceasedAt = null, ?array $emails = null, ?array $ethnicities = null, ?string $firstName = null, ?HealthcarePatientGender $gender = null, ?string $id = null, ?array $identifiers = null, ?bool $isActive = null, ?bool $isDeceased = null, ?string $language = null, ?string $lastName = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?array $practitionerIds = null, ?array $races = null, ?array $raw = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->birthdate = $birthdate;
+        $this->contacts = $contacts;
         $this->createdAt = $createdAt;
         $this->deceasedAt = $deceasedAt;
         $this->emails = $emails;
+        $this->ethnicities = $ethnicities;
         $this->firstName = $firstName;
         $this->gender = $gender;
         $this->id = $id;
@@ -227,9 +273,11 @@ class HealthcarePatient
         $this->isDeceased = $isDeceased;
         $this->language = $language;
         $this->lastName = $lastName;
+        $this->maritalStatus = $maritalStatus;
         $this->metadata = $metadata;
         $this->name = $name;
         $this->practitionerIds = $practitionerIds;
+        $this->races = $races;
         $this->raw = $raw;
         $this->telephones = $telephones;
         $this->updatedAt = $updatedAt;

@@ -26,6 +26,8 @@ enum PatchHealthcareAppointmentQueryParamFields: string
     case Reasons = 'reasons';
     case CancellationReason = 'cancellation_reason';
     case Notes = 'notes';
+    case IsVirtual = 'is_virtual';
+    case MeetingUrl = 'meeting_url';
     case Metadata = 'metadata';
     case Raw = 'raw';
 }

@@ -266,9 +266,15 @@ class UnifiedTo
 
     public Appointment $appointment;
 
+    public Careplan $careplan;
+
     public Condition $condition;
 
+    public Coverage $coverage;
+
     public Encounter $encounter;
+
+    public Goal $goal;
 
     public Immunization $immunization;
 
@@ -279,6 +285,8 @@ class UnifiedTo
     public Patient $patient;
 
     public Practitioner $practitioner;
+
+    public Procedure $procedure;
 
     public Slot $slot;
 
@@ -363,8 +371,6 @@ class UnifiedTo
     public Cycle $cycle;
 
     public Feedback $feedback;
-
-    public Goal $goal;
 
     public Repo $repo;
 
@@ -585,13 +591,17 @@ class UnifiedTo
         $this->healthcare = new Healthcare($this->sdkConfiguration);
         $this->allergy = new Allergy($this->sdkConfiguration);
         $this->appointment = new Appointment($this->sdkConfiguration);
+        $this->careplan = new Careplan($this->sdkConfiguration);
         $this->condition = new Condition($this->sdkConfiguration);
+        $this->coverage = new Coverage($this->sdkConfiguration);
         $this->encounter = new Encounter($this->sdkConfiguration);
+        $this->goal = new Goal($this->sdkConfiguration);
         $this->immunization = new Immunization($this->sdkConfiguration);
         $this->medication = new Medication($this->sdkConfiguration);
         $this->observation = new Observation($this->sdkConfiguration);
         $this->patient = new Patient($this->sdkConfiguration);
         $this->practitioner = new Practitioner($this->sdkConfiguration);
+        $this->procedure = new Procedure($this->sdkConfiguration);
         $this->slot = new Slot($this->sdkConfiguration);
         $this->hris = new Hris($this->sdkConfiguration);
         $this->attendance = new Attendance($this->sdkConfiguration);
@@ -634,7 +644,6 @@ class UnifiedTo
         $this->performance = new Performance($this->sdkConfiguration);
         $this->cycle = new Cycle($this->sdkConfiguration);
         $this->feedback = new Feedback($this->sdkConfiguration);
-        $this->goal = new Goal($this->sdkConfiguration);
         $this->repo = new Repo($this->sdkConfiguration);
         $this->branch = new Branch($this->sdkConfiguration);
         $this->commit = new Commit($this->sdkConfiguration);

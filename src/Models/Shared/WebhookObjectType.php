@@ -225,4 +225,10 @@ enum WebhookObjectType: string
     case HealthcareMedication = 'healthcare_medication';
     case HealthcareObservation = 'healthcare_observation';
     case HealthcareImmunization = 'healthcare_immunization';
+    case HealthcareDocument = 'healthcare_document';
+    case HealthcareCoverage = 'healthcare_coverage';
+    case HealthcareProcedure = 'healthcare_procedure';
+    case HealthcareReport = 'healthcare_report';
+    case HealthcareCareplan = 'healthcare_careplan';
+    case HealthcareGoal = 'healthcare_goal';
 }

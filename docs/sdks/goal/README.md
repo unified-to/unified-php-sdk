@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createPerformanceGoal](#createperformancegoal) - Create a goal
+* [getHealthcareGoal](#gethealthcaregoal) - Retrieve a goal
 * [getPerformanceGoal](#getperformancegoal) - Retrieve a goal
+* [listHealthcareGoals](#listhealthcaregoals) - List all goals
 * [listPerformanceGoals](#listperformancegoals) - List all goals
 * [patchPerformanceGoal](#patchperformancegoal) - Update a goal
 * [removePerformanceGoal](#removeperformancegoal) - Remove a goal
@@ -38,14 +40,14 @@ $request = new Operations\CreatePerformanceGoalRequest(
     performanceGoal: new Shared\PerformanceGoal(
         createdAt: Utils\Utils::parseDateTime('2020-01-09T20:43:07.380Z'),
         description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-        dueAt: Utils\Utils::parseDateTime('2026-08-01T12:31:37.658Z'),
-        id: 'fb171be3-6956-422e-aaee-66aac027f77b',
+        dueAt: Utils\Utils::parseDateTime('2026-08-02T16:01:04.433Z'),
+        id: '1a63904a-9f54-4561-9661-32114e9e6a22',
         metadata: [],
         milestones: [
             new Shared\PerformanceGoalMilestone(
                 currentValue: 10,
-                dueAt: Utils\Utils::parseDateTime('2026-06-06T13:40:49.297Z'),
-                id: '657d332e-ed1e-495d-aab6-f48fe98b6844',
+                dueAt: Utils\Utils::parseDateTime('2026-06-07T16:31:44.649Z'),
+                id: 'fbab1daa-32df-4b9d-acd9-0391831b1a88',
                 isCompleted: true,
                 name: 'Team-oriented secondary matrix',
                 targetValue: 32,
@@ -54,8 +56,8 @@ $request = new Operations\CreatePerformanceGoalRequest(
             ),
             new Shared\PerformanceGoalMilestone(
                 currentValue: 0,
-                dueAt: Utils\Utils::parseDateTime('2026-08-11T05:38:30.919Z'),
-                id: '2d71c0fa-84f7-4eca-964c-e219879ac903',
+                dueAt: Utils\Utils::parseDateTime('2026-08-12T09:14:38.952Z'),
+                id: '07fb8b75-7b28-46e0-b764-c47790543006',
                 isCompleted: true,
                 name: 'Exclusive client-server conglomeration',
                 targetValue: 32,
@@ -64,8 +66,8 @@ $request = new Operations\CreatePerformanceGoalRequest(
             new Shared\PerformanceGoalMilestone(
                 currentValue: 31,
                 description: 'Hic explicabo odit.',
-                dueAt: Utils\Utils::parseDateTime('2026-10-13T06:12:52.563Z'),
-                id: 'f3f43aaa-8a2a-4f94-90c5-6c647be67311',
+                dueAt: Utils\Utils::parseDateTime('2026-10-14T10:32:24.168Z'),
+                id: 'c8fba91d-079f-4475-be89-cc37b055ab63',
                 isCompleted: true,
                 name: 'Synchronised immersive success',
                 targetValue: 32,
@@ -74,10 +76,10 @@ $request = new Operations\CreatePerformanceGoalRequest(
         ],
         name: 'Proactive national protocol',
         progress: 3,
-        startAt: Utils\Utils::parseDateTime('2025-07-25T17:03:04.715Z'),
+        startAt: Utils\Utils::parseDateTime('2025-07-26T16:16:31.630Z'),
         status: Shared\PerformanceGoalStatus::Closed,
         type: Shared\PerformanceGoalSchemasType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2022-09-14T04:29:02.786Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-14T15:42:38.196Z'),
         weight: 5,
     ),
     connectionId: '<id>',
@@ -101,6 +103,57 @@ if ($response->performanceGoal !== null) {
 ### Response
 
 **[?Operations\CreatePerformanceGoalResponse](../../Models/Operations/CreatePerformanceGoalResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getHealthcareGoal
+
+Retrieves a single HealthcareGoal by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getHealthcareGoal" method="get" path="/healthcare/{connection_id}/goal/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetHealthcareGoalRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->goal->getHealthcareGoal(
+    request: $request
+);
+
+if ($response->healthcareGoal !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetHealthcareGoalRequest](../../Models/Operations/GetHealthcareGoalRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\GetHealthcareGoalResponse](../../Models/Operations/GetHealthcareGoalResponse.md)**
 
 ### Errors
 
@@ -152,6 +205,56 @@ if ($response->performanceGoal !== null) {
 ### Response
 
 **[?Operations\GetPerformanceGoalResponse](../../Models/Operations/GetPerformanceGoalResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listHealthcareGoals
+
+Returns a list of HealthcareGoals. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listHealthcareGoals" method="get" path="/healthcare/{connection_id}/goal" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListHealthcareGoalsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->goal->listHealthcareGoals(
+    request: $request
+);
+
+if ($response->healthcareGoals !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListHealthcareGoalsRequest](../../Models/Operations/ListHealthcareGoalsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\ListHealthcareGoalsResponse](../../Models/Operations/ListHealthcareGoalsResponse.md)**
 
 ### Errors
 
@@ -236,14 +339,14 @@ $request = new Operations\PatchPerformanceGoalRequest(
     performanceGoal: new Shared\PerformanceGoal(
         createdAt: Utils\Utils::parseDateTime('2020-01-09T20:43:07.380Z'),
         description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-        dueAt: Utils\Utils::parseDateTime('2026-08-01T12:31:37.685Z'),
-        id: '7328cb03-f2ea-4aa4-bc0f-3cbd878705d3',
+        dueAt: Utils\Utils::parseDateTime('2026-08-02T16:01:04.463Z'),
+        id: 'd23839ff-f4c0-4d14-b815-bdd4d4b96ca9',
         metadata: [],
         milestones: [
             new Shared\PerformanceGoalMilestone(
                 currentValue: 10,
-                dueAt: Utils\Utils::parseDateTime('2026-06-06T13:40:49.324Z'),
-                id: '569d3d6a-b164-46fe-9127-c6e029196acd',
+                dueAt: Utils\Utils::parseDateTime('2026-06-07T16:31:44.678Z'),
+                id: '6000f58d-78fc-4fd7-a317-3eda6155a688',
                 isCompleted: true,
                 name: 'Team-oriented secondary matrix',
                 targetValue: 32,
@@ -252,8 +355,8 @@ $request = new Operations\PatchPerformanceGoalRequest(
             ),
             new Shared\PerformanceGoalMilestone(
                 currentValue: 0,
-                dueAt: Utils\Utils::parseDateTime('2026-08-11T05:38:30.946Z'),
-                id: 'af10dd8c-bdb3-4973-b44f-9f0b051c3cba',
+                dueAt: Utils\Utils::parseDateTime('2026-08-12T09:14:38.983Z'),
+                id: 'bd0a6406-9db0-448b-935a-390e22918771',
                 isCompleted: true,
                 name: 'Exclusive client-server conglomeration',
                 targetValue: 32,
@@ -262,8 +365,8 @@ $request = new Operations\PatchPerformanceGoalRequest(
             new Shared\PerformanceGoalMilestone(
                 currentValue: 31,
                 description: 'Hic explicabo odit.',
-                dueAt: Utils\Utils::parseDateTime('2026-10-13T06:12:52.591Z'),
-                id: 'e88cff56-28bf-419d-9bf7-3ae3bdc1545b',
+                dueAt: Utils\Utils::parseDateTime('2026-10-14T10:32:24.200Z'),
+                id: '46930dfc-774c-4768-8162-5ee9b94e1a24',
                 isCompleted: true,
                 name: 'Synchronised immersive success',
                 targetValue: 32,
@@ -272,10 +375,10 @@ $request = new Operations\PatchPerformanceGoalRequest(
         ],
         name: 'Proactive national protocol',
         progress: 3,
-        startAt: Utils\Utils::parseDateTime('2025-07-25T17:03:04.738Z'),
+        startAt: Utils\Utils::parseDateTime('2025-07-26T16:16:31.655Z'),
         status: Shared\PerformanceGoalStatus::Closed,
         type: Shared\PerformanceGoalSchemasType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2022-09-14T04:29:02.797Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-14T15:42:38.209Z'),
         weight: 5,
     ),
     connectionId: '<id>',
@@ -385,14 +488,14 @@ $request = new Operations\UpdatePerformanceGoalRequest(
     performanceGoal: new Shared\PerformanceGoal(
         createdAt: Utils\Utils::parseDateTime('2020-01-09T20:43:07.380Z'),
         description: 'Suscipit suspendo vulnero vel facere valeo vallum degero.',
-        dueAt: Utils\Utils::parseDateTime('2026-08-01T12:31:37.685Z'),
-        id: '7328cb03-f2ea-4aa4-bc0f-3cbd878705d3',
+        dueAt: Utils\Utils::parseDateTime('2026-08-02T16:01:04.463Z'),
+        id: 'd23839ff-f4c0-4d14-b815-bdd4d4b96ca9',
         metadata: [],
         milestones: [
             new Shared\PerformanceGoalMilestone(
                 currentValue: 10,
-                dueAt: Utils\Utils::parseDateTime('2026-06-06T13:40:49.324Z'),
-                id: '569d3d6a-b164-46fe-9127-c6e029196acd',
+                dueAt: Utils\Utils::parseDateTime('2026-06-07T16:31:44.678Z'),
+                id: '6000f58d-78fc-4fd7-a317-3eda6155a688',
                 isCompleted: true,
                 name: 'Team-oriented secondary matrix',
                 targetValue: 32,
@@ -401,8 +504,8 @@ $request = new Operations\UpdatePerformanceGoalRequest(
             ),
             new Shared\PerformanceGoalMilestone(
                 currentValue: 0,
-                dueAt: Utils\Utils::parseDateTime('2026-08-11T05:38:30.946Z'),
-                id: 'af10dd8c-bdb3-4973-b44f-9f0b051c3cba',
+                dueAt: Utils\Utils::parseDateTime('2026-08-12T09:14:38.983Z'),
+                id: 'bd0a6406-9db0-448b-935a-390e22918771',
                 isCompleted: true,
                 name: 'Exclusive client-server conglomeration',
                 targetValue: 32,
@@ -411,8 +514,8 @@ $request = new Operations\UpdatePerformanceGoalRequest(
             new Shared\PerformanceGoalMilestone(
                 currentValue: 31,
                 description: 'Hic explicabo odit.',
-                dueAt: Utils\Utils::parseDateTime('2026-10-13T06:12:52.591Z'),
-                id: 'e88cff56-28bf-419d-9bf7-3ae3bdc1545b',
+                dueAt: Utils\Utils::parseDateTime('2026-10-14T10:32:24.200Z'),
+                id: '46930dfc-774c-4768-8162-5ee9b94e1a24',
                 isCompleted: true,
                 name: 'Synchronised immersive success',
                 targetValue: 32,
@@ -421,10 +524,10 @@ $request = new Operations\UpdatePerformanceGoalRequest(
         ],
         name: 'Proactive national protocol',
         progress: 3,
-        startAt: Utils\Utils::parseDateTime('2025-07-25T17:03:04.738Z'),
+        startAt: Utils\Utils::parseDateTime('2025-07-26T16:16:31.655Z'),
         status: Shared\PerformanceGoalStatus::Closed,
         type: Shared\PerformanceGoalSchemasType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2022-09-14T04:29:02.797Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-09-14T15:42:38.209Z'),
         weight: 5,
     ),
     connectionId: '<id>',
