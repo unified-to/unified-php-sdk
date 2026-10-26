@@ -81,6 +81,14 @@ class ListCalendarBusiesRequest
     public ?string $raw = null;
 
     /**
+     * The room ID to get availability for.
+     *
+     * @var ?string $roomId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=room_id')]
+    public ?string $roomId = null;
+
+    /**
      *
      * @var ?string $sort
      */
@@ -121,13 +129,14 @@ class ListCalendarBusiesRequest
      * @param  ?string  $order
      * @param  ?string  $query
      * @param  ?string  $raw
+     * @param  ?string  $roomId
      * @param  ?string  $sort
      * @param  ?string  $startGte
      * @param  ?string  $updatedGte
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
+    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $roomId = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null, ?string $userId = null)
     {
         $this->connectionId = $connectionId;
         $this->calendarId = $calendarId;
@@ -138,6 +147,7 @@ class ListCalendarBusiesRequest
         $this->order = $order;
         $this->query = $query;
         $this->raw = $raw;
+        $this->roomId = $roomId;
         $this->sort = $sort;
         $this->startGte = $startGte;
         $this->updatedGte = $updatedGte;

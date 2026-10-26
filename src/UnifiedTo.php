@@ -148,7 +148,11 @@ class UnifiedTo
 
     public Link $link;
 
+    public Location $location;
+
     public Recording $recording;
+
+    public Room $room;
 
     public Webinar $webinar;
 
@@ -165,8 +169,6 @@ class UnifiedTo
     public Source $source;
 
     public Clubs $clubs;
-
-    public Location $location;
 
     public Member $member;
 
@@ -532,7 +534,9 @@ class UnifiedTo
         $this->calendar = new Calendar($this->sdkConfiguration);
         $this->busy = new Busy($this->sdkConfiguration);
         $this->link = new Link($this->sdkConfiguration);
+        $this->location = new Location($this->sdkConfiguration);
         $this->recording = new Recording($this->sdkConfiguration);
+        $this->room = new Room($this->sdkConfiguration);
         $this->webinar = new Webinar($this->sdkConfiguration);
         $this->cdp = new Cdp($this->sdkConfiguration);
         $this->activation = new Activation($this->sdkConfiguration);
@@ -541,7 +545,6 @@ class UnifiedTo
         $this->segment = new Segment($this->sdkConfiguration);
         $this->source = new Source($this->sdkConfiguration);
         $this->clubs = new Clubs($this->sdkConfiguration);
-        $this->location = new Location($this->sdkConfiguration);
         $this->member = new Member($this->sdkConfiguration);
         $this->commerce = new Commerce($this->sdkConfiguration);
         $this->availability = new Availability($this->sdkConfiguration);

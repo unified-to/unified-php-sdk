@@ -267,6 +267,8 @@ enum PropertyConnectionPermissions: string
     case CalendarRecordingWrite = 'calendar_recording_write';
     case CalendarWebinarRead = 'calendar_webinar_read';
     case CalendarWebinarWrite = 'calendar_webinar_write';
+    case CalendarRoomRead = 'calendar_room_read';
+    case CalendarLocationRead = 'calendar_location_read';
     case EnrichPersonRead = 'enrich_person_read';
     case EnrichCompanyRead = 'enrich_company_read';
     case AdsAdRead = 'ads_ad_read';

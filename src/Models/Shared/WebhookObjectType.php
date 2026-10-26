@@ -150,6 +150,8 @@ enum WebhookObjectType: string
     case CalendarLink = 'calendar_link';
     case CalendarRecording = 'calendar_recording';
     case CalendarWebinar = 'calendar_webinar';
+    case CalendarRoom = 'calendar_room';
+    case CalendarLocation = 'calendar_location';
     case AdsOrganization = 'ads_organization';
     case AdsAd = 'ads_ad';
     case AdsCampaign = 'ads_campaign';

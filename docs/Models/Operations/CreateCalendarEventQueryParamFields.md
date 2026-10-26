@@ -31,3 +31,4 @@
 | `MatterId`          | matter_id           |
 | `Metadata`          | metadata            |
 | `Raw`               | raw                 |
+| `RoomIds`           | room_ids            |

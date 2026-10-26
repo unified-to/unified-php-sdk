@@ -38,7 +38,7 @@ $request = new Operations\CreateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: '8c920108-15e3-499b-9a52-a85135fb7593',
+        id: '671d80ea-533f-4dc1-8562-4b14534c318f',
         instructors: [],
         languages: [
             'in',
@@ -60,7 +60,7 @@ $request = new Operations\CreateLmsClassRequest(
         metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-07T04:44:33.271Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-07T23:09:03.366Z'),
     ),
     connectionId: '<id>',
 );
@@ -218,7 +218,7 @@ $request = new Operations\PatchLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: '7302b283-6af4-4c4d-9649-2dd9d62206ae',
+        id: '74a1c1b5-2393-491f-bd7a-2d153b203691',
         instructors: [],
         languages: [
             'in',
@@ -240,7 +240,7 @@ $request = new Operations\PatchLmsClassRequest(
         metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-07T04:44:33.282Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-07T23:09:03.380Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -349,7 +349,7 @@ $request = new Operations\UpdateLmsClassRequest(
     lmsClass: new Shared\LmsClass(
         createdAt: Utils\Utils::parseDateTime('2020-02-20T14:48:51.845Z'),
         description: 'Anser sperno decerno.',
-        id: '7302b283-6af4-4c4d-9649-2dd9d62206ae',
+        id: '74a1c1b5-2393-491f-bd7a-2d153b203691',
         instructors: [],
         languages: [
             'in',
@@ -371,7 +371,7 @@ $request = new Operations\UpdateLmsClassRequest(
         metadata: [],
         name: 'virtus',
         students: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-08-07T04:44:33.282Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-07T23:09:03.380Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

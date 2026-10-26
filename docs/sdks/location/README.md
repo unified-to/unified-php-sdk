@@ -6,10 +6,12 @@
 
 * [createCommerceLocation](#createcommercelocation) - Create a location
 * [createHrisLocation](#createhrislocation) - Create a location
+* [getCalendarLocation](#getcalendarlocation) - Retrieve a location
 * [getClubsLocation](#getclubslocation) - Retrieve a location
 * [getCommerceLocation](#getcommercelocation) - Retrieve a location
 * [getHealthcareLocation](#gethealthcarelocation) - Retrieve a location
 * [getHrisLocation](#gethrislocation) - Retrieve a location
+* [listCalendarLocations](#listcalendarlocations) - List all locations
 * [listClubsLocations](#listclubslocations) - List all locations
 * [listCommerceLocations](#listcommercelocations) - List all locations
 * [listHealthcareLocations](#listhealthcarelocations) - List all locations
@@ -58,7 +60,7 @@ $request = new Operations\CreateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '9e665be3-b4e3-4ced-b053-792dd454a420',
+        id: '864c6ba0-04b6-4211-9fcb-d49f24337ff4',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -69,10 +71,10 @@ $request = new Operations\CreateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: 'e8c2cea5-781c-48ac-becb-57d365d69f93',
+                id: '10b6ea60-7629-4639-bfd1-d5266fd94557',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '0e0f7e3a-ea68-4200-bf70-e5e0330ee3af',
+                        id: 'b3b734f0-1355-40b0-8481-2ad02181414f',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -98,7 +100,7 @@ $request = new Operations\CreateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-22T03:15:09.150Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-22T10:59:26.494Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -166,7 +168,7 @@ $request = new Operations\CreateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: '14672ad5-db92-4af2-ad87-99b07e1fb659',
+        id: 'adbd6855-96a7-4539-b1f2-92a951f600e8',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -187,7 +189,7 @@ $request = new Operations\CreateHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-22T13:53:51.371Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-22T22:07:52.347Z'),
     ),
     connectionId: '<id>',
 );
@@ -210,6 +212,57 @@ if ($response->hrisLocation !== null) {
 ### Response
 
 **[?Operations\CreateHrisLocationResponse](../../Models/Operations/CreateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCalendarLocation
+
+Retrieves a single CalendarLocation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCalendarLocation" method="get" path="/calendar/{connection_id}/location/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCalendarLocationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->location->getCalendarLocation(
+    request: $request
+);
+
+if ($response->calendarLocation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetCalendarLocationRequest](../../Models/Operations/GetCalendarLocationRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\GetCalendarLocationResponse](../../Models/Operations/GetCalendarLocationResponse.md)**
 
 ### Errors
 
@@ -414,6 +467,56 @@ if ($response->hrisLocation !== null) {
 ### Response
 
 **[?Operations\GetHrisLocationResponse](../../Models/Operations/GetHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listCalendarLocations
+
+Returns a list of CalendarLocations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCalendarLocations" method="get" path="/calendar/{connection_id}/location" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCalendarLocationsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->location->listCalendarLocations(
+    request: $request
+);
+
+if ($response->calendarLocations !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListCalendarLocationsRequest](../../Models/Operations/ListCalendarLocationsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\ListCalendarLocationsResponse](../../Models/Operations/ListCalendarLocationsResponse.md)**
 
 ### Errors
 
@@ -658,7 +761,7 @@ $request = new Operations\PatchCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '858257ec-963f-4784-a49a-5f62180418c2',
+        id: 'f564499b-4c04-4451-928b-90cfa7c9e9d6',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -669,10 +772,10 @@ $request = new Operations\PatchCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '5cc8d75b-5b4e-4d45-a67b-2f695cdf34e6',
+                id: 'f6e9776a-4714-4da7-a3a7-4a8cfc0ce0ec',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '0df50c82-8ffb-4dc4-99b5-22043f40754e',
+                        id: '2ceec8fe-3f3f-4bd1-99cc-3e80a400a746',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -698,7 +801,7 @@ $request = new Operations\PatchCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-22T03:15:09.161Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-22T10:59:26.509Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -767,7 +870,7 @@ $request = new Operations\PatchHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: '79999524-95c8-4232-bf3c-fb7ba9db320e',
+        id: '91b3960f-083c-4c7e-b2db-30e006fc17b3',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -788,7 +891,7 @@ $request = new Operations\PatchHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-22T13:53:51.379Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-22T22:07:52.357Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -958,7 +1061,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2022-12-29T04:15:21.195Z'),
         currency: 'XCD',
         description: 'Adsidue audentia.',
-        id: '858257ec-963f-4784-a49a-5f62180418c2',
+        id: 'f564499b-4c04-4451-928b-90cfa7c9e9d6',
         imageUrl: 'https://picsum.photos/seed/hjFt1/1036/2220',
         isActive: false,
         languageLocale: 'vulgaris',
@@ -969,10 +1072,10 @@ $request = new Operations\UpdateCommerceLocationRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Addo.',
                 height: 283,
-                id: '5cc8d75b-5b4e-4d45-a67b-2f695cdf34e6',
+                id: 'f6e9776a-4714-4da7-a3a7-4a8cfc0ce0ec',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '0df50c82-8ffb-4dc4-99b5-22043f40754e',
+                        id: '2ceec8fe-3f3f-4bd1-99cc-3e80a400a746',
                         slug: 'abutor',
                         value: 'damno',
                     ),
@@ -998,7 +1101,7 @@ $request = new Operations\UpdateCommerceLocationRequest(
                 type: Shared\CommerceTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-04-22T03:15:09.161Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-22T10:59:26.509Z'),
         webUrl: 'https://chilly-edge.info',
     ),
     connectionId: '<id>',
@@ -1067,7 +1170,7 @@ $request = new Operations\UpdateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: '79999524-95c8-4232-bf3c-fb7ba9db320e',
+        id: '91b3960f-083c-4c7e-b2db-30e006fc17b3',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -1088,7 +1191,7 @@ $request = new Operations\UpdateHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-22T13:53:51.379Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-22T22:07:52.357Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

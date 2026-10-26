@@ -37,4 +37,5 @@ enum PatchCalendarEventQueryParamFields: string
     case MatterId = 'matter_id';
     case Metadata = 'metadata';
     case Raw = 'raw';
+    case RoomIds = 'room_ids';
 }

@@ -97,6 +97,14 @@ class ListCalendarEventsRequest
     public ?string $raw = null;
 
     /**
+     * The room ID to filter by. Returns the events that booked this room.
+     *
+     * @var ?string $roomId
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=room_id')]
+    public ?string $roomId = null;
+
+    /**
      *
      * @var ?string $sort
      */
@@ -131,12 +139,13 @@ class ListCalendarEventsRequest
      * @param  ?string  $order
      * @param  ?string  $query
      * @param  ?string  $raw
+     * @param  ?string  $roomId
      * @param  ?string  $sort
      * @param  ?string  $startGte
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLt = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?string $matterId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
+    public function __construct(string $connectionId, ?string $calendarId = null, ?string $endLt = null, ?bool $expand = null, ?array $fields = null, ?float $limit = null, ?string $matterId = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $roomId = null, ?string $sort = null, ?string $startGte = null, ?string $updatedGte = null)
     {
         $this->connectionId = $connectionId;
         $this->calendarId = $calendarId;
@@ -149,6 +158,7 @@ class ListCalendarEventsRequest
         $this->order = $order;
         $this->query = $query;
         $this->raw = $raw;
+        $this->roomId = $roomId;
         $this->sort = $sort;
         $this->startGte = $startGte;
         $this->updatedGte = $updatedGte;

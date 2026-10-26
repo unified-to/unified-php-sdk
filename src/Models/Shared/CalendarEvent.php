@@ -182,6 +182,16 @@ class CalendarEvent
     public ?string $recurringEventId = null;
 
     /**
+     * pointers to Calendar Rooms booked for this event
+     *
+     * @var ?array<string> $roomIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('room_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $roomIds = null;
+
+    /**
      *
      * @var ?bool $sendNotifications
      */
@@ -260,6 +270,7 @@ class CalendarEvent
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<\Unified\Unified_to\Models\Shared\CalendarEventRecurrence>  $recurrence
      * @param  ?string  $recurringEventId
+     * @param  ?array<string>  $roomIds
      * @param  ?bool  $sendNotifications
      * @param  ?string  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\CalendarEventStatus  $status
@@ -269,7 +280,7 @@ class CalendarEvent
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?array $attachments = null, ?array $attendees = null, ?string $calendarId = null, ?array $conference = null, ?string $createdAt = null, ?string $endAt = null, ?bool $hasConference = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $matterId = null, ?array $metadata = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?bool $sendNotifications = null, ?string $startAt = null, ?CalendarEventStatus $status = null, ?string $subject = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
+    public function __construct(?array $attachments = null, ?array $attendees = null, ?string $calendarId = null, ?array $conference = null, ?string $createdAt = null, ?string $endAt = null, ?bool $hasConference = null, ?string $id = null, ?bool $isAllDay = null, ?bool $isFree = null, ?bool $isPrivate = null, ?string $location = null, ?string $matterId = null, ?array $metadata = null, ?string $notes = null, ?PropertyCalendarEventOrganizer $organizer = null, ?array $raw = null, ?array $recurrence = null, ?string $recurringEventId = null, ?array $roomIds = null, ?bool $sendNotifications = null, ?string $startAt = null, ?CalendarEventStatus $status = null, ?string $subject = null, ?string $timezone = null, ?string $updatedAt = null, ?string $webUrl = null)
     {
         $this->attachments = $attachments;
         $this->attendees = $attendees;
@@ -290,6 +301,7 @@ class CalendarEvent
         $this->raw = $raw;
         $this->recurrence = $recurrence;
         $this->recurringEventId = $recurringEventId;
+        $this->roomIds = $roomIds;
         $this->sendNotifications = $sendNotifications;
         $this->startAt = $startAt;
         $this->status = $status;

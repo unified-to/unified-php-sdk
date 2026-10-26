@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
+        id: '3ffcbe35-acf7-449a-8164-542328efde20',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
+        id: '3ffcbe35-acf7-449a-8164-542328efde20',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
     ),
     connectionId: '<id>',
 );
@@ -608,13 +608,17 @@ if ($response->accountingAccount !== null) {
 * [getCalendarCalendar](docs/sdks/calendar/README.md#getcalendarcalendar) - Retrieve a calendar
 * [getCalendarEvent](docs/sdks/calendar/README.md#getcalendarevent) - Retrieve an event
 * [getCalendarLink](docs/sdks/calendar/README.md#getcalendarlink) - Retrieve a link
+* [getCalendarLocation](docs/sdks/calendar/README.md#getcalendarlocation) - Retrieve a location
 * [getCalendarRecording](docs/sdks/calendar/README.md#getcalendarrecording) - Retrieve a recording
+* [getCalendarRoom](docs/sdks/calendar/README.md#getcalendarroom) - Retrieve a room
 * [getCalendarWebinar](docs/sdks/calendar/README.md#getcalendarwebinar) - Retrieve a webinar
 * [listCalendarBusies](docs/sdks/calendar/README.md#listcalendarbusies) - List all busies
 * [listCalendarCalendars](docs/sdks/calendar/README.md#listcalendarcalendars) - List all calendars
 * [listCalendarEvents](docs/sdks/calendar/README.md#listcalendarevents) - List all events
 * [listCalendarLinks](docs/sdks/calendar/README.md#listcalendarlinks) - List all links
+* [listCalendarLocations](docs/sdks/calendar/README.md#listcalendarlocations) - List all locations
 * [listCalendarRecordings](docs/sdks/calendar/README.md#listcalendarrecordings) - List all recordings
+* [listCalendarRooms](docs/sdks/calendar/README.md#listcalendarrooms) - List all rooms
 * [listCalendarWebinars](docs/sdks/calendar/README.md#listcalendarwebinars) - List all webinars
 * [patchCalendarCalendar](docs/sdks/calendar/README.md#patchcalendarcalendar) - Update a calendar
 * [patchCalendarEvent](docs/sdks/calendar/README.md#patchcalendarevent) - Update an event
@@ -1799,10 +1803,12 @@ if ($response->accountingAccount !== null) {
 
 * [createCommerceLocation](docs/sdks/location/README.md#createcommercelocation) - Create a location
 * [createHrisLocation](docs/sdks/location/README.md#createhrislocation) - Create a location
+* [getCalendarLocation](docs/sdks/location/README.md#getcalendarlocation) - Retrieve a location
 * [getClubsLocation](docs/sdks/location/README.md#getclubslocation) - Retrieve a location
 * [getCommerceLocation](docs/sdks/location/README.md#getcommercelocation) - Retrieve a location
 * [getHealthcareLocation](docs/sdks/location/README.md#gethealthcarelocation) - Retrieve a location
 * [getHrisLocation](docs/sdks/location/README.md#gethrislocation) - Retrieve a location
+* [listCalendarLocations](docs/sdks/location/README.md#listcalendarlocations) - List all locations
 * [listClubsLocations](docs/sdks/location/README.md#listclubslocations) - List all locations
 * [listCommerceLocations](docs/sdks/location/README.md#listcommercelocations) - List all locations
 * [listHealthcareLocations](docs/sdks/location/README.md#listhealthcarelocations) - List all locations
@@ -2320,6 +2326,11 @@ if ($response->accountingAccount !== null) {
 * [removeCommerceReview](docs/sdks/review/README.md#removecommercereview) - Remove a review
 * [updateCommerceReview](docs/sdks/review/README.md#updatecommercereview) - Update a review
 * [updateSocialReview](docs/sdks/review/README.md#updatesocialreview) - Update a review
+
+### [Room](docs/sdks/room/README.md)
+
+* [getCalendarRoom](docs/sdks/room/README.md#getcalendarroom) - Retrieve a room
+* [listCalendarRooms](docs/sdks/room/README.md#listcalendarrooms) - List all rooms
 
 ### [Saleschannel](docs/sdks/saleschannel/README.md)
 
@@ -2890,7 +2901,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
+            id: '3ffcbe35-acf7-449a-8164-542328efde20',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -2903,7 +2914,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
         ),
         connectionId: '<id>',
     );
@@ -2961,7 +2972,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
+        id: '3ffcbe35-acf7-449a-8164-542328efde20',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -2974,7 +2985,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
     ),
     connectionId: '<id>',
 );
@@ -3015,7 +3026,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '35324a5f-8c25-44a1-903d-4be92587e8a5',
+        id: '3ffcbe35-acf7-449a-8164-542328efde20',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3028,7 +3039,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-07T22:18:12.949Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
     ),
     connectionId: '<id>',
 );
