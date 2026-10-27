@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '3ffcbe35-acf7-449a-8164-542328efde20',
+        id: '19b050a6-32fc-47a2-ba41-f65cde1c3718',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-08T10:23:06.761Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '3ffcbe35-acf7-449a-8164-542328efde20',
+        id: '19b050a6-32fc-47a2-ba41-f65cde1c3718',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-08T10:23:06.761Z'),
     ),
     connectionId: '<id>',
 );
@@ -2770,6 +2770,7 @@ if ($response->accountingAccount !== null) {
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
+* [patchUnifiedWebhookResume](docs/sdks/unified/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
@@ -2777,6 +2778,7 @@ if ($response->accountingAccount !== null) {
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
+* [updateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
 ### [Usage](docs/sdks/usage/README.md)
@@ -2836,9 +2838,11 @@ if ($response->accountingAccount !== null) {
 * [getUnifiedWebhook](docs/sdks/webhook/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [listUnifiedWebhooks](docs/sdks/webhook/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [patchUnifiedWebhook](docs/sdks/webhook/README.md#patchunifiedwebhook) - Update webhook subscription
+* [patchUnifiedWebhookResume](docs/sdks/webhook/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/webhook/README.md#patchunifiedwebhooktrigger) - Trigger webhook
 * [removeUnifiedWebhook](docs/sdks/webhook/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [updateUnifiedWebhook](docs/sdks/webhook/README.md#updateunifiedwebhook) - Update webhook subscription
+* [updateUnifiedWebhookResume](docs/sdks/webhook/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/webhook/README.md#updateunifiedwebhooktrigger) - Trigger webhook
 
 ### [Webinar](docs/sdks/webinar/README.md)
@@ -2901,7 +2905,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: '3ffcbe35-acf7-449a-8164-542328efde20',
+            id: '19b050a6-32fc-47a2-ba41-f65cde1c3718',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -2914,7 +2918,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-08T10:23:06.761Z'),
         ),
         connectionId: '<id>',
     );
@@ -2972,7 +2976,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '3ffcbe35-acf7-449a-8164-542328efde20',
+        id: '19b050a6-32fc-47a2-ba41-f65cde1c3718',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -2985,7 +2989,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-08T10:23:06.761Z'),
     ),
     connectionId: '<id>',
 );
@@ -3026,7 +3030,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '3ffcbe35-acf7-449a-8164-542328efde20',
+        id: '19b050a6-32fc-47a2-ba41-f65cde1c3718',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3039,7 +3043,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-08T04:01:27.257Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-08T10:23:06.761Z'),
     ),
     connectionId: '<id>',
 );

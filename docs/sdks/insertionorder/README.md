@@ -37,11 +37,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: '5798b174-d67d-4d9a-9c67-ce92a86edca2',
+        id: '1f790083-63ba-4344-b807-eb23a8d17d61',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-28T20:53:13.081Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T21:06:59.780Z'),
     ),
     connectionId: '<id>',
 );
@@ -198,11 +198,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: 'abb54584-74a1-4efb-922a-475b42edbfd6',
+        id: 'a8faabdf-dada-48ea-9f38-a17a2b4bbd82',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-28T20:53:13.081Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T21:06:59.781Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -310,11 +310,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: 'abb54584-74a1-4efb-922a-475b42edbfd6',
+        id: 'a8faabdf-dada-48ea-9f38-a17a2b4bbd82',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-28T20:53:13.081Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-28T21:06:59.781Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

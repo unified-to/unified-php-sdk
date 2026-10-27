@@ -36,16 +36,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2021-04-20T04:06:52.955Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-04-20T07:36:01.734Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'GBP',
         externalNumber: 'ER-31240',
-        id: 'b0f62b8b-142f-4c35-ba14-931c7c58a635',
+        id: '6ab2a631-0bb5-43f2-8be8-d0e49133e19b',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: 'a5790459-4e24-40e6-88ac-f58e658365a3',
+                id: '010a8c21-b08e-417b-91da-6d570526dd77',
                 itemName: 'Conference ticket',
                 taxAmount: 0,
                 totalAmount: 39.9,
@@ -53,7 +53,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'c2eb5ee3-9630-431c-87d0-a801bd570482',
+                id: '7bd8ae1d-10e0-4424-bc0c-e0bf509c4f8d',
                 itemName: 'Flight',
                 notes: 'Soluta omnis dolor.',
                 taxAmount: 0,
@@ -62,7 +62,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'fdb73421-3e36-468c-a290-c57dddf05553',
+                id: '7d0df751-03fd-44ac-96fe-d898f9dc066d',
                 itemName: 'Client dinner',
                 notes: 'Altus caveo capio.',
                 taxAmount: 0,
@@ -71,7 +71,7 @@ $request = new Operations\CreateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '4d95632a-e247-4491-8fed-64e31643eb69',
+                id: 'be9353e0-95e7-4800-91da-7ee931510377',
                 itemName: 'Flight',
                 taxAmount: 0,
                 totalAmount: 445.27,
@@ -83,11 +83,11 @@ $request = new Operations\CreateAccountingExpensereportRequest(
         name: 'Lolita Kunde - October expenses',
         postedAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         reimbursedAmount: 908.46,
-        reimbursedAt: Utils\Utils::parseDateTime('2021-04-20T04:06:52.955Z'),
+        reimbursedAt: Utils\Utils::parseDateTime('2021-04-20T07:36:01.734Z'),
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 0,
         totalAmount: 908.46,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-20T04:06:52.955Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-20T07:36:01.734Z'),
     ),
     connectionId: '<id>',
 );
@@ -243,16 +243,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2021-04-20T04:06:52.961Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-04-20T07:36:01.740Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'GBP',
         externalNumber: 'ER-31240',
-        id: '0874437e-942e-4afd-8a1c-835003d5985a',
+        id: '8e91d26a-e5e1-4036-9e64-dd126cddaf2d',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '9379cb78-37c1-4d6e-85b9-8cc762ba609c',
+                id: '74489dbf-e458-4414-8e45-89bad8cf03ff',
                 itemName: 'Conference ticket',
                 taxAmount: 0,
                 totalAmount: 39.9,
@@ -260,7 +260,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '00c812ef-d73c-4af4-aa51-80af28b9ea08',
+                id: 'fc861954-3447-421f-a1bc-91a6580ace46',
                 itemName: 'Flight',
                 notes: 'Soluta omnis dolor.',
                 taxAmount: 0,
@@ -269,7 +269,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '8e699f71-8d7b-43c2-9832-4f853d1b9ce9',
+                id: '3f642a4d-d716-4ebe-9e1e-07e264bba90c',
                 itemName: 'Client dinner',
                 notes: 'Altus caveo capio.',
                 taxAmount: 0,
@@ -278,7 +278,7 @@ $request = new Operations\PatchAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '82f567b9-1a3e-459a-bf21-f4c53a8dac13',
+                id: 'dcd4bba1-ce45-4e78-bcef-75f554ebe51e',
                 itemName: 'Flight',
                 taxAmount: 0,
                 totalAmount: 445.27,
@@ -290,11 +290,11 @@ $request = new Operations\PatchAccountingExpensereportRequest(
         name: 'Lolita Kunde - October expenses',
         postedAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         reimbursedAmount: 908.46,
-        reimbursedAt: Utils\Utils::parseDateTime('2021-04-20T04:06:52.961Z'),
+        reimbursedAt: Utils\Utils::parseDateTime('2021-04-20T07:36:01.740Z'),
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 0,
         totalAmount: 908.46,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-20T04:06:52.961Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-20T07:36:01.740Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -401,16 +401,16 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAccountingExpensereportRequest(
     accountingExpensereport: new Shared\AccountingExpensereport(
-        approvedAt: Utils\Utils::parseDateTime('2021-04-20T04:06:52.961Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-04-20T07:36:01.740Z'),
         attachments: [],
         categoryIds: [],
         createdAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         currency: 'GBP',
         externalNumber: 'ER-31240',
-        id: '0874437e-942e-4afd-8a1c-835003d5985a',
+        id: '8e91d26a-e5e1-4036-9e64-dd126cddaf2d',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '9379cb78-37c1-4d6e-85b9-8cc762ba609c',
+                id: '74489dbf-e458-4414-8e45-89bad8cf03ff',
                 itemName: 'Conference ticket',
                 taxAmount: 0,
                 totalAmount: 39.9,
@@ -418,7 +418,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '00c812ef-d73c-4af4-aa51-80af28b9ea08',
+                id: 'fc861954-3447-421f-a1bc-91a6580ace46',
                 itemName: 'Flight',
                 notes: 'Soluta omnis dolor.',
                 taxAmount: 0,
@@ -427,7 +427,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '8e699f71-8d7b-43c2-9832-4f853d1b9ce9',
+                id: '3f642a4d-d716-4ebe-9e1e-07e264bba90c',
                 itemName: 'Client dinner',
                 notes: 'Altus caveo capio.',
                 taxAmount: 0,
@@ -436,7 +436,7 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '82f567b9-1a3e-459a-bf21-f4c53a8dac13',
+                id: 'dcd4bba1-ce45-4e78-bcef-75f554ebe51e',
                 itemName: 'Flight',
                 taxAmount: 0,
                 totalAmount: 445.27,
@@ -448,11 +448,11 @@ $request = new Operations\UpdateAccountingExpensereportRequest(
         name: 'Lolita Kunde - October expenses',
         postedAt: Utils\Utils::parseDateTime('2020-05-29T02:04:59.078Z'),
         reimbursedAmount: 908.46,
-        reimbursedAt: Utils\Utils::parseDateTime('2021-04-20T04:06:52.961Z'),
+        reimbursedAt: Utils\Utils::parseDateTime('2021-04-20T07:36:01.740Z'),
         status: Shared\AccountingExpensereportStatus::Paid,
         taxAmount: 0,
         totalAmount: 908.46,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-20T04:06:52.961Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-20T07:36:01.740Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

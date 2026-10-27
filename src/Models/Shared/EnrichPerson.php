@@ -41,7 +41,7 @@ class EnrichPerson
     public ?string $birthdate = null;
 
     /**
-     * The companyorganization name  of the person
+     * The company/organization name  of the person
      *
      * @var ?string $company
      */

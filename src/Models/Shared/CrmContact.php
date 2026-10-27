@@ -22,7 +22,7 @@ class CrmContact
     public ?PropertyCrmContactAddress $address = null;
 
     /**
-     * The companyorganization name  of the contact
+     * The company/organization name  of the contact
      *
      * @var ?string $company
      */
@@ -78,6 +78,7 @@ class CrmContact
     public ?array $emails = null;
 
     /**
+     * The contact's first (given) name
      *
      * @var ?string $firstName
      */
@@ -103,6 +104,7 @@ class CrmContact
     public ?string $imageUrl = null;
 
     /**
+     * The contact's last (family) name
      *
      * @var ?string $lastName
      */

@@ -36,7 +36,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-20T03:36:20.834Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-20T14:02:10.172Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -48,13 +48,13 @@ $request = new Operations\CreateHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-10-01T23:44:26.916Z'),
+        endAt: Utils\Utils::parseDateTime('2026-10-03T00:32:23.519Z'),
         hours: 6,
-        id: '5756d5d8-7aa6-4320-9ac5-95d59cf0423f',
+        id: 'd82dd919-192f-41f0-a162-6809d52d12f9',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-15T18:22:04.057Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-03T06:35:04.149Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-16T08:10:26.873Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-03T13:26:23.475Z'),
     ),
     connectionId: '<id>',
 );
@@ -210,7 +210,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-20T03:36:20.840Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-20T14:02:10.182Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -222,13 +222,13 @@ $request = new Operations\PatchHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-10-01T23:44:26.930Z'),
+        endAt: Utils\Utils::parseDateTime('2026-10-03T00:32:23.541Z'),
         hours: 6,
-        id: '1c2c5564-bab5-48a2-9a9d-6505fddaf917',
+        id: '687b6e6c-d7ab-4b0d-a12b-ffac0cc0c5ff',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-15T18:22:04.065Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-03T06:35:04.153Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-16T08:10:26.886Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-03T13:26:23.481Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -335,7 +335,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-20T03:36:20.840Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-20T14:02:10.182Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -347,13 +347,13 @@ $request = new Operations\UpdateHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-10-01T23:44:26.930Z'),
+        endAt: Utils\Utils::parseDateTime('2026-10-03T00:32:23.541Z'),
         hours: 6,
-        id: '1c2c5564-bab5-48a2-9a9d-6505fddaf917',
+        id: '687b6e6c-d7ab-4b0d-a12b-ffac0cc0c5ff',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-15T18:22:04.065Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-03T06:35:04.153Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-16T08:10:26.886Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-03T13:26:23.481Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
