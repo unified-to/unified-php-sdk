@@ -38,7 +38,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '68425f13-45eb-4743-a4b1-7430270882a8',
+        id: '02ec52d6-e6aa-4ab4-b8ab-c272b0ef06b4',
         isRequired: false,
         name: 'autem',
         objectType: 'legal_expense',
@@ -48,7 +48,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-26T06:35:14.444Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-26T22:43:54.413Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,7 +206,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '4fa4be27-cf0c-435e-82d1-24431340595c',
+        id: '82271320-3e24-44ea-aa42-ae7912aaa757',
         isRequired: false,
         name: 'autem',
         objectType: 'legal_expense',
@@ -216,7 +216,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-26T06:35:14.449Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-26T22:43:54.420Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,7 +325,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '4fa4be27-cf0c-435e-82d1-24431340595c',
+        id: '82271320-3e24-44ea-aa42-ae7912aaa757',
         isRequired: false,
         name: 'autem',
         objectType: 'legal_expense',
@@ -335,7 +335,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-26T06:35:14.449Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-26T22:43:54.420Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

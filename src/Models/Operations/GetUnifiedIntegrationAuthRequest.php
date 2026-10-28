@@ -114,7 +114,7 @@ class GetUnifiedIntegrationAuthRequest
     public ?string $subdomain = null;
 
     /**
-     * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided.
+     * The URL where you want the user to be redirect to after a successful authorization.  The connection ID will be appended with (id=<connectionId>) to this URL, as will the state that was provided. When the workspace has trusted_domains configured, this host must be on that list.
      *
      * @var ?string $successRedirect
      */

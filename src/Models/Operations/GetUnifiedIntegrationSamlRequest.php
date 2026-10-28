@@ -58,7 +58,7 @@ class GetUnifiedIntegrationSamlRequest
     public ?string $state = null;
 
     /**
-     * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in.
+     * The URL where you want the user to be redirect to after a successful authentication/sign-in.  A "jwt" parameter will be appended to the URL which will contain a name and email of the user who just signed-in (and a redirect claim matching this URL). When the workspace has trusted_domains configured, this host must be on that list.
      *
      * @var ?string $successRedirect
      */

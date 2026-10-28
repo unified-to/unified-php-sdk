@@ -12,15 +12,15 @@ namespace Unified\Unified_to\Models\Operations;
 enum GetCalendarRoomQueryParamFields: string
 {
     case Id = 'id';
-    case Name = 'name';
-    case Capacity = 'capacity';
-    case LocationId = 'location_id';
-    case Raw = 'raw';
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
-    case Description = 'description';
+    case Name = 'name';
     case Type = 'type';
+    case Capacity = 'capacity';
+    case LocationId = 'location_id';
+    case Description = 'description';
     case Email = 'email';
+    case Raw = 'raw';
     case CalendarId = 'calendar_id';
     case Floor = 'floor';
     case Timezone = 'timezone';

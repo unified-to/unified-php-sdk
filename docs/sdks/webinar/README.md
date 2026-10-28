@@ -38,10 +38,10 @@ $request = new Operations\CreateCalendarWebinarRequest(
     calendarWebinar: new Shared\CalendarWebinar(
         conference: [],
         createdAt: Utils\Utils::parseDateTime('2022-07-06T11:45:14.631Z'),
-        endAt: Utils\Utils::parseDateTime('2025-11-02T08:50:31.278Z'),
+        endAt: Utils\Utils::parseDateTime('2025-11-03T02:14:56.317Z'),
         hasPolls: false,
         hasRecording: false,
-        id: 'af8a110f-e87c-407d-85ad-d082fa397806',
+        id: '069b4369-a36c-4bfa-81f5-63cab4034364',
         isAutoApprove: false,
         isEnabled: true,
         isWebcast: false,
@@ -51,13 +51,13 @@ $request = new Operations\CreateCalendarWebinarRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 10,
-                endAt: Utils\Utils::parseDateTime('2023-09-02T05:35:58.781Z'),
+                endAt: Utils\Utils::parseDateTime('2023-09-02T11:39:24.450Z'),
                 excludedDates: [
-                    '2025-02-16T16:20:32.079Z',
+                    '2025-02-17T06:02:33.677Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Monthly,
                 includedDates: [
-                    '2024-04-30T19:45:01.008Z',
+                    '2024-05-01T05:16:08.186Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -448,16 +448,16 @@ $request = new Operations\CreateCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 3,
-                endAt: Utils\Utils::parseDateTime('2022-10-01T00:09:59.834Z'),
+                endAt: Utils\Utils::parseDateTime('2022-10-01T01:24:22.505Z'),
                 excludedDates: [
-                    '2024-09-04T18:42:56.877Z',
-                    '2024-08-20T04:19:01.305Z',
+                    '2024-09-05T06:03:12.660Z',
+                    '2024-08-20T15:25:52.421Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Daily,
                 includedDates: [
-                    '2024-03-27T14:01:24.046Z',
-                    '2026-01-18T08:13:33.223Z',
-                    '2023-08-15T19:33:56.255Z',
+                    '2024-03-27T23:03:05.151Z',
+                    '2026-01-19T02:44:08.699Z',
+                    '2023-08-16T01:22:23.476Z',
                 ],
                 interval: 1,
                 onDays: [
@@ -601,16 +601,16 @@ $request = new Operations\CreateCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 8,
-                endAt: Utils\Utils::parseDateTime('2026-08-01T05:14:55.987Z'),
+                endAt: Utils\Utils::parseDateTime('2026-08-02T02:33:03.421Z'),
                 excludedDates: [
-                    '2023-06-19T22:27:56.639Z',
-                    '2023-06-08T22:17:49.550Z',
+                    '2023-06-20T03:27:29.958Z',
+                    '2023-06-09T03:07:55.112Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Weekly,
                 includedDates: [
-                    '2024-04-04T15:38:07.884Z',
-                    '2023-08-21T15:31:40.430Z',
-                    '2024-09-30T01:49:09.277Z',
+                    '2024-04-05T00:46:45.105Z',
+                    '2023-08-21T21:25:08.461Z',
+                    '2024-09-30T13:31:09.859Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -763,11 +763,11 @@ $request = new Operations\CreateCalendarWebinarRequest(
         registrantPassword: 'W7J6DhkM',
         requireAddress: false,
         requireJobTitle: false,
-        startAt: Utils\Utils::parseDateTime('2025-05-04T12:36:28.406Z'),
+        startAt: Utils\Utils::parseDateTime('2025-05-05T03:24:33.740Z'),
         status: Shared\CalendarWebinarStatus::Tentative,
         subject: 'Harum culpa decipio ex cubo ancilla cresco.',
         timezone: 'Europe/Kaliningrad',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-06T10:35:43.052Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-07T08:50:46.344Z'),
         webUrl: 'https://quiet-permafrost.name',
     ),
     connectionId: '<id>',
@@ -926,10 +926,10 @@ $request = new Operations\PatchCalendarWebinarRequest(
     calendarWebinar: new Shared\CalendarWebinar(
         conference: [],
         createdAt: Utils\Utils::parseDateTime('2022-07-06T11:45:14.631Z'),
-        endAt: Utils\Utils::parseDateTime('2025-11-02T08:50:31.307Z'),
+        endAt: Utils\Utils::parseDateTime('2025-11-03T02:14:56.352Z'),
         hasPolls: false,
         hasRecording: false,
-        id: '3c3fff0c-9945-49cd-be85-7b23525900bc',
+        id: 'a2ab9af3-45c7-430a-a5b9-4587228b2d4d',
         isAutoApprove: false,
         isEnabled: true,
         isWebcast: false,
@@ -939,13 +939,13 @@ $request = new Operations\PatchCalendarWebinarRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 10,
-                endAt: Utils\Utils::parseDateTime('2023-09-02T05:35:58.791Z'),
+                endAt: Utils\Utils::parseDateTime('2023-09-02T11:39:24.462Z'),
                 excludedDates: [
-                    '2025-02-16T16:20:32.101Z',
+                    '2025-02-17T06:02:33.705Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Monthly,
                 includedDates: [
-                    '2024-04-30T19:45:01.023Z',
+                    '2024-05-01T05:16:08.206Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -1336,16 +1336,16 @@ $request = new Operations\PatchCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 3,
-                endAt: Utils\Utils::parseDateTime('2022-10-01T00:09:59.836Z'),
+                endAt: Utils\Utils::parseDateTime('2022-10-01T01:24:22.507Z'),
                 excludedDates: [
-                    '2024-09-04T18:42:56.896Z',
-                    '2024-08-20T04:19:01.323Z',
+                    '2024-09-05T06:03:12.683Z',
+                    '2024-08-20T15:25:52.444Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Daily,
                 includedDates: [
-                    '2024-03-27T14:01:24.061Z',
-                    '2026-01-18T08:13:33.253Z',
-                    '2023-08-15T19:33:56.265Z',
+                    '2024-03-27T23:03:05.170Z',
+                    '2026-01-19T02:44:08.736Z',
+                    '2023-08-16T01:22:23.488Z',
                 ],
                 interval: 1,
                 onDays: [
@@ -1489,16 +1489,16 @@ $request = new Operations\PatchCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 8,
-                endAt: Utils\Utils::parseDateTime('2026-08-01T05:14:56.022Z'),
+                endAt: Utils\Utils::parseDateTime('2026-08-02T02:33:03.464Z'),
                 excludedDates: [
-                    '2023-06-19T22:27:56.647Z',
-                    '2023-06-08T22:17:49.558Z',
+                    '2023-06-20T03:27:29.968Z',
+                    '2023-06-09T03:07:55.122Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Weekly,
                 includedDates: [
-                    '2024-04-04T15:38:07.900Z',
-                    '2023-08-21T15:31:40.440Z',
-                    '2024-09-30T01:49:09.296Z',
+                    '2024-04-05T00:46:45.124Z',
+                    '2023-08-21T21:25:08.473Z',
+                    '2024-09-30T13:31:09.882Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -1651,11 +1651,11 @@ $request = new Operations\PatchCalendarWebinarRequest(
         registrantPassword: 'W7J6DhkM',
         requireAddress: false,
         requireJobTitle: false,
-        startAt: Utils\Utils::parseDateTime('2025-05-04T12:36:28.431Z'),
+        startAt: Utils\Utils::parseDateTime('2025-05-05T03:24:33.770Z'),
         status: Shared\CalendarWebinarStatus::Tentative,
         subject: 'Harum culpa decipio ex cubo ancilla cresco.',
         timezone: 'Europe/Kaliningrad',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-06T10:35:43.089Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-07T08:50:46.390Z'),
         webUrl: 'https://quiet-permafrost.name',
     ),
     connectionId: '<id>',
@@ -1765,10 +1765,10 @@ $request = new Operations\UpdateCalendarWebinarRequest(
     calendarWebinar: new Shared\CalendarWebinar(
         conference: [],
         createdAt: Utils\Utils::parseDateTime('2022-07-06T11:45:14.631Z'),
-        endAt: Utils\Utils::parseDateTime('2025-11-02T08:50:31.307Z'),
+        endAt: Utils\Utils::parseDateTime('2025-11-03T02:14:56.352Z'),
         hasPolls: false,
         hasRecording: false,
-        id: '3c3fff0c-9945-49cd-be85-7b23525900bc',
+        id: 'a2ab9af3-45c7-430a-a5b9-4587228b2d4d',
         isAutoApprove: false,
         isEnabled: true,
         isWebcast: false,
@@ -1778,13 +1778,13 @@ $request = new Operations\UpdateCalendarWebinarRequest(
         recurrence: [
             new Shared\CalendarEventRecurrence(
                 count: 10,
-                endAt: Utils\Utils::parseDateTime('2023-09-02T05:35:58.791Z'),
+                endAt: Utils\Utils::parseDateTime('2023-09-02T11:39:24.462Z'),
                 excludedDates: [
-                    '2025-02-16T16:20:32.101Z',
+                    '2025-02-17T06:02:33.705Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Monthly,
                 includedDates: [
-                    '2024-04-30T19:45:01.023Z',
+                    '2024-05-01T05:16:08.206Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -2175,16 +2175,16 @@ $request = new Operations\UpdateCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 3,
-                endAt: Utils\Utils::parseDateTime('2022-10-01T00:09:59.836Z'),
+                endAt: Utils\Utils::parseDateTime('2022-10-01T01:24:22.507Z'),
                 excludedDates: [
-                    '2024-09-04T18:42:56.896Z',
-                    '2024-08-20T04:19:01.323Z',
+                    '2024-09-05T06:03:12.683Z',
+                    '2024-08-20T15:25:52.444Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Daily,
                 includedDates: [
-                    '2024-03-27T14:01:24.061Z',
-                    '2026-01-18T08:13:33.253Z',
-                    '2023-08-15T19:33:56.265Z',
+                    '2024-03-27T23:03:05.170Z',
+                    '2026-01-19T02:44:08.736Z',
+                    '2023-08-16T01:22:23.488Z',
                 ],
                 interval: 1,
                 onDays: [
@@ -2328,16 +2328,16 @@ $request = new Operations\UpdateCalendarWebinarRequest(
             ),
             new Shared\CalendarEventRecurrence(
                 count: 8,
-                endAt: Utils\Utils::parseDateTime('2026-08-01T05:14:56.022Z'),
+                endAt: Utils\Utils::parseDateTime('2026-08-02T02:33:03.464Z'),
                 excludedDates: [
-                    '2023-06-19T22:27:56.647Z',
-                    '2023-06-08T22:17:49.558Z',
+                    '2023-06-20T03:27:29.968Z',
+                    '2023-06-09T03:07:55.122Z',
                 ],
                 frequency: Shared\CalendarEventRecurrenceFrequency::Weekly,
                 includedDates: [
-                    '2024-04-04T15:38:07.900Z',
-                    '2023-08-21T15:31:40.440Z',
-                    '2024-09-30T01:49:09.296Z',
+                    '2024-04-05T00:46:45.124Z',
+                    '2023-08-21T21:25:08.473Z',
+                    '2024-09-30T13:31:09.882Z',
                 ],
                 interval: 8,
                 onDays: [
@@ -2490,11 +2490,11 @@ $request = new Operations\UpdateCalendarWebinarRequest(
         registrantPassword: 'W7J6DhkM',
         requireAddress: false,
         requireJobTitle: false,
-        startAt: Utils\Utils::parseDateTime('2025-05-04T12:36:28.431Z'),
+        startAt: Utils\Utils::parseDateTime('2025-05-05T03:24:33.770Z'),
         status: Shared\CalendarWebinarStatus::Tentative,
         subject: 'Harum culpa decipio ex cubo ancilla cresco.',
         timezone: 'Europe/Kaliningrad',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-06T10:35:43.089Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-07T08:50:46.390Z'),
         webUrl: 'https://quiet-permafrost.name',
     ),
     connectionId: '<id>',

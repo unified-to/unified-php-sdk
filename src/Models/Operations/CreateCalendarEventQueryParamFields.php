@@ -36,6 +36,6 @@ enum CreateCalendarEventQueryParamFields: string
     case SendNotifications = 'send_notifications';
     case MatterId = 'matter_id';
     case Metadata = 'metadata';
-    case Raw = 'raw';
     case RoomIds = 'room_ids';
+    case Raw = 'raw';
 }

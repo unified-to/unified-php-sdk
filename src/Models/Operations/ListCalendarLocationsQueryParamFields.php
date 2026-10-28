@@ -12,13 +12,13 @@ namespace Unified\Unified_to\Models\Operations;
 enum ListCalendarLocationsQueryParamFields: string
 {
     case Id = 'id';
+    case CreatedAt = 'created_at';
+    case UpdatedAt = 'updated_at';
     case Name = 'name';
     case ParentId = 'parent_id';
     case Type = 'type';
     case Address = 'address';
-    case Raw = 'raw';
-    case CreatedAt = 'created_at';
-    case UpdatedAt = 'updated_at';
     case Timezone = 'timezone';
     case Metadata = 'metadata';
+    case Raw = 'raw';
 }
