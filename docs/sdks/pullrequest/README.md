@@ -36,9 +36,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-05T17:26:38.837Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-06T07:39:51.487Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '532d467b-f81c-4a8f-a8c9-1524ba82c570',
+        id: 'fca77442-d7c0-4345-a761-858029831ea8',
         labels: [
             'creptio',
             'tutamen',
@@ -47,7 +47,7 @@ $request = new Operations\CreateRepoPullrequestRequest(
         notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-22T19:20:51.606Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-23T14:14:10.091Z'),
     ),
     connectionId: '<id>',
 );
@@ -203,9 +203,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-05T17:26:38.845Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-06T07:39:51.494Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: 'ac73922a-c79a-426d-8608-96e45f97b3fa',
+        id: '056fee74-4e3b-434f-93d5-28afd37bfbca',
         labels: [
             'creptio',
             'tutamen',
@@ -214,7 +214,7 @@ $request = new Operations\PatchRepoPullrequestRequest(
         notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-22T19:20:51.616Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-23T14:14:10.099Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -321,9 +321,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-05T17:26:38.845Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-06T07:39:51.494Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: 'ac73922a-c79a-426d-8608-96e45f97b3fa',
+        id: '056fee74-4e3b-434f-93d5-28afd37bfbca',
         labels: [
             'creptio',
             'tutamen',
@@ -332,7 +332,7 @@ $request = new Operations\UpdateRepoPullrequestRequest(
         notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-22T19:20:51.616Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-23T14:14:10.099Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

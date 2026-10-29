@@ -37,7 +37,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: '0b13f273-2c22-4a2b-b68d-9c424dc3cbdc',
+        id: '46cef16f-2685-4308-9d01-97254eebf33d',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -47,7 +47,7 @@ $request = new Operations\CreateShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-15T13:54:44.172Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-15T14:55:55.315Z'),
     ),
     connectionId: '<id>',
 );
@@ -204,7 +204,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: 'bf3dfa71-cb9d-451c-8bce-f7c38b7ab64d',
+        id: 'd477c2dc-3eac-4d1d-b7ec-c703c2655537',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -214,7 +214,7 @@ $request = new Operations\PatchShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-15T13:54:44.177Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-15T14:55:55.317Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -322,7 +322,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: 'bf3dfa71-cb9d-451c-8bce-f7c38b7ab64d',
+        id: 'd477c2dc-3eac-4d1d-b7ec-c703c2655537',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -332,7 +332,7 @@ $request = new Operations\UpdateShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-15T13:54:44.177Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-15T14:55:55.317Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
