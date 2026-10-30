@@ -374,6 +374,14 @@ class UnifiedTo
 
     public Feedback $feedback;
 
+    public Conversation $conversation;
+
+    public Guest $guest;
+
+    public Listing $listing;
+
+    public Unittype $unittype;
+
     public Repo $repo;
 
     public Branch $branch;
@@ -647,6 +655,10 @@ class UnifiedTo
         $this->performance = new Performance($this->sdkConfiguration);
         $this->cycle = new Cycle($this->sdkConfiguration);
         $this->feedback = new Feedback($this->sdkConfiguration);
+        $this->conversation = new Conversation($this->sdkConfiguration);
+        $this->guest = new Guest($this->sdkConfiguration);
+        $this->listing = new Listing($this->sdkConfiguration);
+        $this->unittype = new Unittype($this->sdkConfiguration);
         $this->repo = new Repo($this->sdkConfiguration);
         $this->branch = new Branch($this->sdkConfiguration);
         $this->commit = new Commit($this->sdkConfiguration);

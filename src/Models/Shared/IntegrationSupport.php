@@ -392,6 +392,15 @@ class IntegrationSupport
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\ListGuestId $listGuestId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_guest_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListGuestId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ListGuestId $listGuestId = null;
+
+    /**
+     *
      * @var ?\Unified\Unified_to\Models\Shared\ListInstanceId $listInstanceId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_instance_id')]
@@ -506,6 +515,15 @@ class IntegrationSupport
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListListId|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListListId $listListId = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\ListListingId $listListingId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_listing_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListListingId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ListListingId $listListingId = null;
 
     /**
      *
@@ -743,6 +761,15 @@ class IntegrationSupport
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\ListReservationId $listReservationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_reservation_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListReservationId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ListReservationId $listReservationId = null;
+
+    /**
+     *
      * @var ?\Unified\Unified_to\Models\Shared\ListRoleId $listRoleId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('list_role_id')]
@@ -947,6 +974,15 @@ class IntegrationSupport
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?ListType $listType = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\ListUnittypeId $listUnittypeId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('list_unittype_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ListUnittypeId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?ListUnittypeId $listUnittypeId = null;
 
     /**
      *
@@ -1556,6 +1592,15 @@ class IntegrationSupport
 
     /**
      *
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookGuestId $virtualWebhookGuestId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_guest_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookGuestId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?VirtualWebhookGuestId $virtualWebhookGuestId = null;
+
+    /**
+     *
      * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookInvoiceId $virtualWebhookInvoiceId
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_invoice_id')]
@@ -1643,6 +1688,15 @@ class IntegrationSupport
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookListId|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?VirtualWebhookListId $virtualWebhookListId = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookListingId $virtualWebhookListingId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_listing_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookListingId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?VirtualWebhookListingId $virtualWebhookListingId = null;
 
     /**
      *
@@ -1805,6 +1859,15 @@ class IntegrationSupport
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookRepoId|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?VirtualWebhookRepoId $virtualWebhookRepoId = null;
+
+    /**
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\VirtualWebhookReservationId $virtualWebhookReservationId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('virtual_webhook_reservation_id')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\VirtualWebhookReservationId|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?VirtualWebhookReservationId $virtualWebhookReservationId = null;
 
     /**
      *
@@ -2002,6 +2065,7 @@ class IntegrationSupport
      * @param  ?\Unified\Unified_to\Models\Shared\ListFulltext  $listFulltext
      * @param  ?\Unified\Unified_to\Models\Shared\ListGoal  $listGoal
      * @param  ?\Unified\Unified_to\Models\Shared\ListGroupId  $listGroupId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListGuestId  $listGuestId
      * @param  ?\Unified\Unified_to\Models\Shared\ListInstanceId  $listInstanceId
      * @param  ?\Unified\Unified_to\Models\Shared\ListInstructorId  $listInstructorId
      * @param  ?\Unified\Unified_to\Models\Shared\ListInterviewId  $listInterviewId
@@ -2015,6 +2079,7 @@ class IntegrationSupport
      * @param  ?\Unified\Unified_to\Models\Shared\ListLimit  $listLimit
      * @param  ?\Unified\Unified_to\Models\Shared\ListLinkId  $listLinkId
      * @param  ?\Unified\Unified_to\Models\Shared\ListListId  $listListId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListListingId  $listListingId
      * @param  ?\Unified\Unified_to\Models\Shared\ListLocationId  $listLocationId
      * @param  ?\Unified\Unified_to\Models\Shared\ListMatterId  $listMatterId
      * @param  ?\Unified\Unified_to\Models\Shared\ListMedium  $listMedium
@@ -2041,6 +2106,7 @@ class IntegrationSupport
      * @param  ?\Unified\Unified_to\Models\Shared\ListReference  $listReference
      * @param  ?\Unified\Unified_to\Models\Shared\ListRegionId  $listRegionId
      * @param  ?\Unified\Unified_to\Models\Shared\ListRepoId  $listRepoId
+     * @param  ?\Unified\Unified_to\Models\Shared\ListReservationId  $listReservationId
      * @param  ?\Unified\Unified_to\Models\Shared\ListRoleId  $listRoleId
      * @param  ?\Unified\Unified_to\Models\Shared\ListRoomId  $listRoomId
      * @param  ?\Unified\Unified_to\Models\Shared\ListRootId  $listRootId
@@ -2064,6 +2130,7 @@ class IntegrationSupport
      * @param  ?\Unified\Unified_to\Models\Shared\ListTemplateId  $listTemplateId
      * @param  ?\Unified\Unified_to\Models\Shared\ListTicketId  $listTicketId
      * @param  ?\Unified\Unified_to\Models\Shared\ListType  $listType
+     * @param  ?\Unified\Unified_to\Models\Shared\ListUnittypeId  $listUnittypeId
      * @param  ?\Unified\Unified_to\Models\Shared\ListUpdatedGte  $listUpdatedGte
      * @param  ?\Unified\Unified_to\Models\Shared\ListUserId  $listUserId
      * @param  ?\Unified\Unified_to\Models\Shared\ListUserMentionedId  $listUserMentionedId
@@ -2131,6 +2198,7 @@ class IntegrationSupport
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookFields  $virtualWebhookFields
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookFormId  $virtualWebhookFormId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookGroupId  $virtualWebhookGroupId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookGuestId  $virtualWebhookGuestId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookInvoiceId  $virtualWebhookInvoiceId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookIoId  $virtualWebhookIoId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookItemId  $virtualWebhookItemId
@@ -2141,6 +2209,7 @@ class IntegrationSupport
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookLimit  $virtualWebhookLimit
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookLinkId  $virtualWebhookLinkId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookListId  $virtualWebhookListId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookListingId  $virtualWebhookListingId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookLocationId  $virtualWebhookLocationId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookMatterId  $virtualWebhookMatterId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookMemberId  $virtualWebhookMemberId
@@ -2159,6 +2228,7 @@ class IntegrationSupport
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookPropertyId  $virtualWebhookPropertyId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookReference  $virtualWebhookReference
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookRepoId  $virtualWebhookRepoId
+     * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookReservationId  $virtualWebhookReservationId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookSaleschannelId  $virtualWebhookSaleschannelId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookSessionId  $virtualWebhookSessionId
      * @param  ?\Unified\Unified_to\Models\Shared\VirtualWebhookShipmentId  $virtualWebhookShipmentId
@@ -2178,7 +2248,7 @@ class IntegrationSupport
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyIntegrationSupportWebhookEvents  $webhookEvents
      * @phpstan-pure
      */
-    public function __construct(array $rawObjects, ?FromWebhook $fromWebhook = null, ?array $inboundFields = null, ?ListAccountId $listAccountId = null, ?ListAdId $listAdId = null, ?ListAgentId $listAgentId = null, ?ListApplicationId $listApplicationId = null, ?ListApproverUserId $listApproverUserId = null, ?ListAssignedUserId $listAssignedUserId = null, ?ListBankfeedaccountId $listBankfeedaccountId = null, ?ListBenefitId $listBenefitId = null, ?ListBillId $listBillId = null, ?ListBranchId $listBranchId = null, ?ListCalendarId $listCalendarId = null, ?ListCallId $listCallId = null, ?ListCampaignId $listCampaignId = null, ?ListCandidateId $listCandidateId = null, ?ListCarrierId $listCarrierId = null, ?ListCategoryId $listCategoryId = null, ?ListChannelId $listChannelId = null, ?ListClassId $listClassId = null, ?ListCollectionId $listCollectionId = null, ?ListCompanyId $listCompanyId = null, ?ListContactId $listContactId = null, ?ListContentId $listContentId = null, ?ListCourseId $listCourseId = null, ?ListCustomerId $listCustomerId = null, ?ListCycleId $listCycleId = null, ?ListDatabaseId $listDatabaseId = null, ?ListDealId $listDealId = null, ?ListDestinationId $listDestinationId = null, ?ListDimension $listDimension = null, ?ListDocumentId $listDocumentId = null, ?ListEffectiveStatus $listEffectiveStatus = null, ?ListEmail $listEmail = null, ?ListEndLt $listEndLt = null, ?ListEventId $listEventId = null, ?ListExpand $listExpand = null, ?ListFormId $listFormId = null, ?ListFulltext $listFulltext = null, ?ListGoal $listGoal = null, ?ListGroupId $listGroupId = null, ?ListInstanceId $listInstanceId = null, ?ListInstructorId $listInstructorId = null, ?ListInterviewId $listInterviewId = null, ?ListInvoiceId $listInvoiceId = null, ?ListIoId $listIoId = null, ?ListItemId $listItemId = null, ?ListItemVariantId $listItemVariantId = null, ?ListJobId $listJobId = null, ?ListLabelId $listLabelId = null, ?ListLeadId $listLeadId = null, ?ListLimit $listLimit = null, ?ListLinkId $listLinkId = null, ?ListListId $listListId = null, ?ListLocationId $listLocationId = null, ?ListMatterId $listMatterId = null, ?ListMedium $listMedium = null, ?ListMemberId $listMemberId = null, ?ListOffset $listOffset = null, ?ListOrder $listOrder = null, ?ListOrderId $listOrderId = null, ?ListOrgId $listOrgId = null, ?ListPackageId $listPackageId = null, ?ListPageId $listPageId = null, ?ListParentId $listParentId = null, ?ListPatientId $listPatientId = null, ?ListPaymentId $listPaymentId = null, ?ListPayslipId $listPayslipId = null, ?ListPipelineId $listPipelineId = null, ?ListPostId $listPostId = null, ?ListPracticeareaId $listPracticeareaId = null, ?ListPractitionerId $listPractitionerId = null, ?ListProfileId $listProfileId = null, ?ListProjectId $listProjectId = null, ?ListPropertyId $listPropertyId = null, ?ListQuery $listQuery = null, ?ListRawFields $listRawFields = null, ?ListReference $listReference = null, ?ListRegionId $listRegionId = null, ?ListRepoId $listRepoId = null, ?ListRoleId $listRoleId = null, ?ListRoomId $listRoomId = null, ?ListRootId $listRootId = null, ?ListSaleschannelId $listSaleschannelId = null, ?ListSegmentId $listSegmentId = null, ?ListServiceId $listServiceId = null, ?ListSessionId $listSessionId = null, ?ListShipmentId $listShipmentId = null, ?ListSize $listSize = null, ?ListSortByCreatedAt $listSortByCreatedAt = null, ?ListSortByName $listSortByName = null, ?ListSortByUpdatedAt $listSortByUpdatedAt = null, ?ListSource $listSource = null, ?ListSpaceId $listSpaceId = null, ?ListStartGte $listStartGte = null, ?ListStatus $listStatus = null, ?ListStudentId $listStudentId = null, ?ListTableId $listTableId = null, ?ListTaskId $listTaskId = null, ?ListTeacherId $listTeacherId = null, ?ListTemplateId $listTemplateId = null, ?ListTicketId $listTicketId = null, ?ListType $listType = null, ?ListUpdatedGte $listUpdatedGte = null, ?ListUserId $listUserId = null, ?ListUserMentionedId $listUserMentionedId = null, ?ListVisitorId $listVisitorId = null, ?array $methods = null, ?NativeWebhookCalendarId $nativeWebhookCalendarId = null, ?NativeWebhookCarrierId $nativeWebhookCarrierId = null, ?NativeWebhookChannelId $nativeWebhookChannelId = null, ?NativeWebhookCompanyId $nativeWebhookCompanyId = null, ?NativeWebhookCourseId $nativeWebhookCourseId = null, ?NativeWebhookDatabaseId $nativeWebhookDatabaseId = null, ?NativeWebhookEventId $nativeWebhookEventId = null, ?NativeWebhookFormId $nativeWebhookFormId = null, ?NativeWebhookIoId $nativeWebhookIoId = null, ?NativeWebhookLabelId $nativeWebhookLabelId = null, ?NativeWebhookListId $nativeWebhookListId = null, ?NativeWebhookMemberId $nativeWebhookMemberId = null, ?NativeWebhookOrderId $nativeWebhookOrderId = null, ?NativeWebhookParentId $nativeWebhookParentId = null, ?NativeWebhookProjectId $nativeWebhookProjectId = null, ?NativeWebhookPropertyId $nativeWebhookPropertyId = null, ?NativeWebhookSessionId $nativeWebhookSessionId = null, ?NativeWebhookShipmentId $nativeWebhookShipmentId = null, ?NativeWebhookStudentId $nativeWebhookStudentId = null, ?NativeWebhookTableId $nativeWebhookTableId = null, ?NativeWebhookTaskId $nativeWebhookTaskId = null, ?NativeWebhookTemplateId $nativeWebhookTemplateId = null, ?NativeWebhookType $nativeWebhookType = null, ?NativeWebhookUpdatedGte $nativeWebhookUpdatedGte = null, ?NativeWebhookVisitorId $nativeWebhookVisitorId = null, ?array $outboundFields = null, ?SearchDomain $searchDomain = null, ?SearchEmail $searchEmail = null, ?SearchLinkedinurl $searchLinkedinurl = null, ?SearchName $searchName = null, ?SearchTwitter $searchTwitter = null, ?array $slowFields = null, ?VirtualWebhookAccountId $virtualWebhookAccountId = null, ?VirtualWebhookAdId $virtualWebhookAdId = null, ?VirtualWebhookApplicationId $virtualWebhookApplicationId = null, ?VirtualWebhookApproverUserId $virtualWebhookApproverUserId = null, ?VirtualWebhookAssignedUserId $virtualWebhookAssignedUserId = null, ?VirtualWebhookBankfeedaccountId $virtualWebhookBankfeedaccountId = null, ?VirtualWebhookBenefitId $virtualWebhookBenefitId = null, ?VirtualWebhookBillId $virtualWebhookBillId = null, ?VirtualWebhookBranchId $virtualWebhookBranchId = null, ?VirtualWebhookCalendarId $virtualWebhookCalendarId = null, ?VirtualWebhookCallId $virtualWebhookCallId = null, ?VirtualWebhookCampaignId $virtualWebhookCampaignId = null, ?VirtualWebhookCandidateId $virtualWebhookCandidateId = null, ?VirtualWebhookCarrierId $virtualWebhookCarrierId = null, ?VirtualWebhookChannelId $virtualWebhookChannelId = null, ?VirtualWebhookCollectionId $virtualWebhookCollectionId = null, ?VirtualWebhookCompanyId $virtualWebhookCompanyId = null, ?VirtualWebhookContactId $virtualWebhookContactId = null, ?VirtualWebhookCourseId $virtualWebhookCourseId = null, ?VirtualWebhookCustomerId $virtualWebhookCustomerId = null, ?VirtualWebhookCycleId $virtualWebhookCycleId = null, ?VirtualWebhookDatabaseId $virtualWebhookDatabaseId = null, ?VirtualWebhookDealId $virtualWebhookDealId = null, ?VirtualWebhookEffectiveStatus $virtualWebhookEffectiveStatus = null, ?VirtualWebhookEndLt $virtualWebhookEndLt = null, ?VirtualWebhookEventId $virtualWebhookEventId = null, ?VirtualWebhookExpand $virtualWebhookExpand = null, ?VirtualWebhookFields $virtualWebhookFields = null, ?VirtualWebhookFormId $virtualWebhookFormId = null, ?VirtualWebhookGroupId $virtualWebhookGroupId = null, ?VirtualWebhookInvoiceId $virtualWebhookInvoiceId = null, ?VirtualWebhookIoId $virtualWebhookIoId = null, ?VirtualWebhookItemId $virtualWebhookItemId = null, ?VirtualWebhookItemVariantId $virtualWebhookItemVariantId = null, ?VirtualWebhookJobId $virtualWebhookJobId = null, ?VirtualWebhookLabelId $virtualWebhookLabelId = null, ?VirtualWebhookLeadId $virtualWebhookLeadId = null, ?VirtualWebhookLimit $virtualWebhookLimit = null, ?VirtualWebhookLinkId $virtualWebhookLinkId = null, ?VirtualWebhookListId $virtualWebhookListId = null, ?VirtualWebhookLocationId $virtualWebhookLocationId = null, ?VirtualWebhookMatterId $virtualWebhookMatterId = null, ?VirtualWebhookMemberId $virtualWebhookMemberId = null, ?VirtualWebhookOrderId $virtualWebhookOrderId = null, ?VirtualWebhookOrgId $virtualWebhookOrgId = null, ?VirtualWebhookPageId $virtualWebhookPageId = null, ?VirtualWebhookParentId $virtualWebhookParentId = null, ?VirtualWebhookPatientId $virtualWebhookPatientId = null, ?VirtualWebhookPaymentId $virtualWebhookPaymentId = null, ?VirtualWebhookPipelineId $virtualWebhookPipelineId = null, ?VirtualWebhookPostId $virtualWebhookPostId = null, ?VirtualWebhookPracticeareaId $virtualWebhookPracticeareaId = null, ?VirtualWebhookPractitionerId $virtualWebhookPractitionerId = null, ?VirtualWebhookProfileId $virtualWebhookProfileId = null, ?VirtualWebhookProjectId $virtualWebhookProjectId = null, ?VirtualWebhookPropertyId $virtualWebhookPropertyId = null, ?VirtualWebhookReference $virtualWebhookReference = null, ?VirtualWebhookRepoId $virtualWebhookRepoId = null, ?VirtualWebhookSaleschannelId $virtualWebhookSaleschannelId = null, ?VirtualWebhookSessionId $virtualWebhookSessionId = null, ?VirtualWebhookShipmentId $virtualWebhookShipmentId = null, ?VirtualWebhookSpaceId $virtualWebhookSpaceId = null, ?VirtualWebhookStartGte $virtualWebhookStartGte = null, ?VirtualWebhookStatus $virtualWebhookStatus = null, ?VirtualWebhookStudentId $virtualWebhookStudentId = null, ?VirtualWebhookTableId $virtualWebhookTableId = null, ?VirtualWebhookTaskId $virtualWebhookTaskId = null, ?VirtualWebhookTemplateId $virtualWebhookTemplateId = null, ?VirtualWebhookTicketId $virtualWebhookTicketId = null, ?VirtualWebhookType $virtualWebhookType = null, ?VirtualWebhookUpdatedGte $virtualWebhookUpdatedGte = null, ?VirtualWebhookUserId $virtualWebhookUserId = null, ?VirtualWebhookUserMentionedId $virtualWebhookUserMentionedId = null, ?VirtualWebhookVisitorId $virtualWebhookVisitorId = null, ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null)
+    public function __construct(array $rawObjects, ?FromWebhook $fromWebhook = null, ?array $inboundFields = null, ?ListAccountId $listAccountId = null, ?ListAdId $listAdId = null, ?ListAgentId $listAgentId = null, ?ListApplicationId $listApplicationId = null, ?ListApproverUserId $listApproverUserId = null, ?ListAssignedUserId $listAssignedUserId = null, ?ListBankfeedaccountId $listBankfeedaccountId = null, ?ListBenefitId $listBenefitId = null, ?ListBillId $listBillId = null, ?ListBranchId $listBranchId = null, ?ListCalendarId $listCalendarId = null, ?ListCallId $listCallId = null, ?ListCampaignId $listCampaignId = null, ?ListCandidateId $listCandidateId = null, ?ListCarrierId $listCarrierId = null, ?ListCategoryId $listCategoryId = null, ?ListChannelId $listChannelId = null, ?ListClassId $listClassId = null, ?ListCollectionId $listCollectionId = null, ?ListCompanyId $listCompanyId = null, ?ListContactId $listContactId = null, ?ListContentId $listContentId = null, ?ListCourseId $listCourseId = null, ?ListCustomerId $listCustomerId = null, ?ListCycleId $listCycleId = null, ?ListDatabaseId $listDatabaseId = null, ?ListDealId $listDealId = null, ?ListDestinationId $listDestinationId = null, ?ListDimension $listDimension = null, ?ListDocumentId $listDocumentId = null, ?ListEffectiveStatus $listEffectiveStatus = null, ?ListEmail $listEmail = null, ?ListEndLt $listEndLt = null, ?ListEventId $listEventId = null, ?ListExpand $listExpand = null, ?ListFormId $listFormId = null, ?ListFulltext $listFulltext = null, ?ListGoal $listGoal = null, ?ListGroupId $listGroupId = null, ?ListGuestId $listGuestId = null, ?ListInstanceId $listInstanceId = null, ?ListInstructorId $listInstructorId = null, ?ListInterviewId $listInterviewId = null, ?ListInvoiceId $listInvoiceId = null, ?ListIoId $listIoId = null, ?ListItemId $listItemId = null, ?ListItemVariantId $listItemVariantId = null, ?ListJobId $listJobId = null, ?ListLabelId $listLabelId = null, ?ListLeadId $listLeadId = null, ?ListLimit $listLimit = null, ?ListLinkId $listLinkId = null, ?ListListId $listListId = null, ?ListListingId $listListingId = null, ?ListLocationId $listLocationId = null, ?ListMatterId $listMatterId = null, ?ListMedium $listMedium = null, ?ListMemberId $listMemberId = null, ?ListOffset $listOffset = null, ?ListOrder $listOrder = null, ?ListOrderId $listOrderId = null, ?ListOrgId $listOrgId = null, ?ListPackageId $listPackageId = null, ?ListPageId $listPageId = null, ?ListParentId $listParentId = null, ?ListPatientId $listPatientId = null, ?ListPaymentId $listPaymentId = null, ?ListPayslipId $listPayslipId = null, ?ListPipelineId $listPipelineId = null, ?ListPostId $listPostId = null, ?ListPracticeareaId $listPracticeareaId = null, ?ListPractitionerId $listPractitionerId = null, ?ListProfileId $listProfileId = null, ?ListProjectId $listProjectId = null, ?ListPropertyId $listPropertyId = null, ?ListQuery $listQuery = null, ?ListRawFields $listRawFields = null, ?ListReference $listReference = null, ?ListRegionId $listRegionId = null, ?ListRepoId $listRepoId = null, ?ListReservationId $listReservationId = null, ?ListRoleId $listRoleId = null, ?ListRoomId $listRoomId = null, ?ListRootId $listRootId = null, ?ListSaleschannelId $listSaleschannelId = null, ?ListSegmentId $listSegmentId = null, ?ListServiceId $listServiceId = null, ?ListSessionId $listSessionId = null, ?ListShipmentId $listShipmentId = null, ?ListSize $listSize = null, ?ListSortByCreatedAt $listSortByCreatedAt = null, ?ListSortByName $listSortByName = null, ?ListSortByUpdatedAt $listSortByUpdatedAt = null, ?ListSource $listSource = null, ?ListSpaceId $listSpaceId = null, ?ListStartGte $listStartGte = null, ?ListStatus $listStatus = null, ?ListStudentId $listStudentId = null, ?ListTableId $listTableId = null, ?ListTaskId $listTaskId = null, ?ListTeacherId $listTeacherId = null, ?ListTemplateId $listTemplateId = null, ?ListTicketId $listTicketId = null, ?ListType $listType = null, ?ListUnittypeId $listUnittypeId = null, ?ListUpdatedGte $listUpdatedGte = null, ?ListUserId $listUserId = null, ?ListUserMentionedId $listUserMentionedId = null, ?ListVisitorId $listVisitorId = null, ?array $methods = null, ?NativeWebhookCalendarId $nativeWebhookCalendarId = null, ?NativeWebhookCarrierId $nativeWebhookCarrierId = null, ?NativeWebhookChannelId $nativeWebhookChannelId = null, ?NativeWebhookCompanyId $nativeWebhookCompanyId = null, ?NativeWebhookCourseId $nativeWebhookCourseId = null, ?NativeWebhookDatabaseId $nativeWebhookDatabaseId = null, ?NativeWebhookEventId $nativeWebhookEventId = null, ?NativeWebhookFormId $nativeWebhookFormId = null, ?NativeWebhookIoId $nativeWebhookIoId = null, ?NativeWebhookLabelId $nativeWebhookLabelId = null, ?NativeWebhookListId $nativeWebhookListId = null, ?NativeWebhookMemberId $nativeWebhookMemberId = null, ?NativeWebhookOrderId $nativeWebhookOrderId = null, ?NativeWebhookParentId $nativeWebhookParentId = null, ?NativeWebhookProjectId $nativeWebhookProjectId = null, ?NativeWebhookPropertyId $nativeWebhookPropertyId = null, ?NativeWebhookSessionId $nativeWebhookSessionId = null, ?NativeWebhookShipmentId $nativeWebhookShipmentId = null, ?NativeWebhookStudentId $nativeWebhookStudentId = null, ?NativeWebhookTableId $nativeWebhookTableId = null, ?NativeWebhookTaskId $nativeWebhookTaskId = null, ?NativeWebhookTemplateId $nativeWebhookTemplateId = null, ?NativeWebhookType $nativeWebhookType = null, ?NativeWebhookUpdatedGte $nativeWebhookUpdatedGte = null, ?NativeWebhookVisitorId $nativeWebhookVisitorId = null, ?array $outboundFields = null, ?SearchDomain $searchDomain = null, ?SearchEmail $searchEmail = null, ?SearchLinkedinurl $searchLinkedinurl = null, ?SearchName $searchName = null, ?SearchTwitter $searchTwitter = null, ?array $slowFields = null, ?VirtualWebhookAccountId $virtualWebhookAccountId = null, ?VirtualWebhookAdId $virtualWebhookAdId = null, ?VirtualWebhookApplicationId $virtualWebhookApplicationId = null, ?VirtualWebhookApproverUserId $virtualWebhookApproverUserId = null, ?VirtualWebhookAssignedUserId $virtualWebhookAssignedUserId = null, ?VirtualWebhookBankfeedaccountId $virtualWebhookBankfeedaccountId = null, ?VirtualWebhookBenefitId $virtualWebhookBenefitId = null, ?VirtualWebhookBillId $virtualWebhookBillId = null, ?VirtualWebhookBranchId $virtualWebhookBranchId = null, ?VirtualWebhookCalendarId $virtualWebhookCalendarId = null, ?VirtualWebhookCallId $virtualWebhookCallId = null, ?VirtualWebhookCampaignId $virtualWebhookCampaignId = null, ?VirtualWebhookCandidateId $virtualWebhookCandidateId = null, ?VirtualWebhookCarrierId $virtualWebhookCarrierId = null, ?VirtualWebhookChannelId $virtualWebhookChannelId = null, ?VirtualWebhookCollectionId $virtualWebhookCollectionId = null, ?VirtualWebhookCompanyId $virtualWebhookCompanyId = null, ?VirtualWebhookContactId $virtualWebhookContactId = null, ?VirtualWebhookCourseId $virtualWebhookCourseId = null, ?VirtualWebhookCustomerId $virtualWebhookCustomerId = null, ?VirtualWebhookCycleId $virtualWebhookCycleId = null, ?VirtualWebhookDatabaseId $virtualWebhookDatabaseId = null, ?VirtualWebhookDealId $virtualWebhookDealId = null, ?VirtualWebhookEffectiveStatus $virtualWebhookEffectiveStatus = null, ?VirtualWebhookEndLt $virtualWebhookEndLt = null, ?VirtualWebhookEventId $virtualWebhookEventId = null, ?VirtualWebhookExpand $virtualWebhookExpand = null, ?VirtualWebhookFields $virtualWebhookFields = null, ?VirtualWebhookFormId $virtualWebhookFormId = null, ?VirtualWebhookGroupId $virtualWebhookGroupId = null, ?VirtualWebhookGuestId $virtualWebhookGuestId = null, ?VirtualWebhookInvoiceId $virtualWebhookInvoiceId = null, ?VirtualWebhookIoId $virtualWebhookIoId = null, ?VirtualWebhookItemId $virtualWebhookItemId = null, ?VirtualWebhookItemVariantId $virtualWebhookItemVariantId = null, ?VirtualWebhookJobId $virtualWebhookJobId = null, ?VirtualWebhookLabelId $virtualWebhookLabelId = null, ?VirtualWebhookLeadId $virtualWebhookLeadId = null, ?VirtualWebhookLimit $virtualWebhookLimit = null, ?VirtualWebhookLinkId $virtualWebhookLinkId = null, ?VirtualWebhookListId $virtualWebhookListId = null, ?VirtualWebhookListingId $virtualWebhookListingId = null, ?VirtualWebhookLocationId $virtualWebhookLocationId = null, ?VirtualWebhookMatterId $virtualWebhookMatterId = null, ?VirtualWebhookMemberId $virtualWebhookMemberId = null, ?VirtualWebhookOrderId $virtualWebhookOrderId = null, ?VirtualWebhookOrgId $virtualWebhookOrgId = null, ?VirtualWebhookPageId $virtualWebhookPageId = null, ?VirtualWebhookParentId $virtualWebhookParentId = null, ?VirtualWebhookPatientId $virtualWebhookPatientId = null, ?VirtualWebhookPaymentId $virtualWebhookPaymentId = null, ?VirtualWebhookPipelineId $virtualWebhookPipelineId = null, ?VirtualWebhookPostId $virtualWebhookPostId = null, ?VirtualWebhookPracticeareaId $virtualWebhookPracticeareaId = null, ?VirtualWebhookPractitionerId $virtualWebhookPractitionerId = null, ?VirtualWebhookProfileId $virtualWebhookProfileId = null, ?VirtualWebhookProjectId $virtualWebhookProjectId = null, ?VirtualWebhookPropertyId $virtualWebhookPropertyId = null, ?VirtualWebhookReference $virtualWebhookReference = null, ?VirtualWebhookRepoId $virtualWebhookRepoId = null, ?VirtualWebhookReservationId $virtualWebhookReservationId = null, ?VirtualWebhookSaleschannelId $virtualWebhookSaleschannelId = null, ?VirtualWebhookSessionId $virtualWebhookSessionId = null, ?VirtualWebhookShipmentId $virtualWebhookShipmentId = null, ?VirtualWebhookSpaceId $virtualWebhookSpaceId = null, ?VirtualWebhookStartGte $virtualWebhookStartGte = null, ?VirtualWebhookStatus $virtualWebhookStatus = null, ?VirtualWebhookStudentId $virtualWebhookStudentId = null, ?VirtualWebhookTableId $virtualWebhookTableId = null, ?VirtualWebhookTaskId $virtualWebhookTaskId = null, ?VirtualWebhookTemplateId $virtualWebhookTemplateId = null, ?VirtualWebhookTicketId $virtualWebhookTicketId = null, ?VirtualWebhookType $virtualWebhookType = null, ?VirtualWebhookUpdatedGte $virtualWebhookUpdatedGte = null, ?VirtualWebhookUserId $virtualWebhookUserId = null, ?VirtualWebhookUserMentionedId $virtualWebhookUserMentionedId = null, ?VirtualWebhookVisitorId $virtualWebhookVisitorId = null, ?PropertyIntegrationSupportWebhookEvents $webhookEvents = null)
     {
         $this->rawObjects = $rawObjects;
         $this->fromWebhook = $fromWebhook;
@@ -2222,6 +2292,7 @@ class IntegrationSupport
         $this->listFulltext = $listFulltext;
         $this->listGoal = $listGoal;
         $this->listGroupId = $listGroupId;
+        $this->listGuestId = $listGuestId;
         $this->listInstanceId = $listInstanceId;
         $this->listInstructorId = $listInstructorId;
         $this->listInterviewId = $listInterviewId;
@@ -2235,6 +2306,7 @@ class IntegrationSupport
         $this->listLimit = $listLimit;
         $this->listLinkId = $listLinkId;
         $this->listListId = $listListId;
+        $this->listListingId = $listListingId;
         $this->listLocationId = $listLocationId;
         $this->listMatterId = $listMatterId;
         $this->listMedium = $listMedium;
@@ -2261,6 +2333,7 @@ class IntegrationSupport
         $this->listReference = $listReference;
         $this->listRegionId = $listRegionId;
         $this->listRepoId = $listRepoId;
+        $this->listReservationId = $listReservationId;
         $this->listRoleId = $listRoleId;
         $this->listRoomId = $listRoomId;
         $this->listRootId = $listRootId;
@@ -2284,6 +2357,7 @@ class IntegrationSupport
         $this->listTemplateId = $listTemplateId;
         $this->listTicketId = $listTicketId;
         $this->listType = $listType;
+        $this->listUnittypeId = $listUnittypeId;
         $this->listUpdatedGte = $listUpdatedGte;
         $this->listUserId = $listUserId;
         $this->listUserMentionedId = $listUserMentionedId;
@@ -2351,6 +2425,7 @@ class IntegrationSupport
         $this->virtualWebhookFields = $virtualWebhookFields;
         $this->virtualWebhookFormId = $virtualWebhookFormId;
         $this->virtualWebhookGroupId = $virtualWebhookGroupId;
+        $this->virtualWebhookGuestId = $virtualWebhookGuestId;
         $this->virtualWebhookInvoiceId = $virtualWebhookInvoiceId;
         $this->virtualWebhookIoId = $virtualWebhookIoId;
         $this->virtualWebhookItemId = $virtualWebhookItemId;
@@ -2361,6 +2436,7 @@ class IntegrationSupport
         $this->virtualWebhookLimit = $virtualWebhookLimit;
         $this->virtualWebhookLinkId = $virtualWebhookLinkId;
         $this->virtualWebhookListId = $virtualWebhookListId;
+        $this->virtualWebhookListingId = $virtualWebhookListingId;
         $this->virtualWebhookLocationId = $virtualWebhookLocationId;
         $this->virtualWebhookMatterId = $virtualWebhookMatterId;
         $this->virtualWebhookMemberId = $virtualWebhookMemberId;
@@ -2379,6 +2455,7 @@ class IntegrationSupport
         $this->virtualWebhookPropertyId = $virtualWebhookPropertyId;
         $this->virtualWebhookReference = $virtualWebhookReference;
         $this->virtualWebhookRepoId = $virtualWebhookRepoId;
+        $this->virtualWebhookReservationId = $virtualWebhookReservationId;
         $this->virtualWebhookSaleschannelId = $virtualWebhookSaleschannelId;
         $this->virtualWebhookSessionId = $virtualWebhookSessionId;
         $this->virtualWebhookShipmentId = $virtualWebhookShipmentId;

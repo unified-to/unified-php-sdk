@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [createAccountingQuote](#createaccountingquote) - Create a quote
+* [createPropertyQuote](#createpropertyquote) - Create a quote
 * [getAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [listAccountingQuotes](#listaccountingquotes) - List all quotes
 * [patchAccountingQuote](#patchaccountingquote) - Update a quote
@@ -56,6 +57,91 @@ if ($response->accountingQuote !== null) {
 ### Response
 
 **[?Operations\CreateAccountingQuoteResponse](../../Models/Operations/CreateAccountingQuoteResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createPropertyQuote
+
+Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createPropertyQuote" method="post" path="/property/{connection_id}/quote" example="property_quote" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreatePropertyQuoteRequest(
+    propertyQuote: new Shared\PropertyQuote(
+        adults: 1,
+        children: 1,
+        createdAt: Utils\Utils::parseDateTime('2020-12-18T19:14:11.415Z'),
+        currency: 'USD',
+        depositAmount: 594.54,
+        endAt: Utils\Utils::parseDateTime('2026-11-13'),
+        guests: 2,
+        id: '2daa4299-feb0-44b7-a285-44b5b62e5827',
+        lineItems: [
+            new Shared\PropertyLineitem(
+                amount: 1665,
+                description: '9 nights',
+                isMandatory: true,
+                name: 'Accommodation',
+                type: Shared\PropertyLineitemType::Base,
+            ),
+            new Shared\PropertyLineitem(
+                amount: 117,
+                isMandatory: true,
+                name: 'Cleaning fee',
+                type: Shared\PropertyLineitemType::Fee,
+            ),
+            new Shared\PropertyLineitem(
+                amount: 199.8,
+                isMandatory: true,
+                name: 'Lodging tax',
+                type: Shared\PropertyLineitemType::Tax,
+            ),
+        ],
+        startAt: Utils\Utils::parseDateTime('2026-11-04'),
+        totalAmount: 1981.8,
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->quote->createPropertyQuote(
+    request: $request
+);
+
+if ($response->propertyQuote !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreatePropertyQuoteRequest](../../Models/Operations/CreatePropertyQuoteRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\CreatePropertyQuoteResponse](../../Models/Operations/CreatePropertyQuoteResponse.md)**
 
 ### Errors
 

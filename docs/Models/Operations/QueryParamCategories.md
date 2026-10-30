@@ -43,3 +43,4 @@
 | `Legal`        | legal          |
 | `Compute`      | compute        |
 | `Healthcare`   | healthcare     |
+| `Property`     | property       |

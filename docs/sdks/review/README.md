@@ -7,14 +7,18 @@
 * [createCommerceReview](#createcommercereview) - Create a review
 * [getCommerceReview](#getcommercereview) - Retrieve a review
 * [getPerformanceReview](#getperformancereview) - Retrieve a review
+* [getPropertyReview](#getpropertyreview) - Retrieve a review
 * [getSocialReview](#getsocialreview) - Retrieve a review
 * [listCommerceReviews](#listcommercereviews) - List all reviews
 * [listPerformanceReviews](#listperformancereviews) - List all reviews
+* [listPropertyReviews](#listpropertyreviews) - List all reviews
 * [listSocialReviews](#listsocialreviews) - List all reviews
 * [patchCommerceReview](#patchcommercereview) - Update a review
+* [patchPropertyReview](#patchpropertyreview) - Update a review
 * [patchSocialReview](#patchsocialreview) - Update a review
 * [removeCommerceReview](#removecommercereview) - Remove a review
 * [updateCommerceReview](#updatecommercereview) - Update a review
+* [updatePropertyReview](#updatepropertyreview) - Update a review
 * [updateSocialReview](#updatesocialreview) - Update a review
 
 ## createCommerceReview
@@ -50,7 +54,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: 'ad3cf407-b26d-4c7a-b6aa-bdae01c62ba7',
+        id: '922b1434-a3a8-4e02-b6be-deca4ca48988',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -58,10 +62,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '5711609b-94d7-418d-81f1-3c46c7da6102',
+                id: '7abe6e4d-3bb9-4081-bc7e-e6d4c85bd3fd',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'b99f5702-af32-4f9e-a88e-43e9711adacc',
+                        id: 'b6aa1184-2f66-4378-8eb7-01c7b4aeced0',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -74,10 +78,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '5b4384a2-05cb-41fa-ba79-8d2c1ee1c6c7',
+                id: 'a8846c78-a2e9-4e90-b30f-e626b42ce327',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'd7935fd3-8271-41c0-b971-3da0fdab8420',
+                        id: '76c0a698-a543-4cd1-bfcb-4657426ab9db',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -93,7 +97,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-27T23:03:43.140Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-28T16:18:16.966Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -220,6 +224,57 @@ if ($response->performanceReview !== null) {
 ### Response
 
 **[?Operations\GetPerformanceReviewResponse](../../Models/Operations/GetPerformanceReviewResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getPropertyReview
+
+Retrieves a single PropertyReview by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getPropertyReview" method="get" path="/property/{connection_id}/review/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetPropertyReviewRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->review->getPropertyReview(
+    request: $request
+);
+
+if ($response->propertyReview !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\GetPropertyReviewRequest](../../Models/Operations/GetPropertyReviewRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\GetPropertyReviewResponse](../../Models/Operations/GetPropertyReviewResponse.md)**
 
 ### Errors
 
@@ -378,6 +433,56 @@ if ($response->performanceReviews !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listPropertyReviews
+
+Returns a list of PropertyReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listPropertyReviews" method="get" path="/property/{connection_id}/review" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListPropertyReviewsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->review->listPropertyReviews(
+    request: $request
+);
+
+if ($response->propertyReviews !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\ListPropertyReviewsRequest](../../Models/Operations/ListPropertyReviewsRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\ListPropertyReviewsResponse](../../Models/Operations/ListPropertyReviewsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listSocialReviews
 
 Returns a list of SocialReviews. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -461,7 +566,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '84023932-1ed0-4dfa-aab5-632a980f6379',
+        id: '50c6c7de-ce04-4c9b-8e2f-9b5250b5cb68',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -469,10 +574,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '0fbe06a7-6f45-4fef-b166-84e48d5a7fe2',
+                id: 'b2f55f92-fcb8-4fc5-b16f-399af73cd282',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'ca8ee0ea-ac89-4b7a-abff-3b3a8cd7d4f8',
+                        id: '08539354-5fdb-43e7-b478-c9ea4c81f79a',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -485,10 +590,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '2a00d75b-3ebd-447f-b35b-ff90ec5ac8d4',
+                id: '03e97493-edfb-4b59-b90e-16e6c0686b73',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'b6fa458f-15dd-4786-8600-bfe15c5f179f',
+                        id: '81aa09ce-5c3a-4d02-ac02-b96c92296208',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -504,7 +609,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-27T23:03:43.162Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-28T16:18:16.992Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -530,6 +635,100 @@ if ($response->commerceReview !== null) {
 ### Response
 
 **[?Operations\PatchCommerceReviewResponse](../../Models/Operations/PatchCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchPropertyReview
+
+Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchPropertyReview" method="patch" path="/property/{connection_id}/review/{id}" example="property_review" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchPropertyReviewRequest(
+    propertyReview: new Shared\PropertyReview(
+        authorName: 'Benton Jast',
+        categoryRatings: [
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Cleanliness,
+                comment: 'Umquam perferendis amitto voluptas sum blanditiis terreo.',
+                rating: 5,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Accuracy,
+                comment: 'Capitulus dolorem verus.',
+                rating: 4,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Communication,
+                rating: 1,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Checkin,
+                rating: 1,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Location,
+                rating: 2,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Value,
+                comment: 'Quos constans aperte tero sollers.',
+                rating: 5,
+            ),
+        ],
+        content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
+        createdAt: Utils\Utils::parseDateTime('2022-10-17T11:17:07.682Z'),
+        id: '6ae7d8aa-4360-4b4e-a4ea-e7e63979fc42',
+        isPublic: true,
+        metadata: [],
+        privateFeedback: 'Tripudio neque communis.',
+        rating: 3,
+        source: 'Airbnb',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-18T05:23:04.228Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->review->patchPropertyReview(
+    request: $request
+);
+
+if ($response->propertyReview !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\PatchPropertyReviewRequest](../../Models/Operations/PatchPropertyReviewRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\PatchPropertyReviewResponse](../../Models/Operations/PatchPropertyReviewResponse.md)**
 
 ### Errors
 
@@ -674,7 +873,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '84023932-1ed0-4dfa-aab5-632a980f6379',
+        id: '50c6c7de-ce04-4c9b-8e2f-9b5250b5cb68',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -682,10 +881,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '0fbe06a7-6f45-4fef-b166-84e48d5a7fe2',
+                id: 'b2f55f92-fcb8-4fc5-b16f-399af73cd282',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'ca8ee0ea-ac89-4b7a-abff-3b3a8cd7d4f8',
+                        id: '08539354-5fdb-43e7-b478-c9ea4c81f79a',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -698,10 +897,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '2a00d75b-3ebd-447f-b35b-ff90ec5ac8d4',
+                id: '03e97493-edfb-4b59-b90e-16e6c0686b73',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'b6fa458f-15dd-4786-8600-bfe15c5f179f',
+                        id: '81aa09ce-5c3a-4d02-ac02-b96c92296208',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -717,7 +916,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-08-27T23:03:43.162Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-28T16:18:16.992Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -743,6 +942,100 @@ if ($response->commerceReview !== null) {
 ### Response
 
 **[?Operations\UpdateCommerceReviewResponse](../../Models/Operations/UpdateCommerceReviewResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updatePropertyReview
+
+Updates the PropertyReview identified by `id`. Provide the unified PropertyReview fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updatePropertyReview" method="put" path="/property/{connection_id}/review/{id}" example="property_review" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdatePropertyReviewRequest(
+    propertyReview: new Shared\PropertyReview(
+        authorName: 'Benton Jast',
+        categoryRatings: [
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Cleanliness,
+                comment: 'Umquam perferendis amitto voluptas sum blanditiis terreo.',
+                rating: 5,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Accuracy,
+                comment: 'Capitulus dolorem verus.',
+                rating: 4,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Communication,
+                rating: 1,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Checkin,
+                rating: 1,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Location,
+                rating: 2,
+            ),
+            new Shared\PropertyCategoryrating(
+                category: Shared\PropertyCategoryratingCategory::Value,
+                comment: 'Quos constans aperte tero sollers.',
+                rating: 5,
+            ),
+        ],
+        content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
+        createdAt: Utils\Utils::parseDateTime('2022-10-17T11:17:07.682Z'),
+        id: '6ae7d8aa-4360-4b4e-a4ea-e7e63979fc42',
+        isPublic: true,
+        metadata: [],
+        privateFeedback: 'Tripudio neque communis.',
+        rating: 3,
+        source: 'Airbnb',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-18T05:23:04.228Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->review->updatePropertyReview(
+    request: $request
+);
+
+if ($response->propertyReview !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\UpdatePropertyReviewRequest](../../Models/Operations/UpdatePropertyReviewRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\UpdatePropertyReviewResponse](../../Models/Operations/UpdatePropertyReviewResponse.md)**
 
 ### Errors
 

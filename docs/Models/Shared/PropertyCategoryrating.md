@@ -1,0 +1,10 @@
+# PropertyCategoryrating
+
+
+## Fields
+
+| Field                                                                                           | Type                                                                                            | Required                                                                                        | Description                                                                                     |
+| ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| `category`                                                                                      | [?Shared\PropertyCategoryratingCategory](../../Models/Shared/PropertyCategoryratingCategory.md) | :heavy_minus_sign:                                                                              | the rated category                                                                              |
+| `comment`                                                                                       | *?string*                                                                                       | :heavy_minus_sign:                                                                              | the guest comment for this category                                                             |
+| `rating`                                                                                        | *?float*                                                                                        | :heavy_minus_sign:                                                                              | the category rating                                                                             |

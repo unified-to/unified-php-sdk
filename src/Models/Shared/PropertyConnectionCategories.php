@@ -49,4 +49,5 @@ enum PropertyConnectionCategories: string
     case Legal = 'legal';
     case Compute = 'compute';
     case Healthcare = 'healthcare';
+    case Property = 'property';
 }

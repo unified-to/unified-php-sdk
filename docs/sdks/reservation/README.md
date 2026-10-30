@@ -5,11 +5,16 @@
 ### Available Operations
 
 * [createCommerceReservation](#createcommercereservation) - Create a reservation
+* [createPropertyReservation](#createpropertyreservation) - Create a reservation
 * [getCommerceReservation](#getcommercereservation) - Retrieve a reservation
+* [getPropertyReservation](#getpropertyreservation) - Retrieve a reservation
 * [listCommerceReservations](#listcommercereservations) - List all reservations
+* [listPropertyReservations](#listpropertyreservations) - List all reservations
 * [patchCommerceReservation](#patchcommercereservation) - Update a reservation
+* [patchPropertyReservation](#patchpropertyreservation) - Update a reservation
 * [removeCommerceReservation](#removecommercereservation) - Remove a reservation
 * [updateCommerceReservation](#updatecommercereservation) - Update a reservation
+* [updatePropertyReservation](#updatepropertyreservation) - Update a reservation
 
 ## createCommerceReservation
 
@@ -41,13 +46,13 @@ $request = new Operations\CreateCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: '0698b75d-515c-4d7a-893b-0a8a03ebefcb',
+        id: '5e659d63-9feb-4a66-b01b-32d59bae7b28',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-05T14:52:25.158Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-05T19:23:23.890Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -71,6 +76,110 @@ if ($response->commerceReservation !== null) {
 ### Response
 
 **[?Operations\CreateCommerceReservationResponse](../../Models/Operations/CreateCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createPropertyReservation
+
+Creates a PropertyReservation. Provide the unified PropertyReservation fields in the request body; they are mapped to the provider's API. Returns the created PropertyReservation.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createPropertyReservation" method="post" path="/property/{connection_id}/reservation" example="property_reservation" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreatePropertyReservationRequest(
+    propertyReservation: new Shared\PropertyReservation(
+        adults: 4,
+        balanceAmount: 2181.6,
+        children: 2,
+        confirmationCode: 'GNLTDDQ88Z',
+        createdAt: Utils\Utils::parseDateTime('2022-06-03T01:40:03.655Z'),
+        currency: 'USD',
+        endAt: Utils\Utils::parseDateTime('2022-10-06T17:17:08.838Z'),
+        estimatedDepartureTime: '10:00',
+        guestEmail: 'anya.parisian@hotmail.com',
+        guestName: 'Anya Parisian',
+        guests: 6,
+        id: '78486216-48b5-4940-851d-a9ef28c1f6f7',
+        lineItems: [
+            new Shared\PropertyLineitem(
+                amount: 1980,
+                description: '11 nights',
+                isMandatory: true,
+                name: 'Accommodation',
+                type: Shared\PropertyLineitemType::Base,
+            ),
+            new Shared\PropertyLineitem(
+                amount: 162,
+                isMandatory: true,
+                name: 'Cleaning fee',
+                type: Shared\PropertyLineitemType::Fee,
+            ),
+            new Shared\PropertyLineitem(
+                amount: 237.6,
+                isMandatory: true,
+                name: 'Lodging tax',
+                type: Shared\PropertyLineitemType::Tax,
+            ),
+            new Shared\PropertyLineitem(
+                amount: -198,
+                isMandatory: false,
+                name: 'Weekly discount',
+                type: Shared\PropertyLineitemType::Discount,
+            ),
+        ],
+        metadata: [],
+        nights: 11,
+        notes: 'Conculco volaticus vis volva quas trepide vae earum temptatio tertius.',
+        paidAmount: 0,
+        pets: 1,
+        source: 'Vrbo',
+        startAt: Utils\Utils::parseDateTime('2022-09-25T17:17:08.838Z'),
+        status: Shared\PropertyReservationStatus::Pending,
+        totalAmount: 2181.6,
+        updatedAt: Utils\Utils::parseDateTime('2022-11-16T10:16:07.411Z'),
+        webUrl: 'https://antique-tennis.biz/',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->reservation->createPropertyReservation(
+    request: $request
+);
+
+if ($response->propertyReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\CreatePropertyReservationRequest](../../Models/Operations/CreatePropertyReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\CreatePropertyReservationResponse](../../Models/Operations/CreatePropertyReservationResponse.md)**
 
 ### Errors
 
@@ -129,6 +238,57 @@ if ($response->commerceReservation !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getPropertyReservation
+
+Retrieves a single PropertyReservation by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getPropertyReservation" method="get" path="/property/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetPropertyReservationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->reservation->getPropertyReservation(
+    request: $request
+);
+
+if ($response->propertyReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                            | Type                                                                                                 | Required                                                                                             | Description                                                                                          |
+| ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                           | [Operations\GetPropertyReservationRequest](../../Models/Operations/GetPropertyReservationRequest.md) | :heavy_check_mark:                                                                                   | The request object to use for the request.                                                           |
+
+### Response
+
+**[?Operations\GetPropertyReservationResponse](../../Models/Operations/GetPropertyReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listCommerceReservations
 
 Returns a list of CommerceReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -179,6 +339,56 @@ if ($response->commerceReservations !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listPropertyReservations
+
+Returns a list of PropertyReservations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listPropertyReservations" method="get" path="/property/{connection_id}/reservation" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListPropertyReservationsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->reservation->listPropertyReservations(
+    request: $request
+);
+
+if ($response->propertyReservations !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\ListPropertyReservationsRequest](../../Models/Operations/ListPropertyReservationsRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\ListPropertyReservationsResponse](../../Models/Operations/ListPropertyReservationsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchCommerceReservation
 
 Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
@@ -209,13 +419,13 @@ $request = new Operations\PatchCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: '30f290ad-c9e1-46fd-abed-af4dd0224751',
+        id: '68b85020-e3a7-44a1-aac4-66068d121941',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-05T14:52:25.162Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-05T19:23:23.892Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -240,6 +450,111 @@ if ($response->commerceReservation !== null) {
 ### Response
 
 **[?Operations\PatchCommerceReservationResponse](../../Models/Operations/PatchCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchPropertyReservation
+
+Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchPropertyReservation" method="patch" path="/property/{connection_id}/reservation/{id}" example="property_reservation" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchPropertyReservationRequest(
+    propertyReservation: new Shared\PropertyReservation(
+        adults: 4,
+        balanceAmount: 2181.6,
+        children: 2,
+        confirmationCode: 'GNLTDDQ88Z',
+        createdAt: Utils\Utils::parseDateTime('2022-06-03T01:40:03.655Z'),
+        currency: 'USD',
+        endAt: Utils\Utils::parseDateTime('2022-10-06T17:17:08.838Z'),
+        estimatedDepartureTime: '10:00',
+        guestEmail: 'anya.parisian@hotmail.com',
+        guestName: 'Anya Parisian',
+        guests: 6,
+        id: 'b2d526e6-a476-4723-bb1d-6d68645ca941',
+        lineItems: [
+            new Shared\PropertyLineitem(
+                amount: 1980,
+                description: '11 nights',
+                isMandatory: true,
+                name: 'Accommodation',
+                type: Shared\PropertyLineitemType::Base,
+            ),
+            new Shared\PropertyLineitem(
+                amount: 162,
+                isMandatory: true,
+                name: 'Cleaning fee',
+                type: Shared\PropertyLineitemType::Fee,
+            ),
+            new Shared\PropertyLineitem(
+                amount: 237.6,
+                isMandatory: true,
+                name: 'Lodging tax',
+                type: Shared\PropertyLineitemType::Tax,
+            ),
+            new Shared\PropertyLineitem(
+                amount: -198,
+                isMandatory: false,
+                name: 'Weekly discount',
+                type: Shared\PropertyLineitemType::Discount,
+            ),
+        ],
+        metadata: [],
+        nights: 11,
+        notes: 'Conculco volaticus vis volva quas trepide vae earum temptatio tertius.',
+        paidAmount: 0,
+        pets: 1,
+        source: 'Vrbo',
+        startAt: Utils\Utils::parseDateTime('2022-09-25T17:17:08.838Z'),
+        status: Shared\PropertyReservationStatus::Pending,
+        totalAmount: 2181.6,
+        updatedAt: Utils\Utils::parseDateTime('2022-11-16T10:16:07.413Z'),
+        webUrl: 'https://antique-tennis.biz/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->reservation->patchPropertyReservation(
+    request: $request
+);
+
+if ($response->propertyReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                | Type                                                                                                     | Required                                                                                                 | Description                                                                                              |
+| -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                               | [Operations\PatchPropertyReservationRequest](../../Models/Operations/PatchPropertyReservationRequest.md) | :heavy_check_mark:                                                                                       | The request object to use for the request.                                                               |
+
+### Response
+
+**[?Operations\PatchPropertyReservationResponse](../../Models/Operations/PatchPropertyReservationResponse.md)**
 
 ### Errors
 
@@ -328,13 +643,13 @@ $request = new Operations\UpdateCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: '30f290ad-c9e1-46fd-abed-af4dd0224751',
+        id: '68b85020-e3a7-44a1-aac4-66068d121941',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-05T14:52:25.162Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-05T19:23:23.892Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -359,6 +674,111 @@ if ($response->commerceReservation !== null) {
 ### Response
 
 **[?Operations\UpdateCommerceReservationResponse](../../Models/Operations/UpdateCommerceReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updatePropertyReservation
+
+Updates the PropertyReservation identified by `id`. Provide the unified PropertyReservation fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updatePropertyReservation" method="put" path="/property/{connection_id}/reservation/{id}" example="property_reservation" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdatePropertyReservationRequest(
+    propertyReservation: new Shared\PropertyReservation(
+        adults: 4,
+        balanceAmount: 2181.6,
+        children: 2,
+        confirmationCode: 'GNLTDDQ88Z',
+        createdAt: Utils\Utils::parseDateTime('2022-06-03T01:40:03.655Z'),
+        currency: 'USD',
+        endAt: Utils\Utils::parseDateTime('2022-10-06T17:17:08.838Z'),
+        estimatedDepartureTime: '10:00',
+        guestEmail: 'anya.parisian@hotmail.com',
+        guestName: 'Anya Parisian',
+        guests: 6,
+        id: 'b2d526e6-a476-4723-bb1d-6d68645ca941',
+        lineItems: [
+            new Shared\PropertyLineitem(
+                amount: 1980,
+                description: '11 nights',
+                isMandatory: true,
+                name: 'Accommodation',
+                type: Shared\PropertyLineitemType::Base,
+            ),
+            new Shared\PropertyLineitem(
+                amount: 162,
+                isMandatory: true,
+                name: 'Cleaning fee',
+                type: Shared\PropertyLineitemType::Fee,
+            ),
+            new Shared\PropertyLineitem(
+                amount: 237.6,
+                isMandatory: true,
+                name: 'Lodging tax',
+                type: Shared\PropertyLineitemType::Tax,
+            ),
+            new Shared\PropertyLineitem(
+                amount: -198,
+                isMandatory: false,
+                name: 'Weekly discount',
+                type: Shared\PropertyLineitemType::Discount,
+            ),
+        ],
+        metadata: [],
+        nights: 11,
+        notes: 'Conculco volaticus vis volva quas trepide vae earum temptatio tertius.',
+        paidAmount: 0,
+        pets: 1,
+        source: 'Vrbo',
+        startAt: Utils\Utils::parseDateTime('2022-09-25T17:17:08.838Z'),
+        status: Shared\PropertyReservationStatus::Pending,
+        totalAmount: 2181.6,
+        updatedAt: Utils\Utils::parseDateTime('2022-11-16T10:16:07.413Z'),
+        webUrl: 'https://antique-tennis.biz/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->reservation->updatePropertyReservation(
+    request: $request
+);
+
+if ($response->propertyReservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\UpdatePropertyReservationRequest](../../Models/Operations/UpdatePropertyReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\UpdatePropertyReservationResponse](../../Models/Operations/UpdatePropertyReservationResponse.md)**
 
 ### Errors
 

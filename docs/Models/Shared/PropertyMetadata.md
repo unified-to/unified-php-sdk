@@ -1,0 +1,13 @@
+# PropertyMetadata
+
+
+## Fields
+
+| Field                                                                            | Type                                                                             | Required                                                                         | Description                                                                      |
+| -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `extraData`                                                                      | [array\|string\|float\|bool\|null](../../Models/Shared/PropertyMetadataExtraData.md) | :heavy_minus_sign:                                                               | additional data about the custom field                                           |
+| `format`                                                                         | [?Shared\PropertyMetadataFormat](../../Models/Shared/PropertyMetadataFormat.md)  | :heavy_minus_sign:                                                               | the data type of the value                                                       |
+| `id`                                                                             | *?string*                                                                        | :heavy_minus_sign:                                                               | the custom field identifier                                                      |
+| `namespace`                                                                      | *?string*                                                                        | :heavy_minus_sign:                                                               | the scope or origin of the custom field                                          |
+| `slug`                                                                           | *?string*                                                                        | :heavy_minus_sign:                                                               | the custom field key                                                             |
+| `value`                                                                          | [array\|string\|float\|bool\|null](../../Models/Shared/PropertyMetadataValue.md) | :heavy_minus_sign:                                                               | the custom field value                                                           |

@@ -233,4 +233,12 @@ enum WebhookObjectType: string
     case HealthcareReport = 'healthcare_report';
     case HealthcareCareplan = 'healthcare_careplan';
     case HealthcareGoal = 'healthcare_goal';
+    case PropertyListing = 'property_listing';
+    case PropertyUnittype = 'property_unittype';
+    case PropertyGuest = 'property_guest';
+    case PropertyReservation = 'property_reservation';
+    case PropertyAvailability = 'property_availability';
+    case PropertyQuote = 'property_quote';
+    case PropertyReview = 'property_review';
+    case PropertyConversation = 'property_conversation';
 }

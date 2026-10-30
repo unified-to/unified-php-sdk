@@ -422,4 +422,18 @@ enum PropertyConnectionPermissions: string
     case HealthcareCareplanWrite = 'healthcare_careplan_write';
     case HealthcareGoalRead = 'healthcare_goal_read';
     case HealthcareGoalWrite = 'healthcare_goal_write';
+    case PropertyListingRead = 'property_listing_read';
+    case PropertyListingWrite = 'property_listing_write';
+    case PropertyUnittypeRead = 'property_unittype_read';
+    case PropertyGuestRead = 'property_guest_read';
+    case PropertyGuestWrite = 'property_guest_write';
+    case PropertyReservationRead = 'property_reservation_read';
+    case PropertyReservationWrite = 'property_reservation_write';
+    case PropertyAvailabilityRead = 'property_availability_read';
+    case PropertyQuoteRead = 'property_quote_read';
+    case PropertyQuoteWrite = 'property_quote_write';
+    case PropertyReviewRead = 'property_review_read';
+    case PropertyReviewWrite = 'property_review_write';
+    case PropertyConversationRead = 'property_conversation_read';
+    case PropertyConversationWrite = 'property_conversation_write';
 }

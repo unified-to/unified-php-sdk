@@ -38,17 +38,17 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'd2940ccb-7e3b-4cc9-a270-d0ba7c96554e',
+        id: '5cd97a3e-5429-452d-a0fd-a351b61edb53',
         isRequired: false,
         name: 'autem',
-        objectType: 'legal_expense',
+        objectType: 'compute_usage',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-27T15:48:18.431Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-28T06:40:50.671Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,17 +206,17 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '25fda320-3095-405e-b491-2459bb5268bb',
+        id: '0481b7d3-4fae-4630-a506-a1f56aca21f8',
         isRequired: false,
         name: 'autem',
-        objectType: 'legal_expense',
+        objectType: 'compute_usage',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-27T15:48:18.437Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-28T06:40:50.681Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,17 +325,17 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '25fda320-3095-405e-b491-2459bb5268bb',
+        id: '0481b7d3-4fae-4630-a506-a1f56aca21f8',
         isRequired: false,
         name: 'autem',
-        objectType: 'legal_expense',
+        objectType: 'compute_usage',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-27T15:48:18.437Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-28T06:40:50.681Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
