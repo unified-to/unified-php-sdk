@@ -142,6 +142,7 @@ class CommerceItem
     public ?array $metadata = null;
 
     /**
+     * The item's (product's) name
      *
      * @var ?string $name
      */

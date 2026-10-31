@@ -37,11 +37,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '9f3519bd-3535-4124-a309-2ccb515471fa',
+        id: 'a73db28b-6b4a-4600-affd-c61fbb2aad14',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-10T03:01:10.922Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-10T12:18:37.151Z'),
     ),
     connectionId: '<id>',
 );
@@ -198,11 +198,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: 'a6cfba8d-479d-4178-bf35-ec6c8e16f32e',
+        id: 'aa4849c6-31cf-4794-bd39-0a1bedd6e0d7',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-10T03:01:10.925Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-10T12:18:37.157Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -310,11 +310,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: 'a6cfba8d-479d-4178-bf35-ec6c8e16f32e',
+        id: 'aa4849c6-31cf-4794-bd39-0a1bedd6e0d7',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-10T03:01:10.925Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-10T12:18:37.157Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

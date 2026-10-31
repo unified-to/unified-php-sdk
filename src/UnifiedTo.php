@@ -186,6 +186,8 @@ class UnifiedTo
 
     public Reservation $reservation;
 
+    public ReturnT $return;
+
     public Review $review;
 
     public Saleschannel $saleschannel;
@@ -561,6 +563,7 @@ class UnifiedTo
         $this->item = new Item($this->sdkConfiguration);
         $this->itemvariant = new Itemvariant($this->sdkConfiguration);
         $this->reservation = new Reservation($this->sdkConfiguration);
+        $this->return = new ReturnT($this->sdkConfiguration);
         $this->review = new Review($this->sdkConfiguration);
         $this->saleschannel = new Saleschannel($this->sdkConfiguration);
         $this->compute = new Compute($this->sdkConfiguration);

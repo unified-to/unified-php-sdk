@@ -84,6 +84,8 @@
 | `CommerceItemvariantWrite`           | commerce_itemvariant_write           |
 | `CommerceReservationRead`            | commerce_reservation_read            |
 | `CommerceReservationWrite`           | commerce_reservation_write           |
+| `CommerceReturnRead`                 | commerce_return_read                 |
+| `CommerceReturnWrite`                | commerce_return_write                |
 | `CommerceAvailabilityRead`           | commerce_availability_read           |
 | `CommerceAvailabilityWrite`          | commerce_availability_write          |
 | `VerificationPackageRead`            | verification_package_read            |

@@ -38,7 +38,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'ad959b80-509b-4739-8231-42c26efa9941',
+        id: 'de2295e5-3c90-4ff5-956d-8123c013e549',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -53,7 +53,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
         ],
         name: 'sponte.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-28T13:19:38.304Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-28T21:09:56.419Z'),
         userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
     ),
     connectionId: '<id>',
@@ -212,7 +212,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: '1b98260b-ae72-4018-ba1e-bcaced0ed090',
+        id: '0e55e0b3-9292-4297-8899-0b730c2082bd',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -227,7 +227,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
         ],
         name: 'sponte.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-28T13:19:38.308Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-28T21:09:56.422Z'),
         userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
     ),
     connectionId: '<id>',
@@ -337,7 +337,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: '1b98260b-ae72-4018-ba1e-bcaced0ed090',
+        id: '0e55e0b3-9292-4297-8899-0b730c2082bd',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -352,7 +352,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
         ],
         name: 'sponte.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-28T13:19:38.308Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-28T21:09:56.422Z'),
         userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
     ),
     connectionId: '<id>',

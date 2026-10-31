@@ -13,6 +13,7 @@ namespace Unified\Unified_to\Models\Shared;
 class CommerceCollection
 {
     /**
+     * The collection's name
      *
      * @var string $name
      */

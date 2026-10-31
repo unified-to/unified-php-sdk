@@ -54,6 +54,7 @@ enum WebhookObjectType: string
     case CommerceSaleschannel = 'commerce_saleschannel';
     case CommerceItemvariant = 'commerce_itemvariant';
     case CommerceReservation = 'commerce_reservation';
+    case CommerceReturn = 'commerce_return';
     case CommerceAvailability = 'commerce_availability';
     case VerificationPackage = 'verification_package';
     case VerificationRequest = 'verification_request';
