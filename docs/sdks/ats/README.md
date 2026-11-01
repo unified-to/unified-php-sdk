@@ -82,7 +82,7 @@ $request = new Operations\CreateAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
         description: 'Sapiente.',
-        id: 'b6676774-3895-402c-8ce1-d2e75fd5de96',
+        id: '561a3421-9444-424a-b07b-77ab8e187318',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -90,7 +90,7 @@ $request = new Operations\CreateAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'af4ccf7e-52d1-42ae-ba69-8d86ee9dc113',
+                id: 'ab4979ff-ec37-4df1-8351-e1a711991274',
                 namespace: 'activity',
                 slug: 'cimentarius',
                 value: 'Reprehenderit verto.',
@@ -99,7 +99,7 @@ $request = new Operations\CreateAtsActivityRequest(
         subType: 'TASK',
         title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-12T21:16:28.237Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-13T20:11:00.797Z'),
     ),
     connectionId: '<id>',
 );
@@ -155,17 +155,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-10-06T04:48:01.669Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-06T21:53:07.615Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-21T05:12:40.005Z'),
-        id: '22438a16-5c0f-4c6b-9fa1-f3c149acd05f',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-22T03:41:01.711Z'),
+        id: '610d4fb2-6fab-4b39-951a-bbc3a7523eda',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'b79caee6-bb00-439e-a665-e9b90d23b682',
+                id: '3659f009-a637-43cc-ac24-ecd60185e82a',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -174,12 +174,12 @@ $request = new Operations\CreateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-21T08:36:06.514Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-22T10:42:32.217Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-28T06:19:03.952Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-29T08:35:19.586Z'),
     ),
     connectionId: '<id>',
 );
@@ -285,7 +285,7 @@ $request = new Operations\CreateAtsCandidateRequest(
             ),
         ],
         firstName: 'Ardith',
-        id: '0ed7cd1e-6617-423d-9e2f-622cfae62c43',
+        id: 'fef27cd8-cb6a-4231-855b-db2e4f18f47f',
         imageUrl: 'https://avatars.githubusercontent.com/u/27464445',
         jobIds: [],
         lastName: 'Beatty',
@@ -298,7 +298,7 @@ $request = new Operations\CreateAtsCandidateRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '7ae37275-dc01-49d0-a4f0-b1dc3635ba81',
+                id: 'cb047cfa-71ec-4db6-a289-b93febc4edef',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'officia',
@@ -325,7 +325,7 @@ $request = new Operations\CreateAtsCandidateRequest(
             ),
         ],
         title: 'Customer Division Producer',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-30T11:58:42.829Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-30T16:39:20.115Z'),
         webUrl: 'https://fragrant-husband.net/',
     ),
     connectionId: '<id>',
@@ -382,10 +382,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAtsCompanyRequest(
     atsCompany: new Shared\AtsCompany(
         createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
-        id: 'bb0da2e1-9157-403d-86f6-8fa3b666a393',
+        id: 'a12c5482-0724-4449-99a9-fbb01118b9b3',
         name: 'Gulgowski, Dibbert and Wilderman',
         phone: '1-882-360-2010',
-        updatedAt: Utils\Utils::parseDateTime('2020-10-03T01:59:53.851Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-10-03T07:04:30.132Z'),
         websiteUrl: 'https://www.gulgowskidibbert.com',
     ),
     connectionId: '<id>',
@@ -444,10 +444,10 @@ $request = new Operations\CreateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: 'b6707f38-9670-496c-9da8-b27a4d1ee03f',
+        id: 'aa7f838a-4ac1-4eed-b982-252ed1eeb962',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-09T16:37:33.860Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-09T23:14:12.236Z'),
     ),
     connectionId: '<id>',
 );
@@ -504,13 +504,13 @@ $request = new Operations\CreateAtsInterviewRequest(
     atsInterview: new Shared\AtsInterview(
         createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
         endAt: Utils\Utils::parseDateTime('2021-12-08T06:33:19.583Z'),
-        id: '3ecf0a61-cd6e-428c-83fa-66067a501fd1',
+        id: 'de8da5e9-d3c9-4a86-929b-82e9f05d3e35',
         location: '26596 Halle Trafficway',
         meetingUrl: 'https://immaculate-foodstuffs.biz',
         metadata: [],
         startAt: Utils\Utils::parseDateTime('2021-12-08T06:03:19.583Z'),
         status: Shared\AtsInterviewStatus::Scheduled,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-27T08:56:32.139Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-27T18:43:49.872Z'),
     ),
     connectionId: '<id>',
 );
@@ -595,7 +595,7 @@ $request = new Operations\CreateAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: 'ec925b7c-36e3-4b3d-8163-e5f7c75df297',
+        id: '632ee198-e267-43fb-968b-552bbabeefcb',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -604,7 +604,7 @@ $request = new Operations\CreateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '28ad8b1d-be1b-417c-884a-8859b82bf401',
+                id: 'b7e9faa5-b57e-49b8-82f9-6377449cddca',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -617,7 +617,7 @@ $request = new Operations\CreateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-16T16:44:34.613Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-17T16:09:57.929Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -631,14 +631,14 @@ $request = new Operations\CreateAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-11T06:28:32.457Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-12T07:05:10.720Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: 'd329d386-59b3-4221-89c1-e12ef0e2c9b3',
+                id: '9bd98083-ffbe-47d6-a364-c83a48d33b4f',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-09-06T18:58:13.667Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-09-07T20:08:52.053Z'),
             ),
         ],
         publicJobUrls: [
@@ -648,7 +648,7 @@ $request = new Operations\CreateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '1c97b842-7599-47a7-a4d6-9b61817e1e42',
+                id: '6eff0778-87fc-445b-87d7-794be5f4ab26',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -661,7 +661,7 @@ $request = new Operations\CreateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '72247f1c-0232-4022-9b95-c294cd8f1cbc',
+                id: '2e3dde8f-7661-43b8-bf0d-fda6ac59fa23',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -674,7 +674,7 @@ $request = new Operations\CreateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: 'e6edfb8d-8295-4dc6-a959-1684f4ec3a37',
+                id: '4c219d4a-37bd-45c2-81e9-46b5c2dc72bf',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -692,7 +692,7 @@ $request = new Operations\CreateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-07T09:32:16.316Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-08T06:47:47.014Z'),
     ),
     connectionId: '<id>',
 );
@@ -749,7 +749,7 @@ $request = new Operations\CreateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'ae3dacdc-5a68-4af1-a838-2771f84d3ef1',
+        id: 'ca5af368-fcde-4856-9a2a-1b51bc2e6ba8',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -763,7 +763,7 @@ $request = new Operations\CreateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-08T07:11:21.980Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-08T14:27:12.795Z'),
     ),
     connectionId: '<id>',
 );
@@ -1729,7 +1729,7 @@ $request = new Operations\PatchAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
         description: 'Sapiente.',
-        id: 'e97e8ebd-efcc-4253-9cb7-6f3a014b8881',
+        id: 'c9acf0c6-d62a-4b59-8736-56b8c7621df9',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -1737,7 +1737,7 @@ $request = new Operations\PatchAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '2bb62a61-544f-4100-9da5-5b34ed040f05',
+                id: '79a4682c-a87d-47ce-9fd9-472494264a48',
                 namespace: 'activity',
                 slug: 'cimentarius',
                 value: 'Reprehenderit verto.',
@@ -1746,7 +1746,7 @@ $request = new Operations\PatchAtsActivityRequest(
         subType: 'TASK',
         title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-12T21:16:28.256Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-13T20:11:00.811Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1803,17 +1803,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-10-06T04:48:01.693Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-06T21:53:07.630Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-21T05:12:40.037Z'),
-        id: '5ec3102a-8051-448a-90df-500bfc2f5179',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-22T03:41:01.730Z'),
+        id: '7ec0d400-cc90-434d-8f3f-6db19df905e5',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '011568ef-6708-4038-b9d8-5c75bb378e68',
+                id: '1323e97f-24c9-498c-b1ab-d2608bb81b85',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -1822,12 +1822,12 @@ $request = new Operations\PatchAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-21T08:36:06.551Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-22T10:42:32.239Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-28T06:19:03.989Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-29T08:35:19.608Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1934,7 +1934,7 @@ $request = new Operations\PatchAtsCandidateRequest(
             ),
         ],
         firstName: 'Ardith',
-        id: '99e24888-f439-4afb-940d-8bd622df5c4c',
+        id: 'c5f39955-0e4f-4478-a31a-aa888a58a191',
         imageUrl: 'https://avatars.githubusercontent.com/u/27464445',
         jobIds: [],
         lastName: 'Beatty',
@@ -1947,7 +1947,7 @@ $request = new Operations\PatchAtsCandidateRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '38a66505-1bb7-4c41-bd94-cdd6fa3dcbbd',
+                id: '6485cca1-df65-4938-bfd6-b7bb1d4fd5b0',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'officia',
@@ -1974,7 +1974,7 @@ $request = new Operations\PatchAtsCandidateRequest(
             ),
         ],
         title: 'Customer Division Producer',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-30T11:58:42.835Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-30T16:39:20.120Z'),
         webUrl: 'https://fragrant-husband.net/',
     ),
     connectionId: '<id>',
@@ -2032,10 +2032,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAtsCompanyRequest(
     atsCompany: new Shared\AtsCompany(
         createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
-        id: 'b1b11f81-0568-428c-ab03-b551c6c95122',
+        id: '3ab0eede-b6aa-42ae-a6c7-0a1456738ace',
         name: 'Gulgowski, Dibbert and Wilderman',
         phone: '1-882-360-2010',
-        updatedAt: Utils\Utils::parseDateTime('2020-10-03T01:59:53.856Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-10-03T07:04:30.135Z'),
         websiteUrl: 'https://www.gulgowskidibbert.com',
     ),
     connectionId: '<id>',
@@ -2095,10 +2095,10 @@ $request = new Operations\PatchAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '184d3392-4946-4b52-a642-74fdf70c6cdd',
+        id: '9b9423c9-0c90-4149-bbcb-54f8db1a8e87',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-09T16:37:33.863Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-09T23:14:12.238Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2156,13 +2156,13 @@ $request = new Operations\PatchAtsInterviewRequest(
     atsInterview: new Shared\AtsInterview(
         createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
         endAt: Utils\Utils::parseDateTime('2021-12-08T06:33:19.583Z'),
-        id: 'dbefe8a8-6d34-4db3-b089-59ad088231ce',
+        id: 'e9354ab3-94aa-4d42-b26c-0188141bd5d2',
         location: '26596 Halle Trafficway',
         meetingUrl: 'https://immaculate-foodstuffs.biz',
         metadata: [],
         startAt: Utils\Utils::parseDateTime('2021-12-08T06:03:19.583Z'),
         status: Shared\AtsInterviewStatus::Scheduled,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-27T08:56:32.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-27T18:43:49.875Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2248,7 +2248,7 @@ $request = new Operations\PatchAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: 'f26dd97a-9625-455e-aa6b-0ed4304fd2a1',
+        id: '773e172b-700f-42b7-bc98-3dbe14beedec',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -2257,7 +2257,7 @@ $request = new Operations\PatchAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'cc6e4bcd-5e80-4610-a435-e65b216474db',
+                id: '0f3c3440-36d9-455c-9c43-32e5c94b2c04',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -2270,7 +2270,7 @@ $request = new Operations\PatchAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-16T16:44:34.657Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-17T16:09:57.965Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -2284,14 +2284,14 @@ $request = new Operations\PatchAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-11T06:28:32.503Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-12T07:05:10.757Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: '3d8fc172-bcaf-45f1-a8ef-7413493f1929',
+                id: '088b33ad-698b-4af9-99bf-bff2bd3dee2b',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-09-06T18:58:13.713Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-09-07T20:08:52.092Z'),
             ),
         ],
         publicJobUrls: [
@@ -2301,7 +2301,7 @@ $request = new Operations\PatchAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '183c2a12-c0c0-499d-8f5a-a256c5af15d1',
+                id: 'bf11dfc7-0875-48fd-a622-f7d08f97c2cd',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -2314,7 +2314,7 @@ $request = new Operations\PatchAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '712ab440-d02e-49da-8cf2-70a19c5ca4d0',
+                id: 'bc4824fd-dc38-41bb-b6be-e544ed58d13a',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -2327,7 +2327,7 @@ $request = new Operations\PatchAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: '7ebf74c2-a24e-4acf-a478-bd03eb0c6d15',
+                id: 'a45d41fa-0ba5-4468-bd2a-b0c0aecc1f03',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -2345,7 +2345,7 @@ $request = new Operations\PatchAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-07T09:32:16.355Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-08T06:47:47.046Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2403,7 +2403,7 @@ $request = new Operations\PatchAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: '18bd29ca-0833-48cb-9342-d355173ccc05',
+        id: 'd740becc-073b-460c-a9b4-05b5014903c5',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -2417,7 +2417,7 @@ $request = new Operations\PatchAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-08T07:11:21.984Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-08T14:27:12.798Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2883,7 +2883,7 @@ $request = new Operations\UpdateAtsActivityRequest(
     atsActivity: new Shared\AtsActivity(
         createdAt: Utils\Utils::parseDateTime('2022-08-07T03:16:43.865Z'),
         description: 'Sapiente.',
-        id: 'e97e8ebd-efcc-4253-9cb7-6f3a014b8881',
+        id: 'c9acf0c6-d62a-4b59-8736-56b8c7621df9',
         isPrivate: false,
         metadata: [
             new Shared\AtsMetadata(
@@ -2891,7 +2891,7 @@ $request = new Operations\UpdateAtsActivityRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '2bb62a61-544f-4100-9da5-5b34ed040f05',
+                id: '79a4682c-a87d-47ce-9fd9-472494264a48',
                 namespace: 'activity',
                 slug: 'cimentarius',
                 value: 'Reprehenderit verto.',
@@ -2900,7 +2900,7 @@ $request = new Operations\UpdateAtsActivityRequest(
         subType: 'TASK',
         title: 'Venio blandior aureus.',
         type: Shared\AtsActivityType::Task,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-12T21:16:28.256Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-13T20:11:00.811Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2957,17 +2957,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-10-06T04:48:01.693Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-06T21:53:07.630Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-21T05:12:40.037Z'),
-        id: '5ec3102a-8051-448a-90df-500bfc2f5179',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-22T03:41:01.730Z'),
+        id: '7ec0d400-cc90-434d-8f3f-6db19df905e5',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '011568ef-6708-4038-b9d8-5c75bb378e68',
+                id: '1323e97f-24c9-498c-b1ab-d2608bb81b85',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -2976,12 +2976,12 @@ $request = new Operations\UpdateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-21T08:36:06.551Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-10-22T10:42:32.239Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-10-28T06:19:03.989Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-29T08:35:19.608Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3088,7 +3088,7 @@ $request = new Operations\UpdateAtsCandidateRequest(
             ),
         ],
         firstName: 'Ardith',
-        id: '99e24888-f439-4afb-940d-8bd622df5c4c',
+        id: 'c5f39955-0e4f-4478-a31a-aa888a58a191',
         imageUrl: 'https://avatars.githubusercontent.com/u/27464445',
         jobIds: [],
         lastName: 'Beatty',
@@ -3101,7 +3101,7 @@ $request = new Operations\UpdateAtsCandidateRequest(
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '38a66505-1bb7-4c41-bd94-cdd6fa3dcbbd',
+                id: '6485cca1-df65-4938-bfd6-b7bb1d4fd5b0',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'officia',
@@ -3128,7 +3128,7 @@ $request = new Operations\UpdateAtsCandidateRequest(
             ),
         ],
         title: 'Customer Division Producer',
-        updatedAt: Utils\Utils::parseDateTime('2024-04-30T11:58:42.835Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-30T16:39:20.120Z'),
         webUrl: 'https://fragrant-husband.net/',
     ),
     connectionId: '<id>',
@@ -3186,10 +3186,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAtsCompanyRequest(
     atsCompany: new Shared\AtsCompany(
         createdAt: Utils\Utils::parseDateTime('2019-04-22T03:50:02.920Z'),
-        id: 'b1b11f81-0568-428c-ab03-b551c6c95122',
+        id: '3ab0eede-b6aa-42ae-a6c7-0a1456738ace',
         name: 'Gulgowski, Dibbert and Wilderman',
         phone: '1-882-360-2010',
-        updatedAt: Utils\Utils::parseDateTime('2020-10-03T01:59:53.856Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-10-03T07:04:30.135Z'),
         websiteUrl: 'https://www.gulgowskidibbert.com',
     ),
     connectionId: '<id>',
@@ -3249,10 +3249,10 @@ $request = new Operations\UpdateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: '184d3392-4946-4b52-a642-74fdf70c6cdd',
+        id: '9b9423c9-0c90-4149-bbcb-54f8db1a8e87',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-09T16:37:33.863Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-09T23:14:12.238Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3310,13 +3310,13 @@ $request = new Operations\UpdateAtsInterviewRequest(
     atsInterview: new Shared\AtsInterview(
         createdAt: Utils\Utils::parseDateTime('2021-11-28T03:14:47.774Z'),
         endAt: Utils\Utils::parseDateTime('2021-12-08T06:33:19.583Z'),
-        id: 'dbefe8a8-6d34-4db3-b089-59ad088231ce',
+        id: 'e9354ab3-94aa-4d42-b26c-0188141bd5d2',
         location: '26596 Halle Trafficway',
         meetingUrl: 'https://immaculate-foodstuffs.biz',
         metadata: [],
         startAt: Utils\Utils::parseDateTime('2021-12-08T06:03:19.583Z'),
         status: Shared\AtsInterviewStatus::Scheduled,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-27T08:56:32.143Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-09-27T18:43:49.875Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3402,7 +3402,7 @@ $request = new Operations\UpdateAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: 'f26dd97a-9625-455e-aa6b-0ed4304fd2a1',
+        id: '773e172b-700f-42b7-bc98-3dbe14beedec',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -3411,7 +3411,7 @@ $request = new Operations\UpdateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'cc6e4bcd-5e80-4610-a435-e65b216474db',
+                id: '0f3c3440-36d9-455c-9c43-32e5c94b2c04',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -3424,7 +3424,7 @@ $request = new Operations\UpdateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-16T16:44:34.657Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-17T16:09:57.965Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -3438,14 +3438,14 @@ $request = new Operations\UpdateAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-11T06:28:32.503Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-12T07:05:10.757Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: '3d8fc172-bcaf-45f1-a8ef-7413493f1929',
+                id: '088b33ad-698b-4af9-99bf-bff2bd3dee2b',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-09-06T18:58:13.713Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-09-07T20:08:52.092Z'),
             ),
         ],
         publicJobUrls: [
@@ -3455,7 +3455,7 @@ $request = new Operations\UpdateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '183c2a12-c0c0-499d-8f5a-a256c5af15d1',
+                id: 'bf11dfc7-0875-48fd-a622-f7d08f97c2cd',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -3468,7 +3468,7 @@ $request = new Operations\UpdateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '712ab440-d02e-49da-8cf2-70a19c5ca4d0',
+                id: 'bc4824fd-dc38-41bb-b6be-e544ed58d13a',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -3481,7 +3481,7 @@ $request = new Operations\UpdateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: '7ebf74c2-a24e-4acf-a478-bd03eb0c6d15',
+                id: 'a45d41fa-0ba5-4468-bd2a-b0c0aecc1f03',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -3499,7 +3499,7 @@ $request = new Operations\UpdateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-07T09:32:16.355Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-08T06:47:47.046Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3557,7 +3557,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: '18bd29ca-0833-48cb-9342-d355173ccc05',
+        id: 'd740becc-073b-460c-a9b4-05b5014903c5',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -3571,7 +3571,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-08T07:11:21.984Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-08T14:27:12.798Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

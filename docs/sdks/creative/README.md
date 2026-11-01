@@ -37,7 +37,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '61e6a5d6-5063-471b-b4e1-c08fd1569f5c',
+        id: 'b972ef51-aa0d-4fdd-8862-54e352fc5db3',
         labels: [
             'coma',
             'accedo',
@@ -46,7 +46,7 @@ $request = new Operations\CreateAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-29T18:39:10.214Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-30T00:00:51.518Z'),
     ),
     connectionId: '<id>',
 );
@@ -203,7 +203,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '3c6b4d5b-7778-49a9-8651-81851d72b1cf',
+        id: 'f63f13cc-fd79-4062-bb8e-8ac47fd02ba6',
         labels: [
             'coma',
             'accedo',
@@ -212,7 +212,7 @@ $request = new Operations\PatchAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-29T18:39:10.223Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-30T00:00:51.523Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -320,7 +320,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '3c6b4d5b-7778-49a9-8651-81851d72b1cf',
+        id: 'f63f13cc-fd79-4062-bb8e-8ac47fd02ba6',
         labels: [
             'coma',
             'accedo',
@@ -329,7 +329,7 @@ $request = new Operations\UpdateAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-06-29T18:39:10.223Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-06-30T00:00:51.523Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
