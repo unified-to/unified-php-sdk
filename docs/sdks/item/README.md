@@ -41,7 +41,7 @@ $request = new Operations\CreateCommerceItemRequest(
         description: 'Decretum vulnero ustulo abeo.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: 'fae2da96-286a-471b-97aa-ba58f1033eb6',
+        id: '6e3e1c92-3b1e-498a-9ba5-3d7f183e072e',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -50,10 +50,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 876,
-                id: '1777d0e7-ce8a-44ab-907f-2fa58d2fe3cf',
+                id: '38961bea-97e4-494a-9e40-12452c8b1430',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'dbd842f4-cf6a-43ca-8cda-d8839202c18c',
+                        id: '3d50a3ca-b067-4784-a0ba-ffb82fba7727',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -66,10 +66,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: 'd8822789-84a5-4e79-ad3b-0517db030d11',
+                id: '57b348a5-fd90-4191-a282-110d4019b6e1',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '9cd09084-4737-47a1-81d7-36e399918010',
+                        id: 'e34e4ca7-cd1e-4b56-a601-a3c01905bd0b',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -86,7 +86,7 @@ $request = new Operations\CreateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '64d761b2-f7e2-4cd4-b40d-981ce10ab75a',
+                id: '2dbfb5e3-34a5-4a96-ae59-0fcf757626a5',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -109,7 +109,7 @@ $request = new Operations\CreateCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-24T01:59:53.165Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-24T12:03:37.472Z'),
         vendorName: 'Mayer - Flatley',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,
@@ -273,7 +273,7 @@ $request = new Operations\PatchCommerceItemRequest(
         description: 'Decretum vulnero ustulo abeo.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: '8a97f582-8e3f-4f65-9bb5-4abff3f06e8c',
+        id: 'de2fc0e3-b1fd-4ce1-bb83-24001bbadfe3',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -282,10 +282,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 876,
-                id: 'e2133590-3ee5-4175-ac49-28a8332b9674',
+                id: 'bcfa31ac-adfa-4de7-bc96-41a2dafde720',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'e461bd77-846a-4fc1-8e51-a6512980ff56',
+                        id: 'c42c69ad-0727-4851-a8d1-14c629230d8c',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -298,10 +298,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: 'fc2fe440-1bb2-4827-a5ac-2d5a2c46dfeb',
+                id: 'ed39c3c8-a40c-4cfc-b023-51e2e09bc4d4',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'cacf5c05-0655-4b27-a7fe-05bbde2f2805',
+                        id: 'bb869744-4cfc-4416-ac4a-f5de86ba6e1c',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -318,7 +318,7 @@ $request = new Operations\PatchCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '941c1af7-d8a7-4b74-811b-be63d2791a04',
+                id: 'e81211bb-a277-4449-b6ce-e17dda6284ad',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -341,7 +341,7 @@ $request = new Operations\PatchCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-24T01:59:53.176Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-24T12:03:37.488Z'),
         vendorName: 'Mayer - Flatley',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,
@@ -456,7 +456,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         description: 'Decretum vulnero ustulo abeo.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: '8a97f582-8e3f-4f65-9bb5-4abff3f06e8c',
+        id: 'de2fc0e3-b1fd-4ce1-bb83-24001bbadfe3',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -465,10 +465,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Caterva eveniet acies candidus.',
                 height: 876,
-                id: 'e2133590-3ee5-4175-ac49-28a8332b9674',
+                id: 'bcfa31ac-adfa-4de7-bc96-41a2dafde720',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'e461bd77-846a-4fc1-8e51-a6512980ff56',
+                        id: 'c42c69ad-0727-4851-a8d1-14c629230d8c',
                         slug: 'doloremque',
                         value: 'allatus',
                     ),
@@ -481,10 +481,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: 'fc2fe440-1bb2-4827-a5ac-2d5a2c46dfeb',
+                id: 'ed39c3c8-a40c-4cfc-b023-51e2e09bc4d4',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'cacf5c05-0655-4b27-a7fe-05bbde2f2805',
+                        id: 'bb869744-4cfc-4416-ac4a-f5de86ba6e1c',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -501,7 +501,7 @@ $request = new Operations\UpdateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '941c1af7-d8a7-4b74-811b-be63d2791a04',
+                id: 'e81211bb-a277-4449-b6ce-e17dda6284ad',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -524,7 +524,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-04-24T01:59:53.176Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-24T12:03:37.488Z'),
         vendorName: 'Mayer - Flatley',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,

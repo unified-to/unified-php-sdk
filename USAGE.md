@@ -22,7 +22,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '56db5f64-dd81-4e03-ae18-63073f2f71f9',
+        id: '6e641593-eb75-4e82-81c8-6b587511f208',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -35,7 +35,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-09T22:10:53.706Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-10T04:48:54.609Z'),
     ),
     connectionId: '<id>',
 );

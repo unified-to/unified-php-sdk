@@ -432,3 +432,13 @@
 | `PropertyReviewWrite`                | property_review_write                |
 | `PropertyConversationRead`           | property_conversation_read           |
 | `PropertyConversationWrite`          | property_conversation_write          |
+| `PlmPartRead`                        | plm_part_read                        |
+| `PlmPartWrite`                       | plm_part_write                       |
+| `PlmBomlineRead`                     | plm_bomline_read                     |
+| `PlmBomlineWrite`                    | plm_bomline_write                    |
+| `PlmDocumentRead`                    | plm_document_read                    |
+| `PlmDocumentWrite`                   | plm_document_write                   |
+| `PlmChangeRead`                      | plm_change_read                      |
+| `PlmChangeWrite`                     | plm_change_write                     |
+| `PlmCategoryRead`                    | plm_category_read                    |
+| `PlmCategoryWrite`                   | plm_category_write                   |

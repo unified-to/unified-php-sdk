@@ -7,23 +7,28 @@
 * [createAtsDocument](#createatsdocument) - Create a document
 * [createHealthcareDocument](#createhealthcaredocument) - Create a document
 * [createHrisDocument](#createhrisdocument) - Create a document
+* [createPlmDocument](#createplmdocument) - Create a document
 * [createSigningDocument](#createsigningdocument) - Create a document
 * [getAtsDocument](#getatsdocument) - Retrieve a document
 * [getHealthcareDocument](#gethealthcaredocument) - Retrieve a document
 * [getHrisDocument](#gethrisdocument) - Retrieve a document
+* [getPlmDocument](#getplmdocument) - Retrieve a document
 * [getSigningDocument](#getsigningdocument) - Retrieve a document
 * [listAtsDocuments](#listatsdocuments) - List all documents
 * [listHealthcareDocuments](#listhealthcaredocuments) - List all documents
 * [listHrisDocuments](#listhrisdocuments) - List all documents
+* [listPlmDocuments](#listplmdocuments) - List all documents
 * [listSigningDocuments](#listsigningdocuments) - List all documents
 * [patchAtsDocument](#patchatsdocument) - Update a document
 * [patchHrisDocument](#patchhrisdocument) - Update a document
+* [patchPlmDocument](#patchplmdocument) - Update a document
 * [patchSigningDocument](#patchsigningdocument) - Update a document
 * [removeAtsDocument](#removeatsdocument) - Remove a document
 * [removeHrisDocument](#removehrisdocument) - Remove a document
 * [removeSigningDocument](#removesigningdocument) - Remove a document
 * [updateAtsDocument](#updateatsdocument) - Update a document
 * [updateHrisDocument](#updatehrisdocument) - Update a document
+* [updatePlmDocument](#updateplmdocument) - Update a document
 * [updateSigningDocument](#updatesigningdocument) - Update a document
 
 ## createAtsDocument
@@ -54,10 +59,10 @@ $request = new Operations\CreateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: 'a09eca55-0272-43a8-a2fe-0cc184b534a4',
+        id: 'e0ea3571-74a8-42ce-a7e2-8084b2a3528a',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-10T04:35:48.859Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-10T11:08:52.619Z'),
     ),
     connectionId: '<id>',
 );
@@ -123,13 +128,13 @@ $request = new Operations\CreateHealthcareDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2023-07-16T04:00:25.853Z'),
         documentUrl: 'https://overcooked-yogurt.org',
         filename: 'ugh_after.elc',
-        id: 'f76e76d8-0023-422e-8c51-4d974cf5740c',
+        id: '4c9bb4bd-e75d-4ab1-aeba-f1bffb5a4dec',
         metadata: [],
         mimeType: 'application/pdf',
         name: 'History and physical',
         status: Shared\HealthcareDocumentStatus::Superseded,
         type: Shared\HealthcareDocumentType::ConsultationNote,
-        updatedAt: Utils\Utils::parseDateTime('2025-01-01T01:08:45.058Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-01T12:43:56.985Z'),
     ),
     connectionId: '<id>',
 );
@@ -187,10 +192,10 @@ $request = new Operations\CreateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: '9a3302b7-7f9d-4d34-9b33-e7a5fdc93d92',
+        id: '417873c8-9f7d-4043-bc72-2ce320b56d10',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-20T09:53:39.591Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-21T05:16:22.459Z'),
     ),
     connectionId: '<id>',
 );
@@ -213,6 +218,74 @@ if ($response->hrisDocument !== null) {
 ### Response
 
 **[?Operations\CreateHrisDocumentResponse](../../Models/Operations/CreateHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createPlmDocument
+
+Creates a PlmDocument. Provide the unified PlmDocument fields in the request body; they are mapped to the provider's API. Returns the created PlmDocument.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createPlmDocument" method="post" path="/plm/{connection_id}/document" example="plm_document" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreatePlmDocumentRequest(
+    plmDocument: new Shared\PlmDocument(
+        createdAt: Utils\Utils::parseDateTime('2020-10-16T01:44:30.293Z'),
+        fileIds: [],
+        id: '9f80f10e-db0d-4285-b08b-88581630dbc5',
+        lifecycleState: 'Under Review',
+        masterIdentifier: 'c71c4c2f-90b1-4a1b-b1b0-30db027c9f89',
+        metadata: [],
+        name: 'Procedure taxicab',
+        number: 'DOC-086886',
+        originalType: 'Procedure',
+        revision: 'C',
+        status: Shared\PlmDocumentStatus::InReview,
+        type: Shared\PlmDocumentType::Procedure,
+        updatedAt: Utils\Utils::parseDateTime('2026-08-28T10:42:16.717Z'),
+        url: 'https://uncommon-guide.info/',
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->document->createPlmDocument(
+    request: $request
+);
+
+if ($response->plmDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\CreatePlmDocumentRequest](../../Models/Operations/CreatePlmDocumentRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\CreatePlmDocumentResponse](../../Models/Operations/CreatePlmDocumentResponse.md)**
 
 ### Errors
 
@@ -248,12 +321,12 @@ $request = new Operations\CreateSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '545020a8-b2b1-42b0-950e-b4fe8dc45502',
+        id: '270aebc6-a7ef-4232-94c4-6e8acd668b43',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-07-02T00:30:31.408Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-07-02T06:02:10.126Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-12T08:42:49.715Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-13T05:24:50.907Z'),
     ),
     connectionId: '<id>',
 );
@@ -429,6 +502,57 @@ if ($response->hrisDocument !== null) {
 ### Response
 
 **[?Operations\GetHrisDocumentResponse](../../Models/Operations/GetHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getPlmDocument
+
+Retrieves a single PlmDocument by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getPlmDocument" method="get" path="/plm/{connection_id}/document/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetPlmDocumentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->getPlmDocument(
+    request: $request
+);
+
+if ($response->plmDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetPlmDocumentRequest](../../Models/Operations/GetPlmDocumentRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetPlmDocumentResponse](../../Models/Operations/GetPlmDocumentResponse.md)**
 
 ### Errors
 
@@ -637,6 +761,56 @@ if ($response->hrisDocuments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listPlmDocuments
+
+Returns a list of PlmDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listPlmDocuments" method="get" path="/plm/{connection_id}/document" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListPlmDocumentsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->document->listPlmDocuments(
+    request: $request
+);
+
+if ($response->plmDocuments !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListPlmDocumentsRequest](../../Models/Operations/ListPlmDocumentsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\ListPlmDocumentsResponse](../../Models/Operations/ListPlmDocumentsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listSigningDocuments
 
 Returns a list of SigningDocuments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -715,10 +889,10 @@ $request = new Operations\PatchAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: 'a49f312b-f421-456c-ad5f-80b2cf911c8b',
+        id: 'f9cd0584-a960-461f-81c7-865d7fbbc9e9',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-10T04:35:48.861Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-10T11:08:52.624Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -777,10 +951,10 @@ $request = new Operations\PatchHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: '43541ba6-c591-4239-bd77-4191b4fb6488',
+        id: '41ffc383-9d66-42f5-9142-0c501cc08a24',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-20T09:53:39.599Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-21T05:16:22.471Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -804,6 +978,75 @@ if ($response->hrisDocument !== null) {
 ### Response
 
 **[?Operations\PatchHrisDocumentResponse](../../Models/Operations/PatchHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchPlmDocument
+
+Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchPlmDocument" method="patch" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchPlmDocumentRequest(
+    plmDocument: new Shared\PlmDocument(
+        createdAt: Utils\Utils::parseDateTime('2020-10-16T01:44:30.293Z'),
+        fileIds: [],
+        id: 'bd51bb3c-6f62-45ce-84e7-ad869eb64dcc',
+        lifecycleState: 'Under Review',
+        masterIdentifier: 'ebb6b8d0-3df3-4126-9616-6eac5285fc99',
+        metadata: [],
+        name: 'Procedure taxicab',
+        number: 'DOC-086886',
+        originalType: 'Procedure',
+        revision: 'C',
+        status: Shared\PlmDocumentStatus::InReview,
+        type: Shared\PlmDocumentType::Procedure,
+        updatedAt: Utils\Utils::parseDateTime('2026-08-28T10:42:16.733Z'),
+        url: 'https://uncommon-guide.info/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->patchPlmDocument(
+    request: $request
+);
+
+if ($response->plmDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\PatchPlmDocumentRequest](../../Models/Operations/PatchPlmDocumentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\PatchPlmDocumentResponse](../../Models/Operations/PatchPlmDocumentResponse.md)**
 
 ### Errors
 
@@ -839,12 +1082,12 @@ $request = new Operations\PatchSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '5596eb67-a101-4c4c-b9a5-c87b9f4d7200',
+        id: 'bcb5cfb0-797f-4529-b17b-0b7f1267b38d',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-07-02T00:30:31.410Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-07-02T06:02:10.130Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-12T08:42:49.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-13T05:24:50.919Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1056,10 +1299,10 @@ $request = new Operations\UpdateAtsDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-08-20T08:00:27.437Z'),
         documentUrl: 'https://vengeful-lashes.biz',
         filename: 'lonzo_schowalter_resume.pdf',
-        id: 'a49f312b-f421-456c-ad5f-80b2cf911c8b',
+        id: 'f9cd0584-a960-461f-81c7-865d7fbbc9e9',
         metadata: [],
         type: Shared\AtsDocumentType::CoverLetter,
-        updatedAt: Utils\Utils::parseDateTime('2022-12-10T04:35:48.861Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-12-10T11:08:52.624Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1118,10 +1361,10 @@ $request = new Operations\UpdateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: '43541ba6-c591-4239-bd77-4191b4fb6488',
+        id: '41ffc383-9d66-42f5-9142-0c501cc08a24',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-20T09:53:39.599Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-21T05:16:22.471Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1145,6 +1388,75 @@ if ($response->hrisDocument !== null) {
 ### Response
 
 **[?Operations\UpdateHrisDocumentResponse](../../Models/Operations/UpdateHrisDocumentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updatePlmDocument
+
+Updates the PlmDocument identified by `id`. Provide the unified PlmDocument fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updatePlmDocument" method="put" path="/plm/{connection_id}/document/{id}" example="plm_document" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdatePlmDocumentRequest(
+    plmDocument: new Shared\PlmDocument(
+        createdAt: Utils\Utils::parseDateTime('2020-10-16T01:44:30.293Z'),
+        fileIds: [],
+        id: 'bd51bb3c-6f62-45ce-84e7-ad869eb64dcc',
+        lifecycleState: 'Under Review',
+        masterIdentifier: 'ebb6b8d0-3df3-4126-9616-6eac5285fc99',
+        metadata: [],
+        name: 'Procedure taxicab',
+        number: 'DOC-086886',
+        originalType: 'Procedure',
+        revision: 'C',
+        status: Shared\PlmDocumentStatus::InReview,
+        type: Shared\PlmDocumentType::Procedure,
+        updatedAt: Utils\Utils::parseDateTime('2026-08-28T10:42:16.733Z'),
+        url: 'https://uncommon-guide.info/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->document->updatePlmDocument(
+    request: $request
+);
+
+if ($response->plmDocument !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\UpdatePlmDocumentRequest](../../Models/Operations/UpdatePlmDocumentRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\UpdatePlmDocumentResponse](../../Models/Operations/UpdatePlmDocumentResponse.md)**
 
 ### Errors
 
@@ -1180,12 +1492,12 @@ $request = new Operations\UpdateSigningDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2021-05-02T09:35:23.679Z'),
         description: 'Aer asporto caste umbra coerceo anser color allatus aestas perspiciatis.',
         expiresAt: Utils\Utils::parseDateTime('2021-06-04T01:21:34.949Z'),
-        id: '5596eb67-a101-4c4c-b9a5-c87b9f4d7200',
+        id: 'bcb5cfb0-797f-4529-b17b-0b7f1267b38d',
         metadata: [],
         name: 'Denesik Group NDA',
-        sentAt: Utils\Utils::parseDateTime('2022-07-02T00:30:31.410Z'),
+        sentAt: Utils\Utils::parseDateTime('2022-07-02T06:02:10.130Z'),
         status: Shared\SigningDocumentStatus::Draft,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-12T08:42:49.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-13T05:24:50.919Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

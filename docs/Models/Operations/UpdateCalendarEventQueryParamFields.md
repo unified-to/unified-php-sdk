@@ -30,5 +30,5 @@
 | `SendNotifications` | send_notifications  |
 | `MatterId`          | matter_id           |
 | `Metadata`          | metadata            |
-| `RoomIds`           | room_ids            |
+| `Rooms`             | rooms               |
 | `Raw`               | raw                 |

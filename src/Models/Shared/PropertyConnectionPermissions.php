@@ -438,4 +438,14 @@ enum PropertyConnectionPermissions: string
     case PropertyReviewWrite = 'property_review_write';
     case PropertyConversationRead = 'property_conversation_read';
     case PropertyConversationWrite = 'property_conversation_write';
+    case PlmPartRead = 'plm_part_read';
+    case PlmPartWrite = 'plm_part_write';
+    case PlmBomlineRead = 'plm_bomline_read';
+    case PlmBomlineWrite = 'plm_bomline_write';
+    case PlmDocumentRead = 'plm_document_read';
+    case PlmDocumentWrite = 'plm_document_write';
+    case PlmChangeRead = 'plm_change_read';
+    case PlmChangeWrite = 'plm_change_write';
+    case PlmCategoryRead = 'plm_category_read';
+    case PlmCategoryWrite = 'plm_category_write';
 }

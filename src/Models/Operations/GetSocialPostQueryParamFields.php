@@ -15,7 +15,7 @@ enum GetSocialPostQueryParamFields: string
     case CreatedAt = 'created_at';
     case UpdatedAt = 'updated_at';
     case ProfileId = 'profile_id';
-    case ParentPostId = 'parent_post_id';
+    case ParentId = 'parent_id';
     case Title = 'title';
     case Body = 'body';
     case Status = 'status';

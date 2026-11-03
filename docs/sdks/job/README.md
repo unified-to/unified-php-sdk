@@ -72,7 +72,7 @@ $request = new Operations\CreateAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: '393c4f4c-29d7-456e-8374-5c38780b741f',
+        id: '3e629a5a-e32d-47c5-82cc-b792ce26adb6',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -81,7 +81,7 @@ $request = new Operations\CreateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '48f32997-9b6a-41d2-a8a1-483199e2ae3d',
+                id: 'ef777436-dfb6-4479-95ad-0565f3eeeb9a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -94,7 +94,7 @@ $request = new Operations\CreateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-18T11:09:30.447Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-19T10:22:13.236Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -108,14 +108,14 @@ $request = new Operations\CreateAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-13T03:02:29.523Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-14T03:25:48.703Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: 'b42ec774-f5e0-444f-bf38-76f11f51f952',
+                id: 'fb038580-edf9-4663-9e4e-a34af66c8101',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-09-08T16:33:45.067Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-09-09T17:30:45.970Z'),
             ),
         ],
         publicJobUrls: [
@@ -125,7 +125,7 @@ $request = new Operations\CreateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: '42f26b42-7f5a-4ae5-93b4-a4561c5f9aa3',
+                id: '215a867d-62cb-456a-b622-d18766da0b0b',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -138,7 +138,7 @@ $request = new Operations\CreateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '88140a43-ef84-4b19-951e-03d0b27573cb',
+                id: 'da615cee-efaf-4e15-bd89-d2394a9530e5',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -151,7 +151,7 @@ $request = new Operations\CreateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: '4bdbb802-d998-4828-9382-4fcc5da4010c',
+                id: 'dbbb39d0-6054-4c20-8f69-d302f5ce7860',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -169,7 +169,7 @@ $request = new Operations\CreateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-09T00:02:00.983Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-09T21:06:01.436Z'),
     ),
     connectionId: '<id>',
 );
@@ -228,11 +228,11 @@ $request = new Operations\CreateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '0f123a5d-114f-4a00-b498-4557438c1a88',
+        id: '157b7f9c-b45d-488d-a91a-b2b1b57d040a',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-03T16:56:33.075Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-04T02:47:25.820Z'),
     ),
     connectionId: '<id>',
 );
@@ -519,7 +519,7 @@ $request = new Operations\PatchAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: '7d83912f-56d3-4721-b009-9a39e2ccd339',
+        id: 'ca24112e-8c99-49db-a748-04d159d81d43',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -528,7 +528,7 @@ $request = new Operations\PatchAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '43ba2082-bbd6-4a6c-a63d-0d82a2e0b092',
+                id: '44de36b4-8855-4e46-baa5-fa38bf1a0397',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -541,7 +541,7 @@ $request = new Operations\PatchAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-18T11:09:30.478Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-19T10:22:13.295Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -555,14 +555,14 @@ $request = new Operations\PatchAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-13T03:02:29.557Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-14T03:25:48.765Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: '1afe0a10-2ad6-4579-9305-28c67bf8e093',
+                id: '202e5b43-b9e8-44f4-ad5c-18f1f3a7a981',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-09-08T16:33:45.101Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-09-09T17:30:46.034Z'),
             ),
         ],
         publicJobUrls: [
@@ -572,7 +572,7 @@ $request = new Operations\PatchAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: 'd3f75edb-cd78-4ce3-b8a5-e086a628bf94',
+                id: 'd8021e81-d513-492c-8215-e4e680298d4c',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -585,7 +585,7 @@ $request = new Operations\PatchAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '684d6bd1-b95b-4a1e-893e-75ccfe6b35df',
+                id: 'f0fdb03b-88a2-49d5-85cb-e6d06b085d9f',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -598,7 +598,7 @@ $request = new Operations\PatchAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: '38a696bc-00c1-476d-8734-1f344d6a29ed',
+                id: 'e9ad9090-e9a3-4b1c-b76a-62d5a4a3f9e5',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -616,7 +616,7 @@ $request = new Operations\PatchAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-09T00:02:01.011Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-09T21:06:01.490Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -676,11 +676,11 @@ $request = new Operations\PatchHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '003527bb-7719-41b6-82c3-94243f37d57f',
+        id: '9bf7e823-8eb9-4061-94a7-2101e9c204d8',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-03T16:56:33.112Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-04T02:47:25.885Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -868,7 +868,7 @@ $request = new Operations\UpdateAtsJobRequest(
         description: 'Global',
         employmentType: Shared\EmploymentType::Freelance,
         hiringManagers: [],
-        id: '7d83912f-56d3-4721-b009-9a39e2ccd339',
+        id: 'ca24112e-8c99-49db-a748-04d159d81d43',
         industry: 'Handcrafted Bamboo Soap',
         languageLocale: 'en',
         metadata: [
@@ -877,7 +877,7 @@ $request = new Operations\UpdateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '43ba2082-bbd6-4a6c-a63d-0d82a2e0b092',
+                id: '44de36b4-8855-4e46-baa5-fa38bf1a0397',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'desolo',
@@ -890,7 +890,7 @@ $request = new Operations\UpdateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Admoveo trado textilis.',
-                openedAt: Utils\Utils::parseDateTime('2026-06-18T11:09:30.478Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-06-19T10:22:13.295Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -904,14 +904,14 @@ $request = new Operations\UpdateAtsJobRequest(
                     region: 'Wisconsin',
                     regionCode: 'CO',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-08-13T03:02:29.557Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-08-14T03:25:48.765Z'),
                 description: 'Beatus eum volutabrum balbus victus ipsa tubineus claustrum.',
-                id: '1afe0a10-2ad6-4579-9305-28c67bf8e093',
+                id: '202e5b43-b9e8-44f4-ad5c-18f1f3a7a981',
                 isActive: false,
                 location: '1725 Hessel Keys',
                 name: 'International Identity Manager',
                 postingUrl: 'https://obedient-yak.com',
-                updatedAt: Utils\Utils::parseDateTime('2026-09-08T16:33:45.101Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-09-09T17:30:46.034Z'),
             ),
         ],
         publicJobUrls: [
@@ -921,7 +921,7 @@ $request = new Operations\UpdateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Auctus deporto tolero administratio capitulus animi agnosco tendo aetas vado.',
-                id: 'd3f75edb-cd78-4ce3-b8a5-e086a628bf94',
+                id: 'd8021e81-d513-492c-8215-e4e680298d4c',
                 maxLength: 117,
                 minLength: 1,
                 options: [
@@ -934,7 +934,7 @@ $request = new Operations\UpdateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '684d6bd1-b95b-4a1e-893e-75ccfe6b35df',
+                id: 'f0fdb03b-88a2-49d5-85cb-e6d06b085d9f',
                 maxLength: 453,
                 minLength: 1,
                 options: [
@@ -947,7 +947,7 @@ $request = new Operations\UpdateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Taceo rem compello spectaculum mollitia arcus compello.',
-                id: '38a696bc-00c1-476d-8734-1f344d6a29ed',
+                id: 'e9ad9090-e9a3-4b1c-b76a-62d5a4a3f9e5',
                 maxLength: 66,
                 minLength: 1,
                 options: [
@@ -965,7 +965,7 @@ $request = new Operations\UpdateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Crepusculum adsuesco vere.',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-09T00:02:01.011Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-09T21:06:01.490Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1025,11 +1025,11 @@ $request = new Operations\UpdateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '003527bb-7719-41b6-82c3-94243f37d57f',
+        id: '9bf7e823-8eb9-4061-94a7-2101e9c204d8',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-03T16:56:33.112Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-04T02:47:25.885Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

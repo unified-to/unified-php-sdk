@@ -242,4 +242,9 @@ enum WebhookObjectType: string
     case PropertyQuote = 'property_quote';
     case PropertyReview = 'property_review';
     case PropertyConversation = 'property_conversation';
+    case PlmPart = 'plm_part';
+    case PlmBomline = 'plm_bomline';
+    case PlmDocument = 'plm_document';
+    case PlmChange = 'plm_change';
+    case PlmCategory = 'plm_category';
 }

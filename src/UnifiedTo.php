@@ -376,6 +376,14 @@ class UnifiedTo
 
     public Feedback $feedback;
 
+    public Plm $plm;
+
+    public Bomline $bomline;
+
+    public Change $change;
+
+    public Part $part;
+
     public Conversation $conversation;
 
     public Guest $guest;
@@ -423,8 +431,6 @@ class UnifiedTo
     public Storage $storage;
 
     public File $file;
-
-    public Change $change;
 
     public Ticketing $ticketing;
 
@@ -658,6 +664,10 @@ class UnifiedTo
         $this->performance = new Performance($this->sdkConfiguration);
         $this->cycle = new Cycle($this->sdkConfiguration);
         $this->feedback = new Feedback($this->sdkConfiguration);
+        $this->plm = new Plm($this->sdkConfiguration);
+        $this->bomline = new Bomline($this->sdkConfiguration);
+        $this->change = new Change($this->sdkConfiguration);
+        $this->part = new Part($this->sdkConfiguration);
         $this->conversation = new Conversation($this->sdkConfiguration);
         $this->guest = new Guest($this->sdkConfiguration);
         $this->listing = new Listing($this->sdkConfiguration);
@@ -682,7 +692,6 @@ class UnifiedTo
         $this->post = new Post($this->sdkConfiguration);
         $this->storage = new Storage($this->sdkConfiguration);
         $this->file = new File($this->sdkConfiguration);
-        $this->change = new Change($this->sdkConfiguration);
         $this->ticketing = new Ticketing($this->sdkConfiguration);
         $this->customer = new Customer($this->sdkConfiguration);
         $this->note = new Note($this->sdkConfiguration);

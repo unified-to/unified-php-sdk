@@ -37,12 +37,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '43327dea-6ebe-423d-a0cc-a8f07cf7f58a',
+        id: '7be9a96c-d24b-48f7-a0ff-a7b8d5cbd76e',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-10T10:06:53.577Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-11T01:01:18.514Z'),
     ),
     connectionId: '<id>',
 );
@@ -199,12 +199,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '2808e1d9-6322-41e4-976b-610bdc8ea713',
+        id: '2eee55dc-a061-4d96-96fe-a3c4f13229c6',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-10T10:06:53.581Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-11T01:01:18.520Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -312,12 +312,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '2808e1d9-6322-41e4-976b-610bdc8ea713',
+        id: '2eee55dc-a061-4d96-96fe-a3c4f13229c6',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-10T10:06:53.581Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-11T01:01:18.520Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

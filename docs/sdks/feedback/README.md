@@ -34,7 +34,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreatePerformanceFeedbackRequest(
     performanceFeedback: new Shared\PerformanceFeedback(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T16:21:53.862Z'),
-        id: 'b6b40240-7577-4594-972f-77ec2dd2f30e',
+        id: '26465ace-59b4-4dc2-8f40-02d1f2992a99',
         isVisible: true,
         message: 'Tabernus corpus voluptate aestus.',
         metadata: [],
@@ -43,7 +43,7 @@ $request = new Operations\CreatePerformanceFeedbackRequest(
             'hexagon',
         ],
         type: Shared\PerformanceFeedbackType::Praise,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-12T04:29:28.463Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-12T22:14:39.721Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',

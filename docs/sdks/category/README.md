@@ -7,8 +7,10 @@
 * [createAccountingCategory](#createaccountingcategory) - Create a category
 * [createTicketingCategory](#createticketingcategory) - Create a category
 * [getAccountingCategory](#getaccountingcategory) - Retrieve a category
+* [getPlmCategory](#getplmcategory) - Retrieve a category
 * [getTicketingCategory](#getticketingcategory) - Retrieve a category
 * [listAccountingCategories](#listaccountingcategories) - List all categories
+* [listPlmCategories](#listplmcategories) - List all categories
 * [listTicketingCategories](#listticketingcategories) - List all categories
 * [patchAccountingCategory](#patchaccountingcategory) - Update a category
 * [patchTicketingCategory](#patchticketingcategory) - Update a category
@@ -44,11 +46,11 @@ $request = new Operations\CreateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
         description: 'Textus ab thymum labore basium.',
-        id: '2aeb1a5c-f6e7-424c-80e8-1ea26748cc86',
+        id: 'dde68e0d-8943-4930-aaa0-2d03042e69bb',
         isActive: false,
         metadata: [],
         name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-19T12:19:08.057Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-20T05:53:56.114Z'),
     ),
     connectionId: '<id>',
 );
@@ -105,11 +107,11 @@ $request = new Operations\CreateTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
         description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: '825ab165-1dac-4e1e-9db5-1ceeccb52bb4',
+        id: '034df176-1634-4373-bf7f-674185811ebb',
         isActive: true,
         metadata: [],
         name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-24T14:33:39.782Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-25T13:48:02.495Z'),
     ),
     connectionId: '<id>',
 );
@@ -183,6 +185,57 @@ if ($response->accountingCategory !== null) {
 ### Response
 
 **[?Operations\GetAccountingCategoryResponse](../../Models/Operations/GetAccountingCategoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getPlmCategory
+
+Retrieves a single PlmCategory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getPlmCategory" method="get" path="/plm/{connection_id}/category/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetPlmCategoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->category->getPlmCategory(
+    request: $request
+);
+
+if ($response->plmCategory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetPlmCategoryRequest](../../Models/Operations/GetPlmCategoryRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetPlmCategoryResponse](../../Models/Operations/GetPlmCategoryResponse.md)**
 
 ### Errors
 
@@ -291,6 +344,56 @@ if ($response->accountingCategories !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listPlmCategories
+
+Returns a list of PlmCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listPlmCategories" method="get" path="/plm/{connection_id}/category" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListPlmCategoriesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->category->listPlmCategories(
+    request: $request
+);
+
+if ($response->plmCategories !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListPlmCategoriesRequest](../../Models/Operations/ListPlmCategoriesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\ListPlmCategoriesResponse](../../Models/Operations/ListPlmCategoriesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listTicketingCategories
 
 Returns a list of TicketingCategories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -368,11 +471,11 @@ $request = new Operations\PatchAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
         description: 'Textus ab thymum labore basium.',
-        id: 'e1417b0d-f374-4447-b4ac-f55ff9dbe069',
+        id: '11a9785b-b11f-4026-9b56-1deb559f1546',
         isActive: false,
         metadata: [],
         name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-19T12:19:08.063Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-20T05:53:56.125Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -430,11 +533,11 @@ $request = new Operations\PatchTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
         description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: '1453a026-4f9a-4d19-bd99-eaf85437ff4e',
+        id: '7e98cb44-0ac5-4d72-a781-9c83fc34625b',
         isActive: true,
         metadata: [],
         name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-24T14:33:39.800Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-25T13:48:02.507Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -594,11 +697,11 @@ $request = new Operations\UpdateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
         description: 'Textus ab thymum labore basium.',
-        id: 'e1417b0d-f374-4447-b4ac-f55ff9dbe069',
+        id: '11a9785b-b11f-4026-9b56-1deb559f1546',
         isActive: false,
         metadata: [],
         name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-09-19T12:19:08.063Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-20T05:53:56.125Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -656,11 +759,11 @@ $request = new Operations\UpdateTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
         description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: '1453a026-4f9a-4d19-bd99-eaf85437ff4e',
+        id: '7e98cb44-0ac5-4d72-a781-9c83fc34625b',
         isActive: true,
         metadata: [],
         name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-01-24T14:33:39.800Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-25T13:48:02.507Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

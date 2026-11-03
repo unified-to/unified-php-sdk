@@ -38,17 +38,17 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '899be455-b01f-4933-916e-e9b89a480941',
+        id: '326d074c-25f2-4e01-9eb1-8fd02392d03e',
         isRequired: false,
         name: 'autem',
-        objectType: 'compute_usage',
+        objectType: 'compute_domain',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-30T11:25:31.003Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-31T06:06:44.463Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,17 +206,17 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '902d5ff2-64e9-4086-bf6d-4ef7f623c05c',
+        id: '93593681-4ed3-4ff6-a254-e5d21a7116e5',
         isRequired: false,
         name: 'autem',
-        objectType: 'compute_usage',
+        objectType: 'compute_domain',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-30T11:25:31.012Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-31T06:06:44.472Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,17 +325,17 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '902d5ff2-64e9-4086-bf6d-4ef7f623c05c',
+        id: '93593681-4ed3-4ff6-a254-e5d21a7116e5',
         isRequired: false,
         name: 'autem',
-        objectType: 'compute_usage',
+        objectType: 'compute_domain',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-30T11:25:31.012Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-31T06:06:44.472Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
