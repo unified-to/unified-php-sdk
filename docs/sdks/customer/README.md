@@ -43,7 +43,7 @@ $request = new Operations\CreateTicketingCustomerRequest(
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: 'ca88f8e9-1476-4968-a121-3a3a581fe3f2',
+        id: '4c808ce9-b661-49cf-bff1-4c8ffcc3fa72',
         metadata: [],
         name: 'Christian Windler',
         tags: [
@@ -64,7 +64,7 @@ $request = new Operations\CreateTicketingCustomerRequest(
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-16T04:06:04.133Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-17T01:04:52.655Z'),
     ),
     connectionId: '<id>',
 );
@@ -227,7 +227,7 @@ $request = new Operations\PatchTicketingCustomerRequest(
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: 'd4b30acc-3212-4308-b67a-20095028bd21',
+        id: 'f0df9872-d723-4a85-9e90-dd08fe682fbc',
         metadata: [],
         name: 'Christian Windler',
         tags: [
@@ -248,7 +248,7 @@ $request = new Operations\PatchTicketingCustomerRequest(
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-16T04:06:04.150Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-17T01:04:52.663Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -362,7 +362,7 @@ $request = new Operations\UpdateTicketingCustomerRequest(
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: 'd4b30acc-3212-4308-b67a-20095028bd21',
+        id: 'f0df9872-d723-4a85-9e90-dd08fe682fbc',
         metadata: [],
         name: 'Christian Windler',
         tags: [
@@ -383,7 +383,7 @@ $request = new Operations\UpdateTicketingCustomerRequest(
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-06-16T04:06:04.150Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-17T01:04:52.663Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

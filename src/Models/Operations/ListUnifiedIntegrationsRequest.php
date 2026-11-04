@@ -42,6 +42,14 @@ class ListUnifiedIntegrationsRequest
     public ?float $limit = null;
 
     /**
+     * Only return support and OAuth2 scopes for these object types (e.g. crm_contact,crm_deal), to keep the response small
+     *
+     * @var ?array<string> $objectTypes
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=object_types')]
+    public ?array $objectTypes = null;
+
+    /**
      *
      * @var ?float $offset
      */
@@ -64,6 +72,14 @@ class ListUnifiedIntegrationsRequest
     public ?string $type = null;
 
     /**
+     * Filter the results for only these integration types (e.g. hubspot,salesforce)
+     *
+     * @var ?array<string> $types
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=types')]
+    public ?array $types = null;
+
+    /**
      *
      * @var ?string $updatedGte
      */
@@ -75,21 +91,25 @@ class ListUnifiedIntegrationsRequest
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListUnifiedIntegrationsQueryParamCategories>  $categories
      * @param  ?string  $env
      * @param  ?float  $limit
+     * @param  ?array<string>  $objectTypes
      * @param  ?float  $offset
      * @param  ?bool  $summary
      * @param  ?string  $type
+     * @param  ?array<string>  $types
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(?bool $active = null, ?array $categories = null, ?string $env = null, ?float $limit = null, ?float $offset = null, ?bool $summary = null, ?string $type = null, ?string $updatedGte = null)
+    public function __construct(?bool $active = null, ?array $categories = null, ?string $env = null, ?float $limit = null, ?array $objectTypes = null, ?float $offset = null, ?bool $summary = null, ?string $type = null, ?array $types = null, ?string $updatedGte = null)
     {
         $this->active = $active;
         $this->categories = $categories;
         $this->env = $env;
         $this->limit = $limit;
+        $this->objectTypes = $objectTypes;
         $this->offset = $offset;
         $this->summary = $summary;
         $this->type = $type;
+        $this->types = $types;
         $this->updatedGte = $updatedGte;
     }
 }
