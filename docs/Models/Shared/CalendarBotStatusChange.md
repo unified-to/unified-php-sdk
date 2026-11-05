@@ -1,0 +1,11 @@
+# CalendarBotStatusChange
+
+
+## Fields
+
+| Field                                                                                         | Type                                                                                          | Required                                                                                      | Description                                                                                   |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `changedAt`                                                                                   | [\DateTime](https://www.php.net/manual/en/class.datetime.php)                                 | :heavy_minus_sign:                                                                            | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                                      |
+| `message`                                                                                     | *?string*                                                                                     | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `status`                                                                                      | [?Shared\CalendarBotStatusChangeStatus](../../Models/Shared/CalendarBotStatusChangeStatus.md) | :heavy_minus_sign:                                                                            | N/A                                                                                           |
+| `subCode`                                                                                     | *?string*                                                                                     | :heavy_minus_sign:                                                                            | N/A                                                                                           |

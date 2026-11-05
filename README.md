@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '0e0226be-7502-42bc-a8f4-a91f1ed02568',
+        id: 'cf97f875-d028-42db-aca8-2811ccd94fff',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-10T10:32:12.530Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-10T17:19:30.069Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '0e0226be-7502-42bc-a8f4-a91f1ed02568',
+        id: 'cf97f875-d028-42db-aca8-2811ccd94fff',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-10T10:32:12.530Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-10T17:19:30.069Z'),
     ),
     connectionId: '<id>',
 );
@@ -596,6 +596,15 @@ if ($response->accountingAccount !== null) {
 * [removePlmBomline](docs/sdks/bomline/README.md#removeplmbomline) - Remove a bomline
 * [updatePlmBomline](docs/sdks/bomline/README.md#updateplmbomline) - Update a bomline
 
+### [Bot](docs/sdks/bot/README.md)
+
+* [createCalendarBot](docs/sdks/bot/README.md#createcalendarbot) - Create a bot
+* [getCalendarBot](docs/sdks/bot/README.md#getcalendarbot) - Retrieve a bot
+* [listCalendarBots](docs/sdks/bot/README.md#listcalendarbots) - List all bots
+* [patchCalendarBot](docs/sdks/bot/README.md#patchcalendarbot) - Update a bot
+* [removeCalendarBot](docs/sdks/bot/README.md#removecalendarbot) - Remove a bot
+* [updateCalendarBot](docs/sdks/bot/README.md#updatecalendarbot) - Update a bot
+
 ### [Branch](docs/sdks/branch/README.md)
 
 * [createRepoBranch](docs/sdks/branch/README.md#createrepobranch) - Create a branch
@@ -611,10 +620,12 @@ if ($response->accountingAccount !== null) {
 
 ### [Calendar](docs/sdks/calendar/README.md)
 
+* [createCalendarBot](docs/sdks/calendar/README.md#createcalendarbot) - Create a bot
 * [createCalendarCalendar](docs/sdks/calendar/README.md#createcalendarcalendar) - Create a calendar
 * [createCalendarEvent](docs/sdks/calendar/README.md#createcalendarevent) - Create an event
 * [createCalendarLink](docs/sdks/calendar/README.md#createcalendarlink) - Create a link
 * [createCalendarWebinar](docs/sdks/calendar/README.md#createcalendarwebinar) - Create a webinar
+* [getCalendarBot](docs/sdks/calendar/README.md#getcalendarbot) - Retrieve a bot
 * [getCalendarCalendar](docs/sdks/calendar/README.md#getcalendarcalendar) - Retrieve a calendar
 * [getCalendarEvent](docs/sdks/calendar/README.md#getcalendarevent) - Retrieve an event
 * [getCalendarLink](docs/sdks/calendar/README.md#getcalendarlink) - Retrieve a link
@@ -622,6 +633,7 @@ if ($response->accountingAccount !== null) {
 * [getCalendarRecording](docs/sdks/calendar/README.md#getcalendarrecording) - Retrieve a recording
 * [getCalendarRoom](docs/sdks/calendar/README.md#getcalendarroom) - Retrieve a room
 * [getCalendarWebinar](docs/sdks/calendar/README.md#getcalendarwebinar) - Retrieve a webinar
+* [listCalendarBots](docs/sdks/calendar/README.md#listcalendarbots) - List all bots
 * [listCalendarBusies](docs/sdks/calendar/README.md#listcalendarbusies) - List all busies
 * [listCalendarCalendars](docs/sdks/calendar/README.md#listcalendarcalendars) - List all calendars
 * [listCalendarEvents](docs/sdks/calendar/README.md#listcalendarevents) - List all events
@@ -630,14 +642,17 @@ if ($response->accountingAccount !== null) {
 * [listCalendarRecordings](docs/sdks/calendar/README.md#listcalendarrecordings) - List all recordings
 * [listCalendarRooms](docs/sdks/calendar/README.md#listcalendarrooms) - List all rooms
 * [listCalendarWebinars](docs/sdks/calendar/README.md#listcalendarwebinars) - List all webinars
+* [patchCalendarBot](docs/sdks/calendar/README.md#patchcalendarbot) - Update a bot
 * [patchCalendarCalendar](docs/sdks/calendar/README.md#patchcalendarcalendar) - Update a calendar
 * [patchCalendarEvent](docs/sdks/calendar/README.md#patchcalendarevent) - Update an event
 * [patchCalendarLink](docs/sdks/calendar/README.md#patchcalendarlink) - Update a link
 * [patchCalendarWebinar](docs/sdks/calendar/README.md#patchcalendarwebinar) - Update a webinar
+* [removeCalendarBot](docs/sdks/calendar/README.md#removecalendarbot) - Remove a bot
 * [removeCalendarCalendar](docs/sdks/calendar/README.md#removecalendarcalendar) - Remove a calendar
 * [removeCalendarEvent](docs/sdks/calendar/README.md#removecalendarevent) - Remove an event
 * [removeCalendarLink](docs/sdks/calendar/README.md#removecalendarlink) - Remove a link
 * [removeCalendarWebinar](docs/sdks/calendar/README.md#removecalendarwebinar) - Remove a webinar
+* [updateCalendarBot](docs/sdks/calendar/README.md#updatecalendarbot) - Update a bot
 * [updateCalendarCalendar](docs/sdks/calendar/README.md#updatecalendarcalendar) - Update a calendar
 * [updateCalendarEvent](docs/sdks/calendar/README.md#updatecalendarevent) - Update an event
 * [updateCalendarLink](docs/sdks/calendar/README.md#updatecalendarlink) - Update a link
@@ -3033,7 +3048,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: '0e0226be-7502-42bc-a8f4-a91f1ed02568',
+            id: 'cf97f875-d028-42db-aca8-2811ccd94fff',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -3046,7 +3061,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-10T10:32:12.530Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-10T17:19:30.069Z'),
         ),
         connectionId: '<id>',
     );
@@ -3104,7 +3119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '0e0226be-7502-42bc-a8f4-a91f1ed02568',
+        id: 'cf97f875-d028-42db-aca8-2811ccd94fff',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3117,7 +3132,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-10T10:32:12.530Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-10T17:19:30.069Z'),
     ),
     connectionId: '<id>',
 );
@@ -3158,7 +3173,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '0e0226be-7502-42bc-a8f4-a91f1ed02568',
+        id: 'cf97f875-d028-42db-aca8-2811ccd94fff',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3171,7 +3186,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-10T10:32:12.530Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-10T17:19:30.069Z'),
     ),
     connectionId: '<id>',
 );

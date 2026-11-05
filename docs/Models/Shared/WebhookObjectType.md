@@ -146,6 +146,8 @@ The object to return (eg. CRM "contact")
 | `CalendarLink`                  | calendar_link                   |
 | `CalendarRecording`             | calendar_recording              |
 | `CalendarWebinar`               | calendar_webinar                |
+| `CalendarBot`                   | calendar_bot                    |
+| `CalendarBotevent`              | calendar_botevent               |
 | `CalendarRoom`                  | calendar_room                   |
 | `CalendarLocation`              | calendar_location               |
 | `AdsOrganization`               | ads_organization                |

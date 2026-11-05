@@ -38,7 +38,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '6def49a5-8c59-4cea-af7e-28efdfc0a4f5',
+        id: 'd932de82-7b4d-4da1-bd69-b51704d58932',
         isRequired: false,
         name: 'autem',
         objectType: 'compute_domain',
@@ -48,7 +48,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-31T22:13:46.953Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-01T17:21:08.420Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,7 +206,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'f71c18de-debf-4213-873e-46e7bddf4a00',
+        id: '11642e08-0c4b-4206-bdfc-3e33ae0a86d5',
         isRequired: false,
         name: 'autem',
         objectType: 'compute_domain',
@@ -216,7 +216,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-31T22:13:46.958Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-01T17:21:08.426Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,7 +325,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'f71c18de-debf-4213-873e-46e7bddf4a00',
+        id: '11642e08-0c4b-4206-bdfc-3e33ae0a86d5',
         isRequired: false,
         name: 'autem',
         objectType: 'compute_domain',
@@ -335,7 +335,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-03-31T22:13:46.958Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-01T17:21:08.426Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

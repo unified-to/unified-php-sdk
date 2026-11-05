@@ -144,6 +144,8 @@ class UnifiedTo
 
     public Calendar $calendar;
 
+    public Bot $bot;
+
     public Busy $busy;
 
     public Link $link;
@@ -548,6 +550,7 @@ class UnifiedTo
         $this->job = new Job($this->sdkConfiguration);
         $this->scorecard = new Scorecard($this->sdkConfiguration);
         $this->calendar = new Calendar($this->sdkConfiguration);
+        $this->bot = new Bot($this->sdkConfiguration);
         $this->busy = new Busy($this->sdkConfiguration);
         $this->link = new Link($this->sdkConfiguration);
         $this->location = new Location($this->sdkConfiguration);
