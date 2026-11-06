@@ -28,6 +28,7 @@ class CalendarBotParticipant
     public ?string $id = null;
 
     /**
+     * Whether this participant is a bot
      *
      * @var ?bool $isBot
      */
@@ -52,6 +53,7 @@ class CalendarBotParticipant
     public ?bool $isHost = null;
 
     /**
+     * Whether this participant is the current bot
      *
      * @var ?bool $isSelf
      */
@@ -86,6 +88,7 @@ class CalendarBotParticipant
     public ?string $name = null;
 
     /**
+     * Platform-specific participant identifier
      *
      * @var ?string $platform
      */
@@ -94,6 +97,7 @@ class CalendarBotParticipant
     public ?string $platform = null;
 
     /**
+     * Platform-specific metadata
      *
      * @var array<string, mixed>|string|float|bool|array<\Unified\Unified_to\Models\Shared\CalendarBotParticipant1|string|float|bool>|null $platformMetadata
      */
@@ -103,6 +107,7 @@ class CalendarBotParticipant
     public array|string|float|bool|null $platformMetadata = null;
 
     /**
+     * Whether participant is sharing screen
      *
      * @var ?bool $screenshareOn
      */
@@ -111,6 +116,7 @@ class CalendarBotParticipant
     public ?bool $screenshareOn = null;
 
     /**
+     * Whether participant is currently speaking
      *
      * @var ?bool $speaking
      */
@@ -119,6 +125,7 @@ class CalendarBotParticipant
     public ?bool $speaking = null;
 
     /**
+     * Whether participant's webcam is on
      *
      * @var ?bool $webcamOn
      */

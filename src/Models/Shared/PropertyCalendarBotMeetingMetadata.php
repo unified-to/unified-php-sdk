@@ -37,6 +37,7 @@ class PropertyCalendarBotMeetingMetadata
     public ?string $hostName = null;
 
     /**
+     * Platform-specific meeting identifier (not a unified object ref)
      *
      * @var ?string $meetingIdentifier
      */
@@ -53,6 +54,7 @@ class PropertyCalendarBotMeetingMetadata
     public ?float $participantCount = null;
 
     /**
+     * 'zoom', 'webex', 'google_meet', etc.
      *
      * @var ?string $platform
      */

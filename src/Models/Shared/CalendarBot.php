@@ -30,7 +30,7 @@ class CalendarBot
     public ?\DateTime $createdAt = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the bot left (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $endedAt
      */
@@ -39,7 +39,7 @@ class CalendarBot
     public ?\DateTime $endedAt = null;
 
     /**
-     * (reference to CalendarEvent)
+     * Reference to calendar_event if scheduled via calendar (reference to CalendarEvent)
      *
      * @var ?string $eventId
      */
@@ -56,7 +56,7 @@ class CalendarBot
     public ?string $id = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When to join the meeting (for scheduled bots) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $joinAt
      */
@@ -74,6 +74,7 @@ class CalendarBot
     public ?PropertyCalendarBotMeetingMetadata $meetingMetadata = null;
 
     /**
+     * URL of the meeting to join
      *
      * @var ?string $meetingUrl
      */
@@ -82,6 +83,7 @@ class CalendarBot
     public ?string $meetingUrl = null;
 
     /**
+     * Display name for the bot in the meeting
      *
      * @var ?string $name
      */
@@ -119,6 +121,7 @@ class CalendarBot
     public ?PropertyCalendarBotRecordingConfig $recordingConfig = null;
 
     /**
+     * Reference to calendar_recording when ready
      *
      * @var ?string $recordingId
      */
@@ -127,7 +130,7 @@ class CalendarBot
     public ?string $recordingId = null;
 
     /**
-     * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     * When the bot actually joined (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $startedAt
      */
@@ -145,7 +148,7 @@ class CalendarBot
     public ?CalendarBotStatus $status = null;
 
     /**
-     * $statusChanges
+     * History of status changes
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\CalendarBotStatusChange> $statusChanges
      */

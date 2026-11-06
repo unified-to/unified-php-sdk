@@ -21,6 +21,7 @@ class CalendarBotStatusChange
     public ?\DateTime $changedAt = null;
 
     /**
+     * Human-readable status message
      *
      * @var ?string $message
      */
@@ -38,6 +39,7 @@ class CalendarBotStatusChange
     public ?CalendarBotStatusChangeStatus $status = null;
 
     /**
+     * Platform-specific status sub-code
      *
      * @var ?string $subCode
      */

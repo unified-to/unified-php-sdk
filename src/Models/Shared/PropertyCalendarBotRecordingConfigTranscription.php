@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyCalendarBotRecordingConfigTranscription
 {
     /**
+     * Whether to identify speakers in transcript
      *
      * @var ?bool $enableSpeakerLabels
      */
@@ -20,6 +21,7 @@ class PropertyCalendarBotRecordingConfigTranscription
     public ?bool $enableSpeakerLabels = null;
 
     /**
+     * Whether to include word-level timestamps
      *
      * @var ?bool $enableWordTimestamps
      */
@@ -28,6 +30,7 @@ class PropertyCalendarBotRecordingConfigTranscription
     public ?bool $enableWordTimestamps = null;
 
     /**
+     * ISO language code (e.g., 'en-US')
      *
      * @var ?string $language
      */

@@ -65,7 +65,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: 'c807dfc4-38a6-48b9-ad45-8e44409b896a',
+        id: '5afb85db-d397-4b90-b65f-71ba3b963e1a',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -85,7 +85,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-06T22:45:43.625Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-07T15:16:00.730Z'),
     ),
     connectionId: '<id>',
 );
@@ -271,7 +271,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '86d9e8c6-593c-4a7b-8acb-8f9c41b42e5f',
+        id: 'a1f83fc6-aae4-4db6-8d01-71811064cb55',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -291,7 +291,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-06T22:45:43.678Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-07T15:16:00.780Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -377,7 +377,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
         ],
         firstName: 'Alejandrin',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '86d9e8c6-593c-4a7b-8acb-8f9c41b42e5f',
+        id: 'a1f83fc6-aae4-4db6-8d01-71811064cb55',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -397,7 +397,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-06T22:45:43.678Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-07T15:16:00.780Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

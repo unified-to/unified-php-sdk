@@ -12,6 +12,7 @@ namespace Unified\Unified_to\Models\Shared;
 class PropertyCalendarBotAutomaticLeave
 {
     /**
+     * Whether to leave if only bots remain
      *
      * @var ?bool $detectBots
      */
@@ -20,6 +21,7 @@ class PropertyCalendarBotAutomaticLeave
     public ?bool $detectBots = null;
 
     /**
+     * Seconds to wait when no other participants before leaving (default: 2)
      *
      * @var ?float $noParticipantsTimeout
      */
@@ -28,6 +30,7 @@ class PropertyCalendarBotAutomaticLeave
     public ?float $noParticipantsTimeout = null;
 
     /**
+     * Seconds to wait in waiting room before leaving (default: 1200)
      *
      * @var ?float $waitingRoomTimeout
      */
