@@ -446,6 +446,8 @@ class UnifiedTo
 
     public Call $call;
 
+    public Fax $fax;
+
     public Scorecardtemplate $scorecardtemplate;
 
     public Unified $unified;
@@ -701,6 +703,7 @@ class UnifiedTo
         $this->ticket = new Ticket($this->sdkConfiguration);
         $this->uc = new Uc($this->sdkConfiguration);
         $this->call = new Call($this->sdkConfiguration);
+        $this->fax = new Fax($this->sdkConfiguration);
         $this->scorecardtemplate = new Scorecardtemplate($this->sdkConfiguration);
         $this->unified = new Unified($this->sdkConfiguration);
         $this->apicall = new Apicall($this->sdkConfiguration);

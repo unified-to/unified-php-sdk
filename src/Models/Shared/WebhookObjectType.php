@@ -104,6 +104,7 @@ enum WebhookObjectType: string
     case TicketingCustomer = 'ticketing_customer';
     case TicketingCategory = 'ticketing_category';
     case UcContact = 'uc_contact';
+    case UcFax = 'uc_fax';
     case UcCall = 'uc_call';
     case UcComment = 'uc_comment';
     case UcRecording = 'uc_recording';

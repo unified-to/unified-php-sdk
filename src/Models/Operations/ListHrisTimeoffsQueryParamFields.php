@@ -28,6 +28,7 @@ enum ListHrisTimeoffsQueryParamFields: string
     case Type = 'type';
     case Duration = 'duration';
     case DurationType = 'duration_type';
+    case Attachments = 'attachments';
     case Metadata = 'metadata';
     case Raw = 'raw';
 }

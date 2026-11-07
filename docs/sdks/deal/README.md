@@ -37,19 +37,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-13T16:33:12.393Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-09-10T20:18:30.661Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-13T22:39:23.873Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-11T15:34:43.245Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-        id: '408179ac-8b1d-4ac3-93c3-90aaf0cb056e',
+        id: '8934410d-dc3c-42b6-850b-aee8dad861d2',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'a05ec0fc-53c3-479a-a093-6dbb2652a429',
+                id: '97a9186c-2c89-4bb3-b35d-ce602266dd31',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -62,7 +62,7 @@ $request = new Operations\CreateCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-17T23:17:48.617Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-18T10:39:44.777Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -220,19 +220,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-13T16:33:12.399Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-09-10T20:18:30.681Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-13T22:39:23.876Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-11T15:34:43.254Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-        id: '6e498938-0528-4de9-a931-4a1f59264102',
+        id: '72a55843-5e43-4531-96ae-4746ac893cd9',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'e0afb15e-09e3-4c1b-9c9b-14e51de251f2',
+                id: '29493185-21a1-4baf-b6ce-fb0055f88131',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -245,7 +245,7 @@ $request = new Operations\PatchCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-17T23:17:48.629Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-18T10:39:44.782Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',
@@ -354,19 +354,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-13T16:33:12.399Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-09-10T20:18:30.681Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-13T22:39:23.876Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-11T15:34:43.254Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Comis tepidus sit cavus crustulum trans tubineus adfectus.',
-        id: '6e498938-0528-4de9-a931-4a1f59264102',
+        id: '72a55843-5e43-4531-96ae-4746ac893cd9',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: 'e0afb15e-09e3-4c1b-9c9b-14e51de251f2',
+                id: '29493185-21a1-4baf-b6ce-fb0055f88131',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'conatus',
@@ -379,7 +379,7 @@ $request = new Operations\UpdateCrmDealRequest(
             'causa',
             'suus',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-17T23:17:48.629Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-18T10:39:44.782Z'),
         wonReason: 'Usque libero soleo.',
     ),
     connectionId: '<id>',

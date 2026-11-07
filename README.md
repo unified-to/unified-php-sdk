@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'f66ff2e1-7cf5-498e-be1c-c8c04b6f161a',
+        id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-10T21:47:38.065Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'f66ff2e1-7cf5-498e-be1c-c8c04b6f161a',
+        id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-10T21:47:38.065Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
     ),
     connectionId: '<id>',
 );
@@ -1332,6 +1332,13 @@ if ($response->accountingAccount !== null) {
 * [patchAccountingExpensereport](docs/sdks/expensereport/README.md#patchaccountingexpensereport) - Update an expensereport
 * [removeAccountingExpensereport](docs/sdks/expensereport/README.md#removeaccountingexpensereport) - Remove an expensereport
 * [updateAccountingExpensereport](docs/sdks/expensereport/README.md#updateaccountingexpensereport) - Update an expensereport
+
+### [Fax](docs/sdks/fax/README.md)
+
+* [createUcFax](docs/sdks/fax/README.md#createucfax) - Create a fax
+* [getUcFax](docs/sdks/fax/README.md#getucfax) - Retrieve a fax
+* [listUcFaxes](docs/sdks/fax/README.md#listucfaxes) - List all faxes
+* [removeUcFax](docs/sdks/fax/README.md#removeucfax) - Remove a fax
 
 ### [Feedback](docs/sdks/feedback/README.md)
 
@@ -2857,16 +2864,19 @@ if ($response->accountingAccount !== null) {
 * [createUcCall](docs/sdks/uc/README.md#createuccall) - Create a call
 * [createUcComment](docs/sdks/uc/README.md#createuccomment) - Create a comment
 * [createUcContact](docs/sdks/uc/README.md#createuccontact) - Create a contact
+* [createUcFax](docs/sdks/uc/README.md#createucfax) - Create a fax
 * [createUcRecording](docs/sdks/uc/README.md#createucrecording) - Create a recording
 * [getUcCall](docs/sdks/uc/README.md#getuccall) - Retrieve a call
 * [getUcComment](docs/sdks/uc/README.md#getuccomment) - Retrieve a comment
 * [getUcContact](docs/sdks/uc/README.md#getuccontact) - Retrieve a contact
+* [getUcFax](docs/sdks/uc/README.md#getucfax) - Retrieve a fax
 * [getUcRecording](docs/sdks/uc/README.md#getucrecording) - Retrieve a recording
 * [getUcScorecard](docs/sdks/uc/README.md#getucscorecard) - Retrieve a scorecard
 * [getUcScorecardtemplate](docs/sdks/uc/README.md#getucscorecardtemplate) - Retrieve a scorecardtemplate
 * [listUcCalls](docs/sdks/uc/README.md#listuccalls) - List all calls
 * [listUcComments](docs/sdks/uc/README.md#listuccomments) - List all comments
 * [listUcContacts](docs/sdks/uc/README.md#listuccontacts) - List all contacts
+* [listUcFaxes](docs/sdks/uc/README.md#listucfaxes) - List all faxes
 * [listUcRecordings](docs/sdks/uc/README.md#listucrecordings) - List all recordings
 * [listUcScorecards](docs/sdks/uc/README.md#listucscorecards) - List all scorecards
 * [listUcScorecardtemplates](docs/sdks/uc/README.md#listucscorecardtemplates) - List all scorecardtemplates
@@ -2876,6 +2886,7 @@ if ($response->accountingAccount !== null) {
 * [patchUcRecording](docs/sdks/uc/README.md#patchucrecording) - Update a recording
 * [removeUcComment](docs/sdks/uc/README.md#removeuccomment) - Remove a comment
 * [removeUcContact](docs/sdks/uc/README.md#removeuccontact) - Remove a contact
+* [removeUcFax](docs/sdks/uc/README.md#removeucfax) - Remove a fax
 * [removeUcRecording](docs/sdks/uc/README.md#removeucrecording) - Remove a recording
 * [updateUcCall](docs/sdks/uc/README.md#updateuccall) - Update a call
 * [updateUcComment](docs/sdks/uc/README.md#updateuccomment) - Update a comment
@@ -3048,7 +3059,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: 'f66ff2e1-7cf5-498e-be1c-c8c04b6f161a',
+            id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -3061,7 +3072,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-10T21:47:38.065Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
         ),
         connectionId: '<id>',
     );
@@ -3119,7 +3130,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'f66ff2e1-7cf5-498e-be1c-c8c04b6f161a',
+        id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3132,7 +3143,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-10T21:47:38.065Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
     ),
     connectionId: '<id>',
 );
@@ -3173,7 +3184,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'f66ff2e1-7cf5-498e-be1c-c8c04b6f161a',
+        id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3186,7 +3197,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-10T21:47:38.065Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
     ),
     connectionId: '<id>',
 );

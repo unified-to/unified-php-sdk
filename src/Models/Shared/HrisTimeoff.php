@@ -38,6 +38,16 @@ class HrisTimeoff
     public ?string $approverUserId = null;
 
     /**
+     * supporting documents (eg. doctor's notes) attached to the leave request
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\HrisAttachment> $attachments
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('attachments')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\HrisAttachment>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $attachments = null;
+
+    /**
      *
      * @var ?string $comments
      */
@@ -182,6 +192,7 @@ class HrisTimeoff
      * @param  string  $userId
      * @param  ?\DateTime  $approvedAt
      * @param  ?string  $approverUserId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\HrisAttachment>  $attachments
      * @param  ?string  $comments
      * @param  ?string  $companyId
      * @param  ?\DateTime  $createdAt
@@ -200,11 +211,12 @@ class HrisTimeoff
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?float $duration = null, ?DurationType $durationType = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $metadata = null, ?string $originalType = null, ?array $raw = null, ?string $reason = null, ?\DateTime $startAt = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(string $userId, ?\DateTime $approvedAt = null, ?string $approverUserId = null, ?array $attachments = null, ?string $comments = null, ?string $companyId = null, ?\DateTime $createdAt = null, ?float $duration = null, ?DurationType $durationType = null, ?\DateTime $endAt = null, ?string $id = null, ?bool $isPaid = null, ?array $metadata = null, ?string $originalType = null, ?array $raw = null, ?string $reason = null, ?\DateTime $startAt = null, ?HrisTimeoffStatus $status = null, ?HrisTimeoffType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->userId = $userId;
         $this->approvedAt = $approvedAt;
         $this->approverUserId = $approverUserId;
+        $this->attachments = $attachments;
         $this->comments = $comments;
         $this->companyId = $companyId;
         $this->createdAt = $createdAt;

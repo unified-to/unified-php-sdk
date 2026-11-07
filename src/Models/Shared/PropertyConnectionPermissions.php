@@ -186,6 +186,8 @@ enum PropertyConnectionPermissions: string
     case UcCallWrite = 'uc_call_write';
     case UcContactRead = 'uc_contact_read';
     case UcContactWrite = 'uc_contact_write';
+    case UcFaxRead = 'uc_fax_read';
+    case UcFaxWrite = 'uc_fax_write';
     case UcCommentRead = 'uc_comment_read';
     case UcCommentWrite = 'uc_comment_write';
     case UcRecordingRead = 'uc_recording_read';

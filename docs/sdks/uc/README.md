@@ -7,16 +7,19 @@
 * [createUcCall](#createuccall) - Create a call
 * [createUcComment](#createuccomment) - Create a comment
 * [createUcContact](#createuccontact) - Create a contact
+* [createUcFax](#createucfax) - Create a fax
 * [createUcRecording](#createucrecording) - Create a recording
 * [getUcCall](#getuccall) - Retrieve a call
 * [getUcComment](#getuccomment) - Retrieve a comment
 * [getUcContact](#getuccontact) - Retrieve a contact
+* [getUcFax](#getucfax) - Retrieve a fax
 * [getUcRecording](#getucrecording) - Retrieve a recording
 * [getUcScorecard](#getucscorecard) - Retrieve a scorecard
 * [getUcScorecardtemplate](#getucscorecardtemplate) - Retrieve a scorecardtemplate
 * [listUcCalls](#listuccalls) - List all calls
 * [listUcComments](#listuccomments) - List all comments
 * [listUcContacts](#listuccontacts) - List all contacts
+* [listUcFaxes](#listucfaxes) - List all faxes
 * [listUcRecordings](#listucrecordings) - List all recordings
 * [listUcScorecards](#listucscorecards) - List all scorecards
 * [listUcScorecardtemplates](#listucscorecardtemplates) - List all scorecardtemplates
@@ -26,6 +29,7 @@
 * [patchUcRecording](#patchucrecording) - Update a recording
 * [removeUcComment](#removeuccomment) - Remove a comment
 * [removeUcContact](#removeuccontact) - Remove a contact
+* [removeUcFax](#removeucfax) - Remove a fax
 * [removeUcRecording](#removeucrecording) - Remove a recording
 * [updateUcCall](#updateuccall) - Update a call
 * [updateUcComment](#updateuccomment) - Update a comment
@@ -57,15 +61,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateUcCallRequest(
     ucCall: new Shared\UcCall(
-        answerAt: Utils\Utils::parseDateTime('2025-05-22T21:55:05.774Z'),
+        answerAt: Utils\Utils::parseDateTime('2025-05-23T15:14:06.966Z'),
         contacts: [],
-        conversationIdentifier: '3572bd60-cd59-4f8b-99a7-b9ad916320af',
+        conversationIdentifier: '791e49c9-957c-4ebe-a75d-e62eb6fd7cac',
         costAmount: 1.564,
         createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
         currency: 'USD',
         durationSeconds: 2556,
-        endAt: Utils\Utils::parseDateTime('2024-06-04T00:57:54.013Z'),
-        id: '3572bd60-cd59-4f8b-99a7-b9ad916320af',
+        endAt: Utils\Utils::parseDateTime('2024-06-04T10:15:12.282Z'),
+        id: '791e49c9-957c-4ebe-a75d-e62eb6fd7cac',
         isPrivate: false,
         metadata: [
             new Shared\UcMetadata(
@@ -73,20 +77,20 @@ $request = new Operations\CreateUcCallRequest(
 
                 ],
                 format: Shared\UcMetadataFormat::Price,
-                id: '20318fee-6d23-4961-bafb-41bd4b7879aa',
+                id: '35879f0a-a940-472b-9b75-cbc9f3afdec0',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'tui',
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-12-20T08:39:58.791Z'),
+        startAt: Utils\Utils::parseDateTime('2023-12-20T14:09:44.803Z'),
         status: Shared\UcCallStatus::InProgress,
         telephone: new Shared\PropertyUcCallTelephone(
             telephone: '(493) 534-0768',
             type: Shared\PropertyUcCallTelephoneType::Mobile,
         ),
         type: Shared\UcCallType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-04T14:56:22.123Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-04T17:18:06.320Z'),
         userPhone: '819-894-3317 x163',
     ),
     connectionId: '<id>',
@@ -143,9 +147,9 @@ $request = new Operations\CreateUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: '0e3d7849-8f4e-4dfc-9be2-4db7505c8442',
+        id: 'ec300af3-cbe5-4905-8e4e-79d1a8214321',
         metadata: [],
-        updatedAt: '2024-02-13T13:40:56.425Z',
+        updatedAt: '2024-02-13T20:46:35.583Z',
     ),
     connectionId: '<id>',
 );
@@ -209,7 +213,7 @@ $request = new Operations\CreateUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: '63d799f6-a236-46cc-9e49-cc273fee8361',
+        id: '9065ce08-f42e-40dd-94fb-e1926d1bb0bb',
         lastName: 'Rogahn',
         metadata: [],
         name: 'Luther Rogahn',
@@ -228,7 +232,7 @@ $request = new Operations\CreateUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-12-17T15:50:46.340Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-18T09:10:32.711Z'),
     ),
     connectionId: '<id>',
 );
@@ -251,6 +255,72 @@ if ($response->ucContact !== null) {
 ### Response
 
 **[?Operations\CreateUcContactResponse](../../Models/Operations/CreateUcContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createUcFax
+
+Creates a UcFax. Provide the unified UcFax fields in the request body; they are mapped to the provider's API. Returns the created UcFax.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createUcFax" method="post" path="/uc/{connection_id}/fax" example="uc_fax" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateUcFaxRequest(
+    ucFax: new Shared\UcFax(
+        costAmount: 1.2207,
+        createdAt: Utils\Utils::parseDateTime('2022-10-25T13:37:51.431Z'),
+        currency: 'USD',
+        fromTelephone: '+13605107540',
+        id: '09d5d95e-2557-463c-b931-5956af5ff218',
+        mediaUrl: 'https://doting-jump.biz',
+        metadata: [],
+        pages: 20,
+        status: Shared\UcFaxStatus::Delivered,
+        toTelephone: '+19083998866',
+        type: Shared\UcFaxType::Inbound,
+        updatedAt: Utils\Utils::parseDateTime('2023-04-15T18:40:36.197Z'),
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->uc->createUcFax(
+    request: $request
+);
+
+if ($response->ucFax !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\CreateUcFaxRequest](../../Models/Operations/CreateUcFaxRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+### Response
+
+**[?Operations\CreateUcFaxResponse](../../Models/Operations/CreateUcFaxResponse.md)**
 
 ### Errors
 
@@ -284,36 +354,36 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateUcRecordingRequest(
     ucRecording: new Shared\UcRecording(
         contacts: [],
-        conversationIdentifier: '182ebe97-52ce-40be-8079-27aa7bb82c5f',
+        conversationIdentifier: '36641330-10c9-4a64-9ed9-734ce8417b0d',
         createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
-        endAt: Utils\Utils::parseDateTime('2024-05-11T06:32:17.013Z'),
-        expiresAt: Utils\Utils::parseDateTime('2026-05-10T15:43:56.901Z'),
-        id: '182ebe97-52ce-40be-8079-27aa7bb82c5f',
+        endAt: Utils\Utils::parseDateTime('2024-05-11T18:15:21.201Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-05-11T17:39:38.035Z'),
+        id: '36641330-10c9-4a64-9ed9-734ce8417b0d',
         media: [
             new Shared\UcRecordingMedia(
-                endAt: Utils\Utils::parseDateTime('2024-04-07T17:48:36.299Z'),
+                endAt: Utils\Utils::parseDateTime('2024-04-08T04:52:28.761Z'),
                 language: 'en',
                 recordingDownloadUrl: 'https://parched-wasabi.com/',
-                startAt: Utils\Utils::parseDateTime('2026-05-29T12:31:18.474Z'),
+                startAt: Utils\Utils::parseDateTime('2026-05-30T14:49:02.832Z'),
                 transcriptDownloadUrl: 'https://colossal-cuckoo.name',
                 transcripts: [
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2026-03-09T18:03:13.340Z'),
-                        startAt: Utils\Utils::parseDateTime('2024-06-08T19:49:50.678Z'),
+                        endAt: Utils\Utils::parseDateTime('2026-03-10T18:46:32.745Z'),
+                        startAt: Utils\Utils::parseDateTime('2024-06-09T08:06:17.556Z'),
                         text: 'Turpis maiores ducimus tero speculum.',
                     ),
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2024-10-20T12:26:43.802Z'),
-                        startAt: Utils\Utils::parseDateTime('2026-08-17T19:12:12.065Z'),
+                        endAt: Utils\Utils::parseDateTime('2024-10-21T03:19:27.493Z'),
+                        startAt: Utils\Utils::parseDateTime('2026-08-18T23:03:46.931Z'),
                         text: 'Magnam consuasor uxor tergiversatio subseco.',
                     ),
                 ],
             ),
         ],
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-04-30T02:13:52.702Z'),
+        startAt: Utils\Utils::parseDateTime('2023-04-30T06:36:02.550Z'),
         type: Shared\UcRecordingType::Outbound,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-26T01:34:31.914Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-26T19:30:15.391Z'),
         userPhone: '1-915-327-0429 x509',
         webUrl: 'https://spherical-comparison.org',
     ),
@@ -491,6 +561,57 @@ if ($response->ucContact !== null) {
 ### Response
 
 **[?Operations\GetUcContactResponse](../../Models/Operations/GetUcContactResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getUcFax
+
+Retrieves a single UcFax by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getUcFax" method="get" path="/uc/{connection_id}/fax/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetUcFaxRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->uc->getUcFax(
+    request: $request
+);
+
+if ($response->ucFax !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `$request`                                                               | [Operations\GetUcFaxRequest](../../Models/Operations/GetUcFaxRequest.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+
+### Response
+
+**[?Operations\GetUcFaxResponse](../../Models/Operations/GetUcFaxResponse.md)**
 
 ### Errors
 
@@ -801,6 +922,56 @@ if ($response->ucContacts !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listUcFaxes
+
+Returns a list of UcFaxes. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUcFaxes" method="get" path="/uc/{connection_id}/fax" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListUcFaxesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->uc->listUcFaxes(
+    request: $request
+);
+
+if ($response->ucFaxes !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\ListUcFaxesRequest](../../Models/Operations/ListUcFaxesRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+### Response
+
+**[?Operations\ListUcFaxesResponse](../../Models/Operations/ListUcFaxesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listUcRecordings
 
 Returns a list of UcRecordings. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -976,15 +1147,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchUcCallRequest(
     ucCall: new Shared\UcCall(
-        answerAt: Utils\Utils::parseDateTime('2025-05-22T21:55:05.813Z'),
+        answerAt: Utils\Utils::parseDateTime('2025-05-23T15:14:06.981Z'),
         contacts: [],
-        conversationIdentifier: '9acaf920-06a8-4c6c-9cf3-66630738c405',
+        conversationIdentifier: '3ee2c802-6699-4b7f-99ff-814d758a1bc5',
         costAmount: 1.564,
         createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
         currency: 'USD',
         durationSeconds: 2556,
-        endAt: Utils\Utils::parseDateTime('2024-06-04T00:57:54.034Z'),
-        id: '9acaf920-06a8-4c6c-9cf3-66630738c405',
+        endAt: Utils\Utils::parseDateTime('2024-06-04T10:15:12.290Z'),
+        id: '3ee2c802-6699-4b7f-99ff-814d758a1bc5',
         isPrivate: false,
         metadata: [
             new Shared\UcMetadata(
@@ -992,20 +1163,20 @@ $request = new Operations\PatchUcCallRequest(
 
                 ],
                 format: Shared\UcMetadataFormat::Price,
-                id: 'c3669315-63cd-4fdf-a72f-575e5f18ec02',
+                id: '9b7a97e4-11cd-44f8-bce3-9813a37e20da',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'tui',
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-12-20T08:39:58.803Z'),
+        startAt: Utils\Utils::parseDateTime('2023-12-20T14:09:44.808Z'),
         status: Shared\UcCallStatus::InProgress,
         telephone: new Shared\PropertyUcCallTelephone(
             telephone: '(493) 534-0768',
             type: Shared\PropertyUcCallTelephoneType::Mobile,
         ),
         type: Shared\UcCallType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-04T14:56:22.129Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-04T17:18:06.322Z'),
         userPhone: '819-894-3317 x163',
     ),
     connectionId: '<id>',
@@ -1063,9 +1234,9 @@ $request = new Operations\PatchUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: 'bfd7b935-c507-45f8-a3aa-ef7341533e0c',
+        id: '6d5e4746-8cfa-42bc-94e2-9d417ced8c6d',
         metadata: [],
-        updatedAt: '2024-02-13T13:40:56.429Z',
+        updatedAt: '2024-02-13T20:46:35.585Z',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1130,7 +1301,7 @@ $request = new Operations\PatchUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: 'a4806da6-68f8-4d79-8ebd-e51d869982d6',
+        id: '0f0bf49c-2e79-4321-bccb-b4b262752189',
         lastName: 'Rogahn',
         metadata: [],
         name: 'Luther Rogahn',
@@ -1149,7 +1320,7 @@ $request = new Operations\PatchUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-12-17T15:50:46.352Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-18T09:10:32.721Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1206,36 +1377,36 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchUcRecordingRequest(
     ucRecording: new Shared\UcRecording(
         contacts: [],
-        conversationIdentifier: '95f102bd-a7bb-4506-a310-bde1c0c750d7',
+        conversationIdentifier: '661f7fc4-ab71-40df-931c-48d16a1a6ffa',
         createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
-        endAt: Utils\Utils::parseDateTime('2024-05-11T06:32:17.030Z'),
-        expiresAt: Utils\Utils::parseDateTime('2026-05-10T15:43:56.938Z'),
-        id: '95f102bd-a7bb-4506-a310-bde1c0c750d7',
+        endAt: Utils\Utils::parseDateTime('2024-05-11T18:15:21.211Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-05-11T17:39:38.055Z'),
+        id: '661f7fc4-ab71-40df-931c-48d16a1a6ffa',
         media: [
             new Shared\UcRecordingMedia(
-                endAt: Utils\Utils::parseDateTime('2024-04-07T17:48:36.315Z'),
+                endAt: Utils\Utils::parseDateTime('2024-04-08T04:52:28.769Z'),
                 language: 'en',
                 recordingDownloadUrl: 'https://parched-wasabi.com/',
-                startAt: Utils\Utils::parseDateTime('2026-05-29T12:31:18.511Z'),
+                startAt: Utils\Utils::parseDateTime('2026-05-30T14:49:02.853Z'),
                 transcriptDownloadUrl: 'https://colossal-cuckoo.name',
                 transcripts: [
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2026-03-09T18:03:13.374Z'),
-                        startAt: Utils\Utils::parseDateTime('2024-06-08T19:49:50.695Z'),
+                        endAt: Utils\Utils::parseDateTime('2026-03-10T18:46:32.764Z'),
+                        startAt: Utils\Utils::parseDateTime('2024-06-09T08:06:17.566Z'),
                         text: 'Turpis maiores ducimus tero speculum.',
                     ),
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2024-10-20T12:26:43.823Z'),
-                        startAt: Utils\Utils::parseDateTime('2026-08-17T19:12:12.104Z'),
+                        endAt: Utils\Utils::parseDateTime('2024-10-21T03:19:27.505Z'),
+                        startAt: Utils\Utils::parseDateTime('2026-08-18T23:03:46.954Z'),
                         text: 'Magnam consuasor uxor tergiversatio subseco.',
                     ),
                 ],
             ),
         ],
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-04-30T02:13:52.708Z'),
+        startAt: Utils\Utils::parseDateTime('2023-04-30T06:36:02.554Z'),
         type: Shared\UcRecordingType::Outbound,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-26T01:34:31.939Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-26T19:30:15.405Z'),
         userPhone: '1-915-327-0429 x509',
         webUrl: 'https://spherical-comparison.org',
     ),
@@ -1370,6 +1541,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeUcFax
+
+Deletes the UcFax identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeUcFax" method="delete" path="/uc/{connection_id}/fax/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveUcFaxRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->uc->removeUcFax(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `$request`                                                                     | [Operations\RemoveUcFaxRequest](../../Models/Operations/RemoveUcFaxRequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+### Response
+
+**[?Operations\RemoveUcFaxResponse](../../Models/Operations/RemoveUcFaxResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeUcRecording
 
 Deletes the UcRecording identified by `id`.
@@ -1446,15 +1668,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateUcCallRequest(
     ucCall: new Shared\UcCall(
-        answerAt: Utils\Utils::parseDateTime('2025-05-22T21:55:05.813Z'),
+        answerAt: Utils\Utils::parseDateTime('2025-05-23T15:14:06.981Z'),
         contacts: [],
-        conversationIdentifier: '9acaf920-06a8-4c6c-9cf3-66630738c405',
+        conversationIdentifier: '3ee2c802-6699-4b7f-99ff-814d758a1bc5',
         costAmount: 1.564,
         createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
         currency: 'USD',
         durationSeconds: 2556,
-        endAt: Utils\Utils::parseDateTime('2024-06-04T00:57:54.034Z'),
-        id: '9acaf920-06a8-4c6c-9cf3-66630738c405',
+        endAt: Utils\Utils::parseDateTime('2024-06-04T10:15:12.290Z'),
+        id: '3ee2c802-6699-4b7f-99ff-814d758a1bc5',
         isPrivate: false,
         metadata: [
             new Shared\UcMetadata(
@@ -1462,20 +1684,20 @@ $request = new Operations\UpdateUcCallRequest(
 
                 ],
                 format: Shared\UcMetadataFormat::Price,
-                id: 'c3669315-63cd-4fdf-a72f-575e5f18ec02',
+                id: '9b7a97e4-11cd-44f8-bce3-9813a37e20da',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'tui',
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-12-20T08:39:58.803Z'),
+        startAt: Utils\Utils::parseDateTime('2023-12-20T14:09:44.808Z'),
         status: Shared\UcCallStatus::InProgress,
         telephone: new Shared\PropertyUcCallTelephone(
             telephone: '(493) 534-0768',
             type: Shared\PropertyUcCallTelephoneType::Mobile,
         ),
         type: Shared\UcCallType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-04T14:56:22.129Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-04T17:18:06.322Z'),
         userPhone: '819-894-3317 x163',
     ),
     connectionId: '<id>',
@@ -1533,9 +1755,9 @@ $request = new Operations\UpdateUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: 'bfd7b935-c507-45f8-a3aa-ef7341533e0c',
+        id: '6d5e4746-8cfa-42bc-94e2-9d417ced8c6d',
         metadata: [],
-        updatedAt: '2024-02-13T13:40:56.429Z',
+        updatedAt: '2024-02-13T20:46:35.585Z',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1600,7 +1822,7 @@ $request = new Operations\UpdateUcContactRequest(
             ),
         ],
         firstName: 'Luther',
-        id: 'a4806da6-68f8-4d79-8ebd-e51d869982d6',
+        id: '0f0bf49c-2e79-4321-bccb-b4b262752189',
         lastName: 'Rogahn',
         metadata: [],
         name: 'Luther Rogahn',
@@ -1619,7 +1841,7 @@ $request = new Operations\UpdateUcContactRequest(
             ),
         ],
         title: 'Chief Optimization Executive',
-        updatedAt: Utils\Utils::parseDateTime('2023-12-17T15:50:46.352Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-18T09:10:32.721Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1676,36 +1898,36 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateUcRecordingRequest(
     ucRecording: new Shared\UcRecording(
         contacts: [],
-        conversationIdentifier: '95f102bd-a7bb-4506-a310-bde1c0c750d7',
+        conversationIdentifier: '661f7fc4-ab71-40df-931c-48d16a1a6ffa',
         createdAt: Utils\Utils::parseDateTime('2022-09-17T19:41:46.956Z'),
-        endAt: Utils\Utils::parseDateTime('2024-05-11T06:32:17.030Z'),
-        expiresAt: Utils\Utils::parseDateTime('2026-05-10T15:43:56.938Z'),
-        id: '95f102bd-a7bb-4506-a310-bde1c0c750d7',
+        endAt: Utils\Utils::parseDateTime('2024-05-11T18:15:21.211Z'),
+        expiresAt: Utils\Utils::parseDateTime('2026-05-11T17:39:38.055Z'),
+        id: '661f7fc4-ab71-40df-931c-48d16a1a6ffa',
         media: [
             new Shared\UcRecordingMedia(
-                endAt: Utils\Utils::parseDateTime('2024-04-07T17:48:36.315Z'),
+                endAt: Utils\Utils::parseDateTime('2024-04-08T04:52:28.769Z'),
                 language: 'en',
                 recordingDownloadUrl: 'https://parched-wasabi.com/',
-                startAt: Utils\Utils::parseDateTime('2026-05-29T12:31:18.511Z'),
+                startAt: Utils\Utils::parseDateTime('2026-05-30T14:49:02.853Z'),
                 transcriptDownloadUrl: 'https://colossal-cuckoo.name',
                 transcripts: [
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2026-03-09T18:03:13.374Z'),
-                        startAt: Utils\Utils::parseDateTime('2024-06-08T19:49:50.695Z'),
+                        endAt: Utils\Utils::parseDateTime('2026-03-10T18:46:32.764Z'),
+                        startAt: Utils\Utils::parseDateTime('2024-06-09T08:06:17.566Z'),
                         text: 'Turpis maiores ducimus tero speculum.',
                     ),
                     new Shared\UcRecordingTranscript(
-                        endAt: Utils\Utils::parseDateTime('2024-10-20T12:26:43.823Z'),
-                        startAt: Utils\Utils::parseDateTime('2026-08-17T19:12:12.104Z'),
+                        endAt: Utils\Utils::parseDateTime('2024-10-21T03:19:27.505Z'),
+                        startAt: Utils\Utils::parseDateTime('2026-08-18T23:03:46.954Z'),
                         text: 'Magnam consuasor uxor tergiversatio subseco.',
                     ),
                 ],
             ),
         ],
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-04-30T02:13:52.708Z'),
+        startAt: Utils\Utils::parseDateTime('2023-04-30T06:36:02.554Z'),
         type: Shared\UcRecordingType::Outbound,
-        updatedAt: Utils\Utils::parseDateTime('2025-03-26T01:34:31.939Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-26T19:30:15.405Z'),
         userPhone: '1-915-327-0429 x509',
         webUrl: 'https://spherical-comparison.org',
     ),
