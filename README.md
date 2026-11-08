@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
+        id: '3e665fc4-b120-445c-8357-0778de51ed58',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
+        id: '3e665fc4-b120-445c-8357-0778de51ed58',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
     ),
     connectionId: '<id>',
 );
@@ -857,6 +857,7 @@ if ($response->accountingAccount !== null) {
 * [getCommerceReturn](docs/sdks/commerce/README.md#getcommercereturn) - Retrieve a return
 * [getCommerceReview](docs/sdks/commerce/README.md#getcommercereview) - Retrieve a review
 * [getCommerceSaleschannel](docs/sdks/commerce/README.md#getcommercesaleschannel) - Retrieve a saleschannel
+* [getCommerceTable](docs/sdks/commerce/README.md#getcommercetable) - Retrieve a table
 * [listCommerceAvailabilities](docs/sdks/commerce/README.md#listcommerceavailabilities) - List all availabilities
 * [listCommerceCollections](docs/sdks/commerce/README.md#listcommercecollections) - List all collections
 * [listCommerceInventories](docs/sdks/commerce/README.md#listcommerceinventories) - List all inventories
@@ -867,6 +868,7 @@ if ($response->accountingAccount !== null) {
 * [listCommerceReturns](docs/sdks/commerce/README.md#listcommercereturns) - List all returns
 * [listCommerceReviews](docs/sdks/commerce/README.md#listcommercereviews) - List all reviews
 * [listCommerceSaleschannels](docs/sdks/commerce/README.md#listcommercesaleschannels) - List all saleschannels
+* [listCommerceTables](docs/sdks/commerce/README.md#listcommercetables) - List all tables
 * [patchCommerceCollection](docs/sdks/commerce/README.md#patchcommercecollection) - Update a collection
 * [patchCommerceInventory](docs/sdks/commerce/README.md#patchcommerceinventory) - Update an inventory
 * [patchCommerceItem](docs/sdks/commerce/README.md#patchcommerceitem) - Update an item
@@ -2710,7 +2712,9 @@ if ($response->accountingAccount !== null) {
 ### [Table](docs/sdks/table/README.md)
 
 * [createDatastoreTable](docs/sdks/table/README.md#createdatastoretable) - Create a table
+* [getCommerceTable](docs/sdks/table/README.md#getcommercetable) - Retrieve a table
 * [getDatastoreTable](docs/sdks/table/README.md#getdatastoretable) - Retrieve a table
+* [listCommerceTables](docs/sdks/table/README.md#listcommercetables) - List all tables
 * [listDatastoreTables](docs/sdks/table/README.md#listdatastoretables) - List all tables
 * [patchDatastoreTable](docs/sdks/table/README.md#patchdatastoretable) - Update a table
 * [removeDatastoreTable](docs/sdks/table/README.md#removedatastoretable) - Remove a table
@@ -3059,7 +3063,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
+            id: '3e665fc4-b120-445c-8357-0778de51ed58',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -3072,7 +3076,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
         ),
         connectionId: '<id>',
     );
@@ -3130,7 +3134,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
+        id: '3e665fc4-b120-445c-8357-0778de51ed58',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3143,7 +3147,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
     ),
     connectionId: '<id>',
 );
@@ -3184,7 +3188,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '60127d3b-f181-45a4-ada4-111917bd5b3a',
+        id: '3e665fc4-b120-445c-8357-0778de51ed58',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3197,7 +3201,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T05:16:18.051Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
     ),
     connectionId: '<id>',
 );

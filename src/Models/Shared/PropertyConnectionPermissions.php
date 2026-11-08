@@ -90,6 +90,8 @@ enum PropertyConnectionPermissions: string
     case CommerceItemvariantWrite = 'commerce_itemvariant_write';
     case CommerceReservationRead = 'commerce_reservation_read';
     case CommerceReservationWrite = 'commerce_reservation_write';
+    case CommerceTableRead = 'commerce_table_read';
+    case CommerceTableWrite = 'commerce_table_write';
     case CommerceReturnRead = 'commerce_return_read';
     case CommerceReturnWrite = 'commerce_return_write';
     case CommerceAvailabilityRead = 'commerce_availability_read';

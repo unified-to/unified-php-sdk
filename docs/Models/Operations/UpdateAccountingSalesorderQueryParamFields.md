@@ -37,4 +37,6 @@
 | `ClosedAt`            | closed_at             |
 | `SubscriptionId`      | subscription_id       |
 | `Payments`            | payments              |
+| `TableId`             | table_id              |
+| `PaidAmount`          | paid_amount           |
 | `Raw`                 | raw                   |

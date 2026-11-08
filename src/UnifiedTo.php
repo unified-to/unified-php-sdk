@@ -194,6 +194,8 @@ class UnifiedTo
 
     public Saleschannel $saleschannel;
 
+    public Table $table;
+
     public Compute $compute;
 
     public Deployment $deployment;
@@ -237,8 +239,6 @@ class UnifiedTo
     public Query $query;
 
     public Record $record;
-
-    public Table $table;
 
     public Enrich $enrich;
 
@@ -577,6 +577,7 @@ class UnifiedTo
         $this->return = new ReturnT($this->sdkConfiguration);
         $this->review = new Review($this->sdkConfiguration);
         $this->saleschannel = new Saleschannel($this->sdkConfiguration);
+        $this->table = new Table($this->sdkConfiguration);
         $this->compute = new Compute($this->sdkConfiguration);
         $this->deployment = new Deployment($this->sdkConfiguration);
         $this->domain = new Domain($this->sdkConfiguration);
@@ -599,7 +600,6 @@ class UnifiedTo
         $this->database = new Database($this->sdkConfiguration);
         $this->query = new Query($this->sdkConfiguration);
         $this->record = new Record($this->sdkConfiguration);
-        $this->table = new Table($this->sdkConfiguration);
         $this->enrich = new Enrich($this->sdkConfiguration);
         $this->person = new Person($this->sdkConfiguration);
         $this->forms = new Forms($this->sdkConfiguration);

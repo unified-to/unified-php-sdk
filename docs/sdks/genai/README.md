@@ -63,11 +63,11 @@ $request = new Operations\CreateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '7b1f60b0-06d2-4be7-89da-74ec22103180',
+        id: '75608ebb-85d4-4ec3-8824-14c51c189a94',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-29T11:30:51.627Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-30T08:09:43.073Z'),
     ),
     connectionId: '<id>',
 );
@@ -129,7 +129,7 @@ $request = new Operations\CreateGenaiEmbeddingRequest(
         dimension: 423,
         embeddings: 'Est.',
         encondingFormat: Shared\EncondingFormat::Float,
-        id: 'ee8eb9a0-5936-4a11-a5f2-58699d578d21',
+        id: '47a48a4c-6477-4a60-86b1-474f50352cc2',
         maxTokens: 223,
         tokensUsed: 836,
         type: 'classification',
@@ -189,7 +189,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: '8e57db41-0347-46be-b405-838ceeea2fdd',
+        id: 'b4bbd5de-749c-4c11-a557-2254cc1c357a',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -204,7 +204,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
         ],
         name: 'sponte.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-01T00:28:04.315Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-01T08:00:33.714Z'),
         userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
     ),
     connectionId: '<id>',
@@ -262,10 +262,10 @@ $request = new Operations\CreateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: 'fd2cee6d-ccc0-4599-ac8c-6740c4eb5be6',
+        id: '3711b10b-f094-4b6b-96b4-0d9c44c0c93e',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-01T19:46:08.726Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-02T05:09:31.799Z'),
     ),
     connectionId: '<id>',
 );
@@ -445,10 +445,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-10-15T06:28:22.235Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-10-16T03:03:51.187Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: 'cab3b20b-309d-4968-87e6-6c79c99c60d8',
+        id: 'a50422bb-8bd6-493b-ba54-cfd0aef83d78',
         instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
         linesAdded: 244,
         linesDeleted: 118,
@@ -463,12 +463,12 @@ $request = new Operations\CreateGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
         repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-05-31T13:29:51.656Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-06-01T04:23:54.451Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Cur aeternus cogito vesper.',
         targetBranchIdentifier: 'agent/joshingly-ignorance',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-04T22:20:37.152Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-05T08:05:56.867Z'),
         webUrl: 'https://inexperienced-adrenalin.biz/',
     ),
     connectionId: '<id>',
@@ -1132,11 +1132,11 @@ $request = new Operations\PatchGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '64a34973-096f-4773-aaaf-43fa9dc034f2',
+        id: '51cd1e1f-3b2a-442b-aef1-7720c9db52c5',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-29T11:30:51.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-30T08:09:43.080Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1194,7 +1194,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'f18ab182-247f-455a-9b7a-d4bf5e9b27d7',
+        id: '3d6cb882-e2e8-4e83-8cb3-e9ed296c3e69',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -1209,7 +1209,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
         ],
         name: 'sponte.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-01T00:28:04.319Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-01T08:00:33.719Z'),
         userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
     ),
     connectionId: '<id>',
@@ -1268,10 +1268,10 @@ $request = new Operations\PatchGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: 'e1eedd5c-d025-487d-a674-0128dadd4f3a',
+        id: '25e22f70-66f8-47c6-a7e2-b3387cabbbbb',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-01T19:46:08.727Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-02T05:09:31.802Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1327,10 +1327,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-10-15T06:28:22.245Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-10-16T03:03:51.206Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: 'babc2438-510c-4665-87f0-9e9508472072',
+        id: '5038ab0e-f76b-4723-adee-c1a374e7b8c8',
         instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
         linesAdded: 244,
         linesDeleted: 118,
@@ -1345,12 +1345,12 @@ $request = new Operations\PatchGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
         repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-05-31T13:29:51.663Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-06-01T04:23:54.465Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Cur aeternus cogito vesper.',
         targetBranchIdentifier: 'agent/joshingly-ignorance',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-04T22:20:37.156Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-05T08:05:56.875Z'),
         webUrl: 'https://inexperienced-adrenalin.biz/',
     ),
     connectionId: '<id>',
@@ -1664,11 +1664,11 @@ $request = new Operations\UpdateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Assentator tero sequi.',
-        id: '64a34973-096f-4773-aaaf-43fa9dc034f2',
+        id: '51cd1e1f-3b2a-442b-aef1-7720c9db52c5',
         instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
         isActive: false,
         name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-29T11:30:51.630Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-30T08:09:43.080Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1726,7 +1726,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'f18ab182-247f-455a-9b7a-d4bf5e9b27d7',
+        id: '3d6cb882-e2e8-4e83-8cb3-e9ed296c3e69',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -1741,7 +1741,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
         ],
         name: 'sponte.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-01T00:28:04.319Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-01T08:00:33.719Z'),
         userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
     ),
     connectionId: '<id>',
@@ -1800,10 +1800,10 @@ $request = new Operations\UpdateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Voluptates abeo subseco.',
-        id: 'e1eedd5c-d025-487d-a674-0128dadd4f3a',
+        id: '25e22f70-66f8-47c6-a7e2-b3387cabbbbb',
         isActive: false,
         name: 'officially about',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-01T19:46:08.727Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-02T05:09:31.802Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1859,10 +1859,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-10-15T06:28:22.245Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-10-16T03:03:51.206Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: 'babc2438-510c-4665-87f0-9e9508472072',
+        id: '5038ab0e-f76b-4723-adee-c1a374e7b8c8',
         instructions: 'Benigne canonicus officiis solvo adsidue deleo angustus.',
         linesAdded: 244,
         linesDeleted: 118,
@@ -1877,12 +1877,12 @@ $request = new Operations\UpdateGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance/pull/383',
         repoUrl: 'https://github.com/berenice.satterfield/joshingly-ignorance',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-05-31T13:29:51.663Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-06-01T04:23:54.465Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Cur aeternus cogito vesper.',
         targetBranchIdentifier: 'agent/joshingly-ignorance',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-04T22:20:37.156Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-05T08:05:56.875Z'),
         webUrl: 'https://inexperienced-adrenalin.biz/',
     ),
     connectionId: '<id>',

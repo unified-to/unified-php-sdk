@@ -182,6 +182,15 @@ class AccountingSalesorder
     public ?string $organizationId = null;
 
     /**
+     * total of the payments applied so far
+     *
+     * @var ?float $paidAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('paid_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $paidAmount = null;
+
+    /**
      * read-only reciprocal of PaymentPayment.allocations; payments applied to this sales order
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference> $payments
@@ -271,6 +280,15 @@ class AccountingSalesorder
     public ?float $subtotalAmount = null;
 
     /**
+     * reference to a commerce_table (restaurant table) the order is seated at
+     *
+     * @var ?string $tableId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('table_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $tableId = null;
+
+    /**
      *
      * @var ?float $taxAmount
      */
@@ -323,6 +341,7 @@ class AccountingSalesorder
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingMetadata>  $metadata
      * @param  ?string  $orderNumber
      * @param  ?string  $organizationId
+     * @param  ?float  $paidAmount
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingPaymentReference>  $payments
      * @param  ?\DateTime  $postedAt
      * @param  ?array<string, mixed>  $raw
@@ -333,13 +352,14 @@ class AccountingSalesorder
      * @param  ?\Unified\Unified_to\Models\Shared\AccountingSalesorderStatus  $status
      * @param  ?string  $subscriptionId
      * @param  ?float  $subtotalAmount
+     * @param  ?string  $tableId
      * @param  ?float  $taxAmount
      * @param  ?float  $tipAmount
      * @param  ?float  $totalAmount
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?\DateTime $closedAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $deviceId = null, ?float $discountAmount = null, ?string $employeeUserId = null, ?array $fees = null, ?FulfillmentType $fulfillmentType = null, ?float $guestCount = null, ?string $id = null, ?array $lineitems = null, ?string $locationId = null, ?array $metadata = null, ?string $orderNumber = null, ?string $organizationId = null, ?array $payments = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundedAmount = null, ?string $salesChannel = null, ?float $serviceChargeAmount = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?string $subscriptionId = null, ?float $subtotalAmount = null, ?float $taxAmount = null, ?float $tipAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?\DateTime $closedAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $deviceId = null, ?float $discountAmount = null, ?string $employeeUserId = null, ?array $fees = null, ?FulfillmentType $fulfillmentType = null, ?float $guestCount = null, ?string $id = null, ?array $lineitems = null, ?string $locationId = null, ?array $metadata = null, ?string $orderNumber = null, ?string $organizationId = null, ?float $paidAmount = null, ?array $payments = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundedAmount = null, ?string $salesChannel = null, ?float $serviceChargeAmount = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?string $subscriptionId = null, ?float $subtotalAmount = null, ?string $tableId = null, ?float $taxAmount = null, ?float $tipAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
         $this->billingAddress = $billingAddress;
@@ -360,6 +380,7 @@ class AccountingSalesorder
         $this->metadata = $metadata;
         $this->orderNumber = $orderNumber;
         $this->organizationId = $organizationId;
+        $this->paidAmount = $paidAmount;
         $this->payments = $payments;
         $this->postedAt = $postedAt;
         $this->raw = $raw;
@@ -370,6 +391,7 @@ class AccountingSalesorder
         $this->status = $status;
         $this->subscriptionId = $subscriptionId;
         $this->subtotalAmount = $subtotalAmount;
+        $this->tableId = $tableId;
         $this->taxAmount = $taxAmount;
         $this->tipAmount = $tipAmount;
         $this->totalAmount = $totalAmount;

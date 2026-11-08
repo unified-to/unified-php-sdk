@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createDatastoreTable](#createdatastoretable) - Create a table
+* [getCommerceTable](#getcommercetable) - Retrieve a table
 * [getDatastoreTable](#getdatastoretable) - Retrieve a table
+* [listCommerceTables](#listcommercetables) - List all tables
 * [listDatastoreTables](#listdatastoretables) - List all tables
 * [patchDatastoreTable](#patchdatastoretable) - Update a table
 * [removeDatastoreTable](#removedatastoretable) - Remove a table
@@ -41,7 +43,7 @@ $request = new Operations\CreateDatastoreTableRequest(
         fields: [
             new Shared\DatastoreField(
                 description: 'Antea soluta itaque clamo despecto basium accendo.',
-                id: '0057009f-beb6-4014-8e52-d159a0e0d095',
+                id: '523ca0f8-08f7-4a8c-b66b-c4e805296699',
                 isIndexed: true,
                 isUnique: true,
                 name: 'Ferry LLC',
@@ -51,7 +53,7 @@ $request = new Operations\CreateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-                id: '052a334e-0995-407d-a61e-23894cf419db',
+                id: '2ebc2910-ccb7-452e-a3a0-c0e1d825e871',
                 isNullable: true,
                 isUnique: true,
                 name: 'Hand - Nader',
@@ -61,7 +63,7 @@ $request = new Operations\CreateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-                id: '97036325-4b11-4b8e-aee9-87ab45934c2d',
+                id: '05bc65ac-b57f-4427-bbcf-f8305cb052f7',
                 isIndexed: true,
                 isNullable: true,
                 isUnique: true,
@@ -73,7 +75,7 @@ $request = new Operations\CreateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-                id: '85179390-49b1-4050-90f9-57852adfdfcd',
+                id: '97856465-4490-45b9-85c4-62d024946de4',
                 name: 'Gislason, Gorczany and Hegmann',
                 originalType: 'tego',
                 precision: 94,
@@ -82,7 +84,7 @@ $request = new Operations\CreateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Communis coma cura audio aduro acer canis expedita.',
-                id: 'b89183e7-2b12-41dd-a477-97cae30ea4d0',
+                id: '911c010c-42b1-4ef5-bf25-695d1d14de40',
                 isIndexed: true,
                 isPrimaryKey: true,
                 isRequired: true,
@@ -92,18 +94,18 @@ $request = new Operations\CreateDatastoreTableRequest(
                 type: Shared\DatastoreFieldType::Email,
             ),
         ],
-        id: '2a816f8e-a171-4dcc-9fd2-cd6b543f73a4',
+        id: '392576d8-84dc-4c2d-85cc-473c53432ab2',
         metadata: [],
         name: 'Rogahn, Lowe and Heller',
         relationships: [
             new Shared\DatastoreRelationship(
                 field: 'Macejkovic - Shields',
                 name: 'Hyatt, Ryan and Nienow',
-                tableId: '2a816f8e-a171-4dcc-9fd2-cd6b543f73a4',
+                tableId: '392576d8-84dc-4c2d-85cc-473c53432ab2',
                 type: Shared\DatastoreRelationshipType::Many,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-08-13T17:18:51.708Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-08-13T18:35:41.954Z'),
         webUrl: 'https://nervous-deck.com',
     ),
     connectionId: '<id>',
@@ -127,6 +129,57 @@ if ($response->datastoreTable !== null) {
 ### Response
 
 **[?Operations\CreateDatastoreTableResponse](../../Models/Operations/CreateDatastoreTableResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getCommerceTable
+
+Retrieves a single CommerceTable by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getCommerceTable" method="get" path="/commerce/{connection_id}/table/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetCommerceTableRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->table->getCommerceTable(
+    request: $request
+);
+
+if ($response->commerceTable !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetCommerceTableRequest](../../Models/Operations/GetCommerceTableRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetCommerceTableResponse](../../Models/Operations/GetCommerceTableResponse.md)**
 
 ### Errors
 
@@ -178,6 +231,56 @@ if ($response->datastoreTable !== null) {
 ### Response
 
 **[?Operations\GetDatastoreTableResponse](../../Models/Operations/GetDatastoreTableResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listCommerceTables
+
+Returns a list of CommerceTables. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listCommerceTables" method="get" path="/commerce/{connection_id}/table" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListCommerceTablesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->table->listCommerceTables(
+    request: $request
+);
+
+if ($response->commerceTables !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListCommerceTablesRequest](../../Models/Operations/ListCommerceTablesRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListCommerceTablesResponse](../../Models/Operations/ListCommerceTablesResponse.md)**
 
 ### Errors
 
@@ -265,7 +368,7 @@ $request = new Operations\PatchDatastoreTableRequest(
         fields: [
             new Shared\DatastoreField(
                 description: 'Antea soluta itaque clamo despecto basium accendo.',
-                id: '27361227-a721-4f26-9484-062fb1aa54b7',
+                id: '4392f855-65ca-42bb-a1be-c4f30762d7ee',
                 isIndexed: true,
                 isUnique: true,
                 name: 'Ferry LLC',
@@ -275,7 +378,7 @@ $request = new Operations\PatchDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-                id: 'a8b6b702-acbc-4e17-8d48-9aec63963e23',
+                id: '77d99115-7554-40a8-a0d7-d45a6db7c974',
                 isNullable: true,
                 isUnique: true,
                 name: 'Hand - Nader',
@@ -285,7 +388,7 @@ $request = new Operations\PatchDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-                id: '0476ce5c-de1b-4cb8-97ec-01e39d9681d6',
+                id: '6db225b8-d55e-4cf3-8c52-35d11c75c667',
                 isIndexed: true,
                 isNullable: true,
                 isUnique: true,
@@ -297,7 +400,7 @@ $request = new Operations\PatchDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-                id: '52867994-482f-467b-a3ab-4df847a84b83',
+                id: '05b3e476-0f9e-4db8-ba61-c517fbeacae8',
                 name: 'Gislason, Gorczany and Hegmann',
                 originalType: 'tego',
                 precision: 94,
@@ -306,7 +409,7 @@ $request = new Operations\PatchDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Communis coma cura audio aduro acer canis expedita.',
-                id: 'bb291eb7-86ec-4fe0-b7ff-e357ef97abfc',
+                id: '4db4276c-ff5b-42d8-8e1d-ef2bf4d74cf3',
                 isIndexed: true,
                 isPrimaryKey: true,
                 isRequired: true,
@@ -316,18 +419,18 @@ $request = new Operations\PatchDatastoreTableRequest(
                 type: Shared\DatastoreFieldType::Email,
             ),
         ],
-        id: '9dc3b6ab-2ec8-43c5-8673-dd5846189031',
+        id: '1c76b629-176c-4239-9209-459a407ef8e3',
         metadata: [],
         name: 'Rogahn, Lowe and Heller',
         relationships: [
             new Shared\DatastoreRelationship(
                 field: 'Macejkovic - Shields',
                 name: 'Hyatt, Ryan and Nienow',
-                tableId: '9dc3b6ab-2ec8-43c5-8673-dd5846189031',
+                tableId: '1c76b629-176c-4239-9209-459a407ef8e3',
                 type: Shared\DatastoreRelationshipType::Many,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-08-13T17:18:51.709Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-08-13T18:35:41.956Z'),
         webUrl: 'https://nervous-deck.com',
     ),
     connectionId: '<id>',
@@ -440,7 +543,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
         fields: [
             new Shared\DatastoreField(
                 description: 'Antea soluta itaque clamo despecto basium accendo.',
-                id: '27361227-a721-4f26-9484-062fb1aa54b7',
+                id: '4392f855-65ca-42bb-a1be-c4f30762d7ee',
                 isIndexed: true,
                 isUnique: true,
                 name: 'Ferry LLC',
@@ -450,7 +553,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Nulla cattus aequus sumo neque alter cauda subseco.',
-                id: 'a8b6b702-acbc-4e17-8d48-9aec63963e23',
+                id: '77d99115-7554-40a8-a0d7-d45a6db7c974',
                 isNullable: true,
                 isUnique: true,
                 name: 'Hand - Nader',
@@ -460,7 +563,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Utilis callide adhuc verumtamen doloremque ceno sui sint.',
-                id: '0476ce5c-de1b-4cb8-97ec-01e39d9681d6',
+                id: '6db225b8-d55e-4cf3-8c52-35d11c75c667',
                 isIndexed: true,
                 isNullable: true,
                 isUnique: true,
@@ -472,7 +575,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Audax articulus triumphus tametsi cura tenetur colligo arcesso bestia.',
-                id: '52867994-482f-467b-a3ab-4df847a84b83',
+                id: '05b3e476-0f9e-4db8-ba61-c517fbeacae8',
                 name: 'Gislason, Gorczany and Hegmann',
                 originalType: 'tego',
                 precision: 94,
@@ -481,7 +584,7 @@ $request = new Operations\UpdateDatastoreTableRequest(
             ),
             new Shared\DatastoreField(
                 description: 'Communis coma cura audio aduro acer canis expedita.',
-                id: 'bb291eb7-86ec-4fe0-b7ff-e357ef97abfc',
+                id: '4db4276c-ff5b-42d8-8e1d-ef2bf4d74cf3',
                 isIndexed: true,
                 isPrimaryKey: true,
                 isRequired: true,
@@ -491,18 +594,18 @@ $request = new Operations\UpdateDatastoreTableRequest(
                 type: Shared\DatastoreFieldType::Email,
             ),
         ],
-        id: '9dc3b6ab-2ec8-43c5-8673-dd5846189031',
+        id: '1c76b629-176c-4239-9209-459a407ef8e3',
         metadata: [],
         name: 'Rogahn, Lowe and Heller',
         relationships: [
             new Shared\DatastoreRelationship(
                 field: 'Macejkovic - Shields',
                 name: 'Hyatt, Ryan and Nienow',
-                tableId: '9dc3b6ab-2ec8-43c5-8673-dd5846189031',
+                tableId: '1c76b629-176c-4239-9209-459a407ef8e3',
                 type: Shared\DatastoreRelationshipType::Many,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-08-13T17:18:51.709Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-08-13T18:35:41.956Z'),
         webUrl: 'https://nervous-deck.com',
     ),
     connectionId: '<id>',
