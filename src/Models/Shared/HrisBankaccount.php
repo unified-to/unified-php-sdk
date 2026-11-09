@@ -191,7 +191,7 @@ class HrisBankaccount
     public ?\DateTime $updatedAt = null;
 
     /**
-     * employee ID (required for listcreate) (reference to HrisEmployee)
+     * employee ID (required for list and create) (reference to HrisEmployee)
      *
      * @var ?string $userId
      */

@@ -9,12 +9,14 @@
 * [createUnifiedEnvironment](#createunifiedenvironment) - Create new environments
 * [createUnifiedSecretsmanager](#createunifiedsecretsmanager) - Create secrets manager
 * [createUnifiedWebhook](#createunifiedwebhook) - Create webhook subscription
+* [createUnifiedWorkspaceintegration](#createunifiedworkspaceintegration) - Create workspace integration
 * [getUnifiedApicall](#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](#getunifiedissue) - Retrieve support issue
 * [getUnifiedSecretsmanager](#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
+* [getUnifiedWorkspaceintegration](#getunifiedworkspaceintegration) - Retrieve workspace integration
 * [listUnifiedApicalls](#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](#listunifiedconnections) - List all connections
 * [listUnifiedEnvironments](#listunifiedenvironments) - Returns all environments
@@ -26,18 +28,22 @@
 * [listUnifiedSecretsmanagerSecrets](#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](#listunifiedsecretsmanagers) - List secrets managers
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
+* [listUnifiedWorkspaceintegrations](#listunifiedworkspaceintegrations) - List workspace integrations
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookResume](#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
+* [patchUnifiedWorkspaceintegration](#patchunifiedworkspaceintegration) - Update workspace integration
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
 * [removeUnifiedSecretsmanager](#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
+* [removeUnifiedWorkspaceintegration](#removeunifiedworkspaceintegration) - Remove workspace integration
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookResume](#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
+* [updateUnifiedWorkspaceintegration](#updateunifiedworkspaceintegration) - Update workspace integration
 
 ## createUnifiedConnection
 
@@ -293,6 +299,57 @@ if ($response->webhook !== null) {
 ### Response
 
 **[?Operations\CreateUnifiedWebhookResponse](../../Models/Operations/CreateUnifiedWebhookResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createUnifiedWorkspaceintegration
+
+Create workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createUnifiedWorkspaceintegration" method="post" path="/unified/workspaceintegration" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Shared\WorkspaceIntegration(
+    integrationType: '<value>',
+    isActive: true,
+);
+
+$response = $sdk->unified->createUnifiedWorkspaceintegration(
+    request: $request
+);
+
+if ($response->workspaceIntegration !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `$request`                                                                 | [Shared\WorkspaceIntegration](../../Models/Shared/WorkspaceIntegration.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+
+### Response
+
+**[?Operations\CreateUnifiedWorkspaceintegrationResponse](../../Models/Operations/CreateUnifiedWorkspaceintegrationResponse.md)**
 
 ### Errors
 
@@ -594,6 +651,56 @@ if ($response->webhook !== null) {
 ### Response
 
 **[?Operations\GetUnifiedWebhookResponse](../../Models/Operations/GetUnifiedWebhookResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getUnifiedWorkspaceintegration
+
+Retrieve workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getUnifiedWorkspaceintegration" method="get" path="/unified/workspaceintegration/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetUnifiedWorkspaceintegrationRequest(
+    id: '<id>',
+);
+
+$response = $sdk->unified->getUnifiedWorkspaceintegration(
+    request: $request
+);
+
+if ($response->workspaceIntegration !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                            | Type                                                                                                                 | Required                                                                                                             | Description                                                                                                          |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                           | [Operations\GetUnifiedWorkspaceintegrationRequest](../../Models/Operations/GetUnifiedWorkspaceintegrationRequest.md) | :heavy_check_mark:                                                                                                   | The request object to use for the request.                                                                           |
+
+### Response
+
+**[?Operations\GetUnifiedWorkspaceintegrationResponse](../../Models/Operations/GetUnifiedWorkspaceintegrationResponse.md)**
 
 ### Errors
 
@@ -1112,6 +1219,53 @@ if ($response->webhooks !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listUnifiedWorkspaceintegrations
+
+List workspace integrations
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUnifiedWorkspaceintegrations" method="get" path="/unified/workspaceintegration" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+
+
+$response = $sdk->unified->listUnifiedWorkspaceintegrations(
+    request: $request
+);
+
+if ($response->workspaceIntegrations !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                               | [Operations\ListUnifiedWorkspaceintegrationsRequest](../../Models/Operations/ListUnifiedWorkspaceintegrationsRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+### Response
+
+**[?Operations\ListUnifiedWorkspaceintegrationsResponse](../../Models/Operations/ListUnifiedWorkspaceintegrationsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchUnifiedConnection
 
 Update connection
@@ -1328,6 +1482,58 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchUnifiedWorkspaceintegration
+
+Update workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchUnifiedWorkspaceintegration" method="patch" path="/unified/workspaceintegration/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchUnifiedWorkspaceintegrationRequest(
+    workspaceIntegrationPatch: new Shared\WorkspaceIntegrationPatch(),
+    id: '<id>',
+);
+
+$response = $sdk->unified->patchUnifiedWorkspaceintegration(
+    request: $request
+);
+
+if ($response->workspaceIntegration !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                | Type                                                                                                                     | Required                                                                                                                 | Description                                                                                                              |
+| ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                               | [Operations\PatchUnifiedWorkspaceintegrationRequest](../../Models/Operations/PatchUnifiedWorkspaceintegrationRequest.md) | :heavy_check_mark:                                                                                                       | The request object to use for the request.                                                                               |
+
+### Response
+
+**[?Operations\PatchUnifiedWorkspaceintegrationResponse](../../Models/Operations/PatchUnifiedWorkspaceintegrationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeUnifiedConnection
 
 Remove connection
@@ -1521,6 +1727,56 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveUnifiedWebhookResponse](../../Models/Operations/RemoveUnifiedWebhookResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeUnifiedWorkspaceintegration
+
+Remove workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeUnifiedWorkspaceintegration" method="delete" path="/unified/workspaceintegration/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveUnifiedWorkspaceintegrationRequest(
+    id: '<id>',
+);
+
+$response = $sdk->unified->removeUnifiedWorkspaceintegration(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                 | [Operations\RemoveUnifiedWorkspaceintegrationRequest](../../Models/Operations/RemoveUnifiedWorkspaceintegrationRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+### Response
+
+**[?Operations\RemoveUnifiedWorkspaceintegrationResponse](../../Models/Operations/RemoveUnifiedWorkspaceintegrationResponse.md)**
 
 ### Errors
 
@@ -1736,6 +1992,61 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\UpdateUnifiedWebhookTriggerResponse](../../Models/Operations/UpdateUnifiedWebhookTriggerResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateUnifiedWorkspaceintegration
+
+Update workspace integration
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateUnifiedWorkspaceintegration" method="put" path="/unified/workspaceintegration/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateUnifiedWorkspaceintegrationRequest(
+    workspaceIntegration: new Shared\WorkspaceIntegration(
+        integrationType: '<value>',
+        isActive: false,
+    ),
+    id: '<id>',
+);
+
+$response = $sdk->unified->updateUnifiedWorkspaceintegration(
+    request: $request
+);
+
+if ($response->workspaceIntegration !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                                  | Type                                                                                                                       | Required                                                                                                                   | Description                                                                                                                |
+| -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                                 | [Operations\UpdateUnifiedWorkspaceintegrationRequest](../../Models/Operations/UpdateUnifiedWorkspaceintegrationRequest.md) | :heavy_check_mark:                                                                                                         | The request object to use for the request.                                                                                 |
+
+### Response
+
+**[?Operations\UpdateUnifiedWorkspaceintegrationResponse](../../Models/Operations/UpdateUnifiedWorkspaceintegrationResponse.md)**
 
 ### Errors
 

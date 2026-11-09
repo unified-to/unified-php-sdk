@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '3e665fc4-b120-445c-8357-0778de51ed58',
+        id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '3e665fc4-b120-445c-8357-0778de51ed58',
+        id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
     ),
     connectionId: '<id>',
 );
@@ -2904,12 +2904,14 @@ if ($response->accountingAccount !== null) {
 * [createUnifiedEnvironment](docs/sdks/unified/README.md#createunifiedenvironment) - Create new environments
 * [createUnifiedSecretsmanager](docs/sdks/unified/README.md#createunifiedsecretsmanager) - Create secrets manager
 * [createUnifiedWebhook](docs/sdks/unified/README.md#createunifiedwebhook) - Create webhook subscription
+* [createUnifiedWorkspaceintegration](docs/sdks/unified/README.md#createunifiedworkspaceintegration) - Create workspace integration
 * [getUnifiedApicall](docs/sdks/unified/README.md#getunifiedapicall) - Retrieve specific API Call by its ID
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
 * [getUnifiedSecretsmanager](docs/sdks/unified/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
+* [getUnifiedWorkspaceintegration](docs/sdks/unified/README.md#getunifiedworkspaceintegration) - Retrieve workspace integration
 * [listUnifiedApicalls](docs/sdks/unified/README.md#listunifiedapicalls) - Returns API Calls
 * [listUnifiedConnections](docs/sdks/unified/README.md#listunifiedconnections) - List all connections
 * [listUnifiedEnvironments](docs/sdks/unified/README.md#listunifiedenvironments) - Returns all environments
@@ -2921,18 +2923,22 @@ if ($response->accountingAccount !== null) {
 * [listUnifiedSecretsmanagerSecrets](docs/sdks/unified/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](docs/sdks/unified/README.md#listunifiedsecretsmanagers) - List secrets managers
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
+* [listUnifiedWorkspaceintegrations](docs/sdks/unified/README.md#listunifiedworkspaceintegrations) - List workspace integrations
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookResume](docs/sdks/unified/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
+* [patchUnifiedWorkspaceintegration](docs/sdks/unified/README.md#patchunifiedworkspaceintegration) - Update workspace integration
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
 * [removeUnifiedSecretsmanager](docs/sdks/unified/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
+* [removeUnifiedWorkspaceintegration](docs/sdks/unified/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
+* [updateUnifiedWorkspaceintegration](docs/sdks/unified/README.md#updateunifiedworkspaceintegration) - Update workspace integration
 
 ### [Unittype](docs/sdks/unittype/README.md)
 
@@ -3012,6 +3018,15 @@ if ($response->accountingAccount !== null) {
 * [removeCalendarWebinar](docs/sdks/webinar/README.md#removecalendarwebinar) - Remove a webinar
 * [updateCalendarWebinar](docs/sdks/webinar/README.md#updatecalendarwebinar) - Update a webinar
 
+### [Workspaceintegration](docs/sdks/workspaceintegration/README.md)
+
+* [createUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#createunifiedworkspaceintegration) - Create workspace integration
+* [getUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#getunifiedworkspaceintegration) - Retrieve workspace integration
+* [listUnifiedWorkspaceintegrations](docs/sdks/workspaceintegration/README.md#listunifiedworkspaceintegrations) - List workspace integrations
+* [patchUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#patchunifiedworkspaceintegration) - Update workspace integration
+* [removeUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
+* [updateUnifiedWorkspaceintegration](docs/sdks/workspaceintegration/README.md#updateunifiedworkspaceintegration) - Update workspace integration
+
 </details>
 <!-- End Available Resources and Operations [operations] -->
 
@@ -3063,7 +3078,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: '3e665fc4-b120-445c-8357-0778de51ed58',
+            id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -3076,7 +3091,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
         ),
         connectionId: '<id>',
     );
@@ -3134,7 +3149,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '3e665fc4-b120-445c-8357-0778de51ed58',
+        id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3147,7 +3162,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
     ),
     connectionId: '<id>',
 );
@@ -3188,7 +3203,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '3e665fc4-b120-445c-8357-0778de51ed58',
+        id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3201,7 +3216,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T11:37:25.487Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
     ),
     connectionId: '<id>',
 );

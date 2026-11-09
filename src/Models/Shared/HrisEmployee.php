@@ -65,7 +65,7 @@ class HrisEmployee
     public ?string $currency = null;
 
     /**
-     * YYYYMM/DD
+     * YYYY-MM-DD
      *
      * @var ?\DateTime $dateOfBirth
      */

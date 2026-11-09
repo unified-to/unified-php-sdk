@@ -474,6 +474,8 @@ class UnifiedTo
 
     public Webhook $webhook;
 
+    public Workspaceintegration $workspaceintegration;
+
     public Verification $verification;
 
     public Request $request;
@@ -717,6 +719,7 @@ class UnifiedTo
         $this->notification = new Notification($this->sdkConfiguration);
         $this->secretsmanager = new Secretsmanager($this->sdkConfiguration);
         $this->webhook = new Webhook($this->sdkConfiguration);
+        $this->workspaceintegration = new Workspaceintegration($this->sdkConfiguration);
         $this->verification = new Verification($this->sdkConfiguration);
         $this->request = new Request($this->sdkConfiguration);
         $this->initHooks();
