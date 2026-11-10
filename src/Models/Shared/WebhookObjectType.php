@@ -205,6 +205,7 @@ enum WebhookObjectType: string
     case SocialProfile = 'social_profile';
     case SocialReview = 'social_review';
     case SocialInsight = 'social_insight';
+    case SocialComment = 'social_comment';
     case LegalMatter = 'legal_matter';
     case LegalPracticearea = 'legal_practicearea';
     case LegalTimeentry = 'legal_timeentry';

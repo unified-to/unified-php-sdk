@@ -39,5 +39,7 @@ enum CreateAtsCandidateQueryParamFields: string
     case JobIds = 'job_ids';
     case Metadata = 'metadata';
     case Summary = 'summary';
+    case IsPrivate = 'is_private';
+    case HasDoNotContact = 'has_do_not_contact';
     case Raw = 'raw';
 }

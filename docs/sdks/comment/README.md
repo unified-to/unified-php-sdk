@@ -5,21 +5,27 @@
 ### Available Operations
 
 * [createKmsComment](#createkmscomment) - Create a comment
+* [createSocialComment](#createsocialcomment) - Create a comment
 * [createTaskComment](#createtaskcomment) - Create a comment
 * [createUcComment](#createuccomment) - Create a comment
 * [getKmsComment](#getkmscomment) - Retrieve a comment
+* [getSocialComment](#getsocialcomment) - Retrieve a comment
 * [getTaskComment](#gettaskcomment) - Retrieve a comment
 * [getUcComment](#getuccomment) - Retrieve a comment
 * [listKmsComments](#listkmscomments) - List all comments
+* [listSocialComments](#listsocialcomments) - List all comments
 * [listTaskComments](#listtaskcomments) - List all comments
 * [listUcComments](#listuccomments) - List all comments
 * [patchKmsComment](#patchkmscomment) - Update a comment
+* [patchSocialComment](#patchsocialcomment) - Update a comment
 * [patchTaskComment](#patchtaskcomment) - Update a comment
 * [patchUcComment](#patchuccomment) - Update a comment
 * [removeKmsComment](#removekmscomment) - Remove a comment
+* [removeSocialComment](#removesocialcomment) - Remove a comment
 * [removeTaskComment](#removetaskcomment) - Remove a comment
 * [removeUcComment](#removeuccomment) - Remove a comment
 * [updateKmsComment](#updatekmscomment) - Update a comment
+* [updateSocialComment](#updatesocialcomment) - Update a comment
 * [updateTaskComment](#updatetaskcomment) - Update a comment
 * [updateUcComment](#updateuccomment) - Update a comment
 
@@ -51,10 +57,10 @@ $request = new Operations\CreateKmsCommentRequest(
         content: 'Decimus tolero viriliter usque.',
         contentType: Shared\ContentType::Html,
         createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
-        id: '41f672e3-80e1-47c0-8095-5e0899104957',
+        id: '62dd559a-07ec-4ea4-9a25-eafc957b0fa9',
         metadata: [],
         type: Shared\KmsCommentType::Page,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-02T00:20:41.109Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-02T07:13:53.275Z'),
     ),
     connectionId: '<id>',
 );
@@ -77,6 +83,58 @@ if ($response->kmsComment !== null) {
 ### Response
 
 **[?Operations\CreateKmsCommentResponse](../../Models/Operations/CreateKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createSocialComment
+
+Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are mapped to the provider's API. Returns the created SocialComment.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createSocialComment" method="post" path="/social/{connection_id}/comment" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateSocialCommentRequest(
+    socialComment: new Shared\SocialComment(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->comment->createSocialComment(
+    request: $request
+);
+
+if ($response->socialComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateSocialCommentRequest](../../Models/Operations/CreateSocialCommentRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\CreateSocialCommentResponse](../../Models/Operations/CreateSocialCommentResponse.md)**
 
 ### Errors
 
@@ -111,10 +169,10 @@ $request = new Operations\CreateTaskCommentRequest(
     taskComment: new Shared\TaskComment(
         createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
         hasChildren: true,
-        id: '7d67954a-b35f-4ae0-b343-7517ed3412dc',
+        id: '55215a9b-fd7e-4f40-b885-848f0dd52cbe',
         metadata: [],
         text: 'Colo ulciscor sublime tabernus.',
-        updatedAt: Utils\Utils::parseDateTime('2021-10-08T16:27:21.375Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-10-08T22:53:15.573Z'),
     ),
     connectionId: '<id>',
 );
@@ -170,9 +228,9 @@ $request = new Operations\CreateUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: '80b0ab47-eb38-4666-9ca3-b769ab8cd1f7',
+        id: '8b77d478-0e58-4dde-a7c0-350ebdee955a',
         metadata: [],
-        updatedAt: '2024-02-14T08:38:48.813Z',
+        updatedAt: '2024-02-14T14:09:41.709Z',
     ),
     connectionId: '<id>',
 );
@@ -246,6 +304,57 @@ if ($response->kmsComment !== null) {
 ### Response
 
 **[?Operations\GetKmsCommentResponse](../../Models/Operations/GetKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getSocialComment
+
+Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getSocialComment" method="get" path="/social/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetSocialCommentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->comment->getSocialComment(
+    request: $request
+);
+
+if ($response->socialComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetSocialCommentRequest](../../Models/Operations/GetSocialCommentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetSocialCommentResponse](../../Models/Operations/GetSocialCommentResponse.md)**
 
 ### Errors
 
@@ -405,6 +514,56 @@ if ($response->kmsComments !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listSocialComments
+
+Returns a list of SocialComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listSocialComments" method="get" path="/social/{connection_id}/comment" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListSocialCommentsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->comment->listSocialComments(
+    request: $request
+);
+
+if ($response->socialComments !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListSocialCommentsRequest](../../Models/Operations/ListSocialCommentsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListSocialCommentsResponse](../../Models/Operations/ListSocialCommentsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listTaskComments
 
 Returns a list of TaskComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -533,10 +692,10 @@ $request = new Operations\PatchKmsCommentRequest(
         content: 'Decimus tolero viriliter usque.',
         contentType: Shared\ContentType::Html,
         createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
-        id: '22acd1eb-8ef3-4649-9975-3bed26247f3a',
+        id: '55e433ca-6cd7-494b-bc2e-80bcfb9a1833',
         metadata: [],
         type: Shared\KmsCommentType::Page,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-02T00:20:41.114Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-02T07:13:53.279Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -560,6 +719,59 @@ if ($response->kmsComment !== null) {
 ### Response
 
 **[?Operations\PatchKmsCommentResponse](../../Models/Operations/PatchKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchSocialComment" method="patch" path="/social/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchSocialCommentRequest(
+    socialComment: new Shared\SocialComment(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->comment->patchSocialComment(
+    request: $request
+);
+
+if ($response->socialComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchSocialCommentRequest](../../Models/Operations/PatchSocialCommentRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\PatchSocialCommentResponse](../../Models/Operations/PatchSocialCommentResponse.md)**
 
 ### Errors
 
@@ -594,10 +806,10 @@ $request = new Operations\PatchTaskCommentRequest(
     taskComment: new Shared\TaskComment(
         createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
         hasChildren: true,
-        id: '1a4efae5-cd40-4cee-8eac-4e27e0dd25ae',
+        id: '8758d399-d83b-44aa-be9c-3a069d0730e2',
         metadata: [],
         text: 'Colo ulciscor sublime tabernus.',
-        updatedAt: Utils\Utils::parseDateTime('2021-10-08T16:27:21.381Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-10-08T22:53:15.576Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -654,9 +866,9 @@ $request = new Operations\PatchUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: '746fb16c-c50a-4ebf-9630-5558fa3356ba',
+        id: '33f39bee-f2f7-43cc-8b99-8f67a5112082',
         metadata: [],
-        updatedAt: '2024-02-14T08:38:48.816Z',
+        updatedAt: '2024-02-14T14:09:41.711Z',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -731,6 +943,57 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveKmsCommentResponse](../../Models/Operations/RemoveKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeSocialComment
+
+Deletes the SocialComment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeSocialComment" method="delete" path="/social/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveSocialCommentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->comment->removeSocialComment(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveSocialCommentRequest](../../Models/Operations/RemoveSocialCommentRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\RemoveSocialCommentResponse](../../Models/Operations/RemoveSocialCommentResponse.md)**
 
 ### Errors
 
@@ -868,10 +1131,10 @@ $request = new Operations\UpdateKmsCommentRequest(
         content: 'Decimus tolero viriliter usque.',
         contentType: Shared\ContentType::Html,
         createdAt: Utils\Utils::parseDateTime('2022-08-26T14:40:49.732Z'),
-        id: '22acd1eb-8ef3-4649-9975-3bed26247f3a',
+        id: '55e433ca-6cd7-494b-bc2e-80bcfb9a1833',
         metadata: [],
         type: Shared\KmsCommentType::Page,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-02T00:20:41.114Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-02T07:13:53.279Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -895,6 +1158,59 @@ if ($response->kmsComment !== null) {
 ### Response
 
 **[?Operations\UpdateKmsCommentResponse](../../Models/Operations/UpdateKmsCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateSocialComment" method="put" path="/social/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateSocialCommentRequest(
+    socialComment: new Shared\SocialComment(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->comment->updateSocialComment(
+    request: $request
+);
+
+if ($response->socialComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateSocialCommentRequest](../../Models/Operations/UpdateSocialCommentRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\UpdateSocialCommentResponse](../../Models/Operations/UpdateSocialCommentResponse.md)**
 
 ### Errors
 
@@ -929,10 +1245,10 @@ $request = new Operations\UpdateTaskCommentRequest(
     taskComment: new Shared\TaskComment(
         createdAt: Utils\Utils::parseDateTime('2019-10-12T20:33:37.879Z'),
         hasChildren: true,
-        id: '1a4efae5-cd40-4cee-8eac-4e27e0dd25ae',
+        id: '8758d399-d83b-44aa-be9c-3a069d0730e2',
         metadata: [],
         text: 'Colo ulciscor sublime tabernus.',
-        updatedAt: Utils\Utils::parseDateTime('2021-10-08T16:27:21.381Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-10-08T22:53:15.576Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -989,9 +1305,9 @@ $request = new Operations\UpdateUcCommentRequest(
     ucComment: new Shared\UcComment(
         content: 'Vociferor vitiosus.',
         createdAt: '2023-04-02T23:42:31.571Z',
-        id: '746fb16c-c50a-4ebf-9630-5558fa3356ba',
+        id: '33f39bee-f2f7-43cc-8b99-8f67a5112082',
         metadata: [],
-        updatedAt: '2024-02-14T08:38:48.816Z',
+        updatedAt: '2024-02-14T14:09:41.711Z',
     ),
     connectionId: '<id>',
     id: '<id>',

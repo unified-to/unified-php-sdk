@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
+        id: '58fc38e4-3690-40cb-82d5-99d0262aa4a0',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T23:35:48.744Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
+        id: '58fc38e4-3690-40cb-82d5-99d0262aa4a0',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T23:35:48.744Z'),
     ),
     connectionId: '<id>',
 );
@@ -820,21 +820,27 @@ if ($response->accountingAccount !== null) {
 ### [Comment](docs/sdks/comment/README.md)
 
 * [createKmsComment](docs/sdks/comment/README.md#createkmscomment) - Create a comment
+* [createSocialComment](docs/sdks/comment/README.md#createsocialcomment) - Create a comment
 * [createTaskComment](docs/sdks/comment/README.md#createtaskcomment) - Create a comment
 * [createUcComment](docs/sdks/comment/README.md#createuccomment) - Create a comment
 * [getKmsComment](docs/sdks/comment/README.md#getkmscomment) - Retrieve a comment
+* [getSocialComment](docs/sdks/comment/README.md#getsocialcomment) - Retrieve a comment
 * [getTaskComment](docs/sdks/comment/README.md#gettaskcomment) - Retrieve a comment
 * [getUcComment](docs/sdks/comment/README.md#getuccomment) - Retrieve a comment
 * [listKmsComments](docs/sdks/comment/README.md#listkmscomments) - List all comments
+* [listSocialComments](docs/sdks/comment/README.md#listsocialcomments) - List all comments
 * [listTaskComments](docs/sdks/comment/README.md#listtaskcomments) - List all comments
 * [listUcComments](docs/sdks/comment/README.md#listuccomments) - List all comments
 * [patchKmsComment](docs/sdks/comment/README.md#patchkmscomment) - Update a comment
+* [patchSocialComment](docs/sdks/comment/README.md#patchsocialcomment) - Update a comment
 * [patchTaskComment](docs/sdks/comment/README.md#patchtaskcomment) - Update a comment
 * [patchUcComment](docs/sdks/comment/README.md#patchuccomment) - Update a comment
 * [removeKmsComment](docs/sdks/comment/README.md#removekmscomment) - Remove a comment
+* [removeSocialComment](docs/sdks/comment/README.md#removesocialcomment) - Remove a comment
 * [removeTaskComment](docs/sdks/comment/README.md#removetaskcomment) - Remove a comment
 * [removeUcComment](docs/sdks/comment/README.md#removeuccomment) - Remove a comment
 * [updateKmsComment](docs/sdks/comment/README.md#updatekmscomment) - Update a comment
+* [updateSocialComment](docs/sdks/comment/README.md#updatesocialcomment) - Update a comment
 * [updateTaskComment](docs/sdks/comment/README.md#updatetaskcomment) - Update a comment
 * [updateUcComment](docs/sdks/comment/README.md#updateuccomment) - Update a comment
 
@@ -2644,18 +2650,24 @@ if ($response->accountingAccount !== null) {
 
 ### [Social](docs/sdks/social/README.md)
 
+* [createSocialComment](docs/sdks/social/README.md#createsocialcomment) - Create a comment
 * [createSocialPost](docs/sdks/social/README.md#createsocialpost) - Create a post
+* [getSocialComment](docs/sdks/social/README.md#getsocialcomment) - Retrieve a comment
 * [getSocialInsight](docs/sdks/social/README.md#getsocialinsight) - Retrieve an insight
 * [getSocialPost](docs/sdks/social/README.md#getsocialpost) - Retrieve a post
 * [getSocialProfile](docs/sdks/social/README.md#getsocialprofile) - Retrieve a profile
 * [getSocialReview](docs/sdks/social/README.md#getsocialreview) - Retrieve a review
+* [listSocialComments](docs/sdks/social/README.md#listsocialcomments) - List all comments
 * [listSocialInsights](docs/sdks/social/README.md#listsocialinsights) - List all insights
 * [listSocialPosts](docs/sdks/social/README.md#listsocialposts) - List all posts
 * [listSocialProfiles](docs/sdks/social/README.md#listsocialprofiles) - List all profiles
 * [listSocialReviews](docs/sdks/social/README.md#listsocialreviews) - List all reviews
+* [patchSocialComment](docs/sdks/social/README.md#patchsocialcomment) - Update a comment
 * [patchSocialPost](docs/sdks/social/README.md#patchsocialpost) - Update a post
 * [patchSocialReview](docs/sdks/social/README.md#patchsocialreview) - Update a review
+* [removeSocialComment](docs/sdks/social/README.md#removesocialcomment) - Remove a comment
 * [removeSocialPost](docs/sdks/social/README.md#removesocialpost) - Remove a post
+* [updateSocialComment](docs/sdks/social/README.md#updatesocialcomment) - Update a comment
 * [updateSocialPost](docs/sdks/social/README.md#updatesocialpost) - Update a post
 * [updateSocialReview](docs/sdks/social/README.md#updatesocialreview) - Update a review
 
@@ -3078,7 +3090,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
+            id: '58fc38e4-3690-40cb-82d5-99d0262aa4a0',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -3091,7 +3103,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-11T23:35:48.744Z'),
         ),
         connectionId: '<id>',
     );
@@ -3149,7 +3161,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
+        id: '58fc38e4-3690-40cb-82d5-99d0262aa4a0',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3162,7 +3174,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T23:35:48.744Z'),
     ),
     connectionId: '<id>',
 );
@@ -3203,7 +3215,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: 'b377c080-52a9-4828-8a10-5661d98a2e57',
+        id: '58fc38e4-3690-40cb-82d5-99d0262aa4a0',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3216,7 +3228,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-11T17:47:02.335Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-11T23:35:48.744Z'),
     ),
     connectionId: '<id>',
 );

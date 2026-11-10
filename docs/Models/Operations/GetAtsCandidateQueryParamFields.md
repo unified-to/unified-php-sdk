@@ -33,4 +33,6 @@
 | `JobIds`             | job_ids              |
 | `Metadata`           | metadata             |
 | `Summary`            | summary              |
+| `IsPrivate`          | is_private           |
+| `HasDoNotContact`    | has_do_not_contact   |
 | `Raw`                | raw                  |

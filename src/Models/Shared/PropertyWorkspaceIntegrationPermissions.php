@@ -368,6 +368,8 @@ enum PropertyWorkspaceIntegrationPermissions: string
     case SocialReviewWrite = 'social_review_write';
     case SocialInsightRead = 'social_insight_read';
     case SocialInsightWrite = 'social_insight_write';
+    case SocialCommentRead = 'social_comment_read';
+    case SocialCommentWrite = 'social_comment_write';
     case LegalMatterRead = 'legal_matter_read';
     case LegalMatterWrite = 'legal_matter_write';
     case LegalPracticeareaRead = 'legal_practicearea_read';

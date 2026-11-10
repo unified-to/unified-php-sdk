@@ -12,9 +12,4 @@ namespace Unified\Unified_to\Models\Shared;
 enum Provider: string
 {
     case MeetingCaptions = 'MEETING_CAPTIONS';
-    case AwsTranscribe = 'AWS_TRANSCRIBE';
-    case GoogleSpeech = 'GOOGLE_SPEECH';
-    case Assemblyai = 'ASSEMBLYAI';
-    case Deepgram = 'DEEPGRAM';
-    case Custom = 'CUSTOM';
 }

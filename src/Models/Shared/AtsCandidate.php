@@ -102,6 +102,15 @@ class AtsCandidate
     public ?string $firstName = null;
 
     /**
+     * Whether the candidate must not be contacted for outreach
+     *
+     * @var ?bool $hasDoNotContact
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_do_not_contact')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasDoNotContact = null;
+
+    /**
      *
      * @var ?string $id
      */
@@ -116,6 +125,15 @@ class AtsCandidate
     #[\Speakeasy\Serializer\Annotation\SerializedName('image_url')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $imageUrl = null;
+
+    /**
+     * Whether the candidate is confidential / private (visible only to permitted users)
+     *
+     * @var ?bool $isPrivate
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_private')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isPrivate = null;
 
     /**
      * $jobIds
@@ -288,8 +306,10 @@ class AtsCandidate
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsCandidateExperience>  $experiences
      * @param  ?string  $externalIdentifier
      * @param  ?string  $firstName
+     * @param  ?bool  $hasDoNotContact
      * @param  ?string  $id
      * @param  ?string  $imageUrl
+     * @param  ?bool  $isPrivate
      * @param  ?array<string>  $jobIds
      * @param  ?string  $lastName
      * @param  ?array<string>  $linkUrls
@@ -309,7 +329,7 @@ class AtsCandidate
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $education = null, ?array $emails = null, ?array $experiences = null, ?string $externalIdentifier = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?array $jobIds = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $skills = null, ?array $sources = null, ?string $summary = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $userIds = null, ?string $webUrl = null)
+    public function __construct(?PropertyAtsCandidateAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?\DateTime $dateOfBirth = null, ?array $education = null, ?array $emails = null, ?array $experiences = null, ?string $externalIdentifier = null, ?string $firstName = null, ?bool $hasDoNotContact = null, ?string $id = null, ?string $imageUrl = null, ?bool $isPrivate = null, ?array $jobIds = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?Origin $origin = null, ?array $raw = null, ?array $skills = null, ?array $sources = null, ?string $summary = null, ?array $tags = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $userIds = null, ?string $webUrl = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -321,8 +341,10 @@ class AtsCandidate
         $this->experiences = $experiences;
         $this->externalIdentifier = $externalIdentifier;
         $this->firstName = $firstName;
+        $this->hasDoNotContact = $hasDoNotContact;
         $this->id = $id;
         $this->imageUrl = $imageUrl;
+        $this->isPrivate = $isPrivate;
         $this->jobIds = $jobIds;
         $this->lastName = $lastName;
         $this->linkUrls = $linkUrls;

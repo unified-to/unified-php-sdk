@@ -94,9 +94,9 @@ $request = new Operations\CreatePropertyQuoteRequest(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T19:14:11.415Z'),
         currency: 'USD',
         depositAmount: 594.54,
-        endAt: Utils\Utils::parseDateTime('2026-11-23'),
+        endAt: Utils\Utils::parseDateTime('2026-11-24'),
         guests: 2,
-        id: 'fa566653-b4e7-40f8-97b2-1f1e2a4da76c',
+        id: 'ea145a70-9bcd-4894-aeb5-8fee1874a97c',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1665,
@@ -118,7 +118,7 @@ $request = new Operations\CreatePropertyQuoteRequest(
                 type: Shared\PropertyLineitemType::Tax,
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2026-11-14'),
+        startAt: Utils\Utils::parseDateTime('2026-11-15'),
         totalAmount: 1981.8,
     ),
     connectionId: '<id>',

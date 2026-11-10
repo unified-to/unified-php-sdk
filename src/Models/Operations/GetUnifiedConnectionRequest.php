@@ -20,11 +20,21 @@ class GetUnifiedConnectionRequest
     public string $id;
 
     /**
+     * Fields to return. Leave out auth to get connection metadata without credentials
+     *
+     * @var ?array<\Unified\Unified_to\Models\Operations\GetUnifiedConnectionQueryParamFields> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      * @param  string  $id
+     * @param  ?array<\Unified\Unified_to\Models\Operations\GetUnifiedConnectionQueryParamFields>  $fields
      * @phpstan-pure
      */
-    public function __construct(string $id)
+    public function __construct(string $id, ?array $fields = null)
     {
         $this->id = $id;
+        $this->fields = $fields;
     }
 }

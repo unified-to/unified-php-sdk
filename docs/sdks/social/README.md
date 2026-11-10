@@ -4,20 +4,78 @@
 
 ### Available Operations
 
+* [createSocialComment](#createsocialcomment) - Create a comment
 * [createSocialPost](#createsocialpost) - Create a post
+* [getSocialComment](#getsocialcomment) - Retrieve a comment
 * [getSocialInsight](#getsocialinsight) - Retrieve an insight
 * [getSocialPost](#getsocialpost) - Retrieve a post
 * [getSocialProfile](#getsocialprofile) - Retrieve a profile
 * [getSocialReview](#getsocialreview) - Retrieve a review
+* [listSocialComments](#listsocialcomments) - List all comments
 * [listSocialInsights](#listsocialinsights) - List all insights
 * [listSocialPosts](#listsocialposts) - List all posts
 * [listSocialProfiles](#listsocialprofiles) - List all profiles
 * [listSocialReviews](#listsocialreviews) - List all reviews
+* [patchSocialComment](#patchsocialcomment) - Update a comment
 * [patchSocialPost](#patchsocialpost) - Update a post
 * [patchSocialReview](#patchsocialreview) - Update a review
+* [removeSocialComment](#removesocialcomment) - Remove a comment
 * [removeSocialPost](#removesocialpost) - Remove a post
+* [updateSocialComment](#updatesocialcomment) - Update a comment
 * [updateSocialPost](#updatesocialpost) - Update a post
 * [updateSocialReview](#updatesocialreview) - Update a review
+
+## createSocialComment
+
+Creates a SocialComment. Provide the unified SocialComment fields in the request body; they are mapped to the provider's API. Returns the created SocialComment.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createSocialComment" method="post" path="/social/{connection_id}/comment" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreateSocialCommentRequest(
+    socialComment: new Shared\SocialComment(),
+    connectionId: '<id>',
+);
+
+$response = $sdk->social->createSocialComment(
+    request: $request
+);
+
+if ($response->socialComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreateSocialCommentRequest](../../Models/Operations/CreateSocialCommentRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\CreateSocialCommentResponse](../../Models/Operations/CreateSocialCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createSocialPost
 
@@ -64,6 +122,57 @@ if ($response->socialPost !== null) {
 ### Response
 
 **[?Operations\CreateSocialPostResponse](../../Models/Operations/CreateSocialPostResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getSocialComment
+
+Retrieves a single SocialComment by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getSocialComment" method="get" path="/social/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetSocialCommentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->social->getSocialComment(
+    request: $request
+);
+
+if ($response->socialComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetSocialCommentRequest](../../Models/Operations/GetSocialCommentRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetSocialCommentResponse](../../Models/Operations/GetSocialCommentResponse.md)**
 
 ### Errors
 
@@ -275,6 +384,56 @@ if ($response->socialReview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listSocialComments
+
+Returns a list of SocialComments. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listSocialComments" method="get" path="/social/{connection_id}/comment" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListSocialCommentsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->social->listSocialComments(
+    request: $request
+);
+
+if ($response->socialComments !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListSocialCommentsRequest](../../Models/Operations/ListSocialCommentsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListSocialCommentsResponse](../../Models/Operations/ListSocialCommentsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listSocialInsights
 
 Returns a list of SocialInsights. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -475,6 +634,59 @@ if ($response->socialReviews !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchSocialComment" method="patch" path="/social/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchSocialCommentRequest(
+    socialComment: new Shared\SocialComment(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->social->patchSocialComment(
+    request: $request
+);
+
+if ($response->socialComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchSocialCommentRequest](../../Models/Operations/PatchSocialCommentRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\PatchSocialCommentResponse](../../Models/Operations/PatchSocialCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchSocialPost
 
 Updates the SocialPost identified by `id`. Provide the unified SocialPost fields to change in the request body.
@@ -581,6 +793,57 @@ if ($response->socialReview !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeSocialComment
+
+Deletes the SocialComment identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeSocialComment" method="delete" path="/social/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveSocialCommentRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->social->removeSocialComment(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveSocialCommentRequest](../../Models/Operations/RemoveSocialCommentRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\RemoveSocialCommentResponse](../../Models/Operations/RemoveSocialCommentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeSocialPost
 
 Deletes the SocialPost identified by `id`.
@@ -625,6 +888,59 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveSocialPostResponse](../../Models/Operations/RemoveSocialPostResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateSocialComment
+
+Updates the SocialComment identified by `id`. Provide the unified SocialComment fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateSocialComment" method="put" path="/social/{connection_id}/comment/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateSocialCommentRequest(
+    socialComment: new Shared\SocialComment(),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->social->updateSocialComment(
+    request: $request
+);
+
+if ($response->socialComment !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdateSocialCommentRequest](../../Models/Operations/UpdateSocialCommentRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\UpdateSocialCommentResponse](../../Models/Operations/UpdateSocialCommentResponse.md)**
 
 ### Errors
 

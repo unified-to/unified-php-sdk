@@ -35,6 +35,14 @@ class ListUnifiedConnectionsRequest
     public ?string $externalXref = null;
 
     /**
+     * Fields to return. Leave out auth to get connection metadata without credentials
+     *
+     * @var ?array<\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsQueryParamFields> $fields
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=fields')]
+    public ?array $fields = null;
+
+    /**
      *
      * @var ?float $limit
      */
@@ -74,6 +82,7 @@ class ListUnifiedConnectionsRequest
      * @param  ?array<\Unified\Unified_to\Models\Operations\Categories>  $categories
      * @param  ?string  $env
      * @param  ?string  $externalXref
+     * @param  ?array<\Unified\Unified_to\Models\Operations\ListUnifiedConnectionsQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
      * @param  ?string  $order
@@ -81,11 +90,12 @@ class ListUnifiedConnectionsRequest
      * @param  ?string  $updatedGte
      * @phpstan-pure
      */
-    public function __construct(?array $categories = null, ?string $env = null, ?string $externalXref = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $updatedGte = null)
+    public function __construct(?array $categories = null, ?string $env = null, ?string $externalXref = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $sort = null, ?string $updatedGte = null)
     {
         $this->categories = $categories;
         $this->env = $env;
         $this->externalXref = $externalXref;
+        $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
         $this->order = $order;
