@@ -48,17 +48,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: 'dccb2895-92cc-43e7-b2c1-894e6a30d2fa',
+        id: '53cedbbd-20a5-459f-9bc2-ecd00acebb0a',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
         labelFormat: Shared\LabelFormat::Png,
-        labelUrl: 'https://labels.example.com/dccb2895-92cc-43e7-b2c1-894e6a30d2fa.pdf',
+        labelUrl: 'https://labels.example.com/53cedbbd-20a5-459f-9bc2-ecd00acebb0a.pdf',
         metadata: [],
         serviceCode: 'Dzy',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'ZYV60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-05-06T06:26:06.991Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-05-06T14:33:36.769Z'),
     ),
     connectionId: '<id>',
 );
@@ -114,7 +114,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingRateRequest(
     shippingRate: new Shared\ShippingRate(
         currency: 'USD',
-        id: '34367000-c7eb-4a75-81b4-24aebf9684ba',
+        id: '419bf659-0259-4da3-9ebb-c50c885f4415',
         metadata: [],
         rates: [
             new Shared\ShippingRateRate(
@@ -186,7 +186,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: '95d34634-a565-4eae-a963-73d29b1b9bc5',
+        id: 'ac89b8ef-9d1c-4b1e-bf25-fc5da564c40d',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -196,7 +196,7 @@ $request = new Operations\CreateShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-16T03:17:06.745Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-16T04:13:45.411Z'),
     ),
     connectionId: '<id>',
 );
@@ -656,17 +656,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: '208e7b0f-28db-4269-b525-066479499f2a',
+        id: 'd73bbf8d-94b9-4e41-bc05-66548a088a89',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
         labelFormat: Shared\LabelFormat::Png,
-        labelUrl: 'https://labels.example.com/208e7b0f-28db-4269-b525-066479499f2a.pdf',
+        labelUrl: 'https://labels.example.com/d73bbf8d-94b9-4e41-bc05-66548a088a89.pdf',
         metadata: [],
         serviceCode: 'Dzy',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'ZYV60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-05-06T06:26:06.996Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-05-06T14:33:36.775Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -723,7 +723,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: '1e723f7b-1133-4e30-b596-0ee6baf771e9',
+        id: '80d4c82d-3479-496a-b2db-1dcd1fd57fdb',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -733,7 +733,7 @@ $request = new Operations\PatchShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-16T03:17:06.747Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-16T04:13:45.413Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -892,17 +892,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateShippingLabelRequest(
     shippingLabel: new Shared\ShippingLabel(
         createdAt: Utils\Utils::parseDateTime('2022-11-18T16:45:38.067Z'),
-        id: '208e7b0f-28db-4269-b525-066479499f2a',
+        id: 'd73bbf8d-94b9-4e41-bc05-66548a088a89',
         isVoided: false,
         labelCost: 40.83653403213248,
         labelCostCurrency: 'USD',
         labelFormat: Shared\LabelFormat::Png,
-        labelUrl: 'https://labels.example.com/208e7b0f-28db-4269-b525-066479499f2a.pdf',
+        labelUrl: 'https://labels.example.com/d73bbf8d-94b9-4e41-bc05-66548a088a89.pdf',
         metadata: [],
         serviceCode: 'Dzy',
         status: Shared\ShippingLabelStatus::Exception,
         trackingNumber: 'ZYV60FOIBUJ6',
-        updatedAt: Utils\Utils::parseDateTime('2024-05-06T06:26:06.996Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-05-06T14:33:36.775Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -959,7 +959,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateShippingShipmentRequest(
     shippingShipment: new Shared\ShippingShipment(
         createdAt: Utils\Utils::parseDateTime('2022-09-12T03:11:28.960Z'),
-        id: '1e723f7b-1133-4e30-b596-0ee6baf771e9',
+        id: '80d4c82d-3479-496a-b2db-1dcd1fd57fdb',
         isReturn: false,
         lineitems: [],
         metadata: [],
@@ -969,7 +969,7 @@ $request = new Operations\UpdateShippingShipmentRequest(
         serviceCode: 'OVERNIGHT',
         shippedAt: Utils\Utils::parseDateTime('2022-09-12T07:26:48.479Z'),
         status: Shared\ShippingShipmentStatus::Delivered,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-16T03:17:06.747Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-16T04:13:45.413Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

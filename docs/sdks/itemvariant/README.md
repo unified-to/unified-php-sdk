@@ -40,7 +40,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Stylish Salad designed to make you stand out with little looks',
         height: 54,
-        id: '33b42be2-fd0c-40ee-a142-dc001f9f767c',
+        id: 'ac0e0a68-16b0-4e9e-bf42-c8dccd03e910',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -49,10 +49,10 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Hic desipio thorax.',
                 height: 961,
-                id: '3f2093ef-f36c-4265-80b7-9d12134e0905',
+                id: 'ae0a2177-f6af-433f-bf0a-b7e84d48aad1',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'fb29485b-4482-4a70-ab37-b2c442cb3c3d',
+                        id: 'a306bc8d-2978-4fca-bd3e-4048214ae605',
                         slug: 'ubi',
                         value: 'textus',
                     ),
@@ -69,7 +69,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '7d77ac49-e14f-427c-a3d0-b9be34963431',
+                id: 'e1c05e0f-9afc-481a-bba4-d23750b67157',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'absens',
@@ -78,7 +78,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         name: 'Chair',
         options: [
             new Shared\CommerceItemOption(
-                id: '6a9f2cba-8556-43cb-8796-a42f08a8896d',
+                id: 'a43fedd8-a30a-42ec-8168-7874f3ce1dc7',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -86,7 +86,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '3174f0d3-ec98-492a-b2b9-e7ccdad9b050',
+                id: '4b6579b8-da1d-4e0f-99a6-963c253bb3e9',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -109,7 +109,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             'deserunt',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-27T01:38:45.874Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-27T20:51:06.828Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,
@@ -272,7 +272,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Stylish Salad designed to make you stand out with little looks',
         height: 54,
-        id: '8d3ba2df-047d-4704-a0a6-3d162444a392',
+        id: '53982154-80ee-488f-b24b-f6d1b5ec9558',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -281,10 +281,10 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Hic desipio thorax.',
                 height: 961,
-                id: 'f7442df2-a3fd-4a54-bf35-807df625e9f4',
+                id: 'be1eff7b-54b0-4413-802f-d4ee33b2f861',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'b304d571-615d-4b7f-8cc8-627b659ba0f9',
+                        id: '2e5dc5b0-979e-4f54-874c-ee762848abcb',
                         slug: 'ubi',
                         value: 'textus',
                     ),
@@ -301,7 +301,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '763f3ea3-49bf-409c-a2e1-794f6d9a9082',
+                id: '37bb3a30-8f59-428d-a94c-486ebb22961a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'absens',
@@ -310,7 +310,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         name: 'Chair',
         options: [
             new Shared\CommerceItemOption(
-                id: '9cbd5abd-1160-433b-8afc-f30cac19a122',
+                id: 'efec9186-c7f1-42d3-892a-5495aa09001e',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -318,7 +318,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: 'd755f422-70d7-484c-aa03-457a9aa61fb1',
+                id: '560b4920-fd72-4b4e-ac3b-93c8fb55a713',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -341,7 +341,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             'deserunt',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-27T01:38:45.905Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-27T20:51:06.844Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,
@@ -455,7 +455,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Stylish Salad designed to make you stand out with little looks',
         height: 54,
-        id: '8d3ba2df-047d-4704-a0a6-3d162444a392',
+        id: '53982154-80ee-488f-b24b-f6d1b5ec9558',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -464,10 +464,10 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Hic desipio thorax.',
                 height: 961,
-                id: 'f7442df2-a3fd-4a54-bf35-807df625e9f4',
+                id: 'be1eff7b-54b0-4413-802f-d4ee33b2f861',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'b304d571-615d-4b7f-8cc8-627b659ba0f9',
+                        id: '2e5dc5b0-979e-4f54-874c-ee762848abcb',
                         slug: 'ubi',
                         value: 'textus',
                     ),
@@ -484,7 +484,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '763f3ea3-49bf-409c-a2e1-794f6d9a9082',
+                id: '37bb3a30-8f59-428d-a94c-486ebb22961a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'absens',
@@ -493,7 +493,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         name: 'Chair',
         options: [
             new Shared\CommerceItemOption(
-                id: '9cbd5abd-1160-433b-8afc-f30cac19a122',
+                id: 'efec9186-c7f1-42d3-892a-5495aa09001e',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -501,7 +501,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: 'd755f422-70d7-484c-aa03-457a9aa61fb1',
+                id: '560b4920-fd72-4b4e-ac3b-93c8fb55a713',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -524,7 +524,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             'deserunt',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-27T01:38:45.905Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-27T20:51:06.844Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,

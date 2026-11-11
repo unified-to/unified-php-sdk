@@ -37,17 +37,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-10-12T17:51:43.714Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-13T08:10:59.494Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-29T19:48:06.597Z'),
-        id: '8e4e6c6b-2a34-44b3-bab5-5e99491380b5',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-30T14:38:20.373Z'),
+        id: '8cae3320-8e31-4bdb-8383-1bb097f541ba',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'b7070296-2bb6-4826-a81c-9648aa662c22',
+                id: 'bfd22a31-25a6-4e75-93d6-6546cc8a6d06',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -56,12 +56,12 @@ $request = new Operations\CreateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-31T08:36:13.847Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-11-01T06:29:14.948Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-11-07T07:49:34.501Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-11-08T05:50:50.097Z'),
     ),
     connectionId: '<id>',
 );
@@ -218,17 +218,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-10-12T17:51:43.727Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-13T08:10:59.510Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-29T19:48:06.613Z'),
-        id: '75921ba2-cb5d-43e3-8c7a-0968f1f25058',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-30T14:38:20.395Z'),
+        id: '20f00ca9-85e7-4909-9c7d-c24a7bbb672e',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'f843dca6-2cfc-4040-a3d7-753d0dbbf583',
+                id: 'f068fc9f-4c22-4856-89a1-3dacca7a52db',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -237,12 +237,12 @@ $request = new Operations\PatchAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-31T08:36:13.865Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-11-01T06:29:14.973Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-11-07T07:49:34.519Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-11-08T05:50:50.122Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -350,17 +350,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-10-12T17:51:43.727Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-13T08:10:59.510Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-05-29T19:48:06.613Z'),
-        id: '75921ba2-cb5d-43e3-8c7a-0968f1f25058',
+        hiredAt: Utils\Utils::parseDateTime('2026-05-30T14:38:20.395Z'),
+        id: '20f00ca9-85e7-4909-9c7d-c24a7bbb672e',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'f843dca6-2cfc-4040-a3d7-753d0dbbf583',
+                id: 'f068fc9f-4c22-4856-89a1-3dacca7a52db',
                 namespace: 'application',
                 slug: 'stella',
                 value: 'Caput.',
@@ -369,12 +369,12 @@ $request = new Operations\UpdateAtsApplicationRequest(
         offers: [],
         originalStatus: 'vomica',
         originalSubstatus: 'allatus',
-        rejectedAt: Utils\Utils::parseDateTime('2026-10-31T08:36:13.865Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-11-01T06:29:14.973Z'),
         rejectedReason: 'Cometes amplitudo videlicet talio.',
         source: 'credo',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Arguo repudiandae defessus. Adflicto caecus claustrum annus addo vere crebro. Alias sponte turbo sopor vergo surculus nam.',
-        updatedAt: Utils\Utils::parseDateTime('2026-11-07T07:49:34.519Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-11-08T05:50:50.122Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
