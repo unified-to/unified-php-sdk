@@ -14,4 +14,6 @@ enum CreativeSelection: string
 {
     case Optimized = 'OPTIMIZED';
     case RoundRobin = 'ROUND_ROBIN';
+    case Weighted = 'WEIGHTED';
+    case Sequential = 'SEQUENTIAL';
 }

@@ -40,6 +40,16 @@ class PropertyAdsReportMetricsCampaignTargeting
     public ?PropertyAdsReportMetricsCampaignTargetingContent $content = null;
 
     /**
+     * Key-value targeting; clauses are ANDed
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CustomTargeting> $custom
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('custom')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CustomTargeting>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $custom = null;
+
+    /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingDemographic $demographic
@@ -66,6 +76,16 @@ class PropertyAdsReportMetricsCampaignTargeting
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingGeographic|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAdsReportMetricsCampaignTargetingGeographic $geographic = null;
+
+    /**
+     * Publisher inventory (ad units, placements) to include / exclude
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingInventory $inventory
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('inventory')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingInventory|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsCampaignTargetingInventory $inventory = null;
 
     /**
      * $language
@@ -110,23 +130,27 @@ class PropertyAdsReportMetricsCampaignTargeting
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingAudience  $audience
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingBrandSafety  $brandSafety
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingContent  $content
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CustomTargeting>  $custom
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingDemographic  $demographic
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingDevice  $device
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingGeographic  $geographic
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingInventory  $inventory
      * @param  ?array<\Unified\Unified_to\Models\Shared\TargetRef>  $language
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingOptimization  $optimization
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingPlacement  $placement
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsCampaignTargetingAudience $audience = null, ?PropertyAdsReportMetricsCampaignTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsCampaignTargetingContent $content = null, ?PropertyAdsReportMetricsCampaignTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsCampaignTargetingDevice $device = null, ?PropertyAdsReportMetricsCampaignTargetingGeographic $geographic = null, ?array $language = null, ?PropertyAdsReportMetricsCampaignTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsCampaignTargetingPlacement $placement = null, ?array $schedule = null)
+    public function __construct(?PropertyAdsReportMetricsCampaignTargetingAudience $audience = null, ?PropertyAdsReportMetricsCampaignTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsCampaignTargetingContent $content = null, ?array $custom = null, ?PropertyAdsReportMetricsCampaignTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsCampaignTargetingDevice $device = null, ?PropertyAdsReportMetricsCampaignTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsCampaignTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsReportMetricsCampaignTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsCampaignTargetingPlacement $placement = null, ?array $schedule = null)
     {
         $this->audience = $audience;
         $this->brandSafety = $brandSafety;
         $this->content = $content;
+        $this->custom = $custom;
         $this->demographic = $demographic;
         $this->device = $device;
         $this->geographic = $geographic;
+        $this->inventory = $inventory;
         $this->language = $language;
         $this->optimization = $optimization;
         $this->placement = $placement;

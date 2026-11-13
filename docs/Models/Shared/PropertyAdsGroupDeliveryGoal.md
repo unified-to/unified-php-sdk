@@ -1,0 +1,12 @@
+# PropertyAdsGroupDeliveryGoal
+
+Booked delivery goal (Google Ad Manager goal)
+
+
+## Fields
+
+| Field                                                                                                   | Type                                                                                                    | Required                                                                                                | Description                                                                                             |
+| ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- |
+| `period`                                                                                                | [?Shared\PropertyAdsGroupDeliveryGoalPeriod](../../Models/Shared/PropertyAdsGroupDeliveryGoalPeriod.md) | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
+| `quantity`                                                                                              | *?float*                                                                                                | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |
+| `unit`                                                                                                  | [?Shared\PropertyAdsGroupDeliveryGoalUnit](../../Models/Shared/PropertyAdsGroupDeliveryGoalUnit.md)     | :heavy_minus_sign:                                                                                      | N/A                                                                                                     |

@@ -25,4 +25,9 @@ enum AdsTargetType: string
     case Carrier = 'CARRIER';
     case DeviceModel = 'DEVICE_MODEL';
     case OsVersion = 'OS_VERSION';
+    case CustomKey = 'CUSTOM_KEY';
+    case CustomValue = 'CUSTOM_VALUE';
+    case Browser = 'BROWSER';
+    case OperatingSystem = 'OPERATING_SYSTEM';
+    case DeviceCategory = 'DEVICE_CATEGORY';
 }

@@ -40,6 +40,16 @@ class PropertyAdsReportMetricsGroupTargeting
     public ?PropertyAdsReportMetricsGroupTargetingContent $content = null;
 
     /**
+     * Key-value targeting; clauses are ANDed
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CustomTargeting> $custom
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('custom')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CustomTargeting>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $custom = null;
+
+    /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDemographic $demographic
@@ -66,6 +76,16 @@ class PropertyAdsReportMetricsGroupTargeting
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographic|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null;
+
+    /**
+     * Publisher inventory (ad units, placements) to include / exclude
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingInventory $inventory
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('inventory')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingInventory|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupTargetingInventory $inventory = null;
 
     /**
      * $language
@@ -110,23 +130,27 @@ class PropertyAdsReportMetricsGroupTargeting
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingAudience  $audience
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingBrandSafety  $brandSafety
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingContent  $content
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CustomTargeting>  $custom
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDemographic  $demographic
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingDevice  $device
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingGeographic  $geographic
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingInventory  $inventory
      * @param  ?array<\Unified\Unified_to\Models\Shared\TargetRef>  $language
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingOptimization  $optimization
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingPlacement  $placement
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsGroupTargetingAudience $audience = null, ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsGroupTargetingContent $content = null, ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsGroupTargetingDevice $device = null, ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null, ?array $language = null, ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsGroupTargetingPlacement $placement = null, ?array $schedule = null)
+    public function __construct(?PropertyAdsReportMetricsGroupTargetingAudience $audience = null, ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsGroupTargetingContent $content = null, ?array $custom = null, ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsGroupTargetingDevice $device = null, ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsGroupTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsGroupTargetingPlacement $placement = null, ?array $schedule = null)
     {
         $this->audience = $audience;
         $this->brandSafety = $brandSafety;
         $this->content = $content;
+        $this->custom = $custom;
         $this->demographic = $demographic;
         $this->device = $device;
         $this->geographic = $geographic;
+        $this->inventory = $inventory;
         $this->language = $language;
         $this->optimization = $optimization;
         $this->placement = $placement;

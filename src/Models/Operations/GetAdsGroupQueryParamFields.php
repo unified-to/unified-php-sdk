@@ -44,4 +44,9 @@ enum GetAdsGroupQueryParamFields: string
     case CreativeSelection = 'creative_selection';
     case Metadata = 'metadata';
     case Raw = 'raw';
+    case DeliveryType = 'delivery_type';
+    case Priority = 'priority';
+    case CostType = 'cost_type';
+    case DeliveryGoal = 'delivery_goal';
+    case CreativeSizes = 'creative_sizes';
 }

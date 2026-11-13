@@ -38,3 +38,8 @@
 | `CreativeSelection`    | creative_selection     |
 | `Metadata`             | metadata               |
 | `Raw`                  | raw                    |
+| `DeliveryType`         | delivery_type          |
+| `Priority`             | priority               |
+| `CostType`             | cost_type              |
+| `DeliveryGoal`         | delivery_goal          |
+| `CreativeSizes`        | creative_sizes         |

@@ -167,6 +167,7 @@ enum WebhookObjectType: string
     case AdsInsertionorder = 'ads_insertionorder';
     case AdsTarget = 'ads_target';
     case AdsPromoted = 'ads_promoted';
+    case AdsInventory = 'ads_inventory';
     case AnalyticsProperty = 'analytics_property';
     case AnalyticsEvent = 'analytics_event';
     case AnalyticsSession = 'analytics_session';

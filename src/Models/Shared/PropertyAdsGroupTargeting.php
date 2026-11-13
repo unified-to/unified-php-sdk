@@ -40,6 +40,16 @@ class PropertyAdsGroupTargeting
     public ?PropertyAdsGroupTargetingContent $content = null;
 
     /**
+     * Key-value targeting; clauses are ANDed
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\CustomTargeting> $custom
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('custom')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\CustomTargeting>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $custom = null;
+
+    /**
      * Demographic targeting (Meta: age_min, age_max, genders)
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingDemographic $demographic
@@ -66,6 +76,16 @@ class PropertyAdsGroupTargeting
     #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingGeographic|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?PropertyAdsGroupTargetingGeographic $geographic = null;
+
+    /**
+     * Publisher inventory (ad units, placements) to include / exclude
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingInventory $inventory
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('inventory')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingInventory|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsGroupTargetingInventory $inventory = null;
 
     /**
      * $language
@@ -110,23 +130,27 @@ class PropertyAdsGroupTargeting
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingAudience  $audience
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingBrandSafety  $brandSafety
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingContent  $content
+     * @param  ?array<\Unified\Unified_to\Models\Shared\CustomTargeting>  $custom
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingDemographic  $demographic
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingDevice  $device
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingGeographic  $geographic
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingInventory  $inventory
      * @param  ?array<\Unified\Unified_to\Models\Shared\TargetRef>  $language
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingOptimization  $optimization
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingPlacement  $placement
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsGroupTargetingAudience $audience = null, ?PropertyAdsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsGroupTargetingContent $content = null, ?PropertyAdsGroupTargetingDemographic $demographic = null, ?PropertyAdsGroupTargetingDevice $device = null, ?PropertyAdsGroupTargetingGeographic $geographic = null, ?array $language = null, ?PropertyAdsGroupTargetingOptimization $optimization = null, ?PropertyAdsGroupTargetingPlacement $placement = null, ?array $schedule = null)
+    public function __construct(?PropertyAdsGroupTargetingAudience $audience = null, ?PropertyAdsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsGroupTargetingContent $content = null, ?array $custom = null, ?PropertyAdsGroupTargetingDemographic $demographic = null, ?PropertyAdsGroupTargetingDevice $device = null, ?PropertyAdsGroupTargetingGeographic $geographic = null, ?PropertyAdsGroupTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsGroupTargetingOptimization $optimization = null, ?PropertyAdsGroupTargetingPlacement $placement = null, ?array $schedule = null)
     {
         $this->audience = $audience;
         $this->brandSafety = $brandSafety;
         $this->content = $content;
+        $this->custom = $custom;
         $this->demographic = $demographic;
         $this->device = $device;
         $this->geographic = $geographic;
+        $this->inventory = $inventory;
         $this->language = $language;
         $this->optimization = $optimization;
         $this->placement = $placement;

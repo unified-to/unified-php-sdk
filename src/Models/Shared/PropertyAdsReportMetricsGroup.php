@@ -92,6 +92,16 @@ class PropertyAdsReportMetricsGroup
     public ?string $campaignId = null;
 
     /**
+     * How the line item is priced (Google Ad Manager costType)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupCostType $costType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cost_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupCostType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupCostType $costType = null;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
@@ -121,12 +131,42 @@ class PropertyAdsReportMetricsGroup
     public ?PropertyAdsReportMetricsGroupCreativeSelection $creativeSelection = null;
 
     /**
+     * Expected creative sizes (Google Ad Manager creativePlaceholders)
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsSize> $creativeSizes
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('creative_sizes')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsSize>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $creativeSizes = null;
+
+    /**
      *
      * @var ?string $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
+
+    /**
+     * Booked delivery goal (Google Ad Manager goal)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupDeliveryGoal $deliveryGoal
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('delivery_goal')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupDeliveryGoal|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupDeliveryGoal $deliveryGoal = null;
+
+    /**
+     * Ad server line item type / delivery class (Google Ad Manager lineItemType)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupDeliveryType $deliveryType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('delivery_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupDeliveryType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupDeliveryType $deliveryType = null;
 
     /**
      *
@@ -243,6 +283,15 @@ class PropertyAdsReportMetricsGroup
     public ?string $parentId = null;
 
     /**
+     * Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)
+     *
+     * @var ?float $priority
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('priority')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $priority = null;
+
+    /**
      * $promoted
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AdsPromoted> $promoted
@@ -317,10 +366,14 @@ class PropertyAdsReportMetricsGroup
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetPeriod  $budgetPeriod
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetUnit  $budgetUnit
      * @param  ?string  $campaignId
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupCostType  $costType
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupCreativeSelection  $creativeSelection
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsSize>  $creativeSizes
      * @param  ?string  $currency
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupDeliveryGoal  $deliveryGoal
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupDeliveryType  $deliveryType
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupEffectiveStatus  $effectiveStatus
      * @param  ?\DateTime  $endAt
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupFrequencyCap  $frequencyCap
@@ -334,6 +387,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?string  $organizationId
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupPacing  $pacing
      * @param  ?string  $parentId
+     * @param  ?float  $priority
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdsPromoted>  $promoted
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
@@ -343,7 +397,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?PropertyAdsReportMetricsGroupCreativeSelection $creativeSelection = null, ?string $currency = null, ?PropertyAdsReportMetricsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $languageLocale = null, ?array $metadata = null, ?string $name = null, ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?PropertyAdsReportMetricsGroupCostType $costType = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?PropertyAdsReportMetricsGroupCreativeSelection $creativeSelection = null, ?array $creativeSizes = null, ?string $currency = null, ?PropertyAdsReportMetricsGroupDeliveryGoal $deliveryGoal = null, ?PropertyAdsReportMetricsGroupDeliveryType $deliveryType = null, ?PropertyAdsReportMetricsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $languageLocale = null, ?array $metadata = null, ?string $name = null, ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?float $priority = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
         $this->bidStrategy = $bidStrategy;
@@ -354,10 +408,14 @@ class PropertyAdsReportMetricsGroup
         $this->budgetPeriod = $budgetPeriod;
         $this->budgetUnit = $budgetUnit;
         $this->campaignId = $campaignId;
+        $this->costType = $costType;
         $this->createdAt = $createdAt;
         $this->creativeIds = $creativeIds;
         $this->creativeSelection = $creativeSelection;
+        $this->creativeSizes = $creativeSizes;
         $this->currency = $currency;
+        $this->deliveryGoal = $deliveryGoal;
+        $this->deliveryType = $deliveryType;
         $this->effectiveStatus = $effectiveStatus;
         $this->endAt = $endAt;
         $this->frequencyCap = $frequencyCap;
@@ -371,6 +429,7 @@ class PropertyAdsReportMetricsGroup
         $this->organizationId = $organizationId;
         $this->pacing = $pacing;
         $this->parentId = $parentId;
+        $this->priority = $priority;
         $this->promoted = $promoted;
         $this->raw = $raw;
         $this->startAt = $startAt;

@@ -17,6 +17,7 @@
 * [getAdsCreative](#getadscreative) - Retrieve a creative
 * [getAdsGroup](#getadsgroup) - Retrieve a group
 * [getAdsInsertionorder](#getadsinsertionorder) - Retrieve an insertionorder
+* [getAdsInventory](#getadsinventory) - Retrieve an inventory
 * [getAdsOrganization](#getadsorganization) - Retrieve an organization
 * [getAdsPromoted](#getadspromoted) - Retrieve a promoted
 * [getAdsTarget](#getadstarget) - Retrieve a target
@@ -26,6 +27,7 @@
 * [listAdsCreatives](#listadscreatives) - List all creatives
 * [listAdsGroups](#listadsgroups) - List all groups
 * [listAdsInsertionorders](#listadsinsertionorders) - List all insertionorders
+* [listAdsInventories](#listadsinventories) - List all inventories
 * [listAdsOrganizations](#listadsorganizations) - List all organizations
 * [listAdsPromoteds](#listadspromoteds) - List all promoteds
 * [listAdsReports](#listadsreports) - List all reports
@@ -81,11 +83,11 @@ $request = new Operations\CreateAdsAdRequest(
         creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
         description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
         finalUrl: 'https://improbable-sanity.com',
-        id: 'fe25507a-6ecf-48bf-a2e4-3ab7250c3b78',
+        id: '60e3b43d-8bb2-42ab-b819-ad66206825c7',
         metadata: [],
         name: 'Hermiston Group',
         status: Shared\AdsAdStatus::Archived,
-        updatedAt: Utils\Utils::parseDateTime('2024-06-27T11:18:48.981Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-27T22:46:31.020Z'),
     ),
     connectionId: '<id>',
 );
@@ -142,12 +144,12 @@ $request = new Operations\CreateAdsAssetRequest(
     adsAsset: new Shared\AdsAsset(
         createdAt: Utils\Utils::parseDateTime('2020-03-27T20:14:38.603Z'),
         height: 400,
-        id: '0e100d51-dd5d-4f9b-8529-32a444bf7bd0',
+        id: 'c11012a7-028f-4e2e-b591-b774867b467a',
         metadata: [],
         mimeType: 'IMAGE_PNG',
         name: 'Lockman - DuBuque',
         type: Shared\AdsAssetType::Image,
-        updatedAt: Utils\Utils::parseDateTime('2022-03-31T19:32:44.265Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-04-01T04:04:11.002Z'),
         url: 'https://informal-perfection.com/',
         width: 600,
     ),
@@ -210,18 +212,18 @@ $request = new Operations\CreateAdsCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
         currency: 'USD',
         effectiveStatus: Shared\EffectiveStatus::NotEligible,
-        endAt: Utils\Utils::parseDateTime('2025-06-15T22:47:16.122Z'),
-        id: '060d77fe-722b-44b7-b904-974704d31c81',
+        endAt: Utils\Utils::parseDateTime('2025-06-16T18:03:42.881Z'),
+        id: '806c603d-8e70-496b-86a3-b5a91cfa03c0',
         labels: [
             'comedo',
         ],
         metadata: [],
         name: 'Emard Inc',
-        startAt: Utils\Utils::parseDateTime('2022-07-22T06:40:14.805Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-22T07:44:04.798Z'),
         status: Shared\AdsCampaignStatus::ProcessingFailed,
         targeting: new Shared\PropertyAdsCampaignTargeting(),
         totalSpendAmount: 2349.8642875347286,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-19T11:05:19.017Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-20T10:06:02.227Z'),
     ),
     connectionId: '<id>',
 );
@@ -277,7 +279,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: '16c79102-0596-4b27-979b-5414355282a9',
+        id: '51f95169-df14-4986-bc0d-9153136ce9f3',
         labels: [
             'coma',
             'accedo',
@@ -286,7 +288,7 @@ $request = new Operations\CreateAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-07-02T04:57:30.370Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-02T10:40:50.418Z'),
     ),
     connectionId: '<id>',
 );
@@ -347,15 +349,15 @@ $request = new Operations\CreateAdsGroupRequest(
         createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
         currency: 'USD',
         effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
-        endAt: Utils\Utils::parseDateTime('2026-07-15T21:47:42.017Z'),
-        id: '15889889-8636-4b52-b048-e9fcb8958828',
+        endAt: Utils\Utils::parseDateTime('2026-07-17T00:37:46.509Z'),
+        id: 'd544e6b6-8089-474a-949b-dbc3074e4add',
         languageLocale: 'fr-FR',
         metadata: [],
         name: 'Stark - Baumbach',
-        startAt: Utils\Utils::parseDateTime('2026-01-28T17:32:48.420Z'),
+        startAt: Utils\Utils::parseDateTime('2026-01-29T18:35:05.703Z'),
         status: Shared\AdsGroupStatus::Processing,
         targeting: new Shared\PropertyAdsGroupTargeting(),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-20T22:29:54.757Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-21T07:50:49.904Z'),
     ),
     connectionId: '<id>',
 );
@@ -411,11 +413,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: 'faae6f6f-bfe9-4dbe-86a6-29cba68ae7e6',
+        id: 'ab1ef64e-5237-45d2-9c1f-437a7a4005d3',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-29T00:35:57.395Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-29T00:51:25.891Z'),
     ),
     connectionId: '<id>',
 );
@@ -473,13 +475,13 @@ $request = new Operations\CreateAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: '64f58a2e-7831-47f7-8cda-b333c7d43e11',
+        id: 'b4e36064-6e03-49d1-b003-404847a87d13',
         managers: [],
         metadata: [],
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-04-17T23:40:13.263Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-19T01:14:15.574Z'),
     ),
     connectionId: '<id>',
 );
@@ -808,6 +810,57 @@ if ($response->adsInsertionorder !== null) {
 ### Response
 
 **[?Operations\GetAdsInsertionorderResponse](../../Models/Operations/GetAdsInsertionorderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsInventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsInventoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->ads->getAdsInventory(
+    request: $request
+);
+
+if ($response->adsInventory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAdsInventoryRequest](../../Models/Operations/GetAdsInventoryRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetAdsInventoryResponse](../../Models/Operations/GetAdsInventoryResponse.md)**
 
 ### Errors
 
@@ -1268,6 +1321,56 @@ if ($response->adsInsertionorders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listAdsInventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAdsInventoriesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->ads->listAdsInventories(
+    request: $request
+);
+
+if ($response->adsInventories !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListAdsInventoriesRequest](../../Models/Operations/ListAdsInventoriesRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListAdsInventoriesResponse](../../Models/Operations/ListAdsInventoriesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listAdsOrganizations
 
 Returns a list of AdsOrganizations. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -1500,11 +1603,11 @@ $request = new Operations\PatchAdsAdRequest(
         creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
         description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
         finalUrl: 'https://improbable-sanity.com',
-        id: '0dba16fa-6ef2-4777-a766-e989e0d1cd76',
+        id: 'c0d8a8df-a79e-4d1a-85d2-3eb9d87ff5fc',
         metadata: [],
         name: 'Hermiston Group',
         status: Shared\AdsAdStatus::Archived,
-        updatedAt: Utils\Utils::parseDateTime('2024-06-27T11:18:48.993Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-27T22:46:31.028Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1566,18 +1669,18 @@ $request = new Operations\PatchAdsCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
         currency: 'USD',
         effectiveStatus: Shared\EffectiveStatus::NotEligible,
-        endAt: Utils\Utils::parseDateTime('2025-06-15T22:47:16.222Z'),
-        id: '105c465d-99bf-4782-a553-bde9a24533fe',
+        endAt: Utils\Utils::parseDateTime('2025-06-16T18:03:42.960Z'),
+        id: '70ab299a-3680-4639-9e1a-177e4ec18dbf',
         labels: [
             'comedo',
         ],
         metadata: [],
         name: 'Emard Inc',
-        startAt: Utils\Utils::parseDateTime('2022-07-22T06:40:14.810Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-22T07:44:04.802Z'),
         status: Shared\AdsCampaignStatus::ProcessingFailed,
         targeting: new Shared\PropertyAdsCampaignTargeting(),
         totalSpendAmount: 2349.8642875347286,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-19T11:05:19.136Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-20T10:06:02.322Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1634,7 +1737,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: 'fc3421d7-6981-4c19-a807-bf22813fd9a3',
+        id: '5502e1e3-fe09-4d73-875f-529adf9446ad',
         labels: [
             'coma',
             'accedo',
@@ -1643,7 +1746,7 @@ $request = new Operations\PatchAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-07-02T04:57:30.378Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-02T10:40:50.423Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1705,15 +1808,15 @@ $request = new Operations\PatchAdsGroupRequest(
         createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
         currency: 'USD',
         effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
-        endAt: Utils\Utils::parseDateTime('2026-07-15T21:47:42.175Z'),
-        id: 'efc5d1fd-8a27-4ad0-b63f-69a5c15eae24',
+        endAt: Utils\Utils::parseDateTime('2026-07-17T00:37:46.630Z'),
+        id: '783a619e-814a-44d3-9bef-a64c0dada569',
         languageLocale: 'fr-FR',
         metadata: [],
         name: 'Stark - Baumbach',
-        startAt: Utils\Utils::parseDateTime('2026-01-28T17:32:48.568Z'),
+        startAt: Utils\Utils::parseDateTime('2026-01-29T18:35:05.815Z'),
         status: Shared\AdsGroupStatus::Processing,
         targeting: new Shared\PropertyAdsGroupTargeting(),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-20T22:29:54.812Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-21T07:50:49.946Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1770,11 +1873,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: '63ae5b84-f7df-4092-9677-3d5f21dacf59',
+        id: '5d6679b1-daa3-48b2-927b-93adeae466df',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-29T00:35:57.395Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-29T00:51:25.891Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1833,13 +1936,13 @@ $request = new Operations\PatchAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: 'e03cf063-22b8-4228-a1bc-839da33de7a8',
+        id: 'a3ffa5d2-8a69-4735-9a83-2ff954c6524d',
         managers: [],
         metadata: [],
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-04-17T23:40:13.273Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-19T01:14:15.584Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2208,11 +2311,11 @@ $request = new Operations\UpdateAdsAdRequest(
         creativeAssetUrl: 'https://picsum.photos/seed/LwOzrpr9/948/2793',
         description: 'Accedo vespillo carpo dolor decet stillicidium comptus tenuis.',
         finalUrl: 'https://improbable-sanity.com',
-        id: '0dba16fa-6ef2-4777-a766-e989e0d1cd76',
+        id: 'c0d8a8df-a79e-4d1a-85d2-3eb9d87ff5fc',
         metadata: [],
         name: 'Hermiston Group',
         status: Shared\AdsAdStatus::Archived,
-        updatedAt: Utils\Utils::parseDateTime('2024-06-27T11:18:48.993Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-06-27T22:46:31.028Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2274,18 +2377,18 @@ $request = new Operations\UpdateAdsCampaignRequest(
         createdAt: Utils\Utils::parseDateTime('2022-05-21T08:51:41.868Z'),
         currency: 'USD',
         effectiveStatus: Shared\EffectiveStatus::NotEligible,
-        endAt: Utils\Utils::parseDateTime('2025-06-15T22:47:16.222Z'),
-        id: '105c465d-99bf-4782-a553-bde9a24533fe',
+        endAt: Utils\Utils::parseDateTime('2025-06-16T18:03:42.960Z'),
+        id: '70ab299a-3680-4639-9e1a-177e4ec18dbf',
         labels: [
             'comedo',
         ],
         metadata: [],
         name: 'Emard Inc',
-        startAt: Utils\Utils::parseDateTime('2022-07-22T06:40:14.810Z'),
+        startAt: Utils\Utils::parseDateTime('2022-07-22T07:44:04.802Z'),
         status: Shared\AdsCampaignStatus::ProcessingFailed,
         targeting: new Shared\PropertyAdsCampaignTargeting(),
         totalSpendAmount: 2349.8642875347286,
-        updatedAt: Utils\Utils::parseDateTime('2026-01-19T11:05:19.136Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-01-20T10:06:02.322Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2342,7 +2445,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAdsCreativeRequest(
     adsCreative: new Shared\AdsCreative(
         createdAt: Utils\Utils::parseDateTime('2020-02-17T11:24:51.093Z'),
-        id: 'fc3421d7-6981-4c19-a807-bf22813fd9a3',
+        id: '5502e1e3-fe09-4d73-875f-529adf9446ad',
         labels: [
             'coma',
             'accedo',
@@ -2351,7 +2454,7 @@ $request = new Operations\UpdateAdsCreativeRequest(
         metadata: [],
         name: 'Brekke, Bradtke and Robel',
         status: Shared\AdsCreativeStatus::Paused,
-        updatedAt: Utils\Utils::parseDateTime('2021-07-02T04:57:30.378Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-02T10:40:50.423Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2413,15 +2516,15 @@ $request = new Operations\UpdateAdsGroupRequest(
         createdAt: Utils\Utils::parseDateTime('2019-08-29T17:59:41.045Z'),
         currency: 'USD',
         effectiveStatus: Shared\AdsGroupEffectiveStatus::Paused,
-        endAt: Utils\Utils::parseDateTime('2026-07-15T21:47:42.175Z'),
-        id: 'efc5d1fd-8a27-4ad0-b63f-69a5c15eae24',
+        endAt: Utils\Utils::parseDateTime('2026-07-17T00:37:46.630Z'),
+        id: '783a619e-814a-44d3-9bef-a64c0dada569',
         languageLocale: 'fr-FR',
         metadata: [],
         name: 'Stark - Baumbach',
-        startAt: Utils\Utils::parseDateTime('2026-01-28T17:32:48.568Z'),
+        startAt: Utils\Utils::parseDateTime('2026-01-29T18:35:05.815Z'),
         status: Shared\AdsGroupStatus::Processing,
         targeting: new Shared\PropertyAdsGroupTargeting(),
-        updatedAt: Utils\Utils::parseDateTime('2022-01-20T22:29:54.812Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-21T07:50:49.946Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2478,11 +2581,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAdsInsertionorderRequest(
     adsInsertionorder: new Shared\AdsInsertionorder(
         createdAt: Utils\Utils::parseDateTime('2021-04-10T06:57:36.611Z'),
-        id: '63ae5b84-f7df-4092-9677-3d5f21dacf59',
+        id: '5d6679b1-daa3-48b2-927b-93adeae466df',
         metadata: [],
         name: 'Kunde, Smith and Reinger',
         status: Shared\AdsInsertionorderStatus::Unspecified,
-        updatedAt: Utils\Utils::parseDateTime('2021-04-29T00:35:57.395Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-29T00:51:25.891Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2541,13 +2644,13 @@ $request = new Operations\UpdateAdsOrganizationRequest(
         accountNumber: 'LQUJx8zQBW',
         createdAt: Utils\Utils::parseDateTime('2020-07-23T21:47:11.440Z'),
         currency: 'USD',
-        id: 'e03cf063-22b8-4228-a1bc-839da33de7a8',
+        id: 'a3ffa5d2-8a69-4735-9a83-2ff954c6524d',
         managers: [],
         metadata: [],
         name: 'Ankunding Inc',
         status: Shared\AdsOrganizationStatus::Processing,
         timezone: 'Europe/Chisinau',
-        updatedAt: Utils\Utils::parseDateTime('2026-04-17T23:40:13.273Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-19T01:14:15.584Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

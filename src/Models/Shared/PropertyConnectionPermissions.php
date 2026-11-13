@@ -297,6 +297,7 @@ enum PropertyConnectionPermissions: string
     case AdsInsertionorderWrite = 'ads_insertionorder_write';
     case AdsTargetRead = 'ads_target_read';
     case AdsPromotedRead = 'ads_promoted_read';
+    case AdsInventoryRead = 'ads_inventory_read';
     case AnalyticsPropertyRead = 'analytics_property_read';
     case AnalyticsPropertyWrite = 'analytics_property_write';
     case AnalyticsEventRead = 'analytics_event_read';

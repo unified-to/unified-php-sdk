@@ -162,6 +162,7 @@ The object to return (eg. CRM "contact")
 | `AdsInsertionorder`             | ads_insertionorder              |
 | `AdsTarget`                     | ads_target                      |
 | `AdsPromoted`                   | ads_promoted                    |
+| `AdsInventory`                  | ads_inventory                   |
 | `AnalyticsProperty`             | analytics_property              |
 | `AnalyticsEvent`                | analytics_event                 |
 | `AnalyticsSession`              | analytics_session               |

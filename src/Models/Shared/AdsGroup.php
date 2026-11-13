@@ -92,6 +92,16 @@ class AdsGroup
     public ?string $campaignId = null;
 
     /**
+     * How the line item is priced (Google Ad Manager costType)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\CostType $costType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('cost_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\CostType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?CostType $costType = null;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
@@ -121,12 +131,42 @@ class AdsGroup
     public ?CreativeSelection $creativeSelection = null;
 
     /**
+     * Expected creative sizes (Google Ad Manager creativePlaceholders)
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsSize> $creativeSizes
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('creative_sizes')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsSize>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $creativeSizes = null;
+
+    /**
      *
      * @var ?string $currency
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('currency')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $currency = null;
+
+    /**
+     * Booked delivery goal (Google Ad Manager goal)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupDeliveryGoal $deliveryGoal
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('delivery_goal')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupDeliveryGoal|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsGroupDeliveryGoal $deliveryGoal = null;
+
+    /**
+     * Ad server line item type / delivery class (Google Ad Manager lineItemType)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\DeliveryType $deliveryType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('delivery_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\DeliveryType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?DeliveryType $deliveryType = null;
 
     /**
      *
@@ -243,6 +283,15 @@ class AdsGroup
     public ?string $parentId = null;
 
     /**
+     * Ad server delivery priority, lower serves first (Google Ad Manager priority, Kevel priority)
+     *
+     * @var ?float $priority
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('priority')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $priority = null;
+
+    /**
      * $promoted
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AdsPromoted> $promoted
@@ -317,10 +366,14 @@ class AdsGroup
      * @param  ?\Unified\Unified_to\Models\Shared\AdsGroupBudgetPeriod  $budgetPeriod
      * @param  ?\Unified\Unified_to\Models\Shared\AdsGroupBudgetUnit  $budgetUnit
      * @param  ?string  $campaignId
+     * @param  ?\Unified\Unified_to\Models\Shared\CostType  $costType
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
      * @param  ?\Unified\Unified_to\Models\Shared\CreativeSelection  $creativeSelection
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsSize>  $creativeSizes
      * @param  ?string  $currency
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupDeliveryGoal  $deliveryGoal
+     * @param  ?\Unified\Unified_to\Models\Shared\DeliveryType  $deliveryType
      * @param  ?\Unified\Unified_to\Models\Shared\AdsGroupEffectiveStatus  $effectiveStatus
      * @param  ?\DateTime  $endAt
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupFrequencyCap  $frequencyCap
@@ -334,6 +387,7 @@ class AdsGroup
      * @param  ?string  $organizationId
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupPacing  $pacing
      * @param  ?string  $parentId
+     * @param  ?float  $priority
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdsPromoted>  $promoted
      * @param  ?array<string, mixed>  $raw
      * @param  ?\DateTime  $startAt
@@ -343,7 +397,7 @@ class AdsGroup
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?PropertyAdsGroupBidStrategy $bidStrategy = null, ?BillingEvent $billingEvent = null, ?BudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?AdsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?CreativeSelection $creativeSelection = null, ?string $currency = null, ?AdsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $languageLocale = null, ?array $metadata = null, ?string $name = null, ?OptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsGroupPacing $pacing = null, ?string $parentId = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsGroupStatus $status = null, ?PropertyAdsGroupTargeting $targeting = null, ?AdsGroupType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsGroupBidStrategy $bidStrategy = null, ?BillingEvent $billingEvent = null, ?BudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?AdsGroupBudgetPeriod $budgetPeriod = null, ?AdsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?CostType $costType = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?CreativeSelection $creativeSelection = null, ?array $creativeSizes = null, ?string $currency = null, ?PropertyAdsGroupDeliveryGoal $deliveryGoal = null, ?DeliveryType $deliveryType = null, ?AdsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $languageLocale = null, ?array $metadata = null, ?string $name = null, ?OptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsGroupPacing $pacing = null, ?string $parentId = null, ?float $priority = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?AdsGroupStatus $status = null, ?PropertyAdsGroupTargeting $targeting = null, ?AdsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
         $this->bidStrategy = $bidStrategy;
@@ -354,10 +408,14 @@ class AdsGroup
         $this->budgetPeriod = $budgetPeriod;
         $this->budgetUnit = $budgetUnit;
         $this->campaignId = $campaignId;
+        $this->costType = $costType;
         $this->createdAt = $createdAt;
         $this->creativeIds = $creativeIds;
         $this->creativeSelection = $creativeSelection;
+        $this->creativeSizes = $creativeSizes;
         $this->currency = $currency;
+        $this->deliveryGoal = $deliveryGoal;
+        $this->deliveryType = $deliveryType;
         $this->effectiveStatus = $effectiveStatus;
         $this->endAt = $endAt;
         $this->frequencyCap = $frequencyCap;
@@ -371,6 +429,7 @@ class AdsGroup
         $this->organizationId = $organizationId;
         $this->pacing = $pacing;
         $this->parentId = $parentId;
+        $this->priority = $priority;
         $this->promoted = $promoted;
         $this->raw = $raw;
         $this->startAt = $startAt;

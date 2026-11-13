@@ -1,0 +1,19 @@
+# AdsInventory
+
+Publisher inventory: ad units, placements, sites, apps, zones or channels
+
+
+## Fields
+
+| Field                                                                   | Type                                                                    | Required                                                                | Description                                                             |
+| ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
+| `createdAt`                                                             | [\DateTime](https://www.php.net/manual/en/class.datetime.php)           | :heavy_minus_sign:                                                      | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                |
+| `id`                                                                    | *?string*                                                               | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `metadata`                                                              | array<[Shared\AdsMetadata](../../Models/Shared/AdsMetadata.md)>         | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `name`                                                                  | *?string*                                                               | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `parentId`                                                              | *?string*                                                               | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `raw`                                                                   | array<string, *mixed*>                                                  | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `sizes`                                                                 | array<[Shared\AdsSize](../../Models/Shared/AdsSize.md)>                 | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `status`                                                                | [?Shared\AdsInventoryStatus](../../Models/Shared/AdsInventoryStatus.md) | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `type`                                                                  | [?Shared\AdsInventoryType](../../Models/Shared/AdsInventoryType.md)     | :heavy_minus_sign:                                                      | N/A                                                                     |
+| `updatedAt`                                                             | [\DateTime](https://www.php.net/manual/en/class.datetime.php)           | :heavy_minus_sign:                                                      | (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)                                |

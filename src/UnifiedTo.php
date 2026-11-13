@@ -102,6 +102,8 @@ class UnifiedTo
 
     public Insertionorder $insertionorder;
 
+    public Inventory $inventory;
+
     public Promoted $promoted;
 
     public Report $report;
@@ -179,8 +181,6 @@ class UnifiedTo
     public Availability $availability;
 
     public Collection $collection;
-
-    public Inventory $inventory;
 
     public Item $item;
 
@@ -533,6 +533,7 @@ class UnifiedTo
         $this->creative = new Creative($this->sdkConfiguration);
         $this->group = new Group($this->sdkConfiguration);
         $this->insertionorder = new Insertionorder($this->sdkConfiguration);
+        $this->inventory = new Inventory($this->sdkConfiguration);
         $this->promoted = new Promoted($this->sdkConfiguration);
         $this->report = new Report($this->sdkConfiguration);
         $this->target = new Target($this->sdkConfiguration);
@@ -572,7 +573,6 @@ class UnifiedTo
         $this->commerce = new Commerce($this->sdkConfiguration);
         $this->availability = new Availability($this->sdkConfiguration);
         $this->collection = new Collection($this->sdkConfiguration);
-        $this->inventory = new Inventory($this->sdkConfiguration);
         $this->item = new Item($this->sdkConfiguration);
         $this->itemvariant = new Itemvariant($this->sdkConfiguration);
         $this->reservation = new Reservation($this->sdkConfiguration);

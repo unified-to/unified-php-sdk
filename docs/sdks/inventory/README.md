@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createCommerceInventory](#createcommerceinventory) - Create an inventory
+* [getAdsInventory](#getadsinventory) - Retrieve an inventory
 * [getCommerceInventory](#getcommerceinventory) - Retrieve an inventory
+* [listAdsInventories](#listadsinventories) - List all inventories
 * [listCommerceInventories](#listcommerceinventories) - List all inventories
 * [patchCommerceInventory](#patchcommerceinventory) - Update an inventory
 * [removeCommerceInventory](#removecommerceinventory) - Remove an inventory
@@ -37,9 +39,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: '15c90f8d-d246-4578-8139-9193c4bed11d',
+        id: '3291d35b-85d6-47b3-9653-dab781ceede0',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-12-07T23:55:47.517Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-12-08T22:34:30.206Z'),
     ),
     connectionId: '<id>',
 );
@@ -62,6 +64,57 @@ if ($response->commerceInventory !== null) {
 ### Response
 
 **[?Operations\CreateCommerceInventoryResponse](../../Models/Operations/CreateCommerceInventoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getAdsInventory
+
+Retrieves a single AdsInventory by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getAdsInventory" method="get" path="/ads/{connection_id}/inventory/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetAdsInventoryRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->inventory->getAdsInventory(
+    request: $request
+);
+
+if ($response->adsInventory !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetAdsInventoryRequest](../../Models/Operations/GetAdsInventoryRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetAdsInventoryResponse](../../Models/Operations/GetAdsInventoryResponse.md)**
 
 ### Errors
 
@@ -113,6 +166,56 @@ if ($response->commerceInventory !== null) {
 ### Response
 
 **[?Operations\GetCommerceInventoryResponse](../../Models/Operations/GetCommerceInventoryResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listAdsInventories
+
+Returns a list of AdsInventories. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listAdsInventories" method="get" path="/ads/{connection_id}/inventory" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListAdsInventoriesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->inventory->listAdsInventories(
+    request: $request
+);
+
+if ($response->adsInventories !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListAdsInventoriesRequest](../../Models/Operations/ListAdsInventoriesRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListAdsInventoriesResponse](../../Models/Operations/ListAdsInventoriesResponse.md)**
 
 ### Errors
 
@@ -196,9 +299,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: 'c6843b33-33ca-4f03-9ef0-7ba33b876d1d',
+        id: 'efd227df-bfd5-492c-9664-6eba19179276',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-12-07T23:55:47.527Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-12-08T22:34:30.217Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -306,9 +409,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCommerceInventoryRequest(
     commerceInventory: new Shared\CommerceInventory(
         available: 337,
-        id: 'c6843b33-33ca-4f03-9ef0-7ba33b876d1d',
+        id: 'efd227df-bfd5-492c-9664-6eba19179276',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2025-12-07T23:55:47.527Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-12-08T22:34:30.217Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

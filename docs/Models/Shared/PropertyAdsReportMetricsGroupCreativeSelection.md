@@ -9,3 +9,5 @@ Creative rotation strategy (LinkedIn creativeSelection)
 | ------------ | ------------ |
 | `Optimized`  | OPTIMIZED    |
 | `RoundRobin` | ROUND_ROBIN  |
+| `Weighted`   | WEIGHTED     |
+| `Sequential` | SEQUENTIAL   |
