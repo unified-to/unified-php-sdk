@@ -127,6 +127,16 @@ class PropertyAdsReportMetricsGroupTargeting
     public ?array $schedule = null;
 
     /**
+     * Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingSupply $supply
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('supply')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingSupply|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsGroupTargetingSupply $supply = null;
+
+    /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingAudience  $audience
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingBrandSafety  $brandSafety
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingContent  $content
@@ -139,9 +149,10 @@ class PropertyAdsReportMetricsGroupTargeting
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingOptimization  $optimization
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingPlacement  $placement
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupTargetingSupply  $supply
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsGroupTargetingAudience $audience = null, ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsGroupTargetingContent $content = null, ?array $custom = null, ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsGroupTargetingDevice $device = null, ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsGroupTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsGroupTargetingPlacement $placement = null, ?array $schedule = null)
+    public function __construct(?PropertyAdsReportMetricsGroupTargetingAudience $audience = null, ?PropertyAdsReportMetricsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsGroupTargetingContent $content = null, ?array $custom = null, ?PropertyAdsReportMetricsGroupTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsGroupTargetingDevice $device = null, ?PropertyAdsReportMetricsGroupTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsGroupTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsReportMetricsGroupTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsGroupTargetingPlacement $placement = null, ?array $schedule = null, ?PropertyAdsReportMetricsGroupTargetingSupply $supply = null)
     {
         $this->audience = $audience;
         $this->brandSafety = $brandSafety;
@@ -155,5 +166,6 @@ class PropertyAdsReportMetricsGroupTargeting
         $this->optimization = $optimization;
         $this->placement = $placement;
         $this->schedule = $schedule;
+        $this->supply = $supply;
     }
 }

@@ -51,4 +51,5 @@ enum QueryParamCategories: string
     case Healthcare = 'healthcare';
     case Property = 'property';
     case Plm = 'plm';
+    case Qms = 'qms';
 }

@@ -92,6 +92,16 @@ class PropertyAdsReportMetricsGroup
     public ?string $campaignId = null;
 
     /**
+     * Conversion trackers counted for this group (DV360 Floodlight activities, Pinterest conversion tag)
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AdsConversionTracking> $conversionTracking
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('conversion_tracking')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AdsConversionTracking>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $conversionTracking = null;
+
+    /**
      * How the line item is priced (Google Ad Manager costType)
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupCostType $costType
@@ -366,6 +376,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetPeriod  $budgetPeriod
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupBudgetUnit  $budgetUnit
      * @param  ?string  $campaignId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AdsConversionTracking>  $conversionTracking
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsGroupCostType  $costType
      * @param  ?\DateTime  $createdAt
      * @param  ?array<string>  $creativeIds
@@ -397,7 +408,7 @@ class PropertyAdsReportMetricsGroup
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?PropertyAdsReportMetricsGroupCostType $costType = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?PropertyAdsReportMetricsGroupCreativeSelection $creativeSelection = null, ?array $creativeSizes = null, ?string $currency = null, ?PropertyAdsReportMetricsGroupDeliveryGoal $deliveryGoal = null, ?PropertyAdsReportMetricsGroupDeliveryType $deliveryType = null, ?PropertyAdsReportMetricsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $languageLocale = null, ?array $metadata = null, ?string $name = null, ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?float $priority = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?float $bidAmount = null, ?PropertyAdsReportMetricsGroupBidStrategy $bidStrategy = null, ?PropertyAdsReportMetricsGroupBillingEvent $billingEvent = null, ?PropertyAdsReportMetricsGroupBudgetAllocationType $budgetAllocationType = null, ?float $budgetAmount = null, ?float $budgetMaxAmount = null, ?PropertyAdsReportMetricsGroupBudgetPeriod $budgetPeriod = null, ?PropertyAdsReportMetricsGroupBudgetUnit $budgetUnit = null, ?string $campaignId = null, ?array $conversionTracking = null, ?PropertyAdsReportMetricsGroupCostType $costType = null, ?\DateTime $createdAt = null, ?array $creativeIds = null, ?PropertyAdsReportMetricsGroupCreativeSelection $creativeSelection = null, ?array $creativeSizes = null, ?string $currency = null, ?PropertyAdsReportMetricsGroupDeliveryGoal $deliveryGoal = null, ?PropertyAdsReportMetricsGroupDeliveryType $deliveryType = null, ?PropertyAdsReportMetricsGroupEffectiveStatus $effectiveStatus = null, ?\DateTime $endAt = null, ?PropertyAdsReportMetricsGroupFrequencyCap $frequencyCap = null, ?bool $hasEuPoliticalAds = null, ?string $id = null, ?string $insertionorderId = null, ?string $languageLocale = null, ?array $metadata = null, ?string $name = null, ?PropertyAdsReportMetricsGroupOptimizationGoal $optimizationGoal = null, ?string $organizationId = null, ?PropertyAdsReportMetricsGroupPacing $pacing = null, ?string $parentId = null, ?float $priority = null, ?array $promoted = null, ?array $raw = null, ?\DateTime $startAt = null, ?PropertyAdsReportMetricsGroupStatus $status = null, ?PropertyAdsReportMetricsGroupTargeting $targeting = null, ?PropertyAdsReportMetricsGroupType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->bidAmount = $bidAmount;
         $this->bidStrategy = $bidStrategy;
@@ -408,6 +419,7 @@ class PropertyAdsReportMetricsGroup
         $this->budgetPeriod = $budgetPeriod;
         $this->budgetUnit = $budgetUnit;
         $this->campaignId = $campaignId;
+        $this->conversionTracking = $conversionTracking;
         $this->costType = $costType;
         $this->createdAt = $createdAt;
         $this->creativeIds = $creativeIds;

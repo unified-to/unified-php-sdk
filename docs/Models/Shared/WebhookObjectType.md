@@ -248,3 +248,7 @@ The object to return (eg. CRM "contact")
 | `PlmDocument`                   | plm_document                    |
 | `PlmChange`                     | plm_change                      |
 | `PlmCategory`                   | plm_category                    |
+| `QmsIssue`                      | qms_issue                       |
+| `QmsAction`                     | qms_action                      |
+| `QmsInspection`                 | qms_inspection                  |
+| `QmsAudit`                      | qms_audit                       |

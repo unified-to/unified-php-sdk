@@ -253,4 +253,8 @@ enum WebhookObjectType: string
     case PlmDocument = 'plm_document';
     case PlmChange = 'plm_change';
     case PlmCategory = 'plm_category';
+    case QmsIssue = 'qms_issue';
+    case QmsAction = 'qms_action';
+    case QmsInspection = 'qms_inspection';
+    case QmsAudit = 'qms_audit';
 }

@@ -30,4 +30,7 @@ enum AdsTargetType: string
     case Browser = 'BROWSER';
     case OperatingSystem = 'OPERATING_SYSTEM';
     case DeviceCategory = 'DEVICE_CATEGORY';
+    case Exchange = 'EXCHANGE';
+    case Deal = 'DEAL';
+    case DealGroup = 'DEAL_GROUP';
 }

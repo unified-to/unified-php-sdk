@@ -38,17 +38,17 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '4eabbe95-6f05-434e-8c26-b1c94117602a',
+        id: '479a180c-b9d9-4e50-87b7-6ff4b3d2551f',
         isRequired: false,
         name: 'autem',
-        objectType: 'compute_deployment',
+        objectType: 'healthcare_practitioner',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-07T10:28:00.362Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-08T04:10:03.036Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,17 +206,17 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '706b70cb-2663-4f48-9d99-1ca5af7231eb',
+        id: '252b143e-74c5-4f02-8956-3559a65988ed',
         isRequired: false,
         name: 'autem',
-        objectType: 'compute_deployment',
+        objectType: 'healthcare_practitioner',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-07T10:28:00.367Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-08T04:10:03.043Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,17 +325,17 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '706b70cb-2663-4f48-9d99-1ca5af7231eb',
+        id: '252b143e-74c5-4f02-8956-3559a65988ed',
         isRequired: false,
         name: 'autem',
-        objectType: 'compute_deployment',
+        objectType: 'healthcare_practitioner',
         objects: [
 
         ],
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-07T10:28:00.367Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-08T04:10:03.043Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

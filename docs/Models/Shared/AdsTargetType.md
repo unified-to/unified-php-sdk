@@ -25,3 +25,6 @@ Targeting search types for ads_target list endpoint (Meta: adinterest, adbehavio
 | `Browser`         | BROWSER           |
 | `OperatingSystem` | OPERATING_SYSTEM  |
 | `DeviceCategory`  | DEVICE_CATEGORY   |
+| `Exchange`        | EXCHANGE          |
+| `Deal`            | DEAL              |
+| `DealGroup`       | DEAL_GROUP        |

@@ -127,6 +127,16 @@ class PropertyAdsGroupTargeting
     public ?array $schedule = null;
 
     /**
+     * Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingSupply $supply
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('supply')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingSupply|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsGroupTargetingSupply $supply = null;
+
+    /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingAudience  $audience
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingBrandSafety  $brandSafety
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingContent  $content
@@ -139,9 +149,10 @@ class PropertyAdsGroupTargeting
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingOptimization  $optimization
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingPlacement  $placement
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsGroupTargetingSupply  $supply
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsGroupTargetingAudience $audience = null, ?PropertyAdsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsGroupTargetingContent $content = null, ?array $custom = null, ?PropertyAdsGroupTargetingDemographic $demographic = null, ?PropertyAdsGroupTargetingDevice $device = null, ?PropertyAdsGroupTargetingGeographic $geographic = null, ?PropertyAdsGroupTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsGroupTargetingOptimization $optimization = null, ?PropertyAdsGroupTargetingPlacement $placement = null, ?array $schedule = null)
+    public function __construct(?PropertyAdsGroupTargetingAudience $audience = null, ?PropertyAdsGroupTargetingBrandSafety $brandSafety = null, ?PropertyAdsGroupTargetingContent $content = null, ?array $custom = null, ?PropertyAdsGroupTargetingDemographic $demographic = null, ?PropertyAdsGroupTargetingDevice $device = null, ?PropertyAdsGroupTargetingGeographic $geographic = null, ?PropertyAdsGroupTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsGroupTargetingOptimization $optimization = null, ?PropertyAdsGroupTargetingPlacement $placement = null, ?array $schedule = null, ?PropertyAdsGroupTargetingSupply $supply = null)
     {
         $this->audience = $audience;
         $this->brandSafety = $brandSafety;
@@ -155,5 +166,6 @@ class PropertyAdsGroupTargeting
         $this->optimization = $optimization;
         $this->placement = $placement;
         $this->schedule = $schedule;
+        $this->supply = $supply;
     }
 }

@@ -452,3 +452,11 @@
 | `PlmChangeWrite`                     | plm_change_write                     |
 | `PlmCategoryRead`                    | plm_category_read                    |
 | `PlmCategoryWrite`                   | plm_category_write                   |
+| `QmsIssueRead`                       | qms_issue_read                       |
+| `QmsIssueWrite`                      | qms_issue_write                      |
+| `QmsActionRead`                      | qms_action_read                      |
+| `QmsActionWrite`                     | qms_action_write                     |
+| `QmsInspectionRead`                  | qms_inspection_read                  |
+| `QmsInspectionWrite`                 | qms_inspection_write                 |
+| `QmsAuditRead`                       | qms_audit_read                       |
+| `QmsAuditWrite`                      | qms_audit_write                      |

@@ -458,4 +458,12 @@ enum PropertyWorkspaceIntegrationPermissions: string
     case PlmChangeWrite = 'plm_change_write';
     case PlmCategoryRead = 'plm_category_read';
     case PlmCategoryWrite = 'plm_category_write';
+    case QmsIssueRead = 'qms_issue_read';
+    case QmsIssueWrite = 'qms_issue_write';
+    case QmsActionRead = 'qms_action_read';
+    case QmsActionWrite = 'qms_action_write';
+    case QmsInspectionRead = 'qms_inspection_read';
+    case QmsInspectionWrite = 'qms_inspection_write';
+    case QmsAuditRead = 'qms_audit_read';
+    case QmsAuditWrite = 'qms_audit_write';
 }

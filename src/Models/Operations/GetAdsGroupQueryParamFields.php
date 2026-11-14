@@ -49,4 +49,5 @@ enum GetAdsGroupQueryParamFields: string
     case CostType = 'cost_type';
     case DeliveryGoal = 'delivery_goal';
     case CreativeSizes = 'creative_sizes';
+    case ConversionTracking = 'conversion_tracking';
 }

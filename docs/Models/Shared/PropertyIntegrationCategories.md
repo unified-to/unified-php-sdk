@@ -45,3 +45,4 @@
 | `Healthcare`   | healthcare     |
 | `Property`     | property       |
 | `Plm`          | plm            |
+| `Qms`          | qms            |

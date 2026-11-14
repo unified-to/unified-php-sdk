@@ -127,6 +127,16 @@ class PropertyAdsCampaignTargeting
     public ?array $schedule = null;
 
     /**
+     * Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingSupply $supply
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('supply')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingSupply|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsCampaignTargetingSupply $supply = null;
+
+    /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingAudience  $audience
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingBrandSafety  $brandSafety
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingContent  $content
@@ -139,9 +149,10 @@ class PropertyAdsCampaignTargeting
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingOptimization  $optimization
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingPlacement  $placement
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingSupply  $supply
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsCampaignTargetingAudience $audience = null, ?PropertyAdsCampaignTargetingBrandSafety $brandSafety = null, ?PropertyAdsCampaignTargetingContent $content = null, ?array $custom = null, ?PropertyAdsCampaignTargetingDemographic $demographic = null, ?PropertyAdsCampaignTargetingDevice $device = null, ?PropertyAdsCampaignTargetingGeographic $geographic = null, ?PropertyAdsCampaignTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsCampaignTargetingOptimization $optimization = null, ?PropertyAdsCampaignTargetingPlacement $placement = null, ?array $schedule = null)
+    public function __construct(?PropertyAdsCampaignTargetingAudience $audience = null, ?PropertyAdsCampaignTargetingBrandSafety $brandSafety = null, ?PropertyAdsCampaignTargetingContent $content = null, ?array $custom = null, ?PropertyAdsCampaignTargetingDemographic $demographic = null, ?PropertyAdsCampaignTargetingDevice $device = null, ?PropertyAdsCampaignTargetingGeographic $geographic = null, ?PropertyAdsCampaignTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsCampaignTargetingOptimization $optimization = null, ?PropertyAdsCampaignTargetingPlacement $placement = null, ?array $schedule = null, ?PropertyAdsCampaignTargetingSupply $supply = null)
     {
         $this->audience = $audience;
         $this->brandSafety = $brandSafety;
@@ -155,5 +166,6 @@ class PropertyAdsCampaignTargeting
         $this->optimization = $optimization;
         $this->placement = $placement;
         $this->schedule = $schedule;
+        $this->supply = $supply;
     }
 }

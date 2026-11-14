@@ -36,7 +36,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-25T03:01:39.304Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-25T04:54:11.348Z'),
         attachments: [
             new Shared\HrisAttachment(
                 contentType: 'application/pdf',
@@ -50,16 +50,16 @@ $request = new Operations\CreateHrisTimeoffRequest(
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2025-01-12T10:56:51.496Z'),
-        id: '4067d850-c875-4941-8dda-9abbb969a67b',
+        endAt: Utils\Utils::parseDateTime('2025-01-13T02:47:02.305Z'),
+        id: '6f154694-38aa-4847-a2d1-cce6a5adebbd',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-13T12:47:41.757Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-13T22:10:17.361Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-16T07:24:35.439Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-16T11:09:30.295Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -216,7 +216,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-25T03:01:39.305Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-25T04:54:11.349Z'),
         attachments: [
             new Shared\HrisAttachment(
                 contentType: 'application/pdf',
@@ -230,16 +230,16 @@ $request = new Operations\PatchHrisTimeoffRequest(
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2025-01-12T10:56:51.503Z'),
-        id: 'a21ab91d-ba00-46ac-8904-e577e925717b',
+        endAt: Utils\Utils::parseDateTime('2025-01-13T02:47:02.314Z'),
+        id: 'c42510a7-87a4-4d8f-a591-42a2e9c26f04',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-13T12:47:41.761Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-13T22:10:17.366Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-16T07:24:35.440Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-16T11:09:30.297Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -347,7 +347,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-25T03:01:39.305Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-25T04:54:11.349Z'),
         attachments: [
             new Shared\HrisAttachment(
                 contentType: 'application/pdf',
@@ -361,16 +361,16 @@ $request = new Operations\UpdateHrisTimeoffRequest(
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2025-01-12T10:56:51.503Z'),
-        id: 'a21ab91d-ba00-46ac-8904-e577e925717b',
+        endAt: Utils\Utils::parseDateTime('2025-01-13T02:47:02.314Z'),
+        id: 'c42510a7-87a4-4d8f-a591-42a2e9c26f04',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-13T12:47:41.761Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-13T22:10:17.366Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-16T07:24:35.440Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-16T11:09:30.297Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',

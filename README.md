@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '02da62e8-55be-4db0-b808-43e3cbc9440d',
+        id: 'f1651d92-944b-4297-8849-998dc865abb4',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-12T17:59:56.921Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T00:16:57.544Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '02da62e8-55be-4db0-b808-43e3cbc9440d',
+        id: 'f1651d92-944b-4297-8849-998dc865abb4',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-12T17:59:56.921Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T00:16:57.544Z'),
     ),
     connectionId: '<id>',
 );
@@ -289,6 +289,14 @@ if ($response->accountingAccount !== null) {
 * [updateAccountingTaxrate](docs/sdks/accounting/README.md#updateaccountingtaxrate) - Update a taxrate
 * [updateAccountingTransaction](docs/sdks/accounting/README.md#updateaccountingtransaction) - Update a transaction
 * [updateAccountingVendorcredit](docs/sdks/accounting/README.md#updateaccountingvendorcredit) - Update a vendorcredit
+
+### [Action](docs/sdks/action/README.md)
+
+* [createQmsAction](docs/sdks/action/README.md#createqmsaction) - Create an action
+* [getQmsAction](docs/sdks/action/README.md#getqmsaction) - Retrieve an action
+* [listQmsActions](docs/sdks/action/README.md#listqmsactions) - List all actions
+* [patchQmsAction](docs/sdks/action/README.md#patchqmsaction) - Update an action
+* [updateQmsAction](docs/sdks/action/README.md#updateqmsaction) - Update an action
 
 ### [Activation](docs/sdks/activation/README.md)
 
@@ -527,6 +535,14 @@ if ($response->accountingAccount !== null) {
 * [patchHrisAttendance](docs/sdks/attendance/README.md#patchhrisattendance) - Update an attendance
 * [removeHrisAttendance](docs/sdks/attendance/README.md#removehrisattendance) - Remove an attendance
 * [updateHrisAttendance](docs/sdks/attendance/README.md#updatehrisattendance) - Update an attendance
+
+### [Audit](docs/sdks/audit/README.md)
+
+* [createQmsAudit](docs/sdks/audit/README.md#createqmsaudit) - Create an audit
+* [getQmsAudit](docs/sdks/audit/README.md#getqmsaudit) - Retrieve an audit
+* [listQmsAudits](docs/sdks/audit/README.md#listqmsaudits) - List all audits
+* [patchQmsAudit](docs/sdks/audit/README.md#patchqmsaudit) - Update an audit
+* [updateQmsAudit](docs/sdks/audit/README.md#updateqmsaudit) - Update an audit
 
 ### [Auth](docs/sdks/auth/README.md)
 
@@ -1627,6 +1643,14 @@ if ($response->accountingAccount !== null) {
 * [getSocialInsight](docs/sdks/insight/README.md#getsocialinsight) - Retrieve an insight
 * [listSocialInsights](docs/sdks/insight/README.md#listsocialinsights) - List all insights
 
+### [Inspection](docs/sdks/inspection/README.md)
+
+* [createQmsInspection](docs/sdks/inspection/README.md#createqmsinspection) - Create an inspection
+* [getQmsInspection](docs/sdks/inspection/README.md#getqmsinspection) - Retrieve an inspection
+* [listQmsInspections](docs/sdks/inspection/README.md#listqmsinspections) - List all inspections
+* [patchQmsInspection](docs/sdks/inspection/README.md#patchqmsinspection) - Update an inspection
+* [updateQmsInspection](docs/sdks/inspection/README.md#updateqmsinspection) - Update an inspection
+
 ### [Instance](docs/sdks/instance/README.md)
 
 * [createComputeInstance](docs/sdks/instance/README.md#createcomputeinstance) - Create an instance
@@ -1682,8 +1706,13 @@ if ($response->accountingAccount !== null) {
 
 ### [Issue](docs/sdks/issue/README.md)
 
+* [createQmsIssue](docs/sdks/issue/README.md#createqmsissue) - Create an issue
+* [getQmsIssue](docs/sdks/issue/README.md#getqmsissue) - Retrieve an issue
 * [getUnifiedIssue](docs/sdks/issue/README.md#getunifiedissue) - Retrieve support issue
+* [listQmsIssues](docs/sdks/issue/README.md#listqmsissues) - List all issues
 * [listUnifiedIssues](docs/sdks/issue/README.md#listunifiedissues) - List support issues
+* [patchQmsIssue](docs/sdks/issue/README.md#patchqmsissue) - Update an issue
+* [updateQmsIssue](docs/sdks/issue/README.md#updateqmsissue) - Update an issue
 
 ### [Item](docs/sdks/item/README.md)
 
@@ -2338,6 +2367,29 @@ if ($response->accountingAccount !== null) {
 
 * [getAccountingPurchasereceipt](docs/sdks/purchasereceipt/README.md#getaccountingpurchasereceipt) - Retrieve a purchasereceipt
 * [listAccountingPurchasereceipts](docs/sdks/purchasereceipt/README.md#listaccountingpurchasereceipts) - List all purchasereceipts
+
+### [Qms](docs/sdks/qms/README.md)
+
+* [createQmsAction](docs/sdks/qms/README.md#createqmsaction) - Create an action
+* [createQmsAudit](docs/sdks/qms/README.md#createqmsaudit) - Create an audit
+* [createQmsInspection](docs/sdks/qms/README.md#createqmsinspection) - Create an inspection
+* [createQmsIssue](docs/sdks/qms/README.md#createqmsissue) - Create an issue
+* [getQmsAction](docs/sdks/qms/README.md#getqmsaction) - Retrieve an action
+* [getQmsAudit](docs/sdks/qms/README.md#getqmsaudit) - Retrieve an audit
+* [getQmsInspection](docs/sdks/qms/README.md#getqmsinspection) - Retrieve an inspection
+* [getQmsIssue](docs/sdks/qms/README.md#getqmsissue) - Retrieve an issue
+* [listQmsActions](docs/sdks/qms/README.md#listqmsactions) - List all actions
+* [listQmsAudits](docs/sdks/qms/README.md#listqmsaudits) - List all audits
+* [listQmsInspections](docs/sdks/qms/README.md#listqmsinspections) - List all inspections
+* [listQmsIssues](docs/sdks/qms/README.md#listqmsissues) - List all issues
+* [patchQmsAction](docs/sdks/qms/README.md#patchqmsaction) - Update an action
+* [patchQmsAudit](docs/sdks/qms/README.md#patchqmsaudit) - Update an audit
+* [patchQmsInspection](docs/sdks/qms/README.md#patchqmsinspection) - Update an inspection
+* [patchQmsIssue](docs/sdks/qms/README.md#patchqmsissue) - Update an issue
+* [updateQmsAction](docs/sdks/qms/README.md#updateqmsaction) - Update an action
+* [updateQmsAudit](docs/sdks/qms/README.md#updateqmsaudit) - Update an audit
+* [updateQmsInspection](docs/sdks/qms/README.md#updateqmsinspection) - Update an inspection
+* [updateQmsIssue](docs/sdks/qms/README.md#updateqmsissue) - Update an issue
 
 ### [Query](docs/sdks/query/README.md)
 
@@ -3094,7 +3146,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: '02da62e8-55be-4db0-b808-43e3cbc9440d',
+            id: 'f1651d92-944b-4297-8849-998dc865abb4',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -3107,7 +3159,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-12T17:59:56.921Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-13T00:16:57.544Z'),
         ),
         connectionId: '<id>',
     );
@@ -3165,7 +3217,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '02da62e8-55be-4db0-b808-43e3cbc9440d',
+        id: 'f1651d92-944b-4297-8849-998dc865abb4',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3178,7 +3230,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-12T17:59:56.921Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T00:16:57.544Z'),
     ),
     connectionId: '<id>',
 );
@@ -3219,7 +3271,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '02da62e8-55be-4db0-b808-43e3cbc9440d',
+        id: 'f1651d92-944b-4297-8849-998dc865abb4',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3232,7 +3284,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-12T17:59:56.921Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T00:16:57.544Z'),
     ),
     connectionId: '<id>',
 );

@@ -394,6 +394,16 @@ class UnifiedTo
 
     public Unittype $unittype;
 
+    public Qms $qms;
+
+    public Action $action;
+
+    public Audit $audit;
+
+    public Inspection $inspection;
+
+    public Issue $issue;
+
     public Repo $repo;
 
     public Branch $branch;
@@ -465,8 +475,6 @@ class UnifiedTo
     public Login $login;
 
     public Saml $saml;
-
-    public Issue $issue;
 
     public Notification $notification;
 
@@ -679,6 +687,11 @@ class UnifiedTo
         $this->guest = new Guest($this->sdkConfiguration);
         $this->listing = new Listing($this->sdkConfiguration);
         $this->unittype = new Unittype($this->sdkConfiguration);
+        $this->qms = new Qms($this->sdkConfiguration);
+        $this->action = new Action($this->sdkConfiguration);
+        $this->audit = new Audit($this->sdkConfiguration);
+        $this->inspection = new Inspection($this->sdkConfiguration);
+        $this->issue = new Issue($this->sdkConfiguration);
         $this->repo = new Repo($this->sdkConfiguration);
         $this->branch = new Branch($this->sdkConfiguration);
         $this->commit = new Commit($this->sdkConfiguration);
@@ -715,7 +728,6 @@ class UnifiedTo
         $this->auth = new Auth($this->sdkConfiguration);
         $this->login = new Login($this->sdkConfiguration);
         $this->saml = new Saml($this->sdkConfiguration);
-        $this->issue = new Issue($this->sdkConfiguration);
         $this->notification = new Notification($this->sdkConfiguration);
         $this->secretsmanager = new Secretsmanager($this->sdkConfiguration);
         $this->webhook = new Webhook($this->sdkConfiguration);

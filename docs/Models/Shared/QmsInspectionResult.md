@@ -1,0 +1,10 @@
+# QmsInspectionResult
+
+
+## Values
+
+| Name          | Value         |
+| ------------- | ------------- |
+| `Pass`        | PASS          |
+| `Fail`        | FAIL          |
+| `Conditional` | CONDITIONAL   |

@@ -127,6 +127,16 @@ class PropertyAdsReportMetricsCampaignTargeting
     public ?array $schedule = null;
 
     /**
+     * Buy-side inventory: exchanges, deals, deal groups and seller authorization (DSPs)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingSupply $supply
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('supply')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingSupply|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?PropertyAdsReportMetricsCampaignTargetingSupply $supply = null;
+
+    /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingAudience  $audience
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingBrandSafety  $brandSafety
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingContent  $content
@@ -139,9 +149,10 @@ class PropertyAdsReportMetricsCampaignTargeting
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingOptimization  $optimization
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingPlacement  $placement
      * @param  ?array<\Unified\Unified_to\Models\Shared\AdSchedule>  $schedule
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsReportMetricsCampaignTargetingSupply  $supply
      * @phpstan-pure
      */
-    public function __construct(?PropertyAdsReportMetricsCampaignTargetingAudience $audience = null, ?PropertyAdsReportMetricsCampaignTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsCampaignTargetingContent $content = null, ?array $custom = null, ?PropertyAdsReportMetricsCampaignTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsCampaignTargetingDevice $device = null, ?PropertyAdsReportMetricsCampaignTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsCampaignTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsReportMetricsCampaignTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsCampaignTargetingPlacement $placement = null, ?array $schedule = null)
+    public function __construct(?PropertyAdsReportMetricsCampaignTargetingAudience $audience = null, ?PropertyAdsReportMetricsCampaignTargetingBrandSafety $brandSafety = null, ?PropertyAdsReportMetricsCampaignTargetingContent $content = null, ?array $custom = null, ?PropertyAdsReportMetricsCampaignTargetingDemographic $demographic = null, ?PropertyAdsReportMetricsCampaignTargetingDevice $device = null, ?PropertyAdsReportMetricsCampaignTargetingGeographic $geographic = null, ?PropertyAdsReportMetricsCampaignTargetingInventory $inventory = null, ?array $language = null, ?PropertyAdsReportMetricsCampaignTargetingOptimization $optimization = null, ?PropertyAdsReportMetricsCampaignTargetingPlacement $placement = null, ?array $schedule = null, ?PropertyAdsReportMetricsCampaignTargetingSupply $supply = null)
     {
         $this->audience = $audience;
         $this->brandSafety = $brandSafety;
@@ -155,5 +166,6 @@ class PropertyAdsReportMetricsCampaignTargeting
         $this->optimization = $optimization;
         $this->placement = $placement;
         $this->schedule = $schedule;
+        $this->supply = $supply;
     }
 }
