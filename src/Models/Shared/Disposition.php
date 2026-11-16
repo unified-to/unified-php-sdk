@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** What to do with the nonconforming material */
 enum Disposition: string
 {
     case UseAsIs = 'USE_AS_IS';

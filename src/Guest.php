@@ -315,6 +315,65 @@ class Guest
     }
 
     /**
+     * Remove a guest
+     *
+     * Deletes the PropertyGuest identified by `id`.
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemovePropertyGuestRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemovePropertyGuestResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function removePropertyGuest(Operations\RemovePropertyGuestRequest $request, ?Options $options = null): Operations\RemovePropertyGuestResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/property/{connection_id}/guest/{id}', Operations\RemovePropertyGuestRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+        $httpOptions['headers']['Accept'] = '*/*';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removePropertyGuest', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+            return new Operations\RemovePropertyGuestResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+            return new Operations\RemovePropertyGuestResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        }
+    }
+
+    /**
      * Update a guest
      *
      * Updates the PropertyGuest identified by `id`. Provide the unified PropertyGuest fields to change in the request body.

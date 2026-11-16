@@ -23,6 +23,7 @@
 * [patchPlmDocument](#patchplmdocument) - Update a document
 * [patchPlmPart](#patchplmpart) - Update a part
 * [removePlmBomline](#removeplmbomline) - Remove a bomline
+* [removePlmPart](#removeplmpart) - Remove a part
 * [updatePlmBomline](#updateplmbomline) - Update a bomline
 * [updatePlmChange](#updateplmchange) - Update a change
 * [updatePlmDocument](#updateplmdocument) - Update a document
@@ -55,11 +56,11 @@ $request = new Operations\CreatePlmBomlineRequest(
     plmBomline: new Shared\PlmBomline(
         createdAt: Utils\Utils::parseDateTime('2022-04-02T07:09:29.598Z'),
         effectiveAt: Utils\Utils::parseDateTime('2022-04-02T07:09:29.598Z'),
-        id: '8e7ef923-03d2-458c-8659-c91567f2fc2b',
+        id: '978f5b3c-f20f-4ce5-b503-f62e1749e961',
         quantity: 7,
         referenceDesignators: [],
         unitOfMeasure: 'EA',
-        updatedAt: Utils\Utils::parseDateTime('2023-04-20T04:16:51.410Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-20T10:17:37.093Z'),
     ),
     connectionId: '<id>',
 );
@@ -117,14 +118,14 @@ $request = new Operations\CreatePlmChangeRequest(
         affectedItems: [],
         createdAt: Utils\Utils::parseDateTime('2021-08-02T05:58:32.287Z'),
         description: 'Vorago spiculum avaritia adipiscor callide.',
-        id: '59e17208-13a8-441a-a2b9-8df5a89262a5',
+        id: 'c4dc961d-9659-4e54-bbed-dd1e4910037c',
         metadata: [],
         name: 'Update goodwill',
         number: 'ECO-6591',
         priority: 'Medium',
         status: Shared\PlmChangeStatus::InReview,
         type: Shared\PlmChangeType::Order,
-        updatedAt: Utils\Utils::parseDateTime('2026-09-28T07:19:16.026Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-29T09:10:10.619Z'),
         url: 'https://warmhearted-fraudster.biz/',
     ),
     connectionId: '<id>',
@@ -182,9 +183,9 @@ $request = new Operations\CreatePlmDocumentRequest(
     plmDocument: new Shared\PlmDocument(
         createdAt: Utils\Utils::parseDateTime('2020-10-16T01:44:30.293Z'),
         fileIds: [],
-        id: '7bc55b55-72dd-439b-a37c-003718fad841',
+        id: '5d2600e6-4066-4a8c-896e-5865e31f3c5d',
         lifecycleState: 'Under Review',
-        masterIdentifier: 'c03c3f94-a6dc-46ca-adf1-400847794a66',
+        masterIdentifier: '0783dd05-855b-45e9-9318-8471e9803552',
         metadata: [],
         name: 'Procedure taxicab',
         number: 'DOC-086886',
@@ -192,7 +193,7 @@ $request = new Operations\CreatePlmDocumentRequest(
         revision: 'C',
         status: Shared\PlmDocumentStatus::InReview,
         type: Shared\PlmDocumentType::Procedure,
-        updatedAt: Utils\Utils::parseDateTime('2026-09-09T00:38:16.372Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-10T02:20:30.065Z'),
         url: 'https://uncommon-guide.info/',
     ),
     connectionId: '<id>',
@@ -252,10 +253,10 @@ $request = new Operations\CreatePlmPartRequest(
         description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
         documentIds: [],
         fileIds: [],
-        id: '861f1bf5-a9e2-40b5-980a-610b941aa7c2',
+        id: '5fd45e3c-4a77-4ace-8d9d-e1e91f54bc9a',
         isAssembly: false,
         lifecycleState: 'Design',
-        masterIdentifier: '3b800de1-38b0-41bf-9eca-d820581c95e9',
+        masterIdentifier: '124a759f-5d74-4b7d-92c0-090f1e40e953',
         metadata: [],
         name: 'grumpy PCB',
         number: 'PRT-009154',
@@ -265,7 +266,7 @@ $request = new Operations\CreatePlmPartRequest(
         status: Shared\PlmPartStatus::InWork,
         type: Shared\PlmPartType::Software,
         unitOfMeasure: 'EA',
-        updatedAt: Utils\Utils::parseDateTime('2021-04-12T16:00:30.057Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-12T22:59:23.166Z'),
         url: 'https://inborn-independence.info',
     ),
     connectionId: '<id>',
@@ -828,11 +829,11 @@ $request = new Operations\PatchPlmBomlineRequest(
     plmBomline: new Shared\PlmBomline(
         createdAt: Utils\Utils::parseDateTime('2022-04-02T07:09:29.598Z'),
         effectiveAt: Utils\Utils::parseDateTime('2022-04-02T07:09:29.598Z'),
-        id: 'e16cb774-d7cd-4947-84a4-ca1cc128074d',
+        id: '52696eac-3f03-4637-b652-0f72e71c02e6',
         quantity: 7,
         referenceDesignators: [],
         unitOfMeasure: 'EA',
-        updatedAt: Utils\Utils::parseDateTime('2023-04-20T04:16:51.412Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-20T10:17:37.095Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -891,14 +892,14 @@ $request = new Operations\PatchPlmChangeRequest(
         affectedItems: [],
         createdAt: Utils\Utils::parseDateTime('2021-08-02T05:58:32.287Z'),
         description: 'Vorago spiculum avaritia adipiscor callide.',
-        id: '29199343-62f8-44be-8866-de28293e1036',
+        id: '4cdf50fc-a7ff-4554-80cb-4303a3851934',
         metadata: [],
         name: 'Update goodwill',
         number: 'ECO-6591',
         priority: 'Medium',
         status: Shared\PlmChangeStatus::InReview,
         type: Shared\PlmChangeType::Order,
-        updatedAt: Utils\Utils::parseDateTime('2026-09-28T07:19:16.046Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-29T09:10:10.639Z'),
         url: 'https://warmhearted-fraudster.biz/',
     ),
     connectionId: '<id>',
@@ -957,9 +958,9 @@ $request = new Operations\PatchPlmDocumentRequest(
     plmDocument: new Shared\PlmDocument(
         createdAt: Utils\Utils::parseDateTime('2020-10-16T01:44:30.293Z'),
         fileIds: [],
-        id: '837356f9-33da-402b-9dcd-72da4f2f51c0',
+        id: '7cc1b85b-9762-4fa1-9e79-ea3b1d8dabe2',
         lifecycleState: 'Under Review',
-        masterIdentifier: '4ad7e446-6703-4a84-a00a-797f1c2d1418',
+        masterIdentifier: 'e87f4a9c-c285-4b0b-877f-c8329f22dcca',
         metadata: [],
         name: 'Procedure taxicab',
         number: 'DOC-086886',
@@ -967,7 +968,7 @@ $request = new Operations\PatchPlmDocumentRequest(
         revision: 'C',
         status: Shared\PlmDocumentStatus::InReview,
         type: Shared\PlmDocumentType::Procedure,
-        updatedAt: Utils\Utils::parseDateTime('2026-09-09T00:38:16.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-10T02:20:30.082Z'),
         url: 'https://uncommon-guide.info/',
     ),
     connectionId: '<id>',
@@ -1028,10 +1029,10 @@ $request = new Operations\PatchPlmPartRequest(
         description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
         documentIds: [],
         fileIds: [],
-        id: 'e43f8e83-35e3-4bde-84db-c5d7868252b7',
+        id: '9bc76715-50e1-46ac-af71-3a2d6eb32abc',
         isAssembly: false,
         lifecycleState: 'Design',
-        masterIdentifier: '9f7dc815-13c2-4008-9fb3-cc4c18b8bc66',
+        masterIdentifier: '46b87da6-e098-45d4-aa18-e68077fa14c2',
         metadata: [],
         name: 'grumpy PCB',
         number: 'PRT-009154',
@@ -1041,7 +1042,7 @@ $request = new Operations\PatchPlmPartRequest(
         status: Shared\PlmPartStatus::InWork,
         type: Shared\PlmPartType::Software,
         unitOfMeasure: 'EA',
-        updatedAt: Utils\Utils::parseDateTime('2021-04-12T16:00:30.063Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-12T22:59:23.171Z'),
         url: 'https://inborn-independence.info',
     ),
     connectionId: '<id>',
@@ -1124,6 +1125,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removePlmPart
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemovePlmPartRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->plm->removePlmPart(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\RemovePlmPartRequest](../../Models/Operations/RemovePlmPartRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\RemovePlmPartResponse](../../Models/Operations/RemovePlmPartResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## updatePlmBomline
 
 Updates the PlmBomline identified by `id`. Provide the unified PlmBomline fields to change in the request body.
@@ -1151,11 +1203,11 @@ $request = new Operations\UpdatePlmBomlineRequest(
     plmBomline: new Shared\PlmBomline(
         createdAt: Utils\Utils::parseDateTime('2022-04-02T07:09:29.598Z'),
         effectiveAt: Utils\Utils::parseDateTime('2022-04-02T07:09:29.598Z'),
-        id: 'e16cb774-d7cd-4947-84a4-ca1cc128074d',
+        id: '52696eac-3f03-4637-b652-0f72e71c02e6',
         quantity: 7,
         referenceDesignators: [],
         unitOfMeasure: 'EA',
-        updatedAt: Utils\Utils::parseDateTime('2023-04-20T04:16:51.412Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-20T10:17:37.095Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1214,14 +1266,14 @@ $request = new Operations\UpdatePlmChangeRequest(
         affectedItems: [],
         createdAt: Utils\Utils::parseDateTime('2021-08-02T05:58:32.287Z'),
         description: 'Vorago spiculum avaritia adipiscor callide.',
-        id: '29199343-62f8-44be-8866-de28293e1036',
+        id: '4cdf50fc-a7ff-4554-80cb-4303a3851934',
         metadata: [],
         name: 'Update goodwill',
         number: 'ECO-6591',
         priority: 'Medium',
         status: Shared\PlmChangeStatus::InReview,
         type: Shared\PlmChangeType::Order,
-        updatedAt: Utils\Utils::parseDateTime('2026-09-28T07:19:16.046Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-29T09:10:10.639Z'),
         url: 'https://warmhearted-fraudster.biz/',
     ),
     connectionId: '<id>',
@@ -1280,9 +1332,9 @@ $request = new Operations\UpdatePlmDocumentRequest(
     plmDocument: new Shared\PlmDocument(
         createdAt: Utils\Utils::parseDateTime('2020-10-16T01:44:30.293Z'),
         fileIds: [],
-        id: '837356f9-33da-402b-9dcd-72da4f2f51c0',
+        id: '7cc1b85b-9762-4fa1-9e79-ea3b1d8dabe2',
         lifecycleState: 'Under Review',
-        masterIdentifier: '4ad7e446-6703-4a84-a00a-797f1c2d1418',
+        masterIdentifier: 'e87f4a9c-c285-4b0b-877f-c8329f22dcca',
         metadata: [],
         name: 'Procedure taxicab',
         number: 'DOC-086886',
@@ -1290,7 +1342,7 @@ $request = new Operations\UpdatePlmDocumentRequest(
         revision: 'C',
         status: Shared\PlmDocumentStatus::InReview,
         type: Shared\PlmDocumentType::Procedure,
-        updatedAt: Utils\Utils::parseDateTime('2026-09-09T00:38:16.388Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-10T02:20:30.082Z'),
         url: 'https://uncommon-guide.info/',
     ),
     connectionId: '<id>',
@@ -1351,10 +1403,10 @@ $request = new Operations\UpdatePlmPartRequest(
         description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
         documentIds: [],
         fileIds: [],
-        id: 'e43f8e83-35e3-4bde-84db-c5d7868252b7',
+        id: '9bc76715-50e1-46ac-af71-3a2d6eb32abc',
         isAssembly: false,
         lifecycleState: 'Design',
-        masterIdentifier: '9f7dc815-13c2-4008-9fb3-cc4c18b8bc66',
+        masterIdentifier: '46b87da6-e098-45d4-aa18-e68077fa14c2',
         metadata: [],
         name: 'grumpy PCB',
         number: 'PRT-009154',
@@ -1364,7 +1416,7 @@ $request = new Operations\UpdatePlmPartRequest(
         status: Shared\PlmPartStatus::InWork,
         type: Shared\PlmPartType::Software,
         unitOfMeasure: 'EA',
-        updatedAt: Utils\Utils::parseDateTime('2021-04-12T16:00:30.063Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-12T22:59:23.171Z'),
         url: 'https://inborn-independence.info',
     ),
     connectionId: '<id>',

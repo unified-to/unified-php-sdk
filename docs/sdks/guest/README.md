@@ -8,6 +8,7 @@
 * [getPropertyGuest](#getpropertyguest) - Retrieve a guest
 * [listPropertyGuests](#listpropertyguests) - List all guests
 * [patchPropertyGuest](#patchpropertyguest) - Update a guest
+* [removePropertyGuest](#removepropertyguest) - Remove a guest
 * [updatePropertyGuest](#updatepropertyguest) - Update a guest
 
 ## createPropertyGuest
@@ -52,7 +53,7 @@ $request = new Operations\CreatePropertyGuestRequest(
             ),
         ],
         firstName: 'Melissa',
-        id: '7fe20b91-65f9-46c7-bbf2-4ae5093d3286',
+        id: '1e2e474d-2090-467c-9651-9ca5e94baaf9',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
         language: 'es',
         lastName: 'Green',
@@ -66,7 +67,7 @@ $request = new Operations\CreatePropertyGuestRequest(
                 type: Shared\PropertyTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-15T06:35:27.947Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-16T02:07:30.212Z'),
     ),
     connectionId: '<id>',
 );
@@ -239,7 +240,7 @@ $request = new Operations\PatchPropertyGuestRequest(
             ),
         ],
         firstName: 'Melissa',
-        id: 'e88df619-612e-4265-9650-699c9883ae4a',
+        id: '2d7dd474-557f-4ff1-8806-59d7f54c5b55',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
         language: 'es',
         lastName: 'Green',
@@ -253,7 +254,7 @@ $request = new Operations\PatchPropertyGuestRequest(
                 type: Shared\PropertyTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-15T06:35:27.966Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-16T02:07:30.230Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -277,6 +278,57 @@ if ($response->propertyGuest !== null) {
 ### Response
 
 **[?Operations\PatchPropertyGuestResponse](../../Models/Operations/PatchPropertyGuestResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removePropertyGuest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemovePropertyGuestRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->guest->removePropertyGuest(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemovePropertyGuestRequest](../../Models/Operations/RemovePropertyGuestRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\RemovePropertyGuestResponse](../../Models/Operations/RemovePropertyGuestResponse.md)**
 
 ### Errors
 
@@ -326,7 +378,7 @@ $request = new Operations\UpdatePropertyGuestRequest(
             ),
         ],
         firstName: 'Melissa',
-        id: 'e88df619-612e-4265-9650-699c9883ae4a',
+        id: '2d7dd474-557f-4ff1-8806-59d7f54c5b55',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
         language: 'es',
         lastName: 'Green',
@@ -340,7 +392,7 @@ $request = new Operations\UpdatePropertyGuestRequest(
                 type: Shared\PropertyTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-15T06:35:27.966Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-16T02:07:30.230Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

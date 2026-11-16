@@ -9,7 +9,7 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** QmsIssue - A nonconformance, complaint, audit finding or problem report */
+/** QmsIssue - A nonconformance, complaint, audit finding or other quality issue */
 class QmsIssue
 {
     /**
@@ -69,7 +69,6 @@ class QmsIssue
     public ?string $description = null;
 
     /**
-     * What to do with the nonconforming material
      *
      * @var ?\Unified\Unified_to\Models\Shared\Disposition $disposition
      */
@@ -197,7 +196,6 @@ class QmsIssue
     public ?Severity $severity = null;
 
     /**
-     * Where a quality issue was found
      *
      * @var ?\Unified\Unified_to\Models\Shared\QmsIssueSource $source
      */
@@ -207,7 +205,6 @@ class QmsIssue
     public ?QmsIssueSource $source = null;
 
     /**
-     * Normalized status of a quality record
      *
      * @var ?\Unified\Unified_to\Models\Shared\QmsIssueStatus $status
      */

@@ -20,6 +20,15 @@ class KmsPage
     public KmsPageType $type;
 
     /**
+     * The page body, in the format given by `type`. Used to create/update only; read a page's body from `download_url`.
+     *
+     * @var ?string $content
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('content')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $content = null;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
@@ -134,6 +143,7 @@ class KmsPage
 
     /**
      * @param  \Unified\Unified_to\Models\Shared\KmsPageType  $type
+     * @param  ?string  $content
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $downloadUrl
      * @param  ?bool  $hasChildren
@@ -149,9 +159,10 @@ class KmsPage
      * @param  ?string  $webUrl
      * @phpstan-pure
      */
-    public function __construct(KmsPageType $type, ?\DateTime $createdAt = null, ?string $downloadUrl = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentId = null, ?array $raw = null, ?string $spaceId = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
+    public function __construct(KmsPageType $type, ?string $content = null, ?\DateTime $createdAt = null, ?string $downloadUrl = null, ?bool $hasChildren = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $parentId = null, ?array $raw = null, ?string $spaceId = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $webUrl = null)
     {
         $this->type = $type;
+        $this->content = $content;
         $this->createdAt = $createdAt;
         $this->downloadUrl = $downloadUrl;
         $this->hasChildren = $hasChildren;

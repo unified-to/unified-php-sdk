@@ -7,7 +7,9 @@
 * [createComputeSnapshot](#createcomputesnapshot) - Create a snapshot
 * [getComputeSnapshot](#getcomputesnapshot) - Retrieve a snapshot
 * [listComputeSnapshots](#listcomputesnapshots) - List all snapshots
+* [patchComputeSnapshot](#patchcomputesnapshot) - Update a snapshot
 * [removeComputeSnapshot](#removecomputesnapshot) - Remove a snapshot
+* [updateComputeSnapshot](#updatecomputesnapshot) - Update a snapshot
 
 ## createComputeSnapshot
 
@@ -35,13 +37,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: '2d6e80f2-2209-445b-9f83-03d1544c83fe',
+        id: '8051edc7-5e22-4bb3-922d-c18ed28f7bba',
         metadata: [],
         name: 'snap-alius',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-22T01:23:59.715Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T00:58:54.499Z'),
     ),
     connectionId: '<id>',
 );
@@ -172,6 +174,69 @@ if ($response->computeSnapshots !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchComputeSnapshot" method="patch" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchComputeSnapshotRequest(
+    computeSnapshot: new Shared\ComputeSnapshot(
+        createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
+        id: '61f1ee1a-e728-466c-ac34-d1ac62844197',
+        metadata: [],
+        name: 'snap-alius',
+        sizeMb: 169984,
+        status: Shared\ComputeSnapshotStatus::Deleting,
+        type: Shared\ComputeSnapshotType::Disk,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T00:58:54.506Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->snapshot->patchComputeSnapshot(
+    request: $request
+);
+
+if ($response->computeSnapshot !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchComputeSnapshotRequest](../../Models/Operations/PatchComputeSnapshotRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\PatchComputeSnapshotResponse](../../Models/Operations/PatchComputeSnapshotResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeComputeSnapshot
 
 Deletes the ComputeSnapshot identified by `id`.
@@ -216,6 +281,69 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveComputeSnapshotResponse](../../Models/Operations/RemoveComputeSnapshotResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateComputeSnapshot" method="put" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateComputeSnapshotRequest(
+    computeSnapshot: new Shared\ComputeSnapshot(
+        createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
+        id: '61f1ee1a-e728-466c-ac34-d1ac62844197',
+        metadata: [],
+        name: 'snap-alius',
+        sizeMb: 169984,
+        status: Shared\ComputeSnapshotStatus::Deleting,
+        type: Shared\ComputeSnapshotType::Disk,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T00:58:54.506Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->snapshot->updateComputeSnapshot(
+    request: $request
+);
+
+if ($response->computeSnapshot !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateComputeSnapshotRequest](../../Models/Operations/UpdateComputeSnapshotRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\UpdateComputeSnapshotResponse](../../Models/Operations/UpdateComputeSnapshotResponse.md)**
 
 ### Errors
 

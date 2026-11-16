@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** Where a quality issue was found */
 enum QmsIssueSource: string
 {
     case Internal = 'INTERNAL';

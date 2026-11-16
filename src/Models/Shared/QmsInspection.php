@@ -206,7 +206,6 @@ class QmsInspection
     public ?string $serialNumber = null;
 
     /**
-     * Normalized status of a quality record
      *
      * @var ?\Unified\Unified_to\Models\Shared\QmsInspectionStatus $status
      */

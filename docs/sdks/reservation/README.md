@@ -13,6 +13,7 @@
 * [patchCommerceReservation](#patchcommercereservation) - Update a reservation
 * [patchPropertyReservation](#patchpropertyreservation) - Update a reservation
 * [removeCommerceReservation](#removecommercereservation) - Remove a reservation
+* [removePropertyReservation](#removepropertyreservation) - Remove a reservation
 * [updateCommerceReservation](#updatecommercereservation) - Update a reservation
 * [updatePropertyReservation](#updatepropertyreservation) - Update a reservation
 
@@ -46,13 +47,13 @@ $request = new Operations\CreateCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: 'bd4ce7ac-7c60-4298-a1d9-9da30aab211c',
+        id: '47743fdc-1410-4271-8233-c33f3ad121fc',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-09T07:22:41.396Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-09T13:08:23.542Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -119,7 +120,7 @@ $request = new Operations\CreatePropertyReservationRequest(
         guestEmail: 'anya.parisian@hotmail.com',
         guestName: 'Anya Parisian',
         guests: 6,
-        id: 'd0de8dae-c99b-4242-96b1-d776aa118303',
+        id: 'e89012a2-d3d1-4c7e-9ec1-9dca4d732818',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1980,
@@ -156,7 +157,7 @@ $request = new Operations\CreatePropertyReservationRequest(
         startAt: Utils\Utils::parseDateTime('2022-09-25T17:17:08.838Z'),
         status: Shared\PropertyReservationStatus::Pending,
         totalAmount: 2181.6,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-18T02:11:33.530Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-18T04:55:53.352Z'),
         webUrl: 'https://antique-tennis.biz/',
     ),
     connectionId: '<id>',
@@ -419,13 +420,13 @@ $request = new Operations\PatchCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: 'a4d6cd53-7e19-499f-9504-50bf54f06935',
+        id: '818fe706-1d0c-4df2-ab00-a12cdffb898d',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-09T07:22:41.399Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-09T13:08:23.546Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -493,7 +494,7 @@ $request = new Operations\PatchPropertyReservationRequest(
         guestEmail: 'anya.parisian@hotmail.com',
         guestName: 'Anya Parisian',
         guests: 6,
-        id: '4f21f3b0-55fd-4bc9-9325-d15ba2f67bed',
+        id: '7cf7282e-ec88-4d87-a2b6-f8f35e029ff3',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1980,
@@ -530,7 +531,7 @@ $request = new Operations\PatchPropertyReservationRequest(
         startAt: Utils\Utils::parseDateTime('2022-09-25T17:17:08.838Z'),
         status: Shared\PropertyReservationStatus::Pending,
         totalAmount: 2181.6,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-18T02:11:33.533Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-18T04:55:53.354Z'),
         webUrl: 'https://antique-tennis.biz/',
     ),
     connectionId: '<id>',
@@ -613,6 +614,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removePropertyReservation
+
+Deletes the PropertyReservation identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removePropertyReservation" method="delete" path="/property/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemovePropertyReservationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->reservation->removePropertyReservation(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemovePropertyReservationRequest](../../Models/Operations/RemovePropertyReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\RemovePropertyReservationResponse](../../Models/Operations/RemovePropertyReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## updateCommerceReservation
 
 Updates the CommerceReservation identified by `id`. Provide the unified CommerceReservation fields to change in the request body.
@@ -643,13 +695,13 @@ $request = new Operations\UpdateCommerceReservationRequest(
         guestEmail: 'julien.bartoletti@icloud.com',
         guestName: 'Julien Bartoletti',
         guestPhone: '(728) 596-2620',
-        id: 'a4d6cd53-7e19-499f-9504-50bf54f06935',
+        id: '818fe706-1d0c-4df2-ab00-a12cdffb898d',
         metadata: [],
         notes: 'Adsum textilis ipsum despecto.',
         size: 10,
         startAt: Utils\Utils::parseDateTime('2021-12-18T00:40:25.125Z'),
         status: Shared\CommerceReservationStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-01-09T07:22:41.399Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-01-09T13:08:23.546Z'),
         url: 'https://expensive-gift.org',
     ),
     connectionId: '<id>',
@@ -717,7 +769,7 @@ $request = new Operations\UpdatePropertyReservationRequest(
         guestEmail: 'anya.parisian@hotmail.com',
         guestName: 'Anya Parisian',
         guests: 6,
-        id: '4f21f3b0-55fd-4bc9-9325-d15ba2f67bed',
+        id: '7cf7282e-ec88-4d87-a2b6-f8f35e029ff3',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1980,
@@ -754,7 +806,7 @@ $request = new Operations\UpdatePropertyReservationRequest(
         startAt: Utils\Utils::parseDateTime('2022-09-25T17:17:08.838Z'),
         status: Shared\PropertyReservationStatus::Pending,
         totalAmount: 2181.6,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-18T02:11:33.533Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-18T04:55:53.354Z'),
         webUrl: 'https://antique-tennis.biz/',
     ),
     connectionId: '<id>',

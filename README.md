@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '586cc348-799e-42e0-8f00-92d5c9814579',
+        id: 'df1bea93-664a-4d46-b35a-e13d1abfcc69',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-13T05:39:33.846Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T12:23:46.273Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '586cc348-799e-42e0-8f00-92d5c9814579',
+        id: 'df1bea93-664a-4d46-b35a-e13d1abfcc69',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-13T05:39:33.846Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T12:23:46.273Z'),
     ),
     connectionId: '<id>',
 );
@@ -989,6 +989,7 @@ if ($response->accountingAccount !== null) {
 * [patchComputeInstance](docs/sdks/compute/README.md#patchcomputeinstance) - Update an instance
 * [patchComputeKey](docs/sdks/compute/README.md#patchcomputekey) - Update a key
 * [patchComputeService](docs/sdks/compute/README.md#patchcomputeservice) - Update a service
+* [patchComputeSnapshot](docs/sdks/compute/README.md#patchcomputesnapshot) - Update a snapshot
 * [patchComputeTemplate](docs/sdks/compute/README.md#patchcomputetemplate) - Update a template
 * [patchComputeVolume](docs/sdks/compute/README.md#patchcomputevolume) - Update a volume
 * [removeComputeDeployment](docs/sdks/compute/README.md#removecomputedeployment) - Remove a deployment
@@ -1006,6 +1007,7 @@ if ($response->accountingAccount !== null) {
 * [updateComputeInstance](docs/sdks/compute/README.md#updatecomputeinstance) - Update an instance
 * [updateComputeKey](docs/sdks/compute/README.md#updatecomputekey) - Update a key
 * [updateComputeService](docs/sdks/compute/README.md#updatecomputeservice) - Update a service
+* [updateComputeSnapshot](docs/sdks/compute/README.md#updatecomputesnapshot) - Update a snapshot
 * [updateComputeTemplate](docs/sdks/compute/README.md#updatecomputetemplate) - Update a template
 * [updateComputeVolume](docs/sdks/compute/README.md#updatecomputevolume) - Update a volume
 
@@ -1480,6 +1482,7 @@ if ($response->accountingAccount !== null) {
 * [getPropertyGuest](docs/sdks/guest/README.md#getpropertyguest) - Retrieve a guest
 * [listPropertyGuests](docs/sdks/guest/README.md#listpropertyguests) - List all guests
 * [patchPropertyGuest](docs/sdks/guest/README.md#patchpropertyguest) - Update a guest
+* [removePropertyGuest](docs/sdks/guest/README.md#removepropertyguest) - Remove a guest
 * [updatePropertyGuest](docs/sdks/guest/README.md#updatepropertyguest) - Update a guest
 
 ### [Healthcare](docs/sdks/healthcare/README.md)
@@ -1593,6 +1596,7 @@ if ($response->accountingAccount !== null) {
 * [patchHrisGroup](docs/sdks/hris/README.md#patchhrisgroup) - Update a group
 * [patchHrisJob](docs/sdks/hris/README.md#patchhrisjob) - Update a job
 * [patchHrisLocation](docs/sdks/hris/README.md#patchhrislocation) - Update a location
+* [patchHrisTaxonomy](docs/sdks/hris/README.md#patchhristaxonomy) - Update a taxonomy
 * [patchHrisTimeoff](docs/sdks/hris/README.md#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](docs/sdks/hris/README.md#patchhristimeshift) - Update a timeshift
 * [removeHrisAttendance](docs/sdks/hris/README.md#removehrisattendance) - Remove an attendance
@@ -1607,6 +1611,7 @@ if ($response->accountingAccount !== null) {
 * [removeHrisGroup](docs/sdks/hris/README.md#removehrisgroup) - Remove a group
 * [removeHrisJob](docs/sdks/hris/README.md#removehrisjob) - Remove a job
 * [removeHrisLocation](docs/sdks/hris/README.md#removehrislocation) - Remove a location
+* [removeHrisTaxonomy](docs/sdks/hris/README.md#removehristaxonomy) - Remove a taxonomy
 * [removeHrisTimeoff](docs/sdks/hris/README.md#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](docs/sdks/hris/README.md#removehristimeshift) - Remove a timeshift
 * [updateHrisAttendance](docs/sdks/hris/README.md#updatehrisattendance) - Update an attendance
@@ -1621,6 +1626,7 @@ if ($response->accountingAccount !== null) {
 * [updateHrisGroup](docs/sdks/hris/README.md#updatehrisgroup) - Update a group
 * [updateHrisJob](docs/sdks/hris/README.md#updatehrisjob) - Update a job
 * [updateHrisLocation](docs/sdks/hris/README.md#updatehrislocation) - Update a location
+* [updateHrisTaxonomy](docs/sdks/hris/README.md#updatehristaxonomy) - Update a taxonomy
 * [updateHrisTimeoff](docs/sdks/hris/README.md#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](docs/sdks/hris/README.md#updatehristimeshift) - Update a timeshift
 
@@ -2111,6 +2117,7 @@ if ($response->accountingAccount !== null) {
 * [getPlmPart](docs/sdks/part/README.md#getplmpart) - Retrieve a part
 * [listPlmParts](docs/sdks/part/README.md#listplmparts) - List all parts
 * [patchPlmPart](docs/sdks/part/README.md#patchplmpart) - Update a part
+* [removePlmPart](docs/sdks/part/README.md#removeplmpart) - Remove a part
 * [updatePlmPart](docs/sdks/part/README.md#updateplmpart) - Update a part
 
 ### [Passthrough](docs/sdks/passthrough/README.md)
@@ -2236,6 +2243,7 @@ if ($response->accountingAccount !== null) {
 * [patchPlmDocument](docs/sdks/plm/README.md#patchplmdocument) - Update a document
 * [patchPlmPart](docs/sdks/plm/README.md#patchplmpart) - Update a part
 * [removePlmBomline](docs/sdks/plm/README.md#removeplmbomline) - Remove a bomline
+* [removePlmPart](docs/sdks/plm/README.md#removeplmpart) - Remove a part
 * [updatePlmBomline](docs/sdks/plm/README.md#updateplmbomline) - Update a bomline
 * [updatePlmChange](docs/sdks/plm/README.md#updateplmchange) - Update a change
 * [updatePlmDocument](docs/sdks/plm/README.md#updateplmdocument) - Update a document
@@ -2338,7 +2346,9 @@ if ($response->accountingAccount !== null) {
 * [patchPropertyReservation](docs/sdks/property/README.md#patchpropertyreservation) - Update a reservation
 * [patchPropertyReview](docs/sdks/property/README.md#patchpropertyreview) - Update a review
 * [removeAnalyticsProperty](docs/sdks/property/README.md#removeanalyticsproperty) - Remove a property
+* [removePropertyGuest](docs/sdks/property/README.md#removepropertyguest) - Remove a guest
 * [removePropertyListing](docs/sdks/property/README.md#removepropertylisting) - Remove a listing
+* [removePropertyReservation](docs/sdks/property/README.md#removepropertyreservation) - Remove a reservation
 * [updateAnalyticsProperty](docs/sdks/property/README.md#updateanalyticsproperty) - Update a property
 * [updatePropertyGuest](docs/sdks/property/README.md#updatepropertyguest) - Update a guest
 * [updatePropertyListing](docs/sdks/property/README.md#updatepropertylisting) - Update a listing
@@ -2509,6 +2519,7 @@ if ($response->accountingAccount !== null) {
 * [patchCommerceReservation](docs/sdks/reservation/README.md#patchcommercereservation) - Update a reservation
 * [patchPropertyReservation](docs/sdks/reservation/README.md#patchpropertyreservation) - Update a reservation
 * [removeCommerceReservation](docs/sdks/reservation/README.md#removecommercereservation) - Remove a reservation
+* [removePropertyReservation](docs/sdks/reservation/README.md#removepropertyreservation) - Remove a reservation
 * [updateCommerceReservation](docs/sdks/reservation/README.md#updatecommercereservation) - Update a reservation
 * [updatePropertyReservation](docs/sdks/reservation/README.md#updatepropertyreservation) - Update a reservation
 
@@ -2606,7 +2617,9 @@ if ($response->accountingAccount !== null) {
 * [listUnifiedSecretsmanagerInstructions](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [listUnifiedSecretsmanagerSecrets](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](docs/sdks/secretsmanager/README.md#listunifiedsecretsmanagers) - List secrets managers
+* [patchUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#patchunifiedsecretsmanager) - Update secrets manager
 * [removeUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#removeunifiedsecretsmanager) - Remove secrets manager
+* [updateUnifiedSecretsmanager](docs/sdks/secretsmanager/README.md#updateunifiedsecretsmanager) - Update secrets manager
 
 ### [Segment](docs/sdks/segment/README.md)
 
@@ -2702,7 +2715,9 @@ if ($response->accountingAccount !== null) {
 * [createComputeSnapshot](docs/sdks/snapshot/README.md#createcomputesnapshot) - Create a snapshot
 * [getComputeSnapshot](docs/sdks/snapshot/README.md#getcomputesnapshot) - Retrieve a snapshot
 * [listComputeSnapshots](docs/sdks/snapshot/README.md#listcomputesnapshots) - List all snapshots
+* [patchComputeSnapshot](docs/sdks/snapshot/README.md#patchcomputesnapshot) - Update a snapshot
 * [removeComputeSnapshot](docs/sdks/snapshot/README.md#removecomputesnapshot) - Remove a snapshot
+* [updateComputeSnapshot](docs/sdks/snapshot/README.md#updatecomputesnapshot) - Update a snapshot
 
 ### [Social](docs/sdks/social/README.md)
 
@@ -2828,6 +2843,9 @@ if ($response->accountingAccount !== null) {
 * [getHrisTaxonomy](docs/sdks/taxonomy/README.md#gethristaxonomy) - Retrieve a taxonomy
 * [listCrmTaxonomies](docs/sdks/taxonomy/README.md#listcrmtaxonomies) - List all taxonomies
 * [listHrisTaxonomies](docs/sdks/taxonomy/README.md#listhristaxonomies) - List all taxonomies
+* [patchHrisTaxonomy](docs/sdks/taxonomy/README.md#patchhristaxonomy) - Update a taxonomy
+* [removeHrisTaxonomy](docs/sdks/taxonomy/README.md#removehristaxonomy) - Remove a taxonomy
+* [updateHrisTaxonomy](docs/sdks/taxonomy/README.md#updatehristaxonomy) - Update a taxonomy
 
 ### [Taxrate](docs/sdks/taxrate/README.md)
 
@@ -2993,6 +3011,7 @@ if ($response->accountingAccount !== null) {
 * [listUnifiedWebhooks](docs/sdks/unified/README.md#listunifiedwebhooks) - Returns all registered webhooks
 * [listUnifiedWorkspaceintegrations](docs/sdks/unified/README.md#listunifiedworkspaceintegrations) - List workspace integrations
 * [patchUnifiedConnection](docs/sdks/unified/README.md#patchunifiedconnection) - Update connection
+* [patchUnifiedSecretsmanager](docs/sdks/unified/README.md#patchunifiedsecretsmanager) - Update secrets manager
 * [patchUnifiedWebhook](docs/sdks/unified/README.md#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookResume](docs/sdks/unified/README.md#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](docs/sdks/unified/README.md#patchunifiedwebhooktrigger) - Trigger webhook
@@ -3003,6 +3022,7 @@ if ($response->accountingAccount !== null) {
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [removeUnifiedWorkspaceintegration](docs/sdks/unified/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
 * [updateUnifiedConnection](docs/sdks/unified/README.md#updateunifiedconnection) - Update connection
+* [updateUnifiedSecretsmanager](docs/sdks/unified/README.md#updateunifiedsecretsmanager) - Update secrets manager
 * [updateUnifiedWebhook](docs/sdks/unified/README.md#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookResume](docs/sdks/unified/README.md#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](docs/sdks/unified/README.md#updateunifiedwebhooktrigger) - Trigger webhook
@@ -3146,7 +3166,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Voluptatibus valde spoliatio.',
-            id: '586cc348-799e-42e0-8f00-92d5c9814579',
+            id: 'df1bea93-664a-4d46-b35a-e13d1abfcc69',
             isPayable: false,
             metadata: [],
             name: 'Auto Loan Account',
@@ -3159,7 +3179,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-13T05:39:33.846Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-13T12:23:46.273Z'),
         ),
         connectionId: '<id>',
     );
@@ -3217,7 +3237,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '586cc348-799e-42e0-8f00-92d5c9814579',
+        id: 'df1bea93-664a-4d46-b35a-e13d1abfcc69',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3230,7 +3250,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-13T05:39:33.846Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T12:23:46.273Z'),
     ),
     connectionId: '<id>',
 );
@@ -3271,7 +3291,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Voluptatibus valde spoliatio.',
-        id: '586cc348-799e-42e0-8f00-92d5c9814579',
+        id: 'df1bea93-664a-4d46-b35a-e13d1abfcc69',
         isPayable: false,
         metadata: [],
         name: 'Auto Loan Account',
@@ -3284,7 +3304,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-13T05:39:33.846Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-13T12:23:46.273Z'),
     ),
     connectionId: '<id>',
 );

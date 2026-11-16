@@ -38,7 +38,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '32176bab-c17b-4efe-86ef-e63f33183e1a',
+        id: '1b177f84-884e-4667-ad44-fd920777fb18',
         isRequired: false,
         name: 'autem',
         objectType: 'healthcare_practitioner',
@@ -48,7 +48,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-08T19:18:49.392Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-09T14:17:28.177Z'),
     ),
     connectionId: '<id>',
 );
@@ -206,7 +206,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'f7d65aa3-53bf-4c7b-aa33-540c16aaddfc',
+        id: 'e1ca8aa9-4419-4766-be48-0bfaa5bb6945',
         isRequired: false,
         name: 'autem',
         objectType: 'healthcare_practitioner',
@@ -216,7 +216,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-08T19:18:49.399Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-09T14:17:28.184Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,7 +325,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'f7d65aa3-53bf-4c7b-aa33-540c16aaddfc',
+        id: 'e1ca8aa9-4419-4766-be48-0bfaa5bb6945',
         isRequired: false,
         name: 'autem',
         objectType: 'healthcare_practitioner',
@@ -335,7 +335,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
         options: [],
         originalFormat: 'advoco',
         slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-08T19:18:49.399Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-09T14:17:28.184Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

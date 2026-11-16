@@ -25,4 +25,5 @@ enum ListKmsPagesQueryParamFields: string
     case HasChildren = 'has_children';
     case WebUrl = 'web_url';
     case Raw = 'raw';
+    case Content = 'content';
 }

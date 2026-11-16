@@ -128,6 +128,16 @@ class ApiCall
     public ?bool $isBillable = null;
 
     /**
+     * Names of the query-string parameters sent with this API call (eg. updated_gte, offset). Values are not stored.
+     *
+     * @var ?array<string> $queryParams
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('query_params')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $queryParams = null;
+
+    /**
      * The size of the response
      *
      * @var ?float $size
@@ -193,6 +203,7 @@ class ApiCall
      * @param  ?string  $id
      * @param  ?string  $ipAddress
      * @param  ?bool  $isBillable
+     * @param  ?array<string>  $queryParams
      * @param  ?float  $size
      * @param  ?float  $unifiedResponseTime
      * @param  ?string  $userAgent
@@ -200,7 +211,7 @@ class ApiCall
      * @param  ?string  $workspaceId
      * @phpstan-pure
      */
-    public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?float $endapiResponseTime = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?bool $isBillable = null, ?float $size = null, ?float $unifiedResponseTime = null, ?string $userAgent = null, ?string $webhookId = null, ?string $workspaceId = null, ?string $environment = 'Production')
+    public function __construct(string $integrationType, string $method, string $name, string $path, string $status, ApiCallType $type, ?string $connectionId = null, ?\DateTime $createdAt = null, ?float $endapiResponseTime = null, ?string $error = null, ?string $externalXref = null, ?string $id = null, ?string $ipAddress = null, ?bool $isBillable = null, ?array $queryParams = null, ?float $size = null, ?float $unifiedResponseTime = null, ?string $userAgent = null, ?string $webhookId = null, ?string $workspaceId = null, ?string $environment = 'Production')
     {
         $this->integrationType = $integrationType;
         $this->method = $method;
@@ -216,6 +227,7 @@ class ApiCall
         $this->id = $id;
         $this->ipAddress = $ipAddress;
         $this->isBillable = $isBillable;
+        $this->queryParams = $queryParams;
         $this->size = $size;
         $this->unifiedResponseTime = $unifiedResponseTime;
         $this->userAgent = $userAgent;

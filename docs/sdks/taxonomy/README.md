@@ -8,6 +8,9 @@
 * [getHrisTaxonomy](#gethristaxonomy) - Retrieve a taxonomy
 * [listCrmTaxonomies](#listcrmtaxonomies) - List all taxonomies
 * [listHrisTaxonomies](#listhristaxonomies) - List all taxonomies
+* [patchHrisTaxonomy](#patchhristaxonomy) - Update a taxonomy
+* [removeHrisTaxonomy](#removehristaxonomy) - Remove a taxonomy
+* [updateHrisTaxonomy](#updatehristaxonomy) - Update a taxonomy
 
 ## createHrisTaxonomy
 
@@ -41,13 +44,13 @@ $request = new Operations\CreateHrisTaxonomyRequest(
         createdAt: Utils\Utils::parseDateTime('2022-06-23T02:10:00.789Z'),
         description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
         domain: 'Health',
-        id: '14b8278d-012c-41fb-ba17-cd4498424993',
+        id: '994da848-bc0f-42c3-8f15-873674ec929e',
         isActive: false,
         metadata: [],
         name: 'International Functionality Architect',
         subcategory: 'Marble',
         type: Shared\HrisTaxonomyType::Knowledge,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-03T16:04:55.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-03T21:47:07.538Z'),
         url: 'https://fixed-membership.biz/',
     ),
     connectionId: '<id>',
@@ -222,6 +225,197 @@ if ($response->hrisTaxonomies !== null) {
 ### Response
 
 **[?Operations\ListHrisTaxonomiesResponse](../../Models/Operations/ListHrisTaxonomiesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchHrisTaxonomy" method="patch" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchHrisTaxonomyRequest(
+    hrisTaxonomy: new Shared\HrisTaxonomy(
+        alternativeNames: [
+            'Facilitator',
+            'National',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-06-23T02:10:00.789Z'),
+        description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
+        domain: 'Health',
+        id: '3caa2881-a29a-4a41-ae2b-1c0d75ecaf62',
+        isActive: false,
+        metadata: [],
+        name: 'International Functionality Architect',
+        subcategory: 'Marble',
+        type: Shared\HrisTaxonomyType::Knowledge,
+        updatedAt: Utils\Utils::parseDateTime('2023-06-03T21:47:07.541Z'),
+        url: 'https://fixed-membership.biz/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->taxonomy->patchHrisTaxonomy(
+    request: $request
+);
+
+if ($response->hrisTaxonomy !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchHrisTaxonomyRequest](../../Models/Operations/PatchHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\PatchHrisTaxonomyResponse](../../Models/Operations/PatchHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeHrisTaxonomy
+
+Deletes the HrisTaxonomy identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeHrisTaxonomy" method="delete" path="/hris/{connection_id}/taxonomy/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveHrisTaxonomyRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->taxonomy->removeHrisTaxonomy(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveHrisTaxonomyRequest](../../Models/Operations/RemoveHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\RemoveHrisTaxonomyResponse](../../Models/Operations/RemoveHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateHrisTaxonomy" method="put" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateHrisTaxonomyRequest(
+    hrisTaxonomy: new Shared\HrisTaxonomy(
+        alternativeNames: [
+            'Facilitator',
+            'National',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-06-23T02:10:00.789Z'),
+        description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
+        domain: 'Health',
+        id: '3caa2881-a29a-4a41-ae2b-1c0d75ecaf62',
+        isActive: false,
+        metadata: [],
+        name: 'International Functionality Architect',
+        subcategory: 'Marble',
+        type: Shared\HrisTaxonomyType::Knowledge,
+        updatedAt: Utils\Utils::parseDateTime('2023-06-03T21:47:07.541Z'),
+        url: 'https://fixed-membership.biz/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->taxonomy->updateHrisTaxonomy(
+    request: $request
+);
+
+if ($response->hrisTaxonomy !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateHrisTaxonomyRequest](../../Models/Operations/UpdateHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\UpdateHrisTaxonomyResponse](../../Models/Operations/UpdateHrisTaxonomyResponse.md)**
 
 ### Errors
 

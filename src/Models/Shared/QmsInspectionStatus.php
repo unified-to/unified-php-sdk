@@ -9,7 +9,6 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** Normalized status of a quality record */
 enum QmsInspectionStatus: string
 {
     case Open = 'OPEN';

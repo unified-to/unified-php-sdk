@@ -19,3 +19,4 @@
 | `HasChildren` | has_children  |
 | `WebUrl`      | web_url       |
 | `Raw`         | raw           |
+| `Content`     | content       |

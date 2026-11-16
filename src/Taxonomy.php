@@ -309,4 +309,203 @@ class Taxonomy
         }
     }
 
+    /**
+     * Update a taxonomy
+     *
+     * Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+     *
+     * @param  \Unified\Unified_to\Models\Operations\PatchHrisTaxonomyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\PatchHrisTaxonomyResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function patchHrisTaxonomy(Operations\PatchHrisTaxonomyRequest $request, ?Options $options = null): Operations\PatchHrisTaxonomyResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/taxonomy/{id}', Operations\PatchHrisTaxonomyRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisTaxonomy', 'json');
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
+
+        $qp = Utils\Utils::getQueryParams(Operations\PatchHrisTaxonomyRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PATCH', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'patchHrisTaxonomy', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisTaxonomy', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\PatchHrisTaxonomyResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    hrisTaxonomy: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
+    /**
+     * Remove a taxonomy
+     *
+     * Deletes the HrisTaxonomy identified by `id`.
+     *
+     * @param  \Unified\Unified_to\Models\Operations\RemoveHrisTaxonomyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\RemoveHrisTaxonomyResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function removeHrisTaxonomy(Operations\RemoveHrisTaxonomyRequest $request, ?Options $options = null): Operations\RemoveHrisTaxonomyResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/taxonomy/{id}', Operations\RemoveHrisTaxonomyRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+        $httpOptions['headers']['Accept'] = '*/*';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('DELETE', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'removeHrisTaxonomy', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+            return new Operations\RemoveHrisTaxonomyResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+            return new Operations\RemoveHrisTaxonomyResponse(
+                statusCode: $statusCode,
+                contentType: $contentType,
+                rawResponse: $httpResponse
+            );
+        }
+    }
+
+    /**
+     * Update a taxonomy
+     *
+     * Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+     *
+     * @param  \Unified\Unified_to\Models\Operations\UpdateHrisTaxonomyRequest  $request
+     * @return \Unified\Unified_to\Models\Operations\UpdateHrisTaxonomyResponse
+     * @throws \Unified\Unified_to\Models\Errors\SDKException
+     */
+    public function updateHrisTaxonomy(Operations\UpdateHrisTaxonomyRequest $request, ?Options $options = null): Operations\UpdateHrisTaxonomyResponse
+    {
+        $baseUrl = $this->sdkConfiguration->getTemplatedServerUrl();
+        $url = Utils\Utils::generateUrl($baseUrl, '/hris/{connection_id}/taxonomy/{id}', Operations\UpdateHrisTaxonomyRequest::class, $request);
+        $urlOverride = null;
+        $httpOptions = ['http_errors' => false];
+        $body = Utils\Utils::serializeRequestBody($request, 'hrisTaxonomy', 'json');
+        if ($body === null) {
+            throw new \Exception('Request body is required');
+        }
+        $httpOptions = array_merge_recursive($httpOptions, $body);
+
+        $qp = Utils\Utils::getQueryParams(Operations\UpdateHrisTaxonomyRequest::class, $request, $urlOverride);
+        $httpOptions['headers']['Accept'] = 'application/json';
+        $httpOptions['headers']['user-agent'] = $this->sdkConfiguration->userAgent;
+        $httpRequest = new \GuzzleHttp\Psr7\Request('PUT', $url);
+        $hookContext = new HookContext($this->sdkConfiguration, $baseUrl, 'updateHrisTaxonomy', null, $this->sdkConfiguration->securitySource);
+        $httpRequest = $this->sdkConfiguration->hooks->beforeRequest(new Hooks\BeforeRequestContext($hookContext), $httpRequest);
+        $httpOptions['query'] = Utils\QueryParameters::standardizeQueryParams($httpRequest, $qp);
+        $httpOptions = Utils\Utils::convertHeadersToOptions($httpRequest, $httpOptions);
+        $httpRequest = Utils\Utils::removeHeaders($httpRequest);
+        try {
+            $httpResponse = $this->sdkConfiguration->client->send($httpRequest, $httpOptions);
+        } catch (\GuzzleHttp\Exception\GuzzleException $error) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), null, $error);
+            $httpResponse = $res;
+        }
+        $contentType = $httpResponse->getHeader('Content-Type')[0] ?? '';
+
+        if (Utils\Utils::matchStatusCodes($httpResponse->getStatusCode(), ['4XX', '5XX'])) {
+            $res = $this->sdkConfiguration->hooks->afterError(new Hooks\AfterErrorContext($hookContext), $httpResponse, null);
+            $httpResponse = $res;
+        }
+
+        $statusCode = $httpResponse->getStatusCode();
+        if (Utils\Utils::matchStatusCodes($statusCode, ['200'])) {
+            if (Utils\Utils::matchContentType($contentType, 'application/json')) {
+                $httpResponse = $this->sdkConfiguration->hooks->afterSuccess(new Hooks\AfterSuccessContext($hookContext), $httpResponse);
+
+                $serializer = Utils\JSON::createSerializer();
+                $responseData = (string) $httpResponse->getBody();
+                $obj = $serializer->deserialize($responseData, '\Unified\Unified_to\Models\Shared\HrisTaxonomy', 'json', DeserializationContext::create()->setRequireAllRequiredProperties(true));
+                $response = new Operations\UpdateHrisTaxonomyResponse(
+                    statusCode: $statusCode,
+                    contentType: $contentType,
+                    rawResponse: $httpResponse,
+                    hrisTaxonomy: $obj);
+
+                return $response;
+            } else {
+                throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown content type received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+            }
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['4XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } elseif (Utils\Utils::matchStatusCodes($statusCode, ['5XX'])) {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('API error occurred', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        } else {
+            throw new \Unified\Unified_to\Models\Errors\SDKException('Unknown status code received', $statusCode, $httpResponse->getBody()->getContents(), $httpResponse);
+        }
+    }
+
 }

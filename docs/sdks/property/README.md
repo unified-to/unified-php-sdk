@@ -31,7 +31,9 @@
 * [patchPropertyReservation](#patchpropertyreservation) - Update a reservation
 * [patchPropertyReview](#patchpropertyreview) - Update a review
 * [removeAnalyticsProperty](#removeanalyticsproperty) - Remove a property
+* [removePropertyGuest](#removepropertyguest) - Remove a guest
 * [removePropertyListing](#removepropertylisting) - Remove a listing
+* [removePropertyReservation](#removepropertyreservation) - Remove a reservation
 * [updateAnalyticsProperty](#updateanalyticsproperty) - Update a property
 * [updatePropertyGuest](#updatepropertyguest) - Update a guest
 * [updatePropertyListing](#updatepropertylisting) - Update a listing
@@ -65,10 +67,10 @@ $request = new Operations\CreateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: 'e754b488-0a41-4d72-9898-8e17dd526e8e',
+        id: 'd754a4a9-4d6f-4ce9-a4ac-51ac889a06cb',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T23:19:55.415Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T23:27:37.178Z'),
     ),
     connectionId: '<id>',
 );
@@ -125,13 +127,13 @@ $request = new Operations\CreatePropertyConversationRequest(
     propertyConversation: new Shared\PropertyConversation(
         createdAt: Utils\Utils::parseDateTime('2022-06-20T00:02:46.530Z'),
         guestName: 'Evie Okuneva',
-        id: '36efae78-3481-42c5-b53e-9e87203d14da',
+        id: '66f1e34c-5f7f-4455-86f0-cd6f61bda5a1',
         isUnread: false,
         messages: [
             new Shared\PropertyMessage(
                 attachments: [],
-                createdAt: Utils\Utils::parseDateTime('2025-05-02T18:09:07.388Z'),
-                id: '25b2af69-6818-4938-8991-e5b2b34505df',
+                createdAt: Utils\Utils::parseDateTime('2025-05-03T11:24:38.548Z'),
+                id: 'e87f5e00-7a9e-4ba7-8274-c5bd1e631353',
                 isAutomatic: false,
                 message: 'Vinitor caterva amor sophismata admitto colo tempore aufero torrens.',
                 senderName: 'Evie Okuneva',
@@ -139,8 +141,8 @@ $request = new Operations\CreatePropertyConversationRequest(
             ),
             new Shared\PropertyMessage(
                 attachments: [],
-                createdAt: Utils\Utils::parseDateTime('2026-05-19T19:09:33.595Z'),
-                id: 'f345deda-7076-4aeb-a0c0-061870e9c8b6',
+                createdAt: Utils\Utils::parseDateTime('2026-05-20T18:42:39.597Z'),
+                id: '818b4caa-4213-4f6b-a4d3-1b3779664363',
                 message: 'Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo.',
                 senderName: 'Ms. Patti Lynch',
                 senderType: Shared\SenderType::Host,
@@ -148,7 +150,7 @@ $request = new Operations\CreatePropertyConversationRequest(
         ],
         metadata: [],
         source: 'Airbnb',
-        updatedAt: Utils\Utils::parseDateTime('2026-05-19T19:09:33.595Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-20T18:42:39.597Z'),
     ),
     connectionId: '<id>',
 );
@@ -220,7 +222,7 @@ $request = new Operations\CreatePropertyGuestRequest(
             ),
         ],
         firstName: 'Melissa',
-        id: '7fe20b91-65f9-46c7-bbf2-4ae5093d3286',
+        id: '1e2e474d-2090-467c-9651-9ca5e94baaf9',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
         language: 'es',
         lastName: 'Green',
@@ -234,7 +236,7 @@ $request = new Operations\CreatePropertyGuestRequest(
                 type: Shared\PropertyTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-15T06:35:27.947Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-16T02:07:30.212Z'),
     ),
     connectionId: '<id>',
 );
@@ -320,7 +322,7 @@ $request = new Operations\CreatePropertyListingRequest(
         currency: 'USD',
         description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
         houseRules: 'No smoking. No parties or events.',
-        id: '01e86a4f-26e9-4993-acef-f205a3bc1c9e',
+        id: '681f975d-1730-4872-a7cc-a555dad88f9e',
         imageUrls: [
             'https://loremflickr.com/23/1328?lock=5798241296161663',
             'https://loremflickr.com/12/1312?lock=6354590363728966',
@@ -337,7 +339,7 @@ $request = new Operations\CreatePropertyListingRequest(
         startPriceAmount: 470,
         timezone: 'America/Los_Angeles',
         type: Shared\PropertyListingType::Room,
-        updatedAt: Utils\Utils::parseDateTime('2026-09-22T09:03:13.921Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-23T10:53:30.436Z'),
         webUrl: 'https://tight-pronoun.info/',
     ),
     connectionId: '<id>',
@@ -398,9 +400,9 @@ $request = new Operations\CreatePropertyQuoteRequest(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T19:14:11.415Z'),
         currency: 'USD',
         depositAmount: 594.54,
-        endAt: Utils\Utils::parseDateTime('2026-11-29'),
+        endAt: Utils\Utils::parseDateTime('2026-11-30'),
         guests: 2,
-        id: '030ff6c8-786e-4a76-bb50-f71ef4256b00',
+        id: '66d5c9bd-04fe-4d43-807a-4413c685821d',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1665,
@@ -422,7 +424,7 @@ $request = new Operations\CreatePropertyQuoteRequest(
                 type: Shared\PropertyLineitemType::Tax,
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2026-11-20'),
+        startAt: Utils\Utils::parseDateTime('2026-11-21'),
         totalAmount: 1981.8,
     ),
     connectionId: '<id>',
@@ -489,7 +491,7 @@ $request = new Operations\CreatePropertyReservationRequest(
         guestEmail: 'anya.parisian@hotmail.com',
         guestName: 'Anya Parisian',
         guests: 6,
-        id: 'd0de8dae-c99b-4242-96b1-d776aa118303',
+        id: 'e89012a2-d3d1-4c7e-9ec1-9dca4d732818',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1980,
@@ -526,7 +528,7 @@ $request = new Operations\CreatePropertyReservationRequest(
         startAt: Utils\Utils::parseDateTime('2022-09-25T17:17:08.838Z'),
         status: Shared\PropertyReservationStatus::Pending,
         totalAmount: 2181.6,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-18T02:11:33.530Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-18T04:55:53.352Z'),
         webUrl: 'https://antique-tennis.biz/',
     ),
     connectionId: '<id>',
@@ -1341,10 +1343,10 @@ $request = new Operations\PatchAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '58c8c411-7ea6-4349-8e6e-7c636f5112a2',
+        id: '4394bdce-b534-4909-b0d2-93749d403078',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T23:19:55.416Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T23:27:37.178Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1417,7 +1419,7 @@ $request = new Operations\PatchPropertyGuestRequest(
             ),
         ],
         firstName: 'Melissa',
-        id: 'e88df619-612e-4265-9650-699c9883ae4a',
+        id: '2d7dd474-557f-4ff1-8806-59d7f54c5b55',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
         language: 'es',
         lastName: 'Green',
@@ -1431,7 +1433,7 @@ $request = new Operations\PatchPropertyGuestRequest(
                 type: Shared\PropertyTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-15T06:35:27.966Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-16T02:07:30.230Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1518,7 +1520,7 @@ $request = new Operations\PatchPropertyListingRequest(
         currency: 'USD',
         description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
         houseRules: 'No smoking. No parties or events.',
-        id: 'e824f970-ea99-4782-8b0c-627fb1edca5c',
+        id: '8f3eb99b-cd0b-47a7-9da1-497f21c94188',
         imageUrls: [
             'https://loremflickr.com/23/1328?lock=5798241296161663',
             'https://loremflickr.com/12/1312?lock=6354590363728966',
@@ -1535,7 +1537,7 @@ $request = new Operations\PatchPropertyListingRequest(
         startPriceAmount: 470,
         timezone: 'America/Los_Angeles',
         type: Shared\PropertyListingType::Room,
-        updatedAt: Utils\Utils::parseDateTime('2026-09-22T09:03:13.954Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-23T10:53:30.469Z'),
         webUrl: 'https://tight-pronoun.info/',
     ),
     connectionId: '<id>',
@@ -1603,7 +1605,7 @@ $request = new Operations\PatchPropertyReservationRequest(
         guestEmail: 'anya.parisian@hotmail.com',
         guestName: 'Anya Parisian',
         guests: 6,
-        id: '4f21f3b0-55fd-4bc9-9325-d15ba2f67bed',
+        id: '7cf7282e-ec88-4d87-a2b6-f8f35e029ff3',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1980,
@@ -1640,7 +1642,7 @@ $request = new Operations\PatchPropertyReservationRequest(
         startAt: Utils\Utils::parseDateTime('2022-09-25T17:17:08.838Z'),
         status: Shared\PropertyReservationStatus::Pending,
         totalAmount: 2181.6,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-18T02:11:33.533Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-18T04:55:53.354Z'),
         webUrl: 'https://antique-tennis.biz/',
     ),
     connectionId: '<id>',
@@ -1729,13 +1731,13 @@ $request = new Operations\PatchPropertyReviewRequest(
         ],
         content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
         createdAt: Utils\Utils::parseDateTime('2022-10-17T11:17:07.682Z'),
-        id: '94faeb68-bdcc-4049-bca0-a5645f1c3e9d',
+        id: '123bf61c-20d2-46c5-812a-7ee129d31f02',
         isPublic: true,
         metadata: [],
         privateFeedback: 'Tripudio neque communis.',
         rating: 3,
         source: 'Airbnb',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-03T13:12:38.482Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-04T11:09:04.435Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1817,6 +1819,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removePropertyGuest
+
+Deletes the PropertyGuest identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removePropertyGuest" method="delete" path="/property/{connection_id}/guest/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemovePropertyGuestRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->property->removePropertyGuest(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemovePropertyGuestRequest](../../Models/Operations/RemovePropertyGuestRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\RemovePropertyGuestResponse](../../Models/Operations/RemovePropertyGuestResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removePropertyListing
 
 Deletes the PropertyListing identified by `id`.
@@ -1868,6 +1921,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removePropertyReservation
+
+Deletes the PropertyReservation identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removePropertyReservation" method="delete" path="/property/{connection_id}/reservation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemovePropertyReservationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->property->removePropertyReservation(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                  | Type                                                                                                       | Required                                                                                                   | Description                                                                                                |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                 | [Operations\RemovePropertyReservationRequest](../../Models/Operations/RemovePropertyReservationRequest.md) | :heavy_check_mark:                                                                                         | The request object to use for the request.                                                                 |
+
+### Response
+
+**[?Operations\RemovePropertyReservationResponse](../../Models/Operations/RemovePropertyReservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## updateAnalyticsProperty
 
 Updates the AnalyticsProperty identified by `id`. Provide the unified AnalyticsProperty fields to change in the request body.
@@ -1895,10 +1999,10 @@ $request = new Operations\UpdateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '58c8c411-7ea6-4349-8e6e-7c636f5112a2',
+        id: '4394bdce-b534-4909-b0d2-93749d403078',
         name: 'Daniel, Goldner and Dickinson',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T23:19:55.416Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-14T23:27:37.178Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1971,7 +2075,7 @@ $request = new Operations\UpdatePropertyGuestRequest(
             ),
         ],
         firstName: 'Melissa',
-        id: 'e88df619-612e-4265-9650-699c9883ae4a',
+        id: '2d7dd474-557f-4ff1-8806-59d7f54c5b55',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/male/512/36.jpg',
         language: 'es',
         lastName: 'Green',
@@ -1985,7 +2089,7 @@ $request = new Operations\UpdatePropertyGuestRequest(
                 type: Shared\PropertyTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-15T06:35:27.966Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-16T02:07:30.230Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2072,7 +2176,7 @@ $request = new Operations\UpdatePropertyListingRequest(
         currency: 'USD',
         description: 'Cuius deputo cruentus demoror censura caveo sponte statim vespillo cursim. Arbitro barba summopere. Curto vulticulus comparo surgo vociferor carmen deputo defluo.',
         houseRules: 'No smoking. No parties or events.',
-        id: 'e824f970-ea99-4782-8b0c-627fb1edca5c',
+        id: '8f3eb99b-cd0b-47a7-9da1-497f21c94188',
         imageUrls: [
             'https://loremflickr.com/23/1328?lock=5798241296161663',
             'https://loremflickr.com/12/1312?lock=6354590363728966',
@@ -2089,7 +2193,7 @@ $request = new Operations\UpdatePropertyListingRequest(
         startPriceAmount: 470,
         timezone: 'America/Los_Angeles',
         type: Shared\PropertyListingType::Room,
-        updatedAt: Utils\Utils::parseDateTime('2026-09-22T09:03:13.954Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-23T10:53:30.469Z'),
         webUrl: 'https://tight-pronoun.info/',
     ),
     connectionId: '<id>',
@@ -2157,7 +2261,7 @@ $request = new Operations\UpdatePropertyReservationRequest(
         guestEmail: 'anya.parisian@hotmail.com',
         guestName: 'Anya Parisian',
         guests: 6,
-        id: '4f21f3b0-55fd-4bc9-9325-d15ba2f67bed',
+        id: '7cf7282e-ec88-4d87-a2b6-f8f35e029ff3',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1980,
@@ -2194,7 +2298,7 @@ $request = new Operations\UpdatePropertyReservationRequest(
         startAt: Utils\Utils::parseDateTime('2022-09-25T17:17:08.838Z'),
         status: Shared\PropertyReservationStatus::Pending,
         totalAmount: 2181.6,
-        updatedAt: Utils\Utils::parseDateTime('2022-11-18T02:11:33.533Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-11-18T04:55:53.354Z'),
         webUrl: 'https://antique-tennis.biz/',
     ),
     connectionId: '<id>',
@@ -2283,13 +2387,13 @@ $request = new Operations\UpdatePropertyReviewRequest(
         ],
         content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
         createdAt: Utils\Utils::parseDateTime('2022-10-17T11:17:07.682Z'),
-        id: '94faeb68-bdcc-4049-bca0-a5645f1c3e9d',
+        id: '123bf61c-20d2-46c5-812a-7ee129d31f02',
         isPublic: true,
         metadata: [],
         privateFeedback: 'Tripudio neque communis.',
         rating: 3,
         source: 'Airbnb',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-03T13:12:38.482Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-04T11:09:04.435Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

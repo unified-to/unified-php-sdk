@@ -54,7 +54,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '126543b2-6be2-4b72-bbde-15e4a55983c1',
+        id: '2ac6821e-0043-421d-8abf-2b3597468780',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -62,10 +62,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: '09e9be5a-2661-49a5-a3bd-33a53a9fd4fb',
+                id: '971317c3-dd35-40a2-a84e-c6630fc9f4c0',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '15175174-30b2-46c7-a8d0-bfe51922f6af',
+                        id: '74b213e4-692b-4b3f-810e-2422da979c3a',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -78,10 +78,10 @@ $request = new Operations\CreateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: 'ad11edda-fa32-4427-8355-cd2cca36a410',
+                id: 'a1466fcf-a0fc-485d-8254-e46c6e42428f',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'c055ca73-06aa-424a-b937-9e3061fada03',
+                        id: '00cd0db3-c024-49f6-8278-1f813a49635d',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -97,7 +97,7 @@ $request = new Operations\CreateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T00:57:40.679Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-11T22:57:31.626Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -566,7 +566,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '9b501c96-b6da-4133-81d8-abc047a1a5c7',
+        id: '42500e45-e58b-45e8-a8c2-2be63185c1d8',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -574,10 +574,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: 'e0b4f03d-73e1-497b-891a-be4a40903c7d',
+                id: 'f13fd2b7-397f-4e33-a73c-42afb40a49db',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '18ece5ad-9cd5-445c-b255-681f4dda8891',
+                        id: '4eb8b11f-eeae-4851-b74d-9dfc8b95e27c',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -590,10 +590,10 @@ $request = new Operations\PatchCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '2d6380eb-c546-4bbd-8704-50c8a5712d4c',
+                id: '17f10420-ec68-45e6-bb55-531344562886',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'ea00ba2f-2da1-4807-bdc7-5f9fe5c5882b',
+                        id: '167b7602-a548-4951-850b-3bbae8d7f344',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -609,7 +609,7 @@ $request = new Operations\PatchCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T00:57:40.703Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-11T22:57:31.652Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -699,13 +699,13 @@ $request = new Operations\PatchPropertyReviewRequest(
         ],
         content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
         createdAt: Utils\Utils::parseDateTime('2022-10-17T11:17:07.682Z'),
-        id: '94faeb68-bdcc-4049-bca0-a5645f1c3e9d',
+        id: '123bf61c-20d2-46c5-812a-7ee129d31f02',
         isPublic: true,
         metadata: [],
         privateFeedback: 'Tripudio neque communis.',
         rating: 3,
         source: 'Airbnb',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-03T13:12:38.482Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-04T11:09:04.435Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -873,7 +873,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         content: 'Taedium thymum adipiscor amicitia cui.',
         createdAt: Utils\Utils::parseDateTime('2019-12-12T18:10:22.988Z'),
         helpfulVotes: 66,
-        id: '9b501c96-b6da-4133-81d8-abc047a1a5c7',
+        id: '42500e45-e58b-45e8-a8c2-2be63185c1d8',
         isFeatured: false,
         isPublic: true,
         isVerified: false,
@@ -881,10 +881,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Desipio carpo sol laudantium colo.',
                 height: 749,
-                id: 'e0b4f03d-73e1-497b-891a-be4a40903c7d',
+                id: 'f13fd2b7-397f-4e33-a73c-42afb40a49db',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '18ece5ad-9cd5-445c-b255-681f4dda8891',
+                        id: '4eb8b11f-eeae-4851-b74d-9dfc8b95e27c',
                         slug: 'textor',
                         value: 'quos',
                     ),
@@ -897,10 +897,10 @@ $request = new Operations\UpdateCommerceReviewRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Adopto teneo numquam.',
                 height: 957,
-                id: '2d6380eb-c546-4bbd-8704-50c8a5712d4c',
+                id: '17f10420-ec68-45e6-bb55-531344562886',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'ea00ba2f-2da1-4807-bdc7-5f9fe5c5882b',
+                        id: '167b7602-a548-4951-850b-3bbae8d7f344',
                         slug: 'bos',
                         value: 'casso',
                     ),
@@ -916,7 +916,7 @@ $request = new Operations\UpdateCommerceReviewRequest(
         status: Shared\CommerceReviewStatus::Approved,
         title: 'Coepi adamo amicitia auxilium toties.',
         unhelpfulVotes: 88,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-11T00:57:40.703Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-11T22:57:31.652Z'),
         url: 'https://diligent-bandwidth.biz',
         verifiedPurchase: true,
     ),
@@ -1006,13 +1006,13 @@ $request = new Operations\UpdatePropertyReviewRequest(
         ],
         content: 'Delectus conscendo communis custodia statim. Tutis adsuesco attonbitus comitatus auditor ea tergo nostrum deleo. Comprehendo tertius summopere vaco apparatus incidunt tabula pauci confido colo.',
         createdAt: Utils\Utils::parseDateTime('2022-10-17T11:17:07.682Z'),
-        id: '94faeb68-bdcc-4049-bca0-a5645f1c3e9d',
+        id: '123bf61c-20d2-46c5-812a-7ee129d31f02',
         isPublic: true,
         metadata: [],
         privateFeedback: 'Tripudio neque communis.',
         rating: 3,
         source: 'Airbnb',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-03T13:12:38.482Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-04T11:09:04.435Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

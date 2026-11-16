@@ -165,7 +165,6 @@ class QmsAudit
     public ?\DateTime $startAt = null;
 
     /**
-     * Normalized status of a quality record
      *
      * @var ?\Unified\Unified_to\Models\Shared\QmsAuditStatus $status
      */

@@ -13,7 +13,7 @@ use Unified\Unified_to\Utils\SpeakeasyMetadata;
 class UpdateQmsIssueRequest
 {
     /**
-     * A nonconformance, complaint, audit finding or problem report
+     * A nonconformance, complaint, audit finding or other quality issue
      *
      * @var \Unified\Unified_to\Models\Shared\QmsIssue $qmsIssue
      */

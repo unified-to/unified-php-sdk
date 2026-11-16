@@ -43,7 +43,7 @@ $request = new Operations\CreateLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: 'c91bb9d1-63c7-430f-a7ce-7d5df2fb7929',
+        id: '24095a03-39b1-441e-b04f-f21cb98f9cac',
         instructors: [],
         isActive: true,
         languages: [
@@ -103,7 +103,7 @@ $request = new Operations\CreateLmsContentRequest(
         metadata: [],
         name: 'ut',
         providerName: 'Bins LLC',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-11T00:07:03.417Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-11T08:21:14.398Z'),
         shortDescription: 'Caritas.',
         skills: [
             'trucido',
@@ -118,7 +118,7 @@ $request = new Operations\CreateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-12T06:50:11.564Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-12T15:26:50.498Z'),
     ),
     connectionId: '<id>',
 );
@@ -281,7 +281,7 @@ $request = new Operations\PatchLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: '6868791b-d371-4a50-bc90-3b3d19f1a1d7',
+        id: '92f5c834-f986-4f2d-9664-896361464e31',
         instructors: [],
         isActive: true,
         languages: [
@@ -341,7 +341,7 @@ $request = new Operations\PatchLmsContentRequest(
         metadata: [],
         name: 'ut',
         providerName: 'Bins LLC',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-11T00:07:03.427Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-11T08:21:14.407Z'),
         shortDescription: 'Caritas.',
         skills: [
             'trucido',
@@ -356,7 +356,7 @@ $request = new Operations\PatchLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-12T06:50:11.574Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-12T15:26:50.507Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -470,7 +470,7 @@ $request = new Operations\UpdateLmsContentRequest(
         description: 'Usque laboriosam ventosus adflicto.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: '6868791b-d371-4a50-bc90-3b3d19f1a1d7',
+        id: '92f5c834-f986-4f2d-9664-896361464e31',
         instructors: [],
         isActive: true,
         languages: [
@@ -530,7 +530,7 @@ $request = new Operations\UpdateLmsContentRequest(
         metadata: [],
         name: 'ut',
         providerName: 'Bins LLC',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-11T00:07:03.427Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-11T08:21:14.407Z'),
         shortDescription: 'Caritas.',
         skills: [
             'trucido',
@@ -545,7 +545,7 @@ $request = new Operations\UpdateLmsContentRequest(
         tags: [
             'dens',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-12T06:50:11.574Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-12T15:26:50.507Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

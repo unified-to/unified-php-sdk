@@ -8,6 +8,7 @@
 * [getPlmPart](#getplmpart) - Retrieve a part
 * [listPlmParts](#listplmparts) - List all parts
 * [patchPlmPart](#patchplmpart) - Update a part
+* [removePlmPart](#removeplmpart) - Remove a part
 * [updatePlmPart](#updateplmpart) - Update a part
 
 ## createPlmPart
@@ -39,10 +40,10 @@ $request = new Operations\CreatePlmPartRequest(
         description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
         documentIds: [],
         fileIds: [],
-        id: '861f1bf5-a9e2-40b5-980a-610b941aa7c2',
+        id: '5fd45e3c-4a77-4ace-8d9d-e1e91f54bc9a',
         isAssembly: false,
         lifecycleState: 'Design',
-        masterIdentifier: '3b800de1-38b0-41bf-9eca-d820581c95e9',
+        masterIdentifier: '124a759f-5d74-4b7d-92c0-090f1e40e953',
         metadata: [],
         name: 'grumpy PCB',
         number: 'PRT-009154',
@@ -52,7 +53,7 @@ $request = new Operations\CreatePlmPartRequest(
         status: Shared\PlmPartStatus::InWork,
         type: Shared\PlmPartType::Software,
         unitOfMeasure: 'EA',
-        updatedAt: Utils\Utils::parseDateTime('2021-04-12T16:00:30.057Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-12T22:59:23.166Z'),
         url: 'https://inborn-independence.info',
     ),
     connectionId: '<id>',
@@ -213,10 +214,10 @@ $request = new Operations\PatchPlmPartRequest(
         description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
         documentIds: [],
         fileIds: [],
-        id: 'e43f8e83-35e3-4bde-84db-c5d7868252b7',
+        id: '9bc76715-50e1-46ac-af71-3a2d6eb32abc',
         isAssembly: false,
         lifecycleState: 'Design',
-        masterIdentifier: '9f7dc815-13c2-4008-9fb3-cc4c18b8bc66',
+        masterIdentifier: '46b87da6-e098-45d4-aa18-e68077fa14c2',
         metadata: [],
         name: 'grumpy PCB',
         number: 'PRT-009154',
@@ -226,7 +227,7 @@ $request = new Operations\PatchPlmPartRequest(
         status: Shared\PlmPartStatus::InWork,
         type: Shared\PlmPartType::Software,
         unitOfMeasure: 'EA',
-        updatedAt: Utils\Utils::parseDateTime('2021-04-12T16:00:30.063Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-12T22:59:23.171Z'),
         url: 'https://inborn-independence.info',
     ),
     connectionId: '<id>',
@@ -251,6 +252,57 @@ if ($response->plmPart !== null) {
 ### Response
 
 **[?Operations\PatchPlmPartResponse](../../Models/Operations/PatchPlmPartResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removePlmPart
+
+Deletes the PlmPart identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removePlmPart" method="delete" path="/plm/{connection_id}/part/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemovePlmPartRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->part->removePlmPart(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                          | Type                                                                               | Required                                                                           | Description                                                                        |
+| ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| `$request`                                                                         | [Operations\RemovePlmPartRequest](../../Models/Operations/RemovePlmPartRequest.md) | :heavy_check_mark:                                                                 | The request object to use for the request.                                         |
+
+### Response
+
+**[?Operations\RemovePlmPartResponse](../../Models/Operations/RemovePlmPartResponse.md)**
 
 ### Errors
 
@@ -287,10 +339,10 @@ $request = new Operations\UpdatePlmPartRequest(
         description: 'Pectus tero ulterius aestivus talis tero ullam cruciamentum.',
         documentIds: [],
         fileIds: [],
-        id: 'e43f8e83-35e3-4bde-84db-c5d7868252b7',
+        id: '9bc76715-50e1-46ac-af71-3a2d6eb32abc',
         isAssembly: false,
         lifecycleState: 'Design',
-        masterIdentifier: '9f7dc815-13c2-4008-9fb3-cc4c18b8bc66',
+        masterIdentifier: '46b87da6-e098-45d4-aa18-e68077fa14c2',
         metadata: [],
         name: 'grumpy PCB',
         number: 'PRT-009154',
@@ -300,7 +352,7 @@ $request = new Operations\UpdatePlmPartRequest(
         status: Shared\PlmPartStatus::InWork,
         type: Shared\PlmPartType::Software,
         unitOfMeasure: 'EA',
-        updatedAt: Utils\Utils::parseDateTime('2021-04-12T16:00:30.063Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-04-12T22:59:23.171Z'),
         url: 'https://inborn-independence.info',
     ),
     connectionId: '<id>',

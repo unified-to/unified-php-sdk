@@ -42,6 +42,7 @@
 * [patchComputeInstance](#patchcomputeinstance) - Update an instance
 * [patchComputeKey](#patchcomputekey) - Update a key
 * [patchComputeService](#patchcomputeservice) - Update a service
+* [patchComputeSnapshot](#patchcomputesnapshot) - Update a snapshot
 * [patchComputeTemplate](#patchcomputetemplate) - Update a template
 * [patchComputeVolume](#patchcomputevolume) - Update a volume
 * [removeComputeDeployment](#removecomputedeployment) - Remove a deployment
@@ -59,6 +60,7 @@
 * [updateComputeInstance](#updatecomputeinstance) - Update an instance
 * [updateComputeKey](#updatecomputekey) - Update a key
 * [updateComputeService](#updatecomputeservice) - Update a service
+* [updateComputeSnapshot](#updatecomputesnapshot) - Update a snapshot
 * [updateComputeTemplate](#updatecomputetemplate) - Update a template
 * [updateComputeVolume](#updatecomputevolume) - Update a volume
 
@@ -92,13 +94,13 @@ $request = new Operations\CreateComputeDeploymentRequest(
         commitMessage: 'copy primary pixel',
         createdAt: Utils\Utils::parseDateTime('2022-06-07T03:52:04.613Z'),
         environment: Shared\Environment::Preview,
-        finishedAt: Utils\Utils::parseDateTime('2025-09-17T00:42:02.928Z'),
-        id: '739d9d89-3bea-49bd-8fda-0519f37e78a7',
+        finishedAt: Utils\Utils::parseDateTime('2025-09-17T20:16:33.431Z'),
+        id: '135399bd-4afc-4085-994f-5d4b4e8d70ba',
         metadata: [],
-        startedAt: Utils\Utils::parseDateTime('2025-04-26T12:11:47.481Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-27T05:25:34.652Z'),
         status: Shared\ComputeDeploymentStatus::Live,
         trigger: Shared\Trigger::Api,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-22T00:13:11.231Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-22T22:50:02.924Z'),
         url: 'https://comfortable-petal.name',
     ),
     connectionId: '<id>',
@@ -155,12 +157,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '09778491-108d-4eee-b311-d21d9d643cd1',
+        id: '5eb498a8-94e4-4462-a50a-3eb13db80486',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-17T20:42:47.277Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-18T11:51:05.949Z'),
     ),
     connectionId: '<id>',
 );
@@ -219,11 +221,11 @@ $request = new Operations\CreateComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '6e3d14ed-d355-4413-9767-5bc946b22379',
+        id: '23776726-d0b4-4dae-bf98-b934d4ade924',
         isSecret: true,
         metadata: [],
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-22T06:18:07.542Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-23T02:09:28.210Z'),
     ),
     connectionId: '<id>',
 );
@@ -296,7 +298,7 @@ $request = new Operations\CreateComputeInstanceRequest(
         ],
         gpuCount: 0,
         hasInternetAccess: true,
-        id: 'f6230136-5df7-4736-9ba1-1955cd980e9a',
+        id: 'ce016187-322c-4cf2-a073-90934db3d860',
         image: 'ubuntu:24.04',
         market: Shared\Market::Spot,
         memoryMb: 2048,
@@ -311,11 +313,11 @@ $request = new Operations\CreateComputeInstanceRequest(
             port: 22,
             username: 'root',
         ),
-        startedAt: Utils\Utils::parseDateTime('2025-04-08T03:35:38.747Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-08T19:44:31.896Z'),
         status: Shared\ComputeInstanceStatus::Error,
         statusReason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
         type: Shared\ComputeInstanceType::Baremetal,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-02T19:17:32.793Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-03T12:57:16.464Z'),
     ),
     connectionId: '<id>',
 );
@@ -371,11 +373,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '0eb956b3-8e7c-4d13-90cd-8c73f53cbbd0',
+        id: 'a06ce0f1-be56-4760-a5d9-817ae05732b4',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-15T21:12:34.270Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-16T06:41:22.429Z'),
     ),
     connectionId: '<id>',
 );
@@ -433,7 +435,7 @@ $request = new Operations\CreateComputeServiceRequest(
         branch: 'main',
         buildCommand: 'npm run build',
         createdAt: Utils\Utils::parseDateTime('2023-10-04T02:06:29.391Z'),
-        id: 'c7b8d06c-1359-46a4-bb2c-14cab61ce4ac',
+        id: '9f98cf23-69bd-4981-810f-c1d3e2a80133',
         instanceCount: 6,
         maxInstanceCount: 6,
         metadata: [],
@@ -444,7 +446,7 @@ $request = new Operations\CreateComputeServiceRequest(
         runtime: 'python',
         status: Shared\ComputeServiceStatus::Suspended,
         type: Shared\ComputeServiceType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-16T23:13:24.441Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-17T12:17:14.868Z'),
         url: 'https://tame-sideboard.rotating-shoulder.biz',
     ),
     connectionId: '<id>',
@@ -501,13 +503,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: '2d6e80f2-2209-445b-9f83-03d1544c83fe',
+        id: '8051edc7-5e22-4bb3-922d-c18ed28f7bba',
         metadata: [],
         name: 'snap-alius',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-22T01:23:59.715Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T00:58:54.499Z'),
     ),
     connectionId: '<id>',
 );
@@ -568,10 +570,10 @@ $request = new Operations\CreateComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: '78a39781-eda1-4e17-a77c-aa437b07bd59',
+        id: 'c07ed1af-a728-43d4-aaee-6a67f028e2bc',
         image: 'perfumed-molasses/cohibeo:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-04-13T19:49:30.908Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-04-14T18:08:18.265Z'),
         memoryMb: 8192,
         metadata: [],
         name: 'multi-byte-card',
@@ -579,7 +581,7 @@ $request = new Operations\CreateComputeTemplateRequest(
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-26T05:10:17.734Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-26T19:28:05.758Z'),
     ),
     connectionId: '<id>',
 );
@@ -635,14 +637,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeVolumeRequest(
     computeVolume: new Shared\ComputeVolume(
         createdAt: Utils\Utils::parseDateTime('2022-11-15T15:12:48.055Z'),
-        id: 'a5db6e1d-625f-44f9-bd25-94649c77dcec',
+        id: '6256cebb-39ac-4636-af0c-325eec114c25',
         instanceIds: [],
         metadata: [],
         name: 'vol-solum',
         sizeMb: 1024000,
         status: Shared\ComputeVolumeStatus::Other,
         type: Shared\ComputeVolumeType::HighPerformance,
-        updatedAt: Utils\Utils::parseDateTime('2024-02-17T17:49:23.631Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-02-18T02:09:19.617Z'),
         usedMb: 524986,
     ),
     connectionId: '<id>',
@@ -1864,13 +1866,13 @@ $request = new Operations\PatchComputeDeploymentRequest(
         commitMessage: 'copy primary pixel',
         createdAt: Utils\Utils::parseDateTime('2022-06-07T03:52:04.613Z'),
         environment: Shared\Environment::Preview,
-        finishedAt: Utils\Utils::parseDateTime('2025-09-17T00:42:02.940Z'),
-        id: '42d5e107-3049-4b00-9ad9-7fc76632dd8d',
+        finishedAt: Utils\Utils::parseDateTime('2025-09-17T20:16:33.439Z'),
+        id: '7b0a6e04-0bfb-4b15-bdf5-4c6eeb437e56',
         metadata: [],
-        startedAt: Utils\Utils::parseDateTime('2025-04-26T12:11:47.492Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-27T05:25:34.659Z'),
         status: Shared\ComputeDeploymentStatus::Live,
         trigger: Shared\Trigger::Api,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-22T00:13:11.245Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-22T22:50:02.933Z'),
         url: 'https://comfortable-petal.name',
     ),
     connectionId: '<id>',
@@ -1928,12 +1930,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '65b41917-a361-45b1-8703-6f01890dd1af',
+        id: '980fdb16-3b38-478b-a5a7-f2e0a031b32a',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-17T20:42:47.284Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-18T11:51:05.954Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1993,11 +1995,11 @@ $request = new Operations\PatchComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '9d6440c8-292d-4aa8-976b-2a54af9c1120',
+        id: '0ccb1825-0c5c-44e9-b079-6dd748b86887',
         isSecret: true,
         metadata: [],
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-22T06:18:07.555Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-23T02:09:28.218Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2071,7 +2073,7 @@ $request = new Operations\PatchComputeInstanceRequest(
         ],
         gpuCount: 0,
         hasInternetAccess: true,
-        id: '5be2f824-8722-42c2-9bcd-ebf7cab70418',
+        id: 'f69f301b-06c9-4982-a425-854c3c11a865',
         image: 'ubuntu:24.04',
         market: Shared\Market::Spot,
         memoryMb: 2048,
@@ -2086,11 +2088,11 @@ $request = new Operations\PatchComputeInstanceRequest(
             port: 22,
             username: 'root',
         ),
-        startedAt: Utils\Utils::parseDateTime('2025-04-08T03:35:38.763Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-08T19:44:31.920Z'),
         status: Shared\ComputeInstanceStatus::Error,
         statusReason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
         type: Shared\ComputeInstanceType::Baremetal,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-02T19:17:32.810Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-03T12:57:16.490Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2147,11 +2149,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '807e78f0-2db6-4e1e-a155-61bb786c7851',
+        id: 'ccde1163-3fea-4d23-9961-4e06047ae481',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-15T21:12:34.276Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-16T06:41:22.433Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2210,7 +2212,7 @@ $request = new Operations\PatchComputeServiceRequest(
         branch: 'main',
         buildCommand: 'npm run build',
         createdAt: Utils\Utils::parseDateTime('2023-10-04T02:06:29.391Z'),
-        id: 'ca79315f-bb67-4260-b13d-f7e9e88ac82f',
+        id: '428adcb5-327d-4861-adfa-57dbfcfadc22',
         instanceCount: 6,
         maxInstanceCount: 6,
         metadata: [],
@@ -2221,7 +2223,7 @@ $request = new Operations\PatchComputeServiceRequest(
         runtime: 'python',
         status: Shared\ComputeServiceStatus::Suspended,
         type: Shared\ComputeServiceType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-16T23:13:24.451Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-17T12:17:14.876Z'),
         url: 'https://tame-sideboard.rotating-shoulder.biz',
     ),
     connectionId: '<id>',
@@ -2246,6 +2248,69 @@ if ($response->computeService !== null) {
 ### Response
 
 **[?Operations\PatchComputeServiceResponse](../../Models/Operations/PatchComputeServiceResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchComputeSnapshot" method="patch" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchComputeSnapshotRequest(
+    computeSnapshot: new Shared\ComputeSnapshot(
+        createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
+        id: '61f1ee1a-e728-466c-ac34-d1ac62844197',
+        metadata: [],
+        name: 'snap-alius',
+        sizeMb: 169984,
+        status: Shared\ComputeSnapshotStatus::Deleting,
+        type: Shared\ComputeSnapshotType::Disk,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T00:58:54.506Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->compute->patchComputeSnapshot(
+    request: $request
+);
+
+if ($response->computeSnapshot !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\PatchComputeSnapshotRequest](../../Models/Operations/PatchComputeSnapshotRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\PatchComputeSnapshotResponse](../../Models/Operations/PatchComputeSnapshotResponse.md)**
 
 ### Errors
 
@@ -2284,10 +2349,10 @@ $request = new Operations\PatchComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: '66ea7927-a75e-438a-bd6d-d18c9cf7003c',
+        id: '01ca295d-74d0-4b69-b523-f681cf79008a',
         image: 'perfumed-molasses/cohibeo:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-04-13T19:49:30.924Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-04-14T18:08:18.282Z'),
         memoryMb: 8192,
         metadata: [],
         name: 'multi-byte-card',
@@ -2295,7 +2360,7 @@ $request = new Operations\PatchComputeTemplateRequest(
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-26T05:10:17.745Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-26T19:28:05.768Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2352,14 +2417,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeVolumeRequest(
     computeVolume: new Shared\ComputeVolume(
         createdAt: Utils\Utils::parseDateTime('2022-11-15T15:12:48.055Z'),
-        id: '3bb408bf-167f-47e3-a952-47f2b4494b8e',
+        id: '859ffe27-713a-42cd-9d5e-0e3ffab1e5ab',
         instanceIds: [],
         metadata: [],
         name: 'vol-solum',
         sizeMb: 1024000,
         status: Shared\ComputeVolumeStatus::Other,
         type: Shared\ComputeVolumeType::HighPerformance,
-        updatedAt: Utils\Utils::parseDateTime('2024-02-17T17:49:23.636Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-02-18T02:09:19.621Z'),
         usedMb: 524986,
     ),
     connectionId: '<id>',
@@ -2880,13 +2945,13 @@ $request = new Operations\UpdateComputeDeploymentRequest(
         commitMessage: 'copy primary pixel',
         createdAt: Utils\Utils::parseDateTime('2022-06-07T03:52:04.613Z'),
         environment: Shared\Environment::Preview,
-        finishedAt: Utils\Utils::parseDateTime('2025-09-17T00:42:02.940Z'),
-        id: '42d5e107-3049-4b00-9ad9-7fc76632dd8d',
+        finishedAt: Utils\Utils::parseDateTime('2025-09-17T20:16:33.439Z'),
+        id: '7b0a6e04-0bfb-4b15-bdf5-4c6eeb437e56',
         metadata: [],
-        startedAt: Utils\Utils::parseDateTime('2025-04-26T12:11:47.492Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-27T05:25:34.659Z'),
         status: Shared\ComputeDeploymentStatus::Live,
         trigger: Shared\Trigger::Api,
-        updatedAt: Utils\Utils::parseDateTime('2026-03-22T00:13:11.245Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-22T22:50:02.933Z'),
         url: 'https://comfortable-petal.name',
     ),
     connectionId: '<id>',
@@ -2944,12 +3009,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '65b41917-a361-45b1-8703-6f01890dd1af',
+        id: '980fdb16-3b38-478b-a5a7-f2e0a031b32a',
         isPrimary: false,
         metadata: [],
         name: 'mysterious-republican.usable-section.info',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-17T20:42:47.284Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-18T11:51:05.954Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3009,11 +3074,11 @@ $request = new Operations\UpdateComputeEnvvarRequest(
         environments: [
             Shared\PropertyComputeEnvvarEnvironments::Preview,
         ],
-        id: '9d6440c8-292d-4aa8-976b-2a54af9c1120',
+        id: '0ccb1825-0c5c-44e9-b079-6dd748b86887',
         isSecret: true,
         metadata: [],
         name: 'AEGER_SUBSTANTIA',
-        updatedAt: Utils\Utils::parseDateTime('2025-07-22T06:18:07.555Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-23T02:09:28.218Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3087,7 +3152,7 @@ $request = new Operations\UpdateComputeInstanceRequest(
         ],
         gpuCount: 0,
         hasInternetAccess: true,
-        id: '5be2f824-8722-42c2-9bcd-ebf7cab70418',
+        id: 'f69f301b-06c9-4982-a425-854c3c11a865',
         image: 'ubuntu:24.04',
         market: Shared\Market::Spot,
         memoryMb: 2048,
@@ -3102,11 +3167,11 @@ $request = new Operations\UpdateComputeInstanceRequest(
             port: 22,
             username: 'root',
         ),
-        startedAt: Utils\Utils::parseDateTime('2025-04-08T03:35:38.763Z'),
+        startedAt: Utils\Utils::parseDateTime('2025-04-08T19:44:31.920Z'),
         status: Shared\ComputeInstanceStatus::Error,
         statusReason: 'Sponte quasi adversus alioqui reiciendis arca carmen canis.',
         type: Shared\ComputeInstanceType::Baremetal,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-02T19:17:32.810Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-03T12:57:16.490Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3163,11 +3228,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '807e78f0-2db6-4e1e-a155-61bb786c7851',
+        id: 'ccde1163-3fea-4d23-9961-4e06047ae481',
         metadata: [],
         name: 'nienow-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-15T21:12:34.276Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-16T06:41:22.433Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3226,7 +3291,7 @@ $request = new Operations\UpdateComputeServiceRequest(
         branch: 'main',
         buildCommand: 'npm run build',
         createdAt: Utils\Utils::parseDateTime('2023-10-04T02:06:29.391Z'),
-        id: 'ca79315f-bb67-4260-b13d-f7e9e88ac82f',
+        id: '428adcb5-327d-4861-adfa-57dbfcfadc22',
         instanceCount: 6,
         maxInstanceCount: 6,
         metadata: [],
@@ -3237,7 +3302,7 @@ $request = new Operations\UpdateComputeServiceRequest(
         runtime: 'python',
         status: Shared\ComputeServiceStatus::Suspended,
         type: Shared\ComputeServiceType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-16T23:13:24.451Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-17T12:17:14.876Z'),
         url: 'https://tame-sideboard.rotating-shoulder.biz',
     ),
     connectionId: '<id>',
@@ -3262,6 +3327,69 @@ if ($response->computeService !== null) {
 ### Response
 
 **[?Operations\UpdateComputeServiceResponse](../../Models/Operations/UpdateComputeServiceResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateComputeSnapshot
+
+Updates the ComputeSnapshot identified by `id`. Provide the unified ComputeSnapshot fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateComputeSnapshot" method="put" path="/compute/{connection_id}/snapshot/{id}" example="compute_snapshot" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateComputeSnapshotRequest(
+    computeSnapshot: new Shared\ComputeSnapshot(
+        createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
+        id: '61f1ee1a-e728-466c-ac34-d1ac62844197',
+        metadata: [],
+        name: 'snap-alius',
+        sizeMb: 169984,
+        status: Shared\ComputeSnapshotStatus::Deleting,
+        type: Shared\ComputeSnapshotType::Disk,
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T00:58:54.506Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->compute->updateComputeSnapshot(
+    request: $request
+);
+
+if ($response->computeSnapshot !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\UpdateComputeSnapshotRequest](../../Models/Operations/UpdateComputeSnapshotRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\UpdateComputeSnapshotResponse](../../Models/Operations/UpdateComputeSnapshotResponse.md)**
 
 ### Errors
 
@@ -3300,10 +3428,10 @@ $request = new Operations\UpdateComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: '66ea7927-a75e-438a-bd6d-d18c9cf7003c',
+        id: '01ca295d-74d0-4b69-b523-f681cf79008a',
         image: 'perfumed-molasses/cohibeo:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-04-13T19:49:30.924Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-04-14T18:08:18.282Z'),
         memoryMb: 8192,
         metadata: [],
         name: 'multi-byte-card',
@@ -3311,7 +3439,7 @@ $request = new Operations\UpdateComputeTemplateRequest(
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-26T05:10:17.745Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-02-26T19:28:05.768Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3368,14 +3496,14 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeVolumeRequest(
     computeVolume: new Shared\ComputeVolume(
         createdAt: Utils\Utils::parseDateTime('2022-11-15T15:12:48.055Z'),
-        id: '3bb408bf-167f-47e3-a952-47f2b4494b8e',
+        id: '859ffe27-713a-42cd-9d5e-0e3ffab1e5ab',
         instanceIds: [],
         metadata: [],
         name: 'vol-solum',
         sizeMb: 1024000,
         status: Shared\ComputeVolumeStatus::Other,
         type: Shared\ComputeVolumeType::HighPerformance,
-        updatedAt: Utils\Utils::parseDateTime('2024-02-17T17:49:23.636Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-02-18T02:09:19.621Z'),
         usedMb: 524986,
     ),
     connectionId: '<id>',

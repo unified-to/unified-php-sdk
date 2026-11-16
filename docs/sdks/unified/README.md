@@ -30,6 +30,7 @@
 * [listUnifiedWebhooks](#listunifiedwebhooks) - Returns all registered webhooks
 * [listUnifiedWorkspaceintegrations](#listunifiedworkspaceintegrations) - List workspace integrations
 * [patchUnifiedConnection](#patchunifiedconnection) - Update connection
+* [patchUnifiedSecretsmanager](#patchunifiedsecretsmanager) - Update secrets manager
 * [patchUnifiedWebhook](#patchunifiedwebhook) - Update webhook subscription
 * [patchUnifiedWebhookResume](#patchunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [patchUnifiedWebhookTrigger](#patchunifiedwebhooktrigger) - Trigger webhook
@@ -40,6 +41,7 @@
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [removeUnifiedWorkspaceintegration](#removeunifiedworkspaceintegration) - Remove workspace integration
 * [updateUnifiedConnection](#updateunifiedconnection) - Update connection
+* [updateUnifiedSecretsmanager](#updateunifiedsecretsmanager) - Update secrets manager
 * [updateUnifiedWebhook](#updateunifiedwebhook) - Update webhook subscription
 * [updateUnifiedWebhookResume](#updateunifiedwebhookresume) - Resume an unhealthy webhook subscription
 * [updateUnifiedWebhookTrigger](#updateunifiedwebhooktrigger) - Trigger webhook
@@ -1326,6 +1328,65 @@ if ($response->connection !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchUnifiedSecretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchUnifiedSecretsmanager" method="patch" path="/unified/secretsmanager/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchUnifiedSecretsmanagerRequest(
+    secretsManager: new Shared\SecretsManager(
+        auth: [
+            'key' => '<value>',
+            'key1' => '<value>',
+        ],
+        name: '<value>',
+        type: Shared\SecretsManagerType::Akeyless,
+    ),
+    id: '<id>',
+);
+
+$response = $sdk->unified->patchUnifiedSecretsmanager(
+    request: $request
+);
+
+if ($response->secretsManager !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\PatchUnifiedSecretsmanagerRequest](../../Models/Operations/PatchUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\PatchUnifiedSecretsmanagerResponse](../../Models/Operations/PatchUnifiedSecretsmanagerResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## patchUnifiedWebhook
 
 Update webhook subscription
@@ -1836,6 +1897,64 @@ if ($response->connection !== null) {
 ### Response
 
 **[?Operations\UpdateUnifiedConnectionResponse](../../Models/Operations/UpdateUnifiedConnectionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateUnifiedSecretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateUnifiedSecretsmanager" method="put" path="/unified/secretsmanager/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateUnifiedSecretsmanagerRequest(
+    secretsManager: new Shared\SecretsManager(
+        auth: [
+            'key' => '<value>',
+        ],
+        name: '<value>',
+        type: Shared\SecretsManagerType::Alibabacloud,
+    ),
+    id: '<id>',
+);
+
+$response = $sdk->unified->updateUnifiedSecretsmanager(
+    request: $request
+);
+
+if ($response->secretsManager !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\UpdateUnifiedSecretsmanagerRequest](../../Models/Operations/UpdateUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+### Response
+
+**[?Operations\UpdateUnifiedSecretsmanagerResponse](../../Models/Operations/UpdateUnifiedSecretsmanagerResponse.md)**
 
 ### Errors
 

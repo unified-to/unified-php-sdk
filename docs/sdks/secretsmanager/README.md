@@ -9,7 +9,9 @@
 * [listUnifiedSecretsmanagerInstructions](#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [listUnifiedSecretsmanagerSecrets](#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](#listunifiedsecretsmanagers) - List secrets managers
+* [patchUnifiedSecretsmanager](#patchunifiedsecretsmanager) - Update secrets manager
 * [removeUnifiedSecretsmanager](#removeunifiedsecretsmanager) - Remove secrets manager
+* [updateUnifiedSecretsmanager](#updateunifiedsecretsmanager) - Update secrets manager
 
 ## createUnifiedSecretsmanager
 
@@ -254,6 +256,65 @@ if ($response->secretsManagers !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## patchUnifiedSecretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchUnifiedSecretsmanager" method="patch" path="/unified/secretsmanager/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchUnifiedSecretsmanagerRequest(
+    secretsManager: new Shared\SecretsManager(
+        auth: [
+            'key' => '<value>',
+            'key1' => '<value>',
+        ],
+        name: '<value>',
+        type: Shared\SecretsManagerType::Akeyless,
+    ),
+    id: '<id>',
+);
+
+$response = $sdk->secretsmanager->patchUnifiedSecretsmanager(
+    request: $request
+);
+
+if ($response->secretsManager !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                    | Type                                                                                                         | Required                                                                                                     | Description                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                                   | [Operations\PatchUnifiedSecretsmanagerRequest](../../Models/Operations/PatchUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                           | The request object to use for the request.                                                                   |
+
+### Response
+
+**[?Operations\PatchUnifiedSecretsmanagerResponse](../../Models/Operations/PatchUnifiedSecretsmanagerResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeUnifiedSecretsmanager
 
 Remove secrets manager
@@ -297,6 +358,64 @@ if ($response->statusCode === 200) {
 ### Response
 
 **[?Operations\RemoveUnifiedSecretsmanagerResponse](../../Models/Operations/RemoveUnifiedSecretsmanagerResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateUnifiedSecretsmanager
+
+Update secrets manager
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateUnifiedSecretsmanager" method="put" path="/unified/secretsmanager/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateUnifiedSecretsmanagerRequest(
+    secretsManager: new Shared\SecretsManager(
+        auth: [
+            'key' => '<value>',
+        ],
+        name: '<value>',
+        type: Shared\SecretsManagerType::Alibabacloud,
+    ),
+    id: '<id>',
+);
+
+$response = $sdk->secretsmanager->updateUnifiedSecretsmanager(
+    request: $request
+);
+
+if ($response->secretsManager !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                                      | Type                                                                                                           | Required                                                                                                       | Description                                                                                                    |
+| -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                                     | [Operations\UpdateUnifiedSecretsmanagerRequest](../../Models/Operations/UpdateUnifiedSecretsmanagerRequest.md) | :heavy_check_mark:                                                                                             | The request object to use for the request.                                                                     |
+
+### Response
+
+**[?Operations\UpdateUnifiedSecretsmanagerResponse](../../Models/Operations/UpdateUnifiedSecretsmanagerResponse.md)**
 
 ### Errors
 

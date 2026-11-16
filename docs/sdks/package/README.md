@@ -45,7 +45,7 @@ $request = new Operations\CreateAssessmentPackageRequest(
         description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: 'd92a793c-bca2-40b2-92b8-ffa58af9f008',
+        id: 'aa045730-48b7-42d5-bf27-5ba2983a95b2',
         infoUrl: 'https://ugly-instance.biz/',
         integrationTypes: [
             'viridis',
@@ -60,7 +60,7 @@ $request = new Operations\CreateAssessmentPackageRequest(
             'clamo',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-30T18:53:16.799Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-01T00:38:05.516Z'),
     ),
     connectionId: '<id>',
 );
@@ -324,7 +324,7 @@ $request = new Operations\PatchAssessmentPackageRequest(
         description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: '6055d655-0971-4f81-9d2e-01620be42abb',
+        id: '968085b7-b3b9-45e1-9615-c6570611617e',
         infoUrl: 'https://ugly-instance.biz/',
         integrationTypes: [
             'viridis',
@@ -339,7 +339,7 @@ $request = new Operations\PatchAssessmentPackageRequest(
             'clamo',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-30T18:53:16.802Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-01T00:38:05.519Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -453,7 +453,7 @@ $request = new Operations\UpdateAssessmentPackageRequest(
         description: 'Eos aedificium consectetur urbs. Admitto summa accusator tabesco distinctio vapulus culpo templum ancilla.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: '6055d655-0971-4f81-9d2e-01620be42abb',
+        id: '968085b7-b3b9-45e1-9615-c6570611617e',
         infoUrl: 'https://ugly-instance.biz/',
         integrationTypes: [
             'viridis',
@@ -468,7 +468,7 @@ $request = new Operations\UpdateAssessmentPackageRequest(
             'clamo',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-09-30T18:53:16.802Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-01T00:38:05.519Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

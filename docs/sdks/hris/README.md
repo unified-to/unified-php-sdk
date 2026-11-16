@@ -67,6 +67,7 @@
 * [patchHrisGroup](#patchhrisgroup) - Update a group
 * [patchHrisJob](#patchhrisjob) - Update a job
 * [patchHrisLocation](#patchhrislocation) - Update a location
+* [patchHrisTaxonomy](#patchhristaxonomy) - Update a taxonomy
 * [patchHrisTimeoff](#patchhristimeoff) - Update a timeoff
 * [patchHrisTimeshift](#patchhristimeshift) - Update a timeshift
 * [removeHrisAttendance](#removehrisattendance) - Remove an attendance
@@ -81,6 +82,7 @@
 * [removeHrisGroup](#removehrisgroup) - Remove a group
 * [removeHrisJob](#removehrisjob) - Remove a job
 * [removeHrisLocation](#removehrislocation) - Remove a location
+* [removeHrisTaxonomy](#removehristaxonomy) - Remove a taxonomy
 * [removeHrisTimeoff](#removehristimeoff) - Remove a timeoff
 * [removeHrisTimeshift](#removehristimeshift) - Remove a timeshift
 * [updateHrisAttendance](#updatehrisattendance) - Update an attendance
@@ -95,6 +97,7 @@
 * [updateHrisGroup](#updatehrisgroup) - Update a group
 * [updateHrisJob](#updatehrisjob) - Update a job
 * [updateHrisLocation](#updatehrislocation) - Update a location
+* [updateHrisTaxonomy](#updatehristaxonomy) - Update a taxonomy
 * [updateHrisTimeoff](#updatehristimeoff) - Update a timeoff
 * [updateHrisTimeshift](#updatehristimeshift) - Update a timeshift
 
@@ -131,32 +134,32 @@ $request = new Operations\CreateHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-09-20T02:38:24.909Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-09-20T03:11:44.712Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 51,
-                endAt: Utils\Utils::parseDateTime('2024-02-26T14:28:37.853Z'),
-                id: 'db5dc98c-0543-43b9-a489-fb8ceb1a44c1',
+                endAt: Utils\Utils::parseDateTime('2024-02-27T03:17:49.750Z'),
+                id: 'e3f5cca1-33d9-4148-9518-b2386b297e30',
                 isPaid: false,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-11-09T14:21:15.188Z'),
+                startAt: Utils\Utils::parseDateTime('2023-11-10T01:40:16.359Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'EUR',
         declaredTipsAmount: 54,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-05-06T06:41:10.755Z'),
+        endAt: Utils\Utils::parseDateTime('2024-05-06T20:28:01.154Z'),
         hourlyRate: 16,
         hours: 10,
-        id: '46e16d5d-e0b8-4528-964a-747445bf427e',
+        id: 'b3b03504-f863-4ee7-a32c-3ed801faf942',
         jobName: 'Human Accountability Administrator',
         metadata: [],
         nonCashTipsAmount: 167,
-        startAt: Utils\Utils::parseDateTime('2021-11-12T05:59:41.353Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-12T07:16:58.874Z'),
         status: Shared\HrisAttendanceStatus::Open,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-22T00:08:46.330Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-22T02:24:36.007Z'),
     ),
     connectionId: '<id>',
 );
@@ -218,7 +221,7 @@ $request = new Operations\CreateHrisBankaccountRequest(
         countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
         currency: 'USD',
-        id: '9e5af07c-8eea-4a12-b8de-9e87c6af4656',
+        id: '71772de1-fcc9-4c5d-a5b0-26dca9186545',
         isPrimary: true,
         metadata: [],
         name: 'Granville Schumm - Checking',
@@ -226,7 +229,7 @@ $request = new Operations\CreateHrisBankaccountRequest(
         routingNumber: '448650724',
         splitAmount: 98,
         splitType: Shared\SplitType::Percentage,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-21T11:34:46.903Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-22T09:05:18.433Z'),
     ),
     connectionId: '<id>',
 );
@@ -289,13 +292,13 @@ $request = new Operations\CreateHrisBenefitRequest(
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
         frequency: Shared\HrisBenefitFrequency::Month,
-        id: 'd8808a43-e496-4bab-adc2-4e095ac03c36',
+        id: '374c5dc2-75ad-4545-8d9d-817ca71e08e6',
         isActive: false,
         metadata: [],
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
         type: Shared\HrisBenefitType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-31T17:01:04.352Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-01T04:34:21.407Z'),
     ),
     connectionId: '<id>',
 );
@@ -359,11 +362,11 @@ $request = new Operations\CreateHrisCompanyRequest(
             regionCode: 'MO',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: '27c2cacd-ff27-4ba5-a9b2-52f4805b7136',
+        id: '50deb9cd-a1c8-4ffa-ae98-c4aa67e3c030',
         legalName: 'Gottlieb Group LLC',
         metadata: [],
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-11-02T10:33:51.654Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-11-03T12:54:10.617Z'),
     ),
     connectionId: '<id>',
 );
@@ -425,14 +428,14 @@ $request = new Operations\CreateHrisDeductionRequest(
         employerType: Shared\EmployerType::Percentage,
         frequency: Shared\HrisDeductionFrequency::OneTime,
         garnishmentType: Shared\GarnishmentType::ChildSupport,
-        id: '7c40a10e-391c-4881-8a36-c813f38afd7a',
+        id: 'a8b9dd12-fb63-467e-86b6-8da1543caec9',
         isActive: true,
         maxAmount: 21794,
         metadata: [],
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-04-03T06:51:57.513Z'),
+        startAt: Utils\Utils::parseDateTime('2025-04-04T03:02:35.634Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-06T14:48:25.119Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-07T07:06:40.561Z'),
     ),
     connectionId: '<id>',
 );
@@ -495,7 +498,7 @@ $request = new Operations\CreateHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: false,
-        id: '67c28a5d-0062-46fb-bc19-18c5fc7f6117',
+        id: '22349424-b6e2-4929-b3f4-1004b01fdb21',
         isMissing: false,
         manufacturer: 'Hackett Inc',
         metadata: [],
@@ -503,7 +506,7 @@ $request = new Operations\CreateHrisDeviceRequest(
         name: 'august-laptop',
         os: 'transmitter',
         osVersion: '8.4.8',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-22T02:16:00.078Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-22T16:56:07.531Z'),
         version: '4.15.7',
     ),
     connectionId: '<id>',
@@ -562,10 +565,10 @@ $request = new Operations\CreateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: '9268f8e3-a2a3-474e-b82c-ce2052be58ee',
+        id: '830c51fe-cb8c-439b-ae33-31e312cf15c8',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-30T02:04:17.796Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-30T21:45:06.055Z'),
     ),
     connectionId: '<id>',
 );
@@ -624,12 +627,12 @@ $request = new Operations\CreateHrisEarningRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
         currency: 'USD',
         frequency: Shared\HrisEarningFrequency::Semimonthly,
-        id: 'd328b0aa-232d-48be-8572-9b951592c359',
+        id: 'dc1ddb10-080c-46de-b6ab-80d5042a95ed',
         metadata: [],
         notes: 'Deporto truculenter vinum beatae.',
-        startAt: Utils\Utils::parseDateTime('2022-08-05T17:54:07.156Z'),
+        startAt: Utils\Utils::parseDateTime('2022-08-06T05:52:27.626Z'),
         status: Shared\HrisEarningStatus::Ended,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-12T04:37:46.793Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-12T08:10:46.168Z'),
     ),
     connectionId: '<id>',
 );
@@ -720,7 +723,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
         gender: Shared\HrisEmployeeGender::Male,
         hasMfa: true,
         hiredAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
-        id: 'e1938b5b-4b58-45d9-9717-d8fdcfa3cd1e',
+        id: '4a2c7a2e-6f81-4c61-bc97-0040a1867a1a',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
         languageLocale: 'in',
         lastName: 'Prohaska',
@@ -732,7 +735,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: '790761a1-e51f-43e2-9cd0-c27579bc049d',
+                id: 'df309302-3f2b-49b6-8d34-c3721e94f7f3',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tutis',
@@ -780,7 +783,7 @@ $request = new Operations\CreateHrisEmployeeRequest(
         timeoffDaysUsed: 9,
         timezone: 'Europe/Ljubljana',
         title: 'District Branding Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2020-07-22T02:56:11.737Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-07-22T06:04:17.882Z'),
     ),
     connectionId: '<id>',
 );
@@ -837,12 +840,12 @@ $request = new Operations\CreateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '793e0eb3-fa67-41c4-8219-1634ac04fa29',
+        id: '665b34c6-6f82-41ab-b12d-2d64ba517255',
         isActive: false,
         metadata: [],
         name: 'Games',
         type: Shared\HrisGroupType::Branch,
-        updatedAt: Utils\Utils::parseDateTime('2026-06-12T09:31:20.829Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-13T08:18:34.119Z'),
     ),
     connectionId: '<id>',
 );
@@ -901,11 +904,11 @@ $request = new Operations\CreateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '09f2a730-4e68-407c-934b-26e99ac01d90',
+        id: 'acdb9677-c596-4cfe-a44f-def653ce69cb',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-08T14:55:58.466Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T00:56:02.927Z'),
     ),
     connectionId: '<id>',
 );
@@ -972,7 +975,7 @@ $request = new Operations\CreateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: 'a263fdcc-eb7b-4ada-90c6-892f6607231e',
+        id: '52238525-3e2a-411d-9b98-7789a1167c6d',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -993,7 +996,7 @@ $request = new Operations\CreateHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-30T05:11:54.758Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-30T14:53:40.875Z'),
     ),
     connectionId: '<id>',
 );
@@ -1055,13 +1058,13 @@ $request = new Operations\CreateHrisTaxonomyRequest(
         createdAt: Utils\Utils::parseDateTime('2022-06-23T02:10:00.789Z'),
         description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
         domain: 'Health',
-        id: '14b8278d-012c-41fb-ba17-cd4498424993',
+        id: '994da848-bc0f-42c3-8f15-873674ec929e',
         isActive: false,
         metadata: [],
         name: 'International Functionality Architect',
         subcategory: 'Marble',
         type: Shared\HrisTaxonomyType::Knowledge,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-03T16:04:55.411Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-03T21:47:07.538Z'),
         url: 'https://fixed-membership.biz/',
     ),
     connectionId: '<id>',
@@ -1117,7 +1120,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-25T06:30:29.024Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-25T08:31:08.160Z'),
         attachments: [
             new Shared\HrisAttachment(
                 contentType: 'application/pdf',
@@ -1131,16 +1134,16 @@ $request = new Operations\CreateHrisTimeoffRequest(
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2025-01-13T16:20:06.048Z'),
-        id: 'cec15aac-0d7e-4d46-aeab-20e0e3565f57',
+        endAt: Utils\Utils::parseDateTime('2025-01-14T09:18:49.606Z'),
+        id: '00e11cdc-ca22-4d78-b86e-f998c2332fa3',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-14T06:11:41.790Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-14T16:14:52.517Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-16T14:21:57.746Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-16T18:23:06.118Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -1196,7 +1199,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-28T11:03:22.542Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-28T22:06:10.340Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -1208,13 +1211,13 @@ $request = new Operations\CreateHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-10-21T17:57:01.886Z'),
+        endAt: Utils\Utils::parseDateTime('2026-10-22T20:12:53.060Z'),
         hours: 6,
-        id: '99c65769-21d8-4ae2-88df-8cabe8acc3d5',
+        id: '8a44c681-5115-4c05-a77a-74bde7033318',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-26T18:22:25.634Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-08T17:40:24.375Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-27T08:59:44.953Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-09T00:56:01.786Z'),
     ),
     connectionId: '<id>',
 );
@@ -3095,32 +3098,32 @@ $request = new Operations\PatchHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-09-20T02:38:24.910Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-09-20T03:11:44.713Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 51,
-                endAt: Utils\Utils::parseDateTime('2024-02-26T14:28:37.868Z'),
-                id: '2ccb698e-4bb7-4185-8127-d89e12f9bf48',
+                endAt: Utils\Utils::parseDateTime('2024-02-27T03:17:49.764Z'),
+                id: '11b7f288-5eaf-4600-982e-e22fd6c51a87',
                 isPaid: false,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-11-09T14:21:15.202Z'),
+                startAt: Utils\Utils::parseDateTime('2023-11-10T01:40:16.371Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'EUR',
         declaredTipsAmount: 54,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-05-06T06:41:10.771Z'),
+        endAt: Utils\Utils::parseDateTime('2024-05-06T20:28:01.169Z'),
         hourlyRate: 16,
         hours: 10,
-        id: '4def02c7-0bfc-41a5-af37-a28768836cc2',
+        id: '155d4b16-c2fc-4d03-a797-9f6fda901bd0',
         jobName: 'Human Accountability Administrator',
         metadata: [],
         nonCashTipsAmount: 167,
-        startAt: Utils\Utils::parseDateTime('2021-11-12T05:59:41.355Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-12T07:16:58.876Z'),
         status: Shared\HrisAttendanceStatus::Open,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-22T00:08:46.332Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-22T02:24:36.010Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3183,7 +3186,7 @@ $request = new Operations\PatchHrisBankaccountRequest(
         countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
         currency: 'USD',
-        id: '15dbb1e8-6436-4413-b1dc-312c8e5549b3',
+        id: 'db73f46a-1c46-4e39-af4a-45705fe4bad2',
         isPrimary: true,
         metadata: [],
         name: 'Granville Schumm - Checking',
@@ -3191,7 +3194,7 @@ $request = new Operations\PatchHrisBankaccountRequest(
         routingNumber: '448650724',
         splitAmount: 98,
         splitType: Shared\SplitType::Percentage,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-21T11:34:46.918Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-22T09:05:18.447Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3255,13 +3258,13 @@ $request = new Operations\PatchHrisBenefitRequest(
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
         frequency: Shared\HrisBenefitFrequency::Month,
-        id: '67424a38-19d3-4be8-87f6-9319067422f7',
+        id: '6f67903f-81d1-4daa-9129-ffcc71f39143',
         isActive: false,
         metadata: [],
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
         type: Shared\HrisBenefitType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-31T17:01:04.361Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-01T04:34:21.415Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3326,11 +3329,11 @@ $request = new Operations\PatchHrisCompanyRequest(
             regionCode: 'MO',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: 'e28b13c0-ab72-4ce6-b60e-e9252d0ab2df',
+        id: '7380664e-a08b-4daf-8cbf-da047c161d80',
         legalName: 'Gottlieb Group LLC',
         metadata: [],
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-11-02T10:33:51.670Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-11-03T12:54:10.633Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3393,14 +3396,14 @@ $request = new Operations\PatchHrisDeductionRequest(
         employerType: Shared\EmployerType::Percentage,
         frequency: Shared\HrisDeductionFrequency::OneTime,
         garnishmentType: Shared\GarnishmentType::ChildSupport,
-        id: '3db14fde-61d8-470a-b244-d028ae995f11',
+        id: '01218889-a485-477f-b274-0abc7c64af2c',
         isActive: true,
         maxAmount: 21794,
         metadata: [],
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-04-03T06:51:57.527Z'),
+        startAt: Utils\Utils::parseDateTime('2025-04-04T03:02:35.647Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-06T14:48:25.131Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-07T07:06:40.572Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3464,7 +3467,7 @@ $request = new Operations\PatchHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: false,
-        id: '7d5765ba-755d-441b-8994-156fab2f05e9',
+        id: '2d84f65e-63cf-4e71-89bc-6ececfae28a0',
         isMissing: false,
         manufacturer: 'Hackett Inc',
         metadata: [],
@@ -3472,7 +3475,7 @@ $request = new Operations\PatchHrisDeviceRequest(
         name: 'august-laptop',
         os: 'transmitter',
         osVersion: '8.4.8',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-22T02:16:00.089Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-22T16:56:07.540Z'),
         version: '4.15.7',
     ),
     connectionId: '<id>',
@@ -3532,10 +3535,10 @@ $request = new Operations\PatchHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: 'e4e3bad6-3dbf-437e-9c07-6eb59e9e0f7b',
+        id: 'abed8b83-d568-4fac-80ef-a0808fb01942',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-30T02:04:17.806Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-30T21:45:06.060Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3595,12 +3598,12 @@ $request = new Operations\PatchHrisEarningRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
         currency: 'USD',
         frequency: Shared\HrisEarningFrequency::Semimonthly,
-        id: '0b76a6a3-05ce-4355-b2df-0a72541fb974',
+        id: 'acd57537-ec8a-485b-887a-59ee12b46667',
         metadata: [],
         notes: 'Deporto truculenter vinum beatae.',
-        startAt: Utils\Utils::parseDateTime('2022-08-05T17:54:07.167Z'),
+        startAt: Utils\Utils::parseDateTime('2022-08-06T05:52:27.633Z'),
         status: Shared\HrisEarningStatus::Ended,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-12T04:37:46.796Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-12T08:10:46.170Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3692,7 +3695,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
         gender: Shared\HrisEmployeeGender::Male,
         hasMfa: true,
         hiredAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
-        id: '48d2aede-b8b9-4f66-8e3a-1ececaa8ecce',
+        id: 'fcdba9d4-87d2-4fd3-b0fc-100bf3de0e84',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
         languageLocale: 'in',
         lastName: 'Prohaska',
@@ -3704,7 +3707,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: '00b91439-19b7-465f-aaef-349318cbe805',
+                id: '4cbe8ab7-89c2-4e64-8a72-994157e294c4',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tutis',
@@ -3752,7 +3755,7 @@ $request = new Operations\PatchHrisEmployeeRequest(
         timeoffDaysUsed: 9,
         timezone: 'Europe/Ljubljana',
         title: 'District Branding Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2020-07-22T02:56:11.748Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-07-22T06:04:17.890Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3810,12 +3813,12 @@ $request = new Operations\PatchHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '422b5130-19e6-4abd-8f0c-a9a0586967fc',
+        id: '19f2bd5a-97fe-4749-b308-3ea1be56a138',
         isActive: false,
         metadata: [],
         name: 'Games',
         type: Shared\HrisGroupType::Branch,
-        updatedAt: Utils\Utils::parseDateTime('2026-06-12T09:31:20.842Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-13T08:18:34.133Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3875,11 +3878,11 @@ $request = new Operations\PatchHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '985c80d6-a274-48a2-8261-d3bbfe37e060',
+        id: '81cc7512-6c29-4b24-a538-3ae29eff52da',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-08T14:55:58.520Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T00:56:02.979Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3947,7 +3950,7 @@ $request = new Operations\PatchHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: '73581bfb-438c-4914-b5a8-5c763e3cb817',
+        id: '3ed0c0bb-a686-4323-ac29-c866855f8412',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -3968,7 +3971,7 @@ $request = new Operations\PatchHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-30T05:11:54.766Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-30T14:53:40.883Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -3992,6 +3995,76 @@ if ($response->hrisLocation !== null) {
 ### Response
 
 **[?Operations\PatchHrisLocationResponse](../../Models/Operations/PatchHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchHrisTaxonomy" method="patch" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchHrisTaxonomyRequest(
+    hrisTaxonomy: new Shared\HrisTaxonomy(
+        alternativeNames: [
+            'Facilitator',
+            'National',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-06-23T02:10:00.789Z'),
+        description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
+        domain: 'Health',
+        id: '3caa2881-a29a-4a41-ae2b-1c0d75ecaf62',
+        isActive: false,
+        metadata: [],
+        name: 'International Functionality Architect',
+        subcategory: 'Marble',
+        type: Shared\HrisTaxonomyType::Knowledge,
+        updatedAt: Utils\Utils::parseDateTime('2023-06-03T21:47:07.541Z'),
+        url: 'https://fixed-membership.biz/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->patchHrisTaxonomy(
+    request: $request
+);
+
+if ($response->hrisTaxonomy !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\PatchHrisTaxonomyRequest](../../Models/Operations/PatchHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\PatchHrisTaxonomyResponse](../../Models/Operations/PatchHrisTaxonomyResponse.md)**
 
 ### Errors
 
@@ -4024,7 +4097,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-25T06:30:29.025Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-25T08:31:08.161Z'),
         attachments: [
             new Shared\HrisAttachment(
                 contentType: 'application/pdf',
@@ -4038,16 +4111,16 @@ $request = new Operations\PatchHrisTimeoffRequest(
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2025-01-13T16:20:06.055Z'),
-        id: '8b3aab8d-ec03-412d-b2e3-e854bf959822',
+        endAt: Utils\Utils::parseDateTime('2025-01-14T09:18:49.619Z'),
+        id: '436f803c-b8dd-44c7-9f26-0137536ca4a8',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-14T06:11:41.795Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-14T16:14:52.525Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-16T14:21:57.748Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-16T18:23:06.121Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -4104,7 +4177,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-28T11:03:22.550Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-28T22:06:10.349Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -4116,13 +4189,13 @@ $request = new Operations\PatchHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-10-21T17:57:01.905Z'),
+        endAt: Utils\Utils::parseDateTime('2026-10-22T20:12:53.080Z'),
         hours: 6,
-        id: '4d282a39-557d-4ed4-abaf-9f95e97d3cd4',
+        id: '05a75330-6012-4165-bcfe-058b9e7e1fa2',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-26T18:22:25.645Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-08T17:40:24.380Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-27T08:59:44.965Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-09T00:56:01.791Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4765,6 +4838,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removeHrisTaxonomy
+
+Deletes the HrisTaxonomy identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeHrisTaxonomy" method="delete" path="/hris/{connection_id}/taxonomy/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveHrisTaxonomyRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->removeHrisTaxonomy(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\RemoveHrisTaxonomyRequest](../../Models/Operations/RemoveHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\RemoveHrisTaxonomyResponse](../../Models/Operations/RemoveHrisTaxonomyResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## removeHrisTimeoff
 
 Deletes the HrisTimeoff identified by `id`.
@@ -4900,32 +5024,32 @@ $request = new Operations\UpdateHrisAttendanceRequest(
             region: 'Tennessee',
             regionCode: 'CA',
         ),
-        approvedAt: Utils\Utils::parseDateTime('2021-09-20T02:38:24.910Z'),
+        approvedAt: Utils\Utils::parseDateTime('2021-09-20T03:11:44.713Z'),
         breaks: [
             new Shared\HrisAttendanceBreak(
                 durationMinutes: 51,
-                endAt: Utils\Utils::parseDateTime('2024-02-26T14:28:37.868Z'),
-                id: '2ccb698e-4bb7-4185-8127-d89e12f9bf48',
+                endAt: Utils\Utils::parseDateTime('2024-02-27T03:17:49.764Z'),
+                id: '11b7f288-5eaf-4600-982e-e22fd6c51a87',
                 isPaid: false,
                 name: 'Lunch',
-                startAt: Utils\Utils::parseDateTime('2023-11-09T14:21:15.202Z'),
+                startAt: Utils\Utils::parseDateTime('2023-11-10T01:40:16.371Z'),
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2021-08-10T19:43:18.452Z'),
         currency: 'EUR',
         declaredTipsAmount: 54,
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2024-05-06T06:41:10.771Z'),
+        endAt: Utils\Utils::parseDateTime('2024-05-06T20:28:01.169Z'),
         hourlyRate: 16,
         hours: 10,
-        id: '4def02c7-0bfc-41a5-af37-a28768836cc2',
+        id: '155d4b16-c2fc-4d03-a797-9f6fda901bd0',
         jobName: 'Human Accountability Administrator',
         metadata: [],
         nonCashTipsAmount: 167,
-        startAt: Utils\Utils::parseDateTime('2021-11-12T05:59:41.355Z'),
+        startAt: Utils\Utils::parseDateTime('2021-11-12T07:16:58.876Z'),
         status: Shared\HrisAttendanceStatus::Open,
         timezone: 'America/Atikokan',
-        updatedAt: Utils\Utils::parseDateTime('2022-01-22T00:08:46.332Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-01-22T02:24:36.010Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -4988,7 +5112,7 @@ $request = new Operations\UpdateHrisBankaccountRequest(
         countryCode: 'US',
         createdAt: Utils\Utils::parseDateTime('2019-11-16T16:43:45.976Z'),
         currency: 'USD',
-        id: '15dbb1e8-6436-4413-b1dc-312c8e5549b3',
+        id: 'db73f46a-1c46-4e39-af4a-45705fe4bad2',
         isPrimary: true,
         metadata: [],
         name: 'Granville Schumm - Checking',
@@ -4996,7 +5120,7 @@ $request = new Operations\UpdateHrisBankaccountRequest(
         routingNumber: '448650724',
         splitAmount: 98,
         splitType: Shared\SplitType::Percentage,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-21T11:34:46.918Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-22T09:05:18.447Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5060,13 +5184,13 @@ $request = new Operations\UpdateHrisBenefitRequest(
         employerContributionMaxAmount: 179093,
         employerContributionType: Shared\EmployerContributionType::Percentage,
         frequency: Shared\HrisBenefitFrequency::Month,
-        id: '67424a38-19d3-4be8-87f6-9319067422f7',
+        id: '6f67903f-81d1-4daa-9129-ffcc71f39143',
         isActive: false,
         metadata: [],
         name: 'Frozen Wooden Ball',
         tax: Shared\Tax::PreTax,
         type: Shared\HrisBenefitType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-31T17:01:04.361Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-01T04:34:21.415Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5131,11 +5255,11 @@ $request = new Operations\UpdateHrisCompanyRequest(
             regionCode: 'MO',
         ),
         createdAt: Utils\Utils::parseDateTime('2021-05-02T22:27:38.970Z'),
-        id: 'e28b13c0-ab72-4ce6-b60e-e9252d0ab2df',
+        id: '7380664e-a08b-4daf-8cbf-da047c161d80',
         legalName: 'Gottlieb Group LLC',
         metadata: [],
         name: 'Gottlieb Group',
-        updatedAt: Utils\Utils::parseDateTime('2026-11-02T10:33:51.670Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-11-03T12:54:10.633Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5198,14 +5322,14 @@ $request = new Operations\UpdateHrisDeductionRequest(
         employerType: Shared\EmployerType::Percentage,
         frequency: Shared\HrisDeductionFrequency::OneTime,
         garnishmentType: Shared\GarnishmentType::ChildSupport,
-        id: '3db14fde-61d8-470a-b244-d028ae995f11',
+        id: '01218889-a485-477f-b274-0abc7c64af2c',
         isActive: true,
         maxAmount: 21794,
         metadata: [],
         notes: 'Carmen desidero.',
-        startAt: Utils\Utils::parseDateTime('2025-04-03T06:51:57.527Z'),
+        startAt: Utils\Utils::parseDateTime('2025-04-04T03:02:35.647Z'),
         type: Shared\HrisDeductionType::Fixed,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-06T14:48:25.131Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-07T07:06:40.572Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5269,7 +5393,7 @@ $request = new Operations\UpdateHrisDeviceRequest(
         hasHdEncrypted: true,
         hasPasswordManager: true,
         hasScreenlock: false,
-        id: '7d5765ba-755d-441b-8994-156fab2f05e9',
+        id: '2d84f65e-63cf-4e71-89bc-6ececfae28a0',
         isMissing: false,
         manufacturer: 'Hackett Inc',
         metadata: [],
@@ -5277,7 +5401,7 @@ $request = new Operations\UpdateHrisDeviceRequest(
         name: 'august-laptop',
         os: 'transmitter',
         osVersion: '8.4.8',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-22T02:16:00.089Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-22T16:56:07.540Z'),
         version: '4.15.7',
     ),
     connectionId: '<id>',
@@ -5337,10 +5461,10 @@ $request = new Operations\UpdateHrisDocumentRequest(
         createdAt: Utils\Utils::parseDateTime('2022-10-27T11:47:26.086Z'),
         documentUrl: 'https://sore-decision.biz/',
         filename: 'ridge_forager.xsl',
-        id: 'e4e3bad6-3dbf-437e-9c07-6eb59e9e0f7b',
+        id: 'abed8b83-d568-4fac-80ef-a0808fb01942',
         metadata: [],
         type: Shared\HrisDocumentType::Policy,
-        updatedAt: Utils\Utils::parseDateTime('2025-10-30T02:04:17.806Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-10-30T21:45:06.060Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5400,12 +5524,12 @@ $request = new Operations\UpdateHrisEarningRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-26T12:44:52.326Z'),
         currency: 'USD',
         frequency: Shared\HrisEarningFrequency::Semimonthly,
-        id: '0b76a6a3-05ce-4355-b2df-0a72541fb974',
+        id: 'acd57537-ec8a-485b-887a-59ee12b46667',
         metadata: [],
         notes: 'Deporto truculenter vinum beatae.',
-        startAt: Utils\Utils::parseDateTime('2022-08-05T17:54:07.167Z'),
+        startAt: Utils\Utils::parseDateTime('2022-08-06T05:52:27.633Z'),
         status: Shared\HrisEarningStatus::Ended,
-        updatedAt: Utils\Utils::parseDateTime('2020-02-12T04:37:46.796Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-02-12T08:10:46.170Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5497,7 +5621,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
         gender: Shared\HrisEmployeeGender::Male,
         hasMfa: true,
         hiredAt: Utils\Utils::parseDateTime('2019-09-16T15:08:53.262Z'),
-        id: '48d2aede-b8b9-4f66-8e3a-1ececaa8ecce',
+        id: 'fcdba9d4-87d2-4fd3-b0fc-100bf3de0e84',
         imageUrl: 'https://cdn.jsdelivr.net/gh/faker-js/assets-person-portrait/female/512/85.jpg',
         languageLocale: 'in',
         lastName: 'Prohaska',
@@ -5509,7 +5633,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\HrisMetadataFormat::Text,
-                id: '00b91439-19b7-465f-aaef-349318cbe805',
+                id: '4cbe8ab7-89c2-4e64-8a72-994157e294c4',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tutis',
@@ -5557,7 +5681,7 @@ $request = new Operations\UpdateHrisEmployeeRequest(
         timeoffDaysUsed: 9,
         timezone: 'Europe/Ljubljana',
         title: 'District Branding Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2020-07-22T02:56:11.748Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-07-22T06:04:17.890Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5615,12 +5739,12 @@ $request = new Operations\UpdateHrisGroupRequest(
     hrisGroup: new Shared\HrisGroup(
         createdAt: Utils\Utils::parseDateTime('2023-11-01T13:13:40.714Z'),
         description: 'Absorbeo casso.',
-        id: '422b5130-19e6-4abd-8f0c-a9a0586967fc',
+        id: '19f2bd5a-97fe-4749-b308-3ea1be56a138',
         isActive: false,
         metadata: [],
         name: 'Games',
         type: Shared\HrisGroupType::Branch,
-        updatedAt: Utils\Utils::parseDateTime('2026-06-12T09:31:20.842Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-06-13T08:18:34.133Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5680,11 +5804,11 @@ $request = new Operations\UpdateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Alienus timor depromo bonus vobis creator tabella callide cavus triumphus caveo.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: '985c80d6-a274-48a2-8261-d3bbfe37e060',
+        id: '81cc7512-6c29-4b24-a538-3ae29eff52da',
         isActive: false,
         metadata: [],
         name: 'Internal Integration Specialist',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-08T14:55:58.520Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T00:56:02.979Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5752,7 +5876,7 @@ $request = new Operations\UpdateHrisLocationRequest(
         createdAt: Utils\Utils::parseDateTime('2021-07-18T10:32:01.414Z'),
         currency: 'MNT',
         description: 'Commemoro acervus.',
-        id: '73581bfb-438c-4914-b5a8-5c763e3cb817',
+        id: '3ed0c0bb-a686-4323-ac29-c866855f8412',
         isActive: false,
         isHq: true,
         languageLocale: 'it',
@@ -5773,7 +5897,7 @@ $request = new Operations\UpdateHrisLocationRequest(
             ),
         ],
         timezone: 'Asia/Jerusalem',
-        updatedAt: Utils\Utils::parseDateTime('2023-06-30T05:11:54.766Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-30T14:53:40.883Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -5797,6 +5921,76 @@ if ($response->hrisLocation !== null) {
 ### Response
 
 **[?Operations\UpdateHrisLocationResponse](../../Models/Operations/UpdateHrisLocationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updateHrisTaxonomy
+
+Updates the HrisTaxonomy identified by `id`. Provide the unified HrisTaxonomy fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updateHrisTaxonomy" method="put" path="/hris/{connection_id}/taxonomy/{id}" example="hris_taxonomy" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdateHrisTaxonomyRequest(
+    hrisTaxonomy: new Shared\HrisTaxonomy(
+        alternativeNames: [
+            'Facilitator',
+            'National',
+        ],
+        createdAt: Utils\Utils::parseDateTime('2022-06-23T02:10:00.789Z'),
+        description: 'Uterque vespillo adnuo ea commodo turbo suscipio condico.',
+        domain: 'Health',
+        id: '3caa2881-a29a-4a41-ae2b-1c0d75ecaf62',
+        isActive: false,
+        metadata: [],
+        name: 'International Functionality Architect',
+        subcategory: 'Marble',
+        type: Shared\HrisTaxonomyType::Knowledge,
+        updatedAt: Utils\Utils::parseDateTime('2023-06-03T21:47:07.541Z'),
+        url: 'https://fixed-membership.biz/',
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->hris->updateHrisTaxonomy(
+    request: $request
+);
+
+if ($response->hrisTaxonomy !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\UpdateHrisTaxonomyRequest](../../Models/Operations/UpdateHrisTaxonomyRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\UpdateHrisTaxonomyResponse](../../Models/Operations/UpdateHrisTaxonomyResponse.md)**
 
 ### Errors
 
@@ -5829,7 +6023,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeoffRequest(
     hrisTimeoff: new Shared\HrisTimeoff(
-        approvedAt: Utils\Utils::parseDateTime('2022-02-25T06:30:29.025Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-02-25T08:31:08.161Z'),
         attachments: [
             new Shared\HrisAttachment(
                 contentType: 'application/pdf',
@@ -5843,16 +6037,16 @@ $request = new Operations\UpdateHrisTimeoffRequest(
         createdAt: Utils\Utils::parseDateTime('2021-10-06T18:00:20.615Z'),
         duration: 4,
         durationType: Shared\DurationType::Day,
-        endAt: Utils\Utils::parseDateTime('2025-01-13T16:20:06.055Z'),
-        id: '8b3aab8d-ec03-412d-b2e3-e854bf959822',
+        endAt: Utils\Utils::parseDateTime('2025-01-14T09:18:49.619Z'),
+        id: '436f803c-b8dd-44c7-9f26-0137536ca4a8',
         isPaid: true,
         metadata: [],
         originalType: 'acerbitas ut',
         reason: 'verto',
-        startAt: Utils\Utils::parseDateTime('2023-09-14T06:11:41.795Z'),
+        startAt: Utils\Utils::parseDateTime('2023-09-14T16:14:52.525Z'),
         status: Shared\HrisTimeoffStatus::Denied,
         type: Shared\HrisTimeoffType::InLieu,
-        updatedAt: Utils\Utils::parseDateTime('2022-07-16T14:21:57.748Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-07-16T18:23:06.121Z'),
         userId: '<id>',
     ),
     connectionId: '<id>',
@@ -5909,7 +6103,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-28T11:03:22.550Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-07-28T22:06:10.349Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
@@ -5921,13 +6115,13 @@ $request = new Operations\UpdateHrisTimeshiftRequest(
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-10-21T17:57:01.905Z'),
+        endAt: Utils\Utils::parseDateTime('2026-10-22T20:12:53.080Z'),
         hours: 6,
-        id: '4d282a39-557d-4ed4-abaf-9f95e97d3cd4',
+        id: '05a75330-6012-4165-bcfe-058b9e7e1fa2',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-26T18:22:25.645Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-08T17:40:24.380Z'),
+        startAt: Utils\Utils::parseDateTime('2023-07-27T08:59:44.965Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-09T00:56:01.791Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

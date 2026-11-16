@@ -158,7 +158,6 @@ class QmsAction
     public ?string $rootCause = null;
 
     /**
-     * Normalized status of a quality record
      *
      * @var ?\Unified\Unified_to\Models\Shared\QmsActionStatus $status
      */

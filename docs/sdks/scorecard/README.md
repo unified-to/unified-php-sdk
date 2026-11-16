@@ -40,7 +40,7 @@ $request = new Operations\CreateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'd36deb04-15e7-45f2-be10-19748881a845',
+        id: '91d2239e-924d-42bf-a57b-496d2a9e142a',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -54,7 +54,7 @@ $request = new Operations\CreateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-12T10:35:29.562Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-12T17:54:07.913Z'),
     ),
     connectionId: '<id>',
 );
@@ -313,7 +313,7 @@ $request = new Operations\PatchAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'c26ff4b4-8170-4dce-b5cc-b27791668bf3',
+        id: '295296b7-1d9e-4f87-b0e6-7279fe6e80e1',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -327,7 +327,7 @@ $request = new Operations\PatchAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-12T10:35:29.564Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-12T17:54:07.918Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -436,7 +436,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
         comment: 'Maiores enim.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'c26ff4b4-8170-4dce-b5cc-b27791668bf3',
+        id: '295296b7-1d9e-4f87-b0e6-7279fe6e80e1',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
@@ -450,7 +450,7 @@ $request = new Operations\UpdateAtsScorecardRequest(
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-12T10:35:29.564Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-12T17:54:07.918Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
