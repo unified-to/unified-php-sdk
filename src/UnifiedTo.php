@@ -318,6 +318,8 @@ class UnifiedTo
 
     public Payslip $payslip;
 
+    public Taxwithholding $taxwithholding;
+
     public Timeoff $timeoff;
 
     public Timeshift $timeshift;
@@ -649,6 +651,7 @@ class UnifiedTo
         $this->paycode = new Paycode($this->sdkConfiguration);
         $this->payroll = new Payroll($this->sdkConfiguration);
         $this->payslip = new Payslip($this->sdkConfiguration);
+        $this->taxwithholding = new Taxwithholding($this->sdkConfiguration);
         $this->timeoff = new Timeoff($this->sdkConfiguration);
         $this->timeshift = new Timeshift($this->sdkConfiguration);
         $this->kms = new Kms($this->sdkConfiguration);

@@ -184,6 +184,8 @@ enum PropertyWorkspaceIntegrationPatchPermissions: string
     case HrisPaycodeWrite = 'hris_paycode_write';
     case HrisEarningRead = 'hris_earning_read';
     case HrisEarningWrite = 'hris_earning_write';
+    case HrisTaxwithholdingRead = 'hris_taxwithholding_read';
+    case HrisTaxwithholdingWrite = 'hris_taxwithholding_write';
     case UcCallRead = 'uc_call_read';
     case UcCallWrite = 'uc_call_write';
     case UcContactRead = 'uc_contact_read';

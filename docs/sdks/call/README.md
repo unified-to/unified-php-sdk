@@ -35,15 +35,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateUcCallRequest(
     ucCall: new Shared\UcCall(
-        answerAt: Utils\Utils::parseDateTime('2025-05-28T22:53:27.213Z'),
+        answerAt: Utils\Utils::parseDateTime('2025-05-29T13:09:57.297Z'),
         contacts: [],
-        conversationIdentifier: 'ef1d5ea5-399b-4341-b211-9fd77e311967',
+        conversationIdentifier: '6c6ffbce-04f2-42d3-a374-98809a939f3b',
         costAmount: 1.564,
         createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
         currency: 'USD',
         durationSeconds: 2556,
-        endAt: Utils\Utils::parseDateTime('2024-06-07T06:43:29.000Z'),
-        id: 'ef1d5ea5-399b-4341-b211-9fd77e311967',
+        endAt: Utils\Utils::parseDateTime('2024-06-07T14:22:53.367Z'),
+        id: '6c6ffbce-04f2-42d3-a374-98809a939f3b',
         isPrivate: false,
         metadata: [
             new Shared\UcMetadata(
@@ -51,20 +51,20 @@ $request = new Operations\CreateUcCallRequest(
 
                 ],
                 format: Shared\UcMetadataFormat::Price,
-                id: '8cd1da5f-03ba-4222-a298-e65ad62d5a0e',
+                id: '80d8e2cc-139b-450f-83c4-010a69625644',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'tui',
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-12-22T06:40:41.250Z'),
+        startAt: Utils\Utils::parseDateTime('2023-12-22T11:12:31.571Z'),
         status: Shared\UcCallStatus::InProgress,
         telephone: new Shared\PropertyUcCallTelephone(
             telephone: '(493) 534-0768',
             type: Shared\PropertyUcCallTelephoneType::Mobile,
         ),
         type: Shared\UcCallType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-05T10:42:56.665Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-05T12:39:46.980Z'),
         userPhone: '819-894-3317 x163',
     ),
     connectionId: '<id>',
@@ -221,15 +221,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchUcCallRequest(
     ucCall: new Shared\UcCall(
-        answerAt: Utils\Utils::parseDateTime('2025-05-28T22:53:27.230Z'),
+        answerAt: Utils\Utils::parseDateTime('2025-05-29T13:09:57.315Z'),
         contacts: [],
-        conversationIdentifier: 'bae92fde-bb0a-44e5-8237-1fa77c6b6666',
+        conversationIdentifier: '3b7023c6-3e74-46e3-9f5c-cdc7009cf1f6',
         costAmount: 1.564,
         createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
         currency: 'USD',
         durationSeconds: 2556,
-        endAt: Utils\Utils::parseDateTime('2024-06-07T06:43:29.009Z'),
-        id: 'bae92fde-bb0a-44e5-8237-1fa77c6b6666',
+        endAt: Utils\Utils::parseDateTime('2024-06-07T14:22:53.376Z'),
+        id: '3b7023c6-3e74-46e3-9f5c-cdc7009cf1f6',
         isPrivate: false,
         metadata: [
             new Shared\UcMetadata(
@@ -237,20 +237,20 @@ $request = new Operations\PatchUcCallRequest(
 
                 ],
                 format: Shared\UcMetadataFormat::Price,
-                id: '6a9e8075-d0d6-4e0a-8e2c-c70f6eecaa0c',
+                id: 'fecff570-84f3-4d72-afba-1296b6e4e3ba',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'tui',
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-12-22T06:40:41.255Z'),
+        startAt: Utils\Utils::parseDateTime('2023-12-22T11:12:31.576Z'),
         status: Shared\UcCallStatus::InProgress,
         telephone: new Shared\PropertyUcCallTelephone(
             telephone: '(493) 534-0768',
             type: Shared\PropertyUcCallTelephoneType::Mobile,
         ),
         type: Shared\UcCallType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-05T10:42:56.667Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-05T12:39:46.983Z'),
         userPhone: '819-894-3317 x163',
     ),
     connectionId: '<id>',
@@ -307,15 +307,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateUcCallRequest(
     ucCall: new Shared\UcCall(
-        answerAt: Utils\Utils::parseDateTime('2025-05-28T22:53:27.230Z'),
+        answerAt: Utils\Utils::parseDateTime('2025-05-29T13:09:57.315Z'),
         contacts: [],
-        conversationIdentifier: 'bae92fde-bb0a-44e5-8237-1fa77c6b6666',
+        conversationIdentifier: '3b7023c6-3e74-46e3-9f5c-cdc7009cf1f6',
         costAmount: 1.564,
         createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
         currency: 'USD',
         durationSeconds: 2556,
-        endAt: Utils\Utils::parseDateTime('2024-06-07T06:43:29.009Z'),
-        id: 'bae92fde-bb0a-44e5-8237-1fa77c6b6666',
+        endAt: Utils\Utils::parseDateTime('2024-06-07T14:22:53.376Z'),
+        id: '3b7023c6-3e74-46e3-9f5c-cdc7009cf1f6',
         isPrivate: false,
         metadata: [
             new Shared\UcMetadata(
@@ -323,20 +323,20 @@ $request = new Operations\UpdateUcCallRequest(
 
                 ],
                 format: Shared\UcMetadataFormat::Price,
-                id: '6a9e8075-d0d6-4e0a-8e2c-c70f6eecaa0c',
+                id: 'fecff570-84f3-4d72-afba-1296b6e4e3ba',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'tui',
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-12-22T06:40:41.255Z'),
+        startAt: Utils\Utils::parseDateTime('2023-12-22T11:12:31.576Z'),
         status: Shared\UcCallStatus::InProgress,
         telephone: new Shared\PropertyUcCallTelephone(
             telephone: '(493) 534-0768',
             type: Shared\PropertyUcCallTelephoneType::Mobile,
         ),
         type: Shared\UcCallType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-05T10:42:56.667Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-05T12:39:46.983Z'),
         userPhone: '819-894-3317 x163',
     ),
     connectionId: '<id>',

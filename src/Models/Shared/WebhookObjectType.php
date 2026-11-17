@@ -95,6 +95,7 @@ enum WebhookObjectType: string
     case HrisPayroll = 'hris_payroll';
     case HrisPaycode = 'hris_paycode';
     case HrisEarning = 'hris_earning';
+    case HrisTaxwithholding = 'hris_taxwithholding';
     case MartechList = 'martech_list';
     case MartechMember = 'martech_member';
     case MartechCampaign = 'martech_campaign';

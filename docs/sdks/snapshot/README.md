@@ -37,13 +37,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: '8051edc7-5e22-4bb3-922d-c18ed28f7bba',
+        id: '9bff951e-6255-4ceb-a0bd-e69738edab00',
         metadata: [],
         name: 'snap-alius',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-23T00:58:54.499Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T22:33:34.250Z'),
     ),
     connectionId: '<id>',
 );
@@ -200,13 +200,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: '61f1ee1a-e728-466c-ac34-d1ac62844197',
+        id: 'bc6df98e-78ac-4d1e-9d3b-70845155c36b',
         metadata: [],
         name: 'snap-alius',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-23T00:58:54.506Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T22:33:34.258Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -314,13 +314,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: '61f1ee1a-e728-466c-ac34-d1ac62844197',
+        id: 'bc6df98e-78ac-4d1e-9d3b-70845155c36b',
         metadata: [],
         name: 'snap-alius',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-23T00:58:54.506Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T22:33:34.258Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
