@@ -37,12 +37,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: 'c5182c1c-d264-46c7-91d8-1c362baa1699',
+        id: '7eda495a-629f-4455-90fb-bb9b968915c3',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-                id: '20ac5309-9cf6-4402-b78f-b0ee53511514',
+                id: 'cc0522a2-2139-47d7-a1b3-b5c39e224c36',
                 name: 'Shirt',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -54,7 +54,7 @@ $request = new Operations\CreateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T10:51:20.055Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T10:59:21.731Z'),
     ),
     connectionId: '<id>',
 );
@@ -211,12 +211,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: 'dd027b21-2f9a-4ab3-bbcc-9a07f3b48ee5',
+        id: 'e5b1555a-6292-4398-ab1f-23db7c3f2268',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-                id: 'f5e119de-64a1-4f38-aeb6-af99ddd8e47e',
+                id: 'ecc4d79e-c3ba-4f82-ab4e-d8cb7610a35a',
                 name: 'Shirt',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -228,7 +228,7 @@ $request = new Operations\PatchAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T10:51:20.055Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T10:59:21.731Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -336,12 +336,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: 'dd027b21-2f9a-4ab3-bbcc-9a07f3b48ee5',
+        id: 'e5b1555a-6292-4398-ab1f-23db7c3f2268',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The turquoise Hat combines Wallis and Futuna aesthetics with Potassium-based durability',
-                id: 'f5e119de-64a1-4f38-aeb6-af99ddd8e47e',
+                id: 'ecc4d79e-c3ba-4f82-ab4e-d8cb7610a35a',
                 name: 'Shirt',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -353,7 +353,7 @@ $request = new Operations\UpdateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T10:51:20.055Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T10:59:21.731Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
