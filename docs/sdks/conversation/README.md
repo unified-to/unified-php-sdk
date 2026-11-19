@@ -35,13 +35,13 @@ $request = new Operations\CreatePropertyConversationRequest(
     propertyConversation: new Shared\PropertyConversation(
         createdAt: Utils\Utils::parseDateTime('2022-06-20T00:02:46.530Z'),
         guestName: 'Evie Okuneva',
-        id: '6fc3cc82-e272-428a-908e-dd278893d688',
+        id: 'ef0e5314-7d36-4b5f-bac9-0352ead2c4a5',
         isUnread: false,
         messages: [
             new Shared\PropertyMessage(
                 attachments: [],
-                createdAt: Utils\Utils::parseDateTime('2025-05-04T15:11:29.789Z'),
-                id: '6ab356eb-fd50-4e1e-8159-248457c10628',
+                createdAt: Utils\Utils::parseDateTime('2025-05-05T10:31:33.730Z'),
+                id: '1c44f37e-4423-4c01-914d-26c4e468952e',
                 isAutomatic: false,
                 message: 'Vinitor caterva amor sophismata admitto colo tempore aufero torrens.',
                 senderName: 'Evie Okuneva',
@@ -49,8 +49,8 @@ $request = new Operations\CreatePropertyConversationRequest(
             ),
             new Shared\PropertyMessage(
                 attachments: [],
-                createdAt: Utils\Utils::parseDateTime('2026-05-22T08:37:17.866Z'),
-                id: '9549d7e5-4df9-4005-bc23-a2dcc6ca3f4a',
+                createdAt: Utils\Utils::parseDateTime('2026-05-23T11:00:21.446Z'),
+                id: '0f77a491-91da-4a29-9244-3462979566ae',
                 message: 'Aequitas torqueo curiositas cimentarius repellendus auditor degero ademptio adnuo.',
                 senderName: 'Ms. Patti Lynch',
                 senderType: Shared\SenderType::Host,
@@ -58,7 +58,7 @@ $request = new Operations\CreatePropertyConversationRequest(
         ],
         metadata: [],
         source: 'Airbnb',
-        updatedAt: Utils\Utils::parseDateTime('2026-05-22T08:37:17.866Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-23T11:00:21.446Z'),
     ),
     connectionId: '<id>',
 );

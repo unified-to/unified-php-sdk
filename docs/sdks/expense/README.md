@@ -45,13 +45,13 @@ $request = new Operations\CreateAccountingExpenseRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://rubbery-couch.biz/',
-                id: '1bad691e-9ccc-4f26-9e31-0f0f7a12f2b7',
+                id: '1ca69a97-3f2c-4b39-b154-57e02f6c5cfc',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://appropriate-smog.biz/',
-                id: '3e7c4421-784d-4680-a035-09d01a6233dd',
+                id: '234bd626-ebbd-4a1d-8512-50f23d516c6d',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696-1.pdf',
             ),
@@ -60,10 +60,10 @@ $request = new Operations\CreateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'GBP',
         externalNumber: 'EXP-38303',
-        id: '5a9a27f7-97d9-4f27-8437-773c70af2329',
+        id: '2ddeb564-1180-4ce2-8b43-6f5086a34f28',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '3d11cd09-2b9f-4466-93b6-97a5c5375721',
+                id: 'd911eac5-e0d3-4047-964a-faab577a89d3',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 364.74,
@@ -71,7 +71,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '711b66d4-3c6c-403f-8ee6-8221cc5fae3c',
+                id: 'd308f761-71a7-4648-b308-5d0f811820fc',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 258.35,
@@ -79,7 +79,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'e0364268-0707-4425-ba88-ede51dc27ec9',
+                id: '29fd8e3e-437e-4b81-900a-975ac6d715ad',
                 itemName: 'Conference ticket',
                 notes: 'Casus umquam conicio cinis demitto sint.',
                 taxAmount: 0,
@@ -88,7 +88,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '6c23d669-f949-4db7-89ef-43835bfe8b10',
+                id: '4fe58157-1147-445b-869c-de81d0e784e7',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 157.04,
@@ -96,7 +96,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'e7a9301e-ffad-4e7d-babc-34d76eaeeff4',
+                id: 'f587e9e4-f35d-4496-aca9-482e64a2773a',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 164.02,
@@ -112,7 +112,7 @@ $request = new Operations\CreateAccountingExpenseRequest(
         taxAmount: 0,
         totalAmount: 972.29,
         type: Shared\AccountingExpenseType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2020-09-03T07:09:51.934Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-09-03T08:13:38.034Z'),
     ),
     connectionId: '<id>',
 );
@@ -171,7 +171,7 @@ $request = new Operations\CreateLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: '35779a57-6e26-4751-b09e-c4586f3d1f99',
+        id: 'd03c01b6-4c43-49ff-a853-e9c798869c6d',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -179,7 +179,7 @@ $request = new Operations\CreateLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-15T19:40:07.530Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-16T12:35:47.737Z'),
     ),
     connectionId: '<id>',
 );
@@ -439,13 +439,13 @@ $request = new Operations\PatchAccountingExpenseRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://rubbery-couch.biz/',
-                id: '28da4822-24fe-43ff-b269-21f15cd5526c',
+                id: 'cd863bd7-a969-470b-9c9c-e4f5a7bb4013',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://appropriate-smog.biz/',
-                id: 'f4c54bd7-1e05-44c1-8612-9609cfc01639',
+                id: '0359676c-4e5a-4a06-9cfc-eda2cd21524b',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696-1.pdf',
             ),
@@ -454,10 +454,10 @@ $request = new Operations\PatchAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'GBP',
         externalNumber: 'EXP-38303',
-        id: '47ead56c-db01-4a8d-8225-277e49f1652d',
+        id: '303b1f03-cd1d-4866-8841-d2af6d0cac7c',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '4729e037-36b6-418a-b2d3-c0a59a4df603',
+                id: '0bbb1c5d-1c89-4e09-8c05-537bf6323bb0',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 364.74,
@@ -465,7 +465,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'bfb55556-2f0b-418e-9e31-6dbba574e36b',
+                id: '5df69ba9-9722-4f31-86f0-36ef7e8033fd',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 258.35,
@@ -473,7 +473,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '3544944c-b470-4c6c-96bf-8e0605b78b47',
+                id: '5d375524-710f-43d5-83ce-8a1b4546b58b',
                 itemName: 'Conference ticket',
                 notes: 'Casus umquam conicio cinis demitto sint.',
                 taxAmount: 0,
@@ -482,7 +482,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'd72a3fc9-f187-4209-8f2e-c4dc7c1d0573',
+                id: 'd662a2e5-8700-4540-ac80-6b5872ac97c4',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 157.04,
@@ -490,7 +490,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '25898e2d-1ada-4fcd-b800-a459ec331694',
+                id: '7c88f586-6d48-456b-9a70-87cdf433fede',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 164.02,
@@ -506,7 +506,7 @@ $request = new Operations\PatchAccountingExpenseRequest(
         taxAmount: 0,
         totalAmount: 972.29,
         type: Shared\AccountingExpenseType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2020-09-03T07:09:51.935Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-09-03T08:13:38.035Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -566,7 +566,7 @@ $request = new Operations\PatchLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: 'c88cbc37-1a62-4bf3-ae32-14b25cf67793',
+        id: 'f862ce79-81de-4e9f-8808-6e60a750c6a5',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -574,7 +574,7 @@ $request = new Operations\PatchLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-15T19:40:07.540Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-16T12:35:47.742Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -735,13 +735,13 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         attachments: [
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://rubbery-couch.biz/',
-                id: '28da4822-24fe-43ff-b269-21f15cd5526c',
+                id: 'cd863bd7-a969-470b-9c9c-e4f5a7bb4013',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696.pdf',
             ),
             new Shared\AccountingAttachment(
                 downloadUrl: 'https://appropriate-smog.biz/',
-                id: 'f4c54bd7-1e05-44c1-8612-9609cfc01639',
+                id: '0359676c-4e5a-4a06-9cfc-eda2cd21524b',
                 mimeType: 'application/pdf',
                 name: 'receipt-9696-1.pdf',
             ),
@@ -750,10 +750,10 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-06-11T03:39:37.305Z'),
         currency: 'GBP',
         externalNumber: 'EXP-38303',
-        id: '47ead56c-db01-4a8d-8225-277e49f1652d',
+        id: '303b1f03-cd1d-4866-8841-d2af6d0cac7c',
         lineitems: [
             new Shared\AccountingLineitem(
-                id: '4729e037-36b6-418a-b2d3-c0a59a4df603',
+                id: '0bbb1c5d-1c89-4e09-8c05-537bf6323bb0',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 364.74,
@@ -761,7 +761,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'bfb55556-2f0b-418e-9e31-6dbba574e36b',
+                id: '5df69ba9-9722-4f31-86f0-36ef7e8033fd',
                 itemName: 'Client dinner',
                 taxAmount: 0,
                 totalAmount: 258.35,
@@ -769,7 +769,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '3544944c-b470-4c6c-96bf-8e0605b78b47',
+                id: '5d375524-710f-43d5-83ce-8a1b4546b58b',
                 itemName: 'Conference ticket',
                 notes: 'Casus umquam conicio cinis demitto sint.',
                 taxAmount: 0,
@@ -778,7 +778,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: 'd72a3fc9-f187-4209-8f2e-c4dc7c1d0573',
+                id: 'd662a2e5-8700-4540-ac80-6b5872ac97c4',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 157.04,
@@ -786,7 +786,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
                 unitQuantity: 1,
             ),
             new Shared\AccountingLineitem(
-                id: '25898e2d-1ada-4fcd-b800-a459ec331694',
+                id: '7c88f586-6d48-456b-9a70-87cdf433fede',
                 itemName: 'Hotel',
                 taxAmount: 0,
                 totalAmount: 164.02,
@@ -802,7 +802,7 @@ $request = new Operations\UpdateAccountingExpenseRequest(
         taxAmount: 0,
         totalAmount: 972.29,
         type: Shared\AccountingExpenseType::Company,
-        updatedAt: Utils\Utils::parseDateTime('2020-09-03T07:09:51.935Z'),
+        updatedAt: Utils\Utils::parseDateTime('2020-09-03T08:13:38.035Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -862,7 +862,7 @@ $request = new Operations\UpdateLegalExpenseRequest(
         createdAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         currency: 'MVR',
         description: 'Temporibus agnitio sui.',
-        id: 'c88cbc37-1a62-4bf3-ae32-14b25cf67793',
+        id: 'f862ce79-81de-4e9f-8808-6e60a750c6a5',
         incurredAt: Utils\Utils::parseDateTime('2020-11-08T00:41:42.356Z'),
         isBilled: false,
         metadata: [],
@@ -870,7 +870,7 @@ $request = new Operations\UpdateLegalExpenseRequest(
         quantity: 3,
         totalAmount: 300,
         type: Shared\LegalExpenseType::Other,
-        updatedAt: Utils\Utils::parseDateTime('2024-04-15T19:40:07.540Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-04-16T12:35:47.742Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
