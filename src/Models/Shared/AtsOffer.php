@@ -58,6 +58,16 @@ class AtsOffer
     public ?string $employeeUserId = null;
 
     /**
+     * The placement fee earned on this hire
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsFee> $fees
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fees')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsFee>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $fees = null;
+
+    /**
      *
      * @var ?string $id
      */
@@ -116,6 +126,7 @@ class AtsOffer
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $creatorUserId
      * @param  ?string  $employeeUserId
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsFee>  $fees
      * @param  ?string  $id
      * @param  ?\DateTime  $rejectedAt
      * @param  ?\DateTime  $sentAt
@@ -124,13 +135,14 @@ class AtsOffer
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $acceptedAt = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?string $employeeUserId = null, ?string $id = null, ?\DateTime $rejectedAt = null, ?\DateTime $sentAt = null, ?\DateTime $startAt = null, ?AtsOfferStatus $status = null, ?\DateTime $updatedAt = null)
+    public function __construct(?\DateTime $acceptedAt = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?string $employeeUserId = null, ?array $fees = null, ?string $id = null, ?\DateTime $rejectedAt = null, ?\DateTime $sentAt = null, ?\DateTime $startAt = null, ?AtsOfferStatus $status = null, ?\DateTime $updatedAt = null)
     {
         $this->acceptedAt = $acceptedAt;
         $this->compensation = $compensation;
         $this->createdAt = $createdAt;
         $this->creatorUserId = $creatorUserId;
         $this->employeeUserId = $employeeUserId;
+        $this->fees = $fees;
         $this->id = $id;
         $this->rejectedAt = $rejectedAt;
         $this->sentAt = $sentAt;

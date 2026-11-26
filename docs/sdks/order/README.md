@@ -6,14 +6,20 @@
 
 * [~~createAccountingOrder~~](#createaccountingorder) - Create an order :warning: **Deprecated**
 * [createAssessmentOrder](#createassessmentorder) - Create an order
+* [createPrintingOrder](#createprintingorder) - Create an order
 * [~~getAccountingOrder~~](#getaccountingorder) - Retrieve an order :warning: **Deprecated**
 * [getAssessmentOrder](#getassessmentorder) - Retrieve an order
+* [getPrintingOrder](#getprintingorder) - Retrieve an order
 * [~~listAccountingOrders~~](#listaccountingorders) - List all orders :warning: **Deprecated**
+* [listPrintingOrders](#listprintingorders) - List all orders
 * [~~patchAccountingOrder~~](#patchaccountingorder) - Update an order :warning: **Deprecated**
 * [patchAssessmentOrder](#patchassessmentorder) - Update an order
+* [patchPrintingOrder](#patchprintingorder) - Update an order
 * [~~removeAccountingOrder~~](#removeaccountingorder) - Remove an order :warning: **Deprecated**
+* [removePrintingOrder](#removeprintingorder) - Remove an order
 * [~~updateAccountingOrder~~](#updateaccountingorder) - Update an order :warning: **Deprecated**
 * [updateAssessmentOrder](#updateassessmentorder) - Update an order
+* [updatePrintingOrder](#updateprintingorder) - Update an order
 
 ## ~~createAccountingOrder~~
 
@@ -43,31 +49,31 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAccountingOrderRequest(
     accountingOrder: new Shared\AccountingOrder(
         billingAddress: new Shared\PropertyAccountingOrderBillingAddress(
-            address1: '7654 Treutel Square',
-            city: 'Forrestport',
+            address1: '125 Hayden Highway',
+            city: 'Altoona',
             countryCode: 'US',
-            postalCode: '42190-3694',
-            region: 'Maine',
-            regionCode: 'OR',
+            postalCode: '94706-7691',
+            region: 'Louisiana',
+            regionCode: 'VT',
         ),
         createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         currency: 'GBP',
-        id: '28c9b703-a53a-4495-b470-2ef584cf23cb',
+        id: 'a1e1d471-faa3-4b4e-b13a-a01ec1dcbcae',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         shippingAddress: new Shared\PropertyAccountingOrderShippingAddress(
-            address1: '4974 Beatty Corners',
-            city: 'Alizeport',
+            address1: '450 Garett Mall',
+            city: 'New Kamronburgh',
             countryCode: 'US',
-            postalCode: '56252',
-            region: 'Alaska',
-            regionCode: 'VT',
+            postalCode: '76546',
+            region: 'Oregon',
+            regionCode: 'VA',
         ),
         status: Shared\AccountingOrderStatus::Authorized,
         totalAmount: 0,
         type: Shared\AccountingOrderType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2022-02-14T06:50:36.554Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-15T17:04:37.282Z'),
     ),
     connectionId: '<id>',
 );
@@ -122,36 +128,36 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
-        connectionId: '<id>',
+        connectionId: '',
         createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
-        id: '7863d2f7-0a44-40e1-bd7c-ef13ed91f432',
+        id: '9ae15c83-0ace-433f-9592-482c8efda4b5',
         metadata: [],
         parameters: [],
         profileAddresses: [],
         profileDateOfBirth: '1989-07-22T16:18:37.650Z',
         profileEmails: [
-            'amy.kris.windler@icloud.com',
+            'jordan.braun@icloud.com',
         ],
-        profileFirstName: 'Amy',
+        profileFirstName: 'Jordan',
         profileGender: Shared\ProfileGender::NonBinary,
-        profileLastName: 'Kris-Windler',
-        profileName: 'Amy Kris-Windler',
-        profileResumeUrl: 'https://enchanted-cycle.biz/',
+        profileLastName: 'Braun',
+        profileName: 'Jordan Braun',
+        profileResumeUrl: 'https://astonishing-bug.com/',
         profileSocialMediaUrls: [],
         profileTelephones: [
-            '(341) 425-5828',
+            '322.658.2806 x3159',
         ],
-        reference: 'ab',
+        reference: 'calcar',
         responseAttributes: [],
         responseDetails: [],
         responseDownloadUrls: [],
         responseMaxScore: 84,
         responseScore: 82,
         responseStatus: Shared\ResponseStatus::Rejected,
-        responseUrl: 'https://rowdy-fisherman.biz/',
+        responseUrl: 'https://nervous-daughter.info/',
         status: Shared\AssessmentOrderStatus::Rejected,
-        targetUrl: 'https://cautious-turret.info',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-02T13:55:20.625Z'),
+        targetUrl: 'https://idolized-suv.info',
+        updatedAt: Utils\Utils::parseDateTime('2023-02-04T10:07:44.890Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -175,6 +181,114 @@ if ($response->assessmentOrder !== null) {
 ### Response
 
 **[?Operations\CreateAssessmentOrderResponse](../../Models/Operations/CreateAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## createPrintingOrder
+
+Creates a PrintingOrder. Provide the unified PrintingOrder fields in the request body; they are mapped to the provider's API. Returns the created PrintingOrder.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createPrintingOrder" method="post" path="/printing/{connection_id}/order" example="printing_order" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreatePrintingOrderRequest(
+    printingOrder: new Shared\PrintingOrder(
+        createdAt: Utils\Utils::parseDateTime('2022-03-14T11:16:15.147Z'),
+        currency: 'USD',
+        discountAmount: 0,
+        id: '5587f528-8341-4cc2-8f36-7c92c965da80',
+        lineitems: [
+            new Shared\PrintingLineitem(
+                files: [
+                    new Shared\PrintingLineitemFile(
+                        placement: 'default',
+                        url: 'https://picsum.photos/seed/y54e6o9hYi/191/3357',
+                    ),
+                ],
+                id: '1',
+                name: 'Bespoke Marble Chair',
+                quantity: 2,
+                retailPriceAmount: 54.89,
+                sku: 'IBDIE3XR',
+                unitPriceAmount: 26.37,
+            ),
+            new Shared\PrintingLineitem(
+                files: [
+                    new Shared\PrintingLineitemFile(
+                        placement: 'default',
+                        url: 'https://picsum.photos/seed/T7S5xf/3521/1221',
+                    ),
+                ],
+                id: '2',
+                name: 'Electronic Cotton Hat',
+                quantity: 1,
+                retailPriceAmount: 23.94,
+                unitPriceAmount: 10.04,
+            ),
+        ],
+        metadata: [],
+        shipments: [],
+        shippingAddress: new Shared\PropertyPrintingOrderShippingAddress(
+            address1: '651 Main Street',
+            city: 'Euclid',
+            country: 'United States',
+            countryCode: 'US',
+            email: 'gary_leffler28@gmail.com',
+            name: 'Angelita Denesik',
+            postalCode: '80301',
+            region: 'Colorado',
+            regionCode: 'AR',
+            telephone: '808-831-6489 x62979',
+        ),
+        shippingAmount: 4.69,
+        shippingMethod: 'STANDARD',
+        status: Shared\PrintingOrderStatus::Other,
+        subtotalAmount: 62.78,
+        taxAmount: 5.02,
+        totalAmount: 72.49,
+        updatedAt: Utils\Utils::parseDateTime('2025-01-23T00:26:35.696Z'),
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->order->createPrintingOrder(
+    request: $request
+);
+
+if ($response->printingOrder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreatePrintingOrderRequest](../../Models/Operations/CreatePrintingOrderRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\CreatePrintingOrderResponse](../../Models/Operations/CreatePrintingOrderResponse.md)**
 
 ### Errors
 
@@ -286,6 +400,57 @@ if ($response->assessmentOrder !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getPrintingOrder
+
+Retrieves a single PrintingOrder by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getPrintingOrder" method="get" path="/printing/{connection_id}/order/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetPrintingOrderRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->order->getPrintingOrder(
+    request: $request
+);
+
+if ($response->printingOrder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetPrintingOrderRequest](../../Models/Operations/GetPrintingOrderRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetPrintingOrderResponse](../../Models/Operations/GetPrintingOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## ~~listAccountingOrders~~
 
 Returns a list of AccountingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -338,6 +503,56 @@ if ($response->accountingOrders !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listPrintingOrders
+
+Returns a list of PrintingOrders. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listPrintingOrders" method="get" path="/printing/{connection_id}/order" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListPrintingOrdersRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->order->listPrintingOrders(
+    request: $request
+);
+
+if ($response->printingOrders !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListPrintingOrdersRequest](../../Models/Operations/ListPrintingOrdersRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListPrintingOrdersResponse](../../Models/Operations/ListPrintingOrdersResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## ~~patchAccountingOrder~~
 
 Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
@@ -366,31 +581,31 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAccountingOrderRequest(
     accountingOrder: new Shared\AccountingOrder(
         billingAddress: new Shared\PropertyAccountingOrderBillingAddress(
-            address1: '7654 Treutel Square',
-            city: 'Forrestport',
+            address1: '125 Hayden Highway',
+            city: 'Altoona',
             countryCode: 'US',
-            postalCode: '42190-3694',
-            region: 'Maine',
-            regionCode: 'OR',
+            postalCode: '94706-7691',
+            region: 'Louisiana',
+            regionCode: 'VT',
         ),
         createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         currency: 'GBP',
-        id: '11b68f84-4b16-4507-adbb-0f705d743c26',
+        id: '54804fda-db9a-4013-b8aa-ea3a8474af7e',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         shippingAddress: new Shared\PropertyAccountingOrderShippingAddress(
-            address1: '4974 Beatty Corners',
-            city: 'Alizeport',
+            address1: '450 Garett Mall',
+            city: 'New Kamronburgh',
             countryCode: 'US',
-            postalCode: '56252',
-            region: 'Alaska',
-            regionCode: 'VT',
+            postalCode: '76546',
+            region: 'Oregon',
+            regionCode: 'VA',
         ),
         status: Shared\AccountingOrderStatus::Authorized,
         totalAmount: 0,
         type: Shared\AccountingOrderType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2022-02-14T06:50:36.563Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-15T17:04:37.292Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -446,36 +661,36 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
-        connectionId: '<id>',
+        connectionId: '',
         createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
-        id: 'ad64f54e-2eb3-4647-92a7-20e1518f2d6d',
+        id: '9e47c673-f6a4-43f6-9234-02664c927ef3',
         metadata: [],
         parameters: [],
         profileAddresses: [],
         profileDateOfBirth: '1989-07-22T16:18:37.650Z',
         profileEmails: [
-            'amy.kris.windler@icloud.com',
+            'jordan.braun@icloud.com',
         ],
-        profileFirstName: 'Amy',
+        profileFirstName: 'Jordan',
         profileGender: Shared\ProfileGender::NonBinary,
-        profileLastName: 'Kris-Windler',
-        profileName: 'Amy Kris-Windler',
-        profileResumeUrl: 'https://enchanted-cycle.biz/',
+        profileLastName: 'Braun',
+        profileName: 'Jordan Braun',
+        profileResumeUrl: 'https://astonishing-bug.com/',
         profileSocialMediaUrls: [],
         profileTelephones: [
-            '(341) 425-5828',
+            '322.658.2806 x3159',
         ],
-        reference: 'ab',
+        reference: 'calcar',
         responseAttributes: [],
         responseDetails: [],
         responseDownloadUrls: [],
         responseMaxScore: 84,
         responseScore: 82,
         responseStatus: Shared\ResponseStatus::Rejected,
-        responseUrl: 'https://rowdy-fisherman.biz/',
+        responseUrl: 'https://nervous-daughter.info/',
         status: Shared\AssessmentOrderStatus::Rejected,
-        targetUrl: 'https://cautious-turret.info',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-02T13:55:20.633Z'),
+        targetUrl: 'https://idolized-suv.info',
+        updatedAt: Utils\Utils::parseDateTime('2023-02-04T10:07:44.900Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -500,6 +715,115 @@ if ($response->assessmentOrder !== null) {
 ### Response
 
 **[?Operations\PatchAssessmentOrderResponse](../../Models/Operations/PatchAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## patchPrintingOrder
+
+Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="patchPrintingOrder" method="patch" path="/printing/{connection_id}/order/{id}" example="printing_order" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\PatchPrintingOrderRequest(
+    printingOrder: new Shared\PrintingOrder(
+        createdAt: Utils\Utils::parseDateTime('2022-03-14T11:16:15.147Z'),
+        currency: 'USD',
+        discountAmount: 0,
+        id: '6bc75b89-da1d-46ba-9591-65699db98394',
+        lineitems: [
+            new Shared\PrintingLineitem(
+                files: [
+                    new Shared\PrintingLineitemFile(
+                        placement: 'default',
+                        url: 'https://picsum.photos/seed/y54e6o9hYi/191/3357',
+                    ),
+                ],
+                id: '1',
+                name: 'Bespoke Marble Chair',
+                quantity: 2,
+                retailPriceAmount: 54.89,
+                sku: 'IBDIE3XR',
+                unitPriceAmount: 26.37,
+            ),
+            new Shared\PrintingLineitem(
+                files: [
+                    new Shared\PrintingLineitemFile(
+                        placement: 'default',
+                        url: 'https://picsum.photos/seed/T7S5xf/3521/1221',
+                    ),
+                ],
+                id: '2',
+                name: 'Electronic Cotton Hat',
+                quantity: 1,
+                retailPriceAmount: 23.94,
+                unitPriceAmount: 10.04,
+            ),
+        ],
+        metadata: [],
+        shipments: [],
+        shippingAddress: new Shared\PropertyPrintingOrderShippingAddress(
+            address1: '651 Main Street',
+            city: 'Euclid',
+            country: 'United States',
+            countryCode: 'US',
+            email: 'gary_leffler28@gmail.com',
+            name: 'Angelita Denesik',
+            postalCode: '80301',
+            region: 'Colorado',
+            regionCode: 'AR',
+            telephone: '808-831-6489 x62979',
+        ),
+        shippingAmount: 4.69,
+        shippingMethod: 'STANDARD',
+        status: Shared\PrintingOrderStatus::Other,
+        subtotalAmount: 62.78,
+        taxAmount: 5.02,
+        totalAmount: 72.49,
+        updatedAt: Utils\Utils::parseDateTime('2025-01-23T00:26:35.718Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->order->patchPrintingOrder(
+    request: $request
+);
+
+if ($response->printingOrder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\PatchPrintingOrderRequest](../../Models/Operations/PatchPrintingOrderRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\PatchPrintingOrderResponse](../../Models/Operations/PatchPrintingOrderResponse.md)**
 
 ### Errors
 
@@ -560,6 +884,57 @@ if ($response->statusCode === 200) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## removePrintingOrder
+
+Deletes the PrintingOrder identified by `id`.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removePrintingOrder" method="delete" path="/printing/{connection_id}/order/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemovePrintingOrderRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->order->removePrintingOrder(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemovePrintingOrderRequest](../../Models/Operations/RemovePrintingOrderRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\RemovePrintingOrderResponse](../../Models/Operations/RemovePrintingOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## ~~updateAccountingOrder~~
 
 Updates the AccountingOrder identified by `id`. Provide the unified AccountingOrder fields to change in the request body.
@@ -588,31 +963,31 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAccountingOrderRequest(
     accountingOrder: new Shared\AccountingOrder(
         billingAddress: new Shared\PropertyAccountingOrderBillingAddress(
-            address1: '7654 Treutel Square',
-            city: 'Forrestport',
+            address1: '125 Hayden Highway',
+            city: 'Altoona',
             countryCode: 'US',
-            postalCode: '42190-3694',
-            region: 'Maine',
-            regionCode: 'OR',
+            postalCode: '94706-7691',
+            region: 'Louisiana',
+            regionCode: 'VT',
         ),
         createdAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         currency: 'GBP',
-        id: '11b68f84-4b16-4507-adbb-0f705d743c26',
+        id: '54804fda-db9a-4013-b8aa-ea3a8474af7e',
         lineitems: [],
         metadata: [],
         postedAt: Utils\Utils::parseDateTime('2020-11-20T03:46:49.837Z'),
         shippingAddress: new Shared\PropertyAccountingOrderShippingAddress(
-            address1: '4974 Beatty Corners',
-            city: 'Alizeport',
+            address1: '450 Garett Mall',
+            city: 'New Kamronburgh',
             countryCode: 'US',
-            postalCode: '56252',
-            region: 'Alaska',
-            regionCode: 'VT',
+            postalCode: '76546',
+            region: 'Oregon',
+            regionCode: 'VA',
         ),
         status: Shared\AccountingOrderStatus::Authorized,
         totalAmount: 0,
         type: Shared\AccountingOrderType::Sales,
-        updatedAt: Utils\Utils::parseDateTime('2022-02-14T06:50:36.563Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-02-15T17:04:37.292Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -668,36 +1043,36 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAssessmentOrderRequest(
     assessmentOrder: new Shared\AssessmentOrder(
-        connectionId: '<id>',
+        connectionId: '',
         createdAt: Utils\Utils::parseDateTime('2021-09-18T10:33:57.803Z'),
-        id: 'ad64f54e-2eb3-4647-92a7-20e1518f2d6d',
+        id: '9e47c673-f6a4-43f6-9234-02664c927ef3',
         metadata: [],
         parameters: [],
         profileAddresses: [],
         profileDateOfBirth: '1989-07-22T16:18:37.650Z',
         profileEmails: [
-            'amy.kris.windler@icloud.com',
+            'jordan.braun@icloud.com',
         ],
-        profileFirstName: 'Amy',
+        profileFirstName: 'Jordan',
         profileGender: Shared\ProfileGender::NonBinary,
-        profileLastName: 'Kris-Windler',
-        profileName: 'Amy Kris-Windler',
-        profileResumeUrl: 'https://enchanted-cycle.biz/',
+        profileLastName: 'Braun',
+        profileName: 'Jordan Braun',
+        profileResumeUrl: 'https://astonishing-bug.com/',
         profileSocialMediaUrls: [],
         profileTelephones: [
-            '(341) 425-5828',
+            '322.658.2806 x3159',
         ],
-        reference: 'ab',
+        reference: 'calcar',
         responseAttributes: [],
         responseDetails: [],
         responseDownloadUrls: [],
         responseMaxScore: 84,
         responseScore: 82,
         responseStatus: Shared\ResponseStatus::Rejected,
-        responseUrl: 'https://rowdy-fisherman.biz/',
+        responseUrl: 'https://nervous-daughter.info/',
         status: Shared\AssessmentOrderStatus::Rejected,
-        targetUrl: 'https://cautious-turret.info',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-02T13:55:20.633Z'),
+        targetUrl: 'https://idolized-suv.info',
+        updatedAt: Utils\Utils::parseDateTime('2023-02-04T10:07:44.900Z'),
         workspaceId: '<id>',
     ),
     connectionId: '<id>',
@@ -722,6 +1097,115 @@ if ($response->assessmentOrder !== null) {
 ### Response
 
 **[?Operations\UpdateAssessmentOrderResponse](../../Models/Operations/UpdateAssessmentOrderResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## updatePrintingOrder
+
+Updates the PrintingOrder identified by `id`. Provide the unified PrintingOrder fields to change in the request body.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="updatePrintingOrder" method="put" path="/printing/{connection_id}/order/{id}" example="printing_order" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\UpdatePrintingOrderRequest(
+    printingOrder: new Shared\PrintingOrder(
+        createdAt: Utils\Utils::parseDateTime('2022-03-14T11:16:15.147Z'),
+        currency: 'USD',
+        discountAmount: 0,
+        id: '6bc75b89-da1d-46ba-9591-65699db98394',
+        lineitems: [
+            new Shared\PrintingLineitem(
+                files: [
+                    new Shared\PrintingLineitemFile(
+                        placement: 'default',
+                        url: 'https://picsum.photos/seed/y54e6o9hYi/191/3357',
+                    ),
+                ],
+                id: '1',
+                name: 'Bespoke Marble Chair',
+                quantity: 2,
+                retailPriceAmount: 54.89,
+                sku: 'IBDIE3XR',
+                unitPriceAmount: 26.37,
+            ),
+            new Shared\PrintingLineitem(
+                files: [
+                    new Shared\PrintingLineitemFile(
+                        placement: 'default',
+                        url: 'https://picsum.photos/seed/T7S5xf/3521/1221',
+                    ),
+                ],
+                id: '2',
+                name: 'Electronic Cotton Hat',
+                quantity: 1,
+                retailPriceAmount: 23.94,
+                unitPriceAmount: 10.04,
+            ),
+        ],
+        metadata: [],
+        shipments: [],
+        shippingAddress: new Shared\PropertyPrintingOrderShippingAddress(
+            address1: '651 Main Street',
+            city: 'Euclid',
+            country: 'United States',
+            countryCode: 'US',
+            email: 'gary_leffler28@gmail.com',
+            name: 'Angelita Denesik',
+            postalCode: '80301',
+            region: 'Colorado',
+            regionCode: 'AR',
+            telephone: '808-831-6489 x62979',
+        ),
+        shippingAmount: 4.69,
+        shippingMethod: 'STANDARD',
+        status: Shared\PrintingOrderStatus::Other,
+        subtotalAmount: 62.78,
+        taxAmount: 5.02,
+        totalAmount: 72.49,
+        updatedAt: Utils\Utils::parseDateTime('2025-01-23T00:26:35.718Z'),
+    ),
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->order->updatePrintingOrder(
+    request: $request
+);
+
+if ($response->printingOrder !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\UpdatePrintingOrderRequest](../../Models/Operations/UpdatePrintingOrderRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\UpdatePrintingOrderResponse](../../Models/Operations/UpdatePrintingOrderResponse.md)**
 
 ### Errors
 

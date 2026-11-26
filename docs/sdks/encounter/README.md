@@ -4,8 +4,61 @@
 
 ### Available Operations
 
+* [getFhirEncounter](#getfhirencounter) - Read a Encounter
 * [getHealthcareEncounter](#gethealthcareencounter) - Retrieve an encounter
+* [listFhirEncounters](#listfhirencounters) - Search Encounter resources
 * [listHealthcareEncounters](#listhealthcareencounters) - List all encounters
+
+## getFhirEncounter
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getFhirEncounter" method="get" path="/fhir/{connection_id}/Encounter/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetFhirEncounterRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->encounter->getFhirEncounter(
+    request: $request
+);
+
+if ($response->fhirEncounter !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetFhirEncounterRequest](../../Models/Operations/GetFhirEncounterRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetFhirEncounterResponse](../../Models/Operations/GetFhirEncounterResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getHealthcareEncounter
 
@@ -51,6 +104,56 @@ if ($response->healthcareEncounter !== null) {
 ### Response
 
 **[?Operations\GetHealthcareEncounterResponse](../../Models/Operations/GetHealthcareEncounterResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listFhirEncounters
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listFhirEncounters" method="get" path="/fhir/{connection_id}/Encounter" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListFhirEncountersRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->encounter->listFhirEncounters(
+    request: $request
+);
+
+if ($response->fhirBundle !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListFhirEncountersRequest](../../Models/Operations/ListFhirEncountersRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListFhirEncountersResponse](../../Models/Operations/ListFhirEncountersResponse.md)**
 
 ### Errors
 

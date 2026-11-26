@@ -52,4 +52,14 @@ enum DetailType: string
     case EmployerContribution = 'EMPLOYER_CONTRIBUTION';
     case Pension = 'PENSION';
     case EarningCashInLieu = 'EARNING_CASH_IN_LIEU';
+    case PretaxDeductionRetirementCatchup = 'PRETAX_DEDUCTION_RETIREMENT_CATCHUP';
+    case PosttaxRetirementRothCatchup = 'POSTTAX_RETIREMENT_ROTH_CATCHUP';
+    case PosttaxRetirementAfterTax = 'POSTTAX_RETIREMENT_AFTER_TAX';
+    case EmployerContributionRetirement = 'EMPLOYER_CONTRIBUTION_RETIREMENT';
+    case EmployerContributionHsa = 'EMPLOYER_CONTRIBUTION_HSA';
+    case EmployerContributionFsa = 'EMPLOYER_CONTRIBUTION_FSA';
+    case PosttaxDeductionCollegeSavings = 'POSTTAX_DEDUCTION_COLLEGE_SAVINGS';
+    case PosttaxDeductionUnionDues = 'POSTTAX_DEDUCTION_UNION_DUES';
+    case PosttaxDeductionEwaRepayment = 'POSTTAX_DEDUCTION_EWA_REPAYMENT';
+    case EarningTaxableBenefit = 'EARNING_TAXABLE_BENEFIT';
 }

@@ -41,12 +41,12 @@ class GenaiEmbedding
 
     /**
      *
-     * @var ?\Unified\Unified_to\Models\Shared\EncondingFormat $encondingFormat
+     * @var ?\Unified\Unified_to\Models\Shared\EncodingFormat $encodingFormat
      */
-    #[\Speakeasy\Serializer\Annotation\SerializedName('enconding_format')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EncondingFormat|null')]
+    #[\Speakeasy\Serializer\Annotation\SerializedName('encoding_format')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EncodingFormat|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?EncondingFormat $encondingFormat = null;
+    public ?EncodingFormat $encodingFormat = null;
 
     /**
      *
@@ -103,7 +103,7 @@ class GenaiEmbedding
      * @param  ?array<\Unified\Unified_to\Models\Shared\GenaiEmbeddingContent>  $content
      * @param  ?float  $dimension
      * @param  ?string  $embeddings
-     * @param  ?\Unified\Unified_to\Models\Shared\EncondingFormat  $encondingFormat
+     * @param  ?\Unified\Unified_to\Models\Shared\EncodingFormat  $encodingFormat
      * @param  ?string  $id
      * @param  ?float  $maxTokens
      * @param  ?string  $modelId
@@ -112,12 +112,12 @@ class GenaiEmbedding
      * @param  ?string  $type
      * @phpstan-pure
      */
-    public function __construct(?array $content = null, ?float $dimension = null, ?string $embeddings = null, ?EncondingFormat $encondingFormat = null, ?string $id = null, ?float $maxTokens = null, ?string $modelId = null, ?array $raw = null, ?float $tokensUsed = null, ?string $type = null)
+    public function __construct(?array $content = null, ?float $dimension = null, ?string $embeddings = null, ?EncodingFormat $encodingFormat = null, ?string $id = null, ?float $maxTokens = null, ?string $modelId = null, ?array $raw = null, ?float $tokensUsed = null, ?string $type = null)
     {
         $this->content = $content;
         $this->dimension = $dimension;
         $this->embeddings = $embeddings;
-        $this->encondingFormat = $encondingFormat;
+        $this->encodingFormat = $encodingFormat;
         $this->id = $id;
         $this->maxTokens = $maxTokens;
         $this->modelId = $modelId;

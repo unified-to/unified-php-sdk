@@ -55,5 +55,11 @@ enum CreateHrisEmployeeQueryParamFields: string
     case TimeoffDaysUsed = 'timeoff_days_used';
     case FlsaStatus = 'flsa_status';
     case PayFrequency = 'pay_frequency';
+    case RehiredAt = 'rehired_at';
+    case ServiceStartedAt = 'service_started_at';
+    case SeniorityStartedAt = 'seniority_started_at';
+    case LeaveStartAt = 'leave_start_at';
+    case LeaveEndAt = 'leave_end_at';
+    case EmploymentStatusReason = 'employment_status_reason';
     case Raw = 'raw';
 }

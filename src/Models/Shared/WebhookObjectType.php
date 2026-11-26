@@ -258,4 +258,16 @@ enum WebhookObjectType: string
     case QmsAction = 'qms_action';
     case QmsInspection = 'qms_inspection';
     case QmsAudit = 'qms_audit';
+    case DmsVehicle = 'dms_vehicle';
+    case DmsVehiclesale = 'dms_vehiclesale';
+    case DmsRepairorder = 'dms_repairorder';
+    case DmsAppointment = 'dms_appointment';
+    case DmsPart = 'dms_part';
+    case DmsPartsale = 'dms_partsale';
+    case DmsOpcode = 'dms_opcode';
+    case PrintingProduct = 'printing_product';
+    case PrintingTemplate = 'printing_template';
+    case PrintingFile = 'printing_file';
+    case PrintingQuote = 'printing_quote';
+    case PrintingOrder = 'printing_order';
 }

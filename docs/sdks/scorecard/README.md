@@ -38,23 +38,23 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
-        comment: 'Maiores enim.',
+        comment: 'Aliquam.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: '03a258a6-b4dc-493a-b00f-088dd701960e',
+        id: 'ca3228c6-b108-4e2b-bd4e-a3fa924fe61a',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
-                description: 'Sulum textor eveniet facere vita.',
-                text: 'Aliquam.',
+                description: 'Pecto vulpes libero vomer comburo.',
+                text: 'Desidero modi tamdiu auxilium defessus adimpleo clementia tero.',
             ),
             new Shared\AtsScorecardQuestion(
-                answer: 'Decretum.',
-                description: 'Conatus cicuta doloremque statua bonus.',
-                text: 'Pecto vulpes libero vomer comburo.',
+                answer: 'Conatus cicuta doloremque statua bonus.',
+                description: 'Aduro viscus celebrer.',
+                text: 'Decretum.',
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-13T13:51:35.619Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-15T11:42:00.831Z'),
     ),
     connectionId: '<id>',
 );
@@ -311,23 +311,23 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
-        comment: 'Maiores enim.',
+        comment: 'Aliquam.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'ea53e0b7-9945-481f-83dc-a1e9f92c852c',
+        id: 'b4691bd1-8bd4-4b12-aa5a-efe50e7223ec',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
-                description: 'Sulum textor eveniet facere vita.',
-                text: 'Aliquam.',
+                description: 'Pecto vulpes libero vomer comburo.',
+                text: 'Desidero modi tamdiu auxilium defessus adimpleo clementia tero.',
             ),
             new Shared\AtsScorecardQuestion(
-                answer: 'Decretum.',
-                description: 'Conatus cicuta doloremque statua bonus.',
-                text: 'Pecto vulpes libero vomer comburo.',
+                answer: 'Conatus cicuta doloremque statua bonus.',
+                description: 'Aduro viscus celebrer.',
+                text: 'Decretum.',
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-13T13:51:35.623Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-15T11:42:00.834Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -434,23 +434,23 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAtsScorecardRequest(
     atsScorecard: new Shared\AtsScorecard(
-        comment: 'Maiores enim.',
+        comment: 'Aliquam.',
         createdAt: Utils\Utils::parseDateTime('2022-02-20T17:09:45.498Z'),
-        id: 'ea53e0b7-9945-481f-83dc-a1e9f92c852c',
+        id: 'b4691bd1-8bd4-4b12-aa5a-efe50e7223ec',
         metadata: [],
         questions: [
             new Shared\AtsScorecardQuestion(
-                description: 'Sulum textor eveniet facere vita.',
-                text: 'Aliquam.',
+                description: 'Pecto vulpes libero vomer comburo.',
+                text: 'Desidero modi tamdiu auxilium defessus adimpleo clementia tero.',
             ),
             new Shared\AtsScorecardQuestion(
-                answer: 'Decretum.',
-                description: 'Conatus cicuta doloremque statua bonus.',
-                text: 'Pecto vulpes libero vomer comburo.',
+                answer: 'Conatus cicuta doloremque statua bonus.',
+                description: 'Aduro viscus celebrer.',
+                text: 'Decretum.',
             ),
         ],
         recommendation: Shared\Recommendation::StrongYes,
-        updatedAt: Utils\Utils::parseDateTime('2023-06-13T13:51:35.623Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-06-15T11:42:00.834Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

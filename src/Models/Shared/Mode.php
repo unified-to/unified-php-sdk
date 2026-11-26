@@ -9,9 +9,8 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** Google: bid_only falsetrue */
+/** server */
 enum Mode: string
 {
-    case Targeting = 'TARGETING';
-    case Observation = 'OBSERVATION';
+    case Server = 'server';
 }

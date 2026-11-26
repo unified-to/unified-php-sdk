@@ -30,6 +30,16 @@ class AtsCompany
     public ?\DateTime $createdAt = null;
 
     /**
+     * The client's default placement fee agreement
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsFee> $fees
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fees')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsFee>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $fees = null;
+
+    /**
      *
      * @var ?string $id
      */
@@ -112,6 +122,7 @@ class AtsCompany
     /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAtsCompanyAddress  $address
      * @param  ?\DateTime  $createdAt
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsFee>  $fees
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsMetadata>  $metadata
      * @param  ?string  $name
@@ -123,10 +134,11 @@ class AtsCompany
      * @param  ?string  $websiteUrl
      * @phpstan-pure
      */
-    public function __construct(?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
+    public function __construct(?PropertyAtsCompanyAddress $address = null, ?\DateTime $createdAt = null, ?array $fees = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $parentId = null, ?string $phone = null, ?array $raw = null, ?array $recruiterIds = null, ?\DateTime $updatedAt = null, ?string $websiteUrl = null)
     {
         $this->address = $address;
         $this->createdAt = $createdAt;
+        $this->fees = $fees;
         $this->id = $id;
         $this->metadata = $metadata;
         $this->name = $name;

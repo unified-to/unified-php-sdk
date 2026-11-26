@@ -31,5 +31,6 @@ enum ListCrmDealsQueryParamFields: string
     case CompanyIds = 'company_ids';
     case Description = 'description';
     case Metadata = 'metadata';
+    case VehicleIds = 'vehicle_ids';
     case Raw = 'raw';
 }

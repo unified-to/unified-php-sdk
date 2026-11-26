@@ -25,3 +25,9 @@
 | `Commuter`                | COMMUTER                  |
 | `DependentCare`           | DEPENDENT_CARE            |
 | `Pension`                 | PENSION                   |
+| `RetirementCatchup`       | RETIREMENT_CATCHUP        |
+| `RetirementRothCatchup`   | RETIREMENT_ROTH_CATCHUP   |
+| `RetirementAfterTax`      | RETIREMENT_AFTER_TAX      |
+| `CollegeSavings`          | COLLEGE_SAVINGS           |
+| `EarnedWageAccess`        | EARNED_WAGE_ACCESS        |
+| `UnionDues`               | UNION_DUES                |

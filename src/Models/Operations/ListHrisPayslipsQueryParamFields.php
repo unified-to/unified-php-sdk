@@ -36,6 +36,7 @@ enum ListHrisPayslipsQueryParamFields: string
     case EmployerContributionAmount = 'employer_contribution_amount';
     case GrossYtdAmount = 'gross_ytd_amount';
     case NetYtdAmount = 'net_ytd_amount';
+    case YtdHours = 'ytd_hours';
     case Metadata = 'metadata';
     case Raw = 'raw';
 }

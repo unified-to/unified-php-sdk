@@ -20,6 +20,15 @@ class PaymentLink
     public ?float $amount = null;
 
     /**
+     * payer's email
+     *
+     * @var ?string $contactEmail
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_email')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $contactEmail = null;
+
+    /**
      * ID of the AccountingContact (reference to AccountingContact)
      *
      * @var ?string $contactId
@@ -27,6 +36,24 @@ class PaymentLink
     #[\Speakeasy\Serializer\Annotation\SerializedName('contact_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $contactId = null;
+
+    /**
+     * payer's name, for providers that take payer details on the link rather than a contact_id
+     *
+     * @var ?string $contactName
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_name')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $contactName = null;
+
+    /**
+     * payer's phone
+     *
+     * @var ?string $contactPhone
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('contact_phone')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $contactPhone = null;
 
     /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
@@ -144,7 +171,10 @@ class PaymentLink
 
     /**
      * @param  ?float  $amount
+     * @param  ?string  $contactEmail
      * @param  ?string  $contactId
+     * @param  ?string  $contactName
+     * @param  ?string  $contactPhone
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $description
@@ -160,10 +190,13 @@ class PaymentLink
      * @param  ?string  $url
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?array $metadata = null, ?string $paymentId = null, ?array $raw = null, ?string $successUrl = null, ?\DateTime $updatedAt = null, ?string $url = null)
+    public function __construct(?float $amount = null, ?string $contactEmail = null, ?string $contactId = null, ?string $contactName = null, ?string $contactPhone = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?bool $isActive = null, ?bool $isChargeableNow = null, ?array $lineitems = null, ?array $metadata = null, ?string $paymentId = null, ?array $raw = null, ?string $successUrl = null, ?\DateTime $updatedAt = null, ?string $url = null)
     {
         $this->amount = $amount;
+        $this->contactEmail = $contactEmail;
         $this->contactId = $contactId;
+        $this->contactName = $contactName;
+        $this->contactPhone = $contactPhone;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->description = $description;

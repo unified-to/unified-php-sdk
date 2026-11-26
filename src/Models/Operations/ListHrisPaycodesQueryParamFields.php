@@ -23,6 +23,7 @@ enum ListHrisPaycodesQueryParamFields: string
     case IsPreTax = 'is_pre_tax';
     case IsEmployer = 'is_employer';
     case IsActive = 'is_active';
+    case IsRetirementEligible = 'is_retirement_eligible';
     case Metadata = 'metadata';
     case Raw = 'raw';
 }

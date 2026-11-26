@@ -1,0 +1,8 @@
+# FhirEncounterDiagnosis
+
+
+## Fields
+
+| Field                                                                                                            | Type                                                                                                             | Required                                                                                                         | Description                                                                                                      |
+| ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `condition`                                                                                                      | [Shared\PropertyFhirEncounterDiagnosisCondition](../../Models/Shared/PropertyFhirEncounterDiagnosisCondition.md) | :heavy_check_mark:                                                                                               | The diagnosis or procedure relevant to the encounter (Condition reference)                                       |

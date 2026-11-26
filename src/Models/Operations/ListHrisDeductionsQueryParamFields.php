@@ -30,6 +30,7 @@ enum ListHrisDeductionsQueryParamFields: string
     case MaxAmount = 'max_amount';
     case PaycodeId = 'paycode_id';
     case GarnishmentType = 'garnishment_type';
+    case LoanIdentifier = 'loan_identifier';
     case Metadata = 'metadata';
     case Raw = 'raw';
 }

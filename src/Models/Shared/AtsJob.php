@@ -76,6 +76,16 @@ class AtsJob
     public ?EmploymentType $employmentType = null;
 
     /**
+     * The placement fee agreed with the client for this job
+     *
+     * @var ?array<\Unified\Unified_to\Models\Shared\AtsFee> $fees
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('fees')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<\Unified\Unified_to\Models\Shared\AtsFee>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $fees = null;
+
+    /**
      * The departments/divisions/teams that this job belongs to
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AtsGroup> $groups
@@ -296,6 +306,7 @@ class AtsJob
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $description
      * @param  ?\Unified\Unified_to\Models\Shared\EmploymentType  $employmentType
+     * @param  ?array<\Unified\Unified_to\Models\Shared\AtsFee>  $fees
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsGroup>  $groups
      * @param  ?array<string>  $hiringManagerIds
      * @param  ?array<\Unified\Unified_to\Models\Shared\AtsReference>  $hiringManagers
@@ -321,7 +332,7 @@ class AtsJob
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $groups = null, ?array $hiringManagerIds = null, ?array $hiringManagers = null, ?string $id = null, ?string $industry = null, ?string $languageLocale = null, ?array $metadata = null, ?string $minimumDegree = null, ?float $minimumExperienceYears = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $openings = null, ?array $postings = null, ?array $publicJobUrls = null, ?array $questions = null, ?array $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?array $skills = null, ?AtsJobStatus $status = null, ?string $summary = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?array $addresses = null, ?\DateTime $closedAt = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $description = null, ?EmploymentType $employmentType = null, ?array $fees = null, ?array $groups = null, ?array $hiringManagerIds = null, ?array $hiringManagers = null, ?string $id = null, ?string $industry = null, ?string $languageLocale = null, ?array $metadata = null, ?string $minimumDegree = null, ?float $minimumExperienceYears = null, ?string $name = null, ?float $numberOfOpenings = null, ?array $openings = null, ?array $postings = null, ?array $publicJobUrls = null, ?array $questions = null, ?array $raw = null, ?array $recruiterIds = null, ?bool $remote = null, ?array $skills = null, ?AtsJobStatus $status = null, ?string $summary = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->addresses = $addresses;
         $this->closedAt = $closedAt;
@@ -330,6 +341,7 @@ class AtsJob
         $this->createdAt = $createdAt;
         $this->description = $description;
         $this->employmentType = $employmentType;
+        $this->fees = $fees;
         $this->groups = $groups;
         $this->hiringManagerIds = $hiringManagerIds;
         $this->hiringManagers = $hiringManagers;

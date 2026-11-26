@@ -4,8 +4,61 @@
 
 ### Available Operations
 
+* [getFhirCondition](#getfhircondition) - Read a Condition
 * [getHealthcareCondition](#gethealthcarecondition) - Retrieve a condition
+* [listFhirConditions](#listfhirconditions) - Search Condition resources
 * [listHealthcareConditions](#listhealthcareconditions) - List all conditions
+
+## getFhirCondition
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getFhirCondition" method="get" path="/fhir/{connection_id}/Condition/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetFhirConditionRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->condition->getFhirCondition(
+    request: $request
+);
+
+if ($response->fhirCondition !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetFhirConditionRequest](../../Models/Operations/GetFhirConditionRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetFhirConditionResponse](../../Models/Operations/GetFhirConditionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getHealthcareCondition
 
@@ -51,6 +104,56 @@ if ($response->healthcareCondition !== null) {
 ### Response
 
 **[?Operations\GetHealthcareConditionResponse](../../Models/Operations/GetHealthcareConditionResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listFhirConditions
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listFhirConditions" method="get" path="/fhir/{connection_id}/Condition" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListFhirConditionsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->condition->listFhirConditions(
+    request: $request
+);
+
+if ($response->fhirBundle !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\ListFhirConditionsRequest](../../Models/Operations/ListFhirConditionsRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\ListFhirConditionsResponse](../../Models/Operations/ListFhirConditionsResponse.md)**
 
 ### Errors
 

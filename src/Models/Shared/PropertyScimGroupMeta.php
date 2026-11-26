@@ -37,12 +37,12 @@ class PropertyScimGroupMeta
 
     /**
      *
-     * @var ?\Unified\Unified_to\Models\Shared\ResourceType $resourceType
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyScimGroupMetaResourceType $resourceType
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('resourceType')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\ResourceType|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyScimGroupMetaResourceType|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?ResourceType $resourceType = null;
+    public ?PropertyScimGroupMetaResourceType $resourceType = null;
 
     /**
      *
@@ -56,11 +56,11 @@ class PropertyScimGroupMeta
      * @param  ?string  $created
      * @param  ?string  $lastModified
      * @param  ?string  $location
-     * @param  ?\Unified\Unified_to\Models\Shared\ResourceType  $resourceType
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyScimGroupMetaResourceType  $resourceType
      * @param  ?string  $version
      * @phpstan-pure
      */
-    public function __construct(?string $created = null, ?string $lastModified = null, ?string $location = null, ?ResourceType $resourceType = null, ?string $version = null)
+    public function __construct(?string $created = null, ?string $lastModified = null, ?string $location = null, ?PropertyScimGroupMetaResourceType $resourceType = null, ?string $version = null)
     {
         $this->created = $created;
         $this->lastModified = $lastModified;

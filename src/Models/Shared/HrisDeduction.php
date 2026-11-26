@@ -121,6 +121,15 @@ class HrisDeduction
     public ?bool $isActive = null;
 
     /**
+     * the payroll system's identifier for the retirement-plan loan this deduction repays
+     *
+     * @var ?string $loanIdentifier
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('loan_identifier')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $loanIdentifier = null;
+
+    /**
      * annual maximum employee amount (always money)
      *
      * @var ?float $maxAmount
@@ -215,6 +224,7 @@ class HrisDeduction
      * @param  ?\Unified\Unified_to\Models\Shared\GarnishmentType  $garnishmentType
      * @param  ?string  $id
      * @param  ?bool  $isActive
+     * @param  ?string  $loanIdentifier
      * @param  ?float  $maxAmount
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $notes
@@ -226,7 +236,7 @@ class HrisDeduction
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $benefitId = null, ?string $companyId = null, ?HrisDeductionCoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?float $employerAmount = null, ?EmployerType $employerType = null, ?\DateTime $endAt = null, ?HrisDeductionFrequency $frequency = null, ?GarnishmentType $garnishmentType = null, ?string $id = null, ?bool $isActive = null, ?float $maxAmount = null, ?array $metadata = null, ?string $notes = null, ?string $paycodeId = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisDeductionType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?float $amount = null, ?string $benefitId = null, ?string $companyId = null, ?HrisDeductionCoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?float $employerAmount = null, ?EmployerType $employerType = null, ?\DateTime $endAt = null, ?HrisDeductionFrequency $frequency = null, ?GarnishmentType $garnishmentType = null, ?string $id = null, ?bool $isActive = null, ?string $loanIdentifier = null, ?float $maxAmount = null, ?array $metadata = null, ?string $notes = null, ?string $paycodeId = null, ?array $raw = null, ?\DateTime $startAt = null, ?HrisDeductionType $type = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
         $this->amount = $amount;
         $this->benefitId = $benefitId;
@@ -240,6 +250,7 @@ class HrisDeduction
         $this->garnishmentType = $garnishmentType;
         $this->id = $id;
         $this->isActive = $isActive;
+        $this->loanIdentifier = $loanIdentifier;
         $this->maxAmount = $maxAmount;
         $this->metadata = $metadata;
         $this->notes = $notes;

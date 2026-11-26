@@ -200,6 +200,16 @@ class CrmLead
     public ?string $userId = null;
 
     /**
+     * DMS Vehicles the lead is interested in
+     *
+     * @var ?array<string> $vehicleIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('vehicle_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $vehicleIds = null;
+
+    /**
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmLeadAddress  $address
      * @param  ?string  $companyId
      * @param  ?string  $companyName
@@ -221,9 +231,10 @@ class CrmLead
      * @param  ?string  $title
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @param  ?array<string>  $vehicleIds
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?bool $isActive = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?PropertyCrmLeadAddress $address = null, ?string $companyId = null, ?string $companyName = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $creatorUserId = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?bool $isActive = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?string $source = null, ?string $status = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $vehicleIds = null)
     {
         $this->address = $address;
         $this->companyId = $companyId;
@@ -246,5 +257,6 @@ class CrmLead
         $this->title = $title;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
+        $this->vehicleIds = $vehicleIds;
     }
 }

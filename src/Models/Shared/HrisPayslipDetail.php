@@ -84,6 +84,24 @@ class HrisPayslipDetail
     public ?bool $isPreTax = null;
 
     /**
+     * true when this line counts as retirement-plan compensation
+     *
+     * @var ?bool $isRetirementEligible
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_retirement_eligible')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isRetirementEligible = null;
+
+    /**
+     * the payroll system's identifier for the retirement-plan loan this line repays
+     *
+     * @var ?string $loanIdentifier
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('loan_identifier')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $loanIdentifier = null;
+
+    /**
      *
      * @var ?string $name
      */
@@ -137,6 +155,15 @@ class HrisPayslipDetail
     public ?float $ytdAmount = null;
 
     /**
+     * year-to-date hours for this line
+     *
+     * @var ?float $ytdHours
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('ytd_hours')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $ytdHours = null;
+
+    /**
      * @param  float  $amount
      * @param  ?string  $benefitId
      * @param  ?float  $companyAmount
@@ -146,15 +173,18 @@ class HrisPayslipDetail
      * @param  ?float  $hours
      * @param  ?bool  $isEmployer
      * @param  ?bool  $isPreTax
+     * @param  ?bool  $isRetirementEligible
+     * @param  ?string  $loanIdentifier
      * @param  ?string  $name
      * @param  ?string  $originalType
      * @param  ?string  $paycodeId
      * @param  ?float  $rateAmount
      * @param  ?\Unified\Unified_to\Models\Shared\HrisPayslipDetailType  $type
      * @param  ?float  $ytdAmount
+     * @param  ?float  $ytdHours
      * @phpstan-pure
      */
-    public function __construct(float $amount, ?string $benefitId = null, ?float $companyAmount = null, ?string $deductionId = null, ?string $description = null, ?float $employeeAmount = null, ?float $hours = null, ?bool $isEmployer = null, ?bool $isPreTax = null, ?string $name = null, ?string $originalType = null, ?string $paycodeId = null, ?float $rateAmount = null, ?HrisPayslipDetailType $type = null, ?float $ytdAmount = null)
+    public function __construct(float $amount, ?string $benefitId = null, ?float $companyAmount = null, ?string $deductionId = null, ?string $description = null, ?float $employeeAmount = null, ?float $hours = null, ?bool $isEmployer = null, ?bool $isPreTax = null, ?bool $isRetirementEligible = null, ?string $loanIdentifier = null, ?string $name = null, ?string $originalType = null, ?string $paycodeId = null, ?float $rateAmount = null, ?HrisPayslipDetailType $type = null, ?float $ytdAmount = null, ?float $ytdHours = null)
     {
         $this->amount = $amount;
         $this->benefitId = $benefitId;
@@ -165,11 +195,14 @@ class HrisPayslipDetail
         $this->hours = $hours;
         $this->isEmployer = $isEmployer;
         $this->isPreTax = $isPreTax;
+        $this->isRetirementEligible = $isRetirementEligible;
+        $this->loanIdentifier = $loanIdentifier;
         $this->name = $name;
         $this->originalType = $originalType;
         $this->paycodeId = $paycodeId;
         $this->rateAmount = $rateAmount;
         $this->type = $type;
         $this->ytdAmount = $ytdAmount;
+        $this->ytdHours = $ytdHours;
     }
 }

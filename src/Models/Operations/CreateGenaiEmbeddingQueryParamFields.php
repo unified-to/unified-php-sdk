@@ -13,7 +13,7 @@ enum CreateGenaiEmbeddingQueryParamFields: string
 {
     case ModelId = 'model_id';
     case Content = 'content';
-    case EncondingFormat = 'enconding_format';
+    case EncodingFormat = 'encoding_format';
     case Type = 'type';
     case Dimension = 'dimension';
     case MaxTokens = 'max_tokens';

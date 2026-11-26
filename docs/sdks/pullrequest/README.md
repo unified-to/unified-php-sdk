@@ -36,18 +36,18 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-18T21:24:51.350Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-23T00:31:27.295Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: 'b49721ae-ec63-4a01-b8ba-d35f20e618e0',
+        id: '89ffe838-ad97-43f8-a4d6-6c2ff18574c0',
         labels: [
-            'creptio',
-            'tutamen',
+            'crudelis',
+            'uxor',
         ],
         metadata: [],
-        notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
+        notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
         status: Shared\RepoPullrequestStatus::Approved,
-        title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-09T07:02:47.086Z'),
+        title: 'compress redundant application',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-14T18:41:34.174Z'),
     ),
     connectionId: '<id>',
 );
@@ -203,18 +203,18 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-18T21:24:51.359Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-23T00:31:27.303Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '361990e1-bcf2-405e-83fe-d4dc6292e38d',
+        id: '1dcfa716-562d-4b51-8c5b-18de25ff9bdf',
         labels: [
-            'creptio',
-            'tutamen',
+            'crudelis',
+            'uxor',
         ],
         metadata: [],
-        notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
+        notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
         status: Shared\RepoPullrequestStatus::Approved,
-        title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-09T07:02:47.097Z'),
+        title: 'compress redundant application',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-14T18:41:34.186Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -321,18 +321,18 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-18T21:24:51.359Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-23T00:31:27.303Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '361990e1-bcf2-405e-83fe-d4dc6292e38d',
+        id: '1dcfa716-562d-4b51-8c5b-18de25ff9bdf',
         labels: [
-            'creptio',
-            'tutamen',
+            'crudelis',
+            'uxor',
         ],
         metadata: [],
-        notes: 'Texo advoco bibo amet. Defero coadunatio turbo curtus. Consuasor aggero veritatis suggero adeo.',
+        notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
         status: Shared\RepoPullrequestStatus::Approved,
-        title: 'reboot mobile application',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-09T07:02:47.097Z'),
+        title: 'compress redundant application',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-14T18:41:34.186Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

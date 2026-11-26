@@ -20,3 +20,6 @@
 | `SuccessUrl`      | success_url       |
 | `Metadata`        | metadata          |
 | `Raw`             | raw               |
+| `ContactName`     | contact_name      |
+| `ContactEmail`    | contact_email     |
+| `ContactPhone`    | contact_phone     |

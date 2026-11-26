@@ -50,13 +50,13 @@ $request = new Operations\CreateAnalyticsEventRequest(
     analyticsEvent: new Shared\AnalyticsEvent(
         createdAt: Utils\Utils::parseDateTime('2023-06-21T03:13:22.954Z'),
         eventType: Shared\EventType::ScreenView,
-        id: 'd84cd0a5-0c00-48fc-810b-9d489821173e',
+        id: '1fb3780b-3367-406d-9246-6f24153277b1',
         metadata: [
             'key' => new Shared\PropertyAnalyticsEventMetadata(),
         ],
         name: 'page_view',
-        pageUrl: 'https://golden-carboxyl.biz',
-        updatedAt: Utils\Utils::parseDateTime('2023-09-26T23:02:46.526Z'),
+        pageUrl: 'https://colossal-intellect.info/',
+        updatedAt: Utils\Utils::parseDateTime('2023-09-27T12:05:01.885Z'),
     ),
     connectionId: '<id>',
 );
@@ -113,10 +113,10 @@ $request = new Operations\CreateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: 'dc9e078a-0c9c-433e-9d01-b4522870f0e9',
-        name: 'Daniel, Goldner and Dickinson',
+        id: 'ac555242-b8fb-44fe-8c8e-506259436dec',
+        name: 'Graham - Glover',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T23:48:37.770Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-15T00:36:53.197Z'),
     ),
     connectionId: '<id>',
 );
@@ -172,15 +172,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAnalyticsVisitorRequest(
     analyticsVisitor: new Shared\AnalyticsVisitor(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        email: 'desiree.o.hara@icloud.com',
+        email: 'madisen.jenkins@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: '4f774516-c443-4305-bd7c-5feb645eab89',
-        lastSeenAt: Utils\Utils::parseDateTime('2025-02-01T10:30:01.707Z'),
+        id: 'b1797113-c948-48df-8027-af89c340ba01',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-02-06T11:25:09.834Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
         totalEvents: 2916,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-22T21:50:48.549Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-28T10:36:11.537Z'),
     ),
     connectionId: '<id>',
 );
@@ -691,10 +691,10 @@ $request = new Operations\PatchAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '3c15e236-be0b-4b12-a3b0-cc30d95e2d61',
-        name: 'Daniel, Goldner and Dickinson',
+        id: '87410a6c-f751-43b1-9f9a-41bfd1fa7902',
+        name: 'Graham - Glover',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T23:48:37.770Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-15T00:36:53.197Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -751,15 +751,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAnalyticsVisitorRequest(
     analyticsVisitor: new Shared\AnalyticsVisitor(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        email: 'desiree.o.hara@icloud.com',
+        email: 'madisen.jenkins@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: 'b9a37d0e-452c-4722-8ba6-d7165a4c8c72',
-        lastSeenAt: Utils\Utils::parseDateTime('2025-02-01T10:30:01.719Z'),
+        id: '19c5192f-c5e7-4fd1-8da7-ac25cb2c4e6b',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-02-06T11:25:09.843Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
         totalEvents: 2916,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-22T21:50:48.562Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-28T10:36:11.548Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -919,10 +919,10 @@ $request = new Operations\UpdateAnalyticsPropertyRequest(
     analyticsProperty: new Shared\AnalyticsProperty(
         createdAt: Utils\Utils::parseDateTime('2021-09-05T19:04:58.430Z'),
         currency: 'USD',
-        id: '3c15e236-be0b-4b12-a3b0-cc30d95e2d61',
-        name: 'Daniel, Goldner and Dickinson',
+        id: '87410a6c-f751-43b1-9f9a-41bfd1fa7902',
+        name: 'Graham - Glover',
         timezone: 'UTC',
-        updatedAt: Utils\Utils::parseDateTime('2021-09-14T23:48:37.770Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-09-15T00:36:53.197Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -979,15 +979,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAnalyticsVisitorRequest(
     analyticsVisitor: new Shared\AnalyticsVisitor(
         createdAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        email: 'desiree.o.hara@icloud.com',
+        email: 'madisen.jenkins@icloud.com',
         firstSeenAt: Utils\Utils::parseDateTime('2020-04-16T20:29:48.281Z'),
-        id: 'b9a37d0e-452c-4722-8ba6-d7165a4c8c72',
-        lastSeenAt: Utils\Utils::parseDateTime('2025-02-01T10:30:01.719Z'),
+        id: '19c5192f-c5e7-4fd1-8da7-ac25cb2c4e6b',
+        lastSeenAt: Utils\Utils::parseDateTime('2025-02-06T11:25:09.843Z'),
         metadata: [
             'segment' => new Shared\PropertyAnalyticsVisitorMetadata(),
         ],
         totalEvents: 2916,
-        updatedAt: Utils\Utils::parseDateTime('2025-07-22T21:50:48.562Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-07-28T10:36:11.548Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

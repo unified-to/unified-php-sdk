@@ -40,5 +40,6 @@ enum CreateAtsJobQueryParamFields: string
     case UserId = 'user_id';
     case Industry = 'industry';
     case Summary = 'summary';
+    case Fees = 'fees';
     case Raw = 'raw';
 }

@@ -9,11 +9,10 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
-/** Potential severity of future reactions */
+/** low | high | unable-to-assess */
 enum Criticality: string
 {
-    case Low = 'LOW';
-    case High = 'HIGH';
-    case UnableToAssess = 'UNABLE_TO_ASSESS';
-    case Other = 'OTHER';
+    case Low = 'low';
+    case High = 'high';
+    case UnableToAssess = 'unable-to-assess';
 }

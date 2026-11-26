@@ -28,6 +28,15 @@ class HrisCompensation
     public ?string $currency = null;
 
     /**
+     * date this pay stopped (empty = still current) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $endAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $endAt = null;
+
+    /**
      *
      * @var ?\Unified\Unified_to\Models\Shared\HrisCompensationFrequency $frequency
      */
@@ -54,6 +63,15 @@ class HrisCompensation
     public ?string $notes = null;
 
     /**
+     * date this pay became effective (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $startAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $startAt = null;
+
+    /**
      *
      * @var ?\Unified\Unified_to\Models\Shared\HrisCompensationType $type
      */
@@ -65,19 +83,23 @@ class HrisCompensation
     /**
      * @param  ?float  $amount
      * @param  ?string  $currency
+     * @param  ?\DateTime  $endAt
      * @param  ?\Unified\Unified_to\Models\Shared\HrisCompensationFrequency  $frequency
      * @param  ?string  $groupId
      * @param  ?string  $notes
+     * @param  ?\DateTime  $startAt
      * @param  ?\Unified\Unified_to\Models\Shared\HrisCompensationType  $type
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?string $currency = null, ?HrisCompensationFrequency $frequency = null, ?string $groupId = null, ?string $notes = null, ?HrisCompensationType $type = null)
+    public function __construct(?float $amount = null, ?string $currency = null, ?\DateTime $endAt = null, ?HrisCompensationFrequency $frequency = null, ?string $groupId = null, ?string $notes = null, ?\DateTime $startAt = null, ?HrisCompensationType $type = null)
     {
         $this->amount = $amount;
         $this->currency = $currency;
+        $this->endAt = $endAt;
         $this->frequency = $frequency;
         $this->groupId = $groupId;
         $this->notes = $notes;
+        $this->startAt = $startAt;
         $this->type = $type;
     }
 }

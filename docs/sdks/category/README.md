@@ -45,12 +45,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
-        description: 'Textus ab thymum labore basium.',
-        id: 'e49df4a0-2cc4-4864-897d-2d3df69d4ba8',
+        description: 'Labore basium corrumpo crinis ars subito pecto.',
+        id: '4a4418e0-4b58-40fb-ae53-994d0208969a',
         isActive: false,
         metadata: [],
-        name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-01T01:32:19.286Z'),
+        name: 'Automotive',
+        updatedAt: Utils\Utils::parseDateTime('2025-10-05T17:29:09.670Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,12 +106,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
-        description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: '16dd02dc-b41e-4034-ac8c-27575797c3d0',
+        description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
+        id: '4d7f82b9-0923-49b6-b2b7-51130514e9e2',
         isActive: true,
         metadata: [],
-        name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-08T21:01:57.862Z'),
+        name: 'tempus',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-15T01:01:18.876Z'),
     ),
     connectionId: '<id>',
 );
@@ -470,12 +470,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
-        description: 'Textus ab thymum labore basium.',
-        id: 'd7dcf9c8-f87b-4d03-9873-63b5267c595e',
+        description: 'Labore basium corrumpo crinis ars subito pecto.',
+        id: '6e65c738-f7ff-4318-b770-5f4ed019b2d9',
         isActive: false,
         metadata: [],
-        name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-01T01:32:19.295Z'),
+        name: 'Automotive',
+        updatedAt: Utils\Utils::parseDateTime('2025-10-05T17:29:09.676Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -532,12 +532,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
-        description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: 'a5d50ee4-ddf5-48cf-b7ea-392bca12041b',
+        description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
+        id: 'bcd83fb6-0b81-48b5-88ed-06ef404f98d5',
         isActive: true,
         metadata: [],
-        name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-08T21:01:57.876Z'),
+        name: 'tempus',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-15T01:01:18.882Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -696,12 +696,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAccountingCategoryRequest(
     accountingCategory: new Shared\AccountingCategory(
         createdAt: Utils\Utils::parseDateTime('2023-05-30T12:29:04.257Z'),
-        description: 'Textus ab thymum labore basium.',
-        id: 'd7dcf9c8-f87b-4d03-9873-63b5267c595e',
+        description: 'Labore basium corrumpo crinis ars subito pecto.',
+        id: '6e65c738-f7ff-4318-b770-5f4ed019b2d9',
         isActive: false,
         metadata: [],
-        name: 'Beauty',
-        updatedAt: Utils\Utils::parseDateTime('2025-10-01T01:32:19.295Z'),
+        name: 'Automotive',
+        updatedAt: Utils\Utils::parseDateTime('2025-10-05T17:29:09.676Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -758,12 +758,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateTicketingCategoryRequest(
     ticketingCategory: new Shared\TicketingCategory(
         createdAt: Utils\Utils::parseDateTime('2019-10-19T22:02:51.067Z'),
-        description: 'Tempus umbra cibus carpo depulso torqueo. Curtus aperiam nam optio tendo. Bardus tumultus delectus arbitro amplus tollo coerceo clam comprehendo vulnero.',
-        id: 'a5d50ee4-ddf5-48cf-b7ea-392bca12041b',
+        description: 'Carpo depulso torqueo coniecto curtus. Nam optio tendo utroque. Tumultus delectus arbitro amplus. Coerceo clam comprehendo vulnero triduana deprimo cruciamentum talio virtus. Substantia cogito deleo derelinquo traho.',
+        id: 'bcd83fb6-0b81-48b5-88ed-06ef404f98d5',
         isActive: true,
         metadata: [],
-        name: 'amicitia',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-08T21:01:57.876Z'),
+        name: 'tempus',
+        updatedAt: Utils\Utils::parseDateTime('2026-02-15T01:01:18.882Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

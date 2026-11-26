@@ -13,6 +13,15 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisBenefit
 {
     /**
+     * the payroll system's code for this benefit plan
+     *
+     * @var ?string $code
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('code')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $code = null;
+
+    /**
      * (reference to HrisCompany)
      *
      * @var ?string $companyId
@@ -64,6 +73,16 @@ class HrisBenefit
     #[\Speakeasy\Serializer\Annotation\SerializedName('employer_contribution_amount')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?float $employerContributionAmount = null;
+
+    /**
+     * kind of employer retirement contribution (eg. MATCH, SAFE_HARBOR_MATCH, PROFIT_SHARING)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\EmployerContributionCategory $employerContributionCategory
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employer_contribution_category')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmployerContributionCategory|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?EmployerContributionCategory $employerContributionCategory = null;
 
     /**
      * always money
@@ -139,6 +158,16 @@ class HrisBenefit
     public ?array $raw = null;
 
     /**
+     * the retirement plan this benefit belongs to (for RETIREMENT* types)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\RetirementPlanType $retirementPlanType
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('retirement_plan_type')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\RetirementPlanType|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?RetirementPlanType $retirementPlanType = null;
+
+    /**
      * Tax describes the tax treatment of the benefit
      *
      * @var ?\Unified\Unified_to\Models\Shared\Tax $tax
@@ -167,12 +196,14 @@ class HrisBenefit
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?string  $code
      * @param  ?string  $companyId
      * @param  ?\Unified\Unified_to\Models\Shared\CoverageLevel  $coverageLevel
      * @param  ?\DateTime  $createdAt
      * @param  ?string  $currency
      * @param  ?string  $description
      * @param  ?float  $employerContributionAmount
+     * @param  ?\Unified\Unified_to\Models\Shared\EmployerContributionCategory  $employerContributionCategory
      * @param  ?float  $employerContributionMaxAmount
      * @param  ?\Unified\Unified_to\Models\Shared\EmployerContributionType  $employerContributionType
      * @param  ?\Unified\Unified_to\Models\Shared\HrisBenefitFrequency  $frequency
@@ -181,19 +212,22 @@ class HrisBenefit
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisMetadata>  $metadata
      * @param  ?string  $name
      * @param  ?array<string, mixed>  $raw
+     * @param  ?\Unified\Unified_to\Models\Shared\RetirementPlanType  $retirementPlanType
      * @param  ?\Unified\Unified_to\Models\Shared\Tax  $tax
      * @param  ?\Unified\Unified_to\Models\Shared\HrisBenefitType  $type
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $companyId = null, ?CoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $employerContributionAmount = null, ?float $employerContributionMaxAmount = null, ?EmployerContributionType $employerContributionType = null, ?HrisBenefitFrequency $frequency = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?Tax $tax = null, ?HrisBenefitType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $code = null, ?string $companyId = null, ?CoverageLevel $coverageLevel = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?float $employerContributionAmount = null, ?EmployerContributionCategory $employerContributionCategory = null, ?float $employerContributionMaxAmount = null, ?EmployerContributionType $employerContributionType = null, ?HrisBenefitFrequency $frequency = null, ?string $id = null, ?bool $isActive = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?RetirementPlanType $retirementPlanType = null, ?Tax $tax = null, ?HrisBenefitType $type = null, ?\DateTime $updatedAt = null)
     {
+        $this->code = $code;
         $this->companyId = $companyId;
         $this->coverageLevel = $coverageLevel;
         $this->createdAt = $createdAt;
         $this->currency = $currency;
         $this->description = $description;
         $this->employerContributionAmount = $employerContributionAmount;
+        $this->employerContributionCategory = $employerContributionCategory;
         $this->employerContributionMaxAmount = $employerContributionMaxAmount;
         $this->employerContributionType = $employerContributionType;
         $this->frequency = $frequency;
@@ -202,6 +236,7 @@ class HrisBenefit
         $this->metadata = $metadata;
         $this->name = $name;
         $this->raw = $raw;
+        $this->retirementPlanType = $retirementPlanType;
         $this->tax = $tax;
         $this->type = $type;
         $this->updatedAt = $updatedAt;

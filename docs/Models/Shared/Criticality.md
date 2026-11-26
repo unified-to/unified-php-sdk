@@ -1,13 +1,12 @@
 # Criticality
 
-Potential severity of future reactions
+low | high | unable-to-assess
 
 
 ## Values
 
 | Name             | Value            |
 | ---------------- | ---------------- |
-| `Low`            | LOW              |
-| `High`           | HIGH             |
-| `UnableToAssess` | UNABLE_TO_ASSESS |
-| `Other`          | OTHER            |
+| `Low`            | low              |
+| `High`           | high             |
+| `UnableToAssess` | unable-to-assess |

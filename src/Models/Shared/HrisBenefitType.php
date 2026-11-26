@@ -31,4 +31,10 @@ enum HrisBenefitType: string
     case Commuter = 'COMMUTER';
     case DependentCare = 'DEPENDENT_CARE';
     case Pension = 'PENSION';
+    case RetirementCatchup = 'RETIREMENT_CATCHUP';
+    case RetirementRothCatchup = 'RETIREMENT_ROTH_CATCHUP';
+    case RetirementAfterTax = 'RETIREMENT_AFTER_TAX';
+    case CollegeSavings = 'COLLEGE_SAVINGS';
+    case EarnedWageAccess = 'EARNED_WAGE_ACCESS';
+    case UnionDues = 'UNION_DUES';
 }

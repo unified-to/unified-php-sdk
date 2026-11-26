@@ -25,4 +25,5 @@
 | `CompanyIds`  | company_ids   |
 | `Description` | description   |
 | `Metadata`    | metadata      |
+| `VehicleIds`  | vehicle_ids   |
 | `Raw`         | raw           |

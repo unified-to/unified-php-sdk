@@ -37,12 +37,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
-        description: 'Assentator tero sequi.',
-        id: '16c2df27-702f-4453-910c-21fdc73bfb1f',
-        instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
+        description: 'Sperno despecto.',
+        id: 'a206af70-2895-4028-a752-aef61dcce156',
+        instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
         isActive: false,
-        name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-11-08T10:28:32.514Z'),
+        name: 'testimonial suddenly',
+        updatedAt: Utils\Utils::parseDateTime('2025-11-14T03:46:58.045Z'),
     ),
     connectionId: '<id>',
 );
@@ -199,12 +199,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
-        description: 'Assentator tero sequi.',
-        id: 'd7215073-458b-464f-86ec-36098fd26703',
-        instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
+        description: 'Sperno despecto.',
+        id: 'cfd7a04d-556c-44b6-b127-1c60db4ceacf',
+        instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
         isActive: false,
-        name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-11-08T10:28:32.519Z'),
+        name: 'testimonial suddenly',
+        updatedAt: Utils\Utils::parseDateTime('2025-11-14T03:46:58.050Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -312,12 +312,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
-        description: 'Assentator tero sequi.',
-        id: 'd7215073-458b-464f-86ec-36098fd26703',
-        instructions: 'Delicate tabella addo vita ver auctus corrumpo. Conscendo auctus maiores astrum sulum aufero bis stella. Non varius sto solus admitto vado suggero theatrum.',
+        description: 'Sperno despecto.',
+        id: 'cfd7a04d-556c-44b6-b127-1c60db4ceacf',
+        instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
         isActive: false,
-        name: 'daughter with',
-        updatedAt: Utils\Utils::parseDateTime('2025-11-08T10:28:32.519Z'),
+        name: 'testimonial suddenly',
+        updatedAt: Utils\Utils::parseDateTime('2025-11-14T03:46:58.050Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

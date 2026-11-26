@@ -36,13 +36,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateLegalPracticeareaRequest(
     legalPracticearea: new Shared\LegalPracticearea(
-        code: 'QCA',
+        code: 'TLV',
         createdAt: Utils\Utils::parseDateTime('2023-01-28T21:00:26.264Z'),
-        id: '4c776dc9-5c88-4431-b03d-deb94418c841',
+        id: 'aee8dbf5-e7d1-4001-a853-101bead15d70',
         metadata: [],
-        name: 'witty Law',
+        name: 'advanced Law',
         type: Shared\LegalPracticeareaType::Education,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-16T19:14:50.571Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-21T14:14:06.760Z'),
     ),
     connectionId: '<id>',
 );
@@ -198,13 +198,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchLegalPracticeareaRequest(
     legalPracticearea: new Shared\LegalPracticearea(
-        code: 'QCA',
+        code: 'TLV',
         createdAt: Utils\Utils::parseDateTime('2023-01-28T21:00:26.264Z'),
-        id: '08c02ac2-627b-4eb0-a2d2-74d1420b5ac9',
+        id: 'b1a4a24f-317d-4d08-b7c5-517aa278ec5a',
         metadata: [],
-        name: 'witty Law',
+        name: 'advanced Law',
         type: Shared\LegalPracticeareaType::Education,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-16T19:14:50.577Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-21T14:14:06.767Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -311,13 +311,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateLegalPracticeareaRequest(
     legalPracticearea: new Shared\LegalPracticearea(
-        code: 'QCA',
+        code: 'TLV',
         createdAt: Utils\Utils::parseDateTime('2023-01-28T21:00:26.264Z'),
-        id: '08c02ac2-627b-4eb0-a2d2-74d1420b5ac9',
+        id: 'b1a4a24f-317d-4d08-b7c5-517aa278ec5a',
         metadata: [],
-        name: 'witty Law',
+        name: 'advanced Law',
         type: Shared\LegalPracticeareaType::Education,
-        updatedAt: Utils\Utils::parseDateTime('2025-09-16T19:14:50.577Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-09-21T14:14:06.767Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

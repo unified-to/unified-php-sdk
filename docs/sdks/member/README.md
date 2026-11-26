@@ -38,25 +38,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateMartechMemberRequest(
     marketingMember: new Shared\MarketingMember(
-        company: 'Miller - Franecki',
+        company: 'Abernathy - Carter',
         createdAt: Utils\Utils::parseDateTime('2022-04-15T15:32:38.496Z'),
         emails: [
             new Shared\MarketingEmail(
-                email: 'jude.leffler@hotmail.com',
+                email: 'jeremy.franecki@hotmail.com',
                 type: Shared\MarketingEmailType::Home,
             ),
         ],
-        firstName: 'Jude',
-        id: '2421c880-5c8e-41c7-81df-4375dd71f383',
-        lastName: 'Leffler',
+        firstName: 'Jeremy',
+        id: '13e0b708-9657-4967-ac9a-2b29b9692ce2',
+        lastName: 'Franecki',
         metadata: [],
-        name: 'Jude Leffler',
+        name: 'Jeremy Franecki',
         status: Shared\MarketingMemberStatus::Unsubscribed,
         tags: [
-            'adnuo',
-            'verumtamen',
+            'deleniti',
+            'subvenio',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-29T14:24:28.757Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-03T13:18:53.356Z'),
     ),
     connectionId: '<id>',
 );
@@ -313,25 +313,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchMartechMemberRequest(
     marketingMember: new Shared\MarketingMember(
-        company: 'Miller - Franecki',
+        company: 'Abernathy - Carter',
         createdAt: Utils\Utils::parseDateTime('2022-04-15T15:32:38.496Z'),
         emails: [
             new Shared\MarketingEmail(
-                email: 'jude.leffler@hotmail.com',
+                email: 'jeremy.franecki@hotmail.com',
                 type: Shared\MarketingEmailType::Home,
             ),
         ],
-        firstName: 'Jude',
-        id: '7d348cd0-4519-4f8a-9de1-21b557e79460',
-        lastName: 'Leffler',
+        firstName: 'Jeremy',
+        id: 'fb8ed5c5-ce28-4ee8-806a-3377daf9038c',
+        lastName: 'Franecki',
         metadata: [],
-        name: 'Jude Leffler',
+        name: 'Jeremy Franecki',
         status: Shared\MarketingMemberStatus::Unsubscribed,
         tags: [
-            'adnuo',
-            'verumtamen',
+            'deleniti',
+            'subvenio',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-29T14:24:28.767Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-03T13:18:53.369Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -438,25 +438,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateMartechMemberRequest(
     marketingMember: new Shared\MarketingMember(
-        company: 'Miller - Franecki',
+        company: 'Abernathy - Carter',
         createdAt: Utils\Utils::parseDateTime('2022-04-15T15:32:38.496Z'),
         emails: [
             new Shared\MarketingEmail(
-                email: 'jude.leffler@hotmail.com',
+                email: 'jeremy.franecki@hotmail.com',
                 type: Shared\MarketingEmailType::Home,
             ),
         ],
-        firstName: 'Jude',
-        id: '7d348cd0-4519-4f8a-9de1-21b557e79460',
-        lastName: 'Leffler',
+        firstName: 'Jeremy',
+        id: 'fb8ed5c5-ce28-4ee8-806a-3377daf9038c',
+        lastName: 'Franecki',
         metadata: [],
-        name: 'Jude Leffler',
+        name: 'Jeremy Franecki',
         status: Shared\MarketingMemberStatus::Unsubscribed,
         tags: [
-            'adnuo',
-            'verumtamen',
+            'deleniti',
+            'subvenio',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2025-07-29T14:24:28.767Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-08-03T13:18:53.369Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

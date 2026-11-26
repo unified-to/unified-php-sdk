@@ -46,3 +46,6 @@
 | `Property`     | property       |
 | `Plm`          | plm            |
 | `Qms`          | qms            |
+| `Dms`          | dms            |
+| `Fhir`         | fhir           |
+| `Printing`     | printing       |

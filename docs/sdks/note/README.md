@@ -37,10 +37,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
-        description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '3ee2e992-fe98-4ea8-a14a-e98cb1af8984',
+        description: 'Vitiosus recusandae tristis.',
+        id: 'a9725feb-785f-48c6-a3f9-7e087767c823',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-20T01:32:03.077Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-25T00:30:26.478Z'),
     ),
     connectionId: '<id>',
 );
@@ -197,10 +197,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
-        description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '6ba547a0-742b-4274-bd3c-78022b368eaf',
+        description: 'Vitiosus recusandae tristis.',
+        id: 'b2b4254c-b12c-4021-8d4a-8dc21bf01359',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-20T01:32:03.081Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-25T00:30:26.485Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -308,10 +308,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateTicketingNoteRequest(
     ticketingNote: new Shared\TicketingNote(
         createdAt: Utils\Utils::parseDateTime('2019-07-23T15:05:03.241Z'),
-        description: 'Civitas absum adipisci vitiosus recusandae tristis dedico libero comminor cena. Spes virgo absorbeo defluo nostrum.',
-        id: '6ba547a0-742b-4274-bd3c-78022b368eaf',
+        description: 'Vitiosus recusandae tristis.',
+        id: 'b2b4254c-b12c-4021-8d4a-8dc21bf01359',
         metadata: [],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-20T01:32:03.081Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-25T00:30:26.485Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

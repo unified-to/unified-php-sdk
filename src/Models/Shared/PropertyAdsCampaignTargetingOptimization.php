@@ -31,12 +31,12 @@ class PropertyAdsCampaignTargetingOptimization
     /**
      * Google: bid_only falsetrue
      *
-     * @var ?\Unified\Unified_to\Models\Shared\Mode $mode
+     * @var ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingOptimizationMode $mode
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('mode')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Mode|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingOptimizationMode|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?Mode $mode = null;
+    public ?PropertyAdsCampaignTargetingOptimizationMode $mode = null;
 
     /**
      *
@@ -49,11 +49,11 @@ class PropertyAdsCampaignTargetingOptimization
     /**
      * @param  ?bool  $advantageAudience
      * @param  ?bool  $advantagePlacements
-     * @param  ?\Unified\Unified_to\Models\Shared\Mode  $mode
+     * @param  ?\Unified\Unified_to\Models\Shared\PropertyAdsCampaignTargetingOptimizationMode  $mode
      * @param  ?bool  $targetingOptimizationExpansionAll
      * @phpstan-pure
      */
-    public function __construct(?bool $advantageAudience = null, ?bool $advantagePlacements = null, ?Mode $mode = null, ?bool $targetingOptimizationExpansionAll = null)
+    public function __construct(?bool $advantageAudience = null, ?bool $advantagePlacements = null, ?PropertyAdsCampaignTargetingOptimizationMode $mode = null, ?bool $targetingOptimizationExpansionAll = null)
     {
         $this->advantageAudience = $advantageAudience;
         $this->advantagePlacements = $advantagePlacements;

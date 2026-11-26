@@ -4,12 +4,82 @@
 
 ### Available Operations
 
+* [createPrintingFile](#createprintingfile) - Create a file
 * [createStorageFile](#createstoragefile) - Create a file
+* [getPrintingFile](#getprintingfile) - Retrieve a file
 * [getStorageFile](#getstoragefile) - Retrieve a file
+* [listPrintingFiles](#listprintingfiles) - List all files
 * [listStorageFiles](#liststoragefiles) - List all files
 * [patchStorageFile](#patchstoragefile) - Update a file
 * [removeStorageFile](#removestoragefile) - Remove a file
 * [updateStorageFile](#updatestoragefile) - Update a file
+
+## createPrintingFile
+
+Creates a PrintingFile. Provide the unified PrintingFile fields in the request body; they are mapped to the provider's API. Returns the created PrintingFile.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createPrintingFile" method="post" path="/printing/{connection_id}/file" example="printing_file" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreatePrintingFileRequest(
+    printingFile: new Shared\PrintingFile(
+        createdAt: Utils\Utils::parseDateTime('2020-10-22T04:25:39.825Z'),
+        dpi: 300,
+        height: 5400,
+        id: '1cab15aa-26a4-475e-b184-fc2943d3916b',
+        metadata: [],
+        mimeType: 'image/jpeg',
+        name: 'blond-ecliptic.jpg',
+        previewUrl: 'https://picsum.photos/seed/aATvhmNA/400/400',
+        size: 1956654,
+        status: Shared\PrintingFileStatus::Ready,
+        updatedAt: Utils\Utils::parseDateTime('2020-10-22T04:25:39.825Z'),
+        url: 'https://picsum.photos/seed/XBj97B/2783/172',
+        width: 4500,
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->file->createPrintingFile(
+    request: $request
+);
+
+if ($response->printingFile !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\CreatePrintingFileRequest](../../Models/Operations/CreatePrintingFileRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\CreatePrintingFileResponse](../../Models/Operations/CreatePrintingFileResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## createStorageFile
 
@@ -37,21 +107,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateStorageFileRequest(
     storageFile: new Shared\StorageFile(
         createdAt: Utils\Utils::parseDateTime('2021-09-12T16:48:23.774Z'),
-        description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
-        downloadUrl: 'https://clueless-laughter.biz',
-        hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-        id: '92876a9c-8d60-48c7-8617-31f85d4b8caa',
+        description: 'Debilito cimentarius virgo acidus thymbra.',
+        downloadUrl: 'https://messy-clamp.net/',
+        hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
+        id: 'eb711cca-4032-4c73-851a-c203794cccb6',
         metadata: [],
         mimeType: 'application/pdf',
-        name: 'softly.pdf',
+        name: 'joshingly.pdf',
         size: 1134456,
         tags: [
-            'suasoria',
+            'derelinquo',
         ],
         type: Shared\StorageFileType::Folder,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-13T11:54:56.174Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-15T09:27:00.999Z'),
         version: '1',
-        webUrl: 'https://faraway-inspection.org',
+        webUrl: 'https://likable-widow.org/',
     ),
     connectionId: '<id>',
 );
@@ -74,6 +144,57 @@ if ($response->storageFile !== null) {
 ### Response
 
 **[?Operations\CreateStorageFileResponse](../../Models/Operations/CreateStorageFileResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getPrintingFile
+
+Retrieves a single PrintingFile by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getPrintingFile" method="get" path="/printing/{connection_id}/file/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetPrintingFileRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->file->getPrintingFile(
+    request: $request
+);
+
+if ($response->printingFile !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                              | Type                                                                                   | Required                                                                               | Description                                                                            |
+| -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| `$request`                                                                             | [Operations\GetPrintingFileRequest](../../Models/Operations/GetPrintingFileRequest.md) | :heavy_check_mark:                                                                     | The request object to use for the request.                                             |
+
+### Response
+
+**[?Operations\GetPrintingFileResponse](../../Models/Operations/GetPrintingFileResponse.md)**
 
 ### Errors
 
@@ -125,6 +246,56 @@ if ($response->storageFile !== null) {
 ### Response
 
 **[?Operations\GetStorageFileResponse](../../Models/Operations/GetStorageFileResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listPrintingFiles
+
+Returns a list of PrintingFiles. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listPrintingFiles" method="get" path="/printing/{connection_id}/file" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListPrintingFilesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->file->listPrintingFiles(
+    request: $request
+);
+
+if ($response->printingFiles !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListPrintingFilesRequest](../../Models/Operations/ListPrintingFilesRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\ListPrintingFilesResponse](../../Models/Operations/ListPrintingFilesResponse.md)**
 
 ### Errors
 
@@ -208,21 +379,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchStorageFileRequest(
     storageFile: new Shared\StorageFile(
         createdAt: Utils\Utils::parseDateTime('2021-09-12T16:48:23.774Z'),
-        description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
-        downloadUrl: 'https://clueless-laughter.biz',
-        hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-        id: 'df8da8dc-91b8-445c-92c9-baa718290d38',
+        description: 'Debilito cimentarius virgo acidus thymbra.',
+        downloadUrl: 'https://messy-clamp.net/',
+        hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
+        id: 'a4fd9be8-e087-43b2-96fa-499d105993ef',
         metadata: [],
         mimeType: 'application/pdf',
-        name: 'softly.pdf',
+        name: 'joshingly.pdf',
         size: 1134456,
         tags: [
-            'suasoria',
+            'derelinquo',
         ],
         type: Shared\StorageFileType::Folder,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-13T11:54:56.180Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-15T09:27:01.005Z'),
         version: '1',
-        webUrl: 'https://faraway-inspection.org',
+        webUrl: 'https://likable-widow.org/',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -330,21 +501,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateStorageFileRequest(
     storageFile: new Shared\StorageFile(
         createdAt: Utils\Utils::parseDateTime('2021-09-12T16:48:23.774Z'),
-        description: 'Deprimo crastinus cupiditate debilito cimentarius virgo acidus.',
-        downloadUrl: 'https://clueless-laughter.biz',
-        hash: 'd9d88dda7bc0acaa8472fdef2307f94a1fc355ce',
-        id: 'df8da8dc-91b8-445c-92c9-baa718290d38',
+        description: 'Debilito cimentarius virgo acidus thymbra.',
+        downloadUrl: 'https://messy-clamp.net/',
+        hash: '9d88dda7bc0acaa8472fdef2307f94a1fc355cef',
+        id: 'a4fd9be8-e087-43b2-96fa-499d105993ef',
         metadata: [],
         mimeType: 'application/pdf',
-        name: 'softly.pdf',
+        name: 'joshingly.pdf',
         size: 1134456,
         tags: [
-            'suasoria',
+            'derelinquo',
         ],
         type: Shared\StorageFileType::Folder,
-        updatedAt: Utils\Utils::parseDateTime('2023-02-13T11:54:56.180Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-15T09:27:01.005Z'),
         version: '1',
-        webUrl: 'https://faraway-inspection.org',
+        webUrl: 'https://likable-widow.org/',
     ),
     connectionId: '<id>',
     id: '<id>',

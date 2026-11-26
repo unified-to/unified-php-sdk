@@ -32,7 +32,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateShippingRateRequest(
     shippingRate: new Shared\ShippingRate(
         currency: 'USD',
-        id: 'ee160421-de97-4a5f-ba23-78787d7a6b97',
+        id: '00771bb5-3ef7-4ebc-941f-fc5255e96557',
         metadata: [],
         rates: [
             new Shared\ShippingRateRate(
@@ -40,7 +40,7 @@ $request = new Operations\CreateShippingRateRequest(
                 baseAmount: 46.01,
                 currency: 'USD',
                 deliveryDays: 2,
-                description: 'Veniam denego vulgo bos turpis pax.',
+                description: 'Bos turpis pax amet dolorem sufficio demonstro complectus benevolentia rerum.',
                 discountAmount: 4.6,
                 estimatedDays: 2,
                 estimatedDeliveryEndAt: Utils\Utils::parseDateTime('2021-09-03T01:03:36.021Z'),

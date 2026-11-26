@@ -52,4 +52,7 @@ enum Categories: string
     case Property = 'property';
     case Plm = 'plm';
     case Qms = 'qms';
+    case Dms = 'dms';
+    case Fhir = 'fhir';
+    case Printing = 'printing';
 }

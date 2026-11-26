@@ -37,12 +37,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: 'c8d6d819-2795-4f63-ac4a-753722ac4f21',
+        id: '34b49521-67dd-4640-bf0f-864c49e0b8f4',
         isPrimary: false,
         metadata: [],
-        name: 'mysterious-republican.usable-section.info',
+        name: 'steel-hovercraft.humiliating-lender.com',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-20T05:10:44.526Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-24T04:06:11.035Z'),
     ),
     connectionId: '<id>',
 );
@@ -199,12 +199,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '798c7b59-5ba5-46a2-8f0d-c8a5d1686045',
+        id: 'e5d976c3-554b-4bb1-a394-cf88e999361a',
         isPrimary: false,
         metadata: [],
-        name: 'mysterious-republican.usable-section.info',
+        name: 'steel-hovercraft.humiliating-lender.com',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-20T05:10:44.530Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-24T04:06:11.042Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -312,12 +312,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeDomainRequest(
     computeDomain: new Shared\ComputeDomain(
         createdAt: Utils\Utils::parseDateTime('2019-11-22T16:38:26.009Z'),
-        id: '798c7b59-5ba5-46a2-8f0d-c8a5d1686045',
+        id: 'e5d976c3-554b-4bb1-a394-cf88e999361a',
         isPrimary: false,
         metadata: [],
-        name: 'mysterious-republican.usable-section.info',
+        name: 'steel-hovercraft.humiliating-lender.com',
         status: Shared\ComputeDomainStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-11-20T05:10:44.530Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-11-24T04:06:11.042Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

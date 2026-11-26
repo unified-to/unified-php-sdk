@@ -74,13 +74,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateHealthcareAppointmentRequest(
     healthcareAppointment: new Shared\HealthcareAppointment(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
-        description: 'clarus aptus cetera',
+        description: 'cubicularis caput viriliter',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '3ecbbe42-4406-4c64-9b34-554afc275bdc',
+        id: '896de591-6d2a-4f3c-a604-f64005b57f00',
         isVirtual: true,
-        meetingUrl: 'https://expensive-slipper.name/',
+        meetingUrl: 'https://cautious-cannon.com/',
         metadata: [],
-        notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
+        notes: 'Casus anser ver alo beatus.',
         practitionerIds: [],
         serviceTypes: [
             new Shared\HealthcareCode(
@@ -92,7 +92,7 @@ $request = new Operations\CreateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2026-10-20T14:41:36.655Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-27T09:09:41.379Z'),
     ),
     connectionId: '<id>',
 );
@@ -156,15 +156,15 @@ $request = new Operations\CreateHealthcareDocumentRequest(
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2023-07-16T04:00:25.853Z'),
-        documentUrl: 'https://overcooked-yogurt.org',
-        filename: 'ugh_after.elc',
-        id: 'efbd0f31-c7ab-471f-b1a5-3dfe3557fe38',
+        documentUrl: 'https://noxious-abacus.biz/',
+        filename: 'quip.eot',
+        id: '3846ceb3-c062-4bfb-b8a2-08266c64976b',
         metadata: [],
         mimeType: 'application/pdf',
         name: 'History and physical',
         status: Shared\HealthcareDocumentStatus::Superseded,
         type: Shared\HealthcareDocumentType::ConsultationNote,
-        updatedAt: Utils\Utils::parseDateTime('2025-01-08T15:51:11.531Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-11T17:38:03.956Z'),
     ),
     connectionId: '<id>',
 );
@@ -251,15 +251,15 @@ $request = new Operations\CreateHealthcareObservationRequest(
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2022-12-06T21:34:04.293Z'),
-        id: 'e7c37895-a5ec-414c-b98c-d695027ef610',
+        id: 'deb0f3c4-be11-4b07-a780-31f14acad31f',
         interpretation: Shared\Interpretation::CriticalHigh,
-        issuedAt: Utils\Utils::parseDateTime('2025-05-29T15:17:11.626Z'),
+        issuedAt: Utils\Utils::parseDateTime('2025-06-02T23:28:04.634Z'),
         metadata: [],
         name: 'Blood pressure panel',
-        observedAt: Utils\Utils::parseDateTime('2025-02-05T01:58:38.434Z'),
+        observedAt: Utils\Utils::parseDateTime('2025-02-08T21:04:58.187Z'),
         status: Shared\HealthcareObservationStatus::Corrected,
         type: Shared\HealthcareObservationType::VitalSigns,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-17T23:18:25.904Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T20:43:14.870Z'),
     ),
     connectionId: '<id>',
 );
@@ -315,21 +315,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateHealthcarePatientRequest(
     healthcarePatient: new Shared\HealthcarePatient(
         address: new Shared\PropertyHealthcarePatientAddress(
-            address1: '162 Kirlin Mall',
-            city: 'Dickinsonborough',
+            address1: '3645 Leonardo Place',
+            city: 'Estelleland',
             country: 'US',
-            postalCode: '54031',
-            region: 'Nebraska',
+            postalCode: '99263-6004',
+            region: 'New Jersey',
         ),
-        birthdate: '2025-03-13',
+        birthdate: '1941-12-25',
         contacts: [
             new Shared\HealthcarePatientContact(
                 emails: [],
-                name: 'Antonia Lebsack',
+                name: 'Ambrose Welch',
                 relationship: 'Spouse',
                 telephones: [
                     new Shared\HealthcareTelephone(
-                        telephone: '(695) 328-7029 x4412',
+                        telephone: '323.524.3947 x89014',
                         type: Shared\HealthcareTelephoneType::Mobile,
                     ),
                 ],
@@ -338,33 +338,33 @@ $request = new Operations\CreateHealthcarePatientRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
-                email: 'alejandrin.parker@icloud.com',
+                email: 'monroe.bauch@icloud.com',
                 type: Shared\HealthcareEmailType::Home,
             ),
         ],
-        firstName: 'Alejandrin',
+        firstName: 'Monroe',
         gender: Shared\HealthcarePatientGender::Female,
-        id: 'e6eea169-c8fe-4b53-b6ab-d6b1db17e69a',
+        id: '8fbf5c66-8f20-4b78-83b1-983aff9f265a',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
-                value: '57992636',
+                value: '51559512',
             ),
         ],
         isActive: true,
         isDeceased: false,
         language: 'zh',
-        lastName: 'Parker',
+        lastName: 'Bauch',
         metadata: [],
-        name: 'Alejandrin Parker',
+        name: 'Monroe Bauch',
         practitionerIds: [],
         telephones: [
             new Shared\HealthcareTelephone(
-                telephone: '1-219-555-9023 x08295',
+                telephone: '1-555-902-3082 x9590',
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-20T02:23:12.861Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-26T14:23:35.813Z'),
     ),
     connectionId: '<id>',
 );
@@ -2137,13 +2137,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchHealthcareAppointmentRequest(
     healthcareAppointment: new Shared\HealthcareAppointment(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
-        description: 'clarus aptus cetera',
+        description: 'cubicularis caput viriliter',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '5333c54c-e51a-4b2f-9b77-92c41c988d96',
+        id: '59f21379-9e37-4354-bf07-0c404e9c281b',
         isVirtual: true,
-        meetingUrl: 'https://expensive-slipper.name/',
+        meetingUrl: 'https://cautious-cannon.com/',
         metadata: [],
-        notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
+        notes: 'Casus anser ver alo beatus.',
         practitionerIds: [],
         serviceTypes: [
             new Shared\HealthcareCode(
@@ -2155,7 +2155,7 @@ $request = new Operations\PatchHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2026-10-20T14:41:36.667Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-27T09:09:41.401Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2212,21 +2212,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchHealthcarePatientRequest(
     healthcarePatient: new Shared\HealthcarePatient(
         address: new Shared\PropertyHealthcarePatientAddress(
-            address1: '162 Kirlin Mall',
-            city: 'Dickinsonborough',
+            address1: '3645 Leonardo Place',
+            city: 'Estelleland',
             country: 'US',
-            postalCode: '54031',
-            region: 'Nebraska',
+            postalCode: '99263-6004',
+            region: 'New Jersey',
         ),
-        birthdate: '2025-03-13',
+        birthdate: '1941-12-25',
         contacts: [
             new Shared\HealthcarePatientContact(
                 emails: [],
-                name: 'Antonia Lebsack',
+                name: 'Ambrose Welch',
                 relationship: 'Spouse',
                 telephones: [
                     new Shared\HealthcareTelephone(
-                        telephone: '(695) 328-7029 x4412',
+                        telephone: '323.524.3947 x89014',
                         type: Shared\HealthcareTelephoneType::Mobile,
                     ),
                 ],
@@ -2235,33 +2235,33 @@ $request = new Operations\PatchHealthcarePatientRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
-                email: 'alejandrin.parker@icloud.com',
+                email: 'monroe.bauch@icloud.com',
                 type: Shared\HealthcareEmailType::Home,
             ),
         ],
-        firstName: 'Alejandrin',
+        firstName: 'Monroe',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '7478fa3a-6a90-4cfb-9e02-cdee11551379',
+        id: '58cdd75b-e8a5-4ca6-b277-2a8d074a52c8',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
-                value: '57992636',
+                value: '51559512',
             ),
         ],
         isActive: true,
         isDeceased: false,
         language: 'zh',
-        lastName: 'Parker',
+        lastName: 'Bauch',
         metadata: [],
-        name: 'Alejandrin Parker',
+        name: 'Monroe Bauch',
         practitionerIds: [],
         telephones: [
             new Shared\HealthcareTelephone(
-                telephone: '1-219-555-9023 x08295',
+                telephone: '1-555-902-3082 x9590',
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-20T02:23:12.885Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-26T14:23:35.853Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2369,13 +2369,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateHealthcareAppointmentRequest(
     healthcareAppointment: new Shared\HealthcareAppointment(
         createdAt: Utils\Utils::parseDateTime('2023-04-11T08:16:20.874Z'),
-        description: 'clarus aptus cetera',
+        description: 'cubicularis caput viriliter',
         endAt: Utils\Utils::parseDateTime('2023-12-12T13:04:41.451Z'),
-        id: '5333c54c-e51a-4b2f-9b77-92c41c988d96',
+        id: '59f21379-9e37-4354-bf07-0c404e9c281b',
         isVirtual: true,
-        meetingUrl: 'https://expensive-slipper.name/',
+        meetingUrl: 'https://cautious-cannon.com/',
         metadata: [],
-        notes: 'Stabilis triduana colo casus anser ver alo beatus contabesco amiculum.',
+        notes: 'Casus anser ver alo beatus.',
         practitionerIds: [],
         serviceTypes: [
             new Shared\HealthcareCode(
@@ -2387,7 +2387,7 @@ $request = new Operations\UpdateHealthcareAppointmentRequest(
         slotIds: [],
         startAt: Utils\Utils::parseDateTime('2023-12-12T12:34:41.451Z'),
         status: Shared\HealthcareAppointmentStatus::Booked,
-        updatedAt: Utils\Utils::parseDateTime('2026-10-20T14:41:36.667Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-10-27T09:09:41.401Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -2444,21 +2444,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateHealthcarePatientRequest(
     healthcarePatient: new Shared\HealthcarePatient(
         address: new Shared\PropertyHealthcarePatientAddress(
-            address1: '162 Kirlin Mall',
-            city: 'Dickinsonborough',
+            address1: '3645 Leonardo Place',
+            city: 'Estelleland',
             country: 'US',
-            postalCode: '54031',
-            region: 'Nebraska',
+            postalCode: '99263-6004',
+            region: 'New Jersey',
         ),
-        birthdate: '2025-03-13',
+        birthdate: '1941-12-25',
         contacts: [
             new Shared\HealthcarePatientContact(
                 emails: [],
-                name: 'Antonia Lebsack',
+                name: 'Ambrose Welch',
                 relationship: 'Spouse',
                 telephones: [
                     new Shared\HealthcareTelephone(
-                        telephone: '(695) 328-7029 x4412',
+                        telephone: '323.524.3947 x89014',
                         type: Shared\HealthcareTelephoneType::Mobile,
                     ),
                 ],
@@ -2467,33 +2467,33 @@ $request = new Operations\UpdateHealthcarePatientRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
-                email: 'alejandrin.parker@icloud.com',
+                email: 'monroe.bauch@icloud.com',
                 type: Shared\HealthcareEmailType::Home,
             ),
         ],
-        firstName: 'Alejandrin',
+        firstName: 'Monroe',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '7478fa3a-6a90-4cfb-9e02-cdee11551379',
+        id: '58cdd75b-e8a5-4ca6-b277-2a8d074a52c8',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
-                value: '57992636',
+                value: '51559512',
             ),
         ],
         isActive: true,
         isDeceased: false,
         language: 'zh',
-        lastName: 'Parker',
+        lastName: 'Bauch',
         metadata: [],
-        name: 'Alejandrin Parker',
+        name: 'Monroe Bauch',
         practitionerIds: [],
         telephones: [
             new Shared\HealthcareTelephone(
-                telephone: '1-219-555-9023 x08295',
+                telephone: '1-555-902-3082 x9590',
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-20T02:23:12.885Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-26T14:23:35.853Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

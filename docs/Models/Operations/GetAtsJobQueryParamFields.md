@@ -34,4 +34,5 @@
 | `UserId`                 | user_id                  |
 | `Industry`               | industry                 |
 | `Summary`                | summary                  |
+| `Fees`                   | fees                     |
 | `Raw`                    | raw                      |

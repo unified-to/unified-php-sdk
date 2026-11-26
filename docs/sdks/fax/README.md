@@ -34,18 +34,18 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateUcFaxRequest(
     ucFax: new Shared\UcFax(
-        costAmount: 1.2207,
+        costAmount: 1.8536,
         createdAt: Utils\Utils::parseDateTime('2022-10-25T13:37:51.431Z'),
         currency: 'USD',
-        fromTelephone: '+13605107540',
-        id: '9cbcac33-ce69-473f-8953-7d3f3dcd41fb',
-        mediaUrl: 'https://doting-jump.biz',
+        fromTelephone: '+15108540908',
+        id: '688db033-5364-41f2-ac28-a9a36cee14cf',
+        mediaUrl: 'https://pitiful-stranger.net/',
         metadata: [],
-        pages: 20,
+        pages: 10,
         status: Shared\UcFaxStatus::Delivered,
-        toTelephone: '+19083998866',
+        toTelephone: '+13999866972',
         type: Shared\UcFaxType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-17T04:28:43.213Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-17T23:54:04.540Z'),
     ),
     connectionId: '<id>',
 );

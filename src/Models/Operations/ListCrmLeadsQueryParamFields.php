@@ -31,5 +31,6 @@ enum ListCrmLeadsQueryParamFields: string
     case Title = 'title';
     case LinkUrls = 'link_urls';
     case Metadata = 'metadata';
+    case VehicleIds = 'vehicle_ids';
     case Raw = 'raw';
 }

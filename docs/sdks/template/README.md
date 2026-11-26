@@ -6,8 +6,10 @@
 
 * [createComputeTemplate](#createcomputetemplate) - Create a template
 * [getComputeTemplate](#getcomputetemplate) - Retrieve a template
+* [getPrintingTemplate](#getprintingtemplate) - Retrieve a template
 * [getSigningTemplate](#getsigningtemplate) - Retrieve a template
 * [listComputeTemplates](#listcomputetemplates) - List all templates
+* [listPrintingTemplates](#listprintingtemplates) - List all templates
 * [listSigningTemplates](#listsigningtemplates) - List all templates
 * [patchComputeTemplate](#patchcomputetemplate) - Update a template
 * [removeComputeTemplate](#removecomputetemplate) - Remove a template
@@ -44,18 +46,18 @@ $request = new Operations\CreateComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: 'ef2f9d88-9416-4dc0-b0c9-652cddb50b05',
-        image: 'perfumed-molasses/cohibeo:5.2',
+        id: '1bc58aa5-98b2-4e5d-92c7-2d8ec781aa42',
+        image: 'jaunty-tarragon/demum:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-04-17T07:03:07.691Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-04-23T02:57:49.036Z'),
         memoryMb: 8192,
         metadata: [],
-        name: 'multi-byte-card',
+        name: 'online-matrix',
         ports: [
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-28T10:29:50.729Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T04:08:33.692Z'),
     ),
     connectionId: '<id>',
 );
@@ -129,6 +131,57 @@ if ($response->computeTemplate !== null) {
 ### Response
 
 **[?Operations\GetComputeTemplateResponse](../../Models/Operations/GetComputeTemplateResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getPrintingTemplate
+
+Retrieves a single PrintingTemplate by its `id`. Obtain `id` values from the corresponding list endpoint. Use `fields` to return only the fields you need.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getPrintingTemplate" method="get" path="/printing/{connection_id}/template/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetPrintingTemplateRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->template->getPrintingTemplate(
+    request: $request
+);
+
+if ($response->printingTemplate !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetPrintingTemplateRequest](../../Models/Operations/GetPrintingTemplateRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\GetPrintingTemplateResponse](../../Models/Operations/GetPrintingTemplateResponse.md)**
 
 ### Errors
 
@@ -237,6 +290,56 @@ if ($response->computeTemplates !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## listPrintingTemplates
+
+Returns a list of PrintingTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listPrintingTemplates" method="get" path="/printing/{connection_id}/template" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListPrintingTemplatesRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->template->listPrintingTemplates(
+    request: $request
+);
+
+if ($response->printingTemplates !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListPrintingTemplatesRequest](../../Models/Operations/ListPrintingTemplatesRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\ListPrintingTemplatesResponse](../../Models/Operations/ListPrintingTemplatesResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## listSigningTemplates
 
 Returns a list of SigningTemplates. Narrow the results with the query parameters before paging, then page through them with `limit` and `offset` (the default and maximum page size depend on the integration). Use `fields` to return only the fields you need and reduce the response size. When the integration supports a total count, it is returned in the `X-Total-Count` response header. Use each item's `id` to retrieve, update, or delete it where those operations are supported.
@@ -318,18 +421,18 @@ $request = new Operations\PatchComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: 'af64d8c2-2131-42c6-add3-0a4774b9577f',
-        image: 'perfumed-molasses/cohibeo:5.2',
+        id: 'b1e254d1-2569-4de7-8e0f-c78b7962aac3',
+        image: 'jaunty-tarragon/demum:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-04-17T07:03:07.701Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-04-23T02:57:49.052Z'),
         memoryMb: 8192,
         metadata: [],
-        name: 'multi-byte-card',
+        name: 'online-matrix',
         ports: [
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-28T10:29:50.736Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T04:08:33.702Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -442,18 +545,18 @@ $request = new Operations\UpdateComputeTemplateRequest(
         dockerfile: 'FROM ubuntu:24.04\nRUN apt-get update',
         gpuCount: 2,
         gpuModel: Shared\ComputeTemplateGpuModel::NvidiaGh200,
-        id: 'af64d8c2-2131-42c6-add3-0a4774b9577f',
-        image: 'perfumed-molasses/cohibeo:5.2',
+        id: 'b1e254d1-2569-4de7-8e0f-c78b7962aac3',
+        image: 'jaunty-tarragon/demum:5.2',
         isPublic: false,
-        lastUsedAt: Utils\Utils::parseDateTime('2026-04-17T07:03:07.701Z'),
+        lastUsedAt: Utils\Utils::parseDateTime('2026-04-23T02:57:49.052Z'),
         memoryMb: 8192,
         metadata: [],
-        name: 'multi-byte-card',
+        name: 'online-matrix',
         ports: [
             8080,
         ],
         status: Shared\ComputeTemplateStatus::Other,
-        updatedAt: Utils\Utils::parseDateTime('2025-02-28T10:29:50.736Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-03-04T04:08:33.702Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

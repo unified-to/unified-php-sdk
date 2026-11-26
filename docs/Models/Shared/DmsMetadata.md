@@ -1,0 +1,13 @@
+# DmsMetadata
+
+
+## Fields
+
+| Field                                                                         | Type                                                                          | Required                                                                      | Description                                                                   |
+| ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| `extraData`                                                                   | [array\|string\|float\|bool\|null](../../Models/Shared/DmsMetadataExtraData.md) | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `format`                                                                      | [?Shared\DmsMetadataFormat](../../Models/Shared/DmsMetadataFormat.md)         | :heavy_minus_sign:                                                            | The data type of the custom field, which determines how `value` is formatted. |
+| `id`                                                                          | *?string*                                                                     | :heavy_minus_sign:                                                            | The ID of the custom field definition (from the metadata/metadata endpoint).  |
+| `namespace`                                                                   | *?string*                                                                     | :heavy_minus_sign:                                                            | N/A                                                                           |
+| `slug`                                                                        | *?string*                                                                     | :heavy_minus_sign:                                                            | The integration's API name (key) of an existing custom field.                 |
+| `value`                                                                       | [array\|string\|float\|bool\|null](../../Models/Shared/DmsMetadataValue.md)   | :heavy_minus_sign:                                                            | The field's value, typed by `format`.                                         |

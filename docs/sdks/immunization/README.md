@@ -4,8 +4,61 @@
 
 ### Available Operations
 
+* [getFhirImmunization](#getfhirimmunization) - Read a Immunization
 * [getHealthcareImmunization](#gethealthcareimmunization) - Retrieve an immunization
+* [listFhirImmunizations](#listfhirimmunizations) - Search Immunization resources
 * [listHealthcareImmunizations](#listhealthcareimmunizations) - List all immunizations
+
+## getFhirImmunization
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getFhirImmunization" method="get" path="/fhir/{connection_id}/Immunization/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetFhirImmunizationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->immunization->getFhirImmunization(
+    request: $request
+);
+
+if ($response->fhirImmunization !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\GetFhirImmunizationRequest](../../Models/Operations/GetFhirImmunizationRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\GetFhirImmunizationResponse](../../Models/Operations/GetFhirImmunizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
 ## getHealthcareImmunization
 
@@ -51,6 +104,56 @@ if ($response->healthcareImmunization !== null) {
 ### Response
 
 **[?Operations\GetHealthcareImmunizationResponse](../../Models/Operations/GetHealthcareImmunizationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listFhirImmunizations
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listFhirImmunizations" method="get" path="/fhir/{connection_id}/Immunization" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListFhirImmunizationsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->immunization->listFhirImmunizations(
+    request: $request
+);
+
+if ($response->fhirBundle !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                          | Type                                                                                               | Required                                                                                           | Description                                                                                        |
+| -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
+| `$request`                                                                                         | [Operations\ListFhirImmunizationsRequest](../../Models/Operations/ListFhirImmunizationsRequest.md) | :heavy_check_mark:                                                                                 | The request object to use for the request.                                                         |
+
+### Response
+
+**[?Operations\ListFhirImmunizationsResponse](../../Models/Operations/ListFhirImmunizationsResponse.md)**
 
 ### Errors
 

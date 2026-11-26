@@ -240,9 +240,47 @@ class UnifiedTo
 
     public Record $record;
 
+    public Dms $dms;
+
+    public Appointment $appointment;
+
+    public Opcode $opcode;
+
+    public Part $part;
+
+    public Partsale $partsale;
+
+    public Repairorder $repairorder;
+
+    public Vehicle $vehicle;
+
+    public Vehiclesale $vehiclesale;
+
     public Enrich $enrich;
 
     public Person $person;
+
+    public Fhir $fhir;
+
+    public Allergyintolerance $allergyintolerance;
+
+    public Condition $condition;
+
+    public Diagnosticreport $diagnosticreport;
+
+    public Encounter $encounter;
+
+    public Immunization $immunization;
+
+    public Medicationrequest $medicationrequest;
+
+    public Observation $observation;
+
+    public Patient $patient;
+
+    public Practitioner $practitioner;
+
+    public Metadata $metadata;
 
     public Forms $forms;
 
@@ -270,27 +308,13 @@ class UnifiedTo
 
     public Allergy $allergy;
 
-    public Appointment $appointment;
-
     public Careplan $careplan;
-
-    public Condition $condition;
 
     public Coverage $coverage;
 
-    public Encounter $encounter;
-
     public Goal $goal;
 
-    public Immunization $immunization;
-
     public Medication $medication;
-
-    public Observation $observation;
-
-    public Patient $patient;
-
-    public Practitioner $practitioner;
 
     public Procedure $procedure;
 
@@ -362,8 +386,6 @@ class UnifiedTo
 
     public Message $message;
 
-    public Metadata $metadata;
-
     public Passthrough $passthrough;
 
     public Payment $payment;
@@ -386,7 +408,11 @@ class UnifiedTo
 
     public Change $change;
 
-    public Part $part;
+    public Printing $printing;
+
+    public File $file;
+
+    public Product $product;
 
     public Conversation $conversation;
 
@@ -443,8 +469,6 @@ class UnifiedTo
     public Post $post;
 
     public Storage $storage;
-
-    public File $file;
 
     public Ticketing $ticketing;
 
@@ -612,8 +636,27 @@ class UnifiedTo
         $this->database = new Database($this->sdkConfiguration);
         $this->query = new Query($this->sdkConfiguration);
         $this->record = new Record($this->sdkConfiguration);
+        $this->dms = new Dms($this->sdkConfiguration);
+        $this->appointment = new Appointment($this->sdkConfiguration);
+        $this->opcode = new Opcode($this->sdkConfiguration);
+        $this->part = new Part($this->sdkConfiguration);
+        $this->partsale = new Partsale($this->sdkConfiguration);
+        $this->repairorder = new Repairorder($this->sdkConfiguration);
+        $this->vehicle = new Vehicle($this->sdkConfiguration);
+        $this->vehiclesale = new Vehiclesale($this->sdkConfiguration);
         $this->enrich = new Enrich($this->sdkConfiguration);
         $this->person = new Person($this->sdkConfiguration);
+        $this->fhir = new Fhir($this->sdkConfiguration);
+        $this->allergyintolerance = new Allergyintolerance($this->sdkConfiguration);
+        $this->condition = new Condition($this->sdkConfiguration);
+        $this->diagnosticreport = new Diagnosticreport($this->sdkConfiguration);
+        $this->encounter = new Encounter($this->sdkConfiguration);
+        $this->immunization = new Immunization($this->sdkConfiguration);
+        $this->medicationrequest = new Medicationrequest($this->sdkConfiguration);
+        $this->observation = new Observation($this->sdkConfiguration);
+        $this->patient = new Patient($this->sdkConfiguration);
+        $this->practitioner = new Practitioner($this->sdkConfiguration);
+        $this->metadata = new Metadata($this->sdkConfiguration);
         $this->forms = new Forms($this->sdkConfiguration);
         $this->form = new Form($this->sdkConfiguration);
         $this->submission = new Submission($this->sdkConfiguration);
@@ -627,17 +670,10 @@ class UnifiedTo
         $this->task = new Task($this->sdkConfiguration);
         $this->healthcare = new Healthcare($this->sdkConfiguration);
         $this->allergy = new Allergy($this->sdkConfiguration);
-        $this->appointment = new Appointment($this->sdkConfiguration);
         $this->careplan = new Careplan($this->sdkConfiguration);
-        $this->condition = new Condition($this->sdkConfiguration);
         $this->coverage = new Coverage($this->sdkConfiguration);
-        $this->encounter = new Encounter($this->sdkConfiguration);
         $this->goal = new Goal($this->sdkConfiguration);
-        $this->immunization = new Immunization($this->sdkConfiguration);
         $this->medication = new Medication($this->sdkConfiguration);
-        $this->observation = new Observation($this->sdkConfiguration);
-        $this->patient = new Patient($this->sdkConfiguration);
-        $this->practitioner = new Practitioner($this->sdkConfiguration);
         $this->procedure = new Procedure($this->sdkConfiguration);
         $this->slot = new Slot($this->sdkConfiguration);
         $this->hris = new Hris($this->sdkConfiguration);
@@ -673,7 +709,6 @@ class UnifiedTo
         $this->messaging = new Messaging($this->sdkConfiguration);
         $this->channel = new Channel($this->sdkConfiguration);
         $this->message = new Message($this->sdkConfiguration);
-        $this->metadata = new Metadata($this->sdkConfiguration);
         $this->passthrough = new Passthrough($this->sdkConfiguration);
         $this->payment = new Payment($this->sdkConfiguration);
         $this->payout = new Payout($this->sdkConfiguration);
@@ -685,7 +720,9 @@ class UnifiedTo
         $this->plm = new Plm($this->sdkConfiguration);
         $this->bomline = new Bomline($this->sdkConfiguration);
         $this->change = new Change($this->sdkConfiguration);
-        $this->part = new Part($this->sdkConfiguration);
+        $this->printing = new Printing($this->sdkConfiguration);
+        $this->file = new File($this->sdkConfiguration);
+        $this->product = new Product($this->sdkConfiguration);
         $this->conversation = new Conversation($this->sdkConfiguration);
         $this->guest = new Guest($this->sdkConfiguration);
         $this->listing = new Listing($this->sdkConfiguration);
@@ -714,7 +751,6 @@ class UnifiedTo
         $this->insight = new Insight($this->sdkConfiguration);
         $this->post = new Post($this->sdkConfiguration);
         $this->storage = new Storage($this->sdkConfiguration);
-        $this->file = new File($this->sdkConfiguration);
         $this->ticketing = new Ticketing($this->sdkConfiguration);
         $this->customer = new Customer($this->sdkConfiguration);
         $this->note = new Note($this->sdkConfiguration);

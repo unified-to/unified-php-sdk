@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createHealthcarePatient](#createhealthcarepatient) - Create a patient
+* [getFhirPatient](#getfhirpatient) - Read a Patient
 * [getHealthcarePatient](#gethealthcarepatient) - Retrieve a patient
+* [listFhirPatients](#listfhirpatients) - Search Patient resources
 * [listHealthcarePatients](#listhealthcarepatients) - List all patients
 * [patchHealthcarePatient](#patchhealthcarepatient) - Update a patient
 * [updateHealthcarePatient](#updatehealthcarepatient) - Update a patient
@@ -36,21 +38,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateHealthcarePatientRequest(
     healthcarePatient: new Shared\HealthcarePatient(
         address: new Shared\PropertyHealthcarePatientAddress(
-            address1: '162 Kirlin Mall',
-            city: 'Dickinsonborough',
+            address1: '3645 Leonardo Place',
+            city: 'Estelleland',
             country: 'US',
-            postalCode: '54031',
-            region: 'Nebraska',
+            postalCode: '99263-6004',
+            region: 'New Jersey',
         ),
-        birthdate: '2025-03-13',
+        birthdate: '1941-12-25',
         contacts: [
             new Shared\HealthcarePatientContact(
                 emails: [],
-                name: 'Antonia Lebsack',
+                name: 'Ambrose Welch',
                 relationship: 'Spouse',
                 telephones: [
                     new Shared\HealthcareTelephone(
-                        telephone: '(695) 328-7029 x4412',
+                        telephone: '323.524.3947 x89014',
                         type: Shared\HealthcareTelephoneType::Mobile,
                     ),
                 ],
@@ -59,33 +61,33 @@ $request = new Operations\CreateHealthcarePatientRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
-                email: 'alejandrin.parker@icloud.com',
+                email: 'monroe.bauch@icloud.com',
                 type: Shared\HealthcareEmailType::Home,
             ),
         ],
-        firstName: 'Alejandrin',
+        firstName: 'Monroe',
         gender: Shared\HealthcarePatientGender::Female,
-        id: 'e6eea169-c8fe-4b53-b6ab-d6b1db17e69a',
+        id: '8fbf5c66-8f20-4b78-83b1-983aff9f265a',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
-                value: '57992636',
+                value: '51559512',
             ),
         ],
         isActive: true,
         isDeceased: false,
         language: 'zh',
-        lastName: 'Parker',
+        lastName: 'Bauch',
         metadata: [],
-        name: 'Alejandrin Parker',
+        name: 'Monroe Bauch',
         practitionerIds: [],
         telephones: [
             new Shared\HealthcareTelephone(
-                telephone: '1-219-555-9023 x08295',
+                telephone: '1-555-902-3082 x9590',
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-20T02:23:12.861Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-26T14:23:35.813Z'),
     ),
     connectionId: '<id>',
 );
@@ -108,6 +110,57 @@ if ($response->healthcarePatient !== null) {
 ### Response
 
 **[?Operations\CreateHealthcarePatientResponse](../../Models/Operations/CreateHealthcarePatientResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getFhirPatient
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getFhirPatient" method="get" path="/fhir/{connection_id}/Patient/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetFhirPatientRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->patient->getFhirPatient(
+    request: $request
+);
+
+if ($response->fhirPatient !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                            | Type                                                                                 | Required                                                                             | Description                                                                          |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------ |
+| `$request`                                                                           | [Operations\GetFhirPatientRequest](../../Models/Operations/GetFhirPatientRequest.md) | :heavy_check_mark:                                                                   | The request object to use for the request.                                           |
+
+### Response
+
+**[?Operations\GetFhirPatientResponse](../../Models/Operations/GetFhirPatientResponse.md)**
 
 ### Errors
 
@@ -159,6 +212,56 @@ if ($response->healthcarePatient !== null) {
 ### Response
 
 **[?Operations\GetHealthcarePatientResponse](../../Models/Operations/GetHealthcarePatientResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listFhirPatients
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listFhirPatients" method="get" path="/fhir/{connection_id}/Patient" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListFhirPatientsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->patient->listFhirPatients(
+    request: $request
+);
+
+if ($response->fhirBundle !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\ListFhirPatientsRequest](../../Models/Operations/ListFhirPatientsRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\ListFhirPatientsResponse](../../Models/Operations/ListFhirPatientsResponse.md)**
 
 ### Errors
 
@@ -242,21 +345,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchHealthcarePatientRequest(
     healthcarePatient: new Shared\HealthcarePatient(
         address: new Shared\PropertyHealthcarePatientAddress(
-            address1: '162 Kirlin Mall',
-            city: 'Dickinsonborough',
+            address1: '3645 Leonardo Place',
+            city: 'Estelleland',
             country: 'US',
-            postalCode: '54031',
-            region: 'Nebraska',
+            postalCode: '99263-6004',
+            region: 'New Jersey',
         ),
-        birthdate: '2025-03-13',
+        birthdate: '1941-12-25',
         contacts: [
             new Shared\HealthcarePatientContact(
                 emails: [],
-                name: 'Antonia Lebsack',
+                name: 'Ambrose Welch',
                 relationship: 'Spouse',
                 telephones: [
                     new Shared\HealthcareTelephone(
-                        telephone: '(695) 328-7029 x4412',
+                        telephone: '323.524.3947 x89014',
                         type: Shared\HealthcareTelephoneType::Mobile,
                     ),
                 ],
@@ -265,33 +368,33 @@ $request = new Operations\PatchHealthcarePatientRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
-                email: 'alejandrin.parker@icloud.com',
+                email: 'monroe.bauch@icloud.com',
                 type: Shared\HealthcareEmailType::Home,
             ),
         ],
-        firstName: 'Alejandrin',
+        firstName: 'Monroe',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '7478fa3a-6a90-4cfb-9e02-cdee11551379',
+        id: '58cdd75b-e8a5-4ca6-b277-2a8d074a52c8',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
-                value: '57992636',
+                value: '51559512',
             ),
         ],
         isActive: true,
         isDeceased: false,
         language: 'zh',
-        lastName: 'Parker',
+        lastName: 'Bauch',
         metadata: [],
-        name: 'Alejandrin Parker',
+        name: 'Monroe Bauch',
         practitionerIds: [],
         telephones: [
             new Shared\HealthcareTelephone(
-                telephone: '1-219-555-9023 x08295',
+                telephone: '1-555-902-3082 x9590',
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-20T02:23:12.885Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-26T14:23:35.853Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -348,21 +451,21 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateHealthcarePatientRequest(
     healthcarePatient: new Shared\HealthcarePatient(
         address: new Shared\PropertyHealthcarePatientAddress(
-            address1: '162 Kirlin Mall',
-            city: 'Dickinsonborough',
+            address1: '3645 Leonardo Place',
+            city: 'Estelleland',
             country: 'US',
-            postalCode: '54031',
-            region: 'Nebraska',
+            postalCode: '99263-6004',
+            region: 'New Jersey',
         ),
-        birthdate: '2025-03-13',
+        birthdate: '1941-12-25',
         contacts: [
             new Shared\HealthcarePatientContact(
                 emails: [],
-                name: 'Antonia Lebsack',
+                name: 'Ambrose Welch',
                 relationship: 'Spouse',
                 telephones: [
                     new Shared\HealthcareTelephone(
-                        telephone: '(695) 328-7029 x4412',
+                        telephone: '323.524.3947 x89014',
                         type: Shared\HealthcareTelephoneType::Mobile,
                     ),
                 ],
@@ -371,33 +474,33 @@ $request = new Operations\UpdateHealthcarePatientRequest(
         createdAt: Utils\Utils::parseDateTime('2021-06-05T21:08:04.917Z'),
         emails: [
             new Shared\HealthcareEmail(
-                email: 'alejandrin.parker@icloud.com',
+                email: 'monroe.bauch@icloud.com',
                 type: Shared\HealthcareEmailType::Home,
             ),
         ],
-        firstName: 'Alejandrin',
+        firstName: 'Monroe',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '7478fa3a-6a90-4cfb-9e02-cdee11551379',
+        id: '58cdd75b-e8a5-4ca6-b277-2a8d074a52c8',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
-                value: '57992636',
+                value: '51559512',
             ),
         ],
         isActive: true,
         isDeceased: false,
         language: 'zh',
-        lastName: 'Parker',
+        lastName: 'Bauch',
         metadata: [],
-        name: 'Alejandrin Parker',
+        name: 'Monroe Bauch',
         practitionerIds: [],
         telephones: [
             new Shared\HealthcareTelephone(
-                telephone: '1-219-555-9023 x08295',
+                telephone: '1-555-902-3082 x9590',
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-20T02:23:12.885Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-26T14:23:35.853Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

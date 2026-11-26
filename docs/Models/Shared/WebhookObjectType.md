@@ -253,3 +253,15 @@ The object to return (eg. CRM "contact")
 | `QmsAction`                     | qms_action                      |
 | `QmsInspection`                 | qms_inspection                  |
 | `QmsAudit`                      | qms_audit                       |
+| `DmsVehicle`                    | dms_vehicle                     |
+| `DmsVehiclesale`                | dms_vehiclesale                 |
+| `DmsRepairorder`                | dms_repairorder                 |
+| `DmsAppointment`                | dms_appointment                 |
+| `DmsPart`                       | dms_part                        |
+| `DmsPartsale`                   | dms_partsale                    |
+| `DmsOpcode`                     | dms_opcode                      |
+| `PrintingProduct`               | printing_product                |
+| `PrintingTemplate`              | printing_template               |
+| `PrintingFile`                  | printing_file                   |
+| `PrintingQuote`                 | printing_quote                  |
+| `PrintingOrder`                 | printing_order                  |

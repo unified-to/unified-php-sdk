@@ -37,7 +37,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(
         createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
-        id: 'c7313427-791d-4402-8482-951ab9c1f25d',
+        id: 'aa2ab14f-7b63-4d99-9ff7-074307262bfb',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -45,9 +45,9 @@ $request = new Operations\CreateVerificationRequestRequest(
         profileTelephones: [],
         responseDetails: [],
         responseDownloadUrls: [],
-        responseSource: 'Implemented regional protocol',
+        responseSource: 'Centralized value-added infrastructure',
         responseStatus: Shared\VerificationRequestResponseStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-28T07:10:29.568Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-28T12:56:11.005Z'),
     ),
     connectionId: '<id>',
 );
@@ -204,7 +204,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(
         createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
-        id: '7004c0d3-52a3-4aae-97a7-f4eba150896d',
+        id: '70e74cb4-1f21-4016-bbc5-4594be704108',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -212,9 +212,9 @@ $request = new Operations\PatchVerificationRequestRequest(
         profileTelephones: [],
         responseDetails: [],
         responseDownloadUrls: [],
-        responseSource: 'Implemented regional protocol',
+        responseSource: 'Centralized value-added infrastructure',
         responseStatus: Shared\VerificationRequestResponseStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-28T07:10:29.569Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-28T12:56:11.005Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -322,7 +322,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateVerificationRequestRequest(
     verificationRequest: new Shared\VerificationRequest(
         createdAt: Utils\Utils::parseDateTime('2023-11-20T08:17:29.950Z'),
-        id: '7004c0d3-52a3-4aae-97a7-f4eba150896d',
+        id: '70e74cb4-1f21-4016-bbc5-4594be704108',
         metadata: [],
         parameters: [],
         profileAddresses: [],
@@ -330,9 +330,9 @@ $request = new Operations\UpdateVerificationRequestRequest(
         profileTelephones: [],
         responseDetails: [],
         responseDownloadUrls: [],
-        responseSource: 'Implemented regional protocol',
+        responseSource: 'Centralized value-added infrastructure',
         responseStatus: Shared\VerificationRequestResponseStatus::Pending,
-        updatedAt: Utils\Utils::parseDateTime('2023-12-28T07:10:29.569Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-12-28T12:56:11.005Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

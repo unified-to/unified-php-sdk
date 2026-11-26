@@ -39,32 +39,32 @@ $request = new Operations\CreateTicketingCustomerRequest(
         createdAt: Utils\Utils::parseDateTime('2021-03-15T12:33:14.875Z'),
         emails: [
             new Shared\TicketingEmail(
-                email: 'christian.windler@gmail.com',
+                email: 'veronica.waters@gmail.com',
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: 'afd10543-8f42-4d17-a8cf-c47d79f2d667',
+        id: 'be77aa1a-6f0f-4e22-a3cf-06f827e8304c',
         metadata: [],
-        name: 'Christian Windler',
+        name: 'Veronica Waters',
         tags: [
-            'quidem',
-            'una',
+            'sublime',
+            'casso',
         ],
         telephones: [
             new Shared\TicketingTelephone(
-                telephone: '(299) 843-2042',
+                telephone: '(843) 304-2048',
                 type: Shared\TicketingTelephoneType::Other,
             ),
             new Shared\TicketingTelephone(
-                telephone: '(248) 482-6083',
+                telephone: '(482) 608-3743',
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
             new Shared\TicketingTelephone(
-                telephone: '(743) 328-3214',
+                telephone: '(328) 421-4682',
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-01T03:20:27.292Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-07T14:13:55.303Z'),
     ),
     connectionId: '<id>',
 );
@@ -223,32 +223,32 @@ $request = new Operations\PatchTicketingCustomerRequest(
         createdAt: Utils\Utils::parseDateTime('2021-03-15T12:33:14.875Z'),
         emails: [
             new Shared\TicketingEmail(
-                email: 'christian.windler@gmail.com',
+                email: 'veronica.waters@gmail.com',
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: '5b2e74a4-ae01-4033-a4bf-6aabddc9814d',
+        id: '5d6104d4-3907-4642-b7b4-28ac44858bda',
         metadata: [],
-        name: 'Christian Windler',
+        name: 'Veronica Waters',
         tags: [
-            'quidem',
-            'una',
+            'sublime',
+            'casso',
         ],
         telephones: [
             new Shared\TicketingTelephone(
-                telephone: '(299) 843-2042',
+                telephone: '(843) 304-2048',
                 type: Shared\TicketingTelephoneType::Other,
             ),
             new Shared\TicketingTelephone(
-                telephone: '(248) 482-6083',
+                telephone: '(482) 608-3743',
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
             new Shared\TicketingTelephone(
-                telephone: '(743) 328-3214',
+                telephone: '(328) 421-4682',
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-01T03:20:27.303Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-07T14:13:55.317Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -358,32 +358,32 @@ $request = new Operations\UpdateTicketingCustomerRequest(
         createdAt: Utils\Utils::parseDateTime('2021-03-15T12:33:14.875Z'),
         emails: [
             new Shared\TicketingEmail(
-                email: 'christian.windler@gmail.com',
+                email: 'veronica.waters@gmail.com',
                 type: Shared\TicketingEmailType::Home,
             ),
         ],
-        id: '5b2e74a4-ae01-4033-a4bf-6aabddc9814d',
+        id: '5d6104d4-3907-4642-b7b4-28ac44858bda',
         metadata: [],
-        name: 'Christian Windler',
+        name: 'Veronica Waters',
         tags: [
-            'quidem',
-            'una',
+            'sublime',
+            'casso',
         ],
         telephones: [
             new Shared\TicketingTelephone(
-                telephone: '(299) 843-2042',
+                telephone: '(843) 304-2048',
                 type: Shared\TicketingTelephoneType::Other,
             ),
             new Shared\TicketingTelephone(
-                telephone: '(248) 482-6083',
+                telephone: '(482) 608-3743',
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
             new Shared\TicketingTelephone(
-                telephone: '(743) 328-3214',
+                telephone: '(328) 421-4682',
                 type: Shared\TicketingTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-01T03:20:27.303Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-07T14:13:55.317Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

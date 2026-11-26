@@ -197,6 +197,16 @@ class CrmDeal
     public ?string $userId = null;
 
     /**
+     * DMS Vehicles this deal is for
+     *
+     * @var ?array<string> $vehicleIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('vehicle_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $vehicleIds = null;
+
+    /**
      *
      * @var ?string $wonReason
      */
@@ -225,10 +235,11 @@ class CrmDeal
      * @param  ?array<string>  $tags
      * @param  ?\DateTime  $updatedAt
      * @param  ?string  $userId
+     * @param  ?array<string>  $vehicleIds
      * @param  ?string  $wonReason
      * @phpstan-pure
      */
-    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $closingAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?array $pipelines = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?array $stages = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?string $wonReason = null)
+    public function __construct(?float $amount = null, ?\DateTime $closedAt = null, ?\DateTime $closingAt = null, ?array $companyIds = null, ?array $contactIds = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $description = null, ?string $id = null, ?string $lostReason = null, ?array $metadata = null, ?string $name = null, ?array $pipelines = null, ?float $probability = null, ?array $raw = null, ?string $source = null, ?array $stages = null, ?array $tags = null, ?\DateTime $updatedAt = null, ?string $userId = null, ?array $vehicleIds = null, ?string $wonReason = null)
     {
         $this->amount = $amount;
         $this->closedAt = $closedAt;
@@ -250,6 +261,7 @@ class CrmDeal
         $this->tags = $tags;
         $this->updatedAt = $updatedAt;
         $this->userId = $userId;
+        $this->vehicleIds = $vehicleIds;
         $this->wonReason = $wonReason;
     }
 }

@@ -37,13 +37,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: '4e02fd24-82c0-4946-bd21-e1a0763537a2',
+        id: '7d333fcd-8fb8-4cf8-99c1-059ea0372a7a',
         metadata: [],
-        name: 'snap-alius',
+        name: 'snap-cito',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-25T17:21:32.794Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-01T21:13:33.691Z'),
     ),
     connectionId: '<id>',
 );
@@ -200,13 +200,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: '921747d6-33ff-4b95-b905-e9b7e1836bb4',
+        id: 'a768c3a3-df31-46ce-8541-84092773d925',
         metadata: [],
-        name: 'snap-alius',
+        name: 'snap-cito',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-25T17:21:32.801Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-01T21:13:33.702Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -314,13 +314,13 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeSnapshotRequest(
     computeSnapshot: new Shared\ComputeSnapshot(
         createdAt: Utils\Utils::parseDateTime('2021-09-24T14:40:06.110Z'),
-        id: '921747d6-33ff-4b95-b905-e9b7e1836bb4',
+        id: 'a768c3a3-df31-46ce-8541-84092773d925',
         metadata: [],
-        name: 'snap-alius',
+        name: 'snap-cito',
         sizeMb: 169984,
         status: Shared\ComputeSnapshotStatus::Deleting,
         type: Shared\ComputeSnapshotType::Disk,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-25T17:21:32.801Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-01T21:13:33.702Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -25,4 +25,5 @@
 | `Title`         | title           |
 | `LinkUrls`      | link_urls       |
 | `Metadata`      | metadata        |
+| `VehicleIds`    | vehicle_ids     |
 | `Raw`           | raw             |

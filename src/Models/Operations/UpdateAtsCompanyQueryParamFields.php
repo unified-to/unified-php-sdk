@@ -21,5 +21,6 @@ enum UpdateAtsCompanyQueryParamFields: string
     case ParentId = 'parent_id';
     case RecruiterIds = 'recruiter_ids';
     case Metadata = 'metadata';
+    case Fees = 'fees';
     case Raw = 'raw';
 }

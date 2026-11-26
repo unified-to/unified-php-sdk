@@ -36,25 +36,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
-        content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
+        content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'de7f20e6-f539-4192-9041-00cc3cbc2b12',
+        id: '3fc977db-8511-4c76-8f98-fa99ce2152d1',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
 
                 ],
                 format: Shared\GenaiMetadataFormat::Text,
-                id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
+                id: '6d1774f7-a8ad-462d-9ba0-ece333056a26',
                 namespace: 'memory',
-                slug: 'cribro',
-                value: 'aiunt',
+                slug: 'defleo',
+                value: 'suffragium',
             ),
         ],
-        name: 'sponte.md',
+        name: 'tabella.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-04T15:44:52.639Z'),
-        userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-06T17:53:56.606Z'),
+        userIdentifier: '70613433-847d-4db6-a8ea-96a2d7513dad',
     ),
     connectionId: '<id>',
 );
@@ -210,25 +210,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
-        content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
+        content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: '34e4963c-c54e-4cc4-b2f8-a0c805e9ba62',
+        id: '4467b58f-b6a4-4d49-8c10-3a026fb0d201',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
 
                 ],
                 format: Shared\GenaiMetadataFormat::Text,
-                id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
+                id: '6d1774f7-a8ad-462d-9ba0-ece333056a26',
                 namespace: 'memory',
-                slug: 'cribro',
-                value: 'aiunt',
+                slug: 'defleo',
+                value: 'suffragium',
             ),
         ],
-        name: 'sponte.md',
+        name: 'tabella.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-04T15:44:52.642Z'),
-        userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-06T17:53:56.610Z'),
+        userIdentifier: '70613433-847d-4db6-a8ea-96a2d7513dad',
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -335,25 +335,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
-        content: 'Tabella rem approbo spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis. Ullus ager degero deporto cicuta vulgivagus.',
+        content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: '34e4963c-c54e-4cc4-b2f8-a0c805e9ba62',
+        id: '4467b58f-b6a4-4d49-8c10-3a026fb0d201',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
 
                 ],
                 format: Shared\GenaiMetadataFormat::Text,
-                id: '7a8ad62d-ba0e-4ce3-8330-56a2647b5b3e',
+                id: '6d1774f7-a8ad-462d-9ba0-ece333056a26',
                 namespace: 'memory',
-                slug: 'cribro',
-                value: 'aiunt',
+                slug: 'defleo',
+                value: 'suffragium',
             ),
         ],
-        name: 'sponte.md',
+        name: 'tabella.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-04T15:44:52.642Z'),
-        userIdentifier: '9d170613-4338-447d-bdb6-8ea96a2d7513',
+        updatedAt: Utils\Utils::parseDateTime('2023-05-06T17:53:56.610Z'),
+        userIdentifier: '70613433-847d-4db6-a8ea-96a2d7513dad',
     ),
     connectionId: '<id>',
     id: '<id>',

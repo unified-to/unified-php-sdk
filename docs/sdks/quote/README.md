@@ -5,6 +5,7 @@
 ### Available Operations
 
 * [createAccountingQuote](#createaccountingquote) - Create a quote
+* [createPrintingQuote](#createprintingquote) - Create a quote
 * [createPropertyQuote](#createpropertyquote) - Create a quote
 * [getAccountingQuote](#getaccountingquote) - Retrieve a quote
 * [listAccountingQuotes](#listaccountingquotes) - List all quotes
@@ -64,6 +65,132 @@ if ($response->accountingQuote !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## createPrintingQuote
+
+Creates a PrintingQuote. Provide the unified PrintingQuote fields in the request body; they are mapped to the provider's API. Returns the created PrintingQuote.
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="createPrintingQuote" method="post" path="/printing/{connection_id}/quote" example="printing_quote" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+use Unified\Unified_to\Models\Shared;
+use Unified\Unified_to\Utils;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\CreatePrintingQuoteRequest(
+    printingQuote: new Shared\PrintingQuote(
+        createdAt: Utils\Utils::parseDateTime('2019-01-02T03:42:06.944Z'),
+        currency: 'USD',
+        discountAmount: 0,
+        id: 'df356fdf-c68c-414b-a4ba-fdeb804f46a2',
+        lineitems: [
+            new Shared\PrintingLineitem(
+                files: [
+                    new Shared\PrintingLineitemFile(
+                        placement: 'default',
+                        url: 'https://picsum.photos/seed/0Y5Bjnoiwx/3057/3113',
+                    ),
+                ],
+                id: '1',
+                name: 'Practical Wooden Salad',
+                quantity: 2,
+                retailPriceAmount: 50.83,
+                unitPriceAmount: 21.72,
+            ),
+            new Shared\PrintingLineitem(
+                files: [
+                    new Shared\PrintingLineitemFile(
+                        placement: 'default',
+                        url: 'https://picsum.photos/seed/rcPUF/2295/1801',
+                    ),
+                ],
+                id: '2',
+                name: 'Handmade Gold Car',
+                quantity: 4,
+                retailPriceAmount: 35.47,
+                sku: 'I79GIBCK',
+                unitPriceAmount: 17.64,
+            ),
+        ],
+        metadata: [],
+        shippingAddress: new Shared\PropertyPrintingQuoteShippingAddress(
+            address1: '4290 Garden Street',
+            address2: 'Suite 874',
+            city: 'Cartwrightshire',
+            companyName: 'Kris and Sons',
+            country: 'United States',
+            countryCode: 'US',
+            email: 'jada73@hotmail.com',
+            name: 'Heaven Crist',
+            postalCode: '92871',
+            region: 'North Carolina',
+            regionCode: 'KY',
+            telephone: '653.412.8900 x9387',
+        ),
+        shippingAmount: 4.69,
+        shippingMethod: 'STANDARD',
+        shippingOptions: [
+            new Shared\PrintingShippingoption(
+                amount: 4.69,
+                code: 'STANDARD',
+                currency: 'USD',
+                maxDeliveryDays: 5,
+                minDeliveryDays: 3,
+                name: 'Flat Rate (3-5 business days after fulfillment)',
+            ),
+            new Shared\PrintingShippingoption(
+                amount: 12.99,
+                code: 'EXPRESS',
+                currency: 'USD',
+                maxDeliveryDays: 3,
+                minDeliveryDays: 1,
+                name: 'Express (1-3 business days after fulfillment)',
+            ),
+        ],
+        subtotalAmount: 114,
+        taxAmount: 9.12,
+        totalAmount: 127.81,
+        updatedAt: Utils\Utils::parseDateTime('2019-01-02T03:42:06.944Z'),
+    ),
+    connectionId: '<id>',
+);
+
+$response = $sdk->quote->createPrintingQuote(
+    request: $request
+);
+
+if ($response->printingQuote !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\CreatePrintingQuoteRequest](../../Models/Operations/CreatePrintingQuoteRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\CreatePrintingQuoteResponse](../../Models/Operations/CreatePrintingQuoteResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## createPropertyQuote
 
 Creates a PropertyQuote. Provide the unified PropertyQuote fields in the request body; they are mapped to the provider's API. Returns the created PropertyQuote.
@@ -94,9 +221,9 @@ $request = new Operations\CreatePropertyQuoteRequest(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T19:14:11.415Z'),
         currency: 'USD',
         depositAmount: 594.54,
-        endAt: Utils\Utils::parseDateTime('2026-12-03'),
+        endAt: Utils\Utils::parseDateTime('2026-12-10'),
         guests: 2,
-        id: 'b6edcfd4-a9c5-42db-bf94-adf8ead74958',
+        id: '7d257a49-efe7-4b19-95f3-33e0a3d75871',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1665,
@@ -118,7 +245,7 @@ $request = new Operations\CreatePropertyQuoteRequest(
                 type: Shared\PropertyLineitemType::Tax,
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2026-11-24'),
+        startAt: Utils\Utils::parseDateTime('2026-12-01'),
         totalAmount: 1981.8,
     ),
     connectionId: '<id>',

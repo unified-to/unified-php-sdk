@@ -38,6 +38,15 @@ class StoragePermission
     public ?bool $isHidden = null;
 
     /**
+     * Shared with everyone in the owner's organization/domain/enterprise (e.g. Google Drive domain, Box company or Microsoft organization sharing links)
+     *
+     * @var ?bool $isOrganization
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('is_organization')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $isOrganization = null;
+
+    /**
      *
      * @var ?bool $isPublic
      */
@@ -58,15 +67,17 @@ class StoragePermission
      * @param  array<\Unified\Unified_to\Models\Shared\PropertyStoragePermissionRoles>  $roles
      * @param  ?string  $groupId
      * @param  ?bool  $isHidden
+     * @param  ?bool  $isOrganization
      * @param  ?bool  $isPublic
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(array $roles, ?string $groupId = null, ?bool $isHidden = null, ?bool $isPublic = null, ?string $userId = null)
+    public function __construct(array $roles, ?string $groupId = null, ?bool $isHidden = null, ?bool $isOrganization = null, ?bool $isPublic = null, ?string $userId = null)
     {
         $this->roles = $roles;
         $this->groupId = $groupId;
         $this->isHidden = $isHidden;
+        $this->isOrganization = $isOrganization;
         $this->isPublic = $isPublic;
         $this->userId = $userId;
     }

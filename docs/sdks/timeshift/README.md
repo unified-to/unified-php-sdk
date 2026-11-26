@@ -36,25 +36,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-30T04:15:34.371Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-08-02T01:31:32.311Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
                 currency: 'GBP',
                 frequency: Shared\HrisCompensationFrequency::Semimonthly,
-                notes: 'Vehemens annus adficio.',
+                notes: 'Suasoria.',
                 type: Shared\HrisCompensationType::Commission,
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-10-25T19:54:52.864Z'),
+        endAt: Utils\Utils::parseDateTime('2026-11-01T16:36:01.635Z'),
         hours: 6,
-        id: '5c8e97e5-720a-47ca-b4cb-198245f19517',
+        id: '3f4c798e-c88e-446b-96e6-af656dadcfdf',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-29T00:54:47.568Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-09T20:45:15.564Z'),
+        startAt: Utils\Utils::parseDateTime('2023-08-01T20:35:54.423Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-11T18:16:46.229Z'),
     ),
     connectionId: '<id>',
 );
@@ -210,25 +210,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-30T04:15:34.380Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-08-02T01:31:32.316Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
                 currency: 'GBP',
                 frequency: Shared\HrisCompensationFrequency::Semimonthly,
-                notes: 'Vehemens annus adficio.',
+                notes: 'Suasoria.',
                 type: Shared\HrisCompensationType::Commission,
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-10-25T19:54:52.887Z'),
+        endAt: Utils\Utils::parseDateTime('2026-11-01T16:36:01.649Z'),
         hours: 6,
-        id: '7caddfc6-2dd8-4957-b7f7-d67f80320dab',
+        id: '234a1824-0c48-4c12-b333-d948197283a7',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-29T00:54:47.580Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-09T20:45:15.570Z'),
+        startAt: Utils\Utils::parseDateTime('2023-08-01T20:35:54.430Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-11T18:16:46.233Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -335,25 +335,25 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateHrisTimeshiftRequest(
     hrisTimeshift: new Shared\HrisTimeshift(
-        approvedAt: Utils\Utils::parseDateTime('2022-07-30T04:15:34.380Z'),
+        approvedAt: Utils\Utils::parseDateTime('2022-08-02T01:31:32.316Z'),
         compensation: [
             new Shared\HrisCompensation(
                 amount: 76761,
                 currency: 'GBP',
                 frequency: Shared\HrisCompensationFrequency::Semimonthly,
-                notes: 'Vehemens annus adficio.',
+                notes: 'Suasoria.',
                 type: Shared\HrisCompensationType::Commission,
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2019-07-01T23:53:15.738Z'),
         employeeUserId: '<id>',
-        endAt: Utils\Utils::parseDateTime('2026-10-25T19:54:52.887Z'),
+        endAt: Utils\Utils::parseDateTime('2026-11-01T16:36:01.649Z'),
         hours: 6,
-        id: '7caddfc6-2dd8-4957-b7f7-d67f80320dab',
+        id: '234a1824-0c48-4c12-b333-d948197283a7',
         isApproved: false,
         metadata: [],
-        startAt: Utils\Utils::parseDateTime('2023-07-29T00:54:47.580Z'),
-        updatedAt: Utils\Utils::parseDateTime('2021-07-09T20:45:15.570Z'),
+        startAt: Utils\Utils::parseDateTime('2023-08-01T20:35:54.430Z'),
+        updatedAt: Utils\Utils::parseDateTime('2021-07-11T18:16:46.233Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -26,4 +26,7 @@ enum PatchPaymentLinkQueryParamFields: string
     case SuccessUrl = 'success_url';
     case Metadata = 'metadata';
     case Raw = 'raw';
+    case ContactName = 'contact_name';
+    case ContactEmail = 'contact_email';
+    case ContactPhone = 'contact_phone';
 }

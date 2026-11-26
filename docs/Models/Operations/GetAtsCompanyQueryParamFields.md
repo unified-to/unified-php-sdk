@@ -15,4 +15,5 @@
 | `ParentId`     | parent_id      |
 | `RecruiterIds` | recruiter_ids  |
 | `Metadata`     | metadata       |
+| `Fees`         | fees           |
 | `Raw`          | raw            |

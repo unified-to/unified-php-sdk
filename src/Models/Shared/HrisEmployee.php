@@ -112,6 +112,16 @@ class HrisEmployee
     public ?EmploymentStatus $employmentStatus = null;
 
     /**
+     * why the employee is not actively working (eg. LEAVE, TERMINATED, RETIRED)
+     *
+     * @var ?\Unified\Unified_to\Models\Shared\EmploymentStatusReason $employmentStatusReason
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('employment_status_reason')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\EmploymentStatusReason|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?EmploymentStatusReason $employmentStatusReason = null;
+
+    /**
      *
      * @var ?\Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType $employmentType
      */
@@ -220,6 +230,24 @@ class HrisEmployee
     public ?string $lastName = null;
 
     /**
+     * expected or actual end of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $leaveEndAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('leave_end_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $leaveEndAt = null;
+
+    /**
+     * start of the current leave of absence (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $leaveStartAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('leave_start_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $leaveStartAt = null;
+
+    /**
      * $locations
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\HrisLocation> $locations
@@ -294,6 +322,15 @@ class HrisEmployee
     public ?array $raw = null;
 
     /**
+     * most recent rehire date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $rehiredAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('rehired_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $rehiredAt = null;
+
+    /**
      * the employee's personal relationships (eg. emergency contacts, spouse, dependants, ...)
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\HrisEmployeerelationship> $relationships
@@ -311,6 +348,24 @@ class HrisEmployee
     #[\Speakeasy\Serializer\Annotation\SerializedName('salutation')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $salutation = null;
+
+    /**
+     * seniority date (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $seniorityStartedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('seniority_started_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $seniorityStartedAt = null;
+
+    /**
+     * adjusted service date used for benefits eligibility and vesting (YYYY-MM-DD) (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?\DateTime $serviceStartedAt
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('service_started_at')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?\DateTime $serviceStartedAt = null;
 
     /**
      *
@@ -426,6 +481,7 @@ class HrisEmployee
      * @param  ?string  $employeeNumber
      * @param  ?array<\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeEmployeeRoles>  $employeeRoles
      * @param  ?\Unified\Unified_to\Models\Shared\EmploymentStatus  $employmentStatus
+     * @param  ?\Unified\Unified_to\Models\Shared\EmploymentStatusReason  $employmentStatusReason
      * @param  ?\Unified\Unified_to\Models\Shared\HrisEmployeeEmploymentType  $employmentType
      * @param  ?string  $firstName
      * @param  ?\Unified\Unified_to\Models\Shared\FlsaStatus  $flsaStatus
@@ -438,6 +494,8 @@ class HrisEmployee
      * @param  ?string  $jobId
      * @param  ?string  $languageLocale
      * @param  ?string  $lastName
+     * @param  ?\DateTime  $leaveEndAt
+     * @param  ?\DateTime  $leaveStartAt
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisLocation>  $locations
      * @param  ?string  $managerId
      * @param  ?\Unified\Unified_to\Models\Shared\HrisEmployeeMaritalStatus  $maritalStatus
@@ -446,8 +504,11 @@ class HrisEmployee
      * @param  ?\Unified\Unified_to\Models\Shared\PayFrequency  $payFrequency
      * @param  ?string  $pronouns
      * @param  ?array<string, mixed>  $raw
+     * @param  ?\DateTime  $rehiredAt
      * @param  ?array<\Unified\Unified_to\Models\Shared\HrisEmployeerelationship>  $relationships
      * @param  ?string  $salutation
+     * @param  ?\DateTime  $seniorityStartedAt
+     * @param  ?\DateTime  $serviceStartedAt
      * @param  ?string  $ssnSin
      * @param  ?float  $storageQuotaAllocated
      * @param  ?float  $storageQuotaAvailable
@@ -462,7 +523,7 @@ class HrisEmployee
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?FlsaStatus $flsaStatus = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $jobId = null, ?string $languageLocale = null, ?string $lastName = null, ?array $locations = null, ?string $managerId = null, ?HrisEmployeeMaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?PayFrequency $payFrequency = null, ?string $pronouns = null, ?array $raw = null, ?array $relationships = null, ?string $salutation = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?float $timeoffDaysTotal = null, ?float $timeoffDaysUsed = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?EmploymentStatusReason $employmentStatusReason = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?FlsaStatus $flsaStatus = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $jobId = null, ?string $languageLocale = null, ?string $lastName = null, ?\DateTime $leaveEndAt = null, ?\DateTime $leaveStartAt = null, ?array $locations = null, ?string $managerId = null, ?HrisEmployeeMaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?PayFrequency $payFrequency = null, ?string $pronouns = null, ?array $raw = null, ?\DateTime $rehiredAt = null, ?array $relationships = null, ?string $salutation = null, ?\DateTime $seniorityStartedAt = null, ?\DateTime $serviceStartedAt = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?float $timeoffDaysTotal = null, ?float $timeoffDaysUsed = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
         $this->address = $address;
         $this->bio = $bio;
@@ -475,6 +536,7 @@ class HrisEmployee
         $this->employeeNumber = $employeeNumber;
         $this->employeeRoles = $employeeRoles;
         $this->employmentStatus = $employmentStatus;
+        $this->employmentStatusReason = $employmentStatusReason;
         $this->employmentType = $employmentType;
         $this->firstName = $firstName;
         $this->flsaStatus = $flsaStatus;
@@ -487,6 +549,8 @@ class HrisEmployee
         $this->jobId = $jobId;
         $this->languageLocale = $languageLocale;
         $this->lastName = $lastName;
+        $this->leaveEndAt = $leaveEndAt;
+        $this->leaveStartAt = $leaveStartAt;
         $this->locations = $locations;
         $this->managerId = $managerId;
         $this->maritalStatus = $maritalStatus;
@@ -495,8 +559,11 @@ class HrisEmployee
         $this->payFrequency = $payFrequency;
         $this->pronouns = $pronouns;
         $this->raw = $raw;
+        $this->rehiredAt = $rehiredAt;
         $this->relationships = $relationships;
         $this->salutation = $salutation;
+        $this->seniorityStartedAt = $seniorityStartedAt;
+        $this->serviceStartedAt = $serviceStartedAt;
         $this->ssnSin = $ssnSin;
         $this->storageQuotaAllocated = $storageQuotaAllocated;
         $this->storageQuotaAvailable = $storageQuotaAvailable;

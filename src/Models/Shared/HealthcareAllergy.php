@@ -33,12 +33,12 @@ class HealthcareAllergy
     /**
      * Potential severity of future reactions
      *
-     * @var ?\Unified\Unified_to\Models\Shared\Criticality $criticality
+     * @var ?\Unified\Unified_to\Models\Shared\HealthcareAllergyCriticality $criticality
      */
     #[\Speakeasy\Serializer\Annotation\SerializedName('criticality')]
-    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\Criticality|null')]
+    #[\Speakeasy\Serializer\Annotation\Type('\Unified\Unified_to\Models\Shared\HealthcareAllergyCriticality|null')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
-    public ?Criticality $criticality = null;
+    public ?HealthcareAllergyCriticality $criticality = null;
 
     /**
      * The encounter in which the allergy was recorded
@@ -174,7 +174,7 @@ class HealthcareAllergy
     /**
      * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareCode>  $codes
      * @param  ?\DateTime  $createdAt
-     * @param  ?\Unified\Unified_to\Models\Shared\Criticality  $criticality
+     * @param  ?\Unified\Unified_to\Models\Shared\HealthcareAllergyCriticality  $criticality
      * @param  ?string  $encounterId
      * @param  ?string  $id
      * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareMetadata>  $metadata
@@ -191,7 +191,7 @@ class HealthcareAllergy
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?array $codes = null, ?\DateTime $createdAt = null, ?Criticality $criticality = null, ?string $encounterId = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?\DateTime $onsetAt = null, ?string $patientId = null, ?string $practitionerId = null, ?array $raw = null, ?array $reactions = null, ?\DateTime $recordedAt = null, ?HealthcareAllergyStatus $status = null, ?HealthcareAllergyType $type = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $codes = null, ?\DateTime $createdAt = null, ?HealthcareAllergyCriticality $criticality = null, ?string $encounterId = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?\DateTime $onsetAt = null, ?string $patientId = null, ?string $practitionerId = null, ?array $raw = null, ?array $reactions = null, ?\DateTime $recordedAt = null, ?HealthcareAllergyStatus $status = null, ?HealthcareAllergyType $type = null, ?\DateTime $updatedAt = null)
     {
         $this->codes = $codes;
         $this->createdAt = $createdAt;

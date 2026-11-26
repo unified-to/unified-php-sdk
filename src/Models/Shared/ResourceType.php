@@ -9,8 +9,19 @@ declare(strict_types=1);
 namespace Unified\Unified_to\Models\Shared;
 
 
+/** Always AllergyIntolerance */
 enum ResourceType: string
 {
-    case User = 'User';
-    case Group = 'Group';
+    case Patient = 'Patient';
+    case Practitioner = 'Practitioner';
+    case Encounter = 'Encounter';
+    case Observation = 'Observation';
+    case Condition = 'Condition';
+    case AllergyIntolerance = 'AllergyIntolerance';
+    case MedicationRequest = 'MedicationRequest';
+    case Immunization = 'Immunization';
+    case Bundle = 'Bundle';
+    case OperationOutcome = 'OperationOutcome';
+    case CapabilityStatement = 'CapabilityStatement';
+    case DiagnosticReport = 'DiagnosticReport';
 }

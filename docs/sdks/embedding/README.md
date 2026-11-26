@@ -32,13 +32,13 @@ $request = new Operations\CreateGenaiEmbeddingRequest(
     genaiEmbedding: new Shared\GenaiEmbedding(
         content: [
             new Shared\GenaiEmbeddingContent(
-                text: 'Utrimque temptatio pecco demulceo.',
+                text: 'Demulceo adulescens est delectatio solitudo videlicet volo.',
             ),
         ],
         dimension: 423,
-        embeddings: 'Est.',
-        encondingFormat: Shared\EncondingFormat::Float,
-        id: '850851a9-df12-4115-b8ce-d2275de10cce',
+        embeddings: 'Venia tutis cernuus viscus officiis utilis porro utique.',
+        encodingFormat: Shared\EncodingFormat::Float,
+        id: '0f0dcc6a-6a27-4ba4-995f-51deeac263a7',
         maxTokens: 223,
         tokensUsed: 836,
         type: 'classification',

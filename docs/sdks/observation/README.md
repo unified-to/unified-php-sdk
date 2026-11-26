@@ -5,7 +5,9 @@
 ### Available Operations
 
 * [createHealthcareObservation](#createhealthcareobservation) - Create an observation
+* [getFhirObservation](#getfhirobservation) - Read a Observation
 * [getHealthcareObservation](#gethealthcareobservation) - Retrieve an observation
+* [listFhirObservations](#listfhirobservations) - Search Observation resources
 * [listHealthcareObservations](#listhealthcareobservations) - List all observations
 
 ## createHealthcareObservation
@@ -65,15 +67,15 @@ $request = new Operations\CreateHealthcareObservationRequest(
             ),
         ],
         createdAt: Utils\Utils::parseDateTime('2022-12-06T21:34:04.293Z'),
-        id: 'e7c37895-a5ec-414c-b98c-d695027ef610',
+        id: 'deb0f3c4-be11-4b07-a780-31f14acad31f',
         interpretation: Shared\Interpretation::CriticalHigh,
-        issuedAt: Utils\Utils::parseDateTime('2025-05-29T15:17:11.626Z'),
+        issuedAt: Utils\Utils::parseDateTime('2025-06-02T23:28:04.634Z'),
         metadata: [],
         name: 'Blood pressure panel',
-        observedAt: Utils\Utils::parseDateTime('2025-02-05T01:58:38.434Z'),
+        observedAt: Utils\Utils::parseDateTime('2025-02-08T21:04:58.187Z'),
         status: Shared\HealthcareObservationStatus::Corrected,
         type: Shared\HealthcareObservationType::VitalSigns,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-17T23:18:25.904Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-23T20:43:14.870Z'),
     ),
     connectionId: '<id>',
 );
@@ -96,6 +98,57 @@ if ($response->healthcareObservation !== null) {
 ### Response
 
 **[?Operations\CreateHealthcareObservationResponse](../../Models/Operations/CreateHealthcareObservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## getFhirObservation
+
+Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getFhirObservation" method="get" path="/fhir/{connection_id}/Observation/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetFhirObservationRequest(
+    connectionId: '<id>',
+    id: '<id>',
+);
+
+$response = $sdk->observation->getFhirObservation(
+    request: $request
+);
+
+if ($response->fhirObservation !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                    | Type                                                                                         | Required                                                                                     | Description                                                                                  |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `$request`                                                                                   | [Operations\GetFhirObservationRequest](../../Models/Operations/GetFhirObservationRequest.md) | :heavy_check_mark:                                                                           | The request object to use for the request.                                                   |
+
+### Response
+
+**[?Operations\GetFhirObservationResponse](../../Models/Operations/GetFhirObservationResponse.md)**
 
 ### Errors
 
@@ -147,6 +200,56 @@ if ($response->healthcareObservation !== null) {
 ### Response
 
 **[?Operations\GetHealthcareObservationResponse](../../Models/Operations/GetHealthcareObservationResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listFhirObservations
+
+Returns a searchset Bundle; follow its next link for more pages. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listFhirObservations" method="get" path="/fhir/{connection_id}/Observation" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListFhirObservationsRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->observation->listFhirObservations(
+    request: $request
+);
+
+if ($response->fhirBundle !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                        | Type                                                                                             | Required                                                                                         | Description                                                                                      |
+| ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| `$request`                                                                                       | [Operations\ListFhirObservationsRequest](../../Models/Operations/ListFhirObservationsRequest.md) | :heavy_check_mark:                                                                               | The request object to use for the request.                                                       |
+
+### Response
+
+**[?Operations\ListFhirObservationsResponse](../../Models/Operations/ListFhirObservationsResponse.md)**
 
 ### Errors
 

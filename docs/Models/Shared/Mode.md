@@ -1,11 +1,10 @@
 # Mode
 
-Google: bid_only falsetrue
+server
 
 
 ## Values
 
-| Name          | Value         |
-| ------------- | ------------- |
-| `Targeting`   | TARGETING     |
-| `Observation` | OBSERVATION   |
+| Name     | Value    |
+| -------- | -------- |
+| `Server` | server   |

@@ -6,6 +6,7 @@
 
 * [createMetadataMetadata](#createmetadatametadata) - Create a metadata
 * [getMetadataMetadata](#getmetadatametadata) - Retrieve a metadata
+* [listFhirMetadatas](#listfhirmetadatas) - Get the CapabilityStatement
 * [listMetadataMetadatas](#listmetadatametadatas) - List all metadatas
 * [patchMetadataMetadata](#patchmetadatametadata) - Update a metadata
 * [removeMetadataMetadata](#removemetadatametadata) - Remove a metadata
@@ -38,17 +39,17 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: 'fb8ca94e-b9e3-420e-8fb6-ca91d4bf592e',
+        id: '53fd3e41-255a-414e-8fcb-1d0583c0a25f',
         isRequired: false,
-        name: 'autem',
-        objectType: 'healthcare_patient',
+        name: 'tollo',
+        objectType: 'healthcare_document',
         objects: [
 
         ],
         options: [],
-        originalFormat: 'advoco',
-        slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-11T18:05:55.183Z'),
+        originalFormat: 'deputo',
+        slug: 'acidus',
+        updatedAt: Utils\Utils::parseDateTime('2025-04-16T17:05:39.215Z'),
     ),
     connectionId: '<id>',
 );
@@ -122,6 +123,56 @@ if ($response->metadataMetadata !== null) {
 ### Response
 
 **[?Operations\GetMetadataMetadataResponse](../../Models/Operations/GetMetadataMetadataResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listFhirMetadatas
+
+The resources, interactions and search parameters this connection's integration supports. Responses use the application/fhir+json media type; errors are OperationOutcome resources. Read-only (FHIR R4 4.0.1).
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listFhirMetadatas" method="get" path="/fhir/{connection_id}/metadata" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListFhirMetadatasRequest(
+    connectionId: '<id>',
+);
+
+$response = $sdk->metadata->listFhirMetadatas(
+    request: $request
+);
+
+if ($response->fhirCapabilityStatement !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListFhirMetadatasRequest](../../Models/Operations/ListFhirMetadatasRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\ListFhirMetadatasResponse](../../Models/Operations/ListFhirMetadatasResponse.md)**
 
 ### Errors
 
@@ -206,17 +257,17 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '881af04e-1e72-4ad1-a9d3-da2bc4ea4ffd',
+        id: '86e5a5ac-27ab-4069-bc91-5b7e18a5e840',
         isRequired: false,
-        name: 'autem',
-        objectType: 'healthcare_patient',
+        name: 'tollo',
+        objectType: 'healthcare_document',
         objects: [
 
         ],
         options: [],
-        originalFormat: 'advoco',
-        slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-11T18:05:55.189Z'),
+        originalFormat: 'deputo',
+        slug: 'acidus',
+        updatedAt: Utils\Utils::parseDateTime('2025-04-16T17:05:39.222Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -325,17 +376,17 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '881af04e-1e72-4ad1-a9d3-da2bc4ea4ffd',
+        id: '86e5a5ac-27ab-4069-bc91-5b7e18a5e840',
         isRequired: false,
-        name: 'autem',
-        objectType: 'healthcare_patient',
+        name: 'tollo',
+        objectType: 'healthcare_document',
         objects: [
 
         ],
         options: [],
-        originalFormat: 'advoco',
-        slug: 'arbustum',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-11T18:05:55.189Z'),
+        originalFormat: 'deputo',
+        slug: 'acidus',
+        updatedAt: Utils\Utils::parseDateTime('2025-04-16T17:05:39.222Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
