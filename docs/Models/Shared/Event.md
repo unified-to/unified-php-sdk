@@ -25,3 +25,4 @@
 | `WebhookUnhealthy`        | WEBHOOK_UNHEALTHY         |
 | `WebhookPaused`           | WEBHOOK_PAUSED            |
 | `WebhookUnpaused`         | WEBHOOK_UNPAUSED          |
+| `UnifiedPersonMerged`     | UNIFIED_PERSON_MERGED     |

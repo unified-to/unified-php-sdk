@@ -34,3 +34,4 @@
 | `Notes`              | notes                |
 | `Metadata`           | metadata             |
 | `Raw`                | raw                  |
+| `UnifiedPersonIds`   | __unified_person_ids |

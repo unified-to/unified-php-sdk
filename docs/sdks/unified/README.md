@@ -14,6 +14,7 @@
 * [getUnifiedConnection](#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](#getunifiedissue) - Retrieve support issue
+* [getUnifiedPerson](#getunifiedperson) - Retrieve a person by ID
 * [getUnifiedSecretsmanager](#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](#getunifiedwebhook) - Retrieve webhook by its ID
 * [getUnifiedWorkspaceintegration](#getunifiedworkspaceintegration) - Retrieve workspace integration
@@ -24,6 +25,7 @@
 * [listUnifiedIntegrations](#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](#listunifiedissues) - List support issues
 * [listUnifiedNotifications](#listunifiednotifications) - List event notifications
+* [listUnifiedPeople](#listunifiedpeople) - Search for persons by email addresses
 * [listUnifiedSecretsmanagerInstructions](#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [listUnifiedSecretsmanagerSecrets](#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](#listunifiedsecretsmanagers) - List secrets managers
@@ -37,6 +39,7 @@
 * [patchUnifiedWorkspaceintegration](#patchunifiedworkspaceintegration) - Update workspace integration
 * [removeUnifiedConnection](#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](#removeunifiedenvironment) - Remove an environment
+* [removeUnifiedPerson](#removeunifiedperson) - Erase email addresses from the unified persons
 * [removeUnifiedSecretsmanager](#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](#removeunifiedwebhook) - Remove webhook subscription
 * [removeUnifiedWorkspaceintegration](#removeunifiedworkspaceintegration) - Remove workspace integration
@@ -560,6 +563,56 @@ if ($response->issue !== null) {
 | ------------------- | ------------------- | ------------------- |
 | Errors\SDKException | 4XX, 5XX            | \*/\*               |
 
+## getUnifiedPerson
+
+Retrieve a person by ID
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="getUnifiedPerson" method="get" path="/unified/person/{id}" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\GetUnifiedPersonRequest(
+    id: '<id>',
+);
+
+$response = $sdk->unified->getUnifiedPerson(
+    request: $request
+);
+
+if ($response->person !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                | Type                                                                                     | Required                                                                                 | Description                                                                              |
+| ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `$request`                                                                               | [Operations\GetUnifiedPersonRequest](../../Models/Operations/GetUnifiedPersonRequest.md) | :heavy_check_mark:                                                                       | The request object to use for the request.                                               |
+
+### Response
+
+**[?Operations\GetUnifiedPersonResponse](../../Models/Operations/GetUnifiedPersonResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
 ## getUnifiedSecretsmanager
 
 Retrieve secrets manager
@@ -1029,6 +1082,56 @@ if ($response->notifications !== null) {
 ### Response
 
 **[?Operations\ListUnifiedNotificationsResponse](../../Models/Operations/ListUnifiedNotificationsResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## listUnifiedPeople
+
+Search for persons by email addresses
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="listUnifiedPeople" method="get" path="/unified/person" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\ListUnifiedPeopleRequest(
+    query: '<value>',
+);
+
+$response = $sdk->unified->listUnifiedPeople(
+    request: $request
+);
+
+if ($response->people !== null) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                  | Type                                                                                       | Required                                                                                   | Description                                                                                |
+| ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| `$request`                                                                                 | [Operations\ListUnifiedPeopleRequest](../../Models/Operations/ListUnifiedPeopleRequest.md) | :heavy_check_mark:                                                                         | The request object to use for the request.                                                 |
+
+### Response
+
+**[?Operations\ListUnifiedPeopleResponse](../../Models/Operations/ListUnifiedPeopleResponse.md)**
 
 ### Errors
 
@@ -1688,6 +1791,56 @@ if ($response->environments !== null) {
 ### Response
 
 **[?Operations\RemoveUnifiedEnvironmentResponse](../../Models/Operations/RemoveUnifiedEnvironmentResponse.md)**
+
+### Errors
+
+| Error Type          | Status Code         | Content Type        |
+| ------------------- | ------------------- | ------------------- |
+| Errors\SDKException | 4XX, 5XX            | \*/\*               |
+
+## removeUnifiedPerson
+
+Erase email addresses from the unified persons
+
+### Example Usage
+
+<!-- UsageSnippet language="php" operationID="removeUnifiedPerson" method="delete" path="/unified/person" -->
+```php
+declare(strict_types=1);
+
+require 'vendor/autoload.php';
+
+use Unified\Unified_to;
+use Unified\Unified_to\Models\Operations;
+
+$sdk = Unified_to\UnifiedTo::builder()
+    ->setSecurity(
+        '<YOUR_API_KEY_HERE>'
+    )
+    ->build();
+
+$request = new Operations\RemoveUnifiedPersonRequest(
+    query: '<value>',
+);
+
+$response = $sdk->unified->removeUnifiedPerson(
+    request: $request
+);
+
+if ($response->statusCode === 200) {
+    // handle response
+}
+```
+
+### Parameters
+
+| Parameter                                                                                      | Type                                                                                           | Required                                                                                       | Description                                                                                    |
+| ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| `$request`                                                                                     | [Operations\RemoveUnifiedPersonRequest](../../Models/Operations/RemoveUnifiedPersonRequest.md) | :heavy_check_mark:                                                                             | The request object to use for the request.                                                     |
+
+### Response
+
+**[?Operations\RemoveUnifiedPersonResponse](../../Models/Operations/RemoveUnifiedPersonResponse.md)**
 
 ### Errors
 

@@ -43,7 +43,7 @@ $request = new Operations\CreateLmsContentRequest(
         description: 'Adflicto despecto suppellex socius cresco.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: 'f01b7069-2032-4a9f-9621-d7ac4f769a42',
+        id: '61a36ab3-3a23-4f1f-810a-7f10fed5a85b',
         instructors: [],
         isActive: true,
         languages: [
@@ -103,7 +103,7 @@ $request = new Operations\CreateLmsContentRequest(
         metadata: [],
         name: 'laboriosam',
         providerName: 'Mraz - Keeling',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-14T10:29:02.840Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-14T18:23:16.726Z'),
         shortDescription: 'Videlicet pauci.',
         skills: [
             'soleo',
@@ -118,7 +118,7 @@ $request = new Operations\CreateLmsContentRequest(
         tags: [
             'audio',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-15T20:56:50.949Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-16T05:12:38.366Z'),
     ),
     connectionId: '<id>',
 );
@@ -281,7 +281,7 @@ $request = new Operations\PatchLmsContentRequest(
         description: 'Adflicto despecto suppellex socius cresco.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: '1150c5bc-04c2-4d65-badc-39efe8b58739',
+        id: '27c12278-66ac-4a77-ac36-ec671532a534',
         instructors: [],
         isActive: true,
         languages: [
@@ -341,7 +341,7 @@ $request = new Operations\PatchLmsContentRequest(
         metadata: [],
         name: 'laboriosam',
         providerName: 'Mraz - Keeling',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-14T10:29:02.847Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-14T18:23:16.735Z'),
         shortDescription: 'Videlicet pauci.',
         skills: [
             'soleo',
@@ -356,7 +356,7 @@ $request = new Operations\PatchLmsContentRequest(
         tags: [
             'audio',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-15T20:56:50.956Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-16T05:12:38.376Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -470,7 +470,7 @@ $request = new Operations\UpdateLmsContentRequest(
         description: 'Adflicto despecto suppellex socius cresco.',
         difficulty: 'Beginner',
         durationMinutes: 19,
-        id: '1150c5bc-04c2-4d65-badc-39efe8b58739',
+        id: '27c12278-66ac-4a77-ac36-ec671532a534',
         instructors: [],
         isActive: true,
         languages: [
@@ -530,7 +530,7 @@ $request = new Operations\UpdateLmsContentRequest(
         metadata: [],
         name: 'laboriosam',
         providerName: 'Mraz - Keeling',
-        publishedAt: Utils\Utils::parseDateTime('2022-09-14T10:29:02.847Z'),
+        publishedAt: Utils\Utils::parseDateTime('2022-09-14T18:23:16.735Z'),
         shortDescription: 'Videlicet pauci.',
         skills: [
             'soleo',
@@ -545,7 +545,7 @@ $request = new Operations\UpdateLmsContentRequest(
         tags: [
             'audio',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2022-10-15T20:56:50.956Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-10-16T05:12:38.376Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class TicketingCustomer
 {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+     *
+     * @var ?array<string> $unifiedPersonIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('__unified_person_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $unifiedPersonIds = null;
+
+    /**
      * (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
      *
      * @var ?\DateTime $createdAt
@@ -96,6 +106,7 @@ class TicketingCustomer
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?array<string>  $unifiedPersonIds
      * @param  ?\DateTime  $createdAt
      * @param  ?array<\Unified\Unified_to\Models\Shared\TicketingEmail>  $emails
      * @param  ?string  $id
@@ -107,8 +118,9 @@ class TicketingCustomer
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $unifiedPersonIds = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $id = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $tags = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
     {
+        $this->unifiedPersonIds = $unifiedPersonIds;
         $this->createdAt = $createdAt;
         $this->emails = $emails;
         $this->id = $id;

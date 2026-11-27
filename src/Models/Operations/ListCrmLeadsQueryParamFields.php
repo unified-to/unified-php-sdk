@@ -33,4 +33,5 @@ enum ListCrmLeadsQueryParamFields: string
     case Metadata = 'metadata';
     case VehicleIds = 'vehicle_ids';
     case Raw = 'raw';
+    case UnifiedPersonIds = '__unified_person_ids';
 }

@@ -93,7 +93,7 @@ $request = new Operations\CreatePrintingQuoteRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-02T03:42:06.944Z'),
         currency: 'USD',
         discountAmount: 0,
-        id: 'df356fdf-c68c-414b-a4ba-fdeb804f46a2',
+        id: '600634ff-a292-424b-ad93-5f46789a8d0d',
         lineitems: [
             new Shared\PrintingLineitem(
                 files: [
@@ -221,9 +221,9 @@ $request = new Operations\CreatePropertyQuoteRequest(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T19:14:11.415Z'),
         currency: 'USD',
         depositAmount: 594.54,
-        endAt: Utils\Utils::parseDateTime('2026-12-10'),
+        endAt: Utils\Utils::parseDateTime('2026-12-11'),
         guests: 2,
-        id: '7d257a49-efe7-4b19-95f3-33e0a3d75871',
+        id: 'f67e0cf4-4771-4bc0-9b26-d41958290bbd',
         lineItems: [
             new Shared\PropertyLineitem(
                 amount: 1665,
@@ -245,7 +245,7 @@ $request = new Operations\CreatePropertyQuoteRequest(
                 type: Shared\PropertyLineitemType::Tax,
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2026-12-01'),
+        startAt: Utils\Utils::parseDateTime('2026-12-02'),
         totalAmount: 1981.8,
     ),
     connectionId: '<id>',

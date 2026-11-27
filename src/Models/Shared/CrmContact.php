@@ -13,6 +13,16 @@ namespace Unified\Unified_to\Models\Shared;
 class CrmContact
 {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+     *
+     * @var ?array<string> $unifiedPersonIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('__unified_person_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $unifiedPersonIds = null;
+
+    /**
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyCrmContactAddress $address
      */
@@ -189,6 +199,7 @@ class CrmContact
     public ?string $userId = null;
 
     /**
+     * @param  ?array<string>  $unifiedPersonIds
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyCrmContactAddress  $address
      * @param  ?string  $company
      * @param  ?array<string>  $companyIds
@@ -210,8 +221,9 @@ class CrmContact
      * @param  ?string  $userId
      * @phpstan-pure
      */
-    public function __construct(?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $department = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
+    public function __construct(?array $unifiedPersonIds = null, ?PropertyCrmContactAddress $address = null, ?string $company = null, ?array $companyIds = null, ?\DateTime $createdAt = null, ?array $dealIds = null, ?string $department = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?array $linkUrls = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null, ?string $userId = null)
     {
+        $this->unifiedPersonIds = $unifiedPersonIds;
         $this->address = $address;
         $this->company = $company;
         $this->companyIds = $companyIds;

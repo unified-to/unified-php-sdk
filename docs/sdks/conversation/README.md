@@ -35,13 +35,13 @@ $request = new Operations\CreatePropertyConversationRequest(
     propertyConversation: new Shared\PropertyConversation(
         createdAt: Utils\Utils::parseDateTime('2022-06-20T00:02:46.530Z'),
         guestName: 'Maida Funk',
-        id: '98fd9896-8300-4cd8-a014-2e30769c6e77',
+        id: '33247d06-df47-4c49-b723-fcdef011eaa9',
         isUnread: false,
         messages: [
             new Shared\PropertyMessage(
                 attachments: [],
-                createdAt: Utils\Utils::parseDateTime('2025-05-09T22:44:39.478Z'),
-                id: '232071ea-c22f-4f6a-97da-b728056b37f3',
+                createdAt: Utils\Utils::parseDateTime('2025-05-10T15:18:22.389Z'),
+                id: 'b61e6880-2743-4a26-98d7-6236afbcfe23',
                 isAutomatic: false,
                 message: 'Sophismata admitto colo.',
                 senderName: 'Maida Funk',
@@ -49,8 +49,8 @@ $request = new Operations\CreatePropertyConversationRequest(
             ),
             new Shared\PropertyMessage(
                 attachments: [],
-                createdAt: Utils\Utils::parseDateTime('2026-05-29T14:41:01.577Z'),
-                id: '014e494b-41ce-4ee7-9031-2b424d417bfe',
+                createdAt: Utils\Utils::parseDateTime('2026-05-30T13:17:04.749Z'),
+                id: 'f8fe7ff7-fb48-49bb-97fb-9fb469e47ce2',
                 message: 'Aufero torrens tonsor aequitas torqueo curiositas cimentarius repellendus auditor.',
                 senderName: 'Alysson Sanford',
                 senderType: Shared\SenderType::Host,
@@ -58,7 +58,7 @@ $request = new Operations\CreatePropertyConversationRequest(
         ],
         metadata: [],
         source: 'Airbnb',
-        updatedAt: Utils\Utils::parseDateTime('2026-05-29T14:41:01.577Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-05-30T13:17:04.749Z'),
     ),
     connectionId: '<id>',
 );

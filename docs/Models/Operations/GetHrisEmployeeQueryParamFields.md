@@ -56,3 +56,4 @@
 | `LeaveEndAt`             | leave_end_at             |
 | `EmploymentStatusReason` | employment_status_reason |
 | `Raw`                    | raw                      |
+| `UnifiedPersonIds`       | __unified_person_ids     |

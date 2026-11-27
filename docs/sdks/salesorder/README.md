@@ -36,6 +36,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateAccountingSalesorderRequest(
     accountingSalesorder: new Shared\AccountingSalesorder(
+        balanceAmount: 0,
         billingAddress: new Shared\PropertyAccountingSalesorderBillingAddress(
             address1: '1487 Valley Road',
             address2: 'Apt. 287',
@@ -46,13 +47,13 @@ $request = new Operations\CreateAccountingSalesorderRequest(
             regionCode: 'MT',
         ),
         categoryIds: [],
-        closedAt: Utils\Utils::parseDateTime('2023-04-03T11:27:22.217Z'),
+        closedAt: Utils\Utils::parseDateTime('2023-04-03T17:46:41.211Z'),
         createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
         currency: 'USD',
         discountAmount: 0,
         fees: [],
         fulfillmentType: Shared\FulfillmentType::Other,
-        id: '6d5b5380-4041-4e2f-ba6e-79a9955462c3',
+        id: '266312d8-b2ff-4eff-9137-5426dc63684e',
         lineitems: [],
         metadata: [],
         orderNumber: '832663',
@@ -75,7 +76,7 @@ $request = new Operations\CreateAccountingSalesorderRequest(
         taxAmount: 0,
         tipAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-03T11:27:22.217Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-03T17:46:41.211Z'),
     ),
     connectionId: '<id>',
 );
@@ -231,6 +232,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchAccountingSalesorderRequest(
     accountingSalesorder: new Shared\AccountingSalesorder(
+        balanceAmount: 0,
         billingAddress: new Shared\PropertyAccountingSalesorderBillingAddress(
             address1: '1487 Valley Road',
             address2: 'Apt. 287',
@@ -241,13 +243,13 @@ $request = new Operations\PatchAccountingSalesorderRequest(
             regionCode: 'MT',
         ),
         categoryIds: [],
-        closedAt: Utils\Utils::parseDateTime('2023-04-03T11:27:22.230Z'),
+        closedAt: Utils\Utils::parseDateTime('2023-04-03T17:46:41.226Z'),
         createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
         currency: 'USD',
         discountAmount: 0,
         fees: [],
         fulfillmentType: Shared\FulfillmentType::Other,
-        id: 'cdb1cc46-c0ed-466e-9f99-0b9e51019832',
+        id: '3a2899f9-f409-4746-b968-d2e6d35187bc',
         lineitems: [],
         metadata: [],
         orderNumber: '832663',
@@ -270,7 +272,7 @@ $request = new Operations\PatchAccountingSalesorderRequest(
         taxAmount: 0,
         tipAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-03T11:27:22.230Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-03T17:46:41.226Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -377,6 +379,7 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateAccountingSalesorderRequest(
     accountingSalesorder: new Shared\AccountingSalesorder(
+        balanceAmount: 0,
         billingAddress: new Shared\PropertyAccountingSalesorderBillingAddress(
             address1: '1487 Valley Road',
             address2: 'Apt. 287',
@@ -387,13 +390,13 @@ $request = new Operations\UpdateAccountingSalesorderRequest(
             regionCode: 'MT',
         ),
         categoryIds: [],
-        closedAt: Utils\Utils::parseDateTime('2023-04-03T11:27:22.230Z'),
+        closedAt: Utils\Utils::parseDateTime('2023-04-03T17:46:41.226Z'),
         createdAt: Utils\Utils::parseDateTime('2022-01-17T16:11:50.310Z'),
         currency: 'USD',
         discountAmount: 0,
         fees: [],
         fulfillmentType: Shared\FulfillmentType::Other,
-        id: 'cdb1cc46-c0ed-466e-9f99-0b9e51019832',
+        id: '3a2899f9-f409-4746-b968-d2e6d35187bc',
         lineitems: [],
         metadata: [],
         orderNumber: '832663',
@@ -416,7 +419,7 @@ $request = new Operations\UpdateAccountingSalesorderRequest(
         taxAmount: 0,
         tipAmount: 0,
         totalAmount: 0,
-        updatedAt: Utils\Utils::parseDateTime('2023-04-03T11:27:22.230Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-04-03T17:46:41.226Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

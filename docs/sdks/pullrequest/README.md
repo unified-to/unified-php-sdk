@@ -36,9 +36,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-23T00:31:27.295Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-23T15:41:31.922Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '89ffe838-ad97-43f8-a4d6-6c2ff18574c0',
+        id: '0883b876-ddcf-4ad8-84f3-d5e56435d3b1',
         labels: [
             'crudelis',
             'uxor',
@@ -47,7 +47,7 @@ $request = new Operations\CreateRepoPullrequestRequest(
         notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'compress redundant application',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-14T18:41:34.174Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-02-15T14:50:24.740Z'),
     ),
     connectionId: '<id>',
 );
@@ -203,9 +203,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-23T00:31:27.303Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-23T15:41:31.929Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '1dcfa716-562d-4b51-8c5b-18de25ff9bdf',
+        id: '84c3b27d-bc7d-4962-b001-1617d3f41e2a',
         labels: [
             'crudelis',
             'uxor',
@@ -214,7 +214,7 @@ $request = new Operations\PatchRepoPullrequestRequest(
         notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'compress redundant application',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-14T18:41:34.186Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-02-15T14:50:24.750Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -321,9 +321,9 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateRepoPullrequestRequest(
     repoPullrequest: new Shared\RepoPullrequest(
-        closedAt: Utils\Utils::parseDateTime('2025-05-23T00:31:27.303Z'),
+        closedAt: Utils\Utils::parseDateTime('2025-05-23T15:41:31.929Z'),
         createdAt: Utils\Utils::parseDateTime('2023-02-27T09:37:13.663Z'),
-        id: '1dcfa716-562d-4b51-8c5b-18de25ff9bdf',
+        id: '84c3b27d-bc7d-4962-b001-1617d3f41e2a',
         labels: [
             'crudelis',
             'uxor',
@@ -332,7 +332,7 @@ $request = new Operations\UpdateRepoPullrequestRequest(
         notes: 'Amet asporto defero coadunatio. Curtus ceno consuasor aggero veritatis suggero adeo creptio tutamen. Aqua delicate adopto derelinquo caritas bibo maiores vulgivagus succurro temporibus.',
         status: Shared\RepoPullrequestStatus::Approved,
         title: 'compress redundant application',
-        updatedAt: Utils\Utils::parseDateTime('2026-02-14T18:41:34.186Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-02-15T14:50:24.750Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

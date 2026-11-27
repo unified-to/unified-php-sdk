@@ -22,6 +22,24 @@ class GenaiPrompt
     public ?array $answers = null;
 
     /**
+     * Ask the LLM API to keep this conversation so that a later prompt can continue it with parent_id (eg. Anthropic message threads, which are kept for about 5 minutes).
+     *
+     * @var ?bool $hasThread
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('has_thread')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?bool $hasThread = null;
+
+    /**
+     * The id of this prompt, returned by the LLM API. Send it as parent_id on the next prompt to continue the conversation.
+     *
+     * @var ?string $id
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $id = null;
+
+    /**
      * a float between 0-1
      *
      * @var ?float $maxTokens
@@ -76,6 +94,15 @@ class GenaiPrompt
     #[\Speakeasy\Serializer\Annotation\SerializedName('model_id')]
     #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
     public ?string $modelId = null;
+
+    /**
+     * The id of the previous prompt (genai_prompt) that this prompt continues. When set, messages holds only the new messages; the LLM API keeps the earlier ones (eg. Anthropic message threads, OpenAI previous_response_id). If the LLM API no longer has that prompt, send the full conversation again without parent_id.
+     *
+     * @var ?string $parentId
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('parent_id')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?string $parentId = null;
 
     /**
      * Typed questions to evaluate against the messages (for decision models such as TypeSafe Jev).
@@ -136,12 +163,15 @@ class GenaiPrompt
 
     /**
      * @param  ?array<\Unified\Unified_to\Models\Shared\GenaiAnswer>  $answers
+     * @param  ?bool  $hasThread
+     * @param  ?string  $id
      * @param  ?float  $maxTokens
      * @param  ?string  $mcpAuthorizationToken
      * @param  ?array<string>  $mcpDeferredTools
      * @param  ?string  $mcpUrl
      * @param  ?array<\Unified\Unified_to\Models\Shared\GenaiContent>  $messages
      * @param  ?string  $modelId
+     * @param  ?string  $parentId
      * @param  ?array<\Unified\Unified_to\Models\Shared\GenaiQuestion>  $questions
      * @param  ?array<string, mixed>  $raw
      * @param  ?array<string>  $responses
@@ -150,15 +180,18 @@ class GenaiPrompt
      * @param  ?float  $tokensUsed
      * @phpstan-pure
      */
-    public function __construct(?array $answers = null, ?float $maxTokens = null, ?string $mcpAuthorizationToken = null, ?array $mcpDeferredTools = null, ?string $mcpUrl = null, ?array $messages = null, ?string $modelId = null, ?array $questions = null, ?array $raw = null, ?array $responses = null, ?array $skillIds = null, ?float $temperature = null, ?float $tokensUsed = null)
+    public function __construct(?array $answers = null, ?bool $hasThread = null, ?string $id = null, ?float $maxTokens = null, ?string $mcpAuthorizationToken = null, ?array $mcpDeferredTools = null, ?string $mcpUrl = null, ?array $messages = null, ?string $modelId = null, ?string $parentId = null, ?array $questions = null, ?array $raw = null, ?array $responses = null, ?array $skillIds = null, ?float $temperature = null, ?float $tokensUsed = null)
     {
         $this->answers = $answers;
+        $this->hasThread = $hasThread;
+        $this->id = $id;
         $this->maxTokens = $maxTokens;
         $this->mcpAuthorizationToken = $mcpAuthorizationToken;
         $this->mcpDeferredTools = $mcpDeferredTools;
         $this->mcpUrl = $mcpUrl;
         $this->messages = $messages;
         $this->modelId = $modelId;
+        $this->parentId = $parentId;
         $this->questions = $questions;
         $this->raw = $raw;
         $this->responses = $responses;

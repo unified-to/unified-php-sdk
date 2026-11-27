@@ -40,10 +40,10 @@ $request = new Operations\CreateDmsPartsaleRequest(
         currency: 'USD',
         discountAmount: 0,
         freightAmount: 0,
-        id: '10413bb1-f92e-4e52-8931-a64d032625fb',
+        id: '9596d949-5390-48f1-9ec1-100c070f724e',
         lines: [
             new Shared\DmsPartline(
-                id: 'eea9798d-b6fe-45f8-957f-00473beb10ed',
+                id: '607440e8-5fae-4a30-83d4-00a9bcaf808c',
                 payType: Shared\DmsPartlinePayType::Customer,
                 quantity: 5,
                 quantityOrdered: 5,
@@ -51,7 +51,7 @@ $request = new Operations\CreateDmsPartsaleRequest(
                 unitPriceAmount: 98.29,
             ),
             new Shared\DmsPartline(
-                id: 'f3a32de3-d70e-4b09-a654-241a91c29a39',
+                id: '4feebedc-8165-4b3e-8ab0-4128872f2453',
                 payType: Shared\DmsPartlinePayType::Customer,
                 quantity: 2,
                 quantityOrdered: 2,
@@ -59,7 +59,7 @@ $request = new Operations\CreateDmsPartsaleRequest(
                 unitPriceAmount: 120.45,
             ),
             new Shared\DmsPartline(
-                id: 'b38ce923-92a4-4bc0-ae63-fa4c8be57373',
+                id: '0cab3353-09dd-4a49-92fa-3726923cb1fa',
                 payType: Shared\DmsPartlinePayType::Customer,
                 quantity: 3,
                 quantityOrdered: 3,
@@ -75,7 +75,7 @@ $request = new Operations\CreateDmsPartsaleRequest(
         taxAmount: 68.73,
         totalAmount: 1050.62,
         type: Shared\DmsPartsaleType::Sale,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-17T16:10:56.904Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-18T13:12:40.444Z'),
     ),
     connectionId: '<id>',
 );
@@ -236,10 +236,10 @@ $request = new Operations\PatchDmsPartsaleRequest(
         currency: 'USD',
         discountAmount: 0,
         freightAmount: 0,
-        id: '0d1e53ed-210f-4453-b3df-a69b7d486656',
+        id: '34a95987-c5a4-4781-b626-50631e4c2823',
         lines: [
             new Shared\DmsPartline(
-                id: '817a066f-15f4-4061-9415-fa7e42fbfacc',
+                id: '251f6172-433c-4acb-ac9d-a13de9f40dea',
                 payType: Shared\DmsPartlinePayType::Customer,
                 quantity: 5,
                 quantityOrdered: 5,
@@ -247,7 +247,7 @@ $request = new Operations\PatchDmsPartsaleRequest(
                 unitPriceAmount: 98.29,
             ),
             new Shared\DmsPartline(
-                id: 'de72d593-202b-40ec-9872-2f0fb678ee53',
+                id: 'abf0ff87-cc58-4dcd-8372-7c4ffe136362',
                 payType: Shared\DmsPartlinePayType::Customer,
                 quantity: 2,
                 quantityOrdered: 2,
@@ -255,7 +255,7 @@ $request = new Operations\PatchDmsPartsaleRequest(
                 unitPriceAmount: 120.45,
             ),
             new Shared\DmsPartline(
-                id: '14bfc412-605d-4262-be2d-a9a23d125059',
+                id: '0a113179-a186-4d70-bc3d-8dcbe7142811',
                 payType: Shared\DmsPartlinePayType::Customer,
                 quantity: 3,
                 quantityOrdered: 3,
@@ -271,7 +271,7 @@ $request = new Operations\PatchDmsPartsaleRequest(
         taxAmount: 68.73,
         totalAmount: 1050.62,
         type: Shared\DmsPartsaleType::Sale,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-17T16:10:56.935Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-18T13:12:40.465Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -332,10 +332,10 @@ $request = new Operations\UpdateDmsPartsaleRequest(
         currency: 'USD',
         discountAmount: 0,
         freightAmount: 0,
-        id: '0d1e53ed-210f-4453-b3df-a69b7d486656',
+        id: '34a95987-c5a4-4781-b626-50631e4c2823',
         lines: [
             new Shared\DmsPartline(
-                id: '817a066f-15f4-4061-9415-fa7e42fbfacc',
+                id: '251f6172-433c-4acb-ac9d-a13de9f40dea',
                 payType: Shared\DmsPartlinePayType::Customer,
                 quantity: 5,
                 quantityOrdered: 5,
@@ -343,7 +343,7 @@ $request = new Operations\UpdateDmsPartsaleRequest(
                 unitPriceAmount: 98.29,
             ),
             new Shared\DmsPartline(
-                id: 'de72d593-202b-40ec-9872-2f0fb678ee53',
+                id: 'abf0ff87-cc58-4dcd-8372-7c4ffe136362',
                 payType: Shared\DmsPartlinePayType::Customer,
                 quantity: 2,
                 quantityOrdered: 2,
@@ -351,7 +351,7 @@ $request = new Operations\UpdateDmsPartsaleRequest(
                 unitPriceAmount: 120.45,
             ),
             new Shared\DmsPartline(
-                id: '14bfc412-605d-4262-be2d-a9a23d125059',
+                id: '0a113179-a186-4d70-bc3d-8dcbe7142811',
                 payType: Shared\DmsPartlinePayType::Customer,
                 quantity: 3,
                 quantityOrdered: 3,
@@ -367,7 +367,7 @@ $request = new Operations\UpdateDmsPartsaleRequest(
         taxAmount: 68.73,
         totalAmount: 1050.62,
         type: Shared\DmsPartsaleType::Sale,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-17T16:10:56.935Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-18T13:12:40.465Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

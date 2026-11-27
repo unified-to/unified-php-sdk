@@ -24,4 +24,5 @@ enum CreateMartechMemberQueryParamFields: string
     case Status = 'status';
     case Metadata = 'metadata';
     case Raw = 'raw';
+    case UnifiedPersonIds = '__unified_person_ids';
 }

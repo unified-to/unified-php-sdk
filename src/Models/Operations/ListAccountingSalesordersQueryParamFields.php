@@ -45,5 +45,6 @@ enum ListAccountingSalesordersQueryParamFields: string
     case Payments = 'payments';
     case TableId = 'table_id';
     case PaidAmount = 'paid_amount';
+    case BalanceAmount = 'balance_amount';
     case Raw = 'raw';
 }

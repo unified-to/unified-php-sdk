@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class HealthcarePractitioner
 {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+     *
+     * @var ?array<string> $unifiedPersonIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('__unified_person_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $unifiedPersonIds = null;
+
+    /**
      * Work address of the practitioner
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyHealthcarePractitionerAddress $address
@@ -203,6 +213,7 @@ class HealthcarePractitioner
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?array<string>  $unifiedPersonIds
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyHealthcarePractitionerAddress  $address
      * @param  ?\DateTime  $createdAt
      * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcareEmail>  $emails
@@ -225,8 +236,9 @@ class HealthcarePractitioner
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHealthcarePractitionerAddress $address = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?HealthcarePractitionerGender $gender = null, ?string $id = null, ?array $identifiers = null, ?string $imageUrl = null, ?bool $isActive = null, ?array $languages = null, ?string $lastName = null, ?array $locationIds = null, ?array $metadata = null, ?string $name = null, ?array $qualifications = null, ?array $raw = null, ?array $specialties = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $unifiedPersonIds = null, ?PropertyHealthcarePractitionerAddress $address = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?HealthcarePractitionerGender $gender = null, ?string $id = null, ?array $identifiers = null, ?string $imageUrl = null, ?bool $isActive = null, ?array $languages = null, ?string $lastName = null, ?array $locationIds = null, ?array $metadata = null, ?string $name = null, ?array $qualifications = null, ?array $raw = null, ?array $specialties = null, ?array $telephones = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
+        $this->unifiedPersonIds = $unifiedPersonIds;
         $this->address = $address;
         $this->createdAt = $createdAt;
         $this->emails = $emails;

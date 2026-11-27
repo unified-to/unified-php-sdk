@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class AccountingContact
 {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+     *
+     * @var ?array<string> $unifiedPersonIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('__unified_person_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $unifiedPersonIds = null;
+
+    /**
      * $associatedContacts
      *
      * @var ?array<\Unified\Unified_to\Models\Shared\AccountingAssociatedContact> $associatedContacts
@@ -267,6 +277,7 @@ class AccountingContact
     public ?string $currency = null;
 
     /**
+     * @param  ?array<string>  $unifiedPersonIds
      * @param  ?array<\Unified\Unified_to\Models\Shared\AccountingAssociatedContact>  $associatedContacts
      * @param  ?float  $balanceAmount
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingContactBillingAddress  $billingAddress
@@ -298,8 +309,9 @@ class AccountingContact
      * @param  ?string  $website
      * @phpstan-pure
      */
-    public function __construct(?array $associatedContacts = null, ?float $balanceAmount = null, ?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $lastName = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $organizationId = null, ?array $paymentMethods = null, ?AccountingContactPaymentTerms $paymentTerms = null, ?string $paymenttermId = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $website = null, ?string $currency = 'USD')
+    public function __construct(?array $unifiedPersonIds = null, ?array $associatedContacts = null, ?float $balanceAmount = null, ?PropertyAccountingContactBillingAddress $billingAddress = null, ?string $companyName = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $identification = null, ?bool $isActive = null, ?bool $isCustomer = null, ?bool $isSupplier = null, ?string $lastName = null, ?array $metadata = null, ?string $name = null, ?string $notes = null, ?string $organizationId = null, ?array $paymentMethods = null, ?AccountingContactPaymentTerms $paymentTerms = null, ?string $paymenttermId = null, ?string $portalUrl = null, ?array $raw = null, ?PropertyAccountingContactShippingAddress $shippingAddress = null, ?TaxExemption $taxExemption = null, ?string $taxNumber = null, ?array $telephones = null, ?\DateTime $updatedAt = null, ?string $website = null, ?string $currency = 'USD')
     {
+        $this->unifiedPersonIds = $unifiedPersonIds;
         $this->associatedContacts = $associatedContacts;
         $this->balanceAmount = $balanceAmount;
         $this->billingAddress = $billingAddress;

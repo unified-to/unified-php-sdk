@@ -23,5 +23,8 @@ enum CreateGenaiPromptQueryParamFields: string
     case Questions = 'questions';
     case Answers = 'answers';
     case SkillIds = 'skill_ids';
+    case Id = 'id';
+    case ParentId = 'parent_id';
+    case HasThread = 'has_thread';
     case Raw = 'raw';
 }

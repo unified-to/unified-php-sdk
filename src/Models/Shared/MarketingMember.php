@@ -13,6 +13,16 @@ namespace Unified\Unified_to\Models\Shared;
 class MarketingMember
 {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+     *
+     * @var ?array<string> $unifiedPersonIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('__unified_person_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $unifiedPersonIds = null;
+
+    /**
      * The name of the company/organization the member belongs to
      *
      * @var ?string $company
@@ -133,6 +143,7 @@ class MarketingMember
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?array<string>  $unifiedPersonIds
      * @param  ?string  $company
      * @param  ?\DateTime  $createdAt
      * @param  ?array<\Unified\Unified_to\Models\Shared\MarketingEmail>  $emails
@@ -148,8 +159,9 @@ class MarketingMember
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?array $listIds = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?MarketingMemberStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $unifiedPersonIds = null, ?string $company = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $firstName = null, ?string $id = null, ?string $lastName = null, ?array $listIds = null, ?array $metadata = null, ?string $name = null, ?array $raw = null, ?MarketingMemberStatus $status = null, ?array $tags = null, ?\DateTime $updatedAt = null)
     {
+        $this->unifiedPersonIds = $unifiedPersonIds;
         $this->company = $company;
         $this->createdAt = $createdAt;
         $this->emails = $emails;

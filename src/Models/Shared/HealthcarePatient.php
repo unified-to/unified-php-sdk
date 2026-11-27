@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class HealthcarePatient
 {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+     *
+     * @var ?array<string> $unifiedPersonIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('__unified_person_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $unifiedPersonIds = null;
+
+    /**
      * Home address of the patient
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyHealthcarePatientAddress $address
@@ -231,6 +241,7 @@ class HealthcarePatient
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?array<string>  $unifiedPersonIds
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyHealthcarePatientAddress  $address
      * @param  ?string  $birthdate
      * @param  ?array<\Unified\Unified_to\Models\Shared\HealthcarePatientContact>  $contacts
@@ -256,8 +267,9 @@ class HealthcarePatient
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHealthcarePatientAddress $address = null, ?string $birthdate = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $deceasedAt = null, ?array $emails = null, ?array $ethnicities = null, ?string $firstName = null, ?HealthcarePatientGender $gender = null, ?string $id = null, ?array $identifiers = null, ?bool $isActive = null, ?bool $isDeceased = null, ?string $language = null, ?string $lastName = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?array $practitionerIds = null, ?array $races = null, ?array $raw = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $unifiedPersonIds = null, ?PropertyHealthcarePatientAddress $address = null, ?string $birthdate = null, ?array $contacts = null, ?\DateTime $createdAt = null, ?\DateTime $deceasedAt = null, ?array $emails = null, ?array $ethnicities = null, ?string $firstName = null, ?HealthcarePatientGender $gender = null, ?string $id = null, ?array $identifiers = null, ?bool $isActive = null, ?bool $isDeceased = null, ?string $language = null, ?string $lastName = null, ?MaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?array $practitionerIds = null, ?array $races = null, ?array $raw = null, ?array $telephones = null, ?\DateTime $updatedAt = null)
     {
+        $this->unifiedPersonIds = $unifiedPersonIds;
         $this->address = $address;
         $this->birthdate = $birthdate;
         $this->contacts = $contacts;

@@ -20,4 +20,5 @@ enum CreateTicketingCustomerQueryParamFields: string
     case Tags = 'tags';
     case Metadata = 'metadata';
     case Raw = 'raw';
+    case UnifiedPersonIds = '__unified_person_ids';
 }

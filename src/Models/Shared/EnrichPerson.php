@@ -13,6 +13,16 @@ namespace Unified\Unified_to\Models\Shared;
 class EnrichPerson
 {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+     *
+     * @var ?array<string> $unifiedPersonIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('__unified_person_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $unifiedPersonIds = null;
+
+    /**
      * The address of the person
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress $address
@@ -251,6 +261,7 @@ class EnrichPerson
     public ?array $workHistories = null;
 
     /**
+     * @param  ?array<string>  $unifiedPersonIds
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyEnrichPersonAddress  $address
      * @param  ?string  $bio
      * @param  ?string  $birthdate
@@ -279,8 +290,9 @@ class EnrichPerson
      * @param  ?array<\Unified\Unified_to\Models\Shared\EnrichPersonWorkHistory>  $workHistories
      * @phpstan-pure
      */
-    public function __construct(?PropertyEnrichPersonAddress $address = null, ?string $bio = null, ?string $birthdate = null, ?string $company = null, ?string $companyDomain = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $facebookUrl = null, ?string $firstName = null, ?EnrichPersonGender $gender = null, ?string $githubUrl = null, ?string $githubUsername = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?string $linkedinUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?string $title = null, ?string $twitterHandle = null, ?string $twitterUrl = null, ?\DateTime $updatedAt = null, ?float $utcOffset = null, ?array $workHistories = null)
+    public function __construct(?array $unifiedPersonIds = null, ?PropertyEnrichPersonAddress $address = null, ?string $bio = null, ?string $birthdate = null, ?string $company = null, ?string $companyDomain = null, ?\DateTime $createdAt = null, ?array $emails = null, ?string $facebookUrl = null, ?string $firstName = null, ?EnrichPersonGender $gender = null, ?string $githubUrl = null, ?string $githubUsername = null, ?string $id = null, ?string $imageUrl = null, ?string $lastName = null, ?string $linkedinUrl = null, ?string $name = null, ?array $raw = null, ?array $telephones = null, ?string $timezone = null, ?string $title = null, ?string $twitterHandle = null, ?string $twitterUrl = null, ?\DateTime $updatedAt = null, ?float $utcOffset = null, ?array $workHistories = null)
     {
+        $this->unifiedPersonIds = $unifiedPersonIds;
         $this->address = $address;
         $this->bio = $bio;
         $this->birthdate = $birthdate;

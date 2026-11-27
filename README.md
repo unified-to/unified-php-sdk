@@ -43,7 +43,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Comedo vilitas harum cupiditate animus quo iste.',
-        id: 'a96d13fd-b4cd-4c37-98b9-695b18f29e8e',
+        id: '7ecf3c40-3490-4210-a7f9-27427a423b3e',
         isPayable: false,
         metadata: [],
         name: 'Savings Account',
@@ -56,7 +56,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-16T01:01:45.535Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-16T07:29:38.922Z'),
     ),
     connectionId: '<id>',
 );
@@ -106,7 +106,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Comedo vilitas harum cupiditate animus quo iste.',
-        id: 'a96d13fd-b4cd-4c37-98b9-695b18f29e8e',
+        id: '7ecf3c40-3490-4210-a7f9-27427a423b3e',
         isPayable: false,
         metadata: [],
         name: 'Savings Account',
@@ -119,7 +119,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-16T01:01:45.535Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-16T07:29:38.922Z'),
     ),
     connectionId: '<id>',
 );
@@ -2340,7 +2340,10 @@ if ($response->accountingAccount !== null) {
 
 ### [Person](docs/sdks/person/README.md)
 
+* [getUnifiedPerson](docs/sdks/person/README.md#getunifiedperson) - Retrieve a person by ID
 * [listEnrichPeople](docs/sdks/person/README.md#listenrichpeople) - Retrieve enrichment information for a person
+* [listUnifiedPeople](docs/sdks/person/README.md#listunifiedpeople) - Search for persons by email addresses
+* [removeUnifiedPerson](docs/sdks/person/README.md#removeunifiedperson) - Erase email addresses from the unified persons
 
 ### [Pipeline](docs/sdks/pipeline/README.md)
 
@@ -3168,6 +3171,7 @@ if ($response->accountingAccount !== null) {
 * [getUnifiedConnection](docs/sdks/unified/README.md#getunifiedconnection) - Retrieve connection
 * [getUnifiedIntegrationAuth](docs/sdks/unified/README.md#getunifiedintegrationauth) - Authorize or re-authorize a connection
 * [getUnifiedIssue](docs/sdks/unified/README.md#getunifiedissue) - Retrieve support issue
+* [getUnifiedPerson](docs/sdks/unified/README.md#getunifiedperson) - Retrieve a person by ID
 * [getUnifiedSecretsmanager](docs/sdks/unified/README.md#getunifiedsecretsmanager) - Retrieve secrets manager
 * [getUnifiedWebhook](docs/sdks/unified/README.md#getunifiedwebhook) - Retrieve webhook by its ID
 * [getUnifiedWorkspaceintegration](docs/sdks/unified/README.md#getunifiedworkspaceintegration) - Retrieve workspace integration
@@ -3178,6 +3182,7 @@ if ($response->accountingAccount !== null) {
 * [listUnifiedIntegrations](docs/sdks/unified/README.md#listunifiedintegrations) - Returns all integrations
 * [listUnifiedIssues](docs/sdks/unified/README.md#listunifiedissues) - List support issues
 * [listUnifiedNotifications](docs/sdks/unified/README.md#listunifiednotifications) - List event notifications
+* [listUnifiedPeople](docs/sdks/unified/README.md#listunifiedpeople) - Search for persons by email addresses
 * [listUnifiedSecretsmanagerInstructions](docs/sdks/unified/README.md#listunifiedsecretsmanagerinstructions) - List secrets manager setup instructions
 * [listUnifiedSecretsmanagerSecrets](docs/sdks/unified/README.md#listunifiedsecretsmanagersecrets) - List secrets in a secrets manager
 * [listUnifiedSecretsmanagers](docs/sdks/unified/README.md#listunifiedsecretsmanagers) - List secrets managers
@@ -3191,6 +3196,7 @@ if ($response->accountingAccount !== null) {
 * [patchUnifiedWorkspaceintegration](docs/sdks/unified/README.md#patchunifiedworkspaceintegration) - Update workspace integration
 * [removeUnifiedConnection](docs/sdks/unified/README.md#removeunifiedconnection) - Remove connection
 * [removeUnifiedEnvironment](docs/sdks/unified/README.md#removeunifiedenvironment) - Remove an environment
+* [removeUnifiedPerson](docs/sdks/unified/README.md#removeunifiedperson) - Erase email addresses from the unified persons
 * [removeUnifiedSecretsmanager](docs/sdks/unified/README.md#removeunifiedsecretsmanager) - Remove secrets manager
 * [removeUnifiedWebhook](docs/sdks/unified/README.md#removeunifiedwebhook) - Remove webhook subscription
 * [removeUnifiedWorkspaceintegration](docs/sdks/unified/README.md#removeunifiedworkspaceintegration) - Remove workspace integration
@@ -3355,7 +3361,7 @@ try {
             currency: 'CAD',
             customerDefinedCode: '6170',
             description: 'Comedo vilitas harum cupiditate animus quo iste.',
-            id: 'a96d13fd-b4cd-4c37-98b9-695b18f29e8e',
+            id: '7ecf3c40-3490-4210-a7f9-27427a423b3e',
             isPayable: false,
             metadata: [],
             name: 'Savings Account',
@@ -3368,7 +3374,7 @@ try {
                 ),
             ],
             type: Shared\Type::AccountsReceivable,
-            updatedAt: Utils\Utils::parseDateTime('2023-08-16T01:01:45.535Z'),
+            updatedAt: Utils\Utils::parseDateTime('2023-08-16T07:29:38.922Z'),
         ),
         connectionId: '<id>',
     );
@@ -3426,7 +3432,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Comedo vilitas harum cupiditate animus quo iste.',
-        id: 'a96d13fd-b4cd-4c37-98b9-695b18f29e8e',
+        id: '7ecf3c40-3490-4210-a7f9-27427a423b3e',
         isPayable: false,
         metadata: [],
         name: 'Savings Account',
@@ -3439,7 +3445,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-16T01:01:45.535Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-16T07:29:38.922Z'),
     ),
     connectionId: '<id>',
 );
@@ -3480,7 +3486,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Comedo vilitas harum cupiditate animus quo iste.',
-        id: 'a96d13fd-b4cd-4c37-98b9-695b18f29e8e',
+        id: '7ecf3c40-3490-4210-a7f9-27427a423b3e',
         isPayable: false,
         metadata: [],
         name: 'Savings Account',
@@ -3493,7 +3499,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-16T01:01:45.535Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-16T07:29:38.922Z'),
     ),
     connectionId: '<id>',
 );

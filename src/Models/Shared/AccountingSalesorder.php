@@ -21,6 +21,15 @@ class AccountingSalesorder
     public ?string $accountId = null;
 
     /**
+     * amount still owed on the order (total_amount - paid_amount)
+     *
+     * @var ?float $balanceAmount
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('balance_amount')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?float $balanceAmount = null;
+
+    /**
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderBillingAddress $billingAddress
      */
@@ -323,6 +332,7 @@ class AccountingSalesorder
 
     /**
      * @param  ?string  $accountId
+     * @param  ?float  $balanceAmount
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyAccountingSalesorderBillingAddress  $billingAddress
      * @param  ?array<string>  $categoryIds
      * @param  ?\DateTime  $closedAt
@@ -359,9 +369,10 @@ class AccountingSalesorder
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?string $accountId = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?\DateTime $closedAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $deviceId = null, ?float $discountAmount = null, ?string $employeeUserId = null, ?array $fees = null, ?FulfillmentType $fulfillmentType = null, ?float $guestCount = null, ?string $id = null, ?array $lineitems = null, ?string $locationId = null, ?array $metadata = null, ?string $orderNumber = null, ?string $organizationId = null, ?float $paidAmount = null, ?array $payments = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundedAmount = null, ?string $salesChannel = null, ?float $serviceChargeAmount = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?string $subscriptionId = null, ?float $subtotalAmount = null, ?string $tableId = null, ?float $taxAmount = null, ?float $tipAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
+    public function __construct(?string $accountId = null, ?float $balanceAmount = null, ?PropertyAccountingSalesorderBillingAddress $billingAddress = null, ?array $categoryIds = null, ?\DateTime $closedAt = null, ?string $contactId = null, ?\DateTime $createdAt = null, ?string $currency = null, ?string $deviceId = null, ?float $discountAmount = null, ?string $employeeUserId = null, ?array $fees = null, ?FulfillmentType $fulfillmentType = null, ?float $guestCount = null, ?string $id = null, ?array $lineitems = null, ?string $locationId = null, ?array $metadata = null, ?string $orderNumber = null, ?string $organizationId = null, ?float $paidAmount = null, ?array $payments = null, ?\DateTime $postedAt = null, ?array $raw = null, ?float $refundedAmount = null, ?string $salesChannel = null, ?float $serviceChargeAmount = null, ?PropertyAccountingSalesorderShippingAddress $shippingAddress = null, ?AccountingSalesorderStatus $status = null, ?string $subscriptionId = null, ?float $subtotalAmount = null, ?string $tableId = null, ?float $taxAmount = null, ?float $tipAmount = null, ?float $totalAmount = null, ?\DateTime $updatedAt = null)
     {
         $this->accountId = $accountId;
+        $this->balanceAmount = $balanceAmount;
         $this->billingAddress = $billingAddress;
         $this->categoryIds = $categoryIds;
         $this->closedAt = $closedAt;

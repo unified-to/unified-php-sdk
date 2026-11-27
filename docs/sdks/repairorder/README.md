@@ -36,23 +36,23 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateDmsRepairorderRequest(
     dmsRepairorder: new Shared\DmsRepairorder(
         balanceAmount: 3193.86,
-        completedAt: Utils\Utils::parseDateTime('2026-11-12T19:26:52.043Z'),
+        completedAt: Utils\Utils::parseDateTime('2026-11-13T20:39:21.218Z'),
         createdAt: Utils\Utils::parseDateTime('2022-10-25T15:50:48.007Z'),
         currency: 'USD',
         discountAmount: 0,
         estimateAmount: 3264,
-        id: '29c6ecf7-545c-49ab-9c56-a6fee51761ab',
+        id: '1508a81c-c49c-436c-b8aa-1a73a5ed477f',
         jobs: [
             new Shared\DmsRepairorderJob(
                 actualHours: 3.6,
                 cause: 'Scheduled maintenance',
                 complaint: 'Due for service',
                 correction: 'Aufero cumque vicinus aptus assumenda quis aptus.',
-                id: '1c951aa9-20b4-4cf0-9551-b4dddbf2aa01',
+                id: '50edd460-e5eb-4c75-b1c0-6c2fcec11237',
                 laborAmount: 681.6,
                 labors: [
                     new Shared\DmsRepairorderLabor(
-                        id: 'dad7f223-834c-476c-be6c-6f43bd716dda',
+                        id: 'b4f79a8c-070c-4509-adc0-462f2a6b61d0',
                         payType: Shared\DmsRepairorderLaborPayType::Warranty,
                         rateAmount: 213,
                         soldHours: 3.2,
@@ -75,11 +75,11 @@ $request = new Operations\CreateDmsRepairorderRequest(
                 cause: 'Worn brake pads',
                 complaint: 'Vibration at highway speed',
                 correction: 'Somnus avaritia utroque vulnero ullam ancilla.',
-                id: 'b8680ea7-d8c1-4b2b-8680-ab91ba9ed1bd',
+                id: '7f7ced5e-2be6-4f9f-b4ea-2f023d327d5b',
                 laborAmount: 446.4,
                 labors: [
                     new Shared\DmsRepairorderLabor(
-                        id: '912c1114-67a9-4d6f-a569-9ccda7dca409',
+                        id: '428ff84f-1ec9-4ae7-93d4-3ddbd20adc60',
                         payType: Shared\DmsRepairorderLaborPayType::Warranty,
                         rateAmount: 144,
                         soldHours: 3.1,
@@ -91,7 +91,7 @@ $request = new Operations\CreateDmsRepairorderRequest(
                 number: 'B',
                 parts: [
                     new Shared\DmsPartline(
-                        id: '0a82acab-f4f2-499f-a709-2e27f98101d1',
+                        id: 'f7f66f04-5186-4c98-ab53-3622e4fd7e58',
                         payType: Shared\DmsPartlinePayType::Warranty,
                         quantity: 4,
                         quantityOrdered: 4,
@@ -99,7 +99,7 @@ $request = new Operations\CreateDmsRepairorderRequest(
                         unitPriceAmount: 222.61,
                     ),
                     new Shared\DmsPartline(
-                        id: '76195760-568e-4854-92be-837dfbf73790',
+                        id: 'b5db4796-9c59-4667-9e21-ff0836c81c25',
                         payType: Shared\DmsPartlinePayType::Warranty,
                         quantity: 2,
                         quantityOrdered: 2,
@@ -119,11 +119,11 @@ $request = new Operations\CreateDmsRepairorderRequest(
                 cause: 'Scheduled maintenance',
                 complaint: 'Noise when braking',
                 correction: 'Degero theca natus.',
-                id: '76c9d0de-9a9d-42f9-8f7b-9add776ed099',
+                id: '8c82b374-ce18-49a3-9be8-2bc4d1a1b16c',
                 laborAmount: 232.4,
                 labors: [
                     new Shared\DmsRepairorderLabor(
-                        id: 'ab140ce2-e3b1-4c26-ad6e-cf890e4e0dc5',
+                        id: 'a4b67f5a-9cf9-4845-9315-9ad8ac58a7a0',
                         payType: Shared\DmsRepairorderLaborPayType::Customer,
                         rateAmount: 166,
                         soldHours: 1.4,
@@ -135,7 +135,7 @@ $request = new Operations\CreateDmsRepairorderRequest(
                 number: 'C',
                 parts: [
                     new Shared\DmsPartline(
-                        id: '6797e41f-7807-412e-a17c-a114f7349e2a',
+                        id: '7205f003-1037-4400-8a05-6496fcab68e4',
                         payType: Shared\DmsPartlinePayType::Customer,
                         quantity: 1,
                         quantityOrdered: 1,
@@ -143,7 +143,7 @@ $request = new Operations\CreateDmsRepairorderRequest(
                         unitPriceAmount: 216.02,
                     ),
                     new Shared\DmsPartline(
-                        id: '4545c794-76bb-42e1-b98d-91e86b230886',
+                        id: '764575b7-79ca-418b-9d61-31427016a4b6',
                         payType: Shared\DmsPartlinePayType::Customer,
                         quantity: 2,
                         quantityOrdered: 2,
@@ -166,10 +166,10 @@ $request = new Operations\CreateDmsRepairorderRequest(
         odometerIn: 7776,
         odometerOut: 7776,
         odometerUnit: Shared\DmsRepairorderOdometerUnit::Miles,
-        openedAt: Utils\Utils::parseDateTime('2025-02-07T19:18:27.112Z'),
+        openedAt: Utils\Utils::parseDateTime('2025-02-08T09:33:26.436Z'),
         partsAmount: 1680.8000000000002,
         payType: Shared\DmsRepairorderPayType::Warranty,
-        promisedAt: Utils\Utils::parseDateTime('2025-02-09T03:18:27.112Z'),
+        promisedAt: Utils\Utils::parseDateTime('2025-02-09T17:33:26.436Z'),
         purchaseOrderNumber: '182743',
         status: Shared\DmsRepairorderStatus::Completed,
         subletAmount: 0,
@@ -196,7 +196,7 @@ $request = new Operations\CreateDmsRepairorderRequest(
             ),
         ],
         transportType: Shared\DmsRepairorderTransportType::Loaner,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-27T22:12:41.492Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-28T17:27:24.447Z'),
     ),
     connectionId: '<id>',
 );
@@ -353,23 +353,23 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchDmsRepairorderRequest(
     dmsRepairorder: new Shared\DmsRepairorder(
         balanceAmount: 3193.86,
-        completedAt: Utils\Utils::parseDateTime('2026-11-12T19:26:52.100Z'),
+        completedAt: Utils\Utils::parseDateTime('2026-11-13T20:39:21.261Z'),
         createdAt: Utils\Utils::parseDateTime('2022-10-25T15:50:48.007Z'),
         currency: 'USD',
         discountAmount: 0,
         estimateAmount: 3264,
-        id: '5bec3d3a-f8be-456f-9a7e-46941e5c8275',
+        id: '1467f268-5ddf-40f3-ad44-c945619eab00',
         jobs: [
             new Shared\DmsRepairorderJob(
                 actualHours: 3.6,
                 cause: 'Scheduled maintenance',
                 complaint: 'Due for service',
                 correction: 'Aufero cumque vicinus aptus assumenda quis aptus.',
-                id: '53ba2ede-c86e-4ece-ab4a-2e5c2ef5c389',
+                id: '266187cc-2984-47e7-b32b-8fb65cbeda53',
                 laborAmount: 681.6,
                 labors: [
                     new Shared\DmsRepairorderLabor(
-                        id: '3be15d42-8524-4cf0-8ed1-b0d8304cb15c',
+                        id: '18875721-c626-4012-9826-e2aa7f83ccac',
                         payType: Shared\DmsRepairorderLaborPayType::Warranty,
                         rateAmount: 213,
                         soldHours: 3.2,
@@ -392,11 +392,11 @@ $request = new Operations\PatchDmsRepairorderRequest(
                 cause: 'Worn brake pads',
                 complaint: 'Vibration at highway speed',
                 correction: 'Somnus avaritia utroque vulnero ullam ancilla.',
-                id: '62da07d8-548f-4019-a63c-741eb450b61f',
+                id: '732320e4-458a-412b-8466-055ee79edf76',
                 laborAmount: 446.4,
                 labors: [
                     new Shared\DmsRepairorderLabor(
-                        id: '53e828d8-fc28-4395-a40c-f585a7114cf5',
+                        id: 'ff62d449-78ba-48a9-ac6a-46a5f31c04ad',
                         payType: Shared\DmsRepairorderLaborPayType::Warranty,
                         rateAmount: 144,
                         soldHours: 3.1,
@@ -408,7 +408,7 @@ $request = new Operations\PatchDmsRepairorderRequest(
                 number: 'B',
                 parts: [
                     new Shared\DmsPartline(
-                        id: '37f561c6-bf8a-4cd0-a2e8-932b0429db21',
+                        id: '74937bd2-265d-4736-bc71-a3584854a4aa',
                         payType: Shared\DmsPartlinePayType::Warranty,
                         quantity: 4,
                         quantityOrdered: 4,
@@ -416,7 +416,7 @@ $request = new Operations\PatchDmsRepairorderRequest(
                         unitPriceAmount: 222.61,
                     ),
                     new Shared\DmsPartline(
-                        id: '0d2d83d0-7703-4352-b9e9-c07e84976721',
+                        id: 'a3857e77-e94c-48cb-a3a4-ee5be72aaa7d',
                         payType: Shared\DmsPartlinePayType::Warranty,
                         quantity: 2,
                         quantityOrdered: 2,
@@ -436,11 +436,11 @@ $request = new Operations\PatchDmsRepairorderRequest(
                 cause: 'Scheduled maintenance',
                 complaint: 'Noise when braking',
                 correction: 'Degero theca natus.',
-                id: '1b44e812-3c92-4415-907d-e7735146ba2a',
+                id: '7228a698-ee19-4a40-8ecb-232d3d6f2279',
                 laborAmount: 232.4,
                 labors: [
                     new Shared\DmsRepairorderLabor(
-                        id: '006edd1b-844e-49f6-bee8-c5097bf8fac7',
+                        id: '62915392-3a92-427c-afb0-857b1b549347',
                         payType: Shared\DmsRepairorderLaborPayType::Customer,
                         rateAmount: 166,
                         soldHours: 1.4,
@@ -452,7 +452,7 @@ $request = new Operations\PatchDmsRepairorderRequest(
                 number: 'C',
                 parts: [
                     new Shared\DmsPartline(
-                        id: 'a14614ad-bb45-4b37-b8d4-3d6a23db92f3',
+                        id: '349e27ba-ad76-46ee-9a17-ff1ac7e1f3fb',
                         payType: Shared\DmsPartlinePayType::Customer,
                         quantity: 1,
                         quantityOrdered: 1,
@@ -460,7 +460,7 @@ $request = new Operations\PatchDmsRepairorderRequest(
                         unitPriceAmount: 216.02,
                     ),
                     new Shared\DmsPartline(
-                        id: 'd992a8a6-9f8d-47a0-97ac-7aed4e82d469',
+                        id: '64c5d697-4d8f-4eab-a219-68beeea4884b',
                         payType: Shared\DmsPartlinePayType::Customer,
                         quantity: 2,
                         quantityOrdered: 2,
@@ -483,10 +483,10 @@ $request = new Operations\PatchDmsRepairorderRequest(
         odometerIn: 7776,
         odometerOut: 7776,
         odometerUnit: Shared\DmsRepairorderOdometerUnit::Miles,
-        openedAt: Utils\Utils::parseDateTime('2025-02-07T19:18:27.145Z'),
+        openedAt: Utils\Utils::parseDateTime('2025-02-08T09:33:26.459Z'),
         partsAmount: 1680.8000000000002,
         payType: Shared\DmsRepairorderPayType::Warranty,
-        promisedAt: Utils\Utils::parseDateTime('2025-02-09T03:18:27.145Z'),
+        promisedAt: Utils\Utils::parseDateTime('2025-02-09T17:33:26.459Z'),
         purchaseOrderNumber: '182743',
         status: Shared\DmsRepairorderStatus::Completed,
         subletAmount: 0,
@@ -513,7 +513,7 @@ $request = new Operations\PatchDmsRepairorderRequest(
             ),
         ],
         transportType: Shared\DmsRepairorderTransportType::Loaner,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-27T22:12:41.536Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-28T17:27:24.479Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -570,23 +570,23 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateDmsRepairorderRequest(
     dmsRepairorder: new Shared\DmsRepairorder(
         balanceAmount: 3193.86,
-        completedAt: Utils\Utils::parseDateTime('2026-11-12T19:26:52.100Z'),
+        completedAt: Utils\Utils::parseDateTime('2026-11-13T20:39:21.261Z'),
         createdAt: Utils\Utils::parseDateTime('2022-10-25T15:50:48.007Z'),
         currency: 'USD',
         discountAmount: 0,
         estimateAmount: 3264,
-        id: '5bec3d3a-f8be-456f-9a7e-46941e5c8275',
+        id: '1467f268-5ddf-40f3-ad44-c945619eab00',
         jobs: [
             new Shared\DmsRepairorderJob(
                 actualHours: 3.6,
                 cause: 'Scheduled maintenance',
                 complaint: 'Due for service',
                 correction: 'Aufero cumque vicinus aptus assumenda quis aptus.',
-                id: '53ba2ede-c86e-4ece-ab4a-2e5c2ef5c389',
+                id: '266187cc-2984-47e7-b32b-8fb65cbeda53',
                 laborAmount: 681.6,
                 labors: [
                     new Shared\DmsRepairorderLabor(
-                        id: '3be15d42-8524-4cf0-8ed1-b0d8304cb15c',
+                        id: '18875721-c626-4012-9826-e2aa7f83ccac',
                         payType: Shared\DmsRepairorderLaborPayType::Warranty,
                         rateAmount: 213,
                         soldHours: 3.2,
@@ -609,11 +609,11 @@ $request = new Operations\UpdateDmsRepairorderRequest(
                 cause: 'Worn brake pads',
                 complaint: 'Vibration at highway speed',
                 correction: 'Somnus avaritia utroque vulnero ullam ancilla.',
-                id: '62da07d8-548f-4019-a63c-741eb450b61f',
+                id: '732320e4-458a-412b-8466-055ee79edf76',
                 laborAmount: 446.4,
                 labors: [
                     new Shared\DmsRepairorderLabor(
-                        id: '53e828d8-fc28-4395-a40c-f585a7114cf5',
+                        id: 'ff62d449-78ba-48a9-ac6a-46a5f31c04ad',
                         payType: Shared\DmsRepairorderLaborPayType::Warranty,
                         rateAmount: 144,
                         soldHours: 3.1,
@@ -625,7 +625,7 @@ $request = new Operations\UpdateDmsRepairorderRequest(
                 number: 'B',
                 parts: [
                     new Shared\DmsPartline(
-                        id: '37f561c6-bf8a-4cd0-a2e8-932b0429db21',
+                        id: '74937bd2-265d-4736-bc71-a3584854a4aa',
                         payType: Shared\DmsPartlinePayType::Warranty,
                         quantity: 4,
                         quantityOrdered: 4,
@@ -633,7 +633,7 @@ $request = new Operations\UpdateDmsRepairorderRequest(
                         unitPriceAmount: 222.61,
                     ),
                     new Shared\DmsPartline(
-                        id: '0d2d83d0-7703-4352-b9e9-c07e84976721',
+                        id: 'a3857e77-e94c-48cb-a3a4-ee5be72aaa7d',
                         payType: Shared\DmsPartlinePayType::Warranty,
                         quantity: 2,
                         quantityOrdered: 2,
@@ -653,11 +653,11 @@ $request = new Operations\UpdateDmsRepairorderRequest(
                 cause: 'Scheduled maintenance',
                 complaint: 'Noise when braking',
                 correction: 'Degero theca natus.',
-                id: '1b44e812-3c92-4415-907d-e7735146ba2a',
+                id: '7228a698-ee19-4a40-8ecb-232d3d6f2279',
                 laborAmount: 232.4,
                 labors: [
                     new Shared\DmsRepairorderLabor(
-                        id: '006edd1b-844e-49f6-bee8-c5097bf8fac7',
+                        id: '62915392-3a92-427c-afb0-857b1b549347',
                         payType: Shared\DmsRepairorderLaborPayType::Customer,
                         rateAmount: 166,
                         soldHours: 1.4,
@@ -669,7 +669,7 @@ $request = new Operations\UpdateDmsRepairorderRequest(
                 number: 'C',
                 parts: [
                     new Shared\DmsPartline(
-                        id: 'a14614ad-bb45-4b37-b8d4-3d6a23db92f3',
+                        id: '349e27ba-ad76-46ee-9a17-ff1ac7e1f3fb',
                         payType: Shared\DmsPartlinePayType::Customer,
                         quantity: 1,
                         quantityOrdered: 1,
@@ -677,7 +677,7 @@ $request = new Operations\UpdateDmsRepairorderRequest(
                         unitPriceAmount: 216.02,
                     ),
                     new Shared\DmsPartline(
-                        id: 'd992a8a6-9f8d-47a0-97ac-7aed4e82d469',
+                        id: '64c5d697-4d8f-4eab-a219-68beeea4884b',
                         payType: Shared\DmsPartlinePayType::Customer,
                         quantity: 2,
                         quantityOrdered: 2,
@@ -700,10 +700,10 @@ $request = new Operations\UpdateDmsRepairorderRequest(
         odometerIn: 7776,
         odometerOut: 7776,
         odometerUnit: Shared\DmsRepairorderOdometerUnit::Miles,
-        openedAt: Utils\Utils::parseDateTime('2025-02-07T19:18:27.145Z'),
+        openedAt: Utils\Utils::parseDateTime('2025-02-08T09:33:26.459Z'),
         partsAmount: 1680.8000000000002,
         payType: Shared\DmsRepairorderPayType::Warranty,
-        promisedAt: Utils\Utils::parseDateTime('2025-02-09T03:18:27.145Z'),
+        promisedAt: Utils\Utils::parseDateTime('2025-02-09T17:33:26.459Z'),
         purchaseOrderNumber: '182743',
         status: Shared\DmsRepairorderStatus::Completed,
         subletAmount: 0,
@@ -730,7 +730,7 @@ $request = new Operations\UpdateDmsRepairorderRequest(
             ),
         ],
         transportType: Shared\DmsRepairorderTransportType::Loaner,
-        updatedAt: Utils\Utils::parseDateTime('2025-11-27T22:12:41.536Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-28T17:27:24.479Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

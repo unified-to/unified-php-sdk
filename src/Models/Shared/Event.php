@@ -31,4 +31,5 @@ enum Event: string
     case WebhookUnhealthy = 'WEBHOOK_UNHEALTHY';
     case WebhookPaused = 'WEBHOOK_PAUSED';
     case WebhookUnpaused = 'WEBHOOK_UNPAUSED';
+    case UnifiedPersonMerged = 'UNIFIED_PERSON_MERGED';
 }

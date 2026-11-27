@@ -23,4 +23,5 @@ enum PatchLmsStudentQueryParamFields: string
     case ImageUrl = 'image_url';
     case Metadata = 'metadata';
     case Raw = 'raw';
+    case UnifiedPersonIds = '__unified_person_ids';
 }

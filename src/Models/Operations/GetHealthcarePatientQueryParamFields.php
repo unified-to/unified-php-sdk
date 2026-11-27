@@ -34,4 +34,5 @@ enum GetHealthcarePatientQueryParamFields: string
     case Contacts = 'contacts';
     case Metadata = 'metadata';
     case Raw = 'raw';
+    case UnifiedPersonIds = '__unified_person_ids';
 }

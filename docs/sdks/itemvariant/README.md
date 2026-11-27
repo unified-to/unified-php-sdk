@@ -40,7 +40,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Our dog-friendly Bacon ensures pessimistic comfort for your pets',
         height: 54,
-        id: '7e7d144b-24b5-4d79-8c8a-b53cc11903e6',
+        id: 'dde14e6d-1b6f-410f-ae18-468aa98534c7',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -49,10 +49,10 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Calcar delibero cursim summisse.',
                 height: 961,
-                id: '46d5dff4-0ca9-4935-8fda-8f4d7c2e3d43',
+                id: '1836b74f-ec27-4ce0-bb4f-f42a76e3b682',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '7fe2789e-5d5b-4964-97d9-0d7a3a167b25',
+                        id: '29abc7d6-d264-4d10-b11f-ca6cc0baf728',
                         slug: 'illo',
                         value: 'quia',
                     ),
@@ -69,7 +69,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '847535b7-2047-475a-ae35-8b83a3e32f12',
+                id: '3222536f-a14a-456d-8548-5fe3c4d9b134',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'colligo',
@@ -78,7 +78,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
         name: 'Table',
         options: [
             new Shared\CommerceItemOption(
-                id: '126b1b8c-e17f-441a-a79c-9922c3f74798',
+                id: 'cd95e23e-471b-4ff0-acb1-18c383f7ae09',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -86,7 +86,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '29661e6a-c914-4153-a498-90c2ccebe566',
+                id: '359771ef-24e3-4112-a5b5-c350fafa8965',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -109,7 +109,7 @@ $request = new Operations\CreateCommerceItemvariantRequest(
             'labore',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-09T23:08:43.169Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-10T21:16:24.885Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,
@@ -272,7 +272,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Our dog-friendly Bacon ensures pessimistic comfort for your pets',
         height: 54,
-        id: 'dd6a4c13-cfd3-4f3f-8517-ade87027bd59',
+        id: '259b83a5-8cbe-4fa2-b1c7-dd6dd90dc515',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -281,10 +281,10 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Calcar delibero cursim summisse.',
                 height: 961,
-                id: '47364dde-ec38-40bd-808a-39089454d539',
+                id: 'ab94f24e-4fca-4159-8e8a-74f8b94ee78e',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '4acb8dbf-2356-41a6-99a9-664f32e4cff9',
+                        id: '24abfab6-958e-4165-b075-3fd31e0dd655',
                         slug: 'illo',
                         value: 'quia',
                     ),
@@ -301,7 +301,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: 'f6927834-f7fa-4fd6-88d1-6193b9a27e45',
+                id: '01c22b3c-1403-46b8-b7e8-63b8779d365e',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'colligo',
@@ -310,7 +310,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
         name: 'Table',
         options: [
             new Shared\CommerceItemOption(
-                id: 'e0c4dcc2-fbd5-4c75-9878-8af47be467f8',
+                id: '488e0522-04b2-41f0-b93b-8033f7254564',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -318,7 +318,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '040ca0a3-e43f-425b-8d74-7be5965ea177',
+                id: 'f6d25987-e1ba-4eec-b41e-d03b14ee86bd',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -341,7 +341,7 @@ $request = new Operations\PatchCommerceItemvariantRequest(
             'labore',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-09T23:08:43.203Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-10T21:16:24.914Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,
@@ -455,7 +455,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         createdAt: Utils\Utils::parseDateTime('2022-01-20T13:49:12.968Z'),
         description: 'Our dog-friendly Bacon ensures pessimistic comfort for your pets',
         height: 54,
-        id: 'dd6a4c13-cfd3-4f3f-8517-ade87027bd59',
+        id: '259b83a5-8cbe-4fa2-b1c7-dd6dd90dc515',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -464,10 +464,10 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Calcar delibero cursim summisse.',
                 height: 961,
-                id: '47364dde-ec38-40bd-808a-39089454d539',
+                id: 'ab94f24e-4fca-4159-8e8a-74f8b94ee78e',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '4acb8dbf-2356-41a6-99a9-664f32e4cff9',
+                        id: '24abfab6-958e-4165-b075-3fd31e0dd655',
                         slug: 'illo',
                         value: 'quia',
                     ),
@@ -484,7 +484,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: 'f6927834-f7fa-4fd6-88d1-6193b9a27e45',
+                id: '01c22b3c-1403-46b8-b7e8-63b8779d365e',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'colligo',
@@ -493,7 +493,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
         name: 'Table',
         options: [
             new Shared\CommerceItemOption(
-                id: 'e0c4dcc2-fbd5-4c75-9878-8af47be467f8',
+                id: '488e0522-04b2-41f0-b93b-8033f7254564',
                 name: 'Color',
                 position: 1,
                 values: [
@@ -501,7 +501,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
                 ],
             ),
             new Shared\CommerceItemOption(
-                id: '040ca0a3-e43f-425b-8d74-7be5965ea177',
+                id: 'f6d25987-e1ba-4eec-b41e-d03b14ee86bd',
                 name: 'Size',
                 position: 2,
                 values: [
@@ -524,7 +524,7 @@ $request = new Operations\UpdateCommerceItemvariantRequest(
             'labore',
         ],
         totalStock: 436,
-        updatedAt: Utils\Utils::parseDateTime('2026-04-09T23:08:43.203Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-04-10T21:16:24.914Z'),
         weight: 46,
         weightUnit: Shared\CommerceItemvariantWeightUnit::Oz,
         width: 40,

@@ -22,7 +22,7 @@ $request = new Operations\CreateAccountingAccountRequest(
         currency: 'CAD',
         customerDefinedCode: '6170',
         description: 'Comedo vilitas harum cupiditate animus quo iste.',
-        id: 'a96d13fd-b4cd-4c37-98b9-695b18f29e8e',
+        id: '7ecf3c40-3490-4210-a7f9-27427a423b3e',
         isPayable: false,
         metadata: [],
         name: 'Savings Account',
@@ -35,7 +35,7 @@ $request = new Operations\CreateAccountingAccountRequest(
             ),
         ],
         type: Shared\Type::AccountsReceivable,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-16T01:01:45.535Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-16T07:29:38.922Z'),
     ),
     connectionId: '<id>',
 );

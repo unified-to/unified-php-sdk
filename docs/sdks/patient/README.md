@@ -44,7 +44,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
             postalCode: '99263-6004',
             region: 'New Jersey',
         ),
-        birthdate: '1941-12-25',
+        birthdate: '1941-12-26',
         contacts: [
             new Shared\HealthcarePatientContact(
                 emails: [],
@@ -67,7 +67,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
         ],
         firstName: 'Monroe',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '8fbf5c66-8f20-4b78-83b1-983aff9f265a',
+        id: 'b81cc3cc-4c2e-4ecc-8a00-c6c3539aab4e',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -87,7 +87,7 @@ $request = new Operations\CreateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-26T14:23:35.813Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-27T14:16:07.823Z'),
     ),
     connectionId: '<id>',
 );
@@ -351,7 +351,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
             postalCode: '99263-6004',
             region: 'New Jersey',
         ),
-        birthdate: '1941-12-25',
+        birthdate: '1941-12-26',
         contacts: [
             new Shared\HealthcarePatientContact(
                 emails: [],
@@ -374,7 +374,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
         ],
         firstName: 'Monroe',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '58cdd75b-e8a5-4ca6-b277-2a8d074a52c8',
+        id: 'cdc030ea-0b5f-469b-a2b0-e7e2bed9fcbb',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -394,7 +394,7 @@ $request = new Operations\PatchHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-26T14:23:35.853Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-27T14:16:07.852Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -457,7 +457,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
             postalCode: '99263-6004',
             region: 'New Jersey',
         ),
-        birthdate: '1941-12-25',
+        birthdate: '1941-12-26',
         contacts: [
             new Shared\HealthcarePatientContact(
                 emails: [],
@@ -480,7 +480,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
         ],
         firstName: 'Monroe',
         gender: Shared\HealthcarePatientGender::Female,
-        id: '58cdd75b-e8a5-4ca6-b277-2a8d074a52c8',
+        id: 'cdc030ea-0b5f-469b-a2b0-e7e2bed9fcbb',
         identifiers: [
             new Shared\HealthcareIdentifier(
                 type: Shared\HealthcareIdentifierType::Mrn,
@@ -500,7 +500,7 @@ $request = new Operations\UpdateHealthcarePatientRequest(
                 type: Shared\HealthcareTelephoneType::Mobile,
             ),
         ],
-        updatedAt: Utils\Utils::parseDateTime('2026-07-26T14:23:35.853Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-07-27T14:16:07.852Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

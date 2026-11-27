@@ -39,4 +39,5 @@
 | `Payments`            | payments              |
 | `TableId`             | table_id              |
 | `PaidAmount`          | paid_amount           |
+| `BalanceAmount`       | balance_amount        |
 | `Raw`                 | raw                   |

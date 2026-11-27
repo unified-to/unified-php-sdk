@@ -30,4 +30,5 @@ enum CreateCrmContactQueryParamFields: string
     case Department = 'department';
     case ImageUrl = 'image_url';
     case Raw = 'raw';
+    case UnifiedPersonIds = '__unified_person_ids';
 }

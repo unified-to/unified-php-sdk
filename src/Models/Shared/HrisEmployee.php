@@ -12,6 +12,16 @@ namespace Unified\Unified_to\Models\Shared;
 class HrisEmployee
 {
     /**
+     * Global unified person ids: the current id first, then every id merged into it. Two records are the same person when these arrays intersect. Only returned when requested in fields
+     *
+     * @var ?array<string> $unifiedPersonIds
+     */
+    #[\Speakeasy\Serializer\Annotation\SerializedName('__unified_person_ids')]
+    #[\Speakeasy\Serializer\Annotation\Type('array<string>|null')]
+    #[\Speakeasy\Serializer\Annotation\SkipWhenNull]
+    public ?array $unifiedPersonIds = null;
+
+    /**
      *
      * @var ?\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress $address
      */
@@ -470,6 +480,7 @@ class HrisEmployee
     public ?\DateTime $updatedAt = null;
 
     /**
+     * @param  ?array<string>  $unifiedPersonIds
      * @param  ?\Unified\Unified_to\Models\Shared\PropertyHrisEmployeeAddress  $address
      * @param  ?string  $bio
      * @param  ?string  $companyId
@@ -523,8 +534,9 @@ class HrisEmployee
      * @param  ?\DateTime  $updatedAt
      * @phpstan-pure
      */
-    public function __construct(?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?EmploymentStatusReason $employmentStatusReason = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?FlsaStatus $flsaStatus = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $jobId = null, ?string $languageLocale = null, ?string $lastName = null, ?\DateTime $leaveEndAt = null, ?\DateTime $leaveStartAt = null, ?array $locations = null, ?string $managerId = null, ?HrisEmployeeMaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?PayFrequency $payFrequency = null, ?string $pronouns = null, ?array $raw = null, ?\DateTime $rehiredAt = null, ?array $relationships = null, ?string $salutation = null, ?\DateTime $seniorityStartedAt = null, ?\DateTime $serviceStartedAt = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?float $timeoffDaysTotal = null, ?float $timeoffDaysUsed = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
+    public function __construct(?array $unifiedPersonIds = null, ?PropertyHrisEmployeeAddress $address = null, ?string $bio = null, ?string $companyId = null, ?array $compensation = null, ?\DateTime $createdAt = null, ?string $currency = null, ?\DateTime $dateOfBirth = null, ?array $emails = null, ?string $employeeNumber = null, ?array $employeeRoles = null, ?EmploymentStatus $employmentStatus = null, ?EmploymentStatusReason $employmentStatusReason = null, ?HrisEmployeeEmploymentType $employmentType = null, ?string $firstName = null, ?FlsaStatus $flsaStatus = null, ?HrisEmployeeGender $gender = null, ?array $groups = null, ?bool $hasMfa = null, ?\DateTime $hiredAt = null, ?string $id = null, ?string $imageUrl = null, ?string $jobId = null, ?string $languageLocale = null, ?string $lastName = null, ?\DateTime $leaveEndAt = null, ?\DateTime $leaveStartAt = null, ?array $locations = null, ?string $managerId = null, ?HrisEmployeeMaritalStatus $maritalStatus = null, ?array $metadata = null, ?string $name = null, ?PayFrequency $payFrequency = null, ?string $pronouns = null, ?array $raw = null, ?\DateTime $rehiredAt = null, ?array $relationships = null, ?string $salutation = null, ?\DateTime $seniorityStartedAt = null, ?\DateTime $serviceStartedAt = null, ?string $ssnSin = null, ?float $storageQuotaAllocated = null, ?float $storageQuotaAvailable = null, ?float $storageQuotaUsed = null, ?array $telephones = null, ?\DateTime $terminatedAt = null, ?string $terminationReason = null, ?float $timeoffDaysTotal = null, ?float $timeoffDaysUsed = null, ?string $timezone = null, ?string $title = null, ?\DateTime $updatedAt = null)
     {
+        $this->unifiedPersonIds = $unifiedPersonIds;
         $this->address = $address;
         $this->bio = $bio;
         $this->companyId = $companyId;

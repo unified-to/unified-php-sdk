@@ -62,4 +62,5 @@ enum CreateHrisEmployeeQueryParamFields: string
     case LeaveEndAt = 'leave_end_at';
     case EmploymentStatusReason = 'employment_status_reason';
     case Raw = 'raw';
+    case UnifiedPersonIds = '__unified_person_ids';
 }

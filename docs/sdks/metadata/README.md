@@ -39,7 +39,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '53fd3e41-255a-414e-8fcb-1d0583c0a25f',
+        id: '72615daa-ba3b-48b7-b6d2-e928a7786740',
         isRequired: false,
         name: 'tollo',
         objectType: 'healthcare_document',
@@ -49,7 +49,7 @@ $request = new Operations\CreateMetadataMetadataRequest(
         options: [],
         originalFormat: 'deputo',
         slug: 'acidus',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-16T17:05:39.215Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-17T11:18:19.794Z'),
     ),
     connectionId: '<id>',
 );
@@ -257,7 +257,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '86e5a5ac-27ab-4069-bc91-5b7e18a5e840',
+        id: '2a202e3d-490f-479d-914f-be31663acdba',
         isRequired: false,
         name: 'tollo',
         objectType: 'healthcare_document',
@@ -267,7 +267,7 @@ $request = new Operations\PatchMetadataMetadataRequest(
         options: [],
         originalFormat: 'deputo',
         slug: 'acidus',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-16T17:05:39.222Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-17T11:18:19.799Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -376,7 +376,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
     metadataMetadata: new Shared\MetadataMetadata(
         createdAt: Utils\Utils::parseDateTime('2021-03-25T03:02:17.656Z'),
         format: Shared\MetadataMetadataFormat::Price,
-        id: '86e5a5ac-27ab-4069-bc91-5b7e18a5e840',
+        id: '2a202e3d-490f-479d-914f-be31663acdba',
         isRequired: false,
         name: 'tollo',
         objectType: 'healthcare_document',
@@ -386,7 +386,7 @@ $request = new Operations\UpdateMetadataMetadataRequest(
         options: [],
         originalFormat: 'deputo',
         slug: 'acidus',
-        updatedAt: Utils\Utils::parseDateTime('2025-04-16T17:05:39.222Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-17T11:18:19.799Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

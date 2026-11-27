@@ -47,7 +47,7 @@ $request = new Operations\CreatePrintingFileRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-22T04:25:39.825Z'),
         dpi: 300,
         height: 5400,
-        id: '1cab15aa-26a4-475e-b184-fc2943d3916b',
+        id: 'f4ef96d1-4d74-4483-bfc4-d9a50a2d4edb',
         metadata: [],
         mimeType: 'image/jpeg',
         name: 'blond-ecliptic.jpg',
@@ -114,7 +114,7 @@ $request = new Operations\CreatePrintingOrderRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-14T11:16:15.147Z'),
         currency: 'USD',
         discountAmount: 0,
-        id: '5587f528-8341-4cc2-8f36-7c92c965da80',
+        id: '8bd8f7a7-9802-4a7b-bec8-2f8b8efa6dbf',
         lineitems: [
             new Shared\PrintingLineitem(
                 files: [
@@ -164,7 +164,7 @@ $request = new Operations\CreatePrintingOrderRequest(
         subtotalAmount: 62.78,
         taxAmount: 5.02,
         totalAmount: 72.49,
-        updatedAt: Utils\Utils::parseDateTime('2025-01-23T00:26:35.696Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-23T15:55:31.648Z'),
     ),
     connectionId: '<id>',
 );
@@ -222,7 +222,7 @@ $request = new Operations\CreatePrintingQuoteRequest(
         createdAt: Utils\Utils::parseDateTime('2019-01-02T03:42:06.944Z'),
         currency: 'USD',
         discountAmount: 0,
-        id: 'df356fdf-c68c-414b-a4ba-fdeb804f46a2',
+        id: '600634ff-a292-424b-ad93-5f46789a8d0d',
         lineitems: [
             new Shared\PrintingLineitem(
                 files: [
@@ -752,7 +752,7 @@ $request = new Operations\PatchPrintingOrderRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-14T11:16:15.147Z'),
         currency: 'USD',
         discountAmount: 0,
-        id: '6bc75b89-da1d-46ba-9591-65699db98394',
+        id: '8e855c42-f2a4-40d4-904b-3753a2fee176',
         lineitems: [
             new Shared\PrintingLineitem(
                 files: [
@@ -802,7 +802,7 @@ $request = new Operations\PatchPrintingOrderRequest(
         subtotalAmount: 62.78,
         taxAmount: 5.02,
         totalAmount: 72.49,
-        updatedAt: Utils\Utils::parseDateTime('2025-01-23T00:26:35.718Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-23T15:55:31.669Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -912,7 +912,7 @@ $request = new Operations\UpdatePrintingOrderRequest(
         createdAt: Utils\Utils::parseDateTime('2022-03-14T11:16:15.147Z'),
         currency: 'USD',
         discountAmount: 0,
-        id: '6bc75b89-da1d-46ba-9591-65699db98394',
+        id: '8e855c42-f2a4-40d4-904b-3753a2fee176',
         lineitems: [
             new Shared\PrintingLineitem(
                 files: [
@@ -962,7 +962,7 @@ $request = new Operations\UpdatePrintingOrderRequest(
         subtotalAmount: 62.78,
         taxAmount: 5.02,
         totalAmount: 72.49,
-        updatedAt: Utils\Utils::parseDateTime('2025-01-23T00:26:35.718Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-01-23T15:55:31.669Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
