@@ -63,11 +63,11 @@ $request = new Operations\CreateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Sperno despecto.',
-        id: '1665421a-810c-4ec7-920b-0d7650d4ee2e',
+        id: '730b9aa9-4853-42a0-a64c-95cf71d83721',
         instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
         isActive: false,
         name: 'testimonial suddenly',
-        updatedAt: Utils\Utils::parseDateTime('2025-11-15T00:47:47.560Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-15T20:31:30.211Z'),
     ),
     connectionId: '<id>',
 );
@@ -129,7 +129,7 @@ $request = new Operations\CreateGenaiEmbeddingRequest(
         dimension: 423,
         embeddings: 'Venia tutis cernuus viscus officiis utilis porro utique.',
         encodingFormat: Shared\EncodingFormat::Float,
-        id: 'dad644a8-709b-4b11-902b-64825be62b38',
+        id: '392687a7-f5de-49ad-aad7-4897f63ec0ab',
         maxTokens: 223,
         tokensUsed: 836,
         type: 'classification',
@@ -189,7 +189,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'fa9df3f6-50f1-4e47-9330-470bbb77176b',
+        id: 'ff52a677-2ba9-44bc-acce-6051bde2356b',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -204,7 +204,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
         ],
         name: 'tabella.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-07T01:34:27.416Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-07T08:46:48.277Z'),
         userIdentifier: '70613433-847d-4db6-a8ea-96a2d7513dad',
     ),
     connectionId: '<id>',
@@ -262,10 +262,10 @@ $request = new Operations\CreateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Subito teneo arbor.',
-        id: '4b265fdc-64d3-43e4-9327-ec65493cb993',
+        id: 'c194f90f-0c25-4617-9210-542a1bb20b00',
         isActive: false,
         name: 'yum yuck',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T08:26:15.690Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T17:24:34.048Z'),
     ),
     connectionId: '<id>',
 );
@@ -447,10 +447,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-10-31T18:40:22.269Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-11-01T14:20:51.457Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: '6b46869c-4de2-41a8-b20f-2362a3e02fe3',
+        id: '3753eb27-80f6-4253-a1c6-4287cd5c3adf',
         instructions: 'Angustus cubo cupio abundans admoveo sumptus.',
         linesAdded: 244,
         linesDeleted: 118,
@@ -465,12 +465,12 @@ $request = new Operations\CreateGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/felicity.rowe61/eek-save/pull/383',
         repoUrl: 'https://github.com/felicity.rowe61/eek-save',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-06-12T12:12:16.198Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-06-13T02:26:31.147Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.',
         targetBranchIdentifier: 'agent/eek-save',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-12T18:02:57.894Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-13T03:22:14.296Z'),
         webUrl: 'https://monstrous-honesty.net',
     ),
     connectionId: '<id>',
@@ -1134,11 +1134,11 @@ $request = new Operations\PatchGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Sperno despecto.',
-        id: 'd9994eea-76d5-4453-bbde-4a50f3e1c513',
+        id: '1c1795a9-757b-47ba-ba12-f41f813f8c71',
         instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
         isActive: false,
         name: 'testimonial suddenly',
-        updatedAt: Utils\Utils::parseDateTime('2025-11-15T00:47:47.564Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-15T20:31:30.217Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1196,7 +1196,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'd4f35e1b-797f-45c4-b619-d5c92b46850e',
+        id: 'cf18c008-c223-4285-8599-921134017396',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -1211,7 +1211,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
         ],
         name: 'tabella.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-07T01:34:27.419Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-07T08:46:48.281Z'),
         userIdentifier: '70613433-847d-4db6-a8ea-96a2d7513dad',
     ),
     connectionId: '<id>',
@@ -1270,10 +1270,10 @@ $request = new Operations\PatchGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Subito teneo arbor.',
-        id: '7a047ef4-9cd7-448b-b479-16b572bd3d4e',
+        id: '840093dc-0901-4d37-bea8-52fc3d0b1bbb',
         isActive: false,
         name: 'yum yuck',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T08:26:15.691Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T17:24:34.050Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1329,10 +1329,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-10-31T18:40:22.280Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-11-01T14:20:51.466Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: 'b558a559-1b22-4351-b8e3-824043d6df88',
+        id: 'd970cab5-33f5-479e-8a3a-38ace44d04eb',
         instructions: 'Angustus cubo cupio abundans admoveo sumptus.',
         linesAdded: 244,
         linesDeleted: 118,
@@ -1347,12 +1347,12 @@ $request = new Operations\PatchGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/felicity.rowe61/eek-save/pull/383',
         repoUrl: 'https://github.com/felicity.rowe61/eek-save',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-06-12T12:12:16.206Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-06-13T02:26:31.153Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.',
         targetBranchIdentifier: 'agent/eek-save',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-12T18:02:57.900Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-13T03:22:14.301Z'),
         webUrl: 'https://monstrous-honesty.net',
     ),
     connectionId: '<id>',
@@ -1666,11 +1666,11 @@ $request = new Operations\UpdateGenaiAgentRequest(
     genaiAgent: new Shared\GenaiAgent(
         createdAt: Utils\Utils::parseDateTime('2020-12-18T02:23:33.723Z'),
         description: 'Sperno despecto.',
-        id: 'd9994eea-76d5-4453-bbde-4a50f3e1c513',
+        id: '1c1795a9-757b-47ba-ba12-f41f813f8c71',
         instructions: 'Addo vita ver auctus corrumpo substantia conscendo auctus. Astrum sulum aufero bis stella sumptus non.',
         isActive: false,
         name: 'testimonial suddenly',
-        updatedAt: Utils\Utils::parseDateTime('2025-11-15T00:47:47.564Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-11-15T20:31:30.217Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1728,7 +1728,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'd4f35e1b-797f-45c4-b619-d5c92b46850e',
+        id: 'cf18c008-c223-4285-8599-921134017396',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -1743,7 +1743,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
         ],
         name: 'tabella.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-07T01:34:27.419Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-07T08:46:48.281Z'),
         userIdentifier: '70613433-847d-4db6-a8ea-96a2d7513dad',
     ),
     connectionId: '<id>',
@@ -1802,10 +1802,10 @@ $request = new Operations\UpdateGenaiOrganizationRequest(
     genaiOrganization: new Shared\GenaiOrganization(
         createdAt: Utils\Utils::parseDateTime('2020-10-27T16:03:47.122Z'),
         description: 'Subito teneo arbor.',
-        id: '7a047ef4-9cd7-448b-b479-16b572bd3d4e',
+        id: '840093dc-0901-4d37-bea8-52fc3d0b1bbb',
         isActive: false,
         name: 'yum yuck',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-09T08:26:15.691Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-09T17:24:34.050Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1861,10 +1861,10 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateGenaiTaskRequest(
     genaiTask: new Shared\GenaiTask(
-        completedAt: Utils\Utils::parseDateTime('2025-10-31T18:40:22.280Z'),
+        completedAt: Utils\Utils::parseDateTime('2025-11-01T14:20:51.466Z'),
         createdAt: Utils\Utils::parseDateTime('2020-10-25T20:19:33.247Z'),
         filesChanged: 19,
-        id: 'b558a559-1b22-4351-b8e3-824043d6df88',
+        id: 'd970cab5-33f5-479e-8a3a-38ace44d04eb',
         instructions: 'Angustus cubo cupio abundans admoveo sumptus.',
         linesAdded: 244,
         linesDeleted: 118,
@@ -1879,12 +1879,12 @@ $request = new Operations\UpdateGenaiTaskRequest(
         pullrequestUrl: 'https://github.com/felicity.rowe61/eek-save/pull/383',
         repoUrl: 'https://github.com/felicity.rowe61/eek-save',
         sourceBranchIdentifier: 'main',
-        startedAt: Utils\Utils::parseDateTime('2024-06-12T12:12:16.206Z'),
+        startedAt: Utils\Utils::parseDateTime('2024-06-13T02:26:31.153Z'),
         status: Shared\GenaiTaskStatus::Blocked,
         summary: 'Tenus via tamisium denego teres adsidue cura crur. Coma defungo magnam delicate confero amaritudo varius.',
         targetBranchIdentifier: 'agent/eek-save',
         tokensUsed: 2165,
-        updatedAt: Utils\Utils::parseDateTime('2023-03-12T18:02:57.900Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-03-13T03:22:14.301Z'),
         webUrl: 'https://monstrous-honesty.net',
     ),
     connectionId: '<id>',

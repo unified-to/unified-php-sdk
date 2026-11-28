@@ -41,7 +41,7 @@ $request = new Operations\CreateCommerceItemRequest(
         description: 'Abeo surculus custodia ventus solio.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: '38275725-5ac9-4984-b654-987604013241',
+        id: 'b7656db6-d956-4b7a-ae9e-c1f3c7835ad4',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -50,10 +50,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Eveniet acies.',
                 height: 876,
-                id: 'ff0b04b7-810e-462e-abc1-7c10ae5bc1e3',
+                id: '06494b09-c698-4114-b589-7e41c2d1b905',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '21a83165-ad3b-4005-8659-bb4d272bb6ad',
+                        id: '72a0806c-53f0-4aa5-b7ed-b5ab19ebd850',
                         slug: 'candidus',
                         value: 'doloremque',
                     ),
@@ -66,10 +66,10 @@ $request = new Operations\CreateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: '003c57bf-ed05-4081-9dce-2390c705fc86',
+                id: 'a1bb54b3-3465-461c-b7e8-5076fdc936fb',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'f593f503-ffcd-4968-baca-206fee347e43',
+                        id: '45d1ce11-deb4-493b-8f30-698b66e57ccb',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -86,7 +86,7 @@ $request = new Operations\CreateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: 'dbff710d-d647-4bae-bd1f-69a434974b5d',
+                id: '0f7c5bbd-caa2-4b2e-b20b-a17e810f4791',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -109,7 +109,7 @@ $request = new Operations\CreateCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-05-03T18:33:07.139Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-05-04T03:45:30.419Z'),
         vendorName: 'Rohan - Pouros',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,
@@ -273,7 +273,7 @@ $request = new Operations\PatchCommerceItemRequest(
         description: 'Abeo surculus custodia ventus solio.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: 'd0e15975-cc55-4ee9-ba8b-b69674bc393a',
+        id: '702a556f-9636-4fd4-9c96-d436792495bd',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -282,10 +282,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Eveniet acies.',
                 height: 876,
-                id: '0caa6fcb-33a1-444e-9dc3-79c2d746202c',
+                id: '9eba6874-b3bd-49fd-b86e-65ed54cc4e22',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '23b8c8c4-2ac3-4fee-bd10-4ea787c4eac0',
+                        id: 'ffc15e56-0fdf-4fd1-a1d6-fa9a17c7d6c3',
                         slug: 'candidus',
                         value: 'doloremque',
                     ),
@@ -298,10 +298,10 @@ $request = new Operations\PatchCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: '70ff155f-9171-463d-8343-fba8af3d82a8',
+                id: 'e1c5405b-3e89-4483-802a-a6820475c312',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'b1c888d4-ac3e-44d4-8393-30383b9e4d9a',
+                        id: '3dcc82d4-d4f8-4092-aaac-17885cca89cf',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -318,7 +318,7 @@ $request = new Operations\PatchCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '39c1368c-2357-4f6a-b1fe-88c8f9c6f3bf',
+                id: '8dcdab3e-ff2e-4abf-b645-2afd8306777b',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -341,7 +341,7 @@ $request = new Operations\PatchCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-05-03T18:33:07.147Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-05-04T03:45:30.426Z'),
         vendorName: 'Rohan - Pouros',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,
@@ -456,7 +456,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         description: 'Abeo surculus custodia ventus solio.',
         duration: 104,
         globalCode: '978-0-85270-680-0',
-        id: 'd0e15975-cc55-4ee9-ba8b-b69674bc393a',
+        id: '702a556f-9636-4fd4-9c96-d436792495bd',
         isActive: false,
         isFeatured: false,
         isTaxable: true,
@@ -465,10 +465,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Eveniet acies.',
                 height: 876,
-                id: '0caa6fcb-33a1-444e-9dc3-79c2d746202c',
+                id: '9eba6874-b3bd-49fd-b86e-65ed54cc4e22',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '23b8c8c4-2ac3-4fee-bd10-4ea787c4eac0',
+                        id: 'ffc15e56-0fdf-4fd1-a1d6-fa9a17c7d6c3',
                         slug: 'candidus',
                         value: 'doloremque',
                     ),
@@ -481,10 +481,10 @@ $request = new Operations\UpdateCommerceItemRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Comedo.',
                 height: 651,
-                id: '70ff155f-9171-463d-8343-fba8af3d82a8',
+                id: 'e1c5405b-3e89-4483-802a-a6820475c312',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: 'b1c888d4-ac3e-44d4-8393-30383b9e4d9a',
+                        id: '3dcc82d4-d4f8-4092-aaac-17885cca89cf',
                         slug: 'bis',
                         value: 'somniculosus',
                     ),
@@ -501,7 +501,7 @@ $request = new Operations\UpdateCommerceItemRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CommerceMetadataFormat::Text,
-                id: '39c1368c-2357-4f6a-b1fe-88c8f9c6f3bf',
+                id: '8dcdab3e-ff2e-4abf-b645-2afd8306777b',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'abstergo',
@@ -524,7 +524,7 @@ $request = new Operations\UpdateCommerceItemRequest(
         ],
         totalStock: 682,
         type: 'SERVICE',
-        updatedAt: Utils\Utils::parseDateTime('2022-05-03T18:33:07.147Z'),
+        updatedAt: Utils\Utils::parseDateTime('2022-05-04T03:45:30.426Z'),
         vendorName: 'Rohan - Pouros',
         weight: 37,
         weightUnit: Shared\WeightUnit::Oz,

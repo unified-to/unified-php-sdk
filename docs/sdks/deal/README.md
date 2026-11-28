@@ -37,19 +37,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-18T02:24:37.242Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-09-24T18:32:25.055Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-18T07:21:50.670Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-25T10:10:52.185Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Trans tubineus adfectus cubo causa suus.',
-        id: '1bf2f44a-2c5e-48a8-996e-dcc2801fa9e1',
+        id: '9c0d3e0a-2fe1-4e41-8c3c-538751d1ec92',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '2f1fbded-1a77-4e43-bf5c-11103fae6ff7',
+                id: 'fa45d604-083e-4785-b934-6eed1df8ec58',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tandem',
@@ -62,7 +62,7 @@ $request = new Operations\CreateCrmDealRequest(
             'sol',
             'odit',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-26T04:25:39.900Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-26T13:39:10.016Z'),
         wonReason: 'Libero soleo cetera unus caterva.',
     ),
     connectionId: '<id>',
@@ -220,19 +220,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-18T02:24:37.246Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-09-24T18:32:25.069Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-18T07:21:50.672Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-25T10:10:52.192Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Trans tubineus adfectus cubo causa suus.',
-        id: '496568bb-2051-49bd-b449-979e1fe47ada',
+        id: '45bf18f5-31e8-4547-82eb-96e89cbf2b20',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '0b5a2501-43cc-487a-a916-b6b08a477813',
+                id: '99235158-4c11-46c9-89b4-a90dc896458d',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tandem',
@@ -245,7 +245,7 @@ $request = new Operations\PatchCrmDealRequest(
             'sol',
             'odit',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-26T04:25:39.908Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-26T13:39:10.020Z'),
         wonReason: 'Libero soleo cetera unus caterva.',
     ),
     connectionId: '<id>',
@@ -354,19 +354,19 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateCrmDealRequest(
     crmDeal: new Shared\CrmDeal(
         amount: 98162,
-        closedAt: Utils\Utils::parseDateTime('2024-03-18T02:24:37.246Z'),
-        closingAt: Utils\Utils::parseDateTime('2025-09-24T18:32:25.069Z'),
+        closedAt: Utils\Utils::parseDateTime('2024-03-18T07:21:50.672Z'),
+        closingAt: Utils\Utils::parseDateTime('2025-09-25T10:10:52.192Z'),
         createdAt: Utils\Utils::parseDateTime('2023-07-04T12:48:48.470Z'),
         currency: 'USD',
         description: 'Trans tubineus adfectus cubo causa suus.',
-        id: '496568bb-2051-49bd-b449-979e1fe47ada',
+        id: '45bf18f5-31e8-4547-82eb-96e89cbf2b20',
         metadata: [
             new Shared\CrmMetadata(
                 extraData: [
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\CrmMetadataFormat::Text,
-                id: '0b5a2501-43cc-487a-a916-b6b08a477813',
+                id: '99235158-4c11-46c9-89b4-a90dc896458d',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'tandem',
@@ -379,7 +379,7 @@ $request = new Operations\UpdateCrmDealRequest(
             'sol',
             'odit',
         ],
-        updatedAt: Utils\Utils::parseDateTime('2024-10-26T04:25:39.908Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-26T13:39:10.020Z'),
         wonReason: 'Libero soleo cetera unus caterva.',
     ),
     connectionId: '<id>',

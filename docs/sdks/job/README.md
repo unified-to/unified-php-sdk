@@ -79,7 +79,7 @@ $request = new Operations\CreateAtsJobRequest(
             ),
         ],
         hiringManagers: [],
-        id: '2d13928c-d57a-4d42-9b2d-e5fab6713fc6',
+        id: '2ee02cfa-1c6c-4837-8b69-d290941e3c45',
         industry: 'Refined Ceramic Keyboard',
         languageLocale: 'en',
         metadata: [
@@ -88,7 +88,7 @@ $request = new Operations\CreateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: 'c011101d-be54-48bc-a917-9df73386e7a2',
+                id: '6e504da3-bc77-46fa-a210-4f2f337d3f1d',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'cursus',
@@ -101,7 +101,7 @@ $request = new Operations\CreateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
-                openedAt: Utils\Utils::parseDateTime('2026-07-10T19:37:30.633Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-07-11T16:51:48.124Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -115,14 +115,14 @@ $request = new Operations\CreateAtsJobRequest(
                     region: 'Utah',
                     regionCode: 'NE',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-09-05T14:42:19.977Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-09-06T13:01:13.639Z'),
                 description: 'Sublime.',
-                id: 'b2738fc8-e2a4-42e2-b677-830532e83dd6',
+                id: 'fed1e520-6d44-47ae-acae-d41fe8504213',
                 isActive: false,
                 location: '5699 Purdy Motorway',
                 name: 'Legacy Implementation Orchestrator',
                 postingUrl: 'https://elementary-privilege.com/',
-                updatedAt: Utils\Utils::parseDateTime('2026-10-02T17:12:21.054Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-10-03T16:02:04.534Z'),
             ),
         ],
         publicJobUrls: [
@@ -132,7 +132,7 @@ $request = new Operations\CreateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Capitulus.',
-                id: 'cda949ff-ec2d-4ddf-b162-a787fd576dfb',
+                id: '0f50341b-5a4d-43b7-a534-bc20024366e6',
                 maxLength: 214,
                 minLength: 1,
                 options: [
@@ -145,7 +145,7 @@ $request = new Operations\CreateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '6a419c59-c0f1-4424-898d-ca1a2b92af40',
+                id: 'f8b1d3cc-777f-4c18-87d0-e23b81ddc33f',
                 maxLength: 309,
                 minLength: 1,
                 options: [
@@ -158,7 +158,7 @@ $request = new Operations\CreateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Confero trepide.',
-                id: 'f3c4d100-9c3b-4837-9e3b-4364f14f8df4',
+                id: 'f72a49f7-340a-444f-a0e7-806408623927',
                 maxLength: 428,
                 minLength: 1,
                 options: [
@@ -176,7 +176,7 @@ $request = new Operations\CreateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-29T06:55:24.678Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-30T02:11:56.460Z'),
     ),
     connectionId: '<id>',
 );
@@ -235,11 +235,11 @@ $request = new Operations\CreateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Bonus vobis creator tabella callide cavus triumphus caveo abbas patria.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: 'c6410b17-9239-4584-83d9-db586afa0647',
+        id: '1a2be5e9-5072-48a8-8a58-1919b9cc5566',
         isActive: false,
         metadata: [],
         name: 'Customer Security Assistant',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-13T04:32:44.761Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-13T13:33:22.774Z'),
     ),
     connectionId: '<id>',
 );
@@ -533,7 +533,7 @@ $request = new Operations\PatchAtsJobRequest(
             ),
         ],
         hiringManagers: [],
-        id: '457c4d72-da8f-4958-b6a3-f11b95302745',
+        id: '0be88470-11f7-4f8e-81b4-c9b21cd860d6',
         industry: 'Refined Ceramic Keyboard',
         languageLocale: 'en',
         metadata: [
@@ -542,7 +542,7 @@ $request = new Operations\PatchAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '63920b45-7406-4f4c-8eaf-da4526c8f5ef',
+                id: '344f2dd2-8137-4b4b-b751-87b5b94c557a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'cursus',
@@ -555,7 +555,7 @@ $request = new Operations\PatchAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
-                openedAt: Utils\Utils::parseDateTime('2026-07-10T19:37:30.682Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-07-11T16:51:48.153Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -569,14 +569,14 @@ $request = new Operations\PatchAtsJobRequest(
                     region: 'Utah',
                     regionCode: 'NE',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-09-05T14:42:20.029Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-09-06T13:01:13.669Z'),
                 description: 'Sublime.',
-                id: 'e1a73404-f1b5-4ed1-a55c-5cea9aed4f6b',
+                id: 'f5f0503b-b7cd-4b84-a664-32bc48e7bd9c',
                 isActive: false,
                 location: '5699 Purdy Motorway',
                 name: 'Legacy Implementation Orchestrator',
                 postingUrl: 'https://elementary-privilege.com/',
-                updatedAt: Utils\Utils::parseDateTime('2026-10-02T17:12:21.107Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-10-03T16:02:04.565Z'),
             ),
         ],
         publicJobUrls: [
@@ -586,7 +586,7 @@ $request = new Operations\PatchAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Capitulus.',
-                id: 'dc10da23-0791-4e12-b35e-ba9c4eb017da',
+                id: '3a219aea-4d27-4423-b3d1-b49a712f1531',
                 maxLength: 214,
                 minLength: 1,
                 options: [
@@ -599,7 +599,7 @@ $request = new Operations\PatchAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '540eec92-4271-4b6f-bdc4-3b5affdf8207',
+                id: '7d34f71f-c281-4ab6-9806-b93dbee51c88',
                 maxLength: 309,
                 minLength: 1,
                 options: [
@@ -612,7 +612,7 @@ $request = new Operations\PatchAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Confero trepide.',
-                id: '68b4f9c8-771b-49c7-895f-c51fc7e7b5fb',
+                id: '3f6361c4-eee9-4d54-b3ad-1527e828ebfa',
                 maxLength: 428,
                 minLength: 1,
                 options: [
@@ -630,7 +630,7 @@ $request = new Operations\PatchAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-29T06:55:24.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-30T02:11:56.486Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -690,11 +690,11 @@ $request = new Operations\PatchHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Bonus vobis creator tabella callide cavus triumphus caveo abbas patria.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: 'f11b1e06-e1c3-4f41-893c-f5fecd9b823f',
+        id: 'cd680493-34b4-44a6-8741-71f54cc4c66f',
         isActive: false,
         metadata: [],
         name: 'Customer Security Assistant',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-13T04:32:44.818Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-13T13:33:22.802Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -889,7 +889,7 @@ $request = new Operations\UpdateAtsJobRequest(
             ),
         ],
         hiringManagers: [],
-        id: '457c4d72-da8f-4958-b6a3-f11b95302745',
+        id: '0be88470-11f7-4f8e-81b4-c9b21cd860d6',
         industry: 'Refined Ceramic Keyboard',
         languageLocale: 'en',
         metadata: [
@@ -898,7 +898,7 @@ $request = new Operations\UpdateAtsJobRequest(
                     'display_name' => 'Custom Property',
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '63920b45-7406-4f4c-8eaf-da4526c8f5ef',
+                id: '344f2dd2-8137-4b4b-b751-87b5b94c557a',
                 namespace: 'custom',
                 slug: 'custom_property',
                 value: 'cursus',
@@ -911,7 +911,7 @@ $request = new Operations\UpdateAtsJobRequest(
         openings: [
             new Shared\AtsJobOpening(
                 closeReason: 'Tolero aequus tamquam inflammatio asporto canis vinitor utrum.',
-                openedAt: Utils\Utils::parseDateTime('2026-07-10T19:37:30.682Z'),
+                openedAt: Utils\Utils::parseDateTime('2026-07-11T16:51:48.153Z'),
                 status: Shared\AtsJobOpeningStatus::Open,
             ),
         ],
@@ -925,14 +925,14 @@ $request = new Operations\UpdateAtsJobRequest(
                     region: 'Utah',
                     regionCode: 'NE',
                 ),
-                createdAt: Utils\Utils::parseDateTime('2026-09-05T14:42:20.029Z'),
+                createdAt: Utils\Utils::parseDateTime('2026-09-06T13:01:13.669Z'),
                 description: 'Sublime.',
-                id: 'e1a73404-f1b5-4ed1-a55c-5cea9aed4f6b',
+                id: 'f5f0503b-b7cd-4b84-a664-32bc48e7bd9c',
                 isActive: false,
                 location: '5699 Purdy Motorway',
                 name: 'Legacy Implementation Orchestrator',
                 postingUrl: 'https://elementary-privilege.com/',
-                updatedAt: Utils\Utils::parseDateTime('2026-10-02T17:12:21.107Z'),
+                updatedAt: Utils\Utils::parseDateTime('2026-10-03T16:02:04.565Z'),
             ),
         ],
         publicJobUrls: [
@@ -942,7 +942,7 @@ $request = new Operations\UpdateAtsJobRequest(
         questions: [
             new Shared\AtsJobQuestion(
                 description: 'Capitulus.',
-                id: 'dc10da23-0791-4e12-b35e-ba9c4eb017da',
+                id: '3a219aea-4d27-4423-b3d1-b49a712f1531',
                 maxLength: 214,
                 minLength: 1,
                 options: [
@@ -955,7 +955,7 @@ $request = new Operations\UpdateAtsJobRequest(
                 type: Shared\AtsJobQuestionType::Text,
             ),
             new Shared\AtsJobQuestion(
-                id: '540eec92-4271-4b6f-bdc4-3b5affdf8207',
+                id: '7d34f71f-c281-4ab6-9806-b93dbee51c88',
                 maxLength: 309,
                 minLength: 1,
                 options: [
@@ -968,7 +968,7 @@ $request = new Operations\UpdateAtsJobRequest(
             ),
             new Shared\AtsJobQuestion(
                 description: 'Confero trepide.',
-                id: '68b4f9c8-771b-49c7-895f-c51fc7e7b5fb',
+                id: '3f6361c4-eee9-4d54-b3ad-1527e828ebfa',
                 maxLength: 428,
                 minLength: 1,
                 options: [
@@ -986,7 +986,7 @@ $request = new Operations\UpdateAtsJobRequest(
         ],
         status: Shared\AtsJobStatus::Archived,
         summary: 'Contra damno desolo suadeo utrimque cresco aetas turpis.',
-        updatedAt: Utils\Utils::parseDateTime('2026-03-29T06:55:24.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-03-30T02:11:56.486Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -1046,11 +1046,11 @@ $request = new Operations\UpdateHrisJobRequest(
         createdAt: Utils\Utils::parseDateTime('2020-10-28T01:13:19.491Z'),
         description: 'Bonus vobis creator tabella callide cavus triumphus caveo abbas patria.',
         employmentType: Shared\HrisJobEmploymentType::Freelance,
-        id: 'f11b1e06-e1c3-4f41-893c-f5fecd9b823f',
+        id: 'cd680493-34b4-44a6-8741-71f54cc4c66f',
         isActive: false,
         metadata: [],
         name: 'Customer Security Assistant',
-        updatedAt: Utils\Utils::parseDateTime('2023-02-13T04:32:44.818Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-02-13T13:33:22.802Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -35,15 +35,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\CreateUcCallRequest(
     ucCall: new Shared\UcCall(
-        answerAt: Utils\Utils::parseDateTime('2025-06-04T10:16:27.449Z'),
+        answerAt: Utils\Utils::parseDateTime('2025-06-05T00:19:47.530Z'),
         contacts: [],
-        conversationIdentifier: 'ebb3fdf9-a0e1-4e2c-ba03-97660ad8f981',
+        conversationIdentifier: '7a0d034f-e33c-4802-8fbf-b37d115e680e',
         costAmount: 2.7016,
         createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
         currency: 'USD',
         durationSeconds: 2132,
-        endAt: Utils\Utils::parseDateTime('2024-06-10T18:04:06.684Z'),
-        id: 'ebb3fdf9-a0e1-4e2c-ba03-97660ad8f981',
+        endAt: Utils\Utils::parseDateTime('2024-06-11T01:36:27.313Z'),
+        id: '7a0d034f-e33c-4802-8fbf-b37d115e680e',
         isPrivate: false,
         metadata: [
             new Shared\UcMetadata(
@@ -51,20 +51,20 @@ $request = new Operations\CreateUcCallRequest(
 
                 ],
                 format: Shared\UcMetadataFormat::Price,
-                id: 'a9c85639-ab48-4a92-87c4-e4435e69d3a4',
+                id: '40b0c542-9a35-4aef-900b-4ddc7683e38e',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'voluptatem',
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-12-24T07:59:38.828Z'),
+        startAt: Utils\Utils::parseDateTime('2023-12-24T12:27:18.416Z'),
         status: Shared\UcCallStatus::InProgress,
         telephone: new Shared\PropertyUcCallTelephone(
             telephone: '(507) 787-3877',
             type: Shared\PropertyUcCallTelephoneType::Mobile,
         ),
         type: Shared\UcCallType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T07:54:43.831Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-06T09:49:46.378Z'),
         userPhone: '1-894-431-7163 x39343',
     ),
     connectionId: '<id>',
@@ -221,15 +221,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\PatchUcCallRequest(
     ucCall: new Shared\UcCall(
-        answerAt: Utils\Utils::parseDateTime('2025-06-04T10:16:27.470Z'),
+        answerAt: Utils\Utils::parseDateTime('2025-06-05T00:19:47.543Z'),
         contacts: [],
-        conversationIdentifier: '9acd6036-9f9c-42f3-9a84-d9f144be5626',
+        conversationIdentifier: '2f50a1ba-d7c6-4786-92ac-97464f004f43',
         costAmount: 2.7016,
         createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
         currency: 'USD',
         durationSeconds: 2132,
-        endAt: Utils\Utils::parseDateTime('2024-06-10T18:04:06.695Z'),
-        id: '9acd6036-9f9c-42f3-9a84-d9f144be5626',
+        endAt: Utils\Utils::parseDateTime('2024-06-11T01:36:27.319Z'),
+        id: '2f50a1ba-d7c6-4786-92ac-97464f004f43',
         isPrivate: false,
         metadata: [
             new Shared\UcMetadata(
@@ -237,20 +237,20 @@ $request = new Operations\PatchUcCallRequest(
 
                 ],
                 format: Shared\UcMetadataFormat::Price,
-                id: 'd8104b5e-9cdc-4662-acf8-2b040bbacfb0',
+                id: '98793ee2-2f14-4cc0-8f33-48fecdd16bd5',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'voluptatem',
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-12-24T07:59:38.835Z'),
+        startAt: Utils\Utils::parseDateTime('2023-12-24T12:27:18.420Z'),
         status: Shared\UcCallStatus::InProgress,
         telephone: new Shared\PropertyUcCallTelephone(
             telephone: '(507) 787-3877',
             type: Shared\PropertyUcCallTelephoneType::Mobile,
         ),
         type: Shared\UcCallType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T07:54:43.834Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-06T09:49:46.380Z'),
         userPhone: '1-894-431-7163 x39343',
     ),
     connectionId: '<id>',
@@ -307,15 +307,15 @@ $sdk = Unified_to\UnifiedTo::builder()
 
 $request = new Operations\UpdateUcCallRequest(
     ucCall: new Shared\UcCall(
-        answerAt: Utils\Utils::parseDateTime('2025-06-04T10:16:27.470Z'),
+        answerAt: Utils\Utils::parseDateTime('2025-06-05T00:19:47.543Z'),
         contacts: [],
-        conversationIdentifier: '9acd6036-9f9c-42f3-9a84-d9f144be5626',
+        conversationIdentifier: '2f50a1ba-d7c6-4786-92ac-97464f004f43',
         costAmount: 2.7016,
         createdAt: Utils\Utils::parseDateTime('2023-04-22T19:05:34.882Z'),
         currency: 'USD',
         durationSeconds: 2132,
-        endAt: Utils\Utils::parseDateTime('2024-06-10T18:04:06.695Z'),
-        id: '9acd6036-9f9c-42f3-9a84-d9f144be5626',
+        endAt: Utils\Utils::parseDateTime('2024-06-11T01:36:27.319Z'),
+        id: '2f50a1ba-d7c6-4786-92ac-97464f004f43',
         isPrivate: false,
         metadata: [
             new Shared\UcMetadata(
@@ -323,20 +323,20 @@ $request = new Operations\UpdateUcCallRequest(
 
                 ],
                 format: Shared\UcMetadataFormat::Price,
-                id: 'd8104b5e-9cdc-4662-acf8-2b040bbacfb0',
+                id: '98793ee2-2f14-4cc0-8f33-48fecdd16bd5',
                 namespace: 'custom',
                 slug: 'custom_field',
                 value: 'voluptatem',
             ),
         ],
-        startAt: Utils\Utils::parseDateTime('2023-12-24T07:59:38.835Z'),
+        startAt: Utils\Utils::parseDateTime('2023-12-24T12:27:18.420Z'),
         status: Shared\UcCallStatus::InProgress,
         telephone: new Shared\PropertyUcCallTelephone(
             telephone: '(507) 787-3877',
             type: Shared\PropertyUcCallTelephoneType::Mobile,
         ),
         type: Shared\UcCallType::Inbound,
-        updatedAt: Utils\Utils::parseDateTime('2023-08-06T07:54:43.834Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-08-06T09:49:46.380Z'),
         userPhone: '1-894-431-7163 x39343',
     ),
     connectionId: '<id>',

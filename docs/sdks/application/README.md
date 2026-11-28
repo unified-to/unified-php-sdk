@@ -37,17 +37,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-10-23T19:02:27.431Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-24T10:31:55.978Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-06-13T08:36:15.022Z'),
-        id: 'b409816f-49ef-4ba5-92f4-6db05f55e25e',
+        hiredAt: Utils\Utils::parseDateTime('2026-06-14T04:58:50.053Z'),
+        id: '0a8b932c-7639-41c6-adad-3df2fa2ee6f4',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '5d9fa61d-1437-47a9-be6c-b7ad96a04eee',
+                id: '0270e7ac-e401-4258-b875-29adf64e198f',
                 namespace: 'application',
                 slug: 'arguo',
                 value: 'Defessus occaecati adflicto caecus claustrum annus addo.',
@@ -56,12 +56,12 @@ $request = new Operations\CreateAtsApplicationRequest(
         offers: [],
         originalStatus: 'caput',
         originalSubstatus: 'admiratio',
-        rejectedAt: Utils\Utils::parseDateTime('2026-11-17T05:49:01.112Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-11-18T05:29:19.640Z'),
         rejectedReason: 'Talio credo vomica allatus stella.',
         source: 'alii',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
-        updatedAt: Utils\Utils::parseDateTime('2026-11-24T07:34:58.182Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-11-25T07:24:11.610Z'),
     ),
     connectionId: '<id>',
 );
@@ -218,17 +218,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-10-23T19:02:27.455Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-24T10:31:55.990Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-06-13T08:36:15.053Z'),
-        id: '75f0adca-34c9-4059-92a5-bc3c083a4816',
+        hiredAt: Utils\Utils::parseDateTime('2026-06-14T04:58:50.068Z'),
+        id: 'aa6756ef-7c09-43fd-9393-35d55c912e7b',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '734987d0-c148-460d-af23-679e2201c59a',
+                id: 'c7b1ada9-e108-42cf-af64-dfe31a9b8eb1',
                 namespace: 'application',
                 slug: 'arguo',
                 value: 'Defessus occaecati adflicto caecus claustrum annus addo.',
@@ -237,12 +237,12 @@ $request = new Operations\PatchAtsApplicationRequest(
         offers: [],
         originalStatus: 'caput',
         originalSubstatus: 'admiratio',
-        rejectedAt: Utils\Utils::parseDateTime('2026-11-17T05:49:01.149Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-11-18T05:29:19.657Z'),
         rejectedReason: 'Talio credo vomica allatus stella.',
         source: 'alii',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
-        updatedAt: Utils\Utils::parseDateTime('2026-11-24T07:34:58.219Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-11-25T07:24:11.628Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -350,17 +350,17 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAtsApplicationRequest(
     atsApplication: new Shared\AtsApplication(
         answers: [],
-        appliedAt: Utils\Utils::parseDateTime('2025-10-23T19:02:27.455Z'),
+        appliedAt: Utils\Utils::parseDateTime('2025-10-24T10:31:55.990Z'),
         createdAt: Utils\Utils::parseDateTime('2023-10-17T07:19:48.787Z'),
-        hiredAt: Utils\Utils::parseDateTime('2026-06-13T08:36:15.053Z'),
-        id: '75f0adca-34c9-4059-92a5-bc3c083a4816',
+        hiredAt: Utils\Utils::parseDateTime('2026-06-14T04:58:50.068Z'),
+        id: 'aa6756ef-7c09-43fd-9393-35d55c912e7b',
         metadata: [
             new Shared\AtsMetadata(
                 extraData: [
 
                 ],
                 format: Shared\AtsMetadataFormat::Text,
-                id: '734987d0-c148-460d-af23-679e2201c59a',
+                id: 'c7b1ada9-e108-42cf-af64-dfe31a9b8eb1',
                 namespace: 'application',
                 slug: 'arguo',
                 value: 'Defessus occaecati adflicto caecus claustrum annus addo.',
@@ -369,12 +369,12 @@ $request = new Operations\UpdateAtsApplicationRequest(
         offers: [],
         originalStatus: 'caput',
         originalSubstatus: 'admiratio',
-        rejectedAt: Utils\Utils::parseDateTime('2026-11-17T05:49:01.149Z'),
+        rejectedAt: Utils\Utils::parseDateTime('2026-11-18T05:29:19.657Z'),
         rejectedReason: 'Talio credo vomica allatus stella.',
         source: 'alii',
         status: Shared\AtsApplicationStatus::Reviewing,
         summary: 'Crebro nostrum alias sponte turbo sopor vergo surculus nam copiose. Enim casso cursus aestus deprecator. Despecto tabella argentum decretum cultellus aveho distinctio verecundia stella.',
-        updatedAt: Utils\Utils::parseDateTime('2026-11-24T07:34:58.219Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-11-25T07:24:11.628Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -38,7 +38,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'fa9df3f6-50f1-4e47-9330-470bbb77176b',
+        id: 'ff52a677-2ba9-44bc-acce-6051bde2356b',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -53,7 +53,7 @@ $request = new Operations\CreateGenaiMemoryRequest(
         ],
         name: 'tabella.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-07T01:34:27.416Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-07T08:46:48.277Z'),
         userIdentifier: '70613433-847d-4db6-a8ea-96a2d7513dad',
     ),
     connectionId: '<id>',
@@ -212,7 +212,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'd4f35e1b-797f-45c4-b619-d5c92b46850e',
+        id: 'cf18c008-c223-4285-8599-921134017396',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -227,7 +227,7 @@ $request = new Operations\PatchGenaiMemoryRequest(
         ],
         name: 'tabella.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-07T01:34:27.419Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-07T08:46:48.281Z'),
         userIdentifier: '70613433-847d-4db6-a8ea-96a2d7513dad',
     ),
     connectionId: '<id>',
@@ -337,7 +337,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
     genaiMemory: new Shared\GenaiMemory(
         content: 'Spiculum deserunt comitatus despecto. Aveho utroque accedo vinitor repellendus tam curis corona eos vobis.',
         createdAt: Utils\Utils::parseDateTime('2021-10-22T04:14:41.668Z'),
-        id: 'd4f35e1b-797f-45c4-b619-d5c92b46850e',
+        id: 'cf18c008-c223-4285-8599-921134017396',
         metadata: [
             new Shared\GenaiMetadata(
                 extraData: [
@@ -352,7 +352,7 @@ $request = new Operations\UpdateGenaiMemoryRequest(
         ],
         name: 'tabella.md',
         type: Shared\GenaiMemoryType::Memory,
-        updatedAt: Utils\Utils::parseDateTime('2023-05-07T01:34:27.419Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-05-07T08:46:48.281Z'),
         userIdentifier: '70613433-847d-4db6-a8ea-96a2d7513dad',
     ),
     connectionId: '<id>',

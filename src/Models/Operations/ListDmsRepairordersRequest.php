@@ -28,6 +28,14 @@ class ListDmsRepairordersRequest
     public ?string $contactId = null;
 
     /**
+     * The end date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $endLt
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=end_lt')]
+    public ?string $endLt = null;
+
+    /**
      * Fields to return
      *
      * @var ?array<\Unified\Unified_to\Models\Operations\ListDmsRepairordersQueryParamFields> $fields
@@ -80,6 +88,14 @@ class ListDmsRepairordersRequest
     public ?string $sort = null;
 
     /**
+     * The start date to filter by (ISO-8601 / YYYY-MM-DDTHH:MM:SSZ format)
+     *
+     * @var ?string $startGte
+     */
+    #[SpeakeasyMetadata('queryParam:style=form,explode=true,name=start_gte')]
+    public ?string $startGte = null;
+
+    /**
      *
      * @var ?string $status
      */
@@ -113,6 +129,7 @@ class ListDmsRepairordersRequest
     /**
      * @param  string  $connectionId
      * @param  ?string  $contactId
+     * @param  ?string  $endLt
      * @param  ?array<\Unified\Unified_to\Models\Operations\ListDmsRepairordersQueryParamFields>  $fields
      * @param  ?float  $limit
      * @param  ?float  $offset
@@ -120,16 +137,18 @@ class ListDmsRepairordersRequest
      * @param  ?string  $query
      * @param  ?string  $raw
      * @param  ?string  $sort
+     * @param  ?string  $startGte
      * @param  ?string  $status
      * @param  ?string  $updatedGte
      * @param  ?string  $userId
      * @param  ?string  $vehicleId
      * @phpstan-pure
      */
-    public function __construct(string $connectionId, ?string $contactId = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $status = null, ?string $updatedGte = null, ?string $userId = null, ?string $vehicleId = null)
+    public function __construct(string $connectionId, ?string $contactId = null, ?string $endLt = null, ?array $fields = null, ?float $limit = null, ?float $offset = null, ?string $order = null, ?string $query = null, ?string $raw = null, ?string $sort = null, ?string $startGte = null, ?string $status = null, ?string $updatedGte = null, ?string $userId = null, ?string $vehicleId = null)
     {
         $this->connectionId = $connectionId;
         $this->contactId = $contactId;
+        $this->endLt = $endLt;
         $this->fields = $fields;
         $this->limit = $limit;
         $this->offset = $offset;
@@ -137,6 +156,7 @@ class ListDmsRepairordersRequest
         $this->query = $query;
         $this->raw = $raw;
         $this->sort = $sort;
+        $this->startGte = $startGte;
         $this->status = $status;
         $this->updatedGte = $updatedGte;
         $this->userId = $userId;

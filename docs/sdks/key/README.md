@@ -37,11 +37,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '87ecf9cf-c138-49b7-b2ae-25dc2706cfa4',
+        id: '421227f4-d50e-499d-a523-fc970a36b72d',
         metadata: [],
         name: 'huels-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-20T05:06:36.787Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-20T13:39:03.589Z'),
     ),
     connectionId: '<id>',
 );
@@ -198,11 +198,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '31fd0ac2-b06a-45cd-8b9b-c4971e3fbaad',
+        id: '8e37d8a5-3e2d-4232-b8df-b0a91ae1c762',
         metadata: [],
         name: 'huels-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-20T05:06:36.792Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-20T13:39:03.592Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -310,11 +310,11 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateComputeKeyRequest(
     computeKey: new Shared\ComputeKey(
         createdAt: Utils\Utils::parseDateTime('2023-08-19T14:31:46.492Z'),
-        id: '31fd0ac2-b06a-45cd-8b9b-c4971e3fbaad',
+        id: '8e37d8a5-3e2d-4232-b8df-b0a91ae1c762',
         metadata: [],
         name: 'huels-secret',
         type: Shared\ComputeKeyType::Secret,
-        updatedAt: Utils\Utils::parseDateTime('2024-10-20T05:06:36.792Z'),
+        updatedAt: Utils\Utils::parseDateTime('2024-10-20T13:39:03.592Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

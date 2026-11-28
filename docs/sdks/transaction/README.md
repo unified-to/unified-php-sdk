@@ -37,12 +37,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\CreateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '5e420864-cd36-431c-bc0c-c8319115a3a9',
+        id: 'b51c5be6-b552-4531-a4b1-2faf1f6a92ac',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The Wilma Car is the latest in a series of beneficial products from Fritsch Group',
-                id: '407a212e-daa0-4523-82ef-e38a19022a07',
+                id: '03746cd9-11ca-494f-aa55-be796af9e965',
                 name: 'Table',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -54,7 +54,7 @@ $request = new Operations\CreateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T12:35:51.841Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T12:46:16.557Z'),
     ),
     connectionId: '<id>',
 );
@@ -211,12 +211,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\PatchAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '2c33cf48-93f4-4d3b-a8a4-dee071c0e60e',
+        id: '91be13ab-0485-4fe7-a00a-429c0d608f13',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The Wilma Car is the latest in a series of beneficial products from Fritsch Group',
-                id: '02c9267f-83b9-4ea3-9427-5e67f0656e5d',
+                id: 'ef071f32-84c1-427d-a405-c7728060c83c',
                 name: 'Table',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -228,7 +228,7 @@ $request = new Operations\PatchAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T12:35:51.841Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T12:46:16.557Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -336,12 +336,12 @@ $sdk = Unified_to\UnifiedTo::builder()
 $request = new Operations\UpdateAccountingTransactionRequest(
     accountingTransaction: new Shared\AccountingTransaction(
         createdAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        id: '2c33cf48-93f4-4d3b-a8a4-dee071c0e60e',
+        id: '91be13ab-0485-4fe7-a00a-429c0d608f13',
         lineitems: [
             new Shared\AccountingTransactionLineItem(
                 categoryIds: [],
                 description: 'The Wilma Car is the latest in a series of beneficial products from Fritsch Group',
-                id: '02c9267f-83b9-4ea3-9427-5e67f0656e5d',
+                id: 'ef071f32-84c1-427d-a405-c7728060c83c',
                 name: 'Table',
                 totalAmount: 10184,
                 unitAmount: 536,
@@ -353,7 +353,7 @@ $request = new Operations\UpdateAccountingTransactionRequest(
         taxAmount: 0,
         totalAmount: 10184,
         transactionAt: Utils\Utils::parseDateTime('2019-09-25T11:40:42.574Z'),
-        updatedAt: Utils\Utils::parseDateTime('2019-10-14T12:35:51.841Z'),
+        updatedAt: Utils\Utils::parseDateTime('2019-10-14T12:46:16.557Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

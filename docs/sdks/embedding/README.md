@@ -38,7 +38,7 @@ $request = new Operations\CreateGenaiEmbeddingRequest(
         dimension: 423,
         embeddings: 'Venia tutis cernuus viscus officiis utilis porro utique.',
         encodingFormat: Shared\EncodingFormat::Float,
-        id: 'dad644a8-709b-4b11-902b-64825be62b38',
+        id: '392687a7-f5de-49ad-aad7-4897f63ec0ab',
         maxTokens: 223,
         tokensUsed: 836,
         type: 'classification',

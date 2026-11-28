@@ -45,7 +45,7 @@ $request = new Operations\CreateAssessmentPackageRequest(
         description: 'Urbs tergiversatio admitto summa accusator.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: '58c38a6a-d997-4a92-8711-d2941ef7cc33',
+        id: 'ed43c089-79ff-4db4-913a-d63b039ee892',
         infoUrl: 'https://unkempt-habit.net',
         integrationTypes: [
             'tabesco',
@@ -60,7 +60,7 @@ $request = new Operations\CreateAssessmentPackageRequest(
             'eos',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-03T09:52:23.017Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-03T15:03:02.507Z'),
     ),
     connectionId: '<id>',
 );
@@ -324,7 +324,7 @@ $request = new Operations\PatchAssessmentPackageRequest(
         description: 'Urbs tergiversatio admitto summa accusator.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: '1a2dd8d1-04af-46f7-b39a-458d6f010740',
+        id: '5043b51e-333e-4faf-b5fd-61e82fa2bdc8',
         infoUrl: 'https://unkempt-habit.net',
         integrationTypes: [
             'tabesco',
@@ -339,7 +339,7 @@ $request = new Operations\PatchAssessmentPackageRequest(
             'eos',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-03T09:52:23.020Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-03T15:03:02.510Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -453,7 +453,7 @@ $request = new Operations\UpdateAssessmentPackageRequest(
         description: 'Urbs tergiversatio admitto summa accusator.',
         hasRedirectUrl: true,
         hasTargetUrl: false,
-        id: '1a2dd8d1-04af-46f7-b39a-458d6f010740',
+        id: '5043b51e-333e-4faf-b5fd-61e82fa2bdc8',
         infoUrl: 'https://unkempt-habit.net',
         integrationTypes: [
             'tabesco',
@@ -468,7 +468,7 @@ $request = new Operations\UpdateAssessmentPackageRequest(
             'eos',
         ],
         type: Shared\AssessmentPackageType::VideoInterview,
-        updatedAt: Utils\Utils::parseDateTime('2023-10-03T09:52:23.020Z'),
+        updatedAt: Utils\Utils::parseDateTime('2023-10-03T15:03:02.510Z'),
     ),
     connectionId: '<id>',
     id: '<id>',

@@ -44,7 +44,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'Ward - Hudson\'s most advanced Computer technology increases graceful capabilities',
-        id: '289d671b-97fd-4bab-b72f-5b284b80a97f',
+        id: '7b6d55fb-230e-49c3-ba00-59f4b64c101b',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -53,10 +53,10 @@ $request = new Operations\CreateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Armarium amiculum amet defendo.',
                 height: 759,
-                id: 'acef5837-5d6f-4bf5-9cb4-626045c6656d',
+                id: '90dce3d5-c245-458a-927e-7e6bee8692b2',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '4f88fdb1-8806-460d-9ad7-f2b72bad5bac',
+                        id: 'dec0b586-2675-45ba-a9e2-d41656cf4270',
                         slug: 'cernuus',
                         value: 'torrens',
                     ),
@@ -69,7 +69,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '92e6b5f5-46bb-42ab-b1c9-28a814346ad0',
+                id: 'ef588586-625d-409c-b054-471232c68496',
                 slug: 'velit',
                 value: 'aureus',
             ),
@@ -83,7 +83,7 @@ $request = new Operations\CreateCommerceCollectionRequest(
             'comparo',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-02T22:47:41.513Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-03T10:59:01.696Z'),
     ),
     connectionId: '<id>',
 );
@@ -140,7 +140,7 @@ $request = new Operations\CreateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Defluo.',
-        id: '7f629154-fa79-4a64-b352-fa3e0717e28f',
+        id: '439785fe-6475-4a32-9d13-d51268ed7f41',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -157,7 +157,7 @@ $request = new Operations\CreateLmsCollectionRequest(
         ],
         metadata: [],
         name: 'spargo',
-        updatedAt: Utils\Utils::parseDateTime('2026-09-04T03:21:47.706Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-05T02:29:09.029Z'),
     ),
     connectionId: '<id>',
 );
@@ -416,7 +416,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'Ward - Hudson\'s most advanced Computer technology increases graceful capabilities',
-        id: '168637d7-c6be-481f-9817-76e0e291837f',
+        id: 'fb5292ee-8caa-40c3-9046-bbf0609a17f9',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -425,10 +425,10 @@ $request = new Operations\PatchCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Armarium amiculum amet defendo.',
                 height: 759,
-                id: 'f07d12a6-d94b-43c2-95f2-97a6ad6fda25',
+                id: '52c62c32-90ba-4fee-b995-868f116cdbe5',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '0dbb375e-75da-498e-b9e9-9ec940b54a94',
+                        id: '14591a24-0310-46c6-bb5b-6b6cd21b5efd',
                         slug: 'cernuus',
                         value: 'torrens',
                     ),
@@ -441,7 +441,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '17270aa6-fdc4-49cb-a78d-e50384f13e95',
+                id: 'df094aa0-048a-4e25-b625-895340b670b8',
                 slug: 'velit',
                 value: 'aureus',
             ),
@@ -455,7 +455,7 @@ $request = new Operations\PatchCommerceCollectionRequest(
             'comparo',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-02T22:47:41.527Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-03T10:59:01.704Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -513,7 +513,7 @@ $request = new Operations\PatchLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Defluo.',
-        id: 'bc3b8e75-979e-4886-bca3-241915788da2',
+        id: 'b3ba5ccf-3f87-4ae8-86a4-6adb7d2b652a',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -530,7 +530,7 @@ $request = new Operations\PatchLmsCollectionRequest(
         ],
         metadata: [],
         name: 'spargo',
-        updatedAt: Utils\Utils::parseDateTime('2026-09-04T03:21:47.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-05T02:29:09.038Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -690,7 +690,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
     commerceCollection: new Shared\CommerceCollection(
         createdAt: Utils\Utils::parseDateTime('2023-07-14T00:42:54.742Z'),
         description: 'Ward - Hudson\'s most advanced Computer technology increases graceful capabilities',
-        id: '168637d7-c6be-481f-9817-76e0e291837f',
+        id: 'fb5292ee-8caa-40c3-9046-bbf0609a17f9',
         isActive: true,
         isFeatured: false,
         isVisible: false,
@@ -699,10 +699,10 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             new Shared\CommerceItemMedia(
                 alt: 'Armarium amiculum amet defendo.',
                 height: 759,
-                id: 'f07d12a6-d94b-43c2-95f2-97a6ad6fda25',
+                id: '52c62c32-90ba-4fee-b995-868f116cdbe5',
                 metadata: [
                     new Shared\CommerceMetadata(
-                        id: '0dbb375e-75da-498e-b9e9-9ec940b54a94',
+                        id: '14591a24-0310-46c6-bb5b-6b6cd21b5efd',
                         slug: 'cernuus',
                         value: 'torrens',
                     ),
@@ -715,7 +715,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
         ],
         metadata: [
             new Shared\CommerceMetadata(
-                id: '17270aa6-fdc4-49cb-a78d-e50384f13e95',
+                id: 'df094aa0-048a-4e25-b625-895340b670b8',
                 slug: 'velit',
                 value: 'aureus',
             ),
@@ -729,7 +729,7 @@ $request = new Operations\UpdateCommerceCollectionRequest(
             'comparo',
         ],
         type: Shared\CommerceCollectionType::Collection,
-        updatedAt: Utils\Utils::parseDateTime('2025-04-02T22:47:41.527Z'),
+        updatedAt: Utils\Utils::parseDateTime('2025-04-03T10:59:01.704Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
@@ -787,7 +787,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
     lmsCollection: new Shared\LmsCollection(
         createdAt: Utils\Utils::parseDateTime('2019-08-19T14:40:29.227Z'),
         description: 'Defluo.',
-        id: 'bc3b8e75-979e-4886-bca3-241915788da2',
+        id: 'b3ba5ccf-3f87-4ae8-86a4-6adb7d2b652a',
         isActive: true,
         media: [
             new Shared\LmsMedia(
@@ -804,7 +804,7 @@ $request = new Operations\UpdateLmsCollectionRequest(
         ],
         metadata: [],
         name: 'spargo',
-        updatedAt: Utils\Utils::parseDateTime('2026-09-04T03:21:47.723Z'),
+        updatedAt: Utils\Utils::parseDateTime('2026-09-05T02:29:09.038Z'),
     ),
     connectionId: '<id>',
     id: '<id>',
